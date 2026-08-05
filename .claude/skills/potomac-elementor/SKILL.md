@@ -22,6 +22,10 @@ pre-extracted section fragments, then writing them through the Novamira WordPres
   token counts, the two structural `options`, the mirrored-title/derived-initials
   constraints, and the pre-write validation list backing §2's gates.
   `reference/spec.example.yaml` is a fillable template carrying all 174 tokens.
+- **Validator:** `tools/validate_spec.py <spec.yaml>` enforces §2's assemble gates and §3's
+  image gate locally — token coverage in both directions, no nested token syntax, asset ids
+  resolved, mirrored titles, derived initials, structural options in range. Exits non-zero
+  on any error. **Run it and get a clean pass before the first WordPress call in §4.**
 - **Kit 11259** defines only 9 custom colours and **no typography globals**. Fragments
   reference globals where a Kit token exists; ~38 colours have none and stay literal.
   The Kit is read-only to this skill (§1).

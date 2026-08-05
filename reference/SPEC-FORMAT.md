@@ -176,6 +176,17 @@ iframe, so never inject styles into it.
 
 ## Validation before writing
 
+Run the checker — it implements every check below and exits non-zero on any error:
+
+```bash
+tools/validate_spec.py path/to/spec.yaml              # strict: use before a build
+tools/validate_spec.py reference/spec.example.yaml --template
+```
+
+`--template` downgrades empty token values and placeholder `attachment_id: 0` to warnings,
+for checking a skeleton rather than a buildable spec. Requires PyYAML. Warnings never fail
+the run; errors mean **do not write to WordPress** (SKILL.md §2, §8).
+
 Checks that must pass locally, before any WordPress call (SKILL.md §2, §3):
 
 1. YAML parses; `spec_version` is 1.
