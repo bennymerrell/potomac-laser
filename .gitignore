@@ -1,0 +1,11 @@
+.env
+*.log
+
+# macOS
+.DS_Store
+
+# Contains a live WordPress application password — use .mcp.json.example as a template
+.mcp.json
+
+# Machine-local Claude Code permissions (may contain signed upload tokens)
+.claude/settings.local.json
