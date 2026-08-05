@@ -1,0 +1,31 @@
+{
+    "pattern": "process-steps-numbered",
+    "source_post": 12133,
+    "source_section_index": 5,
+    "tokens": {
+        "{heading_1}": "HOW IT WORKS",
+        "{heading_2}": "Our Micro-CNC Process: From Concept to Finished Part",
+        "{body_1}": "A clear engineering workflow from first brief through material selection, DFM review, fabrication, validation, and delivery.",
+        "{heading_3}": "01",
+        "{heading_4}": "PROJECT BRIEF",
+        "{heading_5}": "Submit Your Brief",
+        "{body_2}": "Share your drawing, CAD file, application goal, tolerance needs, or early-stage project requirements.",
+        "{heading_6}": "02",
+        "{heading_7}": "MATERIAL",
+        "{heading_8}": "Select Material",
+        "{body_3}": "Use your own material or source precision metals, polymers, ceramics, and specialist grades through Goodfellow.",
+        "{heading_9}": "03",
+        "{heading_10}": "ENGINEERING",
+        "{heading_11}": "Engineering Review",
+        "{body_4}": "Collaborative DFM review to align geometry, material, tolerances, process route, and manufacturability.",
+        "{heading_12}": "04",
+        "{heading_13}": "FABRICATION",
+        "{heading_14}": "Manufacture & Validate",
+        "{body_5}": "Precision CNC or hybrid fabrication with inspection, measurement, and optional validation support available.",
+        "{heading_15}": "05",
+        "{heading_16}": "DELIVERY",
+        "{heading_17}": "Deliver or Scale",
+        "{body_6}": "Move from prototype into repeat production with documented outputs, traceability, and scale-up support.",
+        "{body_7}": "●&nbsp;&nbsp;Supported by the Goodfellow Group’s integrated material, fabrication, and testing capabilities."
+    }
+}

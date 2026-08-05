@@ -1,0 +1,26 @@
+{
+    "pattern": "hero-dark-stat-strip",
+    "source_post": 12133,
+    "source_section_index": 0,
+    "tokens": {
+        "{heading_1}": "CNC MICROMACHINING SERVICES",
+        "{heading_2}": "CNC Micromachining at ±10 µm Tolerances.",
+        "{body_1}": "CNC micromachining is a high-precision subtractive manufacturing process that produces features, holes, channels, and threads at the microscopic scale — with ",
+        "{button_1}": "Upload Drawing / CAD",
+        "{url_1}": "#quote",
+        "{button_2}": "Request Material + Machining Quote",
+        "{url_2}": "#quote",
+        "{body_2}": "EXPLORE SERVICES →",
+        "{body_3}": "Upload STEP, STL, or PDF — our engineers review it for manufacturability.",
+        "{heading_3}": "±10µm",
+        "{heading_4}": "TOLERANCE",
+        "{heading_5}": "100µm",
+        "{heading_6}": "MIN FEATURE",
+        "{heading_7}": "4-Axis",
+        "{heading_8}": "CNC CAPABILITY",
+        "{heading_9}": "24h",
+        "{heading_10}": "RAPID RESPONSE",
+        "{heading_11}": "1982",
+        "{heading_12}": "EST."
+    }
+}

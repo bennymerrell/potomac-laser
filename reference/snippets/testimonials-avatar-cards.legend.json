@@ -1,0 +1,24 @@
+{
+    "pattern": "testimonials-avatar-cards",
+    "source_post": 12133,
+    "source_section_index": 7,
+    "tokens": {
+        "{heading_1}": "CLIENT TESTIMONIALS",
+        "{heading_2}": "Trusted by engineers worldwide",
+        "{heading_3}": "★★★★★",
+        "{body_1}": "“±8 µm across a batch of 200 titanium implant components — no rework. Genuinely exceptional.”",
+        "{heading_4}": "JM",
+        "{heading_5}": "James Mitchell",
+        "{heading_6}": "MedTech Innovations",
+        "{heading_7}": "★★★★★",
+        "{body_2}": "“Microfluidic prototype in 48 hours for a conference deadline. On time, within spec — with a DFM note that saved us two design iterations.”",
+        "{heading_8}": "SR",
+        "{heading_9}": "Dr. Sarah Rowe",
+        "{heading_10}": "University of Sheffield",
+        "{heading_11}": "★★★★★",
+        "{body_3}": "“The hybrid CNC + laser capability is unique. Structural features and fine holes on the same part, same day, from one vendor.”",
+        "{heading_12}": "TK",
+        "{heading_13}": "Thomas Klein",
+        "{heading_14}": "Photon Dynamics GmbH"
+    }
+}

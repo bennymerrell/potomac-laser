@@ -1,0 +1,30 @@
+{
+    "pattern": "group-ecosystem-cards",
+    "source_post": 12133,
+    "source_section_index": 6,
+    "tokens": {
+        "{heading_1}": "THE GOODFELLOW GROUP",
+        "{heading_2}": "The Goodfellow Group",
+        "{body_1}": "The Goodfellow Group brings together material supply, precision fabrication, and testing capabilities — giving you access to a complete engineering ecosystem.",
+        "{image_1}": "eco-logo-1.png",
+        "{heading_3}": "Material Supply",
+        "{body_2}": "Global supply of advanced metals, alloys, ceramics, polymers, and compounds with research-quality flexibility and production-scale support across 170,000+ speci",
+        "{body_3}": "170,000+ material gradesNo minimum order",
+        "{body_4}": "Explore Materials →",
+        "{image_2}": "eco-logo-2.png",
+        "{heading_4}": "Precision Fabrication",
+        "{heading_5}": "You are here",
+        "{body_5}": "CNC micromachiningLaser micromachiningHybrid manufacturingMicro-assembly",
+        "{button_1}": "Request Material + Machining Quote",
+        "{url_1}": "#quote",
+        "{image_3}": "eco-logo-3.png",
+        "{heading_6}": "Reference & Calibration",
+        "{body_6}": "Certified reference materials and analytical standards supporting calibration, laboratory QA, and regulatory compliance.",
+        "{body_7}": "Calibration and QA supportTraceable standards",
+        "{body_8}": "View Reference Materials →",
+        "{image_4}": "eco-logo-4.png",
+        "{heading_7}": "Testing & Validation",
+        "{body_9}": "Dimensional inspectionMaterial certificationFunctional testing",
+        "{body_10}": "Explore Testing Capabilities →"
+    }
+}

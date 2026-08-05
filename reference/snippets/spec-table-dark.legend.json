@@ -1,0 +1,30 @@
+{
+    "pattern": "spec-table-dark",
+    "source_post": 12133,
+    "source_section_index": 3,
+    "tokens": {
+        "{heading_1}": "TECHNICAL SPECIFICATIONS",
+        "{heading_2}": "CNC Micromachining Capabilities",
+        "{body_1}": "Engineering guidance — not fixed spec promises.",
+        "{heading_3}": "Dimensional tolerance",
+        "{body_2}": "~10 µm achievable in plastics · ~20 µm typical in metals (design dependent)",
+        "{heading_4}": "Min feature (CNC)",
+        "{body_3}": "100 µm features · smaller possible via hybrid CNC + laser",
+        "{heading_5}": "Axis capability",
+        "{body_4}": "4-axis machining for undercuts, compound angles, and single-setup access",
+        "{heading_6}": "Metals",
+        "{body_5}": "SS 316L, Ti Gr23 / Gr5, aluminium, copper, nitinol",
+        "{heading_7}": "Polymers",
+        "{body_6}": "PEEK, PMMA, COC/COP, PTFE, PC, Kapton",
+        "{heading_8}": "Min order quantity",
+        "{body_7}": "No MOQ — from early prototype through production transfer",
+        "{heading_9}": "Team response",
+        "{body_8}": "24 h rapid response to new drawings, specifications, and quote requests",
+        "{heading_10}": "Inspection",
+        "{body_9}": "Optical metrology, CMM, first-article review, and wider lab support where required",
+        "{body_10}": "Material selection supported — customers often work with engineering to optimise for manufacturability.",
+        "{heading_11}": "MATERIAL SUPPORT",
+        "{heading_12}": "Material support available",
+        "{body_11}": "Work with your own material or select from 170,000+ options. Broader material matching and traceability support are available through the wider Goodfellow libra"
+    }
+}

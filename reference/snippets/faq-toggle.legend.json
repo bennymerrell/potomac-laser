@@ -1,0 +1,28 @@
+{
+    "pattern": "faq-toggle",
+    "source_post": 12133,
+    "source_section_index": 8,
+    "tokens": {
+        "{heading_1}": "FAQ",
+        "{heading_2}": "Common questions",
+        "{body_1}": "Direct answers to the engineering, materials, and process questions buyers most often ask when evaluating a microfabrication partner.",
+        "{button_1}": "Ask a Technical Question",
+        "{url_1}": "/contact/",
+        "{faq_q_1}": "What is CNC micromachining?",
+        "{faq_a_1}": "CNC micromachining is a high-precision subtractive manufacturing process used to create features below 1 mm with tolerances measured in microns. Goodfellow Micr",
+        "{faq_q_2}": "What tolerances can Goodfellow Microfabrication achieve?",
+        "{faq_a_2}": "Goodfellow Microfabrication holds ±10 µm as standard across metals and engineering plastics. Tighter tolerances may be achievable for specific geometries afte",
+        "{faq_q_3}": "Can Goodfellow Microfabrication machine microfluidic channels in PEEK?",
+        "{faq_a_3}": "Yes. Goodfellow Microfabrication machines microfluidic features in PEEK and other high-performance polymers for manifolds, diagnostic cartridges, and lab-on-chi",
+        "{faq_q_4}": "What materials can Goodfellow Microfabrication CNC micromachine?",
+        "{faq_a_4}": "Goodfellow Microfabrication CNC micromachines metals such as stainless steel, titanium, aluminium, nitinol, and copper; engineering plastics such as PEEK, PMMA,",
+        "{faq_q_5}": "How small a feature can Goodfellow Microfabrication machine?",
+        "{faq_a_5}": "Goodfellow Microfabrication machines CNC features down to roughly 100 µm, with finer detail available through laser or hybrid CNC-laser workflows. Minimum achi",
+        "{faq_q_6}": "When should I use CNC vs laser micromachining?",
+        "{faq_a_6}": "Use CNC micromachining for structural features, pockets, threads, and deeper cuts above roughly 100 µm. Use laser micromachining for very fine features, thin s",
+        "{faq_q_7}": "How fast does the team respond to quote requests?",
+        "{faq_a_7}": "Goodfellow Microfabrication typically responds within 24 hours to new quote and drawing submissions. Once CAD, material, and tolerance requirements are reviewed",
+        "{faq_q_8}": "Can I buy material and request machining in one order?",
+        "{faq_a_8}": "Yes. You can choose a Goodfellow material, specify form and quantity, and submit it alongside your machining requirement in a single quote request. Material sup"
+    }
+}

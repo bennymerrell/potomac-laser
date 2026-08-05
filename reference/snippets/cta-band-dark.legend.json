@@ -1,0 +1,14 @@
+{
+    "pattern": "cta-band-dark",
+    "source_post": 12133,
+    "source_section_index": 9,
+    "tokens": {
+        "{heading_1}": "GET STARTED TODAY",
+        "{heading_2}": "Ready to machine at the micron scale?",
+        "{body_1}": "Share your CAD files and tolerance requirements. Engineers review every design for manufacturability and respond within one business day.",
+        "{button_1}": "Request a Quote",
+        "{url_1}": "#quote",
+        "{button_2}": "Upload CAD",
+        "{url_2}": "#quote"
+    }
+}

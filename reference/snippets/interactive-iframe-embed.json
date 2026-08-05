@@ -1,0 +1,28 @@
+{
+    "id": "interactive",
+    "elType": "container",
+    "settings": {
+        "content_width": "full",
+        "padding": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+        },
+        "flex_direction": "column"
+    },
+    "elements": [
+        {
+            "id": "7b61cf0",
+            "elType": "widget",
+            "settings": {
+                "html": "{embed_1}"
+            },
+            "elements": [],
+            "widgetType": "html"
+        }
+    ],
+    "isInner": false
+}
