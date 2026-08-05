@@ -82,7 +82,7 @@ copy. ` / ` marks a `<br>` line break in the H1.
 | **Hero eyebrow** | CNC MICROMACHINING SERVICES | 3D PRINTING CONTRACT SERVICES | RAPID PROTOTYPING SERVICES | LASER MICRO-HOLE DRILLING SERVICES | LASER MICROMACHINING SERVICES |
 | **Hero H1** | CNC Micromachining at ±10 µm Tolerances. | Micro 3D Printing, / from Concept to / Production. | High-Precision / Rapid Prototyping / in Days. | Laser Micro-Hole / Drilling from 2 µm / Diameters. | Precision / Laser Micromachining / at the Micro Scale. |
 | **Iframe file** | `cnc-interactive.html` | `3dp-interactive.html` | `rp-interactive.html` | `mhd-interactive.html` | `lm-interactive.html` |
-| **Comparison triad** | CNC vs. Laser vs. Conventional Machining | 3D Printing vs. Micro-CNC vs. Laser | Laser vs. Micro-CNC vs. Micro 3D Printing | UV Laser vs. IR Laser vs. Micro-CNC Drilling | Laser vs. Micro-CNC vs. Micro 3D Printing |
+| **Comparison triad** | CNC vs. Laser vs. Conventional Machining | 3D Printing vs. Micro-CNC vs. Laser | Micro 3D Printing vs. Micro-CNC vs. Laser | UV Laser vs. IR Laser vs. Micro-CNC Drilling | Laser vs. Micro-CNC vs. Micro 3D Printing |
 | **Process heading** | Our Micro-CNC Process | Our Micro 3D Printing Process | Our Rapid Prototyping Process | Our Micro-Hole Drilling Process | Our Laser Micromachining Process |
 | **Closing CTA** | Ready to machine at the micron scale? | Ready to build at the micron scale? | Ready to prototype at the micron scale? | Ready to drill at the micron scale? | Ready to laser micromachine your next part? |
 
@@ -90,9 +90,18 @@ Notes when adding the next page in the chain:
 
 - **`spec-table-dark` is missing from every clone.** If a new services page needs a
   technical-spec block, take it from this library rather than the page you clone.
-- **12224 and 12226 share an identical comparison triad** ("Laser vs. Micro-CNC vs.
-  Micro 3D Printing") despite being different services — likely an un-swapped clone
-  artefact on one of them, worth checking against the design.
+- **The duplicate comparison triad on 12224/12226 was resolved on 12224** (2026-08-05).
+  Both pages had read "Laser vs. Micro-CNC vs. Micro 3D Printing". 12226 keeps it —
+  leading with its own service is the convention every other page follows. On 12224
+  the three cards were reordered to Micro 3D Printing → Micro-CNC → Laser and the H2
+  rebuilt from the existing card titles, so no copy was invented. Each card's bullets
+  and "See … →" link travelled with its own card; the section has no `nth-child`-style
+  CSS, so the reorder is presentation-safe. Backup:
+  `uploads/novamira-drafts/backups/elementor-12224.bak-pretriad-20260805-210650.json`
+  (86,937 bytes, sha256 `0378e81c…`). Only section 3 changed.
+- **Still open on 12226:** its intro reads "Choose the right **prototyping** process for
+  your part", inherited from 12224 — wrong framing for a laser micromachining page.
+  Left as-is pending the design file; fixing it needs the intended copy, not a guess.
 - Iframes follow `<prefix>-interactive.html` in `uploads/novamira-drafts/`, with frame
   ids `<prefix>-interactive-frame`. The file is **not** part of the fragment.
 - The closing CTA verb is the only copy that tracks the service; everything else in
