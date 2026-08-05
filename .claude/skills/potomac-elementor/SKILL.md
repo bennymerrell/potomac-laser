@@ -18,6 +18,10 @@ pre-extracted section fragments, then writing them through the Novamira WordPres
 - **Fragment library:** `reference/snippets/<pattern>.json` (10 tokenised sections) with a
   sibling `<pattern>.legend.json` per fragment. `reference/PATTERNS.md` documents each
   pattern, its `Recognise when` matcher, its tokens and its unmapped colours.
+- **Build input:** `spec.yaml`, defined by `reference/SPEC-FORMAT.md` — schema, per-pattern
+  token counts, the two structural `options`, the mirrored-title/derived-initials
+  constraints, and the pre-write validation list backing §2's gates.
+  `reference/spec.example.yaml` is a fillable template carrying all 174 tokens.
 - **Kit 11259** defines only 9 custom colours and **no typography globals**. Fragments
   reference globals where a Kit token exists; ~38 colours have none and stay literal.
   The Kit is read-only to this skill (§1).

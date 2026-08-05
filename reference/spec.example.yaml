@@ -1,0 +1,288 @@
+# spec.yaml — potomac-elementor page build spec
+# Format: reference/SPEC-FORMAT.md   Patterns: reference/PATTERNS.md
+#
+# This example lists EVERY token in all ten fragments, generated directly from
+# the .legend.json files, so the token names and counts are exact. A real spec
+# uses only the sections that page needs, in the order they should render.
+# Each comment shows the copy that token replaced on the source page.
+
+spec_version: 1
+
+page:
+  title: "Laser Welding Services"
+  slug: "laser-welding-services"
+  post_type: page          # SKILL.md §1: `page` only
+  post_status: draft       # SKILL.md §1: `draft` only, never published by the agent
+
+# Media referenced by image tokens. Both url and attachment_id are required
+# (SKILL.md §3 gate: zero image widgets with a missing id).
+assets:
+  eco_logo_1:
+    attachment_id: 0    # TODO real attachment ID
+    url: "https://www.potomac-laser.com/wp-content/uploads/YYYY/MM/pl-auto-eco-logo-1.png"
+  eco_logo_2:
+    attachment_id: 0    # TODO real attachment ID
+    url: "https://www.potomac-laser.com/wp-content/uploads/YYYY/MM/pl-auto-eco-logo-2.png"
+  eco_logo_3:
+    attachment_id: 0    # TODO real attachment ID
+    url: "https://www.potomac-laser.com/wp-content/uploads/YYYY/MM/pl-auto-eco-logo-3.png"
+  eco_logo_4:
+    attachment_id: 0    # TODO real attachment ID
+    url: "https://www.potomac-laser.com/wp-content/uploads/YYYY/MM/pl-auto-eco-logo-4.png"
+
+sections:
+
+  # ──────────────────────────────────────────────────────────────────
+  # hero-dark-stat-strip
+  # source: post 12133 section 0 · reference/snippets/hero-dark-stat-strip.json
+  # NOTE: stat row is value/caption PAIRS (heading_3..12 = 5 pairs); add/remove in pairs only
+  - pattern: hero-dark-stat-strip
+    tokens:
+      heading_1: ""   # was: CNC MICROMACHINING SERVICES
+      heading_2: ""   # was: CNC Micromachining at ±10 µm Tolerances.
+      body_1: ""   # was: CNC micromachining is a high-precision subtractive manufacturi…
+      button_1: ""   # was: Upload Drawing / CAD
+      url_1: "#quote"                  # was: #quote
+      button_2: ""   # was: Request Material + Machining Quote
+      url_2: "#quote"                  # was: #quote
+      body_2: ""   # was: EXPLORE SERVICES →
+      body_3: ""   # was: Upload STEP, STL, or PDF — our engineers review it for manufac…
+      heading_3: ""   # was: ±10µm
+      heading_4: ""   # was: TOLERANCE
+      heading_5: ""   # was: 100µm
+      heading_6: ""   # was: MIN FEATURE
+      heading_7: ""   # was: 4-Axis
+      heading_8: ""   # was: CNC CAPABILITY
+      heading_9: ""   # was: 24h
+      heading_10: ""   # was: RAPID RESPONSE
+      heading_11: ""   # was: 1982
+      heading_12: ""   # was: EST.
+
+  # ──────────────────────────────────────────────────────────────────
+  # why-choose-inset-cta
+  # source: post 12133 section 1 · reference/snippets/why-choose-inset-cta.json
+  # NOTE: the empty first column is a layout spacer - keep it
+  - pattern: why-choose-inset-cta
+    tokens:
+      heading_1: ""   # was: WHY GOODFELLOW MICROFABRICATION
+      heading_2: ""   # was: Why choose Goodfellow Microfabrication for CNC micromachining
+      body_1: ""   # was: We deliver precision CNC micromachining for micro-scale compon…
+      body_2: ""   # was: Tight tolerance machining — achieving micro-scale tolerances f…
+      heading_3: ""   # was: Talk to the engineers who will review your design
+      button_1: ""   # was: Upload Drawing / CAD
+      url_1: "#quote"                  # was: #quote
+      button_2: ""   # was: Request Material + Machining Quote
+      url_2: "#quote"                  # was: #quote
+      body_3: ""   # was: Upload STEP, STL, or PDF — our engineers review it for manufac…
+
+  # ──────────────────────────────────────────────────────────────────
+  # interactive-iframe-embed
+  # source: post 12133 section 2 · reference/snippets/interactive-iframe-embed.json
+  # NOTE: embed_1 = full <iframe> markup; src -> <prefix>-interactive.html in novamira-drafts/
+  # NOTE: frame id must be <prefix>-interactive-frame; the file ships its own CSS/JS
+  - pattern: interactive-iframe-embed
+    tokens:
+      embed_1: ""   # was: 
+
+  # ──────────────────────────────────────────────────────────────────
+  # spec-table-dark
+  # source: post 12133 section 3 · reference/snippets/spec-table-dark.json
+  # NOTE: heading_3..10 are 8 spec labels, body_2..9 their values; heading_11/body_10 are the trailing sub-block
+  - pattern: spec-table-dark
+    tokens:
+      heading_1: ""   # was: TECHNICAL SPECIFICATIONS
+      heading_2: ""   # was: CNC Micromachining Capabilities
+      body_1: ""   # was: Engineering guidance — not fixed spec promises.
+      heading_3: ""   # was: Dimensional tolerance
+      body_2: ""   # was: ~10 µm achievable in plastics · ~20 µm typical in metals (desi…
+      heading_4: ""   # was: Min feature (CNC)
+      body_3: ""   # was: 100 µm features · smaller possible via hybrid CNC + laser
+      heading_5: ""   # was: Axis capability
+      body_4: ""   # was: 4-axis machining for undercuts, compound angles, and single-se…
+      heading_6: ""   # was: Metals
+      body_5: ""   # was: SS 316L, Ti Gr23 / Gr5, aluminium, copper, nitinol
+      heading_7: ""   # was: Polymers
+      body_6: ""   # was: PEEK, PMMA, COC/COP, PTFE, PC, Kapton
+      heading_8: ""   # was: Min order quantity
+      body_7: ""   # was: No MOQ — from early prototype through production transfer
+      heading_9: ""   # was: Team response
+      body_8: ""   # was: 24 h rapid response to new drawings, specifications, and quote…
+      heading_10: ""   # was: Inspection
+      body_9: ""   # was: Optical metrology, CMM, first-article review, and wider lab su…
+      body_10: ""   # was: Material selection supported — customers often work with engin…
+      heading_11: ""   # was: MATERIAL SUPPORT
+      heading_12: ""   # was: Material support available
+      body_11: ""   # was: Work with your own material or select from 170,000+ options. B…
+
+  # ──────────────────────────────────────────────────────────────────
+  # process-comparison-cards
+  # source: post 12133 section 4 · reference/snippets/process-comparison-cards.json
+  # NOTE: each card title appears TWICE (mobile/hover label) - both must match
+  - pattern: process-comparison-cards
+    tokens:
+      heading_1: ""   # was: PROCESS SELECTION
+      heading_2: ""   # was: CNC vs. Laser vs. Conventional Machining
+      body_1: ""   # was: Use this guide to identify the right process — or combine them…
+      body_2: ""   # was: Choose the right process for your part — based on geometry, to…
+      heading_3: ""   # was: CNC Micromachining
+      heading_4: ""   # was: CNC Micromachining
+      heading_5: ""   # was: Best when you need:
+      body_3: ""   # was: Tight tolerances and structural geometryThreads, undercuts, or…
+      body_4: ""   # was: Tolerance: ~10 µm (plastics) / ~20 µm (metals)
+      body_5: ""   # was: See CNC capabilities →
+      heading_6: ""   # was: Laser Micromachining
+      heading_7: ""   # was: Laser Micromachining
+      heading_8: ""   # was: Best when you need:
+      body_6: ""   # was: Ultra-fine features or micro-holesThin materials or delicate s…
+      body_7: ""   # was: Feature range: 5–50 µm
+      body_8: ""   # was: See laser capabilities →
+      heading_9: ""   # was: Conventional CNC
+      heading_10: ""   # was: Conventional CNC
+      heading_11: ""   # was: Best when you need:
+      body_9: ""   # was: Larger parts (&gt;500 µm features)Simpler geometriesCost effic…
+      body_10: ""   # was: Tolerance: ±25–50 µm typical
+      body_11: ""   # was: See conventional CNC capabilities →
+      heading_12: ""   # was: Have a part in mind? Upload Drawing / CAD and we’ll recommend …
+      body_12: ""   # was: Upload CAD (STEP, STL, IGES) or a drawing (PDF, DXF, DWG) — ou…
+      body_13: ""   # was: Uploads stay confidential. We can sign your NDA on request bef…
+      button_1: ""   # was: Upload Drawing / CAD
+      url_1: "#quote"                  # was: #quote
+      button_2: ""   # was: Request Material + Machining Quote
+      url_2: "#quote"                  # was: #quote
+
+  # ──────────────────────────────────────────────────────────────────
+  # process-steps-numbered
+  # source: post 12133 section 5 · reference/snippets/process-steps-numbered.json
+  # NOTE: exactly ONE step carries the orange highlight (#FFF7EF / #C2691A)
+  - pattern: process-steps-numbered
+    tokens:
+      heading_1: ""   # was: HOW IT WORKS
+      heading_2: ""   # was: Our Micro-CNC Process: From Concept to Finished Part
+      body_1: ""   # was: A clear engineering workflow from first brief through material…
+      heading_3: ""   # was: 01
+      heading_4: ""   # was: PROJECT BRIEF
+      heading_5: ""   # was: Submit Your Brief
+      body_2: ""   # was: Share your drawing, CAD file, application goal, tolerance need…
+      heading_6: ""   # was: 02
+      heading_7: ""   # was: MATERIAL
+      heading_8: ""   # was: Select Material
+      body_3: ""   # was: Use your own material or source precision metals, polymers, ce…
+      heading_9: ""   # was: 03
+      heading_10: ""   # was: ENGINEERING
+      heading_11: ""   # was: Engineering Review
+      body_4: ""   # was: Collaborative DFM review to align geometry, material, toleranc…
+      heading_12: ""   # was: 04
+      heading_13: ""   # was: FABRICATION
+      heading_14: ""   # was: Manufacture & Validate
+      body_5: ""   # was: Precision CNC or hybrid fabrication with inspection, measureme…
+      heading_15: ""   # was: 05
+      heading_16: ""   # was: DELIVERY
+      heading_17: ""   # was: Deliver or Scale
+      body_6: ""   # was: Move from prototype into repeat production with documented out…
+      body_7: ""   # was: ●&nbsp;&nbsp;Supported by the Goodfellow Group’s integrated ma…
+
+    options:
+      # Structural, not copy: exactly one step gets bg #FFF7EF / text #C2691A.
+      highlight_step: 3         # 1-based step index; default 3 (engineering review)
+  # ──────────────────────────────────────────────────────────────────
+  # group-ecosystem-cards
+  # source: post 12133 section 6 · reference/snippets/group-ecosystem-cards.json
+  # NOTE: move the 'You are here' badge to the unit matching THIS page
+  # NOTE: only the current-unit card carries a button; others use text links
+  - pattern: group-ecosystem-cards
+    tokens:
+      heading_1: ""   # was: THE GOODFELLOW GROUP
+      heading_2: ""   # was: The Goodfellow Group
+      body_1: ""   # was: The Goodfellow Group brings together material supply, precisio…
+      image_1: { asset: eco_logo_1 }   # was: eco-logo-1.png
+      heading_3: ""   # was: Material Supply
+      body_2: ""   # was: Global supply of advanced metals, alloys, ceramics, polymers, …
+      body_3: ""   # was: 170,000+ material gradesNo minimum order
+      body_4: ""   # was: Explore Materials →
+      image_2: { asset: eco_logo_2 }   # was: eco-logo-2.png
+      heading_4: ""   # was: Precision Fabrication
+      heading_5: ""   # was: You are here
+      body_5: ""   # was: CNC micromachiningLaser micromachiningHybrid manufacturingMicr…
+      button_1: ""   # was: Request Material + Machining Quote
+      url_1: "#quote"                  # was: #quote
+      image_3: { asset: eco_logo_3 }   # was: eco-logo-3.png
+      heading_6: ""   # was: Reference & Calibration
+      body_6: ""   # was: Certified reference materials and analytical standards support…
+      body_7: ""   # was: Calibration and QA supportTraceable standards
+      body_8: ""   # was: View Reference Materials →
+      image_4: { asset: eco_logo_4 }   # was: eco-logo-4.png
+      heading_7: ""   # was: Testing & Validation
+      body_9: ""   # was: Dimensional inspectionMaterial certificationFunctional testing
+      body_10: ""   # was: Explore Testing Capabilities →
+
+    options:
+      # Structural, not copy: the assembler MOVES the badge widget to this unit
+      # (1-based card index) and gives only that card the button.
+      you_are_here_unit: 2      # 1=Material Supply 2=Precision Fabrication 3=Reference & Calibration 4=Testing & Validation
+  # ──────────────────────────────────────────────────────────────────
+  # testimonials-avatar-cards
+  # source: post 12133 section 7 · reference/snippets/testimonials-avatar-cards.json
+  # NOTE: initials MUST be derived from the adjacent name token, never copied
+  - pattern: testimonials-avatar-cards
+    tokens:
+      heading_1: ""   # was: CLIENT TESTIMONIALS
+      heading_2: ""   # was: Trusted by engineers worldwide
+      heading_3: ""   # was: ★★★★★
+      body_1: ""   # was: “±8 µm across a batch of 200 titanium implant components — no …
+      heading_4: ""   # was: JM
+      heading_5: ""   # was: James Mitchell
+      heading_6: ""   # was: MedTech Innovations
+      heading_7: ""   # was: ★★★★★
+      body_2: ""   # was: “Microfluidic prototype in 48 hours for a conference deadline.…
+      heading_8: ""   # was: SR
+      heading_9: ""   # was: Dr. Sarah Rowe
+      heading_10: ""   # was: University of Sheffield
+      heading_11: ""   # was: ★★★★★
+      body_3: ""   # was: “The hybrid CNC + laser capability is unique. Structural featu…
+      heading_12: ""   # was: TK
+      heading_13: ""   # was: Thomas Klein
+      heading_14: ""   # was: Photon Dynamics GmbH
+
+  # ──────────────────────────────────────────────────────────────────
+  # faq-toggle
+  # source: post 12133 section 8 · reference/snippets/faq-toggle.json
+  # NOTE: faq_q_n / faq_a_n stay in lockstep; answers are HTML
+  # NOTE: tabs[] count is free - add/remove q+a together
+  - pattern: faq-toggle
+    tokens:
+      heading_1: ""   # was: FAQ
+      heading_2: ""   # was: Common questions
+      body_1: ""   # was: Direct answers to the engineering, materials, and process ques…
+      button_1: ""   # was: Ask a Technical Question
+      url_1: "#quote"                  # was: /contact/
+      faq_q_1: ""   # was: What is CNC micromachining?
+      faq_a_1: ""   # was: CNC micromachining is a high-precision subtractive manufacturi…
+      faq_q_2: ""   # was: What tolerances can Goodfellow Microfabrication achieve?
+      faq_a_2: ""   # was: Goodfellow Microfabrication holds ±10 µm as standard across me…
+      faq_q_3: ""   # was: Can Goodfellow Microfabrication machine microfluidic channels …
+      faq_a_3: ""   # was: Yes. Goodfellow Microfabrication machines microfluidic feature…
+      faq_q_4: ""   # was: What materials can Goodfellow Microfabrication CNC micromachin…
+      faq_a_4: ""   # was: Goodfellow Microfabrication CNC micromachines metals such as s…
+      faq_q_5: ""   # was: How small a feature can Goodfellow Microfabrication machine?
+      faq_a_5: ""   # was: Goodfellow Microfabrication machines CNC features down to roug…
+      faq_q_6: ""   # was: When should I use CNC vs laser micromachining?
+      faq_a_6: ""   # was: Use CNC micromachining for structural features, pockets, threa…
+      faq_q_7: ""   # was: How fast does the team respond to quote requests?
+      faq_a_7: ""   # was: Goodfellow Microfabrication typically responds within 24 hours…
+      faq_q_8: ""   # was: Can I buy material and request machining in one order?
+      faq_a_8: ""   # was: Yes. You can choose a Goodfellow material, specify form and qu…
+
+  # ──────────────────────────────────────────────────────────────────
+  # cta-band-dark
+  # source: post 12133 section 9 · reference/snippets/cta-band-dark.json
+  # NOTE: #46587010 is 8-digit hex with alpha - leave literal
+  - pattern: cta-band-dark
+    tokens:
+      heading_1: ""   # was: GET STARTED TODAY
+      heading_2: ""   # was: Ready to machine at the micron scale?
+      body_1: ""   # was: Share your CAD files and tolerance requirements. Engineers rev…
+      button_1: ""   # was: Request a Quote
+      url_1: "#quote"                  # was: #quote
+      button_2: ""   # was: Upload CAD
+      url_2: "#quote"                  # was: #quote
+
