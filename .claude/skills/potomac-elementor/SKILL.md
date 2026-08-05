@@ -18,6 +18,10 @@ pre-extracted section fragments, then writing them through the Novamira WordPres
 - **Fragment library:** `reference/snippets/<pattern>.json` (10 tokenised sections) with a
   sibling `<pattern>.legend.json` per fragment. `reference/PATTERNS.md` documents each
   pattern, its `Recognise when` matcher, its tokens and its unmapped colours.
+- **Intake:** `reference/TRANSLATE.md` — how a Claude Design page becomes a `spec.yaml`:
+  acquire, decode, segment, MATCH against each pattern's `Recognise when`, extract copy via
+  the legends, then validate. Runs entirely **before** §0 and writes nothing to WordPress.
+  Start there when the input is a design rather than an existing spec.
 - **Build input:** `spec.yaml`, defined by `reference/SPEC-FORMAT.md` — schema, per-pattern
   token counts, the two structural `options`, the mirrored-title/derived-initials
   constraints, and the pre-write validation list backing §2's gates.
