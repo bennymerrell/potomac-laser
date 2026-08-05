@@ -17,6 +17,7 @@ and swaps the `{placeholder}` tokens for the new page's copy.
 |---|---|
 | **Snippet** | `reference/snippets/<id>.json` |
 | **Source** | post `<post_id>` (`<slug>`) section index `<n>` |
+| **Used by** | <which pages carry this pattern, and at which section index> |
 | **Signature** | `<structural hash>` · `<n>` widgets · `<bytes>` bytes |
 | **Recognise when** | <what a design section must look like for TRANSLATE to pick this> |
 | **Structure** | <container nesting + widget order> |
@@ -44,6 +45,58 @@ Structural fingerprinting of every `draft-blocks` page proved the rest add nothi
 12223–12226 share the same 9 section hashes in the same order *and* the same
 distinct-colour set — they are copy-swaps, not structural variants. `spec-table-dark`
 is the only pattern unique to 12133.
+
+Fingerprinting all **46** sections across the five pages resolved every one to a
+pattern below — there are no unclassified sections, so these 10 patterns are complete
+coverage of the `draft-blocks` set.
+
+## Page coverage
+
+Cell = the section index that pattern occupies on that page. The clone chain simply
+omits `spec-table-dark`, which shifts every later section up by one.
+
+| Pattern | 12133 CNC | 12223 3DP | 12224 RP | 12225 MHD | 12226 LM |
+|---|---|---|---|---|---|
+| `hero-dark-stat-strip` | 0 | 0 | 0 | 0 | 0 |
+| `why-choose-inset-cta` | 1 | 1 | 1 | 1 | 1 |
+| `interactive-iframe-embed` | 2 | 2 | 2 | 2 | 2 |
+| `spec-table-dark` | 3 | — | — | — | — |
+| `process-comparison-cards` | 4 | 3 | 3 | 3 | 3 |
+| `process-steps-numbered` | 5 | 4 | 4 | 4 | 4 |
+| `group-ecosystem-cards` | 6 | 5 | 5 | 5 | 5 |
+| `testimonials-avatar-cards` | 7 | 6 | 6 | 6 | 6 |
+| `faq-toggle` | 8 | 7 | 7 | 7 | 7 |
+| `cta-band-dark` | 9 | 8 | 8 | 8 | 8 |
+
+## Per-page variants
+
+What actually differs between the five pages is copy, the iframe target and the
+comparison triad. All five share the same button targets (`#quote`, `/contact/`) and
+the same `group-ecosystem-cards` / `testimonials-avatar-cards` / `faq-toggle` framing
+copy. ` / ` marks a `<br>` line break in the H1.
+
+| | 12133 | 12223 | 12224 | 12225 | 12226 |
+|---|---|---|---|---|---|
+| **Slug** | `cnc-micromachining-services-draft-blocks` | `3d-printing-contract-services-draft-blocks` | `rapid-prototyping-services-draft-blocks` | `laser-micro-hole-drilling-services-draft-blocks` | `laser-micromachining-services-draft-blocks` |
+| **Sections** | 10 | 9 | 9 | 9 | 9 |
+| **Hero eyebrow** | CNC MICROMACHINING SERVICES | 3D PRINTING CONTRACT SERVICES | RAPID PROTOTYPING SERVICES | LASER MICRO-HOLE DRILLING SERVICES | LASER MICROMACHINING SERVICES |
+| **Hero H1** | CNC Micromachining at ±10 µm Tolerances. | Micro 3D Printing, / from Concept to / Production. | High-Precision / Rapid Prototyping / in Days. | Laser Micro-Hole / Drilling from 2 µm / Diameters. | Precision / Laser Micromachining / at the Micro Scale. |
+| **Iframe file** | `cnc-interactive.html` | `3dp-interactive.html` | `rp-interactive.html` | `mhd-interactive.html` | `lm-interactive.html` |
+| **Comparison triad** | CNC vs. Laser vs. Conventional Machining | 3D Printing vs. Micro-CNC vs. Laser | Laser vs. Micro-CNC vs. Micro 3D Printing | UV Laser vs. IR Laser vs. Micro-CNC Drilling | Laser vs. Micro-CNC vs. Micro 3D Printing |
+| **Process heading** | Our Micro-CNC Process | Our Micro 3D Printing Process | Our Rapid Prototyping Process | Our Micro-Hole Drilling Process | Our Laser Micromachining Process |
+| **Closing CTA** | Ready to machine at the micron scale? | Ready to build at the micron scale? | Ready to prototype at the micron scale? | Ready to drill at the micron scale? | Ready to laser micromachine your next part? |
+
+Notes when adding the next page in the chain:
+
+- **`spec-table-dark` is missing from every clone.** If a new services page needs a
+  technical-spec block, take it from this library rather than the page you clone.
+- **12224 and 12226 share an identical comparison triad** ("Laser vs. Micro-CNC vs.
+  Micro 3D Printing") despite being different services — likely an un-swapped clone
+  artefact on one of them, worth checking against the design.
+- Iframes follow `<prefix>-interactive.html` in `uploads/novamira-drafts/`, with frame
+  ids `<prefix>-interactive-frame`. The file is **not** part of the fragment.
+- The closing CTA verb is the only copy that tracks the service; everything else in
+  `cta-band-dark` is boilerplate.
 
 ## Placeholder vocabulary
 
@@ -96,6 +149,7 @@ listed per entry, and consolidated under [Unmapped colours](#unmapped-colours).
 |---|---|
 | **Snippet** | `reference/snippets/hero-dark-stat-strip.json` |
 | **Source** | post `12133` section index `0` |
+| **Used by** | all 5 pages (12133, 12223, 12224, 12225, 12226) at index 0 |
 | **Signature** | `d76ec95c1d` · 18 widgets · 38,262 bytes |
 | **Recognise when** | The page's opening section, on a dark navy background, with a small uppercase eyebrow label, one large H1, an intro paragraph, **two** CTA buttons plus a tertiary text link, and — below a horizontal rule — a row of 5 big-number statistics (value + uppercase caption). |
 | **Structure** | `container:full bg=gfnavydp` → boxed → eyebrow (orange 28×2 bar + uppercase heading) → H1 → intro `text-editor` → button pair → text link → supporting note → `divider` → 5-up stat row (`heading` value + `heading` caption each) |
@@ -109,6 +163,7 @@ listed per entry, and consolidated under [Unmapped colours](#unmapped-colours).
 |---|---|
 | **Snippet** | `reference/snippets/why-choose-inset-cta.json` |
 | **Source** | post `12133` section index `1` |
+| **Used by** | all 5 pages at index 1 |
 | **Signature** | `739b2ea6f0` · 8 widgets · 25,476 bytes |
 | **Recognise when** | A white two-column "why choose us" / value-proposition section where one column holds the copy (eyebrow + H2 + two paragraphs) and the copy column ends in a **tinted inset card** containing a short heading and a duplicate of the hero's two CTA buttons. |
 | **Structure** | `container:full bg=gfwhite` → boxed → row → \[empty media column] + copy column (eyebrow → H2 → 2× `text-editor` → inset `container bg=#F9FAFB` with `heading` + button pair + note) |
@@ -122,6 +177,7 @@ listed per entry, and consolidated under [Unmapped colours](#unmapped-colours).
 |---|---|
 | **Snippet** | `reference/snippets/interactive-iframe-embed.json` |
 | **Source** | post `12133` section index `2` |
+| **Used by** | all 5 pages at index 2 — different embed file per page |
 | **Signature** | `31273e25fe` · 1 widget · 602 bytes |
 | **Recognise when** | A section whose entire content is one self-contained interactive app (configurator, calculator, quote basket) that ships its own CSS/JS — i.e. the design has a block you cannot express as native widgets. |
 | **Structure** | `container:full` → single `html` widget holding one `<iframe>` |
@@ -135,6 +191,7 @@ listed per entry, and consolidated under [Unmapped colours](#unmapped-colours).
 |---|---|
 | **Snippet** | `reference/snippets/spec-table-dark.json` |
 | **Source** | post `12133` section index `3` |
+| **Used by** | **12133 only** — absent from 12223–12226 |
 | **Signature** | `e547f8eed4` · 23 widgets · 57,907 bytes |
 | **Recognise when** | A dark technical-specification block: eyebrow + H2 + a short disclaimer caption, followed by a vertical stack of **label / value rows** on slightly lighter cards — one row per spec (tolerance, min feature, axis capability, materials…) — optionally closing with a highlighted sub-block. |
 | **Structure** | `container:full bg=#182336` → boxed row → eyebrow → H2 → caption → 8 × `container bg=#1E2D45` rows, each `heading` (label) + `text-editor` (value) → trailing `MATERIAL SUPPORT` sub-block |
@@ -148,6 +205,7 @@ listed per entry, and consolidated under [Unmapped colours](#unmapped-colours).
 |---|---|
 | **Snippet** | `reference/snippets/process-comparison-cards.json` |
 | **Source** | post `12133` section index `4` |
+| **Used by** | all 5 pages — index 4 on 12133, index 3 on 12223–12226 |
 | **Signature** | `748b912a7c` · 27 widgets · 54,733 bytes |
 | **Recognise when** | An "X vs Y vs Z" process/option comparison on white: eyebrow + H2 + intro, then a lead paragraph, then **3 peer cards** that each repeat their own title, a "Best when you need:" sub-heading, a bulleted capability paragraph, a tolerance/spec line, and a "See … →" text link. |
 | **Structure** | `container:full bg=gfwhite` → boxed → eyebrow → H2 → intro → lead `text-editor` → row of 3 `container` cards (`heading` title ×2 → `heading` "Best when you need:" → `text-editor` bullets → `text-editor` spec → `text-editor` link) |
@@ -161,6 +219,7 @@ listed per entry, and consolidated under [Unmapped colours](#unmapped-colours).
 |---|---|
 | **Snippet** | `reference/snippets/process-steps-numbered.json` |
 | **Source** | post `12133` section index `5` |
+| **Used by** | all 5 pages — index 5 on 12133, index 4 on 12223–12226 |
 | **Signature** | `7ec08de400` · 24 widgets · 45,696 bytes |
 | **Recognise when** | A "how it works" / numbered-workflow section on white: eyebrow + H2 + intro, then a row of **5** sequential step cards each led by a two-digit number (`01`…`05`), an uppercase stage label, a step title and a description — with **one** step (the engineering-review step) visually highlighted in an orange tint. |
 | **Structure** | `container:full bg=gfwhite` → boxed → eyebrow → H2 → intro → row of 5 step `container`s (`heading` number → `heading` stage label → `heading` title → `text-editor` description); highlighted step uses `bg=#FFF7EF` |
@@ -174,6 +233,7 @@ listed per entry, and consolidated under [Unmapped colours](#unmapped-colours).
 |---|---|
 | **Snippet** | `reference/snippets/group-ecosystem-cards.json` |
 | **Source** | post `12133` section index `6` |
+| **Used by** | all 5 pages — index 6 on 12133, index 5 on 12223–12226 |
 | **Signature** | `c972a6df04` · 22 widgets · 44,517 bytes |
 | **Recognise when** | A "our group / ecosystem" section on mid-navy introducing sibling business units: eyebrow + H2 + intro, then **4 white cards** each with a logo image, a unit name, a description, a condensed feature list and a "→" link — with a **"You are here"** badge marking the current unit. |
 | **Structure** | `container:full bg=#152C4A` → boxed → eyebrow → H2 → intro → row of 4 white cards (`image` logo → `heading` name \[+ `heading` "You are here"] → `text-editor` description → `text-editor` feature list → `text-editor` link / `button`) |
@@ -187,6 +247,7 @@ listed per entry, and consolidated under [Unmapped colours](#unmapped-colours).
 |---|---|
 | **Snippet** | `reference/snippets/testimonials-avatar-cards.json` |
 | **Source** | post `12133` section index `7` |
+| **Used by** | all 5 pages — index 7 on 12133, index 6 on 12223–12226 |
 | **Signature** | `724f2da328` · 17 widgets · 48,643 bytes |
 | **Recognise when** | A social-proof section on a light grey background: eyebrow + H2 with **no** intro paragraph, then 3 white quote cards each with a 5-star row, the quote itself, and an author block built from a navy initials circle + name + company. |
 | **Structure** | `container:full bg=#F9FAFB` → boxed → eyebrow → H2 → row of 3 white cards (`heading` ★★★★★ → `text-editor` quote → author row: `container bg=gfnavymid` with `heading` initials + `heading` name + `heading` company) |
@@ -200,6 +261,7 @@ listed per entry, and consolidated under [Unmapped colours](#unmapped-colours).
 |---|---|
 | **Snippet** | `reference/snippets/faq-toggle.json` |
 | **Source** | post `12133` section index `8` |
+| **Used by** | all 5 pages — index 8 on 12133, index 7 on 12223–12226 |
 | **Signature** | `de6df985c8` · 5 widgets · 15,988 bytes |
 | **Recognise when** | An FAQ / accordion section on white: eyebrow + H2 + intro + a single "ask a question" CTA button in the left rail, with all Q&A collapsed into one accordion beside it. |
 | **Structure** | `container:full bg=gfwhite` → row → copy column (eyebrow → H2 → intro → `button`) + `toggle` widget with 8 repeater items |
@@ -213,6 +275,7 @@ listed per entry, and consolidated under [Unmapped colours](#unmapped-colours).
 |---|---|
 | **Snippet** | `reference/snippets/cta-band-dark.json` |
 | **Source** | post `12133` section index `9` |
+| **Used by** | all 5 pages — index 9 on 12133, index 8 on 12223–12226 |
 | **Signature** | `5f75e0e0e5` · 5 widgets · 12,764 bytes |
 | **Recognise when** | The page's closing conversion band on dark navy: eyebrow + H2 + one short paragraph + exactly two buttons, and nothing else. Always last. |
 | **Structure** | `container:full bg=#16253D` → boxed → eyebrow → H2 → `text-editor` → button pair |
