@@ -23,7 +23,7 @@ and `build-state.json` is still `{"processed_zips": []}`.
 | B4 | §7 pattern budget exhausted; arity changes fail the validator | Mitigated `de2d385` — run 1 phased to 5 service pages |
 | B5 | No provenance marker, so identity was inferred from the slug | Fixed `eddf406` |
 | B6 | Export ships design-time scaffolding (Tailwind CDN, React dev, Babel, tweaks panel) | Fixed `2032075` |
-| B7 | The design's why-us team photo has no slot in its matched fragment | Fixed `NEXT` — image coverage is now part of the match |
+| B7 | The design's why-us team photo has no slot in its matched fragment | Fixed `15ff654` — image coverage is now part of the match |
 | B8 | A section carries the explorer's JS template literals as if they were copy | Fixed `5aad50a` — found by dry run |
 | C1 | §7 vs SKILL.md §8 (authoring / appending forbidden) | Fixed `16417be` |
 | C2 | §7 vs TRANSLATE.md §5 ("stop and report") | Fixed `16417be` |
@@ -97,7 +97,7 @@ written to WordPress. What it established:
 | Identity | No `_pl_auto_page` hit for this page; `pl-auto-cnc-micromachining` is free → the run would correctly build |
 | Template literals | **36 found in section [11] (B8)** |
 
-### B7 — the team photo had nowhere to go (fixed `NEXT`)
+### B7 — the team photo had nowhere to go (fixed `15ff654`)
 
 `why-choose-inset-cta` has **no image slot** — of the ten fragments only `group-ecosystem-cards`
 does — but the design's `#why-us` ships a 121 KB photo (`alt="Goodfellow Microfabrication team"`).
