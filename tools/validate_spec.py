@@ -217,7 +217,15 @@ def check_section(idx, sec, assets, rep, template):
             if not re.match(r"^(https?://|/|#)", val):
                 rep.warn(tw, f"{val!r} is not an absolute URL, root path, or anchor")
         if name.startswith(HTML_TOKENS) and "<" not in val:
-            rep.warn(tw, "renders as HTML but contains no markup — intentional?")
+            # These sit in text-editor / toggle-content slots, which always store block
+            # markup. A bare string means the value came from a legend, and the legends
+            # strip HTML: they truncate at the first inline tag and flatten <ul> items
+            # together (AUDIT.md B9). Verified against post 12133: hero body_1's real value
+            # ends "...applications.</p>" while its legend ends "...— with ".
+            rep.error(tw, "HTML slot with no markup — a text-editor/toggle value always "
+                          "carries its block wrapper (<p>, <ul>). A bare string here means "
+                          "the value came from a legend, which is lossy; take it from the "
+                          "design markup instead (TRANSLATE.md §6)")
         if name.startswith(("heading_", "button_", "faq_q_")) and "<" in val:
             rep.warn(tw, "plain-text slot contains markup — it will render literally")
 

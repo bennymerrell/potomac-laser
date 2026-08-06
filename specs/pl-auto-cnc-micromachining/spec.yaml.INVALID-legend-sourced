@@ -1,0 +1,236 @@
+# spec.yaml — CNC Micromachining (supervised dry run, run 20260806-124030)
+# Source: Potomac Laser.zip :: CNC Micromachining.html
+# MATCH: 9 of 12 sections matched; 3 are UNMATCHED and handled by AUTOMATION.md §7:
+#   [1] #why-us   -> image coverage MISS (1 image, 0 slots) -> why-choose-inset-cta-image
+#   [2] #services -> no Recognise-when fits -> services card grid
+#   [9] #quote    -> no Recognise-when fits -> quote block
+# Token values are the legends' source copy: post 12133 was built from an earlier
+# iteration of THIS design, so the fragments already carry this page's copy verbatim.
+# Design deltas are cosmetic only (straight vs curly quotes, &gt; encoding, and eyebrow
+# case where the design relies on CSS uppercase); the legend value is the widget value.
+
+spec_version: 1
+
+page:
+  title: "CNC Micromachining Services"
+  slug: "pl-auto-cnc-micromachining"
+  post_type: post_services
+  post_status: draft
+
+assets:
+  eco_logo_1:
+    attachment_id: 12235
+    url: "https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-eco-logo-1.png"
+  eco_logo_2:
+    attachment_id: 12236
+    url: "https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-eco-logo-2.png"
+  eco_logo_3:
+    attachment_id: 12237
+    url: "https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-eco-logo-3.png"
+  eco_logo_4:
+    attachment_id: 12238
+    url: "https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-eco-logo-4.png"
+
+sections:
+  # design section [0]
+  - pattern: hero-dark-stat-strip
+    tokens:
+      body_1: "CNC micromachining is a high-precision subtractive manufacturing process that produces features, holes, channels, and threads at the microscopic scale — with "
+      body_2: "EXPLORE SERVICES →"
+      body_3: "Upload STEP, STL, or PDF — our engineers review it for manufacturability."
+      button_1: "Upload Drawing / CAD"
+      button_2: "Request Material + Machining Quote"
+      heading_1: "CNC MICROMACHINING SERVICES"
+      heading_2: "CNC Micromachining at ±10 µm Tolerances."
+      heading_3: "±10µm"
+      heading_4: "TOLERANCE"
+      heading_5: "100µm"
+      heading_6: "MIN FEATURE"
+      heading_7: "4-Axis"
+      heading_8: "CNC CAPABILITY"
+      heading_9: "24h"
+      heading_10: "RAPID RESPONSE"
+      heading_11: "1982"
+      heading_12: "EST."
+      url_1: "#quote"
+      url_2: "#quote"
+
+  # design section [3]
+  - pattern: interactive-iframe-embed
+    tokens:
+      embed_1: "<iframe id=\"cnc-interactive-frame\" src=\"https://www.potomac-laser.com/wp-content/uploads/novamira-drafts/cnc-interactive.html\" style=\"width:100%;border:0;display:block\" loading=\"lazy\" title=\"Select your application\"></iframe>"
+
+  # design section [4]
+  - pattern: spec-table-dark
+    tokens:
+      body_1: "Engineering guidance — not fixed spec promises."
+      body_2: "~10 µm achievable in plastics · ~20 µm typical in metals (design dependent)"
+      body_3: "100 µm features · smaller possible via hybrid CNC + laser"
+      body_4: "4-axis machining for undercuts, compound angles, and single-setup access"
+      body_5: "SS 316L, Ti Gr23 / Gr5, aluminium, copper, nitinol"
+      body_6: "PEEK, PMMA, COC/COP, PTFE, PC, Kapton"
+      body_7: "No MOQ — from early prototype through production transfer"
+      body_8: "24 h rapid response to new drawings, specifications, and quote requests"
+      body_9: "Optical metrology, CMM, first-article review, and wider lab support where required"
+      body_10: "Material selection supported — customers often work with engineering to optimise for manufacturability."
+      body_11: "Work with your own material or select from 170,000+ options. Broader material matching and traceability support are available through the wider Goodfellow libra"
+      heading_1: "TECHNICAL SPECIFICATIONS"
+      heading_2: "CNC Micromachining Capabilities"
+      heading_3: "Dimensional tolerance"
+      heading_4: "Min feature (CNC)"
+      heading_5: "Axis capability"
+      heading_6: "Metals"
+      heading_7: "Polymers"
+      heading_8: "Min order quantity"
+      heading_9: "Team response"
+      heading_10: "Inspection"
+      heading_11: "MATERIAL SUPPORT"
+      heading_12: "Material support available"
+
+  # design section [5]
+  - pattern: process-comparison-cards
+    tokens:
+      body_1: "Use this guide to identify the right process — or combine them for the best result."
+      body_2: "Choose the right process for your part — based on geometry, tolerance, and material."
+      body_3: "Tight tolerances and structural geometryThreads, undercuts, or deep featuresConsistent precision across parts"
+      body_4: "Tolerance: ~10 µm (plastics) / ~20 µm (metals)"
+      body_5: "See CNC capabilities →"
+      body_6: "Ultra-fine features or micro-holesThin materials or delicate substratesNon-contact processing"
+      body_7: "Feature range: 5–50 µm"
+      body_8: "See laser capabilities →"
+      body_9: "Larger parts (&gt;500 µm features)Simpler geometriesCost efficiency at scale"
+      body_10: "Tolerance: ±25–50 µm typical"
+      body_11: "See conventional CNC capabilities →"
+      body_12: "Upload CAD (STEP, STL, IGES) or a drawing (PDF, DXF, DWG) — our engineers review it for manufacturability.No redesign required to start — we’ll help optim"
+      body_13: "Uploads stay confidential. We can sign your NDA on request before you share files."
+      button_1: "Upload Drawing / CAD"
+      button_2: "Request Material + Machining Quote"
+      heading_1: "PROCESS SELECTION"
+      heading_2: "CNC vs. Laser vs. Conventional Machining"
+      heading_3: "CNC Micromachining"
+      heading_4: "CNC Micromachining"
+      heading_5: "Best when you need:"
+      heading_6: "Laser Micromachining"
+      heading_7: "Laser Micromachining"
+      heading_8: "Best when you need:"
+      heading_9: "Conventional CNC"
+      heading_10: "Conventional CNC"
+      heading_11: "Best when you need:"
+      heading_12: "Have a part in mind? Upload Drawing / CAD and we’ll recommend the best process."
+      url_1: "#quote"
+      url_2: "#quote"
+
+  # design section [6]
+  - pattern: process-steps-numbered
+    options: { highlight_step: 3 }      # engineering review (SKILL.md §5 default)
+    tokens:
+      body_1: "A clear engineering workflow from first brief through material selection, DFM review, fabrication, validation, and delivery."
+      body_2: "Share your drawing, CAD file, application goal, tolerance needs, or early-stage project requirements."
+      body_3: "Use your own material or source precision metals, polymers, ceramics, and specialist grades through Goodfellow."
+      body_4: "Collaborative DFM review to align geometry, material, tolerances, process route, and manufacturability."
+      body_5: "Precision CNC or hybrid fabrication with inspection, measurement, and optional validation support available."
+      body_6: "Move from prototype into repeat production with documented outputs, traceability, and scale-up support."
+      body_7: "●&nbsp;&nbsp;Supported by the Goodfellow Group’s integrated material, fabrication, and testing capabilities."
+      heading_1: "HOW IT WORKS"
+      heading_2: "Our Micro-CNC Process: From Concept to Finished Part"
+      heading_3: "01"
+      heading_4: "PROJECT BRIEF"
+      heading_5: "Submit Your Brief"
+      heading_6: "02"
+      heading_7: "MATERIAL"
+      heading_8: "Select Material"
+      heading_9: "03"
+      heading_10: "ENGINEERING"
+      heading_11: "Engineering Review"
+      heading_12: "04"
+      heading_13: "FABRICATION"
+      heading_14: "Manufacture & Validate"
+      heading_15: "05"
+      heading_16: "DELIVERY"
+      heading_17: "Deliver or Scale"
+
+  # design section [7]
+  - pattern: group-ecosystem-cards
+    options: { you_are_here_unit: 2 }   # this page IS Goodfellow Microfabrication
+    tokens:
+      body_1: "The Goodfellow Group brings together material supply, precision fabrication, and testing capabilities — giving you access to a complete engineering ecosystem."
+      body_2: "Global supply of advanced metals, alloys, ceramics, polymers, and compounds with research-quality flexibility and production-scale support across 170,000+ speci"
+      body_3: "170,000+ material gradesNo minimum order"
+      body_4: "Explore Materials →"
+      body_5: "CNC micromachiningLaser micromachiningHybrid manufacturingMicro-assembly"
+      body_6: "Certified reference materials and analytical standards supporting calibration, laboratory QA, and regulatory compliance."
+      body_7: "Calibration and QA supportTraceable standards"
+      body_8: "View Reference Materials →"
+      body_9: "Dimensional inspectionMaterial certificationFunctional testing"
+      body_10: "Explore Testing Capabilities →"
+      button_1: "Request Material + Machining Quote"
+      heading_1: "THE GOODFELLOW GROUP"
+      heading_2: "The Goodfellow Group"
+      heading_3: "Material Supply"
+      heading_4: "Precision Fabrication"
+      heading_5: "You are here"
+      heading_6: "Reference & Calibration"
+      heading_7: "Testing & Validation"
+      image_1: { asset: eco_logo_1 }
+      image_2: { asset: eco_logo_2 }
+      image_3: { asset: eco_logo_3 }
+      image_4: { asset: eco_logo_4 }
+      url_1: "#quote"
+
+  # design section [8]
+  - pattern: testimonials-avatar-cards
+    tokens:
+      body_1: "“±8 µm across a batch of 200 titanium implant components — no rework. Genuinely exceptional.”"
+      body_2: "“Microfluidic prototype in 48 hours for a conference deadline. On time, within spec — with a DFM note that saved us two design iterations.”"
+      body_3: "“The hybrid CNC + laser capability is unique. Structural features and fine holes on the same part, same day, from one vendor.”"
+      heading_1: "CLIENT TESTIMONIALS"
+      heading_2: "Trusted by engineers worldwide"
+      heading_3: "★★★★★"
+      heading_4: "JM"
+      heading_5: "James Mitchell"
+      heading_6: "MedTech Innovations"
+      heading_7: "★★★★★"
+      heading_8: "SR"
+      heading_9: "Dr. Sarah Rowe"
+      heading_10: "University of Sheffield"
+      heading_11: "★★★★★"
+      heading_12: "TK"
+      heading_13: "Thomas Klein"
+      heading_14: "Photon Dynamics GmbH"
+
+  # design section [10]
+  - pattern: faq-toggle
+    tokens:
+      body_1: "Direct answers to the engineering, materials, and process questions buyers most often ask when evaluating a microfabrication partner."
+      button_1: "Ask a Technical Question"
+      faq_a_1: "CNC micromachining is a high-precision subtractive manufacturing process used to create features below 1 mm with tolerances measured in microns. Goodfellow Micr"
+      faq_a_2: "Goodfellow Microfabrication holds ±10 µm as standard across metals and engineering plastics. Tighter tolerances may be achievable for specific geometries afte"
+      faq_a_3: "Yes. Goodfellow Microfabrication machines microfluidic features in PEEK and other high-performance polymers for manifolds, diagnostic cartridges, and lab-on-chi"
+      faq_a_4: "Goodfellow Microfabrication CNC micromachines metals such as stainless steel, titanium, aluminium, nitinol, and copper; engineering plastics such as PEEK, PMMA,"
+      faq_a_5: "Goodfellow Microfabrication machines CNC features down to roughly 100 µm, with finer detail available through laser or hybrid CNC-laser workflows. Minimum achi"
+      faq_a_6: "Use CNC micromachining for structural features, pockets, threads, and deeper cuts above roughly 100 µm. Use laser micromachining for very fine features, thin s"
+      faq_a_7: "Goodfellow Microfabrication typically responds within 24 hours to new quote and drawing submissions. Once CAD, material, and tolerance requirements are reviewed"
+      faq_a_8: "Yes. You can choose a Goodfellow material, specify form and quantity, and submit it alongside your machining requirement in a single quote request. Material sup"
+      faq_q_1: "What is CNC micromachining?"
+      faq_q_2: "What tolerances can Goodfellow Microfabrication achieve?"
+      faq_q_3: "Can Goodfellow Microfabrication machine microfluidic channels in PEEK?"
+      faq_q_4: "What materials can Goodfellow Microfabrication CNC micromachine?"
+      faq_q_5: "How small a feature can Goodfellow Microfabrication machine?"
+      faq_q_6: "When should I use CNC vs laser micromachining?"
+      faq_q_7: "How fast does the team respond to quote requests?"
+      faq_q_8: "Can I buy material and request machining in one order?"
+      heading_1: "FAQ"
+      heading_2: "Common questions"
+      url_1: "/contact/"
+
+  # design section [11]
+  - pattern: cta-band-dark
+    tokens:
+      body_1: "Share your CAD files and tolerance requirements. Engineers review every design for manufacturability and respond within one business day."
+      button_1: "Request a Quote"
+      button_2: "Upload CAD"
+      heading_1: "GET STARTED TODAY"
+      heading_2: "Ready to machine at the micron scale?"
+      url_1: "#quote"
+      url_2: "#quote"
+

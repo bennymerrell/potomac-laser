@@ -145,6 +145,21 @@ from the design's corresponding slot. **Never fill a token without reading its l
 (SKILL.md §8) — the legend records what that slot held on the source page, which is the only
 way to know a slot's role. `heading_4` means nothing on its own.
 
+> **A legend tells you a slot's ROLE. It is not the slot's VALUE.** The legends were written
+> with HTML stripped, so any body that contained markup is recorded lossily: it **truncates at
+> the first inline tag** and **flattens `<ul>` items together**. Verified against post 12133 —
+> the real `hero-dark-stat-strip.body_1` is
+> `<p>…microscopic scale — with <strong>tolerances held to ±10 µm</strong> and features as small
+> as 100 µm. Goodfellow Microfabrication delivers…</p>`, while its legend entry stops dead at
+> `…microscopic scale — with `. Copy a legend value into a spec and you ship truncated prose.
+>
+> Values come from the **design markup**, with inline elements preserved. `body_*` and
+> `faq_a_*` must carry their block wrapper (`<p>…</p>`, `<ul><li>…</li></ul>`) because those
+> tokens fill `text-editor` / toggle-content slots, which always store block markup.
+> `tools/validate_spec.py` now errors on an HTML slot with no markup, which catches exactly this
+> mistake. Where a design section is unchanged from post 12133, the authoritative value is that
+> post's stored widget value — read it, do not reconstruct it from the legend.
+
 Then apply:
 
 - **Brand normalisation (standing policy).** Designs say "Potomac" / "Potomac Photonics";

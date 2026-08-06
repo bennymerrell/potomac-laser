@@ -25,6 +25,7 @@ and `build-state.json` is still `{"processed_zips": []}`.
 | B6 | Export ships design-time scaffolding (Tailwind CDN, React dev, Babel, tweaks panel) | Fixed `2032075` |
 | B7 | The design's why-us team photo has no slot in its matched fragment | Fixed `15ff654` — image coverage is now part of the match |
 | B8 | A section carries the explorer's JS template literals as if they were copy | Fixed `5aad50a` — found by dry run |
+| B9 | The legends strip HTML, so legend-sourced token values ship truncated | Fixed `NEXT` — found by write phase |
 | C1 | §7 vs SKILL.md §8 (authoring / appending forbidden) | Fixed `16417be` |
 | C2 | §7 vs TRANSLATE.md §5 ("stop and report") | Fixed `16417be` |
 | C3 | TRANSLATE.md §10's blocking human review vs full autonomy | Fixed `2032075` |
@@ -96,6 +97,7 @@ written to WordPress. What it established:
 | Interactive | `cnc-interactive.html` resolves; dependency gate **PASS** (0 external script/stylesheet) |
 | Identity | No `_pl_auto_page` hit for this page; `pl-auto-cnc-micromachining` is free → the run would correctly build |
 | Template literals | **36 found in section [11] (B8)** |
+| Token extraction | Spec generated for the 9 matched sections — 164 tokens, validator clean — then **invalidated**: values had come from the legends, which are lossy (**B9**). 57 errors under the corrected rule |
 
 ### B7 — the team photo had nowhere to go (fixed `15ff654`)
 
@@ -123,6 +125,34 @@ Two supporting rules make it stick:
 Re-running the match with the rule applied: **9 matched, 3 `UNMATCHED`**, and `group-ecosystem-cards`
 correctly still matches (4 images ≤ 4 slots). Nine of ten fragments lacking an image slot is a
 property of post 12133, not of page design — which is what §7 exists to correct.
+
+### B9 — the legends are lossy, and the docs pointed at them as the source of copy (fixed `NEXT`)
+
+`TRANSLATE.md` §6 said "never fill a token without reading its legend entry", which is right about
+a slot's **role** and wrong if taken as its **value** — as the write phase did, generating a spec
+straight from legend values. Checked against the live post 12133, the legends were written with
+HTML stripped, and the loss is not cosmetic:
+
+| Token | Real widget value on 12133 | Legend entry |
+|---|---|---|
+| `hero-dark-stat-strip.body_1` | `<p>…microscopic scale — with <strong>tolerances held to ±10 µm</strong> and features as small as 100 µm. Goodfellow Microfabrication delivers…</p>` | `…microscopic scale — with ` |
+| `process-comparison-cards.body_3` | `<ul><li>Tight tolerances and structural geometry</li><li>Threads, undercuts, or deep features</li><li>Consistent precision across parts</li></ul>` | `Tight tolerances and structural geometryThreads, undercuts, or deep featuresConsistent precision across parts` |
+
+So a body containing inline markup is **truncated at the first inline tag**, a `<ul>` has its items
+**flattened together**, and even a clean paragraph loses its `<p>` wrapper. 31 of the 174 string
+tokens across the ten legends show the signature. Filling tokens from legends ships truncated prose
+to the page — and, worse, into any §7 pattern minted from the result.
+
+Fixed three ways. TRANSLATE.md §6 now states that a legend gives a slot's role and never its value,
+with this evidence inline; values come from the design markup with inline elements preserved, and
+where a section is unchanged from 12133 the authoritative value is that post's stored widget value.
+`validate_spec.py` promotes its old "renders as HTML but contains no markup" **warning** to an
+**error** — that warning had fired 57 times against the legend-sourced spec and was correct;
+treating it as advisory is what let the spec look clean. The spec generated this way is kept as
+`specs/pl-auto-cnc-micromachining/spec.yaml.INVALID-legend-sourced` as a worked example of the trap.
+
+The existing legends are not repaired here: §6 forbids editing them, and regenerating them is the
+human-supervised process in PATTERNS.md §Regenerating. Until they are, they are role references.
 
 ### B8 — client-side templates inside a section (fixed `5aad50a`)
 
