@@ -1,0 +1,36 @@
+{
+ "pattern": "quote-form-hubspot",
+ "source_post": 12239,
+ "source_section_index": 9,
+ "note": "Tokens substitute INSIDE one `html` widget, so body_* values are PLAIN TEXT, not block markup — unlike every other fragment, where body_* fills a text-editor. tools/validate_spec.py exempts this pattern from the HTML-slot check for that reason. Values are verbatim, markup intact (AUDIT.md B9). The HubSpot wiring, CSS and JS are deliberately NOT tokenised: they are identical on every page and must not be edited per page.",
+ "wiring": {
+  "contract": "reference/HUBSPOT-FORMS.md",
+  "form": "[Potomac] Start a Project",
+  "guid": "9dba7d36-e36b-4a10-9411-9dc073dab7a0",
+  "portal": "143181153",
+  "upload_endpoint": "/wp-json/cnc-quote/v1/upload"
+ },
+ "tokens": {
+  "{heading_1}": "Rapid Response Quote",
+  "{heading_2}": "Ready to move forward?",
+  "{body_1}": "Upload your drawing or request a quote — our engineering team will review your design and respond within 24 hours.",
+  "{body_2}": "No redesign required to start — we'll help optimise your part.",
+  "{body_3}": "Uploads stay confidential. We can sign your NDA on request before you share files.",
+  "{heading_3}": "Now",
+  "{heading_4}": "You submit your request",
+  "{body_4}": "Name, email, description, drawing. No commitment.",
+  "{heading_5}": "Within hours",
+  "{heading_6}": "Engineer reviews your part",
+  "{body_5}": "DFM check on geometry, tolerances, material fit.",
+  "{heading_7}": "Within 24 hours",
+  "{heading_8}": "Quote &amp; process path confirmed",
+  "{body_6}": "Feasibility, recommended process, next steps.",
+  "{heading_9}": "Your part",
+  "{heading_10}": "Project details",
+  "{heading_11}": "Step 1 — Tell us about your part",
+  "{body_7}": "e.g. Titanium implant, 4 machined faces, ±8 µm on mating surfaces, 50 parts, first-article report required",
+  "{body_8}": "STEP, STL, IGES, PDF, DXF, DWG, or ZIP up to 25 MB",
+  "{body_9}": "No commitment · 24h response",
+  "{button_1}": "Continue →"
+ }
+}

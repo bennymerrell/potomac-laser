@@ -67,7 +67,8 @@ omits `spec-table-dark`, which shifts every later section up by one.
 | `testimonials-avatar-cards` | 7 | 6 | 6 | 6 | 6 |
 | `faq-toggle` | 8 | 7 | 7 | 7 | 7 |
 | `cta-band-dark` | 9 | 8 | 8 | 8 | 8 |
-| `services-image-cards` | — | — | — | — | — |   <!-- minted from 12239 (pl-auto-cnc-micromachining) index 2; not present on the original five -->
+| `services-image-cards` | — | — | — | — | — |
+| `quote-form-hubspot` | — | — | — | — | — |   <!-- minted from 12239 index 9; wired to [Potomac] Start a Project -->   <!-- minted from 12239 (pl-auto-cnc-micromachining) index 2; not present on the original five -->
 
 ## Per-page variants
 
@@ -309,6 +310,20 @@ listed per entry, and consolidated under [Unmapped colours](#unmapped-colours).
 | **Globals** | 9 native `__globals__` refs (`gforange` ×2, `gfwhite` ×6 incl. the 5 card backgrounds, section bg) · 0 CSS-var rewrites |
 | **Unmapped colours** | `#0F1F3A` (H2 + card titles), `#111827` (body text), `#B9681F` (pill text), `#D5DCE7` (pill border), `#E1E6EE` (card border — already library-wide) |
 | **Notes** | Five-up needs `flex:0 0 calc((100% - 88px)/5)` in `custom_css`: percentage widths plus 22px pixel gaps overflow the 1224px container and wrap the fifth card. The card descriptions need an explicit `selector p{font-size:14px}` — the theme styles `p` at 16px and beats the widget's inherited typography. `overflow:hidden` on the card is what makes the image sit flush inside the 8px radius. Image `id` is blanked in the fragment — re-attach on build (SKILL.md §3). **Verified against the design at 12 computed properties with zero diffs**; it took three §7.3 iterations (wrap, then font size). Its legend keeps full markup, unlike the original ten (AUDIT.md B9). |
+
+### quote-form-hubspot
+| | |
+|---|---|
+| **Snippet** | `reference/snippets/quote-form-hubspot.json` |
+| **Source** | post `12239` (`pl-auto-cnc-micromachining`) section index `9` |
+| **Used by** | 12239 at index 9. Expected on all five service pages — the section is identical across them |
+| **Signature** | `html`-widget section · 3 containers + 1 widget · 16,575 bytes |
+| **Recognise when** | A two-column "rapid response quote" section: left column is eyebrow + H2 + two short paragraphs + a confidentiality note + a 3-item "now / within hours / within 24 hours" timeline; right column is a white card with a two-step progress indicator and a form collecting name, organisation, email, a part-description textarea and a single file upload, ending in one primary action. Distinguish from `cta-band-dark`, which is a closing band with two buttons and **no fields**. If the design shows a *second* variant with tolerance/quantity selects (`data-quote-variant="detailed"`), it is the same pattern — those two fields have no HubSpot property and fold into the description (see Notes). |
+| **Structure** | `container:full bg=gfwhite pad 64/0` → `container:boxed` → ONE `html` widget carrying the section's markup, its scoped `<style>`, and its `<script>`. Not an iframe: WindPress compiles Tailwind in rendered DOM but not inside iframe documents, and a form needs no overlay bridge |
+| **Tokens** | 21 placeholders: `{heading_1..11}`, `{body_1..9}`, `{button_1}`. **They substitute inside the single `html` string**, so `body_*` values are plain text, not block markup — the reverse of every other fragment. `tools/validate_spec.py` exempts this pattern from the HTML-slot check via `EMBED_TEXT_PATTERNS` |
+| **Globals** | 1 native `__globals__` ref (section background `gfwhite`). The form's own colours live in its scoped `<style>` |
+| **Unmapped colours** | inside the scoped `<style>` only — none reach Elementor settings |
+| **Notes** | **Wired, not decorative.** Posts direct to the HubSpot Forms API v3 at portal `143181153`, form `[Potomac] Start a Project` (`9dba7d36-e36b-4a10-9411-9dc073dab7a0`) — no Gravity Forms. The full contract, including why Tolerance/Quantity fold into `potomac_project_description` and why only ONE file property is used, is `reference/HUBSPOT-FORMS.md`. **The wiring, CSS and JS are deliberately untokenised** — identical on every page, and must not be edited per page. Two gotchas that cost iterations: the design's action button is `type="button"` and therefore never raises a `submit` event, so the script binds it explicitly; and the section's CSS must be scoped to its own classes — one extracted rule carried `h1..h6, .hero-title, .section-title, .gf-services-title` alongside `.gf-rapid-left h2` and silently restyled every heading on the page. Verified 2026-08-06 by a live test submission: seven fields accepted, `lead_form_submit_success`, and no PII in the dataLayer. `potomac_file_submission` is still unproven — no test has carried a file. |
 
 ## Unmapped colours
 
