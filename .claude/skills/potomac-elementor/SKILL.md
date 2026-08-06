@@ -57,9 +57,16 @@ staging server and re-enable global cache clearing.
       Otherwise take one — this is the single global operation this skill may perform, and
       only here (§1):
 
-      1. `do_action('updraft_backupnow_backup_database')` — database only. Never trigger a
-         files/uploads backup: it is large, slow, and this run only ADDS files, which the
-         manifest already covers.
+      1. `do_action('updraft_backupnow_backup_database', array('nocloud' => 0, 'extradata' => '',
+         'always_keep' => 0))` — database only. Never trigger a files/uploads backup: it is
+         large, slow, and this run only ADDS files, which the manifest already covers.
+         **The options array is required in practice.** Verified 2026-08-06 on UpdraftPlus
+         2.26.6.26 / PHP 8.4.24: called with no argument, the handler
+         (`UpdraftPlus::backupnow_database`) initialises the job — the log reaches
+         `Tasks: Backup files: 0 Backup DB: 1` — and then dies with
+         `TypeError: Cannot access offset of type string on string`, leaving a stub log and no
+         backup set. With the array it completes in ~22s. The parameter has a PHP default of
+         `[]`, so this reads as callable without it; it is not.
       2. Poll `updraft_backup_history` and `updraft_last_backup` until a set newer than the
          trigger time appears with `success` truthy. Cap at **10 minutes**; poll every 30s.
       3. Record the new set's timestamp and nonce in the run manifest — this is the run's

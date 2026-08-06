@@ -1,0 +1,109 @@
+{
+  "run": "20260806-124030",
+  "coordinator_branch": "main-2",
+  "zip": "Potomac Laser.zip",
+  "zip_sha256": "2f5215b42d491dae3eb7653c0d4e87c985723f7054b2916dc1937a8af331e14e",
+  "mode": "supervised single-page dry run \u2014 CNC Micromachining",
+  "gates": {
+    "backup": {
+      "status": "PASS",
+      "set_utc": "2026-08-06 12:40",
+      "nonce": "3740600017dd",
+      "db_file": "backup_2026-08-06-0840_Potomac_Laser_3740600017dd-db.gz.crypt",
+      "success": 1,
+      "errors": [],
+      "note": "recovery floor for this run; db-only, uploaded to dropbox, local copy deleted (delete_local=1)"
+    },
+    "server": {
+      "status": "PASS",
+      "production": "https://www.potomac-laser.com",
+      "localhost_8080": "unreachable",
+      "localhost_80": "unreachable",
+      "docker": "not running"
+    }
+  },
+  "posts": [],
+  "attachments": [
+    {
+      "attachment_id": 12229,
+      "file": "pl-auto-service-bonding-assembly.jpg",
+      "url": "https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-bonding-assembly.jpg",
+      "sha256": "2b39139021af3a91b4a3271c85dd9d89c2043cfc9574d2c6c0884f166024e9ae",
+      "role": "services-grid"
+    },
+    {
+      "attachment_id": 12230,
+      "file": "pl-auto-service-cnc-micromachining.jpg",
+      "url": "https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-cnc-micromachining.jpg",
+      "sha256": "3c55004508c2ab7cd83dfbdcfe129f2d84b74541ddb295da822ce412f5c56297",
+      "role": "services-grid"
+    },
+    {
+      "attachment_id": 12231,
+      "file": "pl-auto-service-hybrid-cnc-laser.jpg",
+      "url": "https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-hybrid-cnc-laser.jpg",
+      "sha256": "e2cc998dff74a47aed39ea8efd226fd855db66991a6d012515fe003b4ac97361",
+      "role": "services-grid"
+    },
+    {
+      "attachment_id": 12232,
+      "file": "pl-auto-service-laser-micromachining.jpg",
+      "url": "https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-laser-micromachining.jpg",
+      "sha256": "74bd546a57c3041e50af60feee8748366da8ac265c16fb4323f493e0855dbc81",
+      "role": "services-grid"
+    },
+    {
+      "attachment_id": 12233,
+      "file": "pl-auto-service-rapid-prototyping.jpg",
+      "url": "https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-rapid-prototyping.jpg",
+      "sha256": "6c82e2bcd7779c998a66bd971391c75d2046a2bf470ec5c729b20f82e84765c4",
+      "role": "services-grid"
+    },
+    {
+      "attachment_id": 12234,
+      "file": "pl-auto-whyus-team.jpg",
+      "url": "https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-whyus-team.jpg",
+      "sha256": "f7325d619c24d2e2528b75c4917943625cd4cae32d67d775edd1dc156955684c",
+      "role": "why-us"
+    },
+    {
+      "attachment_id": 12235,
+      "file": "pl-auto-eco-logo-1.png",
+      "url": "https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-eco-logo-1.png",
+      "sha256": "0039fa3a4e9b383de95738e25d27386b4bac70967a58720b7a98ef3f19901143",
+      "role": "eco-logo"
+    },
+    {
+      "attachment_id": 12236,
+      "file": "pl-auto-eco-logo-2.png",
+      "url": "https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-eco-logo-2.png",
+      "sha256": "010c0a5e130aa7fa3bfda250e4afc9bbcf5cccaca723f8317fc45402a7dd8812",
+      "role": "eco-logo"
+    },
+    {
+      "attachment_id": 12237,
+      "file": "pl-auto-eco-logo-3.png",
+      "url": "https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-eco-logo-3.png",
+      "sha256": "b7bed8ffeeb3cc0690ff4d5afd7ac1cf9fbce4f909f6f7e023e4b02fa6e8549b",
+      "role": "eco-logo"
+    },
+    {
+      "attachment_id": 12238,
+      "file": "pl-auto-eco-logo-4.png",
+      "url": "https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-eco-logo-4.png",
+      "sha256": "d83526d9c22fdea8cd8cf7a4e39a1cb8aed832248088ed1c3bbba03931038e13",
+      "role": "eco-logo"
+    }
+  ],
+  "files": [
+    {
+      "path": "wp-content/uploads/novamira-drafts/pl-auto-images.zip",
+      "state": "uploaded then removed after expansion"
+    }
+  ],
+  "notes": [
+    "First do_action call omitted the options array: UpdraftPlus initialised the job (log.a8ad5b4442bd.txt, 771b, 'Backup DB: 1') then died with TypeError 'Cannot access offset of type string on string'. No set produced. Retry WITH array('nocloud'=>0,'extradata'=>'','always_keep'=>0) succeeded in 21.8s.",
+    "10 attachments created 2026-08-06 ~13:45Z, ids 12229-12238, all byte-identical to the design export's inline base64. 4 eco logos map to group-ecosystem-cards {image_1..4}; 5 service photos and 1 team photo belong to sections \u00a77 has yet to author."
+  ],
+  "next_step": "TRANSLATE token extraction for 9 matched sections, then \u00a77 authoring for 3 UNMATCHED sections, then \u00a72 assemble / \u00a74 write. NO post created yet."
+}
