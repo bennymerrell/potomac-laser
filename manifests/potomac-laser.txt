@@ -1,8 +1,16 @@
-# pages.txt — the page allow-list for a design zip (AUTOMATION.md §3a)
+# Page manifest — which pages of a design zip get built (AUTOMATION.md §3a)
 #
-# Copy this file into the ROOT of the zip as `pages.txt`. When present it is the
-# COMPLETE set of pages to build: anything not listed is not built, and no
-# heuristic runs. Blank lines and #-comments are ignored.
+# This file lives in the REPO, not inside the zip: a re-export from Claude Design
+# replaces the zip wholesale, and curation that lived inside it would be lost.
+# Here it is version-controlled, reviewable in a diff, and survives re-exports.
+#
+# BINDING — the coordinator matches a zip to its manifest by these two directives.
+# `zip:` (filename) is authoritative; `zip_sha256:` is advisory. If the hash has
+# moved but the filename still matches, the manifest is USED and the run reports
+# "manifest predates this zip revision — re-check for new pages".
+#
+# zip: Potomac Laser.zip
+# zip_sha256: 2f5215b42d491dae3eb7653c0d4e87c985723f7054b2916dc1937a8af331e14e
 #
 # Format:  <path relative to zip root>[  <post_type>]
 #   post_type is `page` (default), `post_services` or `post_application` —
@@ -12,12 +20,20 @@
 #   Filenames contain spaces, so the type is read as the LAST token on the line;
 #   if the last token isn't a post type, the whole line is the path.
 #
+# This list is COMPLETE: anything not listed is not built. Any HTML file in the
+# zip that is missing from this list is REPORTED as unlisted, so a re-export that
+# adds pages cannot be silently dropped.
+#
 # Drafts are created at pl-auto-<slug> and stamped _pl_auto_page = the path
 # below, which is this page's durable identity across runs (AUDIT.md B5).
 #
 # ---------------------------------------------------------------------------
-# Worked example: `Potomac Laser.zip` (origin/project-zip, 12,249,689 bytes)
+# `Potomac Laser.zip` (origin/project-zip, 12,249,689 bytes)
 # 23 HTML files in the zip; 11 are pages. Drafted 2026-08-06.
+#
+# PHASING (AUDIT.md B4): §7 caps new patterns at 8 per zip and this zip needs
+# 12-14. To run the service pages alone first (2 new patterns), comment out the
+# six non-service entries below; uncomment them for run 2 and run 3.
 # ---------------------------------------------------------------------------
 
 # Service pages — 12 sections each, built from the shared CNC template.

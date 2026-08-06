@@ -18,7 +18,7 @@ and `build-state.json` is still `{"processed_zips": []}`.
 | # | Finding | Status |
 |---|---|---|
 | B1 | Backup is weekly; the §0 gate needs < 24 h | Fixed `08c4e58` — §0 now takes its own db backup |
-| B2 | Page enumeration had no working exclusion rule | Fixed `16417be`; allow-list drafted, **not yet in the zip** |
+| B2 | Page enumeration had no working exclusion rule | Fixed `16417be`; manifest committed at `manifests/potomac-laser.txt` |
 | B3 | 7 of 11 pages skipped for the wrong reason; wrong post type | Fixed `eddf406`, `3751dab` |
 | B4 | §7 pattern budget exhausted; arity changes fail the validator | **OPEN** — human decision |
 | B5 | No provenance marker, so identity was inferred from the slug | Fixed `eddf406` |
@@ -139,7 +139,7 @@ correct state today.
 ## What a run would do today
 
 Worth stating plainly, because the fixes changed it. Pre-flight now passes on its own — §0 takes a
-database backup if none is fresh. With `pages.txt` in the zip, all 11 pages enumerate; the provenance check returns "not built" for every one (correctly — nothing has been built
+database backup if none is fresh. With `manifests/potomac-laser.txt` resolving, all 11 pages enumerate; the provenance check returns "not built" for every one (correctly — nothing has been built
 yet), so all 11 proceed. Then:
 
 - The **5 service pages** fail at §3.c.iv on the inline explorer (C6), after uploading their images.
@@ -229,16 +229,19 @@ standalone, canvas and working copy enumerated as a page — ~8 junk builds out 
 byte-identical CNC copies (2,548,462 b each) and a 206-byte empty canvas. Kebab slugs don't collide
 (`3d-printing-standalone` ≠ `3d-printing`), so nothing downstream caught it.
 
-Now: an optional `pages.txt` in the zip root is the complete allow-list, parsed by trailing token
-(filenames contain spaces, so the post type is read as the last token); a listed path missing from the
-zip fails the zip. Without it: root-only `*.html`, minus `*.dc.html`, `* (standalone).html`, structural
-duplicates, zero-`<section>` files and every subdirectory. Exclusions must be reported with the rule
-that caused them.
+Now: the allow-list is a **repo-side manifest** under `manifests/`, resolved by a `# zip:` filename
+directive (authoritative) or `# zip_sha256:` (advisory — a filename match with a stale hash is used and
+reported, since a re-export legitimately changes the hash). It lives in the repo rather than the zip
+because a re-export replaces the zip wholesale and would discard curation stored inside it. Entries are
+parsed by trailing token, since filenames contain spaces. A manifest path missing from the zip fails the
+zip; every zip HTML file the manifest omits is reported as *unlisted, not built* with its section count,
+so a re-export that adds pages cannot be silently dropped. With no manifest: root-only `*.html`, minus
+`*.dc.html`, `* (standalone).html`, structural duplicates, zero-`<section>` files and every
+subdirectory, and the report says loudly that no manifest was found.
 
-**Remaining action:** `reference/pages.example.txt` holds the drafted allow-list for this zip — 11 pages
-of 23 HTML files (5 `post_services`, 4 `page`, 2 `post_application`), with all 12 exclusions and their
-reasons. **It still has to be copied into the zip root as `pages.txt`.** Until then the fallback
-heuristics run, and they are a safety net rather than curation.
+`manifests/potomac-laser.txt` carries this zip's curation — 11 pages of 23 HTML files (5
+`post_services`, 4 `page`, 2 `post_application`), the 12 exclusions with their reasons, and a commented
+phasing note for B4. **No action needed inside the zip.**
 
 ### C1, C2, C4, C7 — doc defects (fixed `16417be`)
 
@@ -261,7 +264,7 @@ Everything below was checked and holds at `08c4e58`.
 
 | Check | Result |
 |---|---|
-| Referenced docs exist | `PATTERNS.md` (10 entries + Entry template + Regenerating), `SPEC-FORMAT.md`, `TRANSLATE.md`, `spec.example.yaml`, `pages.example.txt` ✅ |
+| Referenced docs exist | `PATTERNS.md` (10 entries + Entry template + Regenerating), `SPEC-FORMAT.md`, `TRANSLATE.md`, `spec.example.yaml`, `manifests/potomac-laser.txt` ✅ |
 | Fragment library | 10 `.json` + 10 sibling `.legend.json` ✅ |
 | Skill sections cited by AUTOMATION.md | §0 gates, §1 scope, §2 assemble, §3 image, §4 write all exist and say what is claimed ✅ |
 | Skill is version-controlled | `.claude/skills/potomac-elementor/SKILL.md` tracked → present in new worktrees ✅ |
@@ -269,7 +272,7 @@ Everything below was checked and holds at `08c4e58`.
 | Validator, post types | `post_services` and `post_application` pass; `post_landing` rejected, naming the three allowed ✅ |
 | Validator, slug namespace | bare slug rejected under `--automation`, accepted for a hand run ✅ |
 | Validator resolves new patterns | `SNIPPETS` derives from the script's own location, so §7 fragments in a build worktree validate ✅ |
-| Allow-list | all 11 entries parse by the documented rule and resolve inside the zip; the 12 unlisted files are exactly the documented exclusions ✅ |
+| Manifest | `manifests/potomac-laser.txt` binds to `Potomac Laser.zip` / sha `2f5215b4…`; all 11 entries parse by the documented rule and resolve inside the zip; the 12 unlisted files are exactly the documented exclusions ✅ |
 | Elementor build path | v3 legacy still correct: `container` ACTIVE, `e_atomic_elements` off, `e_opt_in_v4` off, `e_classes` off (Elementor **4.2.1** / Pro **4.1.3** — the version string moved, the semantics didn't) ✅ |
 | Kit + provenance | active kit 11259; posts 12133 (10 sections) and 12223–12226 (9 each) present, matching PATTERNS.md ✅ |
 | `elementor_cpt_support` | `page`, `post_services`, `post_application` ✅ |
@@ -286,7 +289,8 @@ Everything below was checked and holds at `08c4e58`.
    upload so a failing page costs no orphan attachments.
 2. **B4** — raise the pattern cap for the first run or curate the zip to fit; decide whether arity
    becomes a spec feature. Then align C5's wording across both docs.
-3. **B2 residue** — copy `reference/pages.example.txt` into the zip root as `pages.txt`.
+3. ~~**B2 residue** — get the allow-list to the coordinator.~~ **Done** — `manifests/potomac-laser.txt`
+   is committed and resolves by zip filename; nothing goes inside the zip.
 4. **D1–D4** — point the automation at a `main` checkout, state the MCP-in-lead-session rule, remove the
    `novamira-localhost` entry.
 5. **C3** — resolve TRANSLATE.md §10 once scope is settled.

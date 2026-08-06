@@ -24,20 +24,28 @@ If the delta is empty, exit silently. Do nothing else.
 
 a. UNPACK into a temp dir. Enumerate page-level HTML files — entry documents only.
 
-**If the zip root contains `pages.txt`, it is the allow-list: one entry per line and the complete set of pages. Enumerate exactly those and nothing else.** A human curating the zip is cheaper than the automation guessing. Each line is a path relative to the zip root, optionally followed by the post type to build it as (`page`, `post_services` or `post_application`; default `page`). Blank lines and lines starting with `#` are ignored.
+**The allow-list lives in the REPO, in `manifests/`, never inside the zip.** A re-export from Claude Design replaces the zip wholesale, so curation stored inside it would be lost every time the design changes; in the repo it is version-controlled, reviewable in a diff, and survives re-exports.
+
+**Resolve the manifest** by scanning `manifests/*.txt` for one whose `# zip:` directive matches this zip's filename exactly. Failing that, match on `# zip_sha256:`. The filename is authoritative and the hash is advisory: if the filename matches but the hash does not, **use the manifest** and report `"manifest predates this zip revision — re-check for new pages"` (a re-export legitimately changes the hash while curation stays valid).
+
+**A resolved manifest is the complete set of pages** — enumerate exactly those and nothing else. Each entry is a path relative to the zip root, optionally followed by the post type (`page`, `post_services` or `post_application`; default `page`). Blank lines and `#` lines are ignored.
 
 **Parse rule — design filenames contain spaces, so do not split on the first whitespace.** Trim the line; if its LAST whitespace-separated token is exactly `page`, `post_services` or `post_application`, that token is the post type and everything before it, trimmed, is the path. Otherwise the whole trimmed line is the path and the type is `page`. The three are a closed set, and no design filename ends in one of them, so this never misreads a path.
 
 ```
+# zip: Potomac Laser.zip
+# zip_sha256: 2f5215b4…
 CNC Micromachining.html                 post_services
 Services & Applications.html            page
-uploads/sector-medical-potomac.html
-# entries not listed here are not built — see reference/pages.example.txt
+uploads/sector-medical-potomac.html     post_application
 ```
 
-A path in `pages.txt` that does not exist in the zip is a zip-level error: report it and mark the zip `"failed"` rather than silently building a subset — a typo in the allow-list would otherwise look like a deliberate omission.
+Two reporting obligations, because an allow-list that lives outside the zip can drift from it:
 
-With no `pages.txt`, enumerate `*.html` in the zip ROOT ONLY and exclude, by path and filename:
+- A manifest path that does not exist in the zip is a zip-level error: report it and mark the zip `"failed"` rather than silently building a subset. A typo would otherwise read as a deliberate omission.
+- Every `*.html` file in the zip that the manifest does NOT list is reported as **unlisted, not built**, with its section count. A re-export that adds pages must never be silently dropped — the report is how the human learns to add them.
+
+With no manifest resolved, say so prominently in the report, then enumerate `*.html` in the zip ROOT ONLY and exclude, by path and filename:
 
 - any file not in the zip root — `_src/`, `uploads/`, `assets/`, `screenshots/`, `_ds/`, and any other subdirectory. Nested HTML in a design export is source material, working copies, or handoff variants, never a page to build.
 - `*.dc.html` — design-canvas documents (`<x-dc>` wrappers), not pages.
@@ -46,7 +54,7 @@ With no `pages.txt`, enumerate `*.html` in the zip ROOT ONLY and exclude, by pat
 
 Do NOT use "referenced from an iframe" as the test for interactive app files: an export may embed its interactive markup inline, in which case no iframe exists and the test silently passes everything (see 3.c.iv).
 
-List the enumerated pages in the final report, **and every file excluded with the rule that excluded it**, so a human can confirm nothing was missed and correct the next zip with a `pages.txt`.
+List the enumerated pages in the final report, **and every file excluded with the rule that excluded it**, so a human can confirm nothing was missed and write a manifest for the next run.
 
 b. WORKTREE: using the orca CLI, create ONE worktree/branch per zip, named build/<zip-name>, from main. All pages from this zip are built in this worktree.
 
@@ -59,7 +67,7 @@ i. IDENTITY: the question here is **"has this pipeline already created this page
 - **Hit** → this pipeline built it. Record `"skipped-already-built"` with the existing post_id and continue. The one exception: if this zip's status is `partial` and this page's recorded status is `"failed"` or missing, re-enter and rebuild it.
 - **Miss** → build it, regardless of what else lives at that slug. `build-state.json` is the ledger of record, but it lives on a build branch that may never merge — so if WP meta says this pipeline built a page and the ledger disagrees, trust WP and reconcile the ledger.
 
-**POST TYPE:** type follows what the page IS, because it sets the permalink and the theme template — a service page is `post_services` (`/services/<slug>/`), an application or sector page is `post_application`, everything else is `page`. Nothing else is permitted — SKILL.md §1. If `pages.txt` gives a type for the page, use it; otherwise infer from the design and state the inference in the report. SKILL.md §4 gates every type against `elementor_cpt_support` before creating.
+**POST TYPE:** type follows what the page IS, because it sets the permalink and the theme template — a service page is `post_services` (`/services/<slug>/`), an application or sector page is `post_application`, everything else is `page`. Nothing else is permitted — SKILL.md §1. If the manifest gives a type for the page, use it; otherwise infer from the design and state the inference in the report. SKILL.md §4 gates every type against `elementor_cpt_support` before creating.
 
 **SLUG:** kebab-case from the filename or `<title>`, then namespace it: `pl-auto-<slug>`, mirroring the `pl-auto-` media prefix. Live pages keep the clean slugs, this run's drafts cannot collide with them, and WordPress cannot silently suffix them into something the report would misstate. Renaming at go-live is a human step.
 
