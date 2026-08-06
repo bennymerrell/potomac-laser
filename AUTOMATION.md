@@ -24,13 +24,18 @@ If the delta is empty, exit silently. Do nothing else.
 
 a. UNPACK into a temp dir. Enumerate page-level HTML files — entry documents only.
 
-**If the zip root contains `pages.txt`, it is the allow-list: one entry per line and the complete set of pages. Enumerate exactly those and nothing else.** A human curating the zip is cheaper than the automation guessing. Each line is a path relative to the zip root, optionally followed by whitespace and the post type to build it as (`page` or `post_services`, default `page`); `#` starts a comment:
+**If the zip root contains `pages.txt`, it is the allow-list: one entry per line and the complete set of pages. Enumerate exactly those and nothing else.** A human curating the zip is cheaper than the automation guessing. Each line is a path relative to the zip root, optionally followed by the post type to build it as (`page` or `post_services`, default `page`). Blank lines and lines starting with `#` are ignored.
+
+**Parse rule — design filenames contain spaces, so do not split on the first whitespace.** Trim the line; if its LAST whitespace-separated token is exactly `page` or `post_services`, that token is the post type and everything before it, trimmed, is the path. Otherwise the whole trimmed line is the path and the type is `page`. Both are a closed set, and no design filename ends in ` page`, so this never misreads a path.
 
 ```
-CNC Micromachining.html      post_services
-CCIT.html                    page
-# uploads/* are assets, not pages
+CNC Micromachining.html                 post_services
+Services & Applications.html            page
+uploads/sector-medical-potomac.html
+# entries not listed here are not built — see reference/pages.example.txt
 ```
+
+A path in `pages.txt` that does not exist in the zip is a zip-level error: report it and mark the zip `"failed"` rather than silently building a subset — a typo in the allow-list would otherwise look like a deliberate omission.
 
 With no `pages.txt`, enumerate `*.html` in the zip ROOT ONLY and exclude, by path and filename:
 

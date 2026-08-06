@@ -1,0 +1,69 @@
+# pages.txt — the page allow-list for a design zip (AUTOMATION.md §3a)
+#
+# Copy this file into the ROOT of the zip as `pages.txt`. When present it is the
+# COMPLETE set of pages to build: anything not listed is not built, and no
+# heuristic runs. Blank lines and #-comments are ignored.
+#
+# Format:  <path relative to zip root>[  <post_type>]
+#   post_type is `page` (default) or `post_services` — nothing else (SKILL.md §1).
+#   A service page is post_services: that is what its live counterparts are and
+#   what puts it under /services/.
+#   Filenames contain spaces, so the type is read as the LAST token on the line;
+#   if the last token isn't a post type, the whole line is the path.
+#
+# Drafts are created at pl-auto-<slug> and stamped _pl_auto_page = the path
+# below, which is this page's durable identity across runs (AUDIT.md B5).
+#
+# ---------------------------------------------------------------------------
+# Worked example: `Potomac Laser.zip` (origin/project-zip, 12,249,689 bytes)
+# 23 HTML files in the zip; 11 are pages. Drafted 2026-08-06.
+# ---------------------------------------------------------------------------
+
+# Service pages — 12 sections each, built from the shared CNC template.
+# NOTE: all five carry the "Select your application" explorer INLINE (the APPS
+# JS object). AUTOMATION.md §3.c.iv expects a separate self-contained
+# interactive HTML file and will mark these "failed: missing-interactive-asset"
+# until that is resolved (AUDIT.md, contradiction 6). Expect them to fail the
+# first run even though they are correctly listed here.
+CNC Micromachining.html                        post_services
+Laser Micromachining.html                      post_services
+Micro-Hole Drilling.html                       post_services
+Rapid Prototyping.html                         post_services
+3D Printing.html                               post_services
+
+# Standard pages.
+About Our Group.html                           page
+Contact.html                                   page
+Project Gallery.html                           page
+Services & Applications.html                   page
+
+# Application / sector pages. Listed as `page` because SKILL.md §1 allows only
+# `page` and `post_services`. If these should live in the `post_application`
+# CPT (it IS in elementor_cpt_support), that type has to be added to SKILL.md
+# §1 and ALLOWED_POST_TYPES in tools/validate_spec.py first — a decision, not a
+# line in this file.
+CCIT.html                                      page
+uploads/sector-medical-potomac.html            page
+
+# ---------------------------------------------------------------------------
+# Deliberately NOT built, and why. Kept here so the next curator can see the
+# reasoning rather than re-deriving it.
+#
+#   3D Printing (standalone).html                 duplicate of 3D Printing.html
+#   uploads/CNC Micromachining (standalone).html  duplicate; byte-identical to
+#   uploads/cnc-standalone-upload.html            each other (2,548,462 b)
+#   uploads/cnc-unpacked.html                     working copy
+#   uploads/Project Gallery (standalone).html     duplicate
+#   design_handoff_about_page/
+#     About Our Group -no hero-.html              hero-less variant
+#   Blog Index.dc.html                            design canvas (<x-dc>)
+#   Blog Article.dc.html                          design canvas
+#   Kapton.dc.html                                design canvas (blog draft)
+#   Site Footer.dc.html                           footer partial, 0 sections
+#   Canvas-4.dc.html                              empty canvas, 206 bytes
+#   _src/original.html                            source artefact
+#
+# Blog Index / Blog Article are real intent, not junk — they are just canvases
+# rather than pages, and no fragment covers a blog index or article layout yet.
+# Add them once the library does.
+# ---------------------------------------------------------------------------
