@@ -5,7 +5,7 @@
       "filename": "Potomac Laser.zip",
       "branch": "build/potomac-laser",
       "status": "built",
-      "note": "All five pages of the manifest's ACTIVE phase (RUN 1, the service pages) are built. RUN 2 and RUN 3 are still commented out in manifests/potomac-laser.txt, and a zip marked \"built\" is never reprocessed by §2 — so advancing a phase now needs the human reset described in that manifest (delete this zip's entry), not just uncommenting the block. Runs: 20260806-124030 built CNC/LM/MHD under human supervision; 20260806-173742 was the first autonomous coordinator run and built RP/3DP.",
+      "note": "All five pages of the manifest's ACTIVE phase (RUN 1, the service pages) are built. RUN 2 and RUN 3 are still commented out in manifests/potomac-laser.txt, and a zip marked \"built\" is never reprocessed by §2 — so advancing a phase now needs the human reset described in that manifest (delete this zip's entry), not just uncommenting the block. Runs: 20260806-124030 built CNC/LM/MHD under human supervision; 20260806-173742 was the first autonomous coordinator run and built RP/3DP. The services-image-cards token defect found on LM/MHD during run 20260806-173742 is fixed in the repo and on both posts as of 2026-08-06; posts 12240/12241 remain post_status=draft.",
       "pages": [
         {
           "slug": "pl-auto-cnc-micromachining",
@@ -41,7 +41,7 @@
           "run": "20260806-124030",
           "sections_built": 12,
           "sections_deferred": [],
-          "note": "First page needing NO §7 authoring — 12/12 matched. All 10 images deduped to the CNC run's attachments; zero new uploads. DEFECT FOUND 20260806-173742: its services-image-cards tokens are grouped (body_3-7 descriptions, body_8-12 links) but the fragment interleaves per card (body_3/4 = card 1), so each card's link slot renders the NEXT card's description and cards 4-5 lose their descriptions. Not corrected — AUTOMATION.md §6 bars this run from writing to a post it did not create."
+          "note": "First page needing NO §7 authoring — 12/12 matched. All 10 images deduped to the CNC run's attachments; zero new uploads. DEFECT FOUND 20260806-173742: its services-image-cards tokens are grouped (body_3-7 descriptions, body_8-12 links) but the fragment interleaves per card (body_3/4 = card 1), so each card's link slot renders the NEXT card's description and cards 4-5 lose their descriptions. CORRECTED 2026-08-06 (commit e7d6efa, merged 65e0989): token order now follows the fragment's document order in both sibling specs; built trees re-tokened in place by tools/retoken_section.py, and posts 12240/12241 patched by element id — 8 editor values each, all 292 ids and 4409 leaf paths untouched, prior _elementor_data kept in meta _elementor_data_bak_cards_20260806. All 3671 string leaves now match the repo builds on both posts."
         },
         {
           "slug": "pl-auto-micro-hole-drilling",
