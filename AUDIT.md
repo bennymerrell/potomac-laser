@@ -27,8 +27,11 @@ and `build-state.json` is still `{"processed_zips": []}`.
 | B8 | A section carries the explorer's JS template literals as if they were copy | Fixed `5aad50a` — found by dry run |
 | B9 | The legends strip HTML, so legend-sourced token values ship truncated | Fixed `35e3e36` — found by write phase |
 | B10 | CCIT's FAQ answers are JS-rendered, not markup — `faq-toggle` needs static pairs | **OPEN** — affects run 3 |
-| B11 | Quote sections are unwired forms (CCIT **and** all 5 service pages) | **Part-fixed** `0fad55e` — CNC's quote form built and proven against `[Potomac] Start a Project`; 4 siblings + CCIT reuse it |
+| B11 | Quote sections are unwired forms (CCIT **and** all 5 service pages) | **Part-fixed** `6111139` — `quote-form-hubspot` is now a library pattern, so the 4 siblings need only copy; CCIT's own form shape is still open |
 | B12 | `why-choose-inset-cta` carried a hardcoded photo URL, untokenised — and PATTERNS.md called it an empty spacer | Fixed `583270f`, proven on 12239 — page now 12/12 sections |
+| B13 | Elementor 4.x caches rendered HTML per post; regenerating CSS does not invalidate it | Fixed `32f4ffa` — four-step per-post invalidation now in SKILL.md §4 and AUTOMATION.md §3.c.v |
+| B14 | §3.c.vi's visual verify needs an authenticated browser; an unattended run has none | **OPEN** — decision required before enabling the schedule |
+| B15 | No gate tests behaviour — an inert form screenshots identically to a working one | **OPEN** — cost a real defect this session |
 | C1 | §7 vs SKILL.md §8 (authoring / appending forbidden) | Fixed `16417be` |
 | C2 | §7 vs TRANSLATE.md §5 ("stop and report") | Fixed `16417be` |
 | C3 | TRANSLATE.md §10's blocking human review vs full autonomy | Fixed `2032075` |
@@ -81,6 +84,34 @@ curate the zip so it fits (service pages only); or make arity a first-class spec
 each repeating unit's count in `spec.yaml`, have the assembler add and remove sibling containers, and
 have the validator check coverage against the *resolved* fragment rather than the file on disk. Until
 one of those, counts must stay identical to the fragments.
+
+---
+
+## Readiness verdict — 2026-08-06, after the supervised run
+
+**Not ready to enable the schedule.** Every pre-flight gate now passes unaided and one page was built
+end to end, but the evidence from doing it says the pipeline cannot yet do it alone:
+
+- **One section took all three §7.3 iterations.** Guessed styling, a `calc()` width, and a theme `p`
+  rule beating widget typography. A fourth failure would have discarded the pattern.
+- **Two defects were caught by a human noticing, not by a gate.** The quote form's action button is
+  `type="button"`, so it never raised a submit event — the form was **inert and screenshotted
+  perfectly** (B15). And a leaked CSS selector silently restyled an already-verified section; that
+  surfaced because a regression was recognised, not because anything failed.
+- **B13 was undocumented.** The costliest discovery of the run existed only in commit messages until
+  `32f4ffa`. An unattended run would have burned its whole verify budget on stale markup.
+- **§3.c.vi needs a logged-in browser** (B14). The draft preview 404s without a session, so an
+  unattended run's only route is minting an admin session automatically — a privileged act, unsupervised.
+
+What is genuinely proven: the §0 backup gate ran and produced a set; identity-by-provenance behaved
+correctly on both the create and the update paths; the enumeration manifest resolved; the validator
+caught real defects the moment fragments changed; two §7 patterns were minted, verified and merged;
+and a live form submission reached HubSpot with no PII in the dataLayer.
+
+**Recommended gate before enabling:** one more supervised run on a sibling service page (Laser
+Micromachining). It reuses both new patterns and needs only copy substitution, so it is the fairest
+test of the pipeline rather than of the author. **If it completes with zero human interventions, that
+is the evidence to enable the schedule.** This run took roughly a dozen.
 
 ---
 
