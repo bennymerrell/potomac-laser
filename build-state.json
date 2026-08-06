@@ -4,8 +4,8 @@
       "zip_hash": "2f5215b42d491dae3eb7653c0d4e87c985723f7054b2916dc1937a8af331e14e",
       "filename": "Potomac Laser.zip",
       "branch": "build/potomac-laser",
-      "status": "partial",
-      "note": "Supervised single-page run, not an autonomous coordinator run. Manifest phased to the 5 service pages; only CNC attempted.",
+      "status": "built",
+      "note": "All five pages of the manifest's ACTIVE phase (RUN 1, the service pages) are built. RUN 2 and RUN 3 are still commented out in manifests/potomac-laser.txt, and a zip marked \"built\" is never reprocessed by §2 — so advancing a phase now needs the human reset described in that manifest (delete this zip's entry), not just uncommenting the block. Runs: 20260806-124030 built CNC/LM/MHD under human supervision; 20260806-173742 was the first autonomous coordinator run and built RP/3DP.",
       "pages": [
         {
           "slug": "pl-auto-cnc-micromachining",
@@ -15,6 +15,7 @@
           "preview_url": "https://www.potomac-laser.com/?post_type=post_services&p=12239&preview=true",
           "build_type": "extend",
           "status": "built",
+          "run": "20260806-124030",
           "sections_built": 10,
           "sections_deferred": [
             {
@@ -37,9 +38,10 @@
           "preview_url": "https://www.potomac-laser.com/?post_type=post_services&p=12240&preview=true",
           "build_type": "standard",
           "status": "built",
+          "run": "20260806-124030",
           "sections_built": 12,
           "sections_deferred": [],
-          "note": "First page needing NO \u00a77 authoring \u2014 12/12 matched. All 10 images deduped to the CNC run's attachments; zero new uploads."
+          "note": "First page needing NO §7 authoring — 12/12 matched. All 10 images deduped to the CNC run's attachments; zero new uploads. DEFECT FOUND 20260806-173742: its services-image-cards tokens are grouped (body_3-7 descriptions, body_8-12 links) but the fragment interleaves per card (body_3/4 = card 1), so each card's link slot renders the NEXT card's description and cards 4-5 lose their descriptions. Not corrected — AUTOMATION.md §6 bars this run from writing to a post it did not create."
         },
         {
           "slug": "pl-auto-micro-hole-drilling",
@@ -49,9 +51,38 @@
           "preview_url": "https://www.potomac-laser.com/?post_type=post_services&p=12241&preview=true",
           "build_type": "standard",
           "status": "built",
+          "run": "20260806-124030",
           "sections_built": 12,
           "sections_deferred": [],
-          "note": "ZERO interventions \u2014 first page built end to end with no human fix."
+          "note": "Recorded as ZERO interventions. Carries the same services-image-cards token-grouping defect as 12240 (see that entry); the 3.c.vi pass that cleared it did not catch the misordering."
+        },
+        {
+          "slug": "pl-auto-rapid-prototyping",
+          "post_id": 12242,
+          "post_type": "post_services",
+          "design_page": "Rapid Prototyping.html",
+          "preview_url": "https://www.potomac-laser.com/?post_type=post_services&p=12242&preview=true",
+          "build_type": "standard",
+          "status": "built",
+          "run": "20260806-173742",
+          "sections_built": 12,
+          "sections_deferred": [],
+          "verify": "3.c.vi iteration 2 of 3. Text compared line-by-line against specs/pl-auto-rapid-prototyping/mock.html: 5 of 11 comparable sections hash-identical, the rest differing only by the sibling-wide \"Request a Quote\" button label, the hero line the fragment has no slot for, the HubSpot form's own field labels, and the collapsed FAQ answers. Card grids 5/3/4 across at equal widths, 9 of 9 images loaded, iframe 1792x3122, no literal tokens.",
+          "note": "Iteration 1 shipped the inherited services-image-cards token grouping; iteration 2 corrected it from the fragment's own document order."
+        },
+        {
+          "slug": "pl-auto-3d-printing",
+          "post_id": 12243,
+          "post_type": "post_services",
+          "design_page": "3D Printing.html",
+          "preview_url": "https://www.potomac-laser.com/?post_type=post_services&p=12243&preview=true",
+          "build_type": "standard",
+          "status": "built",
+          "run": "20260806-173742",
+          "sections_built": 12,
+          "sections_deferred": [],
+          "verify": "3.c.vi iteration 2 of 3. Same comparison profile as 12242 — 5 of 11 comparable sections hash-identical, remaining deltas all accounted for. Card grids 5/3/4 at equal widths, 9 of 9 images loaded, iframe 3dp-interactive-frame 1792x3148, 8 FAQ items, no literal tokens.",
+          "note": "spec-table-dark carries 8 rows, as on its siblings; the pattern's Notes mark spec rows adjustable."
         }
       ],
       "new_patterns": [
@@ -60,9 +91,28 @@
           "source_post_id": 12239,
           "section_index": 2,
           "minted_by": "CNC Micromachining.html",
-          "reused_by": [],
+          "reused_by": [
+            "Laser Micromachining.html",
+            "Micro-Hole Drilling.html",
+            "Rapid Prototyping.html",
+            "3D Printing.html"
+          ],
           "verify": "12 computed properties vs design, 0 diffs, 3 iterations",
-          "location": "build/potomac-laser only \u2014 \u00a76 bars a \u00a77 pattern from main without a human merge"
+          "location": "build/potomac-laser only — §6 bars a §7 pattern from main without a human merge",
+          "note": "Its token order interleaves description and link per card. Two sibling specs assumed grouping and render wrongly; the entry's Tokens field would be clearer if it said so."
+        },
+        {
+          "id": "quote-form-hubspot",
+          "source_post_id": 12239,
+          "section_index": 9,
+          "minted_by": "CNC Micromachining.html",
+          "reused_by": [
+            "Laser Micromachining.html",
+            "Micro-Hole Drilling.html",
+            "Rapid Prototyping.html",
+            "3D Printing.html"
+          ],
+          "location": "merged to main by a human at 6111139"
         }
       ]
     }
