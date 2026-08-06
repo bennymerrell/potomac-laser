@@ -22,15 +22,15 @@ and `build-state.json` is still `{"processed_zips": []}`.
 | B3 | 7 of 11 pages skipped for the wrong reason; wrong post type | Fixed `eddf406`, `3751dab` |
 | B4 | §7 pattern budget exhausted; arity changes fail the validator | **OPEN** — phase run 1 to avoid it |
 | B5 | No provenance marker, so identity was inferred from the slug | Fixed `eddf406` |
-| B6 | Export ships design-time scaffolding (Tailwind CDN, React dev, Babel, tweaks panel) | Fixed `NEXT` |
+| B6 | Export ships design-time scaffolding (Tailwind CDN, React dev, Babel, tweaks panel) | Fixed `2032075` |
 | C1 | §7 vs SKILL.md §8 (authoring / appending forbidden) | Fixed `16417be` |
 | C2 | §7 vs TRANSLATE.md §5 ("stop and report") | Fixed `16417be` |
-| C3 | TRANSLATE.md §10's blocking human review vs full autonomy | Fixed `NEXT` |
+| C3 | TRANSLATE.md §10's blocking human review vs full autonomy | Fixed `2032075` |
 | C4 | §2 delta rule excluded every status it defines | Fixed `16417be` |
-| C5 | Arity guidance differs between AUTOMATION.md and TRANSLATE.md | Fixed `NEXT` |
+| C5 | Arity guidance differs between AUTOMATION.md and TRANSLATE.md | Fixed `2032075` |
 | C6 | §3.c.iv looked for the interactive asset in the wrong place | Fixed `36c65bb` — resolved from the server |
 | C7 | Broken `PATTERNS.md` links and HTML entities in AUTOMATION.md | Fixed `16417be` |
-| D1–D5 | Deployment gaps (branch, MCP config, agent type, localhost entry, report field) | Fixed `NEXT` |
+| D1–D5 | Deployment gaps (branch, MCP config, agent type, localhost entry, report field) | Fixed `2032075` |
 
 ---
 
@@ -98,7 +98,7 @@ stale `APPS` content (see C6).
 
 ## Resolved
 
-### B6 — the export ships design-time scaffolding (fixed `NEXT`)
+### B6 — the export ships design-time scaffolding (fixed `2032075`)
 
 Every service page in the zip loads four things that must never reach a live page:
 `cdn.tailwindcss.com` (Tailwind's Play CDN — on WP, WindPress compiles instead), React and
@@ -112,14 +112,14 @@ the first WordPress call; and `validate_spec.py` rejects either in a token value
 an off-site asset, so anything external is scaffolding by definition. Verified: Tailwind CDN, React
 dev, `tweaks-root` and a bare external stylesheet each fail; a clean spec and the template pass.
 
-### C3 — blocking human review vs autonomy (fixed `NEXT`)
+### C3 — blocking human review vs autonomy (fixed `2032075`)
 
 TRANSLATE.md §10 required human sign-off before §0 while AUTOMATION.md's preamble forbids asking for
 input. §10 is now split by caller: an automation run puts the match table in the run report and
 continues — the report is the review, and its output is unpublished drafts either way — while a
 human-run translate still stops for sign-off.
 
-### C5 — arity guidance (fixed `NEXT`)
+### C5 — arity guidance (fixed `2032075`)
 
 AUTOMATION.md said counts were "typical, not required"; TRANSLATE.md said a mismatch needs a
 decision. TRANSLATE.md §131–150 now states the mechanical truth: the spec must supply exactly the
@@ -128,7 +128,7 @@ free repeater, and a genuine mismatch is structural — drop the surplus deliber
 or take the section through §7, which is the only path allowed to change a fragment's shape. Never
 juggle tokens to absorb it.
 
-### D1–D5 — deployment gaps (fixed `NEXT`)
+### D1–D5 — deployment gaps (fixed `2032075`)
 
 - **D1/D2.** The audit's suggestion — point the automation at a `main` checkout — turned out to be
   wrong: `/Users/admin/orca/potomac-laser` is on `main` but has **no `.mcp.json`** (it is gitignored
