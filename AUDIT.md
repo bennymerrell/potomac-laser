@@ -4,19 +4,20 @@
 `reference/*`, `tools/validate_spec.py`, the Orca automation `Potomac - Claude to WP`, the queued
 input `Potomac Laser.zip` on `origin/project-zip`, and the live site via read-only Novamira calls.
 
-**Current as of** `3751dab`. Fixes from this audit landed in `16417be`, `eddf406`, `e11ae43`,
-`3751dab`; live-site figures re-read 2026-08-06 11:29 UTC.
+**Current as of** `b8f0286`. Fixes from this audit landed in `16417be`, `eddf406`, `e11ae43`,
+`3751dab`, `b8f0286`; live-site figures re-read 2026-08-06 11:29 UTC.
 
-**Verdict: NOT READY — keep the schedule disabled.** Five blockers were found; three are fixed in the
-repo. The two that remain are decisions rather than code, and **B1 alone stops every run at the first
-gate**. Nothing has been written to production by this pipeline: zero posts carry `_pl_auto_page`,
-zero `pl-auto-` attachments exist, and `build-state.json` is still `{"processed_zips": []}`.
+**Verdict: NOT READY — keep the schedule disabled.** Five blockers were found; **four are fixed in
+the repo**. What remains is B4 (pattern budget and arity) and C6 (the inline interactive cluster) —
+together they are what stands between a passing pre-flight and a useful run. Nothing has been written
+to production by this pipeline: zero posts carry `_pl_auto_page`, zero `pl-auto-` attachments exist,
+and `build-state.json` is still `{"processed_zips": []}`.
 
 ## Status at a glance
 
 | # | Finding | Status |
 |---|---|---|
-| B1 | Backup is weekly; the §0 gate needs < 24 h | **OPEN** — human decision |
+| B1 | Backup is weekly; the §0 gate needs < 24 h | Fixed `b8f0286` — §0 now takes its own db backup |
 | B2 | Page enumeration had no working exclusion rule | Fixed `16417be`; allow-list drafted, **not yet in the zip** |
 | B3 | 7 of 11 pages skipped for the wrong reason; wrong post type | Fixed `eddf406`, `3751dab` |
 | B4 | §7 pattern budget exhausted; arity changes fail the validator | **OPEN** — human decision |
@@ -31,35 +32,6 @@ zero `pl-auto-` attachments exist, and `build-state.json` is still `{"processed_
 | D1–D5 | Deployment gaps (branch, MCP config, agent type, localhost entry, report field) | **OPEN** |
 
 ---
-
-## Open: B1 — the §0 backup gate cannot pass, so the run aborts before its first write
-
-SKILL.md §0 requires a backup **verified less than 24 hours old**, and AUTOMATION.md §6 makes this the
-one failure that stops the whole run rather than one page.
-
-UpdraftPlus on production, re-read 2026-08-06 11:29 UTC:
-
-| Fact | Value |
-|---|---|
-| Latest backup set | 2026-08-02 04:00 UTC — **103.5 h old** |
-| Its contents | db, plugins, themes (**no uploads**) |
-| `updraft_interval` (db) | **weekly**, next 2026-08-09 04:00 UTC |
-| File backups | **`none`** |
-| Last set including uploads | 2026-07-09 14:33 UTC |
-
-The gate is therefore satisfiable for a few hours a week at best, and fails outright today. A
-weekday-09:00 schedule would abort nearly every run with `failed: no-verified-backup`. Uploads have
-not been backed up in four weeks, and a run creates media attachments. The agent cannot fix this
-itself: SKILL.md §1 permits no PHP beyond insert / meta / media / CSS and read-only queries, so
-triggering a backup is out of scope by design.
-
-**Fix (human, pick one):**
-
-1. Set UpdraftPlus to **daily**, db *and* files, so the gate can pass on any scheduled run; or
-2. Implement the "backup-status file the human updates" that SKILL.md §0 offers as the alternative —
-   it is named there, but nothing in the repo defines its path, format, or who writes it; or
-3. Relax the gate deliberately (e.g. 7 days, matching the real cadence) and accept that a bad run is
-   undone from the run manifest rather than from a fresh backup.
 
 ## Open: B4 — the pattern budget is exhausted by this zip, and arity changes fail the validator
 
@@ -141,7 +113,7 @@ so a doomed page costs nothing.
 
 1. **Branch mismatch.** The automation's workspace is `…/workspaces/potomac-laser/main-2`, on branch
    `main-2`, while AUTOMATION.md §1 says "the coordinator runs from main" and §2/§4 read and commit
-   `build-state.json` "on main". `main-2` and `origin/main` are currently identical (`3751dab`), but
+   `build-state.json` "on main". `main-2` and `origin/main` are currently identical (`b8f0286`), but
    local `main` is stale at `a994e53`, so a run would read and write the ledger on `main-2`. Either
    point the automation at a `main` checkout, or reword §1/§2/§4 to name the coordinator branch.
 2. **`.mcp.json` is gitignored and exists only in `main-2`.** Per-zip worktrees created by §3b get no
@@ -164,22 +136,59 @@ correct state today.
 
 ---
 
-## What a run would do today, if B1 were satisfied
+## What a run would do today
 
-Worth stating plainly, because the fixes changed it. With `pages.txt` in the zip, all 11 pages
-enumerate; the provenance check returns "not built" for every one (correctly — nothing has been built
+Worth stating plainly, because the fixes changed it. Pre-flight now passes on its own — §0 takes a
+database backup if none is fresh. With `pages.txt` in the zip, all 11 pages enumerate; the provenance check returns "not built" for every one (correctly — nothing has been built
 yet), so all 11 proceed. Then:
 
 - The **5 service pages** fail at §3.c.iv on the inline explorer (C6), after uploading their images.
 - The **6 remaining pages** are mostly `UNMATCHED` against a service-page library, so §7 mints until
   the cap of 8 trips (B4) and the rest fail `pattern-budget-exhausted`.
 
-Net expected output: **0–2 built pages, ~50 orphan attachments, and a long report.** B1 is the loudest
-blocker, but C6 and B4 are what stand between a passing gate and a useful run.
+Net expected output: **0–2 built pages, ~50 orphan attachments, and a long report.** C6 and B4 are now
+the only things between a passing pre-flight and a useful run.
 
 ---
 
 ## Resolved
+
+### B1 — the backup gate could never pass (fixed by self-serving a backup)
+
+SKILL.md §0 demanded a backup **verified less than 24 hours old**, and AUTOMATION.md §6 made that the
+one failure that stops the whole run. UpdraftPlus is on a **weekly** db schedule with file backups
+`none`: at audit time the newest set was 2026-08-02 04:00 UTC (103.5 h old, db/plugins/themes, no
+uploads), the last set including uploads was 2026-07-09, and the next was not due until 2026-08-09. The
+gate was satisfiable for a few hours a week at best and failed outright on the day. The agent could not
+fix it either — §1 permitted no PHP beyond insert / meta / media / CSS and read-only queries.
+
+Rather than remove the gate, §0 now **takes its own backup** when none is fresh:
+`do_action('updraft_backupnow_backup_database')` (verified registered on this install), then poll
+`updraft_backup_history` and `updraft_last_backup` until a newer set reports success — every 30s, capped
+at 10 minutes. The set's timestamp and nonce go into the run manifest as the run's recovery floor, and
+the report must state it. A backup that runs but fails to upload is **not** a pass; no successful set
+inside the cap still aborts the whole run with `failed: no-verified-backup`.
+
+SKILL.md §1 was widened by exactly one entry to permit this — a **database-only** backup, in §0 only.
+UpdraftPlus writes its own options and schedules its own resumption events as a consequence; those are
+the plugin's writes, not the skill writing `wp_options` or changing cron. Files/uploads backups,
+restores, deleting old sets, and any change to UpdraftPlus settings or schedule all remain forbidden.
+Only the db matters here anyway: the run's file writes are additive, and the manifest already covers
+them.
+
+**Two properties of this install the human should know** (both recorded in §0):
+
+- `updraft_delete_local=1` with `updraft_service=['dropbox']` — the set is uploaded and the local copy
+  deleted, so there are **zero local backup files on the server** (confirmed) and recovery depends on
+  the Dropbox connection still being valid. A stale token becomes a failed gate rather than a silent
+  pass, which is the right failure direction, but it does mean the gate can start blocking runs for a
+  reason that has nothing to do with this pipeline.
+- `updraft_retain_db=5` — every backup this gate takes rotates one older set out. Today's five weekly
+  sets span about five weeks; if the automation adds a set per run, weekday runs would compress that
+  history to about five days. **Consider raising `updraft_retain_db`** if runs become frequent.
+
+Still worth doing independently of this pipeline: a **daily** db schedule and any uploads coverage at
+all. The gate now guarantees a backup at run time; it does not improve the site's baseline.
 
 ### B5 — identity was inferred from the slug (fixed `eddf406`)
 
@@ -248,7 +257,7 @@ heuristics run, and they are a safety net rather than curation.
 
 ## Verification baseline
 
-Everything below was checked and holds at `3751dab`.
+Everything below was checked and holds at `b8f0286`.
 
 | Check | Result |
 |---|---|
@@ -266,22 +275,20 @@ Everything below was checked and holds at `3751dab`.
 | `elementor_cpt_support` | `page`, `post_services`, `post_application` ✅ |
 | Orca primitives | `orca worktree create --name … --base-branch …`, `worktree set --comment` ✅ |
 | Artifacts committable | `.gitignore` covers neither `specs/`, `built/`, nor `reference/snippets/` ✅ |
-| Backup plugin | UpdraftPlus active — a verification path exists; the cadence is B1 ✅ |
+| Backup trigger | `updraft_backupnow_backup_database` registered; WP-cron enabled; backup dir writable. `delete_local=1`, service `dropbox`, `retain_db=5`, 0 local sets on disk — see B1 ✅ |
 | Production untouched | 0 posts with `_pl_auto_page`, 0 `pl-auto-` attachments, `processed_zips: []` ✅ |
 
 ---
 
 ## Before the first run
 
-1. **B1** — UpdraftPlus to daily (db + files), or define the backup-status file, or relax the gate.
-   Nothing else matters until the gate can pass.
-2. **C6** — decide how the inline interactive explorer is handled, and move the check ahead of image
+1. **C6** — decide how the inline interactive explorer is handled, and move the check ahead of image
    upload so a failing page costs no orphan attachments.
-3. **B4** — raise the pattern cap for the first run or curate the zip to fit; decide whether arity
+2. **B4** — raise the pattern cap for the first run or curate the zip to fit; decide whether arity
    becomes a spec feature. Then align C5's wording across both docs.
-4. **B2 residue** — copy `reference/pages.example.txt` into the zip root as `pages.txt`.
-5. **D1–D4** — point the automation at a `main` checkout, state the MCP-in-lead-session rule, remove the
+3. **B2 residue** — copy `reference/pages.example.txt` into the zip root as `pages.txt`.
+4. **D1–D4** — point the automation at a `main` checkout, state the MCP-in-lead-session rule, remove the
    `novamira-localhost` entry.
-6. **C3** — resolve TRANSLATE.md §10 once scope is settled.
-7. **Dry-run one page** with the schedule still disabled. CCIT is the best candidate: no interactive
+5. **C3** — resolve TRANSLATE.md §10 once scope is settled.
+6. **Dry-run one page** with the schedule still disabled. CCIT is the best candidate: no interactive
    cluster, no live counterpart at its slug, and it exercises §7 minting end to end.

@@ -155,7 +155,7 @@ Commit and push build-state.json. Write a worktree comment on the coordinator ru
 ## 6. HARD BOUNDARIES
 
 - Production Novamira server (`novamira-potomac-laser-co`) only, in the skill's PRODUCTION MODE. Staging does not exist yet; when it does, switch here and in SKILL.md §0/§4 together. Localhost/dev servers must NOT be connected during a run (SKILL.md §0 gate).
-- Honour SKILL.md §0 before any write: a backup verified less than 24h old — verified, not assumed — or abort the entire run, marking pending pages "failed: no-verified-backup". This is the one condition that stops the whole run rather than one page.
+- Honour SKILL.md §0 before any write: a database backup verified less than 24h old — verified, not assumed. If none exists, §0 TAKES one (`do_action('updraft_backupnow_backup_database')`, poll to success, 10-minute cap) and records its timestamp as the run's recovery floor. If that produces no successful set, abort the entire run, marking pending pages "failed: no-verified-backup". This is the one condition that stops the whole run rather than one page, and the backup trigger is the one global operation the run may perform.
 - Record every post_id, attachment_id, and uploaded file path in `built/run-<timestamp>.manifest.json` AS IT IS CREATED. It is the rollback map, and SKILL.md §1 requires checking it before any update call.
 - Never global cache clear. Never touch Kit 11259, `wp_options`, users, roles, plugins, themes, widgets, menus, or any Elementor global.
 - Drafts only. Publishing is human-only.

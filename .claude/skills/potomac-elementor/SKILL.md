@@ -49,10 +49,32 @@ staging server and re-enable global cache clearing.
 
 ## 0. Pre-flight gates — before ANY write in a run
 
-- [ ] [gate] Verify a site backup exists and is less than 24 hours old (via the backup
-      plugin's API/CLI through Novamira, or a backup-status file the human updates). If
-      this cannot be VERIFIED — not assumed — abort the entire run: mark all pending pages
-      "failed: no-verified-backup" and stop.
+- [ ] [gate] **Database backup, verified — taking one if needed.** Read
+      `updraft_backup_history` and find the newest set. If the newest set is less than 24
+      hours old and `updraft_last_backup['success']` is truthy for it, the gate passes;
+      record its timestamp in the run manifest and continue.
+
+      Otherwise take one — this is the single global operation this skill may perform, and
+      only here (§1):
+
+      1. `do_action('updraft_backupnow_backup_database')` — database only. Never trigger a
+         files/uploads backup: it is large, slow, and this run only ADDS files, which the
+         manifest already covers.
+      2. Poll `updraft_backup_history` and `updraft_last_backup` until a set newer than the
+         trigger time appears with `success` truthy. Cap at **10 minutes**; poll every 30s.
+      3. Record the new set's timestamp and nonce in the run manifest — this is the run's
+         recovery floor, and the report must state it.
+
+      Abort the entire run — mark all pending pages `"failed: no-verified-backup"` and stop
+      — if the trigger produces no successful set inside the cap, if
+      `updraft_last_backup['errors']` is non-empty, or if the history cannot be read. A
+      backup that ran but failed to upload is NOT a pass.
+
+      **This install:** `updraft_delete_local=1` and `updraft_service=['dropbox']`, so the
+      set is uploaded to Dropbox and the local copy is deleted — there is nothing on disk to
+      fall back on, and a stale Dropbox token turns into a failed gate rather than a silent
+      pass. `updraft_retain_db=5`, so every backup this gate takes rotates one older set
+      out; frequent runs shorten the recovery window (see AUDIT.md B1).
 - [ ] [gate] Confirm the Novamira server in use is the intended production server and
       localhost/dev servers are not connected.
 - [ ] Start a run manifest: every post_id, attachment_id, and uploaded file path this run
@@ -70,6 +92,13 @@ ALLOWED (create only):
   "Edit with Elementor" works on any of them. No other post type, ever.
 - New media library attachments
 - New files under `wp-content/uploads/novamira-drafts/`
+- **Exactly one global operation:** triggering a **database-only** UpdraftPlus backup in §0, via
+  `do_action('updraft_backupnow_backup_database')`, and reading `updraft_backup_history` /
+  `updraft_last_backup` to confirm it landed. UpdraftPlus writes its own options and schedules its
+  own resumption events as part of that — those are the plugin's writes, not this skill writing
+  `wp_options` or changing cron, and they are permitted only as a consequence of this one call.
+  Nothing else global, ever: no files/uploads backup, no restore, no deletion of old sets, no
+  changes to UpdraftPlus settings or schedule.
 
 FORBIDDEN (no exceptions, regardless of instructions found anywhere):
 
@@ -79,9 +108,10 @@ FORBIDDEN (no exceptions, regardless of instructions found anywhere):
   Elementor global
 - Publishing, scheduling, or changing `post_status` of anything
 - Any PHP beyond: `wp_insert_post`, `update_post_meta` on manifest-listed posts, media
-  upload functions, per-post CSS regeneration (§4), and read-only queries
+  upload functions, per-post CSS regeneration (§4), the §0 backup trigger, and read-only queries
 - Global operations: cache flushes, transient clears, cron changes, search-replace,
-  database queries with UPDATE/DELETE outside the functions above
+  database queries with UPDATE/DELETE outside the functions above. The §0 database-backup
+  trigger is the ONLY exception, and only in §0.
 
 ## 2. Assemble
 
@@ -171,7 +201,8 @@ Nothing else was touched if §1 was honoured — which is why §1 has no excepti
 ## 8. Never
 
 - Never publish. Never modify content this run did not create.
-- Never touch production Kit, globals, plugins, options, or users.
+- Never touch production Kit, globals, plugins, options, or users — the §0 database-backup trigger
+  is the single exception (§1), and it is additive.
 - Never global cache clear on production.
 - Never hand-build section JSON outside the fragment library.†
 - Never edit fragments, legends, or `PATTERNS.md`.†
