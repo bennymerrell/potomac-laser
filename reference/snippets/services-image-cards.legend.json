@@ -1,0 +1,32 @@
+{
+    "pattern": "services-image-cards",
+    "source_post": 12239,
+    "source_section_index": 2,
+    "note": "Values are VERBATIM widget values, markup intact (AUDIT.md B9: the original ten legends stripped HTML and truncated at the first inline tag).",
+    "tokens": {
+        "{heading_1}": "Our Services",
+        "{heading_2}": "Explore our precision capabilities",
+        "{body_1}": "<p>Choose the manufacturing route that fits your geometry, material, and production need.</p>",
+        "{body_2}": "<p><a href=\"#applications\">Explore Applications →</a></p>",
+        "{image_1}": "https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-cnc-micromachining.jpg",
+        "{heading_3}": "CNC Micromachining",
+        "{body_3}": "<p>4-axis CNC milling and drilling for fine-feature and engineering plastics where repeatable tolerance control matters.</p>",
+        "{body_4}": "<p><a href=\"/services/cnc-micro-machining-services/\">Learn more →</a></p>",
+        "{image_2}": "https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-laser-micromachining.jpg",
+        "{heading_4}": "Laser Micromachining",
+        "{body_5}": "<p>UV, IR and structured polymer film for nozzles incredibly ultra-fine, perfectly uniform backlit micro-holes.</p>",
+        "{body_6}": "<p><a href=\"/services/laser-micromachining/\">Learn more →</a></p>",
+        "{image_3}": "https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-rapid-prototyping.jpg",
+        "{heading_5}": "Rapid Prototyping",
+        "{body_7}": "<p>Fast-turn prototype paths for teams that need DFM feedback, material parts on compressed timelines.</p>",
+        "{body_8}": "<p><a href=\"/services/rapid-prototyping/\">Learn more →</a></p>",
+        "{image_4}": "https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-hybrid-cnc-laser.jpg",
+        "{heading_6}": "Hybrid CNC + Laser",
+        "{body_9}": "<p>A medical-grade stainless steel stent part, CNC macro structural feature machined and laser-cut.</p>",
+        "{body_10}": "<p><a href=\"/services/hybrid-fabrication/\">Learn more →</a></p>",
+        "{image_5}": "https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-bonding-assembly.jpg",
+        "{heading_7}": "Bonding &amp; Assembly",
+        "{body_11}": "<p>Precision alignment, bonding, micro-assembled components flawlessly bonded and aligned data.</p>",
+        "{body_12}": "<p><a href=\"/services/bonding-assembly/\">Learn more →</a></p>"
+    }
+}

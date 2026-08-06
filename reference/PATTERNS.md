@@ -67,6 +67,7 @@ omits `spec-table-dark`, which shifts every later section up by one.
 | `testimonials-avatar-cards` | 7 | 6 | 6 | 6 | 6 |
 | `faq-toggle` | 8 | 7 | 7 | 7 | 7 |
 | `cta-band-dark` | 9 | 8 | 8 | 8 | 8 |
+| `services-image-cards` | — | — | — | — | — |   <!-- minted from 12239 (pl-auto-cnc-micromachining) index 2; not present on the original five -->
 
 ## Per-page variants
 
@@ -294,6 +295,20 @@ listed per entry, and consolidated under [Unmapped colours](#unmapped-colours).
 | **Notes** | Shallowest nesting of the boxed patterns (no intermediate wrapper). `#46587010` is an **8-digit hex with alpha** — Elementor globals cannot express it, so it must stay literal. `#16253D` is a 1-channel near-miss for `gfnavy` `#15253D` and is almost certainly meant to be the same colour. |
 
 ---
+
+### services-image-cards
+| | |
+|---|---|
+| **Snippet** | `reference/snippets/services-image-cards.json` |
+| **Source** | post `12239` (`pl-auto-cnc-micromachining`) section index `2` |
+| **Used by** | 12239 at index 2. Expected on all five service pages — the section is identical across them |
+| **Signature** | `bb7f3d9fa0` · 24 widgets · 61,382 bytes |
+| **Recognise when** | A light "our services / capabilities" section: eyebrow + centred H2 + one centred intro line + a single centred orange text link, then a row of **5 equal cards**, each card an image flush to its top edge above a padded block of title + one-paragraph description + a bordered "Learn more →" pill. The discriminators against `group-ecosystem-cards`: light background rather than mid-navy, five cards rather than four, no "You are here" badge, no per-card feature list, and every card carries the same pill-style link rather than one card having a button. |
+| **Structure** | `container:full bg=gfwhite pad 68/0` → `container:boxed` gap 30 → head block (eyebrow row = 28×2px orange bar + uppercase heading; centred H2; centred intro; centred orange link) → card row `flex_direction:row flex_align_items:stretch flex_gap:22 flex_wrap:wrap` → 5 × card `container` (border 1px #E1E6EE, radius 8, `overflow:hidden`, padding 0, `flex:0 0 calc((100% - 88px)/5)`) → `image` + inner text `container` pad 14/14/16/14 → `heading h3` + `text-editor` + `text-editor` (pill) |
+| **Tokens** | 24 placeholders: `{heading_1..7}`, `{body_1..12}`, `{image_1..5}`. Numbering is document order, so each card is a `{heading_n}` + two `{body_n}` triple: card 1 = `heading_3`/`body_3`/`body_4`, card 2 = `heading_4`/`body_5`/`body_6`, and so on |
+| **Globals** | 9 native `__globals__` refs (`gforange` ×2, `gfwhite` ×6 incl. the 5 card backgrounds, section bg) · 0 CSS-var rewrites |
+| **Unmapped colours** | `#0F1F3A` (H2 + card titles), `#111827` (body text), `#B9681F` (pill text), `#D5DCE7` (pill border), `#E1E6EE` (card border — already library-wide) |
+| **Notes** | Five-up needs `flex:0 0 calc((100% - 88px)/5)` in `custom_css`: percentage widths plus 22px pixel gaps overflow the 1224px container and wrap the fifth card. The card descriptions need an explicit `selector p{font-size:14px}` — the theme styles `p` at 16px and beats the widget's inherited typography. `overflow:hidden` on the card is what makes the image sit flush inside the 8px radius. Image `id` is blanked in the fragment — re-attach on build (SKILL.md §3). **Verified against the design at 12 computed properties with zero diffs**; it took three §7.3 iterations (wrap, then font size). Its legend keeps full markup, unlike the original ten (AUDIT.md B9). |
 
 ## Unmapped colours
 
