@@ -24,6 +24,14 @@ SNIPPETS = os.path.join(REPO, "reference", "snippets")
 TOKEN_RE = re.compile(r"\{([a-z_]+_\d+)\}")
 HONORIFICS = {"dr", "dr.", "prof", "prof.", "mr", "mr.", "ms", "ms.", "mrs", "mrs."}
 
+# SKILL.md §1. A service page belongs to `post_services` — that is what its live
+# counterparts are, and it is what puts the page under /services/. `page` is everything
+# else. Both are in `elementor_cpt_support`, so "Edit with Elementor" works on either.
+ALLOWED_POST_TYPES = {"page", "post_services"}
+# Automation-built posts carry a provenance stamp; the slug is namespaced so the run's
+# drafts never collide with live pages (AUDIT.md B5).
+AUTO_SLUG_PREFIX = "pl-auto-"
+
 # Structural properties of the fragments, from the legend analysis. These cannot be
 # derived from a new spec's copy, so they are declared.
 MIRRORED_TITLES = {  # both headings render the same card title (one is mobile/hover)
@@ -73,7 +81,7 @@ def plausible_initials(name):
     return out
 
 
-def check_page(spec, rep):
+def check_page(spec, rep, automation=False):
     page = spec.get("page")
     if not isinstance(page, dict):
         rep.error("page", "missing or not a mapping")
@@ -81,13 +89,21 @@ def check_page(spec, rep):
     for key in ("title", "slug"):
         if not page.get(key):
             rep.error("page", f"`{key}` is required and must be non-empty")
-    if page.get("post_type") != "page":
-        rep.error("page", f"post_type must be `page` (SKILL.md §1), got {page.get('post_type')!r}")
+    if page.get("post_type") not in ALLOWED_POST_TYPES:
+        rep.error("page", f"post_type must be one of {sorted(ALLOWED_POST_TYPES)} (SKILL.md §1), "
+                          f"got {page.get('post_type')!r}")
     if page.get("post_status") != "draft":
         rep.error("page", f"post_status must be `draft` (SKILL.md §1, §8), got {page.get('post_status')!r}")
     slug = page.get("slug") or ""
     if slug and not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", slug):
         rep.warn("page", f"slug {slug!r} is not lowercase-hyphenated")
+    if automation and slug and not slug.startswith(AUTO_SLUG_PREFIX):
+        rep.error("page", f"an automation run must namespace its slug {AUTO_SLUG_PREFIX!r} "
+                          f"(AUDIT.md B5) so the draft cannot collide with a live page and WP "
+                          f"cannot silently suffix it: got {slug!r}")
+    if not automation and slug.startswith(AUTO_SLUG_PREFIX):
+        rep.warn("page", f"slug carries the {AUTO_SLUG_PREFIX!r} automation prefix on a "
+                         f"hand-run spec — intentional?")
 
 
 def check_assets(spec, rep, template):
@@ -216,6 +232,9 @@ def main():
     ap.add_argument("--template", action="store_true",
                     help="template mode: empty token values and placeholder attachment_id 0 "
                          "become warnings (for checking reference/spec.example.yaml)")
+    ap.add_argument("--automation", action="store_true",
+                    help="page-sync automation run (AUTOMATION.md): additionally require the "
+                         f"`{AUTO_SLUG_PREFIX}` slug namespace")
     args = ap.parse_args()
 
     try:
@@ -246,7 +265,7 @@ def main():
     for key in set(spec) - {"spec_version", "page", "assets", "sections"}:
         rep.warn("top level", f"unknown key {key!r}")
 
-    check_page(spec, rep)
+    check_page(spec, rep, args.automation)
     assets = check_assets(spec, rep, args.template)
 
     sections = spec.get("sections")

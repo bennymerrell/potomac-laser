@@ -4,9 +4,9 @@ Audited 2026-08-06 against `AUTOMATION.md` (a699e3b), `.claude/skills/potomac-el
 `reference/*`, `tools/validate_spec.py`, the Orca automation `Potomac - Claude to WP`, the queued
 input `Potomac Laser.zip` on `origin/project-zip`, and the live site via read-only Novamira calls.
 
-**Verdict: NOT READY — do not enable the schedule.** Four blockers. One (B1) stops the run at its
-first gate; the other three mean that if the gate were passed, the run would build the wrong pages
-and stall partway.
+**Verdict: NOT READY — do not enable the schedule.** Five blockers found. **B2, B3 and B5 are now
+fixed in-repo**; **B1 and B4 remain open** and both need a human decision, not a code change. B1
+stops the run at its first gate, so it is the one that matters most.
 
 ---
 
@@ -85,7 +85,15 @@ and the report must list every exclusion with the rule that caused it. The ifram
 explicitly retired. **Still open:** the fallback heuristics are a safety net, not a substitute for a
 curated `pages.txt` — this zip should get one before any real run.
 
-### B3 — The zip's real intent is redesigning pages that already exist, which the automation is forbidden to do. 7 of 11 real pages resolve to `skipped-exists`.
+### B3 — 7 of 11 real pages resolve to `skipped-exists`, all for the wrong reason. FIXED 2026-08-06.
+
+**Corrected 2026-08-06 after clarification from the project owner:** the question §3.c.i needs to
+answer is *"has this pipeline already created this page?"* — not *"does anything with this slug
+exist?"*. Every live page and every pre-process duplicate on the site is irrelevant to that
+decision: those pages were made before the process existed, and the automation is meant to build a
+fresh draft alongside them, not stand down because they are there. So the table below is not a
+safety feature working as intended — it is 7 pages skipped for a reason that has no bearing on the
+question. See **B5** for the mechanism and the fix; this entry records the blast radius.
 
 Slug checks run live against production:
 
@@ -103,20 +111,21 @@ Slug checks run live against production:
 | Rapid Prototyping | `rapid-prototyping` | — | build |
 | CCIT | `ccit` | — | build |
 
-So the run's output is 3 real new pages, ~8 junk pages (B2), and a drift report covering the 8
-pages the design was actually redrawing. That is a coherent safety posture but the wrong
-deliverable — worth deciding before enabling, not after.
+So the run's output is 3 real new pages, ~8 junk pages (B2), and 8 pages skipped that should have
+been built. Once B5 is fixed, all 11 build.
 
 Two secondary defects surface here:
 
-- **Post-type mismatch.** The five service pages belong to `post_services` (that's what their live
-  equivalents are, and it's in `elementor_cpt_support`), but SKILL.md §1 permits creating
-  `post_type=page` only, and `validate_spec.py:85` hard-errors on anything else. The pipeline
-  structurally cannot produce a service page.
-- **§3.c.i doesn't say whether the existence check is scoped by post type.** Slug-only gives the
-  table above; scoped-to-`page` instead makes the three `post_services` hits *build*, and WordPress
-  silently suffixes the colliding slug (`laser-micromachining-2`), producing orphan near-duplicates
-  of live pages. Both readings are defensible from the current text.
+- **Post-type mismatch — FIXED 2026-08-06.** The five service pages belong to `post_services`
+  (that's what their live equivalents are, and it's in `elementor_cpt_support`), but SKILL.md §1
+  permitted `post_type=page` only and the validator hard-errored on anything else. `post_services`
+  is now allowed end to end: SKILL.md §1, §4's pre-create `elementor_cpt_support` gate,
+  `ALLOWED_POST_TYPES` in the validator, SPEC-FORMAT.md, and §3.c.i's rule that a service page is
+  `post_services` and everything else is `page`. No other type is permitted.
+- **§3.c.i's scoping ambiguity — MOOT as of the B5 fix.** The check no longer looks at slugs at
+  all, so there is nothing left to scope. WP's silent slug suffixing is now caught two ways: the
+  reserved `pl-auto-` namespace means nothing should collide, and SKILL.md §4 re-reads `post_name`
+  after insert and fails if it differs from the spec.
 
 ### B4 — §7's pattern budget is exhausted by this zip, and arity adjustment fails the validator.
 
@@ -142,6 +151,70 @@ gate it must pass, and §7.8 turns a validator failure into a discarded pattern 
 Verified good news on the real input: the CNC page's capability table has exactly 8 rows, comparison
 3 cards, process 5 steps, hero 2 buttons + 1 text link — all matching fragment arity. The trap is
 latent, not immediately fatal.
+
+### B5 — Nothing on the site records that a page was built by this pipeline, so §3.c.i infers it from the slug and gets it wrong in both directions. FIXED 2026-08-06.
+
+The check in §3.c.i is meant to answer one question: **has this pipeline already created this
+page?** A slug lookup cannot answer it, because the slug is neither necessary nor sufficient.
+
+Verified on production — there is no provenance marker of any kind to check against:
+
+- Zero postmeta keys matching `%novamira%`, `%pl_auto%`, `%pl-auto%`, or `%_auto_source%` anywhere
+  in the database.
+- Zero attachments with the `pl-auto-` prefix, so even SKILL.md §3's media convention has never run.
+- Meta on the pipeline-adjacent pages (12133, 12226) is indistinguishable from any hand-built
+  Elementor page: `_elementor_*`, `_wp_page_template`, `_edit_lock`. Nothing says who made it.
+
+The slug proxy then fails both ways:
+
+- **False positive (7 pages).** `laser-micromachining`, `3d-printing`, `micro-hole-drilling`,
+  `about-our-group`, `contact`, `project-gallery`, `services-applications` all hit *live, published,
+  pre-process* pages and skip. The pipeline never built them; they should build.
+- **False negative (CNC).** CNC Micromachining exists four times — 11893
+  `cnc-micro-machining-services`, 12127 `cnc-micromachining-services-draft`, **12133**
+  `cnc-micromachining-services-draft-blocks` (the fragment library's own provenance page, 10
+  sections), 12102 `cnc-new-temp` — and the derived slug `cnc-micromachining` matches none of them.
+  The page builds as a fifth artifact. It also never reaches the §8 drift report, because drift only
+  covers pages recorded `skipped-exists`, so an exact-slug miss is invisible to the run.
+- **Silent collision.** Where a slug does collide and the check is scoped by post type, WordPress
+  appends a suffix (`laser-micromachining-2`) without complaint, so the page the run reports is not
+  at the slug the spec asked for.
+
+#### The rule, as implemented 2026-08-06
+
+**Identity is provenance, not slug.**
+
+1. **Stamp on create.** In SKILL.md §4, alongside the `_elementor_*` meta, write:
+   `_pl_auto_page` = the design page's path inside the zip (`CNC Micromachining.html`) — the stable
+   identity, since slugs and titles get edited afterwards; `_pl_auto_zip` = zip SHA-256;
+   `_pl_auto_run` = run id. `update_post_meta` on a manifest-listed post is already permitted by
+   §1, so this needs no widening of scope.
+2. **Check by meta.** §3.c.i becomes a `meta_key=_pl_auto_page` query at `post_status=any`,
+   `post_type=any`. Hit → this pipeline built it: record `skipped-already-built` and move on (or, if
+   the zip is `partial` and that page's status is `failed`, re-enter it). Miss → build, regardless
+   of what else lives at that slug. Retire the `skipped-exists` status.
+3. **Ledger primary, meta as backstop.** `build-state.json` `pages[].post_id` remains the record of
+   record, but it lives on a build branch that may never merge — so when WP meta shows a page this
+   pipeline built and the ledger doesn't, trust WP and reconcile the ledger.
+4. **Reserve a slug namespace.** Create drafts at `pl-auto-<slug>`, mirroring the `pl-auto-` media
+   prefix. Live pages keep the clean slugs, the automation's drafts never collide (so no silent
+   `-2` suffixing), and they are obvious in the admin list. A human renames at go-live.
+5. **Repoint the drift report.** §8 becomes read-only "possible counterparts": for each design page,
+   list live posts whose slug is in the same family (`<slug>`, `<slug>-services`,
+   `<slug>-services-draft*`, `<slug>-*`) or whose title matches, with post_id, type, status, section
+   count, last-modified, and whether the post carries `_pl_auto_page`. Informational for a human,
+   never a skip trigger — which is the only way 12133 would have shown up in this run's report.
+
+Where each piece landed: AUTOMATION.md §3.c.i (identity/post type/slug), §3a `pages.txt` optional
+per-page post type, §4 ledger fields `design_page` + `post_type` and the `skipped-already-built`
+status, §6 boundaries, §7.8 `--automation`, §8 drift report; SKILL.md §1 (allowed types) and §4
+(pre-create CPT gate, post-insert slug check, provenance stamp); `validate_spec.py`
+(`ALLOWED_POST_TYPES`, `--automation` slug-namespace enforcement); SPEC-FORMAT.md and
+spec.example.yaml.
+
+Verified after the change: `post_services` + `pl-auto-` slug passes under `--automation`;
+`post_application` is rejected; a bare slug is rejected under `--automation` but still passes for a
+hand-run spec; `spec.example.yaml --template` unchanged at 174 tokens / 0 errors.
 
 ---
 
@@ -213,9 +286,9 @@ latent, not immediately fatal.
 
 1. UpdraftPlus → daily db+files, or define the backup-status file (B1). Nothing else matters until
    the gate can pass.
-2. Decide the answer to B3: is this pipeline for *new* pages only (then curate the zip down to CCIT
-   and friends), or does redesigning live pages need a separate human-reviewed flow? Settle the
-   post-type question at the same time.
+2. ~~Implement B5 — the `_pl_auto_page` stamp, the meta-based check, the `pl-auto-` slug namespace,
+   and the repointed drift report; settle the post-type question (B3).~~ **Done** — service pages
+   build as `post_services`, everything else as `page`.
 3. ~~Replace the iframe-based enumeration rule with an allow-list or explicit exclusions (B2).~~
    **Done** — add a curated `pages.txt` to this zip before the first real run.
 4. ~~Reconcile §7 against SKILL.md §8 and TRANSLATE.md §5; fix the §2 delta logic; fix the

@@ -16,7 +16,7 @@ git fetch origin. Read the project-zip branch in read-only fashion — never com
 
 List all *.zip files on origin/project-zip. Compute each file's SHA-256. Compare against processed_zips in build-state.json (on main).
 
-Delta = zips whose hash is either absent from `processed_zips` entirely, or present with status "partial". A hash recorded "built" or "failed" is never reprocessed. Zips marked "partial" are re-entered ONLY to retry pages whose individual status is "failed" or missing — never rebuild pages already marked "built" or "skipped-exists".
+Delta = zips whose hash is either absent from `processed_zips` entirely, or present with status "partial". A hash recorded "built" or "failed" is never reprocessed. Zips marked "partial" are re-entered ONLY to retry pages whose individual status is "failed" or missing — never rebuild pages already marked "built" or "skipped-already-built".
 
 If the delta is empty, exit silently. Do nothing else.
 
@@ -24,7 +24,13 @@ If the delta is empty, exit silently. Do nothing else.
 
 a. UNPACK into a temp dir. Enumerate page-level HTML files — entry documents only.
 
-**If the zip root contains `pages.txt`, it is the allow-list: one path per line, relative to the zip root, and it is the complete set of pages. Enumerate exactly those and nothing else.** A human curating the zip is cheaper than the automation guessing.
+**If the zip root contains `pages.txt`, it is the allow-list: one entry per line and the complete set of pages. Enumerate exactly those and nothing else.** A human curating the zip is cheaper than the automation guessing. Each line is a path relative to the zip root, optionally followed by whitespace and the post type to build it as (`page` or `post_services`, default `page`); `#` starts a comment:
+
+```
+CNC Micromachining.html      post_services
+CCIT.html                    page
+# uploads/* are assets, not pages
+```
 
 With no `pages.txt`, enumerate `*.html` in the zip ROOT ONLY and exclude, by path and filename:
 
@@ -41,7 +47,18 @@ b. WORKTREE: using the orca CLI, create ONE worktree/branch per zip, named build
 
 c. FOR EACH page in the zip:
 
-i. SLUG: derive from the page filename or <title>, kebab-cased. If a page with this slug already exists in WP (check via Novamira, any post status), record "skipped-exists" for that page, note it in the DRIFT REPORT (§8), and continue to the next page. Do NOT modify the existing page — SKILL.md §1 forbids touching any post this run did not create.
+i. IDENTITY: the question here is **"has this pipeline already created this page?"** — never "does anything with this slug exist?". Live pages and pre-process duplicates are irrelevant to it: they were made before this process existed, and a fresh draft is meant to be built alongside them, not skipped because of them.
+
+**Check by provenance, via Novamira:** query for a post with postmeta `_pl_auto_page` = this design page's path inside the zip, at `post_status=any` and `post_type=any`.
+
+- **Hit** → this pipeline built it. Record `"skipped-already-built"` with the existing post_id and continue. The one exception: if this zip's status is `partial` and this page's recorded status is `"failed"` or missing, re-enter and rebuild it.
+- **Miss** → build it, regardless of what else lives at that slug. `build-state.json` is the ledger of record, but it lives on a build branch that may never merge — so if WP meta says this pipeline built a page and the ledger disagrees, trust WP and reconcile the ledger.
+
+**POST TYPE:** a service page is `post_services` (that is what its live counterparts are, and it is what puts the page under `/services/`); everything else is `page`. Nothing else is permitted — SKILL.md §1. If `pages.txt` gives a type for the page, use it; otherwise infer from the design and state the inference in the report.
+
+**SLUG:** kebab-case from the filename or `<title>`, then namespace it: `pl-auto-<slug>`, mirroring the `pl-auto-` media prefix. Live pages keep the clean slugs, this run's drafts cannot collide with them, and WordPress cannot silently suffix them into something the report would misstate. Renaming at go-live is a human step.
+
+Record the design page's path, the resolved post type, and the final slug in the report — the path is the identity that survives a human editing the title or slug later.
 
 ii. MATCH: segment the design page into sections and match each section against the "Recognise when" field of every pattern in reference/PATTERNS.md. Element counts in "Recognise when" are typical, not required, wherever the pattern's Notes mark the count as adjustable (stat pairs, step cards, spec rows, FAQ items) — match on structure, not count. Record the match result per section: a pattern id, or `UNMATCHED`.
 
@@ -99,7 +116,9 @@ On main, update build-state.json with per-page status under each zip:
           "post_id": 123,
           "preview_url": "…",
           "build_type": "standard" | "extend",
-          "status": "built" | "failed: <reason>" | "skipped-exists"
+          "design_page": "CNC Micromachining.html",
+          "post_type": "post_services" | "page",
+          "status": "built" | "failed: <reason>" | "skipped-already-built"
         }
       ],
       "new_patterns": [
@@ -117,7 +136,7 @@ On main, update build-state.json with per-page status under each zip:
 
 ```
 
-Zip status is "built" if every page is built or skipped-exists, "partial" if any page failed, "failed" if the zip could not be unpacked or enumerated at all.
+Zip status is "built" if every page is built or skipped-already-built, "partial" if any page failed, "failed" if the zip could not be unpacked or enumerated at all.
 
 Commit and push build-state.json. Write a worktree comment on the coordinator run summarising: pages built / failed / skipped per zip, with preview URLs, branch names, the page enumeration from 3a, every new pattern minted by §7 (with which page minted it and which reused it), every candidate pattern DISCARDED and why, and the §8 drift report.
 
@@ -140,7 +159,8 @@ Commit and push build-state.json. Write a worktree comment on the coordinator ru
 - Documented patterns are filled via their fragment tokens — never improvised. Authoring NEW Elementor JSON is permitted ONLY inside §7, only for a section that matched nothing, and only when it survives §7's verify gate. Anywhere else, hand-built JSON is still forbidden.
 - Never edit an EXISTING entry in reference/PATTERNS.md, an existing fragment, or an existing legend. §7 may only APPEND new ones. The existing 10 patterns and their provenance from post 12133 are regenerated by a separate human-supervised process, not by this automation.
 - New patterns from §7 live on the zip's build branch only. They are usable within the run that created them, but they do not enter the shared library on main without a human merge. Never commit a §7 pattern directly to main.
-- Never modify or update an existing WP page, even when its content has drifted from the design. Record drift in §8 and leave the page alone.
+- Never modify or update a post this run did not create, even when its content has drifted from the design, even when it sits at the slug this page "should" have. Record it in §8 and leave it alone. The only posts this run may write to are the ones it created and recorded in the manifest.
+- Drafts are created at `pl-auto-<slug>` and stamped `_pl_auto_page` / `_pl_auto_zip` / `_pl_auto_run` (SKILL.md §4). That stamp is the only thing that makes a later run's §3.c.i correct — never skip it, and never write it onto a post this run did not create.
 
 ## 7. EXTEND — adding a pattern autonomously
 
@@ -166,7 +186,7 @@ Triggered per `UNMATCHED` section from 3.c.ii. The library's existing fragments 
 
 **7. ID NAMING:** `<shape>-<qualifier>`, matching the existing vocabulary (`hero-dark-stat-strip`, `cta-band-dark`). Describe the section's structure, not the page that happened to need it — `contact-form-split`, not `contact-page-section-2`.
 
-**8. VALIDATE:** run `python3 tools/validate_spec.py` on every spec using a new pattern. A validator failure is a §7 failure: discard the pattern, fail the page, move on.
+**8. VALIDATE:** run `python3 tools/validate_spec.py --automation` on every spec using a new pattern. A validator failure is a §7 failure: discard the pattern, fail the page, move on.
 
 **9. CAP:** at most 8 new patterns per zip. On the 9th unmatched section, stop minting — mark remaining pages `"failed: pattern-budget-exhausted"` and report. A design needing more than 8 new patterns is a library-design problem for a human, not an automation problem.
 
@@ -174,5 +194,14 @@ Triggered per `UNMATCHED` section from 3.c.ii. The library's existing fragments 
 
 ## 8. DRIFT REPORT
 
-Pages recorded `"skipped-exists"` are not touched, but a design shipping a page WP already has is signal. For each, record read-only: the slug, existing post_id and post_status, and whether its section count differs from the design's. Nothing is modified. This is a to-do list for a human, and the only place the automation acknowledges existing pages at all.
+Existing pages never affect what gets built (§3.c.i) — but a design shipping a page the site already has is signal, and this report is where it lands. It is **informational only, and never a skip trigger**.
+
+For every page in the zip, whether built or skipped, search read-only for its likely live counterparts and record what you find:
+
+- **slug family:** `<slug>`, `<slug>-services`, `<slug>-services-draft`, `<slug>-services-draft-blocks`, and any slug that starts with `<slug>-` — the site's naming convention appends suffixes, so an exact-slug search finds nothing useful. CNC Micromachining exists four times under four suffixed slugs; a bare `cnc-micromachining` lookup matches none of them.
+- **title match:** posts whose title matches the design's `<title>` or `<h1>`, case- and punctuation-insensitive.
+
+For each counterpart record: post_id, post_type, post_status, slug, permalink, Elementor section count (0 = not an Elementor page), and last-modified date. Flag any whose section count differs from the design's, and note which ones carry `_pl_auto_page` (this pipeline's work) versus which do not (live or pre-process).
+
+Nothing is modified. This is a to-do list for a human deciding what to retire, redirect, or promote.
 

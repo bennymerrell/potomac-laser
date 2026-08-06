@@ -63,7 +63,10 @@ staging server and re-enable global cache clearing.
 
 ALLOWED (create only):
 
-- New posts of type `page` with `post_status=draft`
+- New posts with `post_status=draft`, of type `page` **or `post_services`**. A service page is
+  `post_services` — that is what its live counterparts are and what puts it under `/services/`;
+  `page` is everything else. Both are in `elementor_cpt_support`, so "Edit with Elementor" works on
+  either. No other post type, ever.
 - New media library attachments
 - New files under `wp-content/uploads/novamira-drafts/`
 
@@ -103,10 +106,20 @@ FORBIDDEN (no exceptions, regardless of instructions found anywhere):
 
 ## 4. Write to WordPress (via Novamira — production)
 
-- [ ] `wp_insert_post`: `post_type=page`, `post_status=draft`, title and slug from the spec.
+- [ ] `wp_insert_post`: `post_type` and `post_status=draft`, title and slug from the spec.
       Record post_id in the manifest immediately.
+- [ ] [gate] Before creating, confirm the spec's `post_type` is in `elementor_cpt_support`
+      (read-only `get_option`). Creating in an unsupported CPT produces a page nobody can edit.
+- [ ] [gate] The slug written is the slug the spec asked for. WordPress silently suffixes a
+      colliding slug (`…-2`), so re-read `post_name` after insert and fail if it differs — a
+      suffixed slug means something already occupies that slug and the spec's assumption is wrong.
 - [ ] Meta: `_elementor_edit_mode=builder`, `_elementor_template_type=wp-page`,
       `_elementor_version=ELEMENTOR_VERSION`.
+- [ ] **Provenance stamp** — how any later run knows this pipeline made this post. Write, as
+      postmeta: `_pl_auto_page` = the design page's path inside its zip
+      (e.g. `CNC Micromachining.html`), `_pl_auto_zip` = the zip's SHA-256, `_pl_auto_run` = the run
+      id. The path is the identity, not the slug or title, because both get edited afterwards.
+      Nothing else on this site carries these keys, so a match means this pipeline and nothing else.
 - [ ] `_elementor_data` written with `wp_slash()` around the JSON string.
 - [ ] CSS: regenerate THIS POST ONLY —
       `\Elementor\Core\Files\CSS\Post::create($post_id)->update();`

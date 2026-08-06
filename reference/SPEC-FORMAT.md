@@ -28,8 +28,8 @@ sections:  [ ... ]       # required, ordered — render order is spec order
 | Key | Type | Required | Notes |
 |---|---|---|---|
 | `title` | string | yes | Post title |
-| `slug` | string | yes | `post_name`; also the `built/<slug>.json` filename |
-| `post_type` | string | yes | **`page` only** — SKILL.md §1 |
+| `slug` | string | yes | `post_name`; also the `built/<slug>.json` filename. Automation runs namespace it `pl-auto-<slug>` (AUDIT.md B5) and `--automation` enforces that |
+| `post_type` | string | yes | **`page` or `post_services` only** — SKILL.md §1. A service page is `post_services` (that is what its live counterparts are, and what puts it under `/services/`); everything else is `page` |
 | `post_status` | string | yes | **`draft` only** — the agent never publishes (§1, §8) |
 
 ### `assets`
@@ -180,6 +180,7 @@ Run the checker — it implements every check below and exits non-zero on any er
 
 ```bash
 tools/validate_spec.py path/to/spec.yaml              # strict: use before a build
+tools/validate_spec.py path/to/spec.yaml --automation  # + require the pl-auto- slug namespace
 tools/validate_spec.py reference/spec.example.yaml --template
 ```
 
@@ -190,7 +191,8 @@ the run; errors mean **do not write to WordPress** (SKILL.md §2, §8).
 Checks that must pass locally, before any WordPress call (SKILL.md §2, §3):
 
 1. YAML parses; `spec_version` is 1.
-2. `page.post_type == page` and `page.post_status == draft`.
+2. `page.post_type` is `page` or `post_services`, and `page.post_status == draft`. Under
+   `--automation`, `page.slug` also starts with `pl-auto-`.
 3. Every `sections[].pattern` resolves to an existing `reference/snippets/<pattern>.json`.
 4. **Token coverage both ways** — for each section, the set of `{token}`s in the fragment
    equals the set of keys in `tokens`. A fragment token with no spec key ships a literal
