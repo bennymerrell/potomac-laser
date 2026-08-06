@@ -27,7 +27,8 @@ and `build-state.json` is still `{"processed_zips": []}`.
 | B8 | A section carries the explorer's JS template literals as if they were copy | Fixed `5aad50a` — found by dry run |
 | B9 | The legends strip HTML, so legend-sourced token values ship truncated | Fixed `35e3e36` — found by write phase |
 | B10 | CCIT's FAQ answers are JS-rendered, not markup — `faq-toggle` needs static pairs | **OPEN** — affects run 3 |
-| B11 | CCIT's quote section is a 7-field form with no HubSpot wiring; §7 cannot deliver it | **OPEN** — needs a human pass |
+| B11 | Quote sections are unwired forms (CCIT **and** all 5 service pages); §7 cannot deliver them | **OPEN** — needs a human pass |
+| B12 | `why-choose-inset-cta` carries a hardcoded photo URL, untokenised — and PATTERNS.md calls it an empty spacer | **OPEN** — human fix; §6 bars me |
 | C1 | §7 vs SKILL.md §8 (authoring / appending forbidden) | Fixed `16417be` |
 | C2 | §7 vs TRANSLATE.md §5 ("stop and report") | Fixed `16417be` |
 | C3 | TRANSLATE.md §10's blocking human review vs full autonomy | Fixed `2032075` |
@@ -127,6 +128,44 @@ Two supporting rules make it stick:
 Re-running the match with the rule applied: **9 matched, 3 `UNMATCHED`**, and `group-ecosystem-cards`
 correctly still matches (4 images ≤ 4 slots). Nine of ten fragments lacking an image slot is a
 property of post 12133, not of page design — which is what §7 exists to correct.
+
+### B11 extends to the service pages, and B12 — the why-us photo is hardcoded (both OPEN)
+
+Authoring the three CNC patterns surfaced two more things, both of which invalidate claims I made
+earlier in this session.
+
+**B11 is not CCIT-specific.** I described CNC's three unmatched sections as "all static, copy-only" —
+that was read off their headings, not their contents. CNC's `#quote` holds **9 `input`, 1 `select`, 2
+`textarea`, 2 file inputs and 2 buttons** across a two-step wizard, and `hsforms.com` appears nowhere
+in it. It is the same unwired-form problem as CCIT's, and since all five service pages share the
+section, it affects all five. §7 authors Elementor JSON; it does not create HubSpot forms, map
+properties or run a test submission. Note this is a *second* quote path on the page — the explorer's
+basket funnel inside `cnc-interactive.html` is already wired to form `9eb36566…`, so a page built
+without this section still has a working conversion route plus the final CTA band.
+
+So of CNC's three unmatched sections, **two are mintable** (`#why-us` variant, `#services` grid) and
+`#quote` should be recorded `deferred-form` on the same principle as C6's `deferred-interactive`.
+
+**B12 — `why-choose-inset-cta` hides a hardcoded asset.** Its 52% first column is not empty. It carries
+the team photo as a container `background_image` pointing at
+`novamira-drafts/whyus-team.jpg`, with `id: ""`, and **no token**. Consequences:
+
+- PATTERNS.md's Notes for the pattern — "the empty first column is a layout spacer, not a missing
+  image. Keep it." — are wrong, and SKILL.md §5 repeats the claim. Both were written from the
+  tokenised fragment, where the URL is invisible among the settings.
+- Because the URL is untokenised, **every page built from this fragment renders post 12133's team
+  photo**. For CNC that is accidentally correct. For the other four service pages it silently
+  substitutes the wrong image — a wrong-content bug, not a missing-content one.
+- SKILL.md §3's image gate checks `image` **widgets** for a missing `id`. A container
+  `background_image` is not an image widget, so the gate cannot see this at all.
+- It also means my B7 diagnosis was right by luck: the image-coverage rule counted `{image_n}` tokens,
+  found none, and flagged the MISS for the wrong reason. The rule still gives the right answer here,
+  and the variant §7 mints must carry a **tokenised** background image.
+
+A library-wide scan found this is the only instance: 1 hardcoded asset URL across the ten fragments,
+and only `group-ecosystem-cards` has real `{image_n}` slots (4). Fixing the existing fragment and its
+PATTERNS.md Notes is a human job — §6 bars this automation from editing either — but it should be
+fixed before the four sibling service pages are built, or they will each ship CNC's team photo.
 
 ### B10 / B11 — CCIT is not the safe §7 shakedown I recommended (OPEN)
 
