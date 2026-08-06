@@ -4,8 +4,8 @@
 #                 legends strip HTML and truncate at the first inline tag). Fragment token
 #                 order and 12133's value order were walked with one traversal function and
 #                 verified ALIGNED for all 9 patterns (164 values).
-# MATCH         : 9 of 12 design sections. 3 go to AUTOMATION.md §7:
-#                   [1] #why-us   image coverage MISS (1 image, 0 slots) -> variant
+# MATCH         : 10 of 12 design sections. #why-us returned once B12 tokenised its
+#                 background photo; {image_1} now points at this run's attachment 12234.
 #                   [2] #services no Recognise-when fits -> services card grid
 #                   [9] #quote    no Recognise-when fits -> quote block
 # Images        : eco logos re-pointed to this run's attachments 12235-12238 (SKILL.md §3
@@ -38,6 +38,9 @@ assets:
   eco_logo_4:
     attachment_id: 12238
     url: https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-eco-logo-4.png
+  whyus_team:
+    attachment_id: 12234
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-whyus-team.jpg
 sections:
 - pattern: hero-dark-stat-strip
   tokens:
@@ -58,6 +61,20 @@ sections:
     heading_10: RAPID RESPONSE
     heading_11: '1982'
     heading_12: EST.
+    url_1: '#quote'
+    url_2: '#quote'
+- pattern: why-choose-inset-cta
+  tokens:
+    body_1: <p>We deliver precision CNC micromachining for micro-scale components — supporting projects from early prototyping through to full-scale production with engineering-led manufacturing and in-house quality control.</p>
+    body_2: <ul><li><strong>Tight tolerance machining</strong> — achieving micro-scale tolerances for precision components in metals and polymers.</li><li><strong>In-house quality control</strong> — full inspection and validation for consistent CNC machining results.</li><li><strong>Scalable manufacturing</strong> — from prototype to production, maintaining accuracy and repeatability.</li><li><strong>Multi-process capability</strong> — CNC micromachining combined with laser and hybrid fabrication methods.</li><li><strong>Engineering support</strong> — guidance on design, tolerances, and material selection to improve manufacturability.</li></ul>
+    body_3: <p>Upload STEP, STL, or PDF — our engineers review it for manufacturability.<br>No redesign required to start — we’ll help optimise your part.</p>
+    button_1: Upload Drawing / CAD
+    button_2: Request Material + Machining Quote
+    heading_1: WHY GOODFELLOW MICROFABRICATION
+    heading_2: Why choose Goodfellow Microfabrication for CNC micromachining
+    heading_3: Talk to the engineers who will review your design
+    image_1:
+      asset: whyus_team
     url_1: '#quote'
     url_2: '#quote'
 - pattern: interactive-iframe-embed

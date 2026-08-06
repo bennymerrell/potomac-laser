@@ -32,14 +32,8 @@
       "design_page": "CNC Micromachining.html",
       "preview_url": "https://www.potomac-laser.com/?post_type=post_services&p=12239&preview=true",
       "data_sha256": "6ac2f7254417c2e514c9819efddf022d88f11579670d09e2d7b20fb7fd010cd8",
-      "sections_built": 11,
-      "sections_deferred": [
-        {
-          "index": 1,
-          "id": "why-us",
-          "status": "deferred-image \u2014 B12 now fixed, section can be added on the next build"
-        }
-      ],
+      "sections_built": 12,
+      "sections_deferred": [],
       "provenance_meta": {
         "_pl_auto_page": "CNC Micromachining.html",
         "_pl_auto_zip": "2f5215b4\u2026",
@@ -102,7 +96,19 @@
             "human_followup": "Verify the contact in HubSpot and archive it (HANDOFF Stage H). Expect: ben.merrell@goodfellow.com, firstname Ben, lastname Merrell, company 'Goodfellow Microfabrication', potomac_project_name 'Rapid Response Quote \u2014 CNC Micromachining Services | Potomac Photonics', potomac_project_description beginning 'TEST SUBMISSION', hs_lead_status NEW."
           }
         }
-      }
+      },
+      "attachments_in_use": [
+        12229,
+        12230,
+        12231,
+        12232,
+        12233,
+        12234,
+        12235,
+        12236,
+        12237,
+        12238
+      ]
     }
   ],
   "attachments": [
@@ -197,7 +203,8 @@
     "Spec rebuilt from post 12133's stored widget values after B9: fragment token order and 12133's value order walked with one traversal function, ALIGNED for all 9 patterns, 164 values resolved with markup intact. Validator: 0 errors under --automation. Design diff: 136/141 text values verbatim; the 5 others are decoration only (literal arrow/bullet glyphs 12133 stores as text). Zero content differences.",
     "Elementor 4.x caches rendered HTML in _elementor_element_cache; a data update leaves new CSS pointing at stale markup. Clear it (plus _elementor_css) and regenerate per-post CSS after every data write. SKILL.md \u00a74 does not mention this.",
     "Quote form built as an html widget, not an iframe: WindPress compiles Tailwind in rendered DOM but not inside iframe documents, and a form needs no overlay bridge.",
-    "Two defects the browser check caught that no local gate could: the design's action button is type=\"button\" so it never raised a submit event (form was inert), and one extracted CSS rule carried the selector list h1..h6/.hero-title/.section-title/.gf-services-title alongside .gf-rapid-left h2, restyling every heading on the page and breaking the already-verified services section."
+    "Two defects the browser check caught that no local gate could: the design's action button is type=\"button\" so it never raised a submit event (form was inert), and one extracted CSS rule carried the selector list h1..h6/.hero-title/.section-title/.gf-services-title alongside .gf-rapid-left h2, restyling every heading on the page and breaking the already-verified services section.",
+    "why-us restored as the 12th section once B12 tokenised its background photo. Verified in the browser: the photo column serves pl-auto-whyus-team.jpg (attachment 12234, this run's own file) at cover/440px/radius-16, and 12133's hardcoded novamira-drafts path is absent from the stored data. The widened \u00a73 gate \u2014 which now inspects container background images, not just image widgets \u2014 passed on 1 background image with a real int id."
   ],
-  "next_step": "One test submission to [Potomac] Start a Project with a deliverable address, then verify the contact and its properties and archive it (HANDOFF Stage H). Then optionally rebuild with the why-us section now that B12 is fixed."
+  "next_step": "Page complete at 12/12 sections. Remaining, all outside this page: verify+archive the HubSpot test contact; the funnels' 9eb36566 provenance (38 posts); B10 CCIT JS-rendered FAQ; then the 4 sibling service pages, which reuse both new patterns and need only copy substitution."
 }

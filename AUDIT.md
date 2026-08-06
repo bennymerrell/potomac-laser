@@ -28,7 +28,7 @@ and `build-state.json` is still `{"processed_zips": []}`.
 | B9 | The legends strip HTML, so legend-sourced token values ship truncated | Fixed `35e3e36` — found by write phase |
 | B10 | CCIT's FAQ answers are JS-rendered, not markup — `faq-toggle` needs static pairs | **OPEN** — affects run 3 |
 | B11 | Quote sections are unwired forms (CCIT **and** all 5 service pages) | **Part-fixed** `0fad55e` — CNC's quote form built and proven against `[Potomac] Start a Project`; 4 siblings + CCIT reuse it |
-| B12 | `why-choose-inset-cta` carried a hardcoded photo URL, untokenised — and PATTERNS.md called it an empty spacer | Fixed `583270f` — tokenised, docs corrected, gate widened |
+| B12 | `why-choose-inset-cta` carried a hardcoded photo URL, untokenised — and PATTERNS.md called it an empty spacer | Fixed `583270f`, proven on 12239 — page now 12/12 sections |
 | C1 | §7 vs SKILL.md §8 (authoring / appending forbidden) | Fixed `16417be` |
 | C2 | §7 vs TRANSLATE.md §5 ("stop and report") | Fixed `16417be` |
 | C3 | TRANSLATE.md §10's blocking human review vs full autonomy | Fixed `2032075` |
