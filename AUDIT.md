@@ -24,7 +24,7 @@ and `build-state.json` is still `{"processed_zips": []}`.
 | B5 | No provenance marker, so identity was inferred from the slug | Fixed `eddf406` |
 | B6 | Export ships design-time scaffolding (Tailwind CDN, React dev, Babel, tweaks panel) | Fixed `2032075` |
 | B7 | The design's why-us team photo has no slot in its matched fragment | **OPEN** — decision, found by dry run |
-| B8 | A section carries the explorer's JS template literals as if they were copy | Fixed `NEXT` — found by dry run |
+| B8 | A section carries the explorer's JS template literals as if they were copy | Fixed `5aad50a` — found by dry run |
 | C1 | §7 vs SKILL.md §8 (authoring / appending forbidden) | Fixed `16417be` |
 | C2 | §7 vs TRANSLATE.md §5 ("stop and report") | Fixed `16417be` |
 | C3 | TRANSLATE.md §10's blocking human review vs full autonomy | Fixed `2032075` |
@@ -110,7 +110,7 @@ Three ways out, all a human's call: accept the difference and give §3.c.vi a kn
 allowance for it; treat `#why-us` as `UNMATCHED` so §7 mints an image-bearing variant (a third new
 pattern, still inside the cap); or confirm the photo isn't wanted on the built page.
 
-### B8 — client-side templates inside a section (fixed `NEXT`)
+### B8 — client-side templates inside a section (fixed `5aad50a`)
 
 Section [11] holds the closing CTA band **and** 36 of the explorer's template literals
 (`${a.label}`, `${a.summary}`, `${a.chips.map(...)}`). Extracted as copy they would ship to the
