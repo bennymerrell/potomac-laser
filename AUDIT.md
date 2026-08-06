@@ -25,7 +25,7 @@ and `build-state.json` is still `{"processed_zips": []}`.
 | B6 | Export ships design-time scaffolding (Tailwind CDN, React dev, Babel, tweaks panel) | Fixed `2032075` |
 | B7 | The design's why-us team photo has no slot in its matched fragment | Fixed `15ff654` — image coverage is now part of the match |
 | B8 | A section carries the explorer's JS template literals as if they were copy | Fixed `5aad50a` — found by dry run |
-| B9 | The legends strip HTML, so legend-sourced token values ship truncated | Fixed `NEXT` — found by write phase |
+| B9 | The legends strip HTML, so legend-sourced token values ship truncated | Fixed `35e3e36` — found by write phase |
 | C1 | §7 vs SKILL.md §8 (authoring / appending forbidden) | Fixed `16417be` |
 | C2 | §7 vs TRANSLATE.md §5 ("stop and report") | Fixed `16417be` |
 | C3 | TRANSLATE.md §10's blocking human review vs full autonomy | Fixed `2032075` |
@@ -126,7 +126,7 @@ Re-running the match with the rule applied: **9 matched, 3 `UNMATCHED`**, and `g
 correctly still matches (4 images ≤ 4 slots). Nine of ten fragments lacking an image slot is a
 property of post 12133, not of page design — which is what §7 exists to correct.
 
-### B9 — the legends are lossy, and the docs pointed at them as the source of copy (fixed `NEXT`)
+### B9 — the legends are lossy, and the docs pointed at them as the source of copy (fixed `35e3e36`)
 
 `TRANSLATE.md` §6 said "never fill a token without reading its legend entry", which is right about
 a slot's **role** and wrong if taken as its **value** — as the write phase did, generating a spec
