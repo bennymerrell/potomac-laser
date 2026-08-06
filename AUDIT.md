@@ -4,8 +4,8 @@
 `reference/*`, `tools/validate_spec.py`, the Orca automation `Potomac - Claude to WP`, the queued
 input `Potomac Laser.zip` on `origin/project-zip`, and the live site via read-only Novamira calls.
 
-**Current as of** `b8f0286`. Fixes from this audit landed in `16417be`, `eddf406`, `e11ae43`,
-`3751dab`, `b8f0286`; live-site figures re-read 2026-08-06 11:29 UTC.
+**Current as of** `08c4e58`. Fixes from this audit landed in `16417be`, `eddf406`, `e11ae43`,
+`3751dab`, `08c4e58`; live-site figures re-read 2026-08-06 11:29 UTC.
 
 **Verdict: NOT READY — keep the schedule disabled.** Five blockers were found; **four are fixed in
 the repo**. What remains is B4 (pattern budget and arity) and C6 (the inline interactive cluster) —
@@ -17,7 +17,7 @@ and `build-state.json` is still `{"processed_zips": []}`.
 
 | # | Finding | Status |
 |---|---|---|
-| B1 | Backup is weekly; the §0 gate needs < 24 h | Fixed `b8f0286` — §0 now takes its own db backup |
+| B1 | Backup is weekly; the §0 gate needs < 24 h | Fixed `08c4e58` — §0 now takes its own db backup |
 | B2 | Page enumeration had no working exclusion rule | Fixed `16417be`; allow-list drafted, **not yet in the zip** |
 | B3 | 7 of 11 pages skipped for the wrong reason; wrong post type | Fixed `eddf406`, `3751dab` |
 | B4 | §7 pattern budget exhausted; arity changes fail the validator | **OPEN** — human decision |
@@ -113,7 +113,7 @@ so a doomed page costs nothing.
 
 1. **Branch mismatch.** The automation's workspace is `…/workspaces/potomac-laser/main-2`, on branch
    `main-2`, while AUTOMATION.md §1 says "the coordinator runs from main" and §2/§4 read and commit
-   `build-state.json` "on main". `main-2` and `origin/main` are currently identical (`b8f0286`), but
+   `build-state.json` "on main". `main-2` and `origin/main` are currently identical (`08c4e58`), but
    local `main` is stale at `a994e53`, so a run would read and write the ledger on `main-2`. Either
    point the automation at a `main` checkout, or reword §1/§2/§4 to name the coordinator branch.
 2. **`.mcp.json` is gitignored and exists only in `main-2`.** Per-zip worktrees created by §3b get no
@@ -257,7 +257,7 @@ heuristics run, and they are a safety net rather than curation.
 
 ## Verification baseline
 
-Everything below was checked and holds at `b8f0286`.
+Everything below was checked and holds at `08c4e58`.
 
 | Check | Result |
 |---|---|
