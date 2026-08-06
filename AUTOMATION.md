@@ -24,9 +24,9 @@ If the delta is empty, exit silently. Do nothing else.
 
 a. UNPACK into a temp dir. Enumerate page-level HTML files — entry documents only.
 
-**If the zip root contains `pages.txt`, it is the allow-list: one entry per line and the complete set of pages. Enumerate exactly those and nothing else.** A human curating the zip is cheaper than the automation guessing. Each line is a path relative to the zip root, optionally followed by the post type to build it as (`page` or `post_services`, default `page`). Blank lines and lines starting with `#` are ignored.
+**If the zip root contains `pages.txt`, it is the allow-list: one entry per line and the complete set of pages. Enumerate exactly those and nothing else.** A human curating the zip is cheaper than the automation guessing. Each line is a path relative to the zip root, optionally followed by the post type to build it as (`page`, `post_services` or `post_application`; default `page`). Blank lines and lines starting with `#` are ignored.
 
-**Parse rule — design filenames contain spaces, so do not split on the first whitespace.** Trim the line; if its LAST whitespace-separated token is exactly `page` or `post_services`, that token is the post type and everything before it, trimmed, is the path. Otherwise the whole trimmed line is the path and the type is `page`. Both are a closed set, and no design filename ends in ` page`, so this never misreads a path.
+**Parse rule — design filenames contain spaces, so do not split on the first whitespace.** Trim the line; if its LAST whitespace-separated token is exactly `page`, `post_services` or `post_application`, that token is the post type and everything before it, trimmed, is the path. Otherwise the whole trimmed line is the path and the type is `page`. The three are a closed set, and no design filename ends in one of them, so this never misreads a path.
 
 ```
 CNC Micromachining.html                 post_services
@@ -59,7 +59,7 @@ i. IDENTITY: the question here is **"has this pipeline already created this page
 - **Hit** → this pipeline built it. Record `"skipped-already-built"` with the existing post_id and continue. The one exception: if this zip's status is `partial` and this page's recorded status is `"failed"` or missing, re-enter and rebuild it.
 - **Miss** → build it, regardless of what else lives at that slug. `build-state.json` is the ledger of record, but it lives on a build branch that may never merge — so if WP meta says this pipeline built a page and the ledger disagrees, trust WP and reconcile the ledger.
 
-**POST TYPE:** a service page is `post_services` (that is what its live counterparts are, and it is what puts the page under `/services/`); everything else is `page`. Nothing else is permitted — SKILL.md §1. If `pages.txt` gives a type for the page, use it; otherwise infer from the design and state the inference in the report.
+**POST TYPE:** type follows what the page IS, because it sets the permalink and the theme template — a service page is `post_services` (`/services/<slug>/`), an application or sector page is `post_application`, everything else is `page`. Nothing else is permitted — SKILL.md §1. If `pages.txt` gives a type for the page, use it; otherwise infer from the design and state the inference in the report. SKILL.md §4 gates every type against `elementor_cpt_support` before creating.
 
 **SLUG:** kebab-case from the filename or `<title>`, then namespace it: `pl-auto-<slug>`, mirroring the `pl-auto-` media prefix. Live pages keep the clean slugs, this run's drafts cannot collide with them, and WordPress cannot silently suffix them into something the report would misstate. Renaming at go-live is a human step.
 
@@ -122,7 +122,7 @@ On main, update build-state.json with per-page status under each zip:
           "preview_url": "…",
           "build_type": "standard" | "extend",
           "design_page": "CNC Micromachining.html",
-          "post_type": "post_services" | "page",
+          "post_type": "page" | "post_services" | "post_application",
           "status": "built" | "failed: <reason>" | "skipped-already-built"
         }
       ],

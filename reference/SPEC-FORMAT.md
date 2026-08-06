@@ -29,7 +29,7 @@ sections:  [ ... ]       # required, ordered — render order is spec order
 |---|---|---|---|
 | `title` | string | yes | Post title |
 | `slug` | string | yes | `post_name`; also the `built/<slug>.json` filename. Automation runs namespace it `pl-auto-<slug>` (AUDIT.md B5) and `--automation` enforces that |
-| `post_type` | string | yes | **`page` or `post_services` only** — SKILL.md §1. A service page is `post_services` (that is what its live counterparts are, and what puts it under `/services/`); everything else is `page` |
+| `post_type` | string | yes | **`page`, `post_services` or `post_application` only** — SKILL.md §1. A service page is `post_services` (`/services/<slug>/`); an application or sector page is `post_application`; everything else is `page` |
 | `post_status` | string | yes | **`draft` only** — the agent never publishes (§1, §8) |
 
 ### `assets`
@@ -191,7 +191,8 @@ the run; errors mean **do not write to WordPress** (SKILL.md §2, §8).
 Checks that must pass locally, before any WordPress call (SKILL.md §2, §3):
 
 1. YAML parses; `spec_version` is 1.
-2. `page.post_type` is `page` or `post_services`, and `page.post_status == draft`. Under
+2. `page.post_type` is `page`, `post_services` or `post_application`, and
+   `page.post_status == draft`. Under
    `--automation`, `page.slug` also starts with `pl-auto-`.
 3. Every `sections[].pattern` resolves to an existing `reference/snippets/<pattern>.json`.
 4. **Token coverage both ways** — for each section, the set of `{token}`s in the fragment

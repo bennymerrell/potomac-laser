@@ -11,7 +11,7 @@ spec_version: 1
 page:
   title: "Laser Welding Services"
   slug: "laser-welding-services"
-  post_type: page          # SKILL.md §1: `page` or `post_services` (services go under /services/)
+  post_type: page          # SKILL.md §1: page | post_services (/services/) | post_application
   post_status: draft       # SKILL.md §1: `draft` only, never published by the agent
 
 # Media referenced by image tokens. Both url and attachment_id are required

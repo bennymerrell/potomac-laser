@@ -120,8 +120,10 @@ Two secondary defects surface here:
   (that's what their live equivalents are, and it's in `elementor_cpt_support`), but SKILL.md §1
   permitted `post_type=page` only and the validator hard-errored on anything else. `post_services`
   is now allowed end to end: SKILL.md §1, §4's pre-create `elementor_cpt_support` gate,
-  `ALLOWED_POST_TYPES` in the validator, SPEC-FORMAT.md, and §3.c.i's rule that a service page is
-  `post_services` and everything else is `page`. No other type is permitted.
+  `ALLOWED_POST_TYPES` in the validator, SPEC-FORMAT.md, and §3.c.i's rule that type follows what
+  the page IS: `post_services` for services (`/services/<slug>/`), `post_application` for
+  application and sector pages, `page` for everything else. No other type is permitted, and §4
+  gates the chosen type against `elementor_cpt_support` before creating.
 - **§3.c.i's scoping ambiguity — MOOT as of the B5 fix.** The check no longer looks at slugs at
   all, so there is nothing left to scope. WP's silent slug suffixing is now caught two ways: the
   reserved `pl-auto-` namespace means nothing should collide, and SKILL.md §4 re-reads `post_name`
@@ -287,8 +289,9 @@ hand-run spec; `spec.example.yaml --template` unchanged at 174 tokens / 0 errors
 1. UpdraftPlus → daily db+files, or define the backup-status file (B1). Nothing else matters until
    the gate can pass.
 2. ~~Implement B5 — the `_pl_auto_page` stamp, the meta-based check, the `pl-auto-` slug namespace,
-   and the repointed drift report; settle the post-type question (B3).~~ **Done** — service pages
-   build as `post_services`, everything else as `page`.
+   and the repointed drift report; settle the post-type question (B3).~~ **Done** — services build
+   as `post_services`, applications and sector pages as `post_application`, everything else as
+   `page`; all three verified present in `elementor_cpt_support`.
 3. ~~Replace the iframe-based enumeration rule with an allow-list or explicit exclusions (B2).~~
    **Done** — add a curated `pages.txt` to this zip before the first real run.
 4. ~~Reconcile §7 against SKILL.md §8 and TRANSLATE.md §5; fix the §2 delta logic; fix the

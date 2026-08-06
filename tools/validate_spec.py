@@ -24,10 +24,11 @@ SNIPPETS = os.path.join(REPO, "reference", "snippets")
 TOKEN_RE = re.compile(r"\{([a-z_]+_\d+)\}")
 HONORIFICS = {"dr", "dr.", "prof", "prof.", "mr", "mr.", "ms", "ms.", "mrs", "mrs."}
 
-# SKILL.md §1. A service page belongs to `post_services` — that is what its live
-# counterparts are, and it is what puts the page under /services/. `page` is everything
-# else. Both are in `elementor_cpt_support`, so "Edit with Elementor" works on either.
-ALLOWED_POST_TYPES = {"page", "post_services"}
+# SKILL.md §1. Post type follows what the page IS, because it decides the permalink and
+# the theme template: a service page is `post_services` (/services/<slug>/), an
+# application or sector page is `post_application`, and `page` is everything else. All
+# three are in `elementor_cpt_support`, so "Edit with Elementor" works on any of them.
+ALLOWED_POST_TYPES = {"page", "post_services", "post_application"}
 # Automation-built posts carry a provenance stamp; the slug is namespaced so the run's
 # drafts never collide with live pages (AUDIT.md B5).
 AUTO_SLUG_PREFIX = "pl-auto-"

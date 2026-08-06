@@ -63,10 +63,11 @@ staging server and re-enable global cache clearing.
 
 ALLOWED (create only):
 
-- New posts with `post_status=draft`, of type `page` **or `post_services`**. A service page is
-  `post_services` — that is what its live counterparts are and what puts it under `/services/`;
-  `page` is everything else. Both are in `elementor_cpt_support`, so "Edit with Elementor" works on
-  either. No other post type, ever.
+- New posts with `post_status=draft`, of type `page`, **`post_services`** or **`post_application`**.
+  Type follows what the page IS, because it sets the permalink and the theme template: a service
+  page is `post_services` (`/services/<slug>/`), an application or sector page is
+  `post_application`, and `page` is everything else. All three are in `elementor_cpt_support`, so
+  "Edit with Elementor" works on any of them. No other post type, ever.
 - New media library attachments
 - New files under `wp-content/uploads/novamira-drafts/`
 

@@ -5,9 +5,10 @@
 # heuristic runs. Blank lines and #-comments are ignored.
 #
 # Format:  <path relative to zip root>[  <post_type>]
-#   post_type is `page` (default) or `post_services` — nothing else (SKILL.md §1).
-#   A service page is post_services: that is what its live counterparts are and
-#   what puts it under /services/.
+#   post_type is `page` (default), `post_services` or `post_application` —
+#   nothing else (SKILL.md §1). Type follows what the page IS, because it sets
+#   the permalink and the theme template: services go to post_services
+#   (/services/<slug>/), application and sector pages to post_application.
 #   Filenames contain spaces, so the type is read as the LAST token on the line;
 #   if the last token isn't a post type, the whole line is the path.
 #
@@ -37,13 +38,11 @@ Contact.html                                   page
 Project Gallery.html                           page
 Services & Applications.html                   page
 
-# Application / sector pages. Listed as `page` because SKILL.md §1 allows only
-# `page` and `post_services`. If these should live in the `post_application`
-# CPT (it IS in elementor_cpt_support), that type has to be added to SKILL.md
-# §1 and ALLOWED_POST_TYPES in tools/validate_spec.py first — a decision, not a
-# line in this file.
-CCIT.html                                      page
-uploads/sector-medical-potomac.html            page
+# Application / sector pages — post_application, matching their live siblings
+# (e.g. 4690 "Laser Hole Drilling of Kapton", 1592, 1552). CCIT is container
+# closure integrity testing; sector-medical is the medical-device sector page.
+CCIT.html                                      post_application
+uploads/sector-medical-potomac.html            post_application
 
 # ---------------------------------------------------------------------------
 # Deliberately NOT built, and why. Kept here so the next curator can see the
