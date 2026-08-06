@@ -1,0 +1,8 @@
+{
+ "zip": "Potomac Laser.zip",
+ "zip_sha256": "2f5215b42d491dae3eb7653c0d4e87c985723f7054b2916dc1937a8af331e14e",
+ "path_in_zip": "3D Printing.html",
+ "branch": "origin/project-zip",
+ "note": "AUTOMATION.md \u00a73.c.iii says copy the page source to design-export/. The source is ~1.05 MB, almost all inline base64 duplicating the 10 images already committed under specs/pl-auto-cnc-micromachining/assets/ and uploaded as attachments 12229-12238 \u2014 this page's ten are byte-identical to them. Recorded as a verifiable pointer instead, matching the CNC precedent; flagged for the spec rather than deviated from silently.",
+ "mock_assets": "../pl-auto-cnc-micromachining/assets"
+}

@@ -1,0 +1,99 @@
+{
+ "run_id": "20260806-173742",
+ "started_utc": "2026-08-06T17:37:42Z",
+ "mode": "autonomous coordinator run (AUTOMATION.md)",
+ "target": "potomac-laser.com (LIVE) via novamira-potomac-laser-co, PRODUCTION MODE",
+ "zip": {
+  "filename": "Potomac Laser.zip",
+  "sha256": "2f5215b42d491dae3eb7653c0d4e87c985723f7054b2916dc1937a8af331e14e",
+  "source": "origin/project-zip",
+  "manifest": "manifests/potomac-laser.txt",
+  "manifest_hash_matched": true
+ },
+ "recovery_floor": {
+  "gate": "SKILL.md §0 — verified, not taken",
+  "updraft_set_timestamp": 1786020030,
+  "updraft_set_utc": "2026-08-06T12:40:30Z",
+  "age_at_gate_hours": 4.95,
+  "backup_nonce": "3740600017dd",
+  "db_file": "backup_2026-08-06-0840_Potomac_Laser_3740600017dd-db.gz.crypt",
+  "updraft_last_backup_success": 1,
+  "updraft_last_backup_errors": [],
+  "note": "Newest set was under 24h old and successful, so this run took no backup. updraft_delete_local=1 / service=dropbox, so the set lives on Dropbox only."
+ },
+ "posts_created": [
+  {
+   "post_id": 12242,
+   "post_type": "post_services",
+   "post_status": "draft",
+   "slug": "pl-auto-rapid-prototyping",
+   "title": "Rapid Prototyping Services",
+   "design_page": "Rapid Prototyping.html",
+   "preview_url": "https://www.potomac-laser.com/?post_type=post_services&p=12242&preview=true",
+   "sections": 12,
+   "elements": 292,
+   "elementor_data_bytes": 141910,
+   "elementor_data_sha256": "d5202ed1b6abdc862ca1f4b554c367be6689b184b4c6e24af67dc415a1d18453",
+   "provenance_meta": {
+    "_pl_auto_page": "Rapid Prototyping.html",
+    "_pl_auto_zip": "2f5215b42d491dae3eb7653c0d4e87c985723f7054b2916dc1937a8af331e14e",
+    "_pl_auto_run": "20260806-173742"
+   }
+  },
+  {
+   "post_id": 12243,
+   "post_type": "post_services",
+   "post_status": "draft",
+   "slug": "pl-auto-3d-printing",
+   "title": "3D Printing Contract Services",
+   "design_page": "3D Printing.html",
+   "preview_url": "https://www.potomac-laser.com/?post_type=post_services&p=12243&preview=true",
+   "sections": 12,
+   "elements": 292,
+   "elementor_data_bytes": 141717,
+   "elementor_data_sha256": "dbaa8edf313e50abbd2dea29a7527bf84301720c59d26fa4c9ce23b6f6185546",
+   "provenance_meta": {
+    "_pl_auto_page": "3D Printing.html",
+    "_pl_auto_zip": "2f5215b42d491dae3eb7653c0d4e87c985723f7054b2916dc1937a8af331e14e",
+    "_pl_auto_run": "20260806-173742"
+   }
+  }
+ ],
+ "attachments_created": [],
+ "attachments_reused": [
+  {"token_asset": "svc_5", "attachment_id": 12229, "file": "pl-auto-service-bonding-assembly.jpg"},
+  {"token_asset": "svc_1", "attachment_id": 12230, "file": "pl-auto-service-cnc-micromachining.jpg"},
+  {"token_asset": "svc_4", "attachment_id": 12231, "file": "pl-auto-service-hybrid-cnc-laser.jpg"},
+  {"token_asset": "svc_2", "attachment_id": 12232, "file": "pl-auto-service-laser-micromachining.jpg"},
+  {"token_asset": "svc_3", "attachment_id": 12233, "file": "pl-auto-service-rapid-prototyping.jpg"},
+  {"token_asset": "whyus_team", "attachment_id": 12234, "file": "pl-auto-whyus-team.jpg"},
+  {"token_asset": "eco_logo_1", "attachment_id": 12235, "file": "pl-auto-eco-logo-1.png"},
+  {"token_asset": "eco_logo_2", "attachment_id": 12236, "file": "pl-auto-eco-logo-2.png"},
+  {"token_asset": "eco_logo_3", "attachment_id": 12237, "file": "pl-auto-eco-logo-3.png"},
+  {"token_asset": "eco_logo_4", "attachment_id": 12238, "file": "pl-auto-eco-logo-4.png"}
+ ],
+ "attachment_dedupe_note": "All 20 image slots across the two pages resolved to the ten attachments uploaded by run 20260806-124030: every design image on both pages is byte-identical (SHA-256) to the corresponding CNC-run upload. Zero new uploads.",
+ "files_created": [
+  "wp-content/uploads/novamira-drafts/pl-auto-rapid-prototyping.elementor.json",
+  "wp-content/uploads/novamira-drafts/pl-auto-3d-printing.elementor.json"
+ ],
+ "files_referenced_not_modified": [
+  {
+   "path": "wp-content/uploads/novamira-drafts/rp-interactive.html",
+   "bytes": 107796,
+   "mtime_utc": "2026-07-30T15:37:36Z",
+   "sha256": "a1a5de27f0e2f2adc32774a51a99392edc6bab3d84d5acab67e82ab1b91027ef",
+   "gate": "self-contained — 0 external script src, 0 external stylesheets; one inert rel=canonical (reported, not a failure)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/3dp-interactive.html",
+   "bytes": 107479,
+   "mtime_utc": "2026-07-30T15:27:52Z",
+   "sha256": "414d2035f1c63872de0853874c4f8ebc4461315c9efc39c44448b26caf5f9b8f",
+   "gate": "self-contained — 0 external script src, 0 external stylesheets; one inert rel=canonical (reported, not a failure)"
+  }
+ ],
+ "global_operations": [],
+ "posts_modified_not_created_by_this_run": [],
+ "rollback": "Trash post_ids 12242 and 12243, delete the two files under files_created. No attachments were created and nothing else on the site was written."
+}
