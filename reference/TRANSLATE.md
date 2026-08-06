@@ -71,6 +71,14 @@ position, its heading text, its background tone (light/dark), and whether it con
 grid, an accordion, an image set, or a bespoke interactive cluster. This list is the input to
 matching — one design section becomes at most one spec section.
 
+**A section may also contain an interactive cluster's client-side templates**, which are not
+page copy and must not be extracted as such. On the CNC page the closing CTA band shares its
+`<section>` with 36 of the explorer's `${a.summary}`-style template literals; taken naively they
+ship to the page as visible `${…}` text. So: after segmenting, scan each section for `${`. Any
+hit means the boundary swallowed template scaffolding — isolate the real markup before
+extracting, and never carry a `${…}` into a token. `tools/validate_spec.py` rejects one that
+slips through, but the fix belongs here.
+
 ## 4. MATCH — the core step
 
 For each design section, read the **`Recognise when`** field of every entry in

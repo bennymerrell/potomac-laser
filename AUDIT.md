@@ -23,6 +23,8 @@ and `build-state.json` is still `{"processed_zips": []}`.
 | B4 | §7 pattern budget exhausted; arity changes fail the validator | Mitigated `de2d385` — run 1 phased to 5 service pages |
 | B5 | No provenance marker, so identity was inferred from the slug | Fixed `eddf406` |
 | B6 | Export ships design-time scaffolding (Tailwind CDN, React dev, Babel, tweaks panel) | Fixed `2032075` |
+| B7 | The design's why-us team photo has no slot in its matched fragment | **OPEN** — decision, found by dry run |
+| B8 | A section carries the explorer's JS template literals as if they were copy | Fixed `NEXT` — found by dry run |
 | C1 | §7 vs SKILL.md §8 (authoring / appending forbidden) | Fixed `16417be` |
 | C2 | §7 vs TRANSLATE.md §5 ("stop and report") | Fixed `16417be` |
 | C3 | TRANSLATE.md §10's blocking human review vs full autonomy | Fixed `2032075` |
@@ -75,6 +77,46 @@ curate the zip so it fits (service pages only); or make arity a first-class spec
 each repeating unit's count in `spec.yaml`, have the assembler add and remove sibling containers, and
 have the validator check coverage against the *resolved* fragment rather than the file on disk. Until
 one of those, counts must stay identical to the fragments.
+
+---
+
+## Dry run — CNC Micromachining, 2026-08-06 (no writes)
+
+Everything up to SKILL.md §0 was executed for real against `CNC Micromachining.html`; nothing was
+written to WordPress. What it established:
+
+| Step | Result |
+|---|---|
+| Strip scaffolding (B6) | 6 removals — Tailwind Play CDN ×1, React dev ×2, Babel ×1, tweaks panel ×1, tweaks-root ×1. Zero off-site dependencies left |
+| Segment | 12 sections |
+| MATCH | **10 matched, 2 `UNMATCHED`** — `#services` "Explore our precision capabilities" and `#quote` "Ready to move forward?", exactly as predicted |
+| Arity | Every matched section equals its fragment: 5 hero stat pairs, 8 spec rows, 3 comparison cards, 5 steps, 4 ecosystem cards, 3 testimonials, 2 CTA buttons, 8 FAQ items (free repeater) |
+| Assets | 10 inline base64 images, all unique: 4 eco logos → `{image_1..4}`; 5 service photos → belong to the unmatched `#services` grid; 1 team photo → **no slot (B7)** |
+| Media reuse | None available — no attachment matches these filenames, and post 12133's own 4 image widgets carry **no** attachment id (they point at `novamira-drafts/` by URL). The run must create 10 new attachments, and SKILL.md §3's id gate is stricter than the source page |
+| Interactive | `cnc-interactive.html` resolves; dependency gate **PASS** (0 external script/stylesheet) |
+| Identity | No `_pl_auto_page` hit for this page; `pl-auto-cnc-micromachining` is free → the run would correctly build |
+| Template literals | **36 found in section [11] (B8)** |
+
+### B7 — the team photo has nowhere to go (OPEN, needs a decision)
+
+`why-choose-inset-cta` has **no image slot** — of the ten fragments only `group-ecosystem-cards`
+does. But the design's `#why-us` ships a 121 KB photo (`alt="Goodfellow Microfabrication team"`).
+Matched as-is, the photo is silently dropped: the validator cannot catch it (there is no token to
+be missing), so the first sign would be §3.c.vi's screenshot comparison failing, burning its 3
+iterations and marking the page `failed: verify`. The fragment's Notes even say the empty first
+column is "a layout spacer, not a missing image" — true of the source page, wrong for this design.
+
+Three ways out, all a human's call: accept the difference and give §3.c.vi a known-difference
+allowance for it; treat `#why-us` as `UNMATCHED` so §7 mints an image-bearing variant (a third new
+pattern, still inside the cap); or confirm the photo isn't wanted on the built page.
+
+### B8 — client-side templates inside a section (fixed `NEXT`)
+
+Section [11] holds the closing CTA band **and** 36 of the explorer's template literals
+(`${a.label}`, `${a.summary}`, `${a.chips.map(...)}`). Extracted as copy they would ship to the
+page as visible `${…}` text. TRANSLATE.md §3 now requires a `${` scan after segmenting, and
+`validate_spec.py` rejects any token value containing one. Verified: a spec carrying
+`${a.label}` now fails; the template still passes.
 
 ---
 

@@ -54,6 +54,7 @@ HTML_TOKENS = ("body_", "faq_a_")
 # token value is scaffolding that leaked through.
 SCAFFOLDING_RE = re.compile(
     r"cdn\.tailwindcss\.com|unpkg\.com|@?babel/standalone|tweaks-panel|tweaks-root", re.I)
+TEMPLATE_LITERAL_RE = re.compile(r"\$\{[^}\n]{1,80}\}")
 EXTERNAL_DEP_RE = re.compile(
     r"""<script[^>]+src=["'](?:https?:)?//|<link[^>]+rel=["']stylesheet["'][^>]+href=["'](?:https?:)?//""",
     re.I)
@@ -200,6 +201,14 @@ def check_section(idx, sec, assets, rep, template):
         if dep:
             rep.error(tw, "external script/stylesheet dependency — no fragment needs an "
                           "off-site asset, so this is scaffolding that leaked through")
+        # --- unrendered JS template literals ---
+        # A design export interleaves a cluster's client-side templates with real markup
+        # (on the CNC page the explorer's ${a.summary} templates sit in the same section as
+        # the closing CTA band). Extracted naively they ship as visible literal text.
+        tpl = TEMPLATE_LITERAL_RE.findall(val)
+        if tpl:
+            rep.error(tw, f"unrendered JS template literal {tpl[:3]} — this is a cluster's "
+                          f"client-side template, not page copy; it would render literally")
         # --- check 5: no nested token syntax ---
         nested = TOKEN_RE.findall(val)
         if nested:
