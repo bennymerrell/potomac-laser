@@ -28,7 +28,7 @@ and `build-state.json` is still `{"processed_zips": []}`.
 | B9 | The legends strip HTML, so legend-sourced token values ship truncated | Fixed `35e3e36` — found by write phase |
 | B10 | CCIT's FAQ answers are JS-rendered, not markup — `faq-toggle` needs static pairs | **OPEN** — affects run 3 |
 | B11 | Quote sections are unwired forms (CCIT **and** all 5 service pages); §7 cannot deliver them | **OPEN** — target forms identified, approach needs a decision |
-| B12 | `why-choose-inset-cta` carried a hardcoded photo URL, untokenised — and PATTERNS.md called it an empty spacer | Fixed `NEXT` — tokenised, docs corrected, gate widened |
+| B12 | `why-choose-inset-cta` carried a hardcoded photo URL, untokenised — and PATTERNS.md called it an empty spacer | Fixed `583270f` — tokenised, docs corrected, gate widened |
 | C1 | §7 vs SKILL.md §8 (authoring / appending forbidden) | Fixed `16417be` |
 | C2 | §7 vs TRANSLATE.md §5 ("stop and report") | Fixed `16417be` |
 | C3 | TRANSLATE.md §10's blocking human review vs full autonomy | Fixed `2032075` |
@@ -129,7 +129,7 @@ Re-running the match with the rule applied: **9 matched, 3 `UNMATCHED`**, and `g
 correctly still matches (4 images ≤ 4 slots). Nine of ten fragments lacking an image slot is a
 property of post 12133, not of page design — which is what §7 exists to correct.
 
-### B12 — the why-us photo was hardcoded (fixed `NEXT`)
+### B12 — the why-us photo was hardcoded (fixed `583270f`)
 
 Fixed across five places, since the defect had been copied into the docs:
 
