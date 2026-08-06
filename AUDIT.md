@@ -27,7 +27,7 @@ and `build-state.json` is still `{"processed_zips": []}`.
 | C3 | TRANSLATE.md §10's blocking human review vs full autonomy | **OPEN** — follows from scope |
 | C4 | §2 delta rule excluded every status it defines | Fixed `16417be` |
 | C5 | Arity guidance differs between AUTOMATION.md and TRANSLATE.md | **OPEN** — same decision as B4 |
-| C6 | §3.c.iv looked for the interactive asset in the wrong place | Fixed `NEXT` — resolved from the server |
+| C6 | §3.c.iv looked for the interactive asset in the wrong place | Fixed `36c65bb` — resolved from the server |
 | C7 | Broken `PATTERNS.md` links and HTML entities in AUTOMATION.md | Fixed `16417be` |
 | D1–D5 | Deployment gaps (branch, MCP config, agent type, localhost entry, report field) | **OPEN** |
 
@@ -132,7 +132,7 @@ stale `APPS` content (see C6).
 
 ## Resolved
 
-### C6 — the interactive asset was sought in the export, but it lives on the server (fixed `NEXT`)
+### C6 — the interactive asset was sought in the export, but it lives on the server (fixed `36c65bb`)
 
 §3.c.iv required the design export to contain a self-contained interactive HTML file for any page using
 `interactive-iframe-embed`, and failed the page otherwise. This export contains none — the "Select your
