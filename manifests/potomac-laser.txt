@@ -37,9 +37,20 @@
 # `Potomac Laser.zip` (origin/project-zip, 12,249,689 bytes)
 # 23 HTML files in the zip; 11 are pages. Drafted 2026-08-06.
 #
-# PHASING (AUDIT.md B4): §7 caps new patterns at 8 per zip and this zip needs
-# 12-14. To run the service pages alone first (2 new patterns), comment out the
-# six non-service entries below; uncomment them for run 2 and run 3.
+# PHASING (AUDIT.md B4) — §7 caps new patterns at 8 per zip and this zip needs
+# 12-14 in total, so the pages are released in phases.
+#
+#   RUN 1 (ACTIVE): the five service pages. They need 2 new patterns between
+#     them - a services card grid and a quote block - because §7 dedupes, so the
+#     first page mints and the other four reuse. Comfortably inside the cap.
+#   RUN 2: About Our Group, Contact, Project Gallery, Services & Applications.
+#   RUN 3: CCIT and sector-medical (~5-7 new patterns; the heaviest phase).
+#
+# To advance a phase: uncomment that phase's block, then re-run. The zip hash is
+# already recorded, so §2 re-enters it only while its status is "partial" - a zip
+# marked "built" is never reprocessed. Reset it by deleting the zip's entry from
+# build-state.json (a human action, AUTOMATION.md §5), or bump the phase before
+# the first run completes.
 # ---------------------------------------------------------------------------
 
 # Service pages — 12 sections each, built from the shared CNC template.
@@ -60,17 +71,18 @@ Micro-Hole Drilling.html                       post_services  interactive=mhd-in
 Rapid Prototyping.html                         post_services  interactive=rp-interactive.html
 3D Printing.html                               post_services  interactive=3dp-interactive.html
 
-# Standard pages.
-About Our Group.html                           page
-Contact.html                                   page
-Project Gallery.html                           page
-Services & Applications.html                   page
+# Standard pages. --- RUN 2: uncomment these four ---
+# About Our Group.html                         page
+# Contact.html                                 page
+# Project Gallery.html                         page
+# Services & Applications.html                 page
 
 # Application / sector pages — post_application, matching their live siblings
 # (e.g. 4690 "Laser Hole Drilling of Kapton", 1592, 1552). CCIT is container
 # closure integrity testing; sector-medical is the medical-device sector page.
-CCIT.html                                      post_application
-uploads/sector-medical-potomac.html            post_application
+# --- RUN 3: uncomment these two ---
+# CCIT.html                                    post_application
+# uploads/sector-medical-potomac.html          post_application
 
 # ---------------------------------------------------------------------------
 # Deliberately NOT built, and why. Kept here so the next curator can see the

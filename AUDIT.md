@@ -20,7 +20,7 @@ and `build-state.json` is still `{"processed_zips": []}`.
 | B1 | Backup is weekly; the §0 gate needs < 24 h | Fixed `08c4e58` — §0 now takes its own db backup |
 | B2 | Page enumeration had no working exclusion rule | Fixed `16417be`; manifest committed at `manifests/potomac-laser.txt` |
 | B3 | 7 of 11 pages skipped for the wrong reason; wrong post type | Fixed `eddf406`, `3751dab` |
-| B4 | §7 pattern budget exhausted; arity changes fail the validator | **OPEN** — phase run 1 to avoid it |
+| B4 | §7 pattern budget exhausted; arity changes fail the validator | Mitigated `NEXT` — run 1 phased to 5 service pages |
 | B5 | No provenance marker, so identity was inferred from the slug | Fixed `eddf406` |
 | B6 | Export ships design-time scaffolding (Tailwind CDN, React dev, Babel, tweaks panel) | Fixed `2032075` |
 | C1 | §7 vs SKILL.md §8 (authoring / appending forbidden) | Fixed `16417be` |
@@ -85,14 +85,18 @@ takes a database backup if none is fresh). With `manifests/potomac-laser.txt` re
 enumerate, and the provenance check returns "not built" for every one — correctly, since nothing has been
 built yet — so all 11 proceed. The five service pages resolve their explorers from the server. Then:
 
-- **Service pages only** (comment out the six non-service manifest entries): **5 pages built**, needing
-  just 2 new patterns — a services card grid and a quote block — well inside §7's cap of 8. This is a
-  useful first run.
-- **All 11 at once:** the service pages mint their 2 patterns, then the remaining 6 pages need ~11–12
-  more against a budget of 6, so the cap trips (B4) and several fail `pattern-budget-exhausted`.
+**The manifest is phased, and run 1 is the five service pages** — `pl-auto-cnc-micromachining`,
+`-laser-micromachining`, `-micro-hole-drilling`, `-rapid-prototyping`, `-3d-printing`, all as
+`post_services` drafts, each resolving its explorer from the server. They need **2** new patterns
+between them (a services card grid and a quote block): §7 dedupes, so the first page mints and the
+other four reuse — comfortably inside the cap of 8.
 
-So run 1 should be phased. The remaining caveat is copy, not machinery: the reused explorers may carry
-stale `APPS` content (see C6).
+The run will also report **18 files as unlisted-not-built**: the 12 genuine non-pages plus the 6 pages
+held back for runs 2 and 3. That is the phasing working as intended, not an error.
+
+Had all 11 run at once, the remaining 6 pages would have needed ~11–12 further patterns against a
+budget of 6, tripping the cap and failing several pages on iteration order. The remaining caveat is
+copy, not machinery: the reused explorers may carry stale `APPS` content (see C6).
 
 ---
 
@@ -326,9 +330,10 @@ Everything below was checked and holds at `08c4e58`.
 
 ## Before the first run
 
-1. **B4** — phase run 1 to the five service pages (2 new patterns, inside §7's cap of 8) by
-   commenting out the six non-service entries in `manifests/potomac-laser.txt`. Decide separately
-   whether arity becomes a spec feature.
+1. ~~**B4** — phase run 1 to the five service pages.~~ **Done** — the manifest's run-2 and run-3
+   blocks are commented out with instructions for advancing a phase. Note that re-entering an already
+   processed zip needs its `build-state.json` entry deleted by a human (§5) unless its status is still
+   `partial`. Decide separately whether arity becomes a spec feature.
 2. **Explorer copy** — optionally diff the `APPS` data in the five server-side interactive files
    against this design before running, or accept run 1 with the report flagging it (C6).
 3. **Optional hygiene** — raise `updraft_retain_db` above 5 if runs will be frequent, and put
