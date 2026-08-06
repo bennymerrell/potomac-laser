@@ -22,7 +22,39 @@
       "docker": "not running"
     }
   },
-  "posts": [],
+  "posts": [
+    {
+      "post_id": 12239,
+      "post_type": "post_services",
+      "post_status": "draft",
+      "slug": "pl-auto-cnc-micromachining",
+      "title": "CNC Micromachining Services",
+      "design_page": "CNC Micromachining.html",
+      "preview_url": "https://www.potomac-laser.com/?post_type=post_services&p=12239&preview=true",
+      "data_sha256": "6ac2f7254417c2e514c9819efddf022d88f11579670d09e2d7b20fb7fd010cd8",
+      "sections_built": 10,
+      "sections_deferred": [
+        {
+          "design_index": 1,
+          "id": "why-us",
+          "reason": "deferred-image: why-choose-inset-cta hides a hardcoded photo URL (B12); variant not minted"
+        },
+        {
+          "design_index": 9,
+          "id": "quote",
+          "reason": "deferred-form: 9 inputs/1 select/2 textareas/2 file inputs, no HubSpot wiring (B11)"
+        }
+      ],
+      "provenance_meta": {
+        "_pl_auto_page": "CNC Micromachining.html",
+        "_pl_auto_zip": "2f5215b4\u2026",
+        "_pl_auto_run": "20260806-124030"
+      },
+      "patterns_authored": [
+        "services-image-cards (\u00a77 step 2 \u2014 NOT yet in the library; needs verify then tokenise)"
+      ]
+    }
+  ],
   "attachments": [
     {
       "attachment_id": 12229,
@@ -103,6 +135,10 @@
     {
       "path": "wp-content/uploads/novamira-drafts/pl-auto-12133-elementor.json",
       "state": "written for the token rebuild, downloaded (sha256 verified), then removed"
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/pl-auto-cnc-data.json",
+      "state": "uploaded, read into _elementor_data, then removed"
     }
   ],
   "notes": [
@@ -110,5 +146,5 @@
     "10 attachments created 2026-08-06 ~13:45Z, ids 12229-12238, all byte-identical to the design export's inline base64. 4 eco logos map to group-ecosystem-cards {image_1..4}; 5 service photos and 1 team photo belong to sections \u00a77 has yet to author.",
     "Spec rebuilt from post 12133's stored widget values after B9: fragment token order and 12133's value order walked with one traversal function, ALIGNED for all 9 patterns, 164 values resolved with markup intact. Validator: 0 errors under --automation. Design diff: 136/141 text values verbatim; the 5 others are decoration only (literal arrow/bullet glyphs 12133 stores as text). Zero content differences."
   ],
-  "next_step": "\u00a77: author the 3 UNMATCHED sections (why-choose-inset-cta-image, services grid, quote block), then \u00a72 assemble + \u00a74 write. Recommendation on record: mint the 3 patterns on CCIT first, since 4 pages clone CNC."
+  "next_step": "\u00a73.c.vi verify post 12239 against the mock in a browser; then \u00a77 steps 4-6 for services-image-cards (tokenise server-side, legend, PATTERNS.md entry). Rollback: trash 12239, delete attachments 12229-12238."
 }

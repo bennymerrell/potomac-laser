@@ -1,0 +1,866 @@
+[
+ {
+  "id": "7f33f39",
+  "elType": "container",
+  "settings": {
+   "content_width": "full",
+   "flex_direction": "column",
+   "flex_align_items": "center",
+   "background_background": "classic",
+   "background_color": "",
+   "__globals__": {
+    "background_color": "globals/colors?id=gfwhite"
+   },
+   "padding": {
+    "unit": "px",
+    "top": "68",
+    "right": "0",
+    "bottom": "68",
+    "left": "0",
+    "isLinked": false
+   }
+  },
+  "elements": [
+   {
+    "id": "750e5a5",
+    "elType": "container",
+    "settings": {
+     "content_width": "boxed",
+     "flex_direction": "column",
+     "flex_align_items": "center",
+     "flex_gap": {
+      "unit": "px",
+      "column": "30",
+      "row": "30",
+      "isLinked": true
+     }
+    },
+    "elements": [
+     {
+      "id": "b110f99",
+      "elType": "container",
+      "settings": {
+       "content_width": "full",
+       "flex_direction": "column",
+       "flex_align_items": "center",
+       "flex_gap": {
+        "unit": "px",
+        "column": "0",
+        "row": "0",
+        "isLinked": true
+       }
+      },
+      "elements": [
+       {
+        "id": "464491f",
+        "elType": "container",
+        "settings": {
+         "content_width": "full",
+         "flex_direction": "row",
+         "flex_align_items": "center",
+         "flex_gap": {
+          "unit": "px",
+          "column": "10",
+          "row": "10",
+          "isLinked": true
+         },
+         "width": {
+          "unit": "%",
+          "size": 100
+         }
+        },
+        "elements": [
+         {
+          "id": "4151e35",
+          "elType": "container",
+          "settings": {
+           "content_width": "full",
+           "width": {
+            "unit": "px",
+            "size": 28
+           },
+           "min_height": {
+            "unit": "px",
+            "size": 2
+           },
+           "background_background": "classic",
+           "background_color": "",
+           "_flex_shrink": "0",
+           "__globals__": {
+            "background_color": "globals/colors?id=gforange"
+           }
+          },
+          "elements": [],
+          "isInner": false
+         },
+         {
+          "id": "2eb7d3f",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Our Services",
+           "header_size": "div",
+           "title_color": "",
+           "typography_typography": "custom",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 11
+           },
+           "typography_font_weight": "700",
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": 1.5
+           },
+           "typography_text_transform": "uppercase",
+           "__globals__": {
+            "title_color": "globals/colors?id=gforange"
+           }
+          },
+          "elements": []
+         }
+        ],
+        "isInner": false
+       },
+       {
+        "id": "bb4a89a",
+        "elType": "widget",
+        "widgetType": "heading",
+        "settings": {
+         "title": "Explore our precision capabilities",
+         "align": "center",
+         "title_color": "",
+         "typography_typography": "custom",
+         "typography_font_size": {
+          "unit": "px",
+          "size": 31
+         },
+         "typography_font_weight": "800",
+         "__globals__": {
+          "title_color": "globals/colors?id=gfnavymid"
+         }
+        },
+        "elements": []
+       },
+       {
+        "id": "d6ba6ea",
+        "elType": "widget",
+        "widgetType": "text-editor",
+        "settings": {
+         "editor": "<p>Choose the manufacturing route that fits your geometry, material, and production need.</p>",
+         "align": "center",
+         "text_color": "#5F6878",
+         "typography_typography": "custom",
+         "typography_font_size": {
+          "unit": "px",
+          "size": 15
+         },
+         "typography_line_height": {
+          "unit": "em",
+          "size": 1.6
+         },
+         "_element_width": "initial",
+         "_element_custom_width": {
+          "unit": "px",
+          "size": 760
+         }
+        },
+        "elements": []
+       },
+       {
+        "id": "46633ee",
+        "elType": "widget",
+        "widgetType": "text-editor",
+        "settings": {
+         "editor": "<p><a href=\"#applications\">Explore Applications →</a></p>",
+         "align": "center",
+         "text_color": "",
+         "typography_typography": "custom",
+         "typography_font_size": {
+          "unit": "px",
+          "size": 13
+         },
+         "typography_font_weight": "700",
+         "__globals__": {
+          "text_color": "globals/colors?id=gforange"
+         }
+        },
+        "elements": []
+       }
+      ],
+      "isInner": false
+     },
+     {
+      "id": "0960bbb",
+      "elType": "container",
+      "settings": {
+       "content_width": "full",
+       "flex_direction": "row",
+       "flex_align_items": "stretch",
+       "flex_gap": {
+        "unit": "px",
+        "column": "18",
+        "row": "18",
+        "isLinked": true
+       },
+       "flex_wrap": "wrap",
+       "width": {
+        "unit": "%",
+        "size": 100
+       }
+      },
+      "elements": [
+       {
+        "id": "4ae524d",
+        "elType": "container",
+        "settings": {
+         "content_width": "full",
+         "width": {
+          "unit": "%",
+          "size": 18.4
+         },
+         "width_mobile": {
+          "unit": "%",
+          "size": 100
+         },
+         "flex_direction": "column",
+         "flex_align_items": "flex-start",
+         "flex_gap": {
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+         },
+         "background_background": "classic",
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gfwhite"
+         },
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "#E1E6EE",
+         "border_radius": {
+          "unit": "px",
+          "top": "14",
+          "right": "14",
+          "bottom": "14",
+          "left": "14",
+          "isLinked": true
+         },
+         "padding": {
+          "unit": "px",
+          "top": "14",
+          "right": "14",
+          "bottom": "16",
+          "left": "14",
+          "isLinked": false
+         }
+        },
+        "elements": [
+         {
+          "id": "adc5da8",
+          "elType": "widget",
+          "widgetType": "image",
+          "settings": {
+           "image": {
+            "url": "https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-cnc-micromachining.jpg",
+            "id": 12230
+           },
+           "image_size": "full",
+           "custom_css": "selector img{width:100%;height:158px;object-fit:cover;border-radius:10px;display:block}"
+          },
+          "elements": []
+         },
+         {
+          "id": "779c2f6",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "CNC Micromachining",
+           "header_size": "h3",
+           "title_color": "",
+           "typography_typography": "custom",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 17
+           },
+           "typography_font_weight": "700",
+           "__globals__": {
+            "title_color": "globals/colors?id=gfnavymid"
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "e79d2f2",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+           "editor": "<p>4-axis CNC milling and drilling for fine-feature and engineering plastics where repeatable tolerance control matters.</p>",
+           "text_color": "#5F6878",
+           "typography_typography": "custom",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 13
+           },
+           "typography_line_height": {
+            "unit": "em",
+            "size": 1.55
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "954f6f1",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+           "editor": "<p><a href=\"/services/cnc-micro-machining-services/\">Learn more →</a></p>",
+           "text_color": "",
+           "typography_typography": "custom",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 13
+           },
+           "typography_font_weight": "700",
+           "__globals__": {
+            "text_color": "globals/colors?id=gforange"
+           }
+          },
+          "elements": []
+         }
+        ],
+        "isInner": false
+       },
+       {
+        "id": "92248ed",
+        "elType": "container",
+        "settings": {
+         "content_width": "full",
+         "width": {
+          "unit": "%",
+          "size": 18.4
+         },
+         "width_mobile": {
+          "unit": "%",
+          "size": 100
+         },
+         "flex_direction": "column",
+         "flex_align_items": "flex-start",
+         "flex_gap": {
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+         },
+         "background_background": "classic",
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gfwhite"
+         },
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "#E1E6EE",
+         "border_radius": {
+          "unit": "px",
+          "top": "14",
+          "right": "14",
+          "bottom": "14",
+          "left": "14",
+          "isLinked": true
+         },
+         "padding": {
+          "unit": "px",
+          "top": "14",
+          "right": "14",
+          "bottom": "16",
+          "left": "14",
+          "isLinked": false
+         }
+        },
+        "elements": [
+         {
+          "id": "bca69ca",
+          "elType": "widget",
+          "widgetType": "image",
+          "settings": {
+           "image": {
+            "url": "https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-laser-micromachining.jpg",
+            "id": 12232
+           },
+           "image_size": "full",
+           "custom_css": "selector img{width:100%;height:158px;object-fit:cover;border-radius:10px;display:block}"
+          },
+          "elements": []
+         },
+         {
+          "id": "1af71cd",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Laser Micromachining",
+           "header_size": "h3",
+           "title_color": "",
+           "typography_typography": "custom",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 17
+           },
+           "typography_font_weight": "700",
+           "__globals__": {
+            "title_color": "globals/colors?id=gfnavymid"
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "e6e35cc",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+           "editor": "<p>UV, IR and structured polymer film for nozzles incredibly ultra-fine, perfectly uniform backlit micro-holes.</p>",
+           "text_color": "#5F6878",
+           "typography_typography": "custom",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 13
+           },
+           "typography_line_height": {
+            "unit": "em",
+            "size": 1.55
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "6dda725",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+           "editor": "<p><a href=\"/services/laser-micromachining/\">Learn more →</a></p>",
+           "text_color": "",
+           "typography_typography": "custom",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 13
+           },
+           "typography_font_weight": "700",
+           "__globals__": {
+            "text_color": "globals/colors?id=gforange"
+           }
+          },
+          "elements": []
+         }
+        ],
+        "isInner": false
+       },
+       {
+        "id": "4ae70c8",
+        "elType": "container",
+        "settings": {
+         "content_width": "full",
+         "width": {
+          "unit": "%",
+          "size": 18.4
+         },
+         "width_mobile": {
+          "unit": "%",
+          "size": 100
+         },
+         "flex_direction": "column",
+         "flex_align_items": "flex-start",
+         "flex_gap": {
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+         },
+         "background_background": "classic",
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gfwhite"
+         },
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "#E1E6EE",
+         "border_radius": {
+          "unit": "px",
+          "top": "14",
+          "right": "14",
+          "bottom": "14",
+          "left": "14",
+          "isLinked": true
+         },
+         "padding": {
+          "unit": "px",
+          "top": "14",
+          "right": "14",
+          "bottom": "16",
+          "left": "14",
+          "isLinked": false
+         }
+        },
+        "elements": [
+         {
+          "id": "c09513d",
+          "elType": "widget",
+          "widgetType": "image",
+          "settings": {
+           "image": {
+            "url": "https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-rapid-prototyping.jpg",
+            "id": 12233
+           },
+           "image_size": "full",
+           "custom_css": "selector img{width:100%;height:158px;object-fit:cover;border-radius:10px;display:block}"
+          },
+          "elements": []
+         },
+         {
+          "id": "13d0fa0",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Rapid Prototyping",
+           "header_size": "h3",
+           "title_color": "",
+           "typography_typography": "custom",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 17
+           },
+           "typography_font_weight": "700",
+           "__globals__": {
+            "title_color": "globals/colors?id=gfnavymid"
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "b7652af",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+           "editor": "<p>Fast-turn prototype paths for teams that need DFM feedback, material parts on compressed timelines.</p>",
+           "text_color": "#5F6878",
+           "typography_typography": "custom",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 13
+           },
+           "typography_line_height": {
+            "unit": "em",
+            "size": 1.55
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "8f1f209",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+           "editor": "<p><a href=\"/services/rapid-prototyping/\">Learn more →</a></p>",
+           "text_color": "",
+           "typography_typography": "custom",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 13
+           },
+           "typography_font_weight": "700",
+           "__globals__": {
+            "text_color": "globals/colors?id=gforange"
+           }
+          },
+          "elements": []
+         }
+        ],
+        "isInner": false
+       },
+       {
+        "id": "9cd5abe",
+        "elType": "container",
+        "settings": {
+         "content_width": "full",
+         "width": {
+          "unit": "%",
+          "size": 18.4
+         },
+         "width_mobile": {
+          "unit": "%",
+          "size": 100
+         },
+         "flex_direction": "column",
+         "flex_align_items": "flex-start",
+         "flex_gap": {
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+         },
+         "background_background": "classic",
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gfwhite"
+         },
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "#E1E6EE",
+         "border_radius": {
+          "unit": "px",
+          "top": "14",
+          "right": "14",
+          "bottom": "14",
+          "left": "14",
+          "isLinked": true
+         },
+         "padding": {
+          "unit": "px",
+          "top": "14",
+          "right": "14",
+          "bottom": "16",
+          "left": "14",
+          "isLinked": false
+         }
+        },
+        "elements": [
+         {
+          "id": "c42f32a",
+          "elType": "widget",
+          "widgetType": "image",
+          "settings": {
+           "image": {
+            "url": "https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-hybrid-cnc-laser.jpg",
+            "id": 12231
+           },
+           "image_size": "full",
+           "custom_css": "selector img{width:100%;height:158px;object-fit:cover;border-radius:10px;display:block}"
+          },
+          "elements": []
+         },
+         {
+          "id": "0d8bb5c",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Hybrid CNC + Laser",
+           "header_size": "h3",
+           "title_color": "",
+           "typography_typography": "custom",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 17
+           },
+           "typography_font_weight": "700",
+           "__globals__": {
+            "title_color": "globals/colors?id=gfnavymid"
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "5b3fa05",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+           "editor": "<p>A medical-grade stainless steel stent part, CNC macro structural feature machined and laser-cut.</p>",
+           "text_color": "#5F6878",
+           "typography_typography": "custom",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 13
+           },
+           "typography_line_height": {
+            "unit": "em",
+            "size": 1.55
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "d693f3c",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+           "editor": "<p><a href=\"/services/hybrid-fabrication/\">Learn more →</a></p>",
+           "text_color": "",
+           "typography_typography": "custom",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 13
+           },
+           "typography_font_weight": "700",
+           "__globals__": {
+            "text_color": "globals/colors?id=gforange"
+           }
+          },
+          "elements": []
+         }
+        ],
+        "isInner": false
+       },
+       {
+        "id": "7d2a150",
+        "elType": "container",
+        "settings": {
+         "content_width": "full",
+         "width": {
+          "unit": "%",
+          "size": 18.4
+         },
+         "width_mobile": {
+          "unit": "%",
+          "size": 100
+         },
+         "flex_direction": "column",
+         "flex_align_items": "flex-start",
+         "flex_gap": {
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+         },
+         "background_background": "classic",
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gfwhite"
+         },
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "#E1E6EE",
+         "border_radius": {
+          "unit": "px",
+          "top": "14",
+          "right": "14",
+          "bottom": "14",
+          "left": "14",
+          "isLinked": true
+         },
+         "padding": {
+          "unit": "px",
+          "top": "14",
+          "right": "14",
+          "bottom": "16",
+          "left": "14",
+          "isLinked": false
+         }
+        },
+        "elements": [
+         {
+          "id": "d43afdc",
+          "elType": "widget",
+          "widgetType": "image",
+          "settings": {
+           "image": {
+            "url": "https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-bonding-assembly.jpg",
+            "id": 12229
+           },
+           "image_size": "full",
+           "custom_css": "selector img{width:100%;height:158px;object-fit:cover;border-radius:10px;display:block}"
+          },
+          "elements": []
+         },
+         {
+          "id": "30e42b8",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Bonding &amp; Assembly",
+           "header_size": "h3",
+           "title_color": "",
+           "typography_typography": "custom",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 17
+           },
+           "typography_font_weight": "700",
+           "__globals__": {
+            "title_color": "globals/colors?id=gfnavymid"
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "3529771",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+           "editor": "<p>Precision alignment, bonding, micro-assembled components flawlessly bonded and aligned data.</p>",
+           "text_color": "#5F6878",
+           "typography_typography": "custom",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 13
+           },
+           "typography_line_height": {
+            "unit": "em",
+            "size": 1.55
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "bae46c7",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+           "editor": "<p><a href=\"/services/bonding-assembly/\">Learn more →</a></p>",
+           "text_color": "",
+           "typography_typography": "custom",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 13
+           },
+           "typography_font_weight": "700",
+           "__globals__": {
+            "text_color": "globals/colors?id=gforange"
+           }
+          },
+          "elements": []
+         }
+        ],
+        "isInner": false
+       }
+      ],
+      "isInner": false
+     }
+    ],
+    "isInner": false
+   }
+  ],
+  "isInner": false
+ }
+]
