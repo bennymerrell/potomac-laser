@@ -27,7 +27,7 @@ and `build-state.json` is still `{"processed_zips": []}`.
 | B8 | A section carries the explorer's JS template literals as if they were copy | Fixed `5aad50a` — found by dry run |
 | B9 | The legends strip HTML, so legend-sourced token values ship truncated | Fixed `35e3e36` — found by write phase |
 | B10 | CCIT's FAQ answers are JS-rendered, not markup — `faq-toggle` needs static pairs | **OPEN** — affects run 3 |
-| B11 | Quote sections are unwired forms (CCIT **and** all 5 service pages); §7 cannot deliver them | **OPEN** — target forms identified, approach needs a decision |
+| B11 | Quote sections are unwired forms (CCIT **and** all 5 service pages) | **OPEN** — wiring contract settled in `reference/HUBSPOT-FORMS.md`; build pending |
 | B12 | `why-choose-inset-cta` carried a hardcoded photo URL, untokenised — and PATTERNS.md called it an empty spacer | Fixed `583270f` — tokenised, docs corrected, gate widened |
 | C1 | §7 vs SKILL.md §8 (authoring / appending forbidden) | Fixed `16417be` |
 | C2 | §7 vs TRANSLATE.md §5 ("stop and report") | Fixed `16417be` |
@@ -169,7 +169,14 @@ add-on performs the HubSpot call after a Gravity Forms submission. The fields al
 Since those forms may not be edited, every new section must map onto exactly these fields. #2 already
 covers what the service-page `#quote` wizard collects, file uploads included.
 
-**Two findings that need a decision before any wiring:**
+**Decided 2026-08-06:** the quote section submits **direct to the Forms API**, not through Gravity
+Forms, targeting `[Potomac] Start a Project` (`9dba7d36-e36b-4a10-9411-9dc073dab7a0`) on portal
+143181153, with a **single** file upload. The full contract — property names, the step-2 folding, the
+upload endpoint, UTM/hutk handling — is in `reference/HUBSPOT-FORMS.md`. The sandbox portal the owner
+named, **145800879**, is referenced nowhere on this site (12,969 files plus the whole database swept),
+so nothing here currently points at it.
+
+**Two findings that remain open:**
 
 1. **The existing funnels do not use either form.** All five interactive files
    (`cnc-`, `lm-`, `mhd-`, `rp-`, `3dp-interactive.html`) POST directly to
