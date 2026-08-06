@@ -1,0 +1,310 @@
+# spec.yaml — Rapid Prototyping  (run 20260806-173742, sibling 4)
+# Source design : Potomac Laser.zip :: Rapid Prototyping.html
+# MATCH         : 12 of 12, zero unmatched, no §7 authoring.
+# Token values  : read from the design markup by node-index alignment against
+#                 Micro-Hole Drilling (identical per-section structural signatures,
+#                 identical node counts), whose spec is verified slot-for-slot.
+# CORRECTION    : services-image-cards token order taken from the FRAGMENT's own
+#                 document order (body_3/4 = card 1 desc/link, 5/6 = card 2, …), not
+#                 from the sibling spec, which grouped descriptions then links and so
+#                 renders each card's link slot holding the next card's description.
+#                 Caught at 3.c.vi iteration 1; posts 12240/12241 still carry it.
+# Images        : all 10 byte-identical to the CNC run's — deduped to attachments
+#                 12229-12238, zero uploads.
+
+spec_version: 1
+page:
+  title: Rapid Prototyping Services
+  slug: pl-auto-rapid-prototyping
+  post_type: post_services
+  post_status: draft
+assets:
+  whyus_team:
+    attachment_id: 12234
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-whyus-team.jpg
+  eco_logo_1:
+    attachment_id: 12235
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-eco-logo-1.png
+  eco_logo_2:
+    attachment_id: 12236
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-eco-logo-2.png
+  eco_logo_3:
+    attachment_id: 12237
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-eco-logo-3.png
+  eco_logo_4:
+    attachment_id: 12238
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-eco-logo-4.png
+  svc_1:
+    attachment_id: 12230
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-cnc-micromachining.jpg
+  svc_2:
+    attachment_id: 12232
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-laser-micromachining.jpg
+  svc_3:
+    attachment_id: 12233
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-rapid-prototyping.jpg
+  svc_4:
+    attachment_id: 12231
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-hybrid-cnc-laser.jpg
+  svc_5:
+    attachment_id: 12229
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-bonding-assembly.jpg
+sections:
+- pattern: hero-dark-stat-strip
+  tokens:
+    body_2: <p><a href="#services">EXPLORE SERVICES →</a></p>
+    body_3: <p>Upload STEP, STL, or PDF — our engineers review it for manufacturability.</p>
+    button_1: Upload Drawing / CAD
+    button_2: Request a Quote
+    heading_11: '1982'
+    heading_12: EST.
+    url_1: '#quote'
+    url_2: '#quote'
+    heading_1: RAPID PROTOTYPING SERVICES
+    heading_2: High-Precision<br>Rapid Prototyping<br>in <span style="color:#F5821F">Days</span>.
+    body_1: <p>Rapid prototyping moves you from concept to functional parts in days rather than months. Goodfellow Microfabrication combines <strong>laser micromachining, micro-CNC, micro 3D printing, and bonding</strong> to deliver production-grade prototypes — typically within two weeks, and as fast as 24 hours in select cases depending on material and thickness.</p>
+    heading_3: 24h
+    heading_4: AS FAST AS
+    heading_5: 2µm
+    heading_6: MIN FEATURE
+    heading_7: ±1µm
+    heading_8: LASER TOLERANCE
+    heading_9: '4'
+    heading_10: TECHNOLOGIES
+- pattern: why-choose-inset-cta
+  tokens:
+    heading_1: WHY GOODFELLOW MICROFABRICATION
+    heading_3: Talk to the engineers who will review your design
+    body_3: <p>Upload STEP, STL, or PDF — our engineers review it for manufacturability.<br>No redesign required to start — we'll help optimise your part.</p>
+    button_1: Upload Drawing / CAD
+    button_2: Request a Quote
+    image_1:
+      asset: whyus_team
+    url_1: '#quote'
+    url_2: '#quote'
+    heading_2: Why choose Goodfellow Microfabrication for rapid prototyping
+    body_1: <p>We deliver high-precision rapid prototyping for advanced manufacturing — turning concepts into functional, production-grade parts in days, with multiple fabrication technologies and material flexibility under one roof.</p>
+    body_2: <ul><li><strong>Micron-level precision</strong> — fine features and tight tolerances on functional, production-grade prototypes.</li><li><strong>Fast, reliable turnaround</strong> — typically within two weeks, and as fast as 24 hours in select cases.</li><li><strong>Integrated fabrication</strong> — laser, micro-CNC, micro 3D printing, and bonding &amp; assembly under one roof.</li><li><strong>Broad material choice</strong> — prototype in the same metals, polymers, glass, silicon, and ceramics intended for production.</li><li><strong>A clear path to production</strong> — regulated-industry experience and a smooth transition from prototype to scale-up.</li></ul>
+- pattern: services-image-cards
+  tokens:
+    heading_1: Our Services
+    heading_2: Explore our precision capabilities
+    body_1: <p>Choose the manufacturing route that fits your geometry, material, and production need.</p>
+    body_2: <p><a href="#applications">Explore Applications →</a></p>
+    heading_3: CNC Micromachining
+    body_3: <p>4-axis CNC milling and drilling for fine-feature and engineering plastics where repeatable tolerance control matters.</p>
+    body_4: <p><a href="/services/cnc-micro-machining-services/">Learn more →</a></p>
+    image_1:
+      asset: svc_1
+    heading_4: Laser Micromachining
+    body_5: <p>UV, IR and structured polymer film for nozzles incredibly ultra-fine, perfectly uniform backlit micro-holes.</p>
+    body_6: <p><a href="/services/laser-micromachining/">Learn more →</a></p>
+    image_2:
+      asset: svc_2
+    heading_5: Rapid Prototyping
+    body_7: <p>Fast-turn prototype paths for teams that need DFM feedback, material parts on compressed timelines.</p>
+    body_8: <p><a href="/services/rapid-prototyping/">Learn more →</a></p>
+    image_3:
+      asset: svc_3
+    heading_6: Hybrid CNC + Laser
+    body_9: <p>A medical-grade stainless steel stent part, CNC macro structural feature machined and laser-cut.</p>
+    body_10: <p><a href="/services/hybrid-fabrication/">Learn more →</a></p>
+    image_4:
+      asset: svc_4
+    heading_7: Bonding &amp; Assembly
+    body_11: <p>Precision alignment, bonding, micro-assembled components flawlessly bonded and aligned data.</p>
+    body_12: <p><a href="/services/bonding-assembly/">Learn more →</a></p>
+    image_5:
+      asset: svc_5
+- pattern: interactive-iframe-embed
+  tokens:
+    embed_1: '<iframe id="rp-interactive-frame" src="https://www.potomac-laser.com/wp-content/uploads/novamira-drafts/rp-interactive.html" title="Rapid Prototyping: services and quote request" scrolling="no" style="display:block;border:0;width:100%;min-height:640px" loading="eager"></iframe>'
+- pattern: spec-table-dark
+  tokens:
+    body_1: <p>Engineering guidance — not fixed spec promises.</p>
+    body_10: <p>Material selection supported — customers often work with engineering to optimise for manufacturability.</p>
+    body_11: <p>Work with your own material or select from <strong>170,000+</strong> options.</p><p>Broader material matching and traceability support are available through the wider Goodfellow library.</p>
+    heading_1: Technical Specifications
+    heading_11: Material Support
+    heading_12: Material support available
+    heading_2: Rapid Prototyping Capabilities
+    heading_3: Turnaround
+    body_2: <p><strong>2 weeks</strong> typical · as fast as <strong>24 h</strong> in select cases <span>(material dependent)</span></p>
+    heading_4: Laser features
+    body_3: <p><strong>2 µm</strong> feature sizes · tolerances to ±1 µm</p>
+    heading_5: Technologies
+    body_4: <p><strong>4-in-1</strong> · laser, micro-CNC, micro 3D printing, bonding &amp; assembly</p>
+    heading_6: Metals
+    body_5: <p>Stainless steel, aluminium, titanium, nickel alloys, thin metal foils</p>
+    heading_7: Polymers
+    body_6: <p>PMMA, polycarbonate, polyimide, COC/COP, biocompatible polymers</p>
+    heading_8: Min order quantity
+    body_7: <p><strong>No MOQ</strong> — from early prototype through production transfer</p>
+    heading_9: Team response
+    body_8: <p><strong>24 h</strong> rapid response to new drawings, specifications, and quote requests</p>
+    heading_10: Inspection
+    body_9: <p>Inspection and dimensional verification · accredited materials testing via Goodfellow</p>
+- pattern: process-comparison-cards
+  tokens:
+    heading_1: PROCESS SELECTION
+    heading_5: 'Best when you need:'
+    heading_8: 'Best when you need:'
+    heading_11: 'Best when you need:'
+    body_1: <p>Use this guide to identify the right process — or combine them for the best result.</p>
+    body_12: <p>Upload CAD (STEP, STL, IGES) or a drawing (PDF, DXF, DWG) — our engineers review it for manufacturability.</p><p>No redesign required to start — we'll help optimise your part.</p>
+    body_13: <p>Uploads stay confidential. We can sign your NDA on request before you share files.</p>
+    button_1: Upload Drawing / CAD
+    button_2: Request a Quote
+    url_1: '#quote'
+    url_2: '#quote'
+    heading_2: Laser vs. Micro-CNC vs. Micro 3D Printing
+    body_2: <p>Choose the right prototyping process for your part — based on material, features, and function.</p>
+    heading_3: Laser Micromachining
+    heading_4: Laser Micromachining
+    body_3: <ul><li>Feature sizes down to 2 µm</li><li>Tolerances down to ±1 µm</li><li>Clean edges, minimal heat</li></ul>
+    body_4: <p><strong>Best for:</strong> ultra-fine features</p>
+    body_5: <p><a href="/services/laser-micromachining/">See laser micromachining →</a></p>
+    heading_6: Micro-CNC Machining
+    heading_7: Micro-CNC Machining
+    body_6: <ul><li>Metals &amp; engineering plastics</li><li>Load-bearing parts</li><li>Production-matching finish</li></ul>
+    body_7: <p><strong>Best for:</strong> strength &amp; accuracy</p>
+    body_8: <p><a href="/services/cnc-micro-machining-services/">See micro-CNC →</a></p>
+    heading_9: Micro 3D Printing
+    heading_10: Micro 3D Printing
+    body_9: <ul><li>Complex geometries</li><li>Microfluidic &amp; biomedical parts</li><li>Fixtures, housings, test parts</li></ul>
+    body_10: <p><strong>Best for:</strong> complex geometry</p>
+    body_11: <p><a href="/services/3d-printing/">See 3D printing →</a></p>
+    heading_12: Have a part in mind? Upload Drawing / CAD and we'll recommend the best process.
+- pattern: process-steps-numbered
+  options:
+    highlight_step: 3
+  tokens:
+    heading_1: HOW IT WORKS
+    heading_3: '01'
+    heading_4: PROJECT BRIEF
+    heading_5: Submit Your Brief
+    heading_6: '02'
+    heading_7: MATERIAL
+    heading_8: Select Material
+    heading_9: '03'
+    heading_10: ENGINEERING
+    heading_12: '04'
+    heading_13: FABRICATION
+    heading_14: Manufacture & Validate
+    heading_15: '05'
+    heading_16: DELIVERY
+    heading_17: Deliver or Scale
+    body_1: <p>A clear engineering workflow from first brief through material selection, DFM review, fabrication, validation, and delivery.</p>
+    body_2: <p>Share your drawing, CAD file, application goal, tolerance needs, or early-stage project requirements.</p>
+    body_7: <p>●&nbsp;&nbsp;Supported by the Goodfellow Group's integrated material, fabrication, and testing capabilities.</p>
+    heading_2: 'Our Rapid Prototyping Process: From Concept to Production'
+    heading_11: Engineering Review
+    body_3: <p>Use your own material or source precision metals, polymers, ceramics, and specialist grades through Goodfellow.</p>
+    body_4: <p>Collaborative review to select the most suitable fabrication processes — laser, CNC, or additive.</p>
+    body_5: <p>Rapid manufacture by laser, CNC, or additive methods, with bonding, assembly, and post-processing as needed.</p>
+    body_6: <p>Inspection and dimensional verification, then iterate or transition to production.</p>
+- pattern: group-ecosystem-cards
+  options:
+    you_are_here_unit: 2
+  tokens:
+    heading_1: THE GOODFELLOW GROUP
+    heading_2: The Goodfellow Group
+    body_1: <p>The Goodfellow Group brings together material supply, precision fabrication, and testing capabilities — giving you access to a complete engineering ecosystem.</p>
+    heading_3: Material Supply
+    body_2: <p>Global supply of advanced metals, alloys, ceramics, polymers, and compounds with research-quality flexibility and production-scale support across 170,000+ specialist materials.</p>
+    body_3: <ul><li>170,000+ material grades</li><li>No minimum order</li></ul>
+    body_4: <p><a href="https://goodfellow.com">Explore Materials →</a></p>
+    heading_4: Precision Fabrication
+    heading_5: You are here
+    body_5: <ul><li>CNC micromachining</li><li>Laser micromachining</li><li>Hybrid manufacturing</li><li>Micro-assembly</li></ul>
+    heading_6: Reference &amp; Calibration
+    body_6: <p>Certified reference materials and analytical standards supporting calibration, laboratory QA, and regulatory compliance.</p>
+    body_7: <ul><li>Calibration and QA support</li><li>Traceable standards</li></ul>
+    body_8: <p><a href="https://basref.com">View Reference Materials →</a></p>
+    heading_7: Testing &amp; Validation
+    body_9: <ul><li>Dimensional inspection</li><li>Material certification</li><li>Functional testing</li></ul>
+    body_10: <p><a href="https://suisse-tp.ch">Explore Testing Capabilities →</a></p>
+    button_1: Request a Quote
+    url_1: '#quote'
+    image_1:
+      asset: eco_logo_1
+    image_2:
+      asset: eco_logo_2
+    image_3:
+      asset: eco_logo_3
+    image_4:
+      asset: eco_logo_4
+- pattern: testimonials-avatar-cards
+  tokens:
+    heading_1: CLIENT TESTIMONIALS
+    heading_2: Trusted by engineers worldwide
+    heading_3: ★★★★★
+    heading_4: JM
+    heading_5: James Mitchell
+    heading_6: MedTech Innovations
+    heading_7: ★★★★★
+    heading_8: SR
+    heading_9: Dr. Sarah Rowe
+    heading_10: University of Sheffield
+    heading_11: ★★★★★
+    heading_12: TK
+    heading_13: Thomas Klein
+    heading_14: Photon Dynamics GmbH
+    body_1: <p>"Functional prototypes in our own production material, delivered fast — it saved us weeks of tooling."</p>
+    body_2: <p>"One vendor for laser, CNC, and 3D-printed parts meant no supplier juggling between iterations."</p>
+    body_3: <p>"Micron-level features on early prototypes let us validate the design before committing to production."</p>
+- pattern: quote-form-hubspot
+  tokens:
+    heading_1: Rapid Response Quote
+    heading_2: Ready to move forward?
+    body_1: Upload your drawing or request a quote — our engineering team will review your design and respond within 24 hours.
+    body_2: No redesign required to start — we'll help optimise your part.
+    body_3: ♢ Uploads stay confidential. We can sign your NDA on request before you share files.
+    heading_3: '1'
+    heading_4: Now
+    body_4: You submit your request
+    heading_5: Name, email, description, drawing. No commitment.
+    heading_6: '2'
+    body_5: Within hours
+    heading_7: Engineer reviews your part
+    heading_8: DFM check on geometry, tolerances, material fit.
+    body_6: '3'
+    heading_9: Within 24 hours
+    heading_10: Quote &amp; process path confirmed
+    heading_11: Feasibility, recommended process, next steps.
+    body_8: STEP, STL, IGES, PDF, DXF, DWG, or ZIP up to 25 MB
+    body_9: No commitment · 24h response
+    button_1: Continue →
+    body_7: e.g. Functional PMMA prototype, ±10 µm features, 5 parts, fastest possible turnaround
+- pattern: faq-toggle
+  tokens:
+    heading_1: FAQ
+    heading_2: Common questions
+    body_1: <p>Direct answers to the engineering, materials, and process questions buyers most often ask when evaluating a microfabrication partner.</p>
+    button_1: Ask a Technical Question
+    url_1: /contact/
+    faq_q_1: What is rapid prototyping?
+    faq_a_1: <p>Rapid prototyping lets engineers and product developers move from concept to functional parts in days rather than months. Potomac delivers high-precision rapid prototyping using laser micromachining, micro-CNC, micro 3D printing, and bonding and assembly.</p>
+    faq_q_2: How fast can I get a prototype?
+    faq_a_2: <p>Turnaround is typically within two weeks, and as fast as 24 hours in select cases depending on material type and thickness. This supports fast iteration and functional validation.</p>
+    faq_q_3: What fabrication technologies does Potomac use?
+    faq_a_3: <p>Potomac brings laser micromachining, micro-CNC machining, micro 3D printing, and bonding and assembly together under one roof, so projects move quickly without switching suppliers.</p>
+    faq_q_4: How fine can laser-prototyped features be?
+    faq_a_4: <p>Laser micromachining achieves feature sizes as small as 2 µm and tolerances down to ±1 µm, with minimal heat-affected zones and clean edge quality, including cutting, drilling, ablation, and surface structuring.</p>
+    faq_q_5: What materials can be used for prototypes?
+    faq_a_5: '<p>Prototypes can be made in the same materials intended for production: metals such as stainless steel, aluminium, titanium, nickel alloys, and thin foils; polymers such as PMMA, polycarbonate, polyimide, and COC/COP; and glass, silicon, and technical ceramics.</p>'
+    faq_q_6: Can Potomac 3D print complex or microfluidic parts?
+    faq_a_6: <p>Yes. Micro 3D printing enables fast production of complex geometries that are difficult to machine, including microfluidic structures, diagnostic and biomedical components, and fixtures, housings, and functional test parts.</p>
+    faq_q_7: Does rapid prototyping lower cost and risk?
+    faq_a_7: <p>Yes. By removing the need for hard tooling, molds, or photomasks, rapid prototyping reduces upfront cost, lets teams evaluate designs early and often, and uncovers design, material, or manufacturability issues before production scale-up.</p>
+    faq_q_8: Which industries does Potomac serve?
+    faq_a_8: <p>Potomac's rapid prototyping services are used across aerospace, automotive, biotechnology, medical devices, pharmaceutical manufacturing, semiconductor and microelectronics, and electronics and photonics.</p>
+- pattern: cta-band-dark
+  tokens:
+    heading_1: GET STARTED TODAY
+    heading_2: Ready to prototype<br>at the micron scale?
+    body_1: <p>Share your CAD and requirements. Engineers review every design for manufacturability and respond within one business day.</p>
+    button_1: Request a Quote
+    button_2: Upload CAD
+    url_1: '#quote'
+    url_2: '#quote'
