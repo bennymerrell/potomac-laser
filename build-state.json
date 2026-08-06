@@ -1,3 +1,46 @@
 {
-  "processed_zips": []
+  "processed_zips": [
+    {
+      "zip_hash": "2f5215b42d491dae3eb7653c0d4e87c985723f7054b2916dc1937a8af331e14e",
+      "filename": "Potomac Laser.zip",
+      "branch": "build/potomac-laser",
+      "status": "partial",
+      "note": "Supervised single-page run, not an autonomous coordinator run. Manifest phased to the 5 service pages; only CNC attempted.",
+      "pages": [
+        {
+          "slug": "pl-auto-cnc-micromachining",
+          "post_id": 12239,
+          "post_type": "post_services",
+          "design_page": "CNC Micromachining.html",
+          "preview_url": "https://www.potomac-laser.com/?post_type=post_services&p=12239&preview=true",
+          "build_type": "extend",
+          "status": "built",
+          "sections_built": 10,
+          "sections_deferred": [
+            {
+              "index": 1,
+              "id": "why-us",
+              "status": "deferred-image (B12)"
+            },
+            {
+              "index": 9,
+              "id": "quote",
+              "status": "deferred-form (B11)"
+            }
+          ]
+        }
+      ],
+      "new_patterns": [
+        {
+          "id": "services-image-cards",
+          "source_post_id": 12239,
+          "section_index": 2,
+          "minted_by": "CNC Micromachining.html",
+          "reused_by": [],
+          "verify": "12 computed properties vs design, 0 diffs, 3 iterations",
+          "location": "build/potomac-laser only \u2014 \u00a76 bars a \u00a77 pattern from main without a human merge"
+        }
+      ]
+    }
+  ]
 }
