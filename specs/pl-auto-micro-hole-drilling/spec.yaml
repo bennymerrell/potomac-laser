@@ -1,0 +1,304 @@
+# spec.yaml — Laser Micro-Hole Drilling  (run 20260806-124030, sibling 2)
+# Source design : Potomac Laser.zip :: Micro-Hole Drilling.html
+# MATCH         : 12 of 12, zero unmatched, no §7 authoring.
+# Token values  : 9 patterns from post 12225 (ALIGNED slot-for-slot); spec-table-dark,
+#                 services-image-cards, quote-form-hubspot from the design markup via
+#                 tools/extract_leaves.py.
+# Images        : all deduped to attachments 12229-12238 — zero uploads.
+
+spec_version: 1
+page:
+  title: Laser Micro-Hole Drilling Services
+  slug: pl-auto-micro-hole-drilling
+  post_type: post_services
+  post_status: draft
+assets:
+  whyus_team:
+    attachment_id: 12234
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-whyus-team.jpg
+  eco_logo_1:
+    attachment_id: 12235
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-eco-logo-1.png
+  eco_logo_2:
+    attachment_id: 12236
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-eco-logo-2.png
+  eco_logo_3:
+    attachment_id: 12237
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-eco-logo-3.png
+  eco_logo_4:
+    attachment_id: 12238
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-eco-logo-4.png
+  svc_1:
+    attachment_id: 12230
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-cnc-micromachining.jpg
+  svc_2:
+    attachment_id: 12232
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-laser-micromachining.jpg
+  svc_3:
+    attachment_id: 12233
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-rapid-prototyping.jpg
+  svc_4:
+    attachment_id: 12231
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-hybrid-cnc-laser.jpg
+  svc_5:
+    attachment_id: 12229
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-bonding-assembly.jpg
+sections:
+- pattern: hero-dark-stat-strip
+  tokens:
+    body_1: <p>Laser micro-hole drilling is a non-contact process that produces precise, repeatable micro-scale holes in metals, polymers, glass, silicon, and ceramics &mdash; with diameters from <strong>2 µm to 100 µm</strong>, and down to roughly 1 µm depending on material and geometry. Goodfellow Microfabrication matches UV and IR laser sources with micro-CNC drilling for medical, semiconductor, aerospace, and industrial applications.</p>
+    body_2: <p><a href="#services">EXPLORE SERVICES →</a></p>
+    body_3: <p>Upload STEP, STL, or PDF — our engineers review it for manufacturability.</p>
+    button_1: Upload Drawing / CAD
+    button_2: Request a Quote
+    heading_1: LASER MICRO-HOLE DRILLING SERVICES
+    heading_2: Laser Micro-Hole<br>Drilling from <span style="color:#F5821F">2 µm</span><br>Diameters.
+    heading_3: 2µm
+    heading_4: MIN HOLE DIA
+    heading_5: 100µm
+    heading_6: HOLE RANGE
+    heading_7: Multi-Axis
+    heading_8: DRILLING
+    heading_9: 24h
+    heading_10: RAPID RESPONSE
+    heading_11: '1982'
+    heading_12: EST.
+    url_1: '#quote'
+    url_2: '#quote'
+- pattern: why-choose-inset-cta
+  tokens:
+    body_1: <p>We deliver precision laser micro-hole drilling for micro-scale components &mdash; from single prototypes through to high-volume production, with in-house engineering, multiple drilling technologies, and full quality control.</p>
+    body_2: <ul><li><strong>Holes down to 2 µm</strong> &mdash; ultra-small, repeatable micro-holes across metals, polymers, glass, and ceramics.</li><li><strong>Tight positional control</strong> &mdash; NIST-traceable stages and full inspection for consistent hole size and placement.</li><li><strong>High-speed throughput</strong> &mdash; thousands of holes drilled quickly and repeatably, from prototype to production.</li><li><strong>Multiple technologies in-house</strong> &mdash; UV and IR laser sources plus micro-CNC drilling, matched to your material.</li><li><strong>Engineering support</strong> &mdash; guidance on hole diameter, taper, edge quality, and spacing to improve manufacturability.</li></ul>
+    body_3: <p>Upload STEP, STL, or PDF — our engineers review it for manufacturability.<br>No redesign required to start — we’ll help optimise your part.</p>
+    button_1: Upload Drawing / CAD
+    button_2: Request a Quote
+    heading_1: WHY GOODFELLOW MICROFABRICATION
+    heading_2: Why choose Goodfellow Microfabrication for laser micro-hole drilling
+    heading_3: Talk to the engineers who will review your design
+    image_1:
+      asset: whyus_team
+    url_1: '#quote'
+    url_2: '#quote'
+- pattern: services-image-cards
+  tokens:
+    body_1: <p>Choose the manufacturing route that fits your geometry, material, and production need.</p>
+    body_2: <p><a href="#applications">Expl →</a></p>
+    body_3: <p>4-axis CNC milling and drilling for fine-feature and engineering plastics where repeatable tolerance control matters.</p>
+    body_4: <p>UV, IR and structured polymer film for nozzles incredibly ultra-fine, perfectly uniform backlit micro-holes.</p>
+    body_5: <p>Fast-turn prototype paths for teams that need DFM feedback, material parts on compressed timelines.</p>
+    body_6: <p>A medical-grade stainless steel stent part, CNC macro structural feature machined and laser-cut.</p>
+    body_7: <p>Precision alignment, bonding, micro-assembled components flawlessly bonded and aligned data.</p>
+    body_8: <p><a href="/services/cnc-micro-machining-services/">Learn more →</a></p>
+    body_9: <p><a href="/services/laser-micromachining/">Learn more →</a></p>
+    body_10: <p><a href="/services/rapid-prototyping/">Learn more →</a></p>
+    body_11: <p><a href="/services/hybrid-fabrication/">Learn more →</a></p>
+    body_12: <p><a href="/services/bonding-assembly/">Learn more →</a></p>
+    heading_1: Our Services
+    heading_2: Explore our precision capabilities
+    heading_3: CNC Micromachining
+    heading_4: Laser Micromachining
+    heading_5: Rapid Prototyping
+    heading_6: Hybrid CNC + Laser
+    heading_7: Bonding &amp; Assembly
+    image_1:
+      asset: svc_1
+    image_2:
+      asset: svc_2
+    image_3:
+      asset: svc_3
+    image_4:
+      asset: svc_4
+    image_5:
+      asset: svc_5
+- pattern: interactive-iframe-embed
+  tokens:
+    embed_1: '<iframe id="mhd-interactive-frame" src="https://www.potomac-laser.com/wp-content/uploads/novamira-drafts/mhd-interactive.html" title="Laser Micro-Hole Drilling: services and quote request" scrolling="no" style="display:block;border:0;width:100%;min-height:640px" loading="eager"></iframe>'
+- pattern: spec-table-dark
+  tokens:
+    body_1: <p>Engineering guidance — not fixed spec promises.</p>
+    body_2: <p><strong>2 µm</strong> to <strong>100 µm</strong> · down to ~1 µm <span>(material dependent)</span></p>
+    body_3: <p><strong>Round & tapered</strong> · angled and shaped holes via multi-axis systems</p>
+    body_4: <p><strong>1000s</strong> of holes drilled quickly and repeatably in a single run</p>
+    body_5: <p>Stainless steel, titanium, aluminium, copper, brass, tantalum, nickel, nitinol</p>
+    body_6: <p>Kapton (PI), PC, PEEK, nylon, Mylar, PE, ABS, silicone (PDMS)</p>
+    body_7: <p><strong>No MOQ</strong> — from early prototype through production transfer</p>
+    body_8: <p><strong>24 h</strong> rapid response to new drawings, specifications, and quote requests</p>
+    body_9: <p>Optical metrology, positional verification, first-article review · ISO 13485:2016 processes</p>
+    body_10: <p>Material selection supported — customers often work with engineering to optimise for manufacturability.</p>
+    body_11: <p>Work with your own material or select from <strong>170,000+</strong> options.</p><p>Broader material matching and traceability support are available through the wider Goodfellow library.</p>
+    heading_1: Technical Specifications
+    heading_2: Laser Micro-Hole Drilling Capabilities
+    heading_3: Hole diameter
+    heading_4: Hole geometry
+    heading_5: Throughput
+    heading_6: Metals
+    heading_7: Polymers
+    heading_8: Min order quantity
+    heading_9: Team response
+    heading_10: Inspection
+    heading_11: Material Support
+    heading_12: Material support available
+- pattern: process-comparison-cards
+  tokens:
+    body_1: <p>Use this guide to identify the right process — or combine them for the best result.</p>
+    body_2: <p>Choose the right drilling process for your part — based on material, hole size, and taper.</p>
+    body_3: <ul><li>Transparent and clear polymers</li><li>Very small, clean-edged holes</li><li>Heat-sensitive substrates</li></ul>
+    body_4: <p><strong>Best for:</strong> polymers, films, thin substrates</p>
+    body_5: <p><a href="/services/micro-hole-drilling/">See laser drilling →</a></p>
+    body_6: <ul><li>Metals, ceramics, and silicon</li><li>High-aspect-ratio holes</li><li>Non-contact processing</li></ul>
+    body_7: <p><strong>Hole range:</strong> 2–100 µm</p>
+    body_8: <p><a href="/services/micro-hole-drilling/">See metal drilling →</a></p>
+    body_9: <ul><li>Larger holes or zero taper</li><li>Thicker materials</li><li>Straight-wall precision</li></ul>
+    body_10: <p><strong>Best for:</strong> zero-taper, larger diameters</p>
+    body_11: <p><a href="#quote">See micro-CNC drilling →</a></p>
+    body_12: <p>Upload CAD (STEP, STL, IGES) or a drawing (PDF, DXF, DWG) — our engineers review it for manufacturability.</p><p>No redesign required to start — we’ll help optimise your part.</p>
+    body_13: <p>Uploads stay confidential. We can sign your NDA on request before you share files.</p>
+    button_1: Upload Drawing / CAD
+    button_2: Request a Quote
+    heading_1: PROCESS SELECTION
+    heading_2: UV Laser vs. IR Laser vs. Micro-CNC Drilling
+    heading_3: UV Laser Drilling
+    heading_4: UV Laser Drilling
+    heading_5: 'Best when you need:'
+    heading_6: IR Laser Drilling
+    heading_7: IR Laser Drilling
+    heading_8: 'Best when you need:'
+    heading_9: Micro-CNC Drilling
+    heading_10: Micro-CNC Drilling
+    heading_11: 'Best when you need:'
+    heading_12: Have a part in mind? Upload Drawing / CAD and we’ll recommend the best process.
+    url_1: '#quote'
+    url_2: '#quote'
+- pattern: process-steps-numbered
+  options:
+    highlight_step: 3
+  tokens:
+    body_1: <p>A clear engineering workflow from first brief through material selection, DFM review, fabrication, validation, and delivery.</p>
+    body_2: <p>Share your drawing, CAD file, application goal, tolerance needs, or early-stage project requirements.</p>
+    body_3: <p>Use your own material or source precision metals, polymers, ceramics, and specialist grades through Goodfellow.</p>
+    body_4: <p>Collaborative DFM review to align geometry, material, tolerances, process route, and manufacturability.</p>
+    body_5: <p>Laser or micro-CNC drilling with in-process inspection, positional verification, and optional validation support.</p>
+    body_6: <p>Move from prototype into repeat production with documented outputs, traceability, and scale-up support.</p>
+    body_7: <p>●&nbsp;&nbsp;Supported by the Goodfellow Group’s integrated material, fabrication, and testing capabilities.</p>
+    heading_1: HOW IT WORKS
+    heading_2: 'Our Micro-Hole Drilling Process: From Concept to Finished Part'
+    heading_3: '01'
+    heading_4: PROJECT BRIEF
+    heading_5: Submit Your Brief
+    heading_6: '02'
+    heading_7: MATERIAL
+    heading_8: Select Material
+    heading_9: '03'
+    heading_10: ENGINEERING
+    heading_11: Engineering Review
+    heading_12: '04'
+    heading_13: FABRICATION
+    heading_14: Manufacture & Validate
+    heading_15: '05'
+    heading_16: DELIVERY
+    heading_17: Deliver or Scale
+- pattern: group-ecosystem-cards
+  options:
+    you_are_here_unit: 2
+  tokens:
+    body_1: <p>The Goodfellow Group brings together material supply, precision fabrication, and testing capabilities — giving you access to a complete engineering ecosystem.</p>
+    body_2: <p>Global supply of advanced metals, alloys, ceramics, polymers, and compounds with research-quality flexibility and production-scale support across 170,000+ specialist materials.</p>
+    body_3: <ul><li>170,000+ material grades</li><li>No minimum order</li></ul>
+    body_4: <p><a href="https://goodfellow.com">Explore Materials →</a></p>
+    body_5: <ul><li>CNC micromachining</li><li>Laser micromachining</li><li>Hybrid manufacturing</li><li>Micro-assembly</li></ul>
+    body_6: <p>Certified reference materials and analytical standards supporting calibration, laboratory QA, and regulatory compliance.</p>
+    body_7: <ul><li>Calibration and QA support</li><li>Traceable standards</li></ul>
+    body_8: <p><a href="https://basref.com">View Reference Materials →</a></p>
+    body_9: <ul><li>Dimensional inspection</li><li>Material certification</li><li>Functional testing</li></ul>
+    body_10: <p><a href="https://suisse-tp.ch">Explore Testing Capabilities →</a></p>
+    button_1: Request a Quote
+    heading_1: THE GOODFELLOW GROUP
+    heading_2: The Goodfellow Group
+    heading_3: Material Supply
+    heading_4: Precision Fabrication
+    heading_5: You are here
+    heading_6: Reference & Calibration
+    heading_7: Testing & Validation
+    image_1:
+      asset: eco_logo_1
+    image_2:
+      asset: eco_logo_2
+    image_3:
+      asset: eco_logo_3
+    image_4:
+      asset: eco_logo_4
+    url_1: '#quote'
+- pattern: testimonials-avatar-cards
+  tokens:
+    body_1: <p>“2 µm holes in 10-mil silicon nitride for our probe cards — placement was spot on, batch after batch.”</p>
+    body_2: <p>“CCIT leak-test holes drilled and delivered inside a week. Accurate, repeatable, and fully documented.”</p>
+    body_3: <p>“They drilled 30 µm holes across a full metal sheet with consistent edge quality — exactly what our filter needed.”</p>
+    heading_1: CLIENT TESTIMONIALS
+    heading_2: Trusted by engineers worldwide
+    heading_3: ★★★★★
+    heading_4: JM
+    heading_5: James Mitchell
+    heading_6: MedTech Innovations
+    heading_7: ★★★★★
+    heading_8: SR
+    heading_9: Dr. Sarah Rowe
+    heading_10: University of Sheffield
+    heading_11: ★★★★★
+    heading_12: TK
+    heading_13: Thomas Klein
+    heading_14: Photon Dynamics GmbH
+- pattern: quote-form-hubspot
+  tokens:
+    body_1: Upload your drawing or request a quote — our engineering team will review your design and respond within 24 hours.
+    body_2: No redesign required to start — we'll help optimise your part.
+    body_3: ♢ Uploads stay confidential. We can sign your NDA on request before you share files.
+    body_4: You submit your request
+    body_5: Within hours
+    body_6: '3'
+    body_7: e.g. 30 µm holes in 0.5 mm stainless sheet, 2,000 holes, ±5 µm position, first-article report
+    body_8: STEP, STL, IGES, PDF, DXF, DWG, or ZIP up to 25 MB
+    body_9: No commitment · 24h response
+    button_1: Continue →
+    heading_1: Rapid Response Quote
+    heading_2: Ready to move forward?
+    heading_3: '1'
+    heading_4: Now
+    heading_5: Name, email, description, drawing. No commitment.
+    heading_6: '2'
+    heading_7: Engineer reviews your part
+    heading_8: DFM check on geometry, tolerances, material fit.
+    heading_9: Within 24 hours
+    heading_10: Quote & process path confirmed
+    heading_11: Feasibility, recommended process, next steps.
+- pattern: faq-toggle
+  tokens:
+    body_1: <p>Direct answers to the engineering, materials, and process questions buyers most often ask when evaluating a microfabrication partner.</p>
+    button_1: Ask a Technical Question
+    faq_a_1: <p>Laser micro-hole drilling is a non-contact process used to produce precise, repeatable micro-scale holes. It is a core capability at Goodfellow Microfabrication, which drills holes from 2 µm to 100 µm and, depending on material and geometry, down to roughly 1 micron.</p>
+    faq_a_2: <p>Goodfellow Microfabrication drills micro-holes from 2 µm to 100 µm and continually develops new processes that push feature sizes smaller, down to about 1 micron. The achievable size depends on the material, thickness, hole shape, and taper.</p>
+    faq_a_3: <p>Goodfellow Microfabrication drills polymers including polyimide (Kapton), polycarbonate, PEEK, polyamide (nylon), BoPET (Mylar), polyethylene, ABS, and silicone (PDMS); metals including stainless steel, copper, brass, tantalum, titanium, aluminium, nickel, and nitinol; and other materials such as ceramics, glass, and silicon wafers.</p>
+    faq_a_4: <p>The drilling technology depends on the material and application. Transparent polymers are often processed with UV laser sources, while metals and ceramics typically require IR laser systems. For larger features or zero taper, Goodfellow Microfabrication also offers micro-CNC drilling, keeping multiple technologies in-house.</p>
+    faq_a_5: <p>Key factors include material thickness, hole diameter, edge quality, hole shape, taper, and the required centre-to-centre spacing between holes. Each parameter directly affects process selection and the achievable result.</p>
+    faq_a_6: <p>Yes. Goodfellow Microfabrication's capabilities include multi-axis drilling systems for angled and shaped holes, and high-speed setups designed to drill thousands of holes quickly and repeatably. Supported thicknesses range from ultra-thin films to components several millimetres thick.</p>
+    faq_a_7: <p>Yes. Goodfellow Microfabrication provides laser drilling for container closure integrity (CCIT) leak testing, creating micro holes from 2 µm to 100 µm in glass, plastic, and metals. Its ISO 13485:2016 certified processes support high quality and rapid turnaround, often completing projects within a week.</p>
+    faq_a_8: <p>Yes. For probe cards, Goodfellow Microfabrication drills holes as small as 2 microns with the tight positional tolerances these applications require, in polymers, ceramics, and other engineered substrates. For catheters, high-precision NIST-traceable Aerotech stages meet tight tolerances on hole diameter and position, including thicker materials for fibre optics of 125 microns and greater.</p>
+    faq_q_1: What is laser micro-hole drilling?
+    faq_q_2: How small a hole can Goodfellow Microfabrication drill?
+    faq_q_3: What materials can be laser micro-hole drilled?
+    faq_q_4: Which laser process is used for my material?
+    faq_q_5: What factors affect a micro-hole drilling project?
+    faq_q_6: Can you drill large arrays, or angled and shaped holes?
+    faq_q_7: Do you offer CCIT leak-test hole drilling?
+    faq_q_8: Can you drill probe cards and catheter micro-holes?
+    heading_1: FAQ
+    heading_2: Common questions
+    url_1: /contact/
+- pattern: cta-band-dark
+  tokens:
+    body_1: <p>Share your drawing and hole requirements. Engineers review every design for manufacturability and respond within one business day.</p>
+    button_1: Request a Quote
+    button_2: Upload CAD
+    heading_1: GET STARTED TODAY
+    heading_2: Ready to drill at the micron scale?
+    url_1: '#quote'
+    url_2: '#quote'

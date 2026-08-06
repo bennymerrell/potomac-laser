@@ -108,10 +108,21 @@ correctly on both the create and the update paths; the enumeration manifest reso
 caught real defects the moment fragments changed; two §7 patterns were minted, verified and merged;
 and a live form submission reached HubSpot with no PII in the dataLayer.
 
-**Recommended gate before enabling:** one more supervised run on a sibling service page (Laser
-Micromachining). It reuses both new patterns and needs only copy substitution, so it is the fairest
-test of the pipeline rather than of the author. **If it completes with zero human interventions, that
-is the evidence to enable the schedule.** This run took roughly a dozen.
+**Sibling runs, as the proposed gate:**
+
+| Page | Post | Sections | §7 authoring | Interventions |
+|---|---|---|---|---|
+| CNC Micromachining | 12239 | 12/12 | 2 patterns minted | ~12 |
+| Laser Micromachining | 12240 | 12/12 | none | **1** — regex extraction mis-mapped design copy; fixed as `tools/extract_leaves.py` |
+| Micro-Hole Drilling | 12241 | 12/12 | none | **0** |
+
+The gate proposed was zero interventions on a sibling. Micro-Hole Drilling met it: 12 of 12 matched,
+every write gate passed first time, verification passed on the first attempt, and the copy is genuinely
+page-specific throughout. Two clean data points, the second with no human contribution at all.
+
+**What still blocks the schedule is no longer capability — it is two decisions:** B14 (§3.c.vi needs an
+authenticated browser, and an unattended run has none) and B15 (no gate tests behaviour, which is how
+an inert form passed every check). Neither is an unknown; both need a human to choose.
 
 ---
 

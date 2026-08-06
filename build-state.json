@@ -40,6 +40,18 @@
           "sections_built": 12,
           "sections_deferred": [],
           "note": "First page needing NO \u00a77 authoring \u2014 12/12 matched. All 10 images deduped to the CNC run's attachments; zero new uploads."
+        },
+        {
+          "slug": "pl-auto-micro-hole-drilling",
+          "post_id": 12241,
+          "post_type": "post_services",
+          "design_page": "Micro-Hole Drilling.html",
+          "preview_url": "https://www.potomac-laser.com/?post_type=post_services&p=12241&preview=true",
+          "build_type": "standard",
+          "status": "built",
+          "sections_built": 12,
+          "sections_deferred": [],
+          "note": "ZERO interventions \u2014 first page built end to end with no human fix."
         }
       ],
       "new_patterns": [

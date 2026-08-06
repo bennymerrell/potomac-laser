@@ -163,6 +163,45 @@
       },
       "interventions": 1,
       "intervention_detail": "Extraction from design markup needed a real HTML parser: regex found 15 of 24 nodes in the capabilities section and mapped a description onto heading_3. Fixed once, landed as tools/extract_leaves.py, and it generalises."
+    },
+    {
+      "post_id": 12241,
+      "post_type": "post_services",
+      "post_status": "draft",
+      "slug": "pl-auto-micro-hole-drilling",
+      "title": "Laser Micro-Hole Drilling Services",
+      "design_page": "Micro-Hole Drilling.html",
+      "preview_url": "https://www.potomac-laser.com/?post_type=post_services&p=12241&preview=true",
+      "data_sha256": "3acfcb1935db7aaa33c45c312fa476d7b2b748c134d895db17f15b43532f5bd6",
+      "sections_built": 12,
+      "sections_deferred": [],
+      "attachments_created": [],
+      "attachments_reused": [
+        12229,
+        12230,
+        12231,
+        12232,
+        12233,
+        12234,
+        12235,
+        12236,
+        12237,
+        12238
+      ],
+      "patterns_authored": [],
+      "token_sources": {
+        "from_post_12225": "9 patterns ALIGNED",
+        "from_design_markup": [
+          "spec-table-dark",
+          "services-image-cards",
+          "quote-form-hubspot"
+        ]
+      },
+      "verification": {
+        "status": "PASS first attempt",
+        "checks": "12 sections; MHD-specific headings incl. 'Laser Micro-Hole Drilling from 2 \u00b5m Diameters' and 'UV Laser vs. IR Laser vs. Micro-CNC Drilling'; 5 cards one row at 198px; why-us photo present; quote form wired+bound with the HubSpot form; iframe -> mhd-interactive.html; zero literal tokens"
+      },
+      "interventions": 0
     }
   ],
   "attachments": [
@@ -260,5 +299,5 @@
     "Two defects the browser check caught that no local gate could: the design's action button is type=\"button\" so it never raised a submit event (form was inert), and one extracted CSS rule carried the selector list h1..h6/.hero-title/.section-title/.gf-services-title alongside .gf-rapid-left h2, restyling every heading on the page and breaking the already-verified services section.",
     "why-us restored as the 12th section once B12 tokenised its background photo. Verified in the browser: the photo column serves pl-auto-whyus-team.jpg (attachment 12234, this run's own file) at cover/440px/radius-16, and 12133's hardcoded novamira-drafts path is absent from the stored data. The widened \u00a73 gate \u2014 which now inspects container background images, not just image widgets \u2014 passed on 1 background image with a real int id."
   ],
-  "next_step": "3 sibling service pages remain (Micro-Hole Drilling, Rapid Prototyping, 3D Printing) \u2014 same 12 patterns, prior builds 12225/12224/12223 for 9 sections each. Then the readiness decision."
+  "next_step": "2 siblings remain (Rapid Prototyping 12224, 3D Printing 12223). Readiness now turns on B14 (browser auth for verify) and B15 (no behavioural gate) \u2014 both decisions, not unknowns."
 }
