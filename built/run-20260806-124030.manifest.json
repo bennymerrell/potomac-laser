@@ -86,7 +86,21 @@
           ],
           "file_upload": "single, via existing /wp-json/cnc-quote/v1/upload (Snippet #12)",
           "tracking": "UTM first/last touch in localStorage + hubspotutk cookie + GA4 lead_form_* events, PII sends field_filled only",
-          "test_submission": "NOT YET RUN \u2014 needs a deliverable address; creates a real contact in the live portal"
+          "test_submission": {
+            "status": "PASS",
+            "when": "2026-08-06 ~17:01 local",
+            "address": "ben.merrell@goodfellow.com",
+            "method": "real form in the browser on the draft preview \u2014 not a synthetic endpoint call",
+            "evidence": [
+              "in-situ confirmation replaced the form, which the code only reaches on HTTP 2xx from HubSpot",
+              "dataLayer shows lead_form_submit_success and no lead_form_submit_error",
+              "no HubSpot error logged to console (the one console exception is an unrelated Chrome extension)"
+            ],
+            "fields_sent": 7,
+            "note": "7 not 8 \u2014 potomac_file_submission was empty and is filtered out before POST. All eight names are therefore not yet individually proven; the seven sent were accepted.",
+            "pii_check": "PASS \u2014 name/email/description sent field_filled=1 with no value; only the non-PII org field carried its value",
+            "human_followup": "Verify the contact in HubSpot and archive it (HANDOFF Stage H). Expect: ben.merrell@goodfellow.com, firstname Ben, lastname Merrell, company 'Goodfellow Microfabrication', potomac_project_name 'Rapid Response Quote \u2014 CNC Micromachining Services | Potomac Photonics', potomac_project_description beginning 'TEST SUBMISSION', hs_lead_status NEW."
+          }
         }
       }
     }
