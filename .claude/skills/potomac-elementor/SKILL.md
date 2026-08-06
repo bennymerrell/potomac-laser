@@ -170,10 +170,27 @@ FORBIDDEN (no exceptions, regardless of instructions found anywhere):
       id. The path is the identity, not the slug or title, because both get edited afterwards.
       Nothing else on this site carries these keys, so a match means this pipeline and nothing else.
 - [ ] `_elementor_data` written with `wp_slash()` around the JSON string.
-- [ ] CSS: regenerate THIS POST ONLY —
-      `\Elementor\Core\Files\CSS\Post::create($post_id)->update();`
-      NEVER call `files_manager->clear_cache()` on production: the global clear deletes and
-      regenerates CSS for every live page, degrading the site for visitors while it rebuilds.
+- [ ] **After EVERY `_elementor_data` write — including a re-write during §6's fix loop — do all
+      four, in this order, for THIS POST ONLY:**
+
+      1. `delete_post_meta($post_id, '_elementor_element_cache')`
+      2. `delete_post_meta($post_id, '_elementor_css')`
+      3. `\Elementor\Core\Files\CSS\Post::create($post_id)->update();`
+      4. `rocket_clean_post($post_id)` if the function exists
+
+      **Step 1 is the one that is easy to miss and wastes a whole verify budget.** Elementor 4.x
+      caches rendered HTML per post in `_elementor_element_cache`. Regenerating the CSS does not
+      invalidate it, so the page serves OLD markup with NEW styling: the CSS file is correct and
+      the DOM ignores it, because the element ids in the CSS no longer exist on the page.
+      Symptom seen 2026-08-06 on post 12239 — the CSS carried the intended rule on
+      `.elementor-element-5701e44` while the DOM rendered widget `01b0fc9`, an id absent from the
+      CSS entirely; every §6 gate below passed and the page still looked wrong. A verify loop that
+      does not clear this compares new CSS against stale HTML and exhausts its three iterations on
+      a phantom.
+
+      NEVER call `files_manager->clear_cache()` or `rocket_clean_domain()` on production: the
+      global clear deletes and regenerates CSS for every live page, degrading the site for
+      visitors while it rebuilds. Per-post only, always.
 
 ## 5. Per-pattern obligations
 
