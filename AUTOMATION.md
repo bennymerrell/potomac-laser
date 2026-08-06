@@ -16,27 +16,40 @@ git fetch origin. Read the project-zip branch in read-only fashion — never com
 
 List all *.zip files on origin/project-zip. Compute each file's SHA-256. Compare against processed_zips in build-state.json (on main).
 
-Delta = zips whose hash is not present with status "built", "partial", or "failed". Zips marked "partial" are re-entered ONLY to retry pages whose individual status is "failed" or missing — never rebuild pages already marked "built" or "skipped-exists".
+Delta = zips whose hash is either absent from `processed_zips` entirely, or present with status "partial". A hash recorded "built" or "failed" is never reprocessed. Zips marked "partial" are re-entered ONLY to retry pages whose individual status is "failed" or missing — never rebuild pages already marked "built" or "skipped-exists".
 
 If the delta is empty, exit silently. Do nothing else.
 
 ## 3. FOR EACH new zip (sequentially)
 
-a. UNPACK into a temp dir. Enumerate ALL page-level HTML files — entry documents only. Exclude fragments/partials that are only referenced by other pages, asset folders, and any self-contained interactive app files (see 3.c.iv — those are assets, not pages; identify them by being referenced from an iframe in a page document). List the enumerated pages in the final report so a human can confirm nothing was missed.
+a. UNPACK into a temp dir. Enumerate page-level HTML files — entry documents only.
 
-b. WORKTREE: using the orca CLI, create ONE worktree/branch per zip, named build/&lt;zip-name&gt;, from main. All pages from this zip are built in this worktree.
+**If the zip root contains `pages.txt`, it is the allow-list: one path per line, relative to the zip root, and it is the complete set of pages. Enumerate exactly those and nothing else.** A human curating the zip is cheaper than the automation guessing.
+
+With no `pages.txt`, enumerate `*.html` in the zip ROOT ONLY and exclude, by path and filename:
+
+- any file not in the zip root — `_src/`, `uploads/`, `assets/`, `screenshots/`, `_ds/`, and any other subdirectory. Nested HTML in a design export is source material, working copies, or handoff variants, never a page to build.
+- `*.dc.html` — design-canvas documents (`<x-dc>` wrappers), not pages.
+- `* (standalone).html` and any file whose section structure is byte-identical to another enumerated page — self-contained duplicates of a page already in the list.
+- any file with zero `<section>` elements — empty canvases and partials such as a site footer.
+
+Do NOT use "referenced from an iframe" as the test for interactive app files: an export may embed its interactive markup inline, in which case no iframe exists and the test silently passes everything (see 3.c.iv).
+
+List the enumerated pages in the final report, **and every file excluded with the rule that excluded it**, so a human can confirm nothing was missed and correct the next zip with a `pages.txt`.
+
+b. WORKTREE: using the orca CLI, create ONE worktree/branch per zip, named build/<zip-name>, from main. All pages from this zip are built in this worktree.
 
 c. FOR EACH page in the zip:
 
-i. SLUG: derive from the page filename or &lt;title&gt;, kebab-cased. If a page with this slug already exists in WP (check via Novamira, any post status), record "skipped-exists" for that page, note it in the DRIFT REPORT (§8), and continue to the next page. Do NOT modify the existing page — SKILL.md §1 forbids touching any post this run did not create.
+i. SLUG: derive from the page filename or <title>, kebab-cased. If a page with this slug already exists in WP (check via Novamira, any post status), record "skipped-exists" for that page, note it in the DRIFT REPORT (§8), and continue to the next page. Do NOT modify the existing page — SKILL.md §1 forbids touching any post this run did not create.
 
-ii. MATCH: segment the design page into sections and match each section against the "Recognise when" field of every pattern in reference/[PATTERNS.md](http://PATTERNS.md). Element counts in "Recognise when" are typical, not required, wherever the pattern's Notes mark the count as adjustable (stat pairs, step cards, spec rows, FAQ items) — match on structure, not count. Record the match result per section: a pattern id, or `UNMATCHED`.
+ii. MATCH: segment the design page into sections and match each section against the "Recognise when" field of every pattern in reference/PATTERNS.md. Element counts in "Recognise when" are typical, not required, wherever the pattern's Notes mark the count as adjustable (stat pairs, step cards, spec rows, FAQ items) — match on structure, not count. Record the match result per section: a pattern id, or `UNMATCHED`.
 
 If every section matches, the page is a STANDARD BUILD — continue to iii.
 
 If any section is `UNMATCHED`, the page is an EXTEND BUILD: it is still built, and each unmatched section becomes a candidate new pattern via §7. Do NOT fail the page for being unmatched. A page only fails here if §7 itself cannot produce a verified pattern for it. A page failure never sinks its sibling pages.
 
-iii. TRANSLATE into the standard handoff: - copy the page's source to specs/&lt;slug&gt;/design-export/ (source of truth) - write specs/&lt;slug&gt;/mock.html (the page HTML with assets rewired to relative paths) - write specs/&lt;slug&gt;/spec.yaml as an ordered list of sections. Each section = the pattern id plus a token map filling that fragment's placeholders:
+iii. TRANSLATE into the standard handoff: - copy the page's source to specs/<slug>/design-export/ (source of truth) - write specs/<slug>/mock.html (the page HTML with assets rewired to relative paths) - write specs/<slug>/spec.yaml as an ordered list of sections. Each section = the pattern id plus a token map filling that fragment's placeholders:
 
 ```
           sections:
@@ -58,15 +71,15 @@ iii. TRANSLATE into the standard handoff: - copy the page's source to specs/&lt;
 
 ```
 
-iv. ASSETS: - Images: upload this page's images to the WP media library on potomac-laser.com via Novamira, with the `pl-auto-` filename prefix required by SKILL.md §3; record {token → attachment_id, url} in the spec. Dedupe within the zip — if an identical image was already uploaded for a sibling page in this run, reuse the existing attachment ID. - Interactive apps: if the page uses interactive-iframe-embed, the design export MUST contain the self-contained interactive HTML file (it ships its own CSS/JS — nothing compiles inside the iframe). Upload it to wp-content/uploads/novamira-drafts/ named &lt;slug-prefix&gt;-interactive.html and point the iframe's src at it, with frame id &lt;slug-prefix&gt;-interactive-frame. If the page has an interactive section but the export contains no such file, mark the page "failed: missing-interactive-asset" and move on.
+iv. ASSETS: - Images: upload this page's images to the WP media library on potomac-laser.com via Novamira, with the `pl-auto-` filename prefix required by SKILL.md §3; record {token → attachment_id, url} in the spec. Dedupe within the zip — if an identical image was already uploaded for a sibling page in this run, reuse the existing attachment ID. - Interactive apps: if the page uses interactive-iframe-embed, the design export MUST contain the self-contained interactive HTML file (it ships its own CSS/JS — nothing compiles inside the iframe). Upload it to wp-content/uploads/novamira-drafts/ named <slug-prefix>-interactive.html and point the iframe's src at it, with frame id <slug-prefix>-interactive-frame. If the page has an interactive section but the export contains no such file, mark the page "failed: missing-interactive-asset" and move on.
 
 v. BUILD: follow the potomac-elementor skill build checklist exactly, including image ID re-attachment and per-pattern obligations. Matched sections are assembled from their fragments as usual; `UNMATCHED` sections use the Elementor JSON authored in §7 step 2. Create the page as a DRAFT on potomac-laser.com via Novamira. Regenerate the Elementor CSS for THIS POST ONLY after writing (`\Elementor\Core\Files\CSS\Post::create($post_id)->update();`) — NEVER the global `files_manager->clear_cache()`, which SKILL.md §4 forbids on production.
 
-vi. VERIFY: open the draft preview in the Orca browser, screenshot, compare against specs/&lt;slug&gt;/mock.html. Fix discrepancies and re-check. Max 3 iterations; if still not matching, mark the page "failed: verify" with a note on what differs, and move on.
+vi. VERIFY: open the draft preview in the Orca browser, screenshot, compare against specs/<slug>/mock.html. Fix discrepancies and re-check. Max 3 iterations; if still not matching, mark the page "failed: verify" with a note on what differs, and move on.
 
 d. LINK PASS: after all pages in the zip are built, if pages link to each other in the design export, rewrite those internal links in the built pages to the draft preview URLs. Skip this step if there are no cross-links.
 
-e. COMMIT the worktree branch — specs/, generated built/&lt;slug&gt;.json for every page, any new fragments/legends and PATTERNS.md entries from §7, and the run manifest, all from this zip in one branch — and push it. Do NOT merge to main.
+e. COMMIT the worktree branch — specs/, generated built/<slug>.json for every page, any new fragments/legends and PATTERNS.md entries from §7, and the run manifest, all from this zip in one branch — and push it. Do NOT merge to main.
 
 ## 4. STATE + REPORT
 
@@ -125,7 +138,7 @@ Commit and push build-state.json. Write a worktree comment on the coordinator ru
 - Never modify a published page in place.
 - Never commit to the project-zip branch.
 - Documented patterns are filled via their fragment tokens — never improvised. Authoring NEW Elementor JSON is permitted ONLY inside §7, only for a section that matched nothing, and only when it survives §7's verify gate. Anywhere else, hand-built JSON is still forbidden.
-- Never edit an EXISTING entry in reference/[PATTERNS.md](http://PATTERNS.md), an existing fragment, or an existing legend. §7 may only APPEND new ones. The existing 10 patterns and their provenance from post 12133 are regenerated by a separate human-supervised process, not by this automation.
+- Never edit an EXISTING entry in reference/PATTERNS.md, an existing fragment, or an existing legend. §7 may only APPEND new ones. The existing 10 patterns and their provenance from post 12133 are regenerated by a separate human-supervised process, not by this automation.
 - New patterns from §7 live on the zip's build branch only. They are usable within the run that created them, but they do not enter the shared library on main without a human merge. Never commit a §7 pattern directly to main.
 - Never modify or update an existing WP page, even when its content has drifted from the design. Record drift in §8 and leave the page alone.
 

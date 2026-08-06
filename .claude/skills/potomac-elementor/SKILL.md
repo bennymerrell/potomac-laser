@@ -159,7 +159,17 @@ Nothing else was touched if §1 was honoured — which is why §1 has no excepti
 - Never publish. Never modify content this run did not create.
 - Never touch production Kit, globals, plugins, options, or users.
 - Never global cache clear on production.
-- Never hand-build section JSON outside the fragment library.
-- Never edit fragments, legends, or `PATTERNS.md`.
+- Never hand-build section JSON outside the fragment library.†
+- Never edit fragments, legends, or `PATTERNS.md`.†
 - Never fill a token without checking the fragment's `legend.json`.
 - Never proceed past a failed [gate].
+
+† **One carve-out, for the page-sync automation only.** `AUTOMATION.md` §7 (EXTEND) may author
+Elementor JSON for a design section that matched no pattern, and may APPEND a new fragment, its
+sibling legend, and a new `PATTERNS.md` entry — but only under §7's own gates: dedupe first, build
+and verify against the mock before anything enters the library, tokenise server-side from the
+verified post, `tools/validate_spec.py` clean, and the result committed to the zip's build branch
+rather than to `main`. Everything else on this list still binds inside §7: drafts only, no Kit or
+globals, no touching content the run did not create. Outside §7, both rules are absolute — a
+section that matches no pattern is a **stop and report** (see `TRANSLATE.md` §5), and EXISTING
+fragments, legends, and `PATTERNS.md` entries are never edited by anything.

@@ -108,6 +108,10 @@ If a design section satisfies no `Recognise when`:
    hand-build JSON (SKILL.md §8). A genuinely new section type means extending the fragment
    library first — a separate job with its own extraction and `PATTERNS.md` entry.
 
+   **Exception:** when translate is running inside the page-sync automation, that "separate job"
+   is `AUTOMATION.md` §7 (EXTEND), which does it in-run under its own gates — see the carve-out at
+   the foot of SKILL.md §8. A human-run translate still stops and reports.
+
 Note `spec-table-dark` exists only on post 12133; the clone chain dropped it. Take it from
 the library, never from the page being cloned.
 
