@@ -23,7 +23,7 @@ and `build-state.json` is still `{"processed_zips": []}`.
 | B4 | §7 pattern budget exhausted; arity changes fail the validator | Mitigated `de2d385` — run 1 phased to 5 service pages |
 | B5 | No provenance marker, so identity was inferred from the slug | Fixed `eddf406` |
 | B6 | Export ships design-time scaffolding (Tailwind CDN, React dev, Babel, tweaks panel) | Fixed `2032075` |
-| B7 | The design's why-us team photo has no slot in its matched fragment | **OPEN** — decision, found by dry run |
+| B7 | The design's why-us team photo has no slot in its matched fragment | Fixed `NEXT` — image coverage is now part of the match |
 | B8 | A section carries the explorer's JS template literals as if they were copy | Fixed `5aad50a` — found by dry run |
 | C1 | §7 vs SKILL.md §8 (authoring / appending forbidden) | Fixed `16417be` |
 | C2 | §7 vs TRANSLATE.md §5 ("stop and report") | Fixed `16417be` |
@@ -89,7 +89,7 @@ written to WordPress. What it established:
 |---|---|
 | Strip scaffolding (B6) | 6 removals — Tailwind Play CDN ×1, React dev ×2, Babel ×1, tweaks panel ×1, tweaks-root ×1. Zero off-site dependencies left |
 | Segment | 12 sections |
-| MATCH | **10 matched, 2 `UNMATCHED`** — `#services` "Explore our precision capabilities" and `#quote` "Ready to move forward?", exactly as predicted |
+| MATCH | **9 matched, 3 `UNMATCHED`** — `#services` "Explore our precision capabilities", `#quote` "Ready to move forward?", and `#why-us` (image coverage, B7). The first two were predicted; the third the dry run found |
 | Arity | Every matched section equals its fragment: 5 hero stat pairs, 8 spec rows, 3 comparison cards, 5 steps, 4 ecosystem cards, 3 testimonials, 2 CTA buttons, 8 FAQ items (free repeater) |
 | Assets | 10 inline base64 images, all unique: 4 eco logos → `{image_1..4}`; 5 service photos → belong to the unmatched `#services` grid; 1 team photo → **no slot (B7)** |
 | Media reuse | None available — no attachment matches these filenames, and post 12133's own 4 image widgets carry **no** attachment id (they point at `novamira-drafts/` by URL). The run must create 10 new attachments, and SKILL.md §3's id gate is stricter than the source page |
@@ -97,18 +97,32 @@ written to WordPress. What it established:
 | Identity | No `_pl_auto_page` hit for this page; `pl-auto-cnc-micromachining` is free → the run would correctly build |
 | Template literals | **36 found in section [11] (B8)** |
 
-### B7 — the team photo has nowhere to go (OPEN, needs a decision)
+### B7 — the team photo had nowhere to go (fixed `NEXT`)
 
 `why-choose-inset-cta` has **no image slot** — of the ten fragments only `group-ecosystem-cards`
-does. But the design's `#why-us` ships a 121 KB photo (`alt="Goodfellow Microfabrication team"`).
-Matched as-is, the photo is silently dropped: the validator cannot catch it (there is no token to
-be missing), so the first sign would be §3.c.vi's screenshot comparison failing, burning its 3
-iterations and marking the page `failed: verify`. The fragment's Notes even say the empty first
-column is "a layout spacer, not a missing image" — true of the source page, wrong for this design.
+does — but the design's `#why-us` ships a 121 KB photo (`alt="Goodfellow Microfabrication team"`).
+Matched as-is the photo was silently dropped, and invisibly: no token is missing, so neither
+TRANSLATE nor the validator can see it, and the loss would surface only as a §3.c.vi screenshot
+difference that burns three iterations and fails the page. The fragment's Notes even call that
+empty first column "a layout spacer, not a missing image" — true of post 12133, wrong here.
 
-Three ways out, all a human's call: accept the difference and give §3.c.vi a known-difference
-allowance for it; treat `#why-us` as `UNMATCHED` so §7 mints an image-bearing variant (a third new
-pattern, still inside the cap); or confirm the photo isn't wanted on the built page.
+**Image coverage is now part of matching.** §3.c.ii and TRANSLATE.md §4 count the design section's
+content images against the candidate fragment's `{image_n}` tokens; if the design has more, the
+match is a MISS and the section goes to §7 as a variant. Match-and-drop is forbidden explicitly,
+with the reason, so it does not get re-derived as a shortcut later.
+
+Two supporting rules make it stick:
+
+- **§7.1 may not dedupe it back.** "Reduced strictness" covers copy and count, never dropping
+  content the fragment cannot hold — collapsing `#why-us` back into `why-choose-inset-cta` would
+  silently reintroduce the defect. Sibling pages reuse the *variant*, not the image-less original.
+- **§7.7 names variants as siblings** — `why-choose-inset-cta-image` — and requires its
+  `Recognise when` to state the discriminator (the copy column is paired with a photo), so a future
+  run chooses between the two on structure instead of guessing.
+
+Re-running the match with the rule applied: **9 matched, 3 `UNMATCHED`**, and `group-ecosystem-cards`
+correctly still matches (4 images ≤ 4 slots). Nine of ten fragments lacking an image slot is a
+property of post 12133, not of page design — which is what §7 exists to correct.
 
 ### B8 — client-side templates inside a section (fixed `5aad50a`)
 
@@ -129,9 +143,10 @@ built yet — so all 11 proceed. The five service pages resolve their explorers 
 
 **The manifest is phased, and run 1 is the five service pages** — `pl-auto-cnc-micromachining`,
 `-laser-micromachining`, `-micro-hole-drilling`, `-rapid-prototyping`, `-3d-printing`, all as
-`post_services` drafts, each resolving its explorer from the server. They need **2** new patterns
-between them (a services card grid and a quote block): §7 dedupes, so the first page mints and the
-other four reuse — comfortably inside the cap of 8.
+`post_services` drafts, each resolving its explorer from the server. They need **3** new patterns
+between them — a services card grid, a quote block, and an image-bearing why-us variant (B7): §7
+dedupes, so the first page mints all three and the other four reuse them. That leaves 5 of the cap
+of 8 unused.
 
 The run will also report **18 files as unlisted-not-built**: the 12 genuine non-pages plus the 6 pages
 held back for runs 2 and 3. That is the phasing working as intended, not an error.

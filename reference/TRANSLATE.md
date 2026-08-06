@@ -109,9 +109,16 @@ Quick signal table (the full text in `PATTERNS.md` is authoritative):
 - `process-steps-numbered` leads each card with a two-digit number.
 - `group-ecosystem-cards` is the only three-plus-card pattern with an image per card.
 
+**Image coverage is part of the match.** Count the design section's content images against the
+candidate fragment's `{image_n}` tokens; if the design has more, the fragment cannot carry them
+and this is **not** a match. Only `group-ecosystem-cards` has image slots (4), so any other
+pattern paired with an image-bearing section fails here — send it to §5. Matching anyway drops
+the image silently: no token is missing, so nothing in this file or the validator can see it, and
+the loss shows up only as a rendering difference much later.
+
 Record the match decisions as comments at the top of the emitted `spec.yaml` — design section
-index, chosen pattern, and the signal that decided it. That makes the translate auditable
-when a page later looks wrong.
+index, chosen pattern, the signal that decided it, and the image counts. That makes the translate
+auditable when a page later looks wrong.
 
 ## 5. No match
 

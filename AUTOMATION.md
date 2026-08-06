@@ -88,6 +88,10 @@ Record the design page's path, the resolved post type, and the final slug in the
 
 ii. MATCH: segment the design page into sections and match each section against the "Recognise when" field of every pattern in reference/PATTERNS.md. Element counts in "Recognise when" are typical, not required, wherever the pattern's Notes mark the count as adjustable (stat pairs, step cards, spec rows, FAQ items) — match on structure, not count. Record the match result per section: a pattern id, or `UNMATCHED`.
 
+**A match must account for the section's images.** Count the design section's content images, and count the `{image_n}` tokens in the candidate fragment. If the design has more, the fragment cannot carry them and **the match is a MISS** — record `UNMATCHED` and let §7 mint a variant. Do NOT match-and-drop: a dropped image is invisible to the validator (no token is missing, so nothing fails) and surfaces only as a 3.c.vi screenshot difference, which then burns its three iterations and fails the page. Of the ten documented fragments only `group-ecosystem-cards` has image slots, so any other pattern paired with an image-bearing design section is this case. Log the counts that decided it.
+
+Nine of the ten fragments having no image slot is a property of post 12133, not a law about page design — that is exactly what §7 exists to correct.
+
 If every section matches, the page is a STANDARD BUILD — continue to iii.
 
 If any section is `UNMATCHED`, the page is an EXTEND BUILD: it is still built, and each unmatched section becomes a candidate new pattern via §7. Do NOT fail the page for being unmatched. A page only fails here if §7 itself cannot produce a verified pattern for it. A page failure never sinks its sibling pages.
@@ -216,7 +220,9 @@ Then set a one-line pointer as the worktree comment — `orca worktree set --wor
 
 Triggered per `UNMATCHED` section from 3.c.ii. The library's existing fragments were tokenised **server-side from an already-built Elementor post** (PATTERNS.md §Regenerating) — there is no way to tokenise a design HTML file directly. So the pipeline inverts: author the section, build it, verify it, and only then tokenise the verified result into a fragment.
 
-**1. DEDUPE FIRST.** Compare the section against (a) every documented pattern once more at reduced strictness, and (b) every pattern already minted by §7 earlier in this run. If it matches one, use that — do not mint a near-duplicate. Sibling pages in a zip usually share sections: the first page to hit a given section mints the pattern, the rest reuse it. Log every dedupe hit in the report.
+**1. DEDUPE FIRST.** Compare the section against (a) every documented pattern once more at reduced strictness, and (b) every pattern already minted by §7 earlier in this run. If it matches one, use that — do not mint a near-duplicate.
+
+**Never dedupe a section back into a pattern it failed on image coverage (3.c.ii).** "Reduced strictness" is about copy and count, never about dropping content the fragment cannot hold — collapsing it back would silently reintroduce the exact defect that sent it here. The same applies to a variant minted earlier in this run: reuse it, not the image-less original. Sibling pages in a zip usually share sections: the first page to hit a given section mints the pattern, the rest reuse it. Log every dedupe hit in the report.
 
 **2. AUTHOR the Elementor JSON** for the section, using `reference/snippets/*.json` as the structural reference for how this site builds Elementor v3 legacy data:
 
@@ -234,7 +240,7 @@ Triggered per `UNMATCHED` section from 3.c.ii. The library's existing fragments 
 
 **6. APPEND the PATTERNS.md entry** using the Entry template verbatim, filling every field: `Snippet`, `Source` (new post_id + section index), `Used by`, `Signature`, `Recognise when`, `Structure`, `Tokens`, `Globals`, `Unmapped colours`, `Notes`. **`Recognise when` is the field that makes the pattern reusable** — write it so a future run's 3.c.ii can match a similar section on structure, and mark element counts adjustable where they genuinely are. Append to the `# Patterns` section and add a row to `## Page coverage`. Do not restructure the file or touch existing entries.
 
-**7. ID NAMING:** `<shape>-<qualifier>`, matching the existing vocabulary (`hero-dark-stat-strip`, `cta-band-dark`). Describe the section's structure, not the page that happened to need it — `contact-form-split`, not `contact-page-section-2`.
+**7. ID NAMING:** `<shape>-<qualifier>`, matching the existing vocabulary (`hero-dark-stat-strip`, `cta-band-dark`). Describe the section's structure, not the page that happened to need it — `contact-form-split`, not `contact-page-section-2`. A variant of an existing pattern keeps the shape and adds the distinguishing qualifier, so the pair reads as siblings: an image-bearing `why-choose-inset-cta` becomes `why-choose-inset-cta-image`. Its `Recognise when` must state the discriminator explicitly (here: the copy column is paired with a photo), so a future run picks between the two on structure rather than guessing.
 
 **8. VALIDATE:** run `python3 tools/validate_spec.py --automation` on every spec using a new pattern. A validator failure is a §7 failure: discard the pattern, fail the page, move on.
 
