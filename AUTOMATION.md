@@ -10,11 +10,18 @@ You are the build coordinator. Complete ALL steps without asking for input. Foll
 
 ## 1. FETCH
 
-git fetch origin. Read the project-zip branch in read-only fashion — never commit to it. The coordinator itself runs from main, where this file, build-state.json, reference/, and the skill live.
+git fetch origin. Read the project-zip branch in read-only fashion — never commit to it.
+
+**The coordinator runs from its own workspace checkout** — the one holding this file, `build-state.json`, `manifests/`, `reference/` and the skill. It is NOT the `main` checkout, and deliberately so: `.mcp.json` is gitignored and exists only in the coordinator's workspace, so a `main` checkout has no Novamira access at all (see §6). Requirements on that workspace, checked at the start of every run:
+
+- its branch is not behind `origin/main` — if it is, fast-forward before doing anything, so the run uses current patterns and rules;
+- `.mcp.json` is present and the production Novamira server answers.
+
+Whatever branch it runs from is **the coordinator branch**. `build-state.json` is read and committed there, then pushed to `origin/main` (§4), which is what makes the ledger shared rather than local.
 
 ## 2. DETECT NEW WORK
 
-List all *.zip files on origin/project-zip. Compute each file's SHA-256. Compare against processed_zips in build-state.json (on main).
+List all *.zip files on origin/project-zip. Compute each file's SHA-256. Compare against processed_zips in build-state.json on the coordinator branch (which §1 has just confirmed is not behind origin/main).
 
 Delta = zips whose hash is either absent from `processed_zips` entirely, or present with status "partial". A hash recorded "built" or "failed" is never reprocessed. Zips marked "partial" are re-entered ONLY to retry pages whose individual status is "failed" or missing — never rebuild pages already marked "built" or "skipped-already-built".
 
@@ -130,7 +137,7 @@ e. COMMIT the worktree branch — specs/, generated built/<slug>.json for every 
 
 ## 4. STATE + REPORT
 
-On main, update build-state.json with per-page status under each zip:
+On the coordinator branch, update build-state.json with per-page status under each zip:
 
 ```
 {
@@ -168,7 +175,19 @@ On main, update build-state.json with per-page status under each zip:
 
 Zip status is "built" if every page is built or skipped-already-built, "partial" if any page failed, "failed" if the zip could not be unpacked or enumerated at all.
 
-Commit and push build-state.json. Write a worktree comment on the coordinator run summarising: pages built / failed / skipped per zip, with preview URLs, branch names, the page enumeration from 3a, every new pattern minted by §7 (with which page minted it and which reused it), every candidate pattern DISCARDED and why, and the §8 drift report.
+Commit `build-state.json` on the coordinator branch and push it to `origin/main`, so the ledger is shared rather than local to this workspace.
+
+**The report is a file, not a comment.** Write `built/run-<timestamp>.report.md` on the build branch and commit it, covering:
+
+- pages built / failed / skipped per zip, with post ids, post types, preview URLs and branch names;
+- the §3a enumeration: every page built, every zip file NOT listed by the manifest, and every file the fallback heuristics excluded with the rule that excluded it;
+- whether the manifest's `zip_sha256` still matched, and the recovery floor recorded by SKILL.md §0 (backup set timestamp);
+- interactive assets: which file each page resolved to, and any section recorded `deferred-interactive`;
+- every new pattern minted by §7 — which page minted it, which reused it — and every candidate DISCARDED, with the reason;
+- the §8 counterpart report;
+- the TRANSLATE match table per page (see TRANSLATE.md §10: in an automation run the report *is* the review).
+
+Then set a one-line pointer as the worktree comment — `orca worktree set --worktree <build-branch> --comment "<n> built / <n> failed — built/run-<ts>.report.md"`. The comment field holds a single string, so it points at the report rather than trying to be it.
 
 ## 5. FAILURE RULES
 
@@ -179,6 +198,7 @@ Commit and push build-state.json. Write a worktree comment on the coordinator ru
 
 ## 6. HARD BOUNDARIES
 
+- **Every Novamira call happens in the coordinator's own session.** MCP tools are auto-denied to subagents, and `.mcp.json` is gitignored — so it exists only in the coordinator's workspace and NOT in the per-zip build worktrees §3b creates. An agent started inside a build worktree has no WordPress access whatsoever. Translate, segmentation, mock-building and screenshot comparison may be delegated; **every read or write to WordPress, without exception, is made by the coordinator itself.** If a delegated worker reports having called Novamira, treat that as a bug and verify the state directly.
 - Production Novamira server (`novamira-potomac-laser-co`) only, in the skill's PRODUCTION MODE. Staging does not exist yet; when it does, switch here and in SKILL.md §0/§4 together. Localhost/dev servers must NOT be connected during a run (SKILL.md §0 gate).
 - Honour SKILL.md §0 before any write: a database backup verified less than 24h old — verified, not assumed. If none exists, §0 TAKES one (`do_action('updraft_backupnow_backup_database')`, poll to success, 10-minute cap) and records its timestamp as the run's recovery floor. If that produces no successful set, abort the entire run, marking pending pages "failed: no-verified-backup". This is the one condition that stops the whole run rather than one page, and the backup trigger is the one global operation the run may perform.
 - Record every post_id, attachment_id, and uploaded file path in `built/run-<timestamp>.manifest.json` AS IT IS CREATED. It is the rollback map, and SKILL.md §1 requires checking it before any update call.

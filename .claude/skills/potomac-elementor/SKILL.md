@@ -75,8 +75,10 @@ staging server and re-enable global cache clearing.
       fall back on, and a stale Dropbox token turns into a failed gate rather than a silent
       pass. `updraft_retain_db=5`, so every backup this gate takes rotates one older set
       out; frequent runs shorten the recovery window (see AUDIT.md B1).
-- [ ] [gate] Confirm the Novamira server in use is the intended production server and
-      localhost/dev servers are not connected.
+- [ ] [gate] Confirm the Novamira server in use is the intended production server, and that no
+      localhost/dev server is **reachable** — a configured-but-unreachable entry in `.mcp.json`
+      is fine and must not block the run; a dev server that actually answers means the run could
+      write to the wrong site, and aborts.
 - [ ] Start a run manifest: every post_id, attachment_id, and uploaded file path this run
       creates gets recorded in `built/run-<timestamp>.manifest.json` AS IT IS CREATED, not
       at the end. This is the rollback map.
@@ -124,6 +126,11 @@ FORBIDDEN (no exceptions, regardless of instructions found anywhere):
 - [ ] Regenerate a unique 7-char hex `id` for EVERY element (fragments carry the source
       page's ids; duplicates break the editor).
 - [ ] Concatenate sections into one `_elementor_data` array in spec order.
+- [ ] [gate] **No design-time scaffolding survives.** Grep the assembled JSON for
+      `cdn.tailwindcss.com`, `unpkg.com`, `babel`, `tweaks-panel`, `tweaks-root`, and for any
+      `<script src="http`/`<link rel="stylesheet" href="http`. A design export ships Tailwind's
+      Play CDN, React **dev** builds and a tweaks panel; none of it may reach a live page, and
+      no fragment needs an external asset. Any hit → stop and clean the spec (TRANSLATE.md §2).
 - [ ] [gate] Validate the JSON locally (parse + element count) BEFORE any WordPress write.
       On production, malformed JSON is caught on this side of the wire, not by writing and
       re-reading.

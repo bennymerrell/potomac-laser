@@ -47,6 +47,17 @@ REQUIRED_OPTIONS = {  # pattern -> (option, min, max)
 }
 HTML_TOKENS = ("body_", "faq_a_")
 
+# Design-time scaffolding a Claude Design export ships and a live page must never load:
+# the Tailwind Play CDN, React/ReactDOM dev builds, Babel standalone, the tweaks panel.
+# TRANSLATE.md §2 strips these; this is the mechanical backstop (SKILL.md §2 gates the
+# assembled JSON too). No fragment needs an external asset, so any off-site dependency in a
+# token value is scaffolding that leaked through.
+SCAFFOLDING_RE = re.compile(
+    r"cdn\.tailwindcss\.com|unpkg\.com|@?babel/standalone|tweaks-panel|tweaks-root", re.I)
+EXTERNAL_DEP_RE = re.compile(
+    r"""<script[^>]+src=["'](?:https?:)?//|<link[^>]+rel=["']stylesheet["'][^>]+href=["'](?:https?:)?//""",
+    re.I)
+
 
 class Report:
     def __init__(self):
@@ -179,6 +190,16 @@ def check_section(idx, sec, assets, rep, template):
         if not isinstance(val, str):
             rep.error(tw, f"expected a string, got {type(val).__name__}")
             continue
+        # --- design-time scaffolding must never reach a page ---
+        hit = SCAFFOLDING_RE.search(val)
+        if hit:
+            rep.error(tw, f"design-time scaffolding {hit.group(0)!r} — strip it in TRANSLATE "
+                          f"(§2); a live page must not load the Tailwind Play CDN, React dev "
+                          f"builds, Babel, or the tweaks panel")
+        dep = EXTERNAL_DEP_RE.search(val)
+        if dep:
+            rep.error(tw, "external script/stylesheet dependency — no fragment needs an "
+                          "off-site asset, so this is scaffolding that leaked through")
         # --- check 5: no nested token syntax ---
         nested = TOKEN_RE.findall(val)
         if nested:

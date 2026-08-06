@@ -20,16 +20,17 @@ and `build-state.json` is still `{"processed_zips": []}`.
 | B1 | Backup is weekly; the §0 gate needs < 24 h | Fixed `08c4e58` — §0 now takes its own db backup |
 | B2 | Page enumeration had no working exclusion rule | Fixed `16417be`; manifest committed at `manifests/potomac-laser.txt` |
 | B3 | 7 of 11 pages skipped for the wrong reason; wrong post type | Fixed `eddf406`, `3751dab` |
-| B4 | §7 pattern budget exhausted; arity changes fail the validator | **OPEN** — human decision |
+| B4 | §7 pattern budget exhausted; arity changes fail the validator | **OPEN** — phase run 1 to avoid it |
 | B5 | No provenance marker, so identity was inferred from the slug | Fixed `eddf406` |
+| B6 | Export ships design-time scaffolding (Tailwind CDN, React dev, Babel, tweaks panel) | Fixed `NEXT` |
 | C1 | §7 vs SKILL.md §8 (authoring / appending forbidden) | Fixed `16417be` |
 | C2 | §7 vs TRANSLATE.md §5 ("stop and report") | Fixed `16417be` |
-| C3 | TRANSLATE.md §10's blocking human review vs full autonomy | **OPEN** — follows from scope |
+| C3 | TRANSLATE.md §10's blocking human review vs full autonomy | Fixed `NEXT` |
 | C4 | §2 delta rule excluded every status it defines | Fixed `16417be` |
-| C5 | Arity guidance differs between AUTOMATION.md and TRANSLATE.md | **OPEN** — same decision as B4 |
+| C5 | Arity guidance differs between AUTOMATION.md and TRANSLATE.md | Fixed `NEXT` |
 | C6 | §3.c.iv looked for the interactive asset in the wrong place | Fixed `36c65bb` — resolved from the server |
 | C7 | Broken `PATTERNS.md` links and HTML entities in AUTOMATION.md | Fixed `16417be` |
-| D1–D5 | Deployment gaps (branch, MCP config, agent type, localhost entry, report field) | **OPEN** |
+| D1–D5 | Deployment gaps (branch, MCP config, agent type, localhost entry, report field) | Fixed `NEXT` |
 
 ---
 
@@ -75,41 +76,6 @@ each repeating unit's count in `spec.yaml`, have the assembler add and remove si
 have the validator check coverage against the *resolved* fragment rather than the file on disk. Until
 one of those, counts must stay identical to the fragments.
 
-## Open: C3 and C5 — two doc conflicts that follow from the decisions above
-
-- **C3.** TRANSLATE.md §10 requires human review of the match table before §0; AUTOMATION.md's
-  preamble says "Complete ALL steps without asking for input." If the automation keeps full autonomy,
-  §10 should become "emit the match table into the run report" rather than a gate. Left deliberately
-  until scope is settled.
-- **C5.** AUTOMATION.md §3.c.ii ("counts are typical, not required") and TRANSLATE.md §131–150 ("a
-  mismatch needs a decision"; only `faq-toggle` is free) still disagree. Whichever way B4's arity
-  question goes, both docs should end up saying the same thing.
-
-## Open: D1–D5 — deployment gaps
-
-1. **Branch mismatch.** The automation's workspace is `…/workspaces/potomac-laser/main-2`, on branch
-   `main-2`, while AUTOMATION.md §1 says "the coordinator runs from main" and §2/§4 read and commit
-   `build-state.json` "on main". `main-2` and `origin/main` are currently identical (`08c4e58`), but
-   local `main` is stale at `a994e53`, so a run would read and write the ledger on `main-2`. Either
-   point the automation at a `main` checkout, or reword §1/§2/§4 to name the coordinator branch.
-2. **`.mcp.json` is gitignored and exists only in `main-2`.** Per-zip worktrees created by §3b get no
-   Novamira config, so an agent session started *inside* a build worktree cannot reach WordPress. All
-   MCP calls must stay in the coordinator's own session — true today, but AUTOMATION.md never says so,
-   though SKILL.md's Context does ("Subagents cannot use these tools").
-3. **Agent type is `claude-agent-teams`.** With (2), delegating page builds to team workers means
-   every Novamira call is auto-denied. If teams are intended, AUTOMATION.md needs an explicit rule:
-   translate and verify may be delegated, all MCP writes happen in the lead.
-4. **`novamira-localhost` is still configured** in `.mcp.json` (currently ECONNREFUSED). SKILL.md §0
-   gate 2 says confirm "localhost/dev servers are not connected" — configured-but-unreachable is
-   ambiguous, and a strict reading aborts the run. Remove the entry before enabling, or reword the
-   gate as "no localhost server reachable".
-5. **§4's "worktree comment"** maps to `orca worktree set --comment <text>`, a single metadata string.
-   The §4 report (per-page status, preview URLs, enumeration, exclusions, new patterns, discards,
-   drift) is long for that field; commit `built/run-<ts>.report.md` and put a pointer in the comment.
-
-The schedule is **disabled** (weekdays 09:00 Europe/London, 720-minute missed-run grace), which is the
-correct state today.
-
 ---
 
 ## What a run would do today
@@ -131,6 +97,58 @@ stale `APPS` content (see C6).
 ---
 
 ## Resolved
+
+### B6 — the export ships design-time scaffolding (fixed `NEXT`)
+
+Every service page in the zip loads four things that must never reach a live page:
+`cdn.tailwindcss.com` (Tailwind's Play CDN — on WP, WindPress compiles instead), React and
+ReactDOM **dev** builds from unpkg, `@babel/standalone`, and a `tweaks-panel.jsx` design widget
+with its `tweaks-root` mount. Nothing in the docs said to strip it, so it would have shipped —
+putting third-party dev bundles on production pages.
+
+Three layers now stop it: TRANSLATE.md §2 strips it as an explicit clean step; SKILL.md §2 greps
+the assembled JSON for those hosts and for any external `<script src>` / `rel="stylesheet"` before
+the first WordPress call; and `validate_spec.py` rejects either in a token value. No fragment needs
+an off-site asset, so anything external is scaffolding by definition. Verified: Tailwind CDN, React
+dev, `tweaks-root` and a bare external stylesheet each fail; a clean spec and the template pass.
+
+### C3 — blocking human review vs autonomy (fixed `NEXT`)
+
+TRANSLATE.md §10 required human sign-off before §0 while AUTOMATION.md's preamble forbids asking for
+input. §10 is now split by caller: an automation run puts the match table in the run report and
+continues — the report is the review, and its output is unpublished drafts either way — while a
+human-run translate still stops for sign-off.
+
+### C5 — arity guidance (fixed `NEXT`)
+
+AUTOMATION.md said counts were "typical, not required"; TRANSLATE.md said a mismatch needs a
+decision. TRANSLATE.md §131–150 now states the mechanical truth: the spec must supply exactly the
+fragment's count because the validator compares the token set both ways, `faq-toggle` is the sole
+free repeater, and a genuine mismatch is structural — drop the surplus deliberately and report it,
+or take the section through §7, which is the only path allowed to change a fragment's shape. Never
+juggle tokens to absorb it.
+
+### D1–D5 — deployment gaps (fixed `NEXT`)
+
+- **D1/D2.** The audit's suggestion — point the automation at a `main` checkout — turned out to be
+  wrong: `/Users/admin/orca/potomac-laser` is on `main` but has **no `.mcp.json`** (it is gitignored
+  and exists only in the coordinator's workspace), so a run there would have no Novamira access at
+  all. Worse than the branch mismatch it fixed. Instead §1 now names the concept: the coordinator
+  runs from its own workspace, that workspace must have `.mcp.json` and a branch not behind
+  `origin/main`, and whatever it runs from is **the coordinator branch**. §2 reads and §4 commits
+  `build-state.json` there, then pushes to `origin/main` so the ledger is shared, not local.
+- **D3.** §6 now states it outright: translate, mocks and screenshot comparison may be delegated;
+  **every** WordPress read or write is made by the coordinator itself, because MCP is auto-denied to
+  subagents and build worktrees have no `.mcp.json`. A worker claiming to have called Novamira is a
+  bug — verify state directly.
+- **D4.** SKILL.md §0 gate 2 now tests **reachability**, not configuration: a configured-but-dead
+  `novamira-localhost` entry must not block a run, while a dev server that actually answers aborts
+  it. No edit to anyone's `.mcp.json` required.
+- **D5.** §4's report is now a committed file, `built/run-<timestamp>.report.md`, with an itemised
+  contents list — enumeration, unlisted files, exclusions with rules, manifest hash status, the §0
+  recovery floor, resolved interactive assets and deferrals, minted and discarded patterns, the §8
+  counterparts, and the TRANSLATE match table. The worktree comment becomes a one-line pointer at
+  it, which is all a single metadata string can honestly carry.
 
 ### C6 — the interactive asset was sought in the export, but it lives on the server (fixed `36c65bb`)
 
@@ -308,12 +326,16 @@ Everything below was checked and holds at `08c4e58`.
 
 ## Before the first run
 
-1. **B4** — raise the pattern cap for the first run or curate the zip to fit; decide whether arity
-   becomes a spec feature. Then align C5's wording across both docs.
-3. ~~**B2 residue** — get the allow-list to the coordinator.~~ **Done** — `manifests/potomac-laser.txt`
-   is committed and resolves by zip filename; nothing goes inside the zip.
-4. **D1–D4** — point the automation at a `main` checkout, state the MCP-in-lead-session rule, remove the
-   `novamira-localhost` entry.
-5. **C3** — resolve TRANSLATE.md §10 once scope is settled.
-6. **Dry-run one page** with the schedule still disabled. CCIT is the best candidate: no interactive
-   cluster, no live counterpart at its slug, and it exercises §7 minting end to end.
+1. **B4** — phase run 1 to the five service pages (2 new patterns, inside §7's cap of 8) by
+   commenting out the six non-service entries in `manifests/potomac-laser.txt`. Decide separately
+   whether arity becomes a spec feature.
+2. **Explorer copy** — optionally diff the `APPS` data in the five server-side interactive files
+   against this design before running, or accept run 1 with the report flagging it (C6).
+3. **Optional hygiene** — raise `updraft_retain_db` above 5 if runs will be frequent, and put
+   UpdraftPlus on a daily db+files schedule; §0 guarantees a backup at run time but does not improve
+   the site's baseline (B1).
+4. **Dry-run one page** with the schedule still disabled. CCIT is the best single-page candidate — no
+   interactive cluster, no live counterpart at its slug, and it exercises §7 minting end to end. Or
+   dry-run CNC Micromachining to exercise the interactive-asset resolution instead.
+5. **Then enable the schedule** — and only then. Everything above is reversible; a scheduled
+   autonomous run against production is the first thing that isn't.

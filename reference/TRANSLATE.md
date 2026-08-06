@@ -54,6 +54,14 @@ In preference order:
 - **Unwrap mail-scanner links:** `mimecastprotect.com/...?domain=X` → `https://X`.
 - **Note inline base64 images** and set them aside as assets (§7). Don't carry them into the
   spec; the spec references uploaded media by attachment id.
+- **STRIP DESIGN-TIME SCAFFOLDING.** A Claude Design export carries tooling that must never
+  reach a live page. In this corpus every service page loads all four:
+  `cdn.tailwindcss.com` (the Tailwind Play CDN — on WP, WindPress compiles instead),
+  `unpkg.com/react@…/react.development.js` and `react-dom.development.js` (**dev** builds),
+  `@babel/standalone`, and a `tweaks-panel.jsx` design widget with its `tweaks-root` mount.
+  Remove all of it, plus any other `<script src>`/`<link rel=stylesheet>` pointing off-site.
+  Nothing in the fragment library needs an external asset, so anything left is scaffolding.
+  SKILL.md §2 gates this and `tools/validate_spec.py` rejects it in a token value.
 - Sanity-check a few `µ`/`±`/`→` characters survived before going further.
 
 ## 3. Segment
@@ -134,10 +142,17 @@ Then apply:
 
 ### Fixed arity — where translate most often breaks
 
-Each fragment carries a fixed number of repeating units. If the design has a different
-count, that is a **structural** change, not a token change: flag it, and either drop the
-extra copy deliberately or extend the fragment's containers as a separate step. Never
-silently discard design copy.
+Each fragment carries a fixed number of repeating units, and **the spec must supply exactly
+that many** — `tools/validate_spec.py` compares the token set both ways, so omitting a pair
+ships a literal `{token}` and adding one silently drops the copy. Either way the gate fails.
+
+`faq-toggle` is the sole exception: its `tabs[]` is a real repeater, so the count is free.
+
+Everywhere else a count mismatch is a **structural** difference, not a token difference. Do not
+juggle tokens to absorb it. Flag it, and take one of two routes: drop the surplus copy
+deliberately and say so in the report, or treat the section as a new pattern via
+`AUTOMATION.md` §7, which is the only path that may change a fragment's shape. Never silently
+discard design copy.
 
 | Pattern | Repeating unit | Count in fragment |
 |---|---|---|
@@ -191,14 +206,20 @@ failures that otherwise reach the page: a fragment token with no spec key ships 
 enforces mirrored card titles, initials derived from the adjacent name, and the structural
 options.
 
-## 10. Human review before §0
+## 10. Surface the proposal
 
-TRANSLATE output is a proposal. Before the build runs, surface for review:
+TRANSLATE output is a proposal, and it must always be surfaced — what differs is *to whom*.
+
+- **Automation run** (`AUTOMATION.md`): there is no human in the loop, so the match table goes
+  into the run report and the build continues. The report is the review, after the fact, and
+  the drafts it produces are unpublished until a human says otherwise.
+- **Human run:** stop here and get sign-off before starting §0.
+
+Either way, surface:
 
 - the match table (design section → pattern → deciding signal)
 - any arity mismatches and what was decided
 - any copy that was normalised or dropped
 - the asset list, with ids not yet uploaded marked as such
 
-Only then start SKILL.md §0. TRANSLATE writes nothing to WordPress, so it is always safe to
-re-run.
+Then start SKILL.md §0. TRANSLATE writes nothing to WordPress, so it is always safe to re-run.
