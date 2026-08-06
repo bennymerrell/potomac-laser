@@ -1,305 +1,287 @@
 # Readiness audit — autonomous page-sync automation
 
-Audited 2026-08-06 against `AUTOMATION.md` (a699e3b), `.claude/skills/potomac-elementor/SKILL.md`,
+**Audited** 2026-08-06 against `AUTOMATION.md` at `a699e3b`, `.claude/skills/potomac-elementor/SKILL.md`,
 `reference/*`, `tools/validate_spec.py`, the Orca automation `Potomac - Claude to WP`, the queued
 input `Potomac Laser.zip` on `origin/project-zip`, and the live site via read-only Novamira calls.
 
-**Verdict: NOT READY — do not enable the schedule.** Five blockers found. **B2, B3 and B5 are now
-fixed in-repo**; **B1 and B4 remain open** and both need a human decision, not a code change. B1
-stops the run at its first gate, so it is the one that matters most.
+**Current as of** `3751dab`. Fixes from this audit landed in `16417be`, `eddf406`, `e11ae43`,
+`3751dab`; live-site figures re-read 2026-08-06 11:29 UTC.
+
+**Verdict: NOT READY — keep the schedule disabled.** Five blockers were found; three are fixed in the
+repo. The two that remain are decisions rather than code, and **B1 alone stops every run at the first
+gate**. Nothing has been written to production by this pipeline: zero posts carry `_pl_auto_page`,
+zero `pl-auto-` attachments exist, and `build-state.json` is still `{"processed_zips": []}`.
+
+## Status at a glance
+
+| # | Finding | Status |
+|---|---|---|
+| B1 | Backup is weekly; the §0 gate needs < 24 h | **OPEN** — human decision |
+| B2 | Page enumeration had no working exclusion rule | Fixed `16417be`; allow-list drafted, **not yet in the zip** |
+| B3 | 7 of 11 pages skipped for the wrong reason; wrong post type | Fixed `eddf406`, `3751dab` |
+| B4 | §7 pattern budget exhausted; arity changes fail the validator | **OPEN** — human decision |
+| B5 | No provenance marker, so identity was inferred from the slug | Fixed `eddf406` |
+| C1 | §7 vs SKILL.md §8 (authoring / appending forbidden) | Fixed `16417be` |
+| C2 | §7 vs TRANSLATE.md §5 ("stop and report") | Fixed `16417be` |
+| C3 | TRANSLATE.md §10's blocking human review vs full autonomy | **OPEN** — follows from scope |
+| C4 | §2 delta rule excluded every status it defines | Fixed `16417be` |
+| C5 | Arity guidance differs between AUTOMATION.md and TRANSLATE.md | **OPEN** — same decision as B4 |
+| C6 | §3.c.iv unsatisfiable: the interactive cluster ships inline | **OPEN** — blocks all 5 service pages |
+| C7 | Broken `PATTERNS.md` links and HTML entities in AUTOMATION.md | Fixed `16417be` |
+| D1–D5 | Deployment gaps (branch, MCP config, agent type, localhost entry, report field) | **OPEN** |
 
 ---
 
-## What passed
+## Open: B1 — the §0 backup gate cannot pass, so the run aborts before its first write
+
+SKILL.md §0 requires a backup **verified less than 24 hours old**, and AUTOMATION.md §6 makes this the
+one failure that stops the whole run rather than one page.
+
+UpdraftPlus on production, re-read 2026-08-06 11:29 UTC:
+
+| Fact | Value |
+|---|---|
+| Latest backup set | 2026-08-02 04:00 UTC — **103.5 h old** |
+| Its contents | db, plugins, themes (**no uploads**) |
+| `updraft_interval` (db) | **weekly**, next 2026-08-09 04:00 UTC |
+| File backups | **`none`** |
+| Last set including uploads | 2026-07-09 14:33 UTC |
+
+The gate is therefore satisfiable for a few hours a week at best, and fails outright today. A
+weekday-09:00 schedule would abort nearly every run with `failed: no-verified-backup`. Uploads have
+not been backed up in four weeks, and a run creates media attachments. The agent cannot fix this
+itself: SKILL.md §1 permits no PHP beyond insert / meta / media / CSS and read-only queries, so
+triggering a backup is out of scope by design.
+
+**Fix (human, pick one):**
+
+1. Set UpdraftPlus to **daily**, db *and* files, so the gate can pass on any scheduled run; or
+2. Implement the "backup-status file the human updates" that SKILL.md §0 offers as the alternative —
+   it is named there, but nothing in the repo defines its path, format, or who writes it; or
+3. Relax the gate deliberately (e.g. 7 days, matching the real cadence) and accept that a bad run is
+   undone from the run manifest rather than from a fresh backup.
+
+## Open: B4 — the pattern budget is exhausted by this zip, and arity changes fail the validator
+
+**Budget.** §7.9 caps new patterns at 8 per zip, then fails the remaining pages with
+`pattern-budget-exhausted`. All 10 library patterns are service-page shapes extracted from post 12133,
+so anything that isn't a service page is mostly unmatched:
+
+| Page(s) | Sections | Estimated new patterns |
+|---|---|---|
+| CNC Micromachining, Rapid Prototyping, Laser Micromachining, Micro-Hole Drilling, 3D Printing | 12 each | **2** total — a services card grid (`#services`) and a quote-form block (`#quote`); on 12133 the quote form lived inside the interactive iframe, so no fragment covers it. §7's dedupe means the first page mints and the rest reuse |
+| CCIT | 9 | ~5 — leak-test science explainer, method selector, packaging showcase, validation-documentation block, related-applications strip |
+| sector-medical-potomac | 6 | ~2–3 |
+| About Our Group, Contact, Project Gallery, Services & Applications | 4/4/3/6 | ~4–6 between them |
+
+That is 12–14 candidates against a cap of 8. The cap trips mid-run, and which pages die depends on
+file iteration order.
+
+**Arity.** §3.c.ii says to match "on structure, not count" wherever PATTERNS.md Notes mark a count
+adjustable — and they do, e.g. the hero's "add/remove sibling containers in pairs". But
+`validate_spec.py` checks token coverage **exactly, in both directions**: a 4-pair hero omits
+`heading_11/12` → `ERROR fragment tokens with no spec key`; supplying extras →
+`ERROR spec keys with no fragment slot`. Any count change therefore fails the gate §7.8 requires, and
+a validator failure is defined as a §7 failure — discard the pattern, fail the page.
+
+Fragment arity against what the design actually ships (measured on the CNC page):
+
+| Pattern | Fragment count | CNC design | Verdict |
+|---|---|---|---|
+| `spec-table-dark` | 8 label/value rows | 8 | matches |
+| `process-comparison-cards` | 3 cards | 3 | matches |
+| `process-steps-numbered` | 5 steps | 5 | matches |
+| `hero-dark-stat-strip` | 5 stat pairs, 2 buttons + text link | 2 buttons + 1 text link | matches |
+| `faq-toggle` | repeater, count free | — | no constraint |
+
+So the trap is **latent, not immediately fatal** for the service pages. It bites the moment a design
+ships a different count.
+
+**Fix (human, pick one):** raise or lift the cap for a first real run and accept a long report; or
+curate the zip so it fits (service pages only); or make arity a first-class spec feature — declare
+each repeating unit's count in `spec.yaml`, have the assembler add and remove sibling containers, and
+have the validator check coverage against the *resolved* fragment rather than the file on disk. Until
+one of those, counts must stay identical to the fragments.
+
+## Open: C6 — §3.c.iv is unsatisfiable for this export, and it blocks all five service pages
+
+§3.c.iv requires the export to contain a self-contained interactive HTML file for any page using
+`interactive-iframe-embed`. Here the "Select your application" explorer ships **inline** in each
+service page — the `APPS` JS object that the zip's own `CLAUDE.md` flags as easy to miss — and **the
+export contains zero `<iframe>` elements at all**. Read literally, every service page is
+`failed: missing-interactive-asset`.
+
+Worse, §3.c.iv uploads images *before* checking for the interactive file, so a run would push ~10
+`pl-auto-` attachments per page to the live media library and then abandon the page. They land in the
+manifest, but nothing deletes them.
+
+Two further wrinkles in the same step: the design's images are base64 `data:` URIs embedded in the
+HTML (10 per service page), and extracting them to files before upload is a step the spec never
+describes; and `assets/` also holds file copies of some of them, so a rule is needed for which source
+wins.
+
+**Fix (human decision, then a spec change):** either extract the explorer into
+`<slug-prefix>-interactive.html` during translate — which is authoring, and needs the same treatment
+§7 got — or declare inline-interactive an accepted input and define how it is handled (most likely:
+lift the markup into an `html` widget, accepting that WindPress does not compile inside an iframe and
+so the file must carry its own CSS either way). Also move the interactive check *before* image upload,
+so a doomed page costs nothing.
+
+## Open: C3 and C5 — two doc conflicts that follow from the decisions above
+
+- **C3.** TRANSLATE.md §10 requires human review of the match table before §0; AUTOMATION.md's
+  preamble says "Complete ALL steps without asking for input." If the automation keeps full autonomy,
+  §10 should become "emit the match table into the run report" rather than a gate. Left deliberately
+  until scope is settled.
+- **C5.** AUTOMATION.md §3.c.ii ("counts are typical, not required") and TRANSLATE.md §131–150 ("a
+  mismatch needs a decision"; only `faq-toggle` is free) still disagree. Whichever way B4's arity
+  question goes, both docs should end up saying the same thing.
+
+## Open: D1–D5 — deployment gaps
+
+1. **Branch mismatch.** The automation's workspace is `…/workspaces/potomac-laser/main-2`, on branch
+   `main-2`, while AUTOMATION.md §1 says "the coordinator runs from main" and §2/§4 read and commit
+   `build-state.json` "on main". `main-2` and `origin/main` are currently identical (`3751dab`), but
+   local `main` is stale at `a994e53`, so a run would read and write the ledger on `main-2`. Either
+   point the automation at a `main` checkout, or reword §1/§2/§4 to name the coordinator branch.
+2. **`.mcp.json` is gitignored and exists only in `main-2`.** Per-zip worktrees created by §3b get no
+   Novamira config, so an agent session started *inside* a build worktree cannot reach WordPress. All
+   MCP calls must stay in the coordinator's own session — true today, but AUTOMATION.md never says so,
+   though SKILL.md's Context does ("Subagents cannot use these tools").
+3. **Agent type is `claude-agent-teams`.** With (2), delegating page builds to team workers means
+   every Novamira call is auto-denied. If teams are intended, AUTOMATION.md needs an explicit rule:
+   translate and verify may be delegated, all MCP writes happen in the lead.
+4. **`novamira-localhost` is still configured** in `.mcp.json` (currently ECONNREFUSED). SKILL.md §0
+   gate 2 says confirm "localhost/dev servers are not connected" — configured-but-unreachable is
+   ambiguous, and a strict reading aborts the run. Remove the entry before enabling, or reword the
+   gate as "no localhost server reachable".
+5. **§4's "worktree comment"** maps to `orca worktree set --comment <text>`, a single metadata string.
+   The §4 report (per-page status, preview URLs, enumeration, exclusions, new patterns, discards,
+   drift) is long for that field; commit `built/run-<ts>.report.md` and put a pointer in the comment.
+
+The schedule is **disabled** (weekdays 09:00 Europe/London, 720-minute missed-run grace), which is the
+correct state today.
+
+---
+
+## What a run would do today, if B1 were satisfied
+
+Worth stating plainly, because the fixes changed it. With `pages.txt` in the zip, all 11 pages
+enumerate; the provenance check returns "not built" for every one (correctly — nothing has been built
+yet), so all 11 proceed. Then:
+
+- The **5 service pages** fail at §3.c.iv on the inline explorer (C6), after uploading their images.
+- The **6 remaining pages** are mostly `UNMATCHED` against a service-page library, so §7 mints until
+  the cap of 8 trips (B4) and the rest fail `pattern-budget-exhausted`.
+
+Net expected output: **0–2 built pages, ~50 orphan attachments, and a long report.** B1 is the loudest
+blocker, but C6 and B4 are what stand between a passing gate and a useful run.
+
+---
+
+## Resolved
+
+### B5 — identity was inferred from the slug (fixed `eddf406`)
+
+The check asked "does anything with this slug exist?" when the question is "has this pipeline already
+created this page?". Slug is neither necessary nor sufficient, and nothing on the site could answer the
+real question: no postmeta key matching `%novamira%` / `%pl_auto%`, and zero `pl-auto-` attachments.
+
+It failed both ways. **False positives:** `laser-micromachining`, `3d-printing`, `micro-hole-drilling`,
+`about-our-group`, `contact`, `project-gallery`, `services-applications` and `kapton` all matched live,
+published, *pre-process* pages and skipped — the pipeline never built them, so they should build.
+**False negative:** CNC Micromachining exists four times — 11893 `cnc-micro-machining-services`, 12127
+`cnc-micromachining-services-draft`, **12133** `cnc-micromachining-services-draft-blocks` (the fragment
+library's own provenance page) and 12102 `cnc-new-temp` — and the derived `cnc-micromachining` matches
+none of them, so a fifth copy would be built. It would not even have reached the drift report, which
+only covered pages recorded `skipped-exists`.
+
+Now: SKILL.md §4 stamps `_pl_auto_page` (the design file's path inside the zip — the identity that
+survives a human editing slug or title), `_pl_auto_zip` and `_pl_auto_run`. §3.c.i queries
+`_pl_auto_page` at `post_status`/`post_type=any`: hit → `skipped-already-built`, miss → build. Drafts
+are created at `pl-auto-<slug>` so live pages keep the clean slugs; `validate_spec.py --automation`
+enforces that namespace; §4 re-reads `post_name` after insert to catch WP's silent `-2` suffixing. §8
+became informational — per design page, list live counterparts by slug family (`<slug>`, `-services`,
+`-services-draft*`, `<slug>-*`) and by title, noting which carry `_pl_auto_page`.
+
+### B3 — post type (fixed `eddf406`, `3751dab`)
+
+`page` was the only permitted type, which forced service and application pages into the wrong permalink
+and template. Type now follows what the page *is*: `post_services` for services (`/services/<slug>/`),
+`post_application` for application and sector pages, `page` for everything else. Threaded through
+SKILL.md §1, `ALLOWED_POST_TYPES`, SPEC-FORMAT.md, spec.example.yaml and AUTOMATION.md §3a/§3.c.i/§4;
+§4 gates the chosen type against `elementor_cpt_support` before creating. All three are present in that
+option.
+
+### B2 — enumeration (fixed `16417be`; allow-list drafted `e11ae43`)
+
+§3a identified interactive assets by iframe reference, and the export has no iframes, so every
+standalone, canvas and working copy enumerated as a page — ~8 junk builds out of ~13, including two
+byte-identical CNC copies (2,548,462 b each) and a 206-byte empty canvas. Kebab slugs don't collide
+(`3d-printing-standalone` ≠ `3d-printing`), so nothing downstream caught it.
+
+Now: an optional `pages.txt` in the zip root is the complete allow-list, parsed by trailing token
+(filenames contain spaces, so the post type is read as the last token); a listed path missing from the
+zip fails the zip. Without it: root-only `*.html`, minus `*.dc.html`, `* (standalone).html`, structural
+duplicates, zero-`<section>` files and every subdirectory. Exclusions must be reported with the rule
+that caused them.
+
+**Remaining action:** `reference/pages.example.txt` holds the drafted allow-list for this zip — 11 pages
+of 23 HTML files (5 `post_services`, 4 `page`, 2 `post_application`), with all 12 exclusions and their
+reasons. **It still has to be copied into the zip root as `pages.txt`.** Until then the fallback
+heuristics run, and they are a safety net rather than curation.
+
+### C1, C2, C4, C7 — doc defects (fixed `16417be`)
+
+- **C1/C2.** §7 requires authoring Elementor JSON and appending fragments, legends and `PATTERNS.md`
+  entries, which SKILL.md §8 and TRANSLATE.md §5 both forbade outright. SKILL.md §8 now carries a
+  daggered carve-out naming §7 as the sole exception and restating its gates; TRANSLATE.md §5 has the
+  matching exception and still stops-and-reports for a human run.
+- **C4.** "Delta = zips whose hash is not present with status 'built', 'partial', or 'failed'" excluded
+  every recorded zip, making the partial-retry path and §5's retry rule unreachable. Now: absent from
+  `processed_zips`, or present with status `partial`.
+- **C7.** Two `reference/[PATTERNS.md](http://PATTERNS.md)` links pointed at a nonexistent URL, and
+  `&lt;slug&gt;`-style entities appeared throughout §3 — 16 lines of paste artefacts that an agent reads
+  literally.
+
+---
+
+## Verification baseline
+
+Everything below was checked and holds at `3751dab`.
 
 | Check | Result |
 |---|---|
-| Referenced docs all exist | `PATTERNS.md` (10 entries + Entry template + Regenerating), `SPEC-FORMAT.md`, `TRANSLATE.md`, `spec.example.yaml` ✅ |
-| Fragment library complete | 10 `.json` + 10 sibling `.legend.json` ✅ |
-| Skill sections cited by AUTOMATION.md | SKILL §0 gates, §1 scope, §2 assemble, §3 image, §4 write all exist and say what AUTOMATION.md claims ✅ |
-| Skill is version-controlled | `.claude/skills/potomac-elementor/SKILL.md` is tracked → present in new worktrees ✅ |
-| Validator runs | Python 3.9.6 + PyYAML 6.0.3; `validate_spec.py reference/spec.example.yaml --template` → 174 tokens, 0 errors, "gates passed" ✅ |
-| Validator resolves new patterns | `SNIPPETS` is derived from the script's own location, so §7 fragments written into the build worktree validate correctly ✅ |
-| Elementor build path | v3 legacy containers still correct: `container` ACTIVE, `e_atomic_elements` off, `e_opt_in_v4` off, `e_classes` off (installed Elementor **4.2.1** / Pro **4.1.3** — version string moved, semantics didn't) ✅ |
-| Kit + provenance intact | active kit = 11259; posts 12133 (10 sections) and 12223–12226 (9 each) all present, matching PATTERNS.md ✅ |
+| Referenced docs exist | `PATTERNS.md` (10 entries + Entry template + Regenerating), `SPEC-FORMAT.md`, `TRANSLATE.md`, `spec.example.yaml`, `pages.example.txt` ✅ |
+| Fragment library | 10 `.json` + 10 sibling `.legend.json` ✅ |
+| Skill sections cited by AUTOMATION.md | §0 gates, §1 scope, §2 assemble, §3 image, §4 write all exist and say what is claimed ✅ |
+| Skill is version-controlled | `.claude/skills/potomac-elementor/SKILL.md` tracked → present in new worktrees ✅ |
+| Validator | Python 3.9.6 + PyYAML 6.0.3. `spec.example.yaml --template` → 10 sections, 174 tokens, 0 errors ✅ |
+| Validator, post types | `post_services` and `post_application` pass; `post_landing` rejected, naming the three allowed ✅ |
+| Validator, slug namespace | bare slug rejected under `--automation`, accepted for a hand run ✅ |
+| Validator resolves new patterns | `SNIPPETS` derives from the script's own location, so §7 fragments in a build worktree validate ✅ |
+| Allow-list | all 11 entries parse by the documented rule and resolve inside the zip; the 12 unlisted files are exactly the documented exclusions ✅ |
+| Elementor build path | v3 legacy still correct: `container` ACTIVE, `e_atomic_elements` off, `e_opt_in_v4` off, `e_classes` off (Elementor **4.2.1** / Pro **4.1.3** — the version string moved, the semantics didn't) ✅ |
+| Kit + provenance | active kit 11259; posts 12133 (10 sections) and 12223–12226 (9 each) present, matching PATTERNS.md ✅ |
 | `elementor_cpt_support` | `page`, `post_services`, `post_application` ✅ |
-| Orca primitives exist | `orca worktree create --name … --base-branch …` and `worktree set --comment` (§3b, §4) ✅ |
-| Artifacts are committable | `.gitignore` does not cover `specs/`, `built/`, or `reference/snippets/` ✅ |
-| Backup plugin present | UpdraftPlus active — a verification path exists (see B1 for the schedule) ✅ |
+| Orca primitives | `orca worktree create --name … --base-branch …`, `worktree set --comment` ✅ |
+| Artifacts committable | `.gitignore` covers neither `specs/`, `built/`, nor `reference/snippets/` ✅ |
+| Backup plugin | UpdraftPlus active — a verification path exists; the cadence is B1 ✅ |
+| Production untouched | 0 posts with `_pl_auto_page`, 0 `pl-auto-` attachments, `processed_zips: []` ✅ |
 
 ---
 
-## Blockers
+## Before the first run
 
-### B1 — The §0 backup gate cannot pass. The run aborts before its first write.
-
-SKILL.md §0 requires a backup **verified less than 24 hours old**, and AUTOMATION.md §6 makes this
-the one failure that stops the whole run.
-
-UpdraftPlus on production, read live:
-
-| Latest sets (UTC) | Age at audit | Contents |
-|---|---|---|
-| 2026-08-02 04:00 | **91.9 h** | db, plugins, themes |
-| 2026-07-26 04:00 | 259.9 h | db, plugins, themes |
-| 2026-07-09 14:33 | 657.3 h | db, plugins, themes, **uploads** |
-
-- `updraft_interval` = **weekly**; next run 2026-08-09. File backups: `none`.
-- So the gate is satisfiable for at most a few hours a week, and today it fails outright — a
-  weekday-09:00 schedule would abort ~every run with "failed: no-verified-backup".
-- Uploads have not been backed up since 2026-07-09, and the run creates media attachments.
-- The agent cannot fix this itself: SKILL.md §1 permits no PHP beyond insert/meta/media/CSS and
-  read-only queries, so triggering a backup is out of scope by design.
-
-**Fix (human, pick one):** set UpdraftPlus to daily (db **and** files) so the gate can pass; or
-implement the "backup-status file the human updates" that SKILL.md §0 offers as the alternative —
-it is named there but nothing in the repo defines its path, format, or who writes it.
-
-### B2 — Page enumeration has no working exclusion rule for this zip. ~8 of ~13 built pages would be junk or duplicates.
-
-§3a excludes interactive app files by "being referenced from an iframe in a page document".
-**The export contains zero `<iframe>` elements** (grep across all 23 HTML files). The rule cannot
-fire, so every standalone/partial/canvas file is enumerated as a page:
-
-| File | Sections | What it actually is |
-|---|---|---|
-| `CNC Micromachining.html`, `Laser Micromachining.html`, `Micro-Hole Drilling.html`, `Rapid Prototyping.html`, `3D Printing.html` | 12 each | the real service pages |
-| `3D Printing (standalone).html` | 12 | duplicate of the above |
-| `uploads/CNC Micromachining (standalone).html`, `uploads/cnc-standalone-upload.html` | 12 | duplicates — **byte-identical to each other** (2,548,462 b) |
-| `uploads/cnc-unpacked.html` | 12 | working copy |
-| `uploads/Project Gallery (standalone).html` | 3 | duplicate |
-| `design_handoff_about_page/About Our Group -no hero-.html` | 3 | variant |
-| `Site Footer.dc.html` | 0 | a footer partial |
-| `Canvas-4.dc.html` | 0 | **empty** `<x-dc>` canvas, 206 bytes |
-| `Blog Index.dc.html`, `Blog Article.dc.html`, `Kapton.dc.html` | 5/2/2 | design canvases, not pages |
-| `_src/original.html` | 0 | source artefact |
-| `uploads/sector-medical-potomac.html` | 6 | sector page |
-
-Kebab-cased slugs don't collide (`3d-printing-standalone` ≠ `3d-printing`), so the §3.c.i
-skip-if-exists check gives no protection against the duplicates.
-
-**Fix — APPLIED 2026-08-06.** §3a now enumerates from an optional `pages.txt` allow-list in the zip
-root, falling back to root-only `*.html` with explicit exclusions (`*.dc.html`,
-`* (standalone).html`, structural duplicates, zero-`<section>` files, everything outside the root),
-and the report must list every exclusion with the rule that caused it. The iframe test is
-explicitly retired. **Still open:** the fallback heuristics are a safety net, not a substitute for a
-curated `pages.txt` — this zip should get one before any real run.
-
-### B3 — 7 of 11 real pages resolve to `skipped-exists`, all for the wrong reason. FIXED 2026-08-06.
-
-**Corrected 2026-08-06 after clarification from the project owner:** the question §3.c.i needs to
-answer is *"has this pipeline already created this page?"* — not *"does anything with this slug
-exist?"*. Every live page and every pre-process duplicate on the site is irrelevant to that
-decision: those pages were made before the process existed, and the automation is meant to build a
-fresh draft alongside them, not stand down because they are there. So the table below is not a
-safety feature working as intended — it is 7 pages skipped for a reason that has no bearing on the
-question. See **B5** for the mechanism and the fix; this entry records the blast radius.
-
-Slug checks run live against production:
-
-| Design page | Derived slug | Live WP | Outcome |
-|---|---|---|---|
-| Laser Micromachining | `laser-micromachining` | 1421 `post_services` publish | skipped |
-| Micro-Hole Drilling | `micro-hole-drilling` | 2692 `post_services` publish | skipped |
-| 3D Printing | `3d-printing` | 4958 `post_services` publish | skipped |
-| About Our Group | `about-our-group` | 12178 `page` publish | skipped |
-| Contact | `contact` | 15 `page` publish | skipped |
-| Project Gallery | `project-gallery` | 12183 `page` publish | skipped |
-| Services & Applications | `services-applications` | 9970 `page` publish | skipped |
-| Kapton | `kapton` | 4690 `post_application` draft | skipped |
-| CNC Micromachining | `cnc-micromachining` | — | build |
-| Rapid Prototyping | `rapid-prototyping` | — | build |
-| CCIT | `ccit` | — | build |
-
-So the run's output is 3 real new pages, ~8 junk pages (B2), and 8 pages skipped that should have
-been built. Once B5 is fixed, all 11 build.
-
-Two secondary defects surface here:
-
-- **Post-type mismatch — FIXED 2026-08-06.** The five service pages belong to `post_services`
-  (that's what their live equivalents are, and it's in `elementor_cpt_support`), but SKILL.md §1
-  permitted `post_type=page` only and the validator hard-errored on anything else. `post_services`
-  is now allowed end to end: SKILL.md §1, §4's pre-create `elementor_cpt_support` gate,
-  `ALLOWED_POST_TYPES` in the validator, SPEC-FORMAT.md, and §3.c.i's rule that type follows what
-  the page IS: `post_services` for services (`/services/<slug>/`), `post_application` for
-  application and sector pages, `page` for everything else. No other type is permitted, and §4
-  gates the chosen type against `elementor_cpt_support` before creating.
-- **§3.c.i's scoping ambiguity — MOOT as of the B5 fix.** The check no longer looks at slugs at
-  all, so there is nothing left to scope. WP's silent slug suffixing is now caught two ways: the
-  reserved `pl-auto-` namespace means nothing should collide, and SKILL.md §4 re-reads `post_name`
-  after insert and fails if it differs from the spec.
-
-### B4 — §7's pattern budget is exhausted by this zip, and arity adjustment fails the validator.
-
-**Budget.** §7.9 caps new patterns at 8 per zip, then fails all remaining pages with
-"pattern-budget-exhausted". Sectioning the pages that would actually build:
-
-- CNC/Rapid Prototyping (12 sections): 10 map to the library; **2 are new** — `#services`
-  "Explore our precision capabilities" and `#quote` "Ready to move forward?" (on post 12133 the
-  quote form lived inside the interactive iframe, so no fragment covers it).
-- CCIT (9 sections): ~5 new — leak-test science explainer, method selector, packaging showcase,
-  validation-documentation block, related-applications strip.
-- `sector-medical-potomac` (6): ~2–3 new.
-- Blog Index / Blog Article canvases: ~3–4 new.
-
-That is 12–14 candidates against a cap of 8 — the cap trips mid-run, and which pages die depends on
-file iteration order.
-
-**Arity.** §3.c.ii says to match "on structure, not count" where PATTERNS.md Notes mark a count
-adjustable (they do, e.g. hero stat pairs). But `validate_spec.py` checks token coverage **exactly,
-both directions** (`:140-145`): a 4-pair hero omits `heading_11/12` → `ERROR fragment tokens with no
-spec key`; supplying extras → `ERROR spec keys with no fragment slot`. Any count change fails the
-gate it must pass, and §7.8 turns a validator failure into a discarded pattern plus a failed page.
-Verified good news on the real input: the CNC page's capability table has exactly 8 rows, comparison
-3 cards, process 5 steps, hero 2 buttons + 1 text link — all matching fragment arity. The trap is
-latent, not immediately fatal.
-
-### B5 — Nothing on the site records that a page was built by this pipeline, so §3.c.i infers it from the slug and gets it wrong in both directions. FIXED 2026-08-06.
-
-The check in §3.c.i is meant to answer one question: **has this pipeline already created this
-page?** A slug lookup cannot answer it, because the slug is neither necessary nor sufficient.
-
-Verified on production — there is no provenance marker of any kind to check against:
-
-- Zero postmeta keys matching `%novamira%`, `%pl_auto%`, `%pl-auto%`, or `%_auto_source%` anywhere
-  in the database.
-- Zero attachments with the `pl-auto-` prefix, so even SKILL.md §3's media convention has never run.
-- Meta on the pipeline-adjacent pages (12133, 12226) is indistinguishable from any hand-built
-  Elementor page: `_elementor_*`, `_wp_page_template`, `_edit_lock`. Nothing says who made it.
-
-The slug proxy then fails both ways:
-
-- **False positive (7 pages).** `laser-micromachining`, `3d-printing`, `micro-hole-drilling`,
-  `about-our-group`, `contact`, `project-gallery`, `services-applications` all hit *live, published,
-  pre-process* pages and skip. The pipeline never built them; they should build.
-- **False negative (CNC).** CNC Micromachining exists four times — 11893
-  `cnc-micro-machining-services`, 12127 `cnc-micromachining-services-draft`, **12133**
-  `cnc-micromachining-services-draft-blocks` (the fragment library's own provenance page, 10
-  sections), 12102 `cnc-new-temp` — and the derived slug `cnc-micromachining` matches none of them.
-  The page builds as a fifth artifact. It also never reaches the §8 drift report, because drift only
-  covers pages recorded `skipped-exists`, so an exact-slug miss is invisible to the run.
-- **Silent collision.** Where a slug does collide and the check is scoped by post type, WordPress
-  appends a suffix (`laser-micromachining-2`) without complaint, so the page the run reports is not
-  at the slug the spec asked for.
-
-#### The rule, as implemented 2026-08-06
-
-**Identity is provenance, not slug.**
-
-1. **Stamp on create.** In SKILL.md §4, alongside the `_elementor_*` meta, write:
-   `_pl_auto_page` = the design page's path inside the zip (`CNC Micromachining.html`) — the stable
-   identity, since slugs and titles get edited afterwards; `_pl_auto_zip` = zip SHA-256;
-   `_pl_auto_run` = run id. `update_post_meta` on a manifest-listed post is already permitted by
-   §1, so this needs no widening of scope.
-2. **Check by meta.** §3.c.i becomes a `meta_key=_pl_auto_page` query at `post_status=any`,
-   `post_type=any`. Hit → this pipeline built it: record `skipped-already-built` and move on (or, if
-   the zip is `partial` and that page's status is `failed`, re-enter it). Miss → build, regardless
-   of what else lives at that slug. Retire the `skipped-exists` status.
-3. **Ledger primary, meta as backstop.** `build-state.json` `pages[].post_id` remains the record of
-   record, but it lives on a build branch that may never merge — so when WP meta shows a page this
-   pipeline built and the ledger doesn't, trust WP and reconcile the ledger.
-4. **Reserve a slug namespace.** Create drafts at `pl-auto-<slug>`, mirroring the `pl-auto-` media
-   prefix. Live pages keep the clean slugs, the automation's drafts never collide (so no silent
-   `-2` suffixing), and they are obvious in the admin list. A human renames at go-live.
-5. **Repoint the drift report.** §8 becomes read-only "possible counterparts": for each design page,
-   list live posts whose slug is in the same family (`<slug>`, `<slug>-services`,
-   `<slug>-services-draft*`, `<slug>-*`) or whose title matches, with post_id, type, status, section
-   count, last-modified, and whether the post carries `_pl_auto_page`. Informational for a human,
-   never a skip trigger — which is the only way 12133 would have shown up in this run's report.
-
-Where each piece landed: AUTOMATION.md §3.c.i (identity/post type/slug), §3a `pages.txt` optional
-per-page post type, §4 ledger fields `design_page` + `post_type` and the `skipped-already-built`
-status, §6 boundaries, §7.8 `--automation`, §8 drift report; SKILL.md §1 (allowed types) and §4
-(pre-create CPT gate, post-insert slug check, provenance stamp); `validate_spec.py`
-(`ALLOWED_POST_TYPES`, `--automation` slug-namespace enforcement); SPEC-FORMAT.md and
-spec.example.yaml.
-
-Verified after the change: `post_services` + `pl-auto-` slug passes under `--automation`;
-`post_application` is rejected; a bare slug is rejected under `--automation` but still passes for a
-hand-run spec; `spec.example.yaml --template` unchanged at 174 tokens / 0 errors.
-
----
-
-## Contradictions to resolve in the docs
-
-1. **§7 vs SKILL.md §8 — FIXED 2026-08-06.** AUTOMATION.md §7 requires authoring Elementor JSON and
-   appending fragments, legends and `PATTERNS.md` entries; SKILL.md §8 forbade both outright, with
-   no carve-out, while AUTOMATION.md §9 tells the agent to follow the skill "for all Elementor
-   work". SKILL.md §8 now carries a daggered carve-out naming §7 as the sole exception, restating
-   §7's gates (dedupe → build → verify → tokenise → validate → build branch only) and confirming
-   every other prohibition still binds inside §7.
-2. **§7 vs TRANSLATE.md §5 — FIXED 2026-08-06.** TRANSLATE.md §5.3's "stop and report" now carries
-   an exception pointing at §7 for automation runs, and reaffirms stop-and-report for human-run
-   translate.
-3. **Autonomy vs TRANSLATE.md §10 — STILL OPEN.** §10 requires human review of the match table
-   before §0; AUTOMATION.md's preamble says "Complete ALL steps without asking for input." Left
-   deliberately: which one wins depends on the B3 decision about what this pipeline is for. If the
-   automation keeps full autonomy, §10 should be rewritten as "emit the match table into the run
-   report" rather than a blocking review.
-4. **§2 delta logic was self-cancelling — FIXED 2026-08-06.** "Delta = zips whose hash is not
-   present with status 'built', 'partial', or 'failed'" excluded *every* recorded zip, since those
-   are the only three statuses §4 defines, making the partial-retry path and §5's "'partial' zips:
-   retry failed pages only" both unreachable. Delta now reads: absent from `processed_zips`, or
-   present with status "partial".
-5. **Arity guidance** differs between AUTOMATION.md §3.c.ii ("counts are typical, not required") and
-   TRANSLATE.md §131-150 ("a mismatch needs a decision"; only `faq-toggle` is free). See B4.
-6. **§3.c.iv is unsatisfiable as written** for this export: it requires the self-contained
-   interactive HTML file, but the "Select your application" explorer ships **inline** in each
-   service page (the `APPS` JS object the zip's own `CLAUDE.md` calls out as easy to miss). Read
-   literally, every service page is "failed: missing-interactive-asset". Someone must either extract
-   the explorer into `<slug>-interactive.html` during translate — which is authoring, not
-   assembling — or state that inline-interactive is an accepted input and how it's handled.
-7. **Markdown corruption in AUTOMATION.md — FIXED 2026-08-06.** Two occurrences of
-   `reference/[PATTERNS.md](http://PATTERNS.md)` (§3.c.ii and §6) pointed an agent at a nonexistent
-   URL, and `&lt;zip-name&gt;` / `&lt;slug&gt;` / `&lt;slug-prefix&gt;` HTML entities appeared in
-   §3a/b/iii/iv/vi and §3e — 16 lines changed in total. Paste artefacts, but they were instructions
-   an agent reads literally.
-
----
-
-## Deployment gaps
-
-- **Branch mismatch.** The automation's workspace is
-  `…/workspaces/potomac-laser/main-2` (currently on branch `main-2`, **2 commits ahead of
-  `origin/main`** and unpushed), while AUTOMATION.md §1 says "The coordinator itself runs from main"
-  and §2/§4 read and commit `build-state.json` "on main". As configured it would read and write the
-  ledger on `main-2`.
-- **`.mcp.json` is gitignored and exists only in `main-2`.** Per-zip worktrees created by §3b
-  therefore have no Novamira config: any agent session started *inside* a build worktree cannot
-  reach WordPress. All WP calls must stay in the coordinator's own session — which AUTOMATION.md
-  never states, though SKILL.md's Context does ("Subagents cannot use these tools").
-- **Agent type is `claude-agent-teams`.** Combined with the line above, delegating page builds to
-  team workers means every Novamira call is auto-denied. If teams are intended, AUTOMATION.md needs
-  an explicit rule that translate/verify may be delegated but all MCP writes happen in the lead.
-- **`novamira-localhost` is still configured** in `.mcp.json` (currently ECONNREFUSED). SKILL.md §0
-  gate 2 says confirm "localhost/dev servers are not connected" — configured-but-unreachable is
-  ambiguous, and a strict reading aborts the run. Remove the entry before enabling, or reword the
-  gate as "no localhost server reachable".
-- **§4's "worktree comment"** maps to `orca worktree set --comment <text>` — a single metadata
-  string. The §4 report (per-page status, preview URLs, enumeration, new patterns, discards, drift)
-  is long for that field; consider committing `built/run-<ts>.report.md` and putting a pointer in
-  the comment.
-- The schedule is **disabled** (weekdays 09:00 Europe/London, 720-min missed-run grace). Nothing
-  fires until someone enables it — which is the correct state today.
-
----
-
-## Recommended order of fixes
-
-1. UpdraftPlus → daily db+files, or define the backup-status file (B1). Nothing else matters until
-   the gate can pass.
-2. ~~Implement B5 — the `_pl_auto_page` stamp, the meta-based check, the `pl-auto-` slug namespace,
-   and the repointed drift report; settle the post-type question (B3).~~ **Done** — services build
-   as `post_services`, applications and sector pages as `post_application`, everything else as
-   `page`; all three verified present in `elementor_cpt_support`.
-3. ~~Replace the iframe-based enumeration rule with an allow-list or explicit exclusions (B2).~~
-   **Done** — add a curated `pages.txt` to this zip before the first real run.
-4. ~~Reconcile §7 against SKILL.md §8 and TRANSLATE.md §5; fix the §2 delta logic; fix the
-   `[PATTERNS.md](http://PATTERNS.md)` links and HTML entities.~~ **Done.** TRANSLATE.md §10's
-   blocking human review is still unreconciled — see contradiction 3, which turns on the B3
-   decision.
-5. Either raise/remove the 8-pattern cap for a first real run or curate the zip so it fits, and
-   decide how arity changes pass the validator (B4).
-6. Point the automation at `main`, remove `novamira-localhost`, and state the MCP-in-lead-session
-   rule in AUTOMATION.md.
-7. Then dry-run one page (CCIT) with the schedule still disabled, before enabling it.
+1. **B1** — UpdraftPlus to daily (db + files), or define the backup-status file, or relax the gate.
+   Nothing else matters until the gate can pass.
+2. **C6** — decide how the inline interactive explorer is handled, and move the check ahead of image
+   upload so a failing page costs no orphan attachments.
+3. **B4** — raise the pattern cap for the first run or curate the zip to fit; decide whether arity
+   becomes a spec feature. Then align C5's wording across both docs.
+4. **B2 residue** — copy `reference/pages.example.txt` into the zip root as `pages.txt`.
+5. **D1–D4** — point the automation at a `main` checkout, state the MCP-in-lead-session rule, remove the
+   `novamira-localhost` entry.
+6. **C3** — resolve TRANSLATE.md §10 once scope is settled.
+7. **Dry-run one page** with the schedule still disabled. CCIT is the best candidate: no interactive
+   cluster, no live counterpart at its slug, and it exercises §7 minting end to end.
