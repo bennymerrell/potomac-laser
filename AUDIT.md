@@ -26,6 +26,8 @@ and `build-state.json` is still `{"processed_zips": []}`.
 | B7 | The design's why-us team photo has no slot in its matched fragment | Fixed `15ff654` — image coverage is now part of the match |
 | B8 | A section carries the explorer's JS template literals as if they were copy | Fixed `5aad50a` — found by dry run |
 | B9 | The legends strip HTML, so legend-sourced token values ship truncated | Fixed `35e3e36` — found by write phase |
+| B10 | CCIT's FAQ answers are JS-rendered, not markup — `faq-toggle` needs static pairs | **OPEN** — affects run 3 |
+| B11 | CCIT's quote section is a 7-field form with no HubSpot wiring; §7 cannot deliver it | **OPEN** — needs a human pass |
 | C1 | §7 vs SKILL.md §8 (authoring / appending forbidden) | Fixed `16417be` |
 | C2 | §7 vs TRANSLATE.md §5 ("stop and report") | Fixed `16417be` |
 | C3 | TRANSLATE.md §10's blocking human review vs full autonomy | Fixed `2032075` |
@@ -125,6 +127,40 @@ Two supporting rules make it stick:
 Re-running the match with the rule applied: **9 matched, 3 `UNMATCHED`**, and `group-ecosystem-cards`
 correctly still matches (4 images ≤ 4 slots). Nine of ten fragments lacking an image slot is a
 property of post 12133, not of page design — which is what §7 exists to correct.
+
+### B10 / B11 — CCIT is not the safe §7 shakedown I recommended (OPEN)
+
+I twice recommended minting the three new patterns on CCIT rather than CNC, "since four pages clone
+CNC". Both halves of that were wrong, and checking CCIT before acting is what surfaced it.
+
+**The three patterns cannot come from CCIT.** Patterns are minted from sections, and CCIT contains
+none of the three: no services card grid, no why-us-with-photo, and its `#quote` is a different shape
+entirely. CCIT's own unmatched sections are its own — a spec-sheet hero, a science explainer, a method
+selector, a packaging showcase, a validation-documentation block and a related-applications strip.
+
+**And minting on CCIT would not have de-risked anything.** All five service pages share those three
+sections, so whichever service page mints them the pattern is identical and is reused five times. The
+blast radius is a property of the pattern, not of the page that happens to mint it. Minting elsewhere
+delays the risk, it does not reduce it.
+
+**CCIT is also harder, not safer**, in two ways that block it outright:
+
+- **B10 — the FAQ content is JS-rendered.** CCIT's `#faq` section is 981 characters with zero
+  `<details>`, zero `aria-expanded` and zero `<h3>`: the Q&A pairs are injected by a 9 KB script.
+  `faq-toggle` needs static repeater pairs, so translate would have to lift them out of JavaScript —
+  and CCIT carries 7 template literals of its own (B8), so its closing section has the same
+  contamination CNC's had.
+- **B11 — the quote section is a real form with no wiring.** `#quote` holds 7 `input`/`select`/
+  `textarea` fields and a submit, and `hsforms.com` appears nowhere in the file. §7 authors Elementor
+  JSON; it does not create HubSpot forms, map properties or run a test submission — that is HANDOFF
+  Stage H, and it is outside SKILL.md §1's write allowlist. So CCIT cannot be completed by this
+  automation as specified, regardless of pattern budget. It needs a human form-integration pass first.
+
+Corrected recommendation: **CNC's three unmatched sections are the cheapest and lowest-risk §7 work in
+this zip** — a services card grid, a quote CTA block, and an image-bearing why-us variant, all static,
+all copy-only. Mint them there, review the three patterns before the four sibling pages reuse them
+(they live on the build branch until a human merges, which is exactly that review point), and leave
+CCIT until someone decides the form question.
 
 ### B9 — the legends are lossy, and the docs pointed at them as the source of copy (fixed `35e3e36`)
 
@@ -426,8 +462,7 @@ Everything below was checked and holds at `08c4e58`.
 3. **Optional hygiene** — raise `updraft_retain_db` above 5 if runs will be frequent, and put
    UpdraftPlus on a daily db+files schedule; §0 guarantees a backup at run time but does not improve
    the site's baseline (B1).
-4. **Dry-run one page** with the schedule still disabled. CCIT is the best single-page candidate — no
-   interactive cluster, no live counterpart at its slug, and it exercises §7 minting end to end. Or
-   dry-run CNC Micromachining to exercise the interactive-asset resolution instead.
+4. **Dry-run one page** with the schedule still disabled — **CNC Micromachining**, done: its no-write
+   phase is clean and its spec validates. Not CCIT: B10/B11 show it needs a human form pass first.
 5. **Then enable the schedule** — and only then. Everything above is reversible; a scheduled
    autonomous run against production is the first thing that isn't.
