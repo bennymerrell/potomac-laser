@@ -14,8 +14,12 @@
 #                 preserved all 292 element ids). LIVE POST 12241 IS NOT YET UPDATED — verified
 #                 2026-08-06 as still carrying the grouped order; pushing it needs the operator
 #                 authorisation AUTOMATION.md §6 withholds from a run that did not create it.
-# OPEN          : body_2 reads "Expl →" where all four siblings read "Explore Applications →" —
-#                 looks like an extract_leaves.py truncation. Left as extracted, NOT corrected.
+# FIXED         : body_2 read "Expl →" where all four siblings read "Explore Applications →".
+#                 NOT an extract_leaves.py truncation, as previously suspected: the design says
+#                 <a href="#applications">Explore Applications <span>→</span></a>, the parser
+#                 returns exactly that, and no bare "Expl" appears anywhere in the design page.
+#                 So it was introduced when this token block was authored, not when it was
+#                 extracted. Corrected 2026-08-06 and pushed to post 12241.
 
 spec_version: 1
 page:
@@ -95,7 +99,7 @@ sections:
     heading_1: Our Services
     heading_2: Explore our precision capabilities
     body_1: <p>Choose the manufacturing route that fits your geometry, material, and production need.</p>
-    body_2: <p><a href="#applications">Expl →</a></p>
+    body_2: <p><a href="#applications">Explore Applications →</a></p>
     heading_3: CNC Micromachining
     body_3: <p>4-axis CNC milling and drilling for fine-feature and engineering plastics where repeatable tolerance control matters.</p>
     body_4: <p><a href="/services/cnc-micro-machining-services/">Learn more →</a></p>
