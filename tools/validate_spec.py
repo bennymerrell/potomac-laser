@@ -47,6 +47,12 @@ REQUIRED_OPTIONS = {  # pattern -> (option, min, max)
 }
 HTML_TOKENS = ("body_", "faq_a_")
 
+# Patterns whose tokens substitute INSIDE a single `html` widget rather than filling one
+# text-editor per token. Their body_* values are plain text by design, so the HTML-slot
+# check below does not apply — it exists to catch legend-sourced values that lost their
+# block wrapper (AUDIT.md B9), which cannot happen here.
+EMBED_TEXT_PATTERNS = {"quote-form-hubspot"}
+
 # Design-time scaffolding a Claude Design export ships and a live page must never load:
 # the Tailwind Play CDN, React/ReactDOM dev builds, Babel standalone, the tweaks panel.
 # TRANSLATE.md §2 strips these; this is the mechanical backstop (SKILL.md §2 gates the
@@ -216,7 +222,7 @@ def check_section(idx, sec, assets, rep, template):
         if name.startswith("url_"):
             if not re.match(r"^(https?://|/|#)", val):
                 rep.warn(tw, f"{val!r} is not an absolute URL, root path, or anchor")
-        if name.startswith(HTML_TOKENS) and "<" not in val:
+        if name.startswith(HTML_TOKENS) and "<" not in val and pattern not in EMBED_TEXT_PATTERNS:
             # These sit in text-editor / toggle-content slots, which always store block
             # markup. A bare string means the value came from a legend, and the legends
             # strip HTML: they truncate at the first inline tag and flatten <ul> items
