@@ -1,17 +1,19 @@
 {
-    "pattern": "why-choose-inset-cta",
-    "source_post": 12133,
-    "source_section_index": 1,
-    "tokens": {
-        "{heading_1}": "WHY GOODFELLOW MICROFABRICATION",
-        "{heading_2}": "Why choose Goodfellow Microfabrication for CNC micromachining",
-        "{body_1}": "We deliver precision CNC micromachining for micro-scale components — supporting projects from early prototyping through to full-scale production with engineer",
-        "{body_2}": "Tight tolerance machining — achieving micro-scale tolerances for precision components in metals and polymers.In-house quality control — full inspection and ",
-        "{heading_3}": "Talk to the engineers who will review your design",
-        "{button_1}": "Upload Drawing / CAD",
-        "{url_1}": "#quote",
-        "{button_2}": "Request Material + Machining Quote",
-        "{url_2}": "#quote",
-        "{body_3}": "Upload STEP, STL, or PDF — our engineers review it for manufacturability.No redesign required to start — we’ll help optimise your part."
-    }
+ "pattern": "why-choose-inset-cta",
+ "source_post": 12133,
+ "source_section_index": 1,
+ "tokens": {
+  "{heading_1}": "WHY GOODFELLOW MICROFABRICATION",
+  "{heading_2}": "Why choose Goodfellow Microfabrication for CNC micromachining",
+  "{body_1}": "We deliver precision CNC micromachining for micro-scale components — supporting projects from early prototyping through to full-scale production with engineer",
+  "{body_2}": "Tight tolerance machining — achieving micro-scale tolerances for precision components in metals and polymers.In-house quality control — full inspection and ",
+  "{heading_3}": "Talk to the engineers who will review your design",
+  "{button_1}": "Upload Drawing / CAD",
+  "{url_1}": "#quote",
+  "{button_2}": "Request Material + Machining Quote",
+  "{url_2}": "#quote",
+  "{body_3}": "Upload STEP, STL, or PDF — our engineers review it for manufacturability.No redesign required to start — we’ll help optimise your part.",
+  "{image_1}": "https://www.potomac-laser.com/wp-content/uploads/novamira-drafts/whyus-team.jpg"
+ },
+ "note": "{image_1} is a container BACKGROUND image, not an image widget: the 52% first column is a photo column, not a spacer. Added 2026-08-06 (AUDIT.md B12) — it was previously a hardcoded URL, so every page built from this fragment rendered post 12133's team photo."
 }

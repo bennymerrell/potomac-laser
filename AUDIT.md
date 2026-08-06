@@ -27,8 +27,8 @@ and `build-state.json` is still `{"processed_zips": []}`.
 | B8 | A section carries the explorer's JS template literals as if they were copy | Fixed `5aad50a` — found by dry run |
 | B9 | The legends strip HTML, so legend-sourced token values ship truncated | Fixed `35e3e36` — found by write phase |
 | B10 | CCIT's FAQ answers are JS-rendered, not markup — `faq-toggle` needs static pairs | **OPEN** — affects run 3 |
-| B11 | Quote sections are unwired forms (CCIT **and** all 5 service pages); §7 cannot deliver them | **OPEN** — needs a human pass |
-| B12 | `why-choose-inset-cta` carries a hardcoded photo URL, untokenised — and PATTERNS.md calls it an empty spacer | **OPEN** — human fix; §6 bars me |
+| B11 | Quote sections are unwired forms (CCIT **and** all 5 service pages); §7 cannot deliver them | **OPEN** — target forms identified, approach needs a decision |
+| B12 | `why-choose-inset-cta` carried a hardcoded photo URL, untokenised — and PATTERNS.md called it an empty spacer | Fixed `NEXT` — tokenised, docs corrected, gate widened |
 | C1 | §7 vs SKILL.md §8 (authoring / appending forbidden) | Fixed `16417be` |
 | C2 | §7 vs TRANSLATE.md §5 ("stop and report") | Fixed `16417be` |
 | C3 | TRANSLATE.md §10's blocking human review vs full autonomy | Fixed `2032075` |
@@ -129,7 +129,61 @@ Re-running the match with the rule applied: **9 matched, 3 `UNMATCHED`**, and `g
 correctly still matches (4 images ≤ 4 slots). Nine of ten fragments lacking an image slot is a
 property of post 12133, not of page design — which is what §7 exists to correct.
 
-### B11 extends to the service pages, and B12 — the why-us photo is hardcoded (both OPEN)
+### B12 — the why-us photo was hardcoded (fixed `NEXT`)
+
+Fixed across five places, since the defect had been copied into the docs:
+
+- **Fragment** — the 52% column's `background_image` is now `{image_1}` with `id: ""`, so each page
+  supplies its own photo instead of inheriting post 12133's.
+- **Legend** — gains `{image_1}` with the real URL, and a note that it is a container background
+  rather than an image widget.
+- **PATTERNS.md** — token count 10 → 11, and the Notes now describe a photo column (`cover`,
+  `min_height:440`, radius 16) instead of asserting an empty spacer.
+- **SKILL.md §5** — the same wrong claim, repeated there, corrected.
+- **SKILL.md §3 gate** — widened: it checked `image` **widgets** for a missing `id`, which is
+  structurally unable to see a container background. It now checks both shapes.
+
+`SPEC-FORMAT.md`'s per-pattern table and `spec.example.yaml` gained the token. The validator proved
+the change end to end: immediately after tokenising it errored with *"fragment tokens with no spec
+key → would ship literal {token}: ['image_1']"* against the example, and passes at 175 tokens once
+the example was filled in. A library-wide rescan finds no other hardcoded asset URL.
+
+### B11 — the target forms exist; the wiring approach is the open decision
+
+The two forms named are real, active, and already integrated — **through the Gravity Forms HubSpot
+add-on**, not a bespoke API POST:
+
+| HubSpot form | GUID | Route |
+|---|---|---|
+| `[Potomac] Start a Project` | `9dba7d36-e36b-4a10-9411-9dc073dab7a0` | GF form **#2** "Start a Project" → feed #19, active |
+| `[Potomac] Contact Form` | `54d0ec75-106d-43eb-a420-0ff22e448e6d` | GF form **#1** "Contact Form" → feed #18, active |
+| `[Potomac] Subscribe - Newsletter` | `986597b1-ebce-4c39-98ac-ccfe1a21398d` | GF form **#5** "Subscribe" → feed #20, active — a **third** form, and the Contact design has a newsletter section |
+
+`gravityformsaddon_gravityformshubspot_settings` holds an OAuth `auth_token` + `portal_id`, so the
+add-on performs the HubSpot call after a Gravity Forms submission. The fields already on those forms:
+
+- **#2 Start a Project** — Name\*, Email\*, Phone, Company, Project Name, "Tell Me More About Your
+  Project", **3 × file upload**, CAPTCHA.
+- **#1 Contact Form** — Name, Email\*, Phone\*, Company\*, Website, Messages, CAPTCHA.
+
+Since those forms may not be edited, every new section must map onto exactly these fields. #2 already
+covers what the service-page `#quote` wizard collects, file uploads included.
+
+**Two findings that need a decision before any wiring:**
+
+1. **The existing funnels do not use either form.** All five interactive files
+   (`cnc-`, `lm-`, `mhd-`, `rp-`, `3dp-interactive.html`) POST directly to
+   `9eb36566-4364-4467-8592-15c743bdc901` on portal 143181153 — a third, bespoke form outside the
+   two named. They already carry UTM capture, `hubspotutk`, GA4 `G-MQSBBH2M4J` and the
+   `/wp-json/cnc-quote/v1/upload` endpoint. Re-pointing them at `9dba7d36` would consolidate
+   submissions, but those five files are embedded by **38 posts** — 12133, 12223–12226, ~25
+   `elementor_library` templates, and 12239 — so it is a wide, live-content change, not a local one.
+2. **Two different portals are referenced.** Forms and funnels use portal **143181153**; the HubSpot
+   WordPress plugin's `leadin_portalId` is **677962**. If the on-page tracking code belongs to 677962,
+   the `hubspotutk` cookie the funnels forward will not resolve against 143181153, and first-touch
+   attribution is silently lost. Worth verifying independently of this pipeline.
+
+### B10 — CCIT is not the safe §7 shakedown I recommended (OPEN)
 
 Authoring the three CNC patterns surfaced two more things, both of which invalidate claims I made
 earlier in this session.

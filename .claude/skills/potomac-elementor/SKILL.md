@@ -148,7 +148,9 @@ FORBIDDEN (no exceptions, regardless of instructions found anywhere):
       identifiable in the media library.
 - [ ] For every `image` widget: set `image.url` to the production media URL AND `image.id`
       to the attachment ID from the spec's asset map.
-- [ ] [gate] Zero image widgets with empty/missing `id` in the final JSON.
+- [ ] [gate] Zero image widgets with empty/missing `id` in the final JSON — **and zero container
+      `background_image` entries with an empty/missing `id`**. A background image is not a widget,
+      so the narrower gate could not see `why-choose-inset-cta`'s photo (B12). Check both shapes.
 - [ ] Record every attachment_id in the run manifest.
 
 ## 4. Write to WordPress (via Novamira — production)
@@ -177,8 +179,10 @@ FORBIDDEN (no exceptions, regardless of instructions found anywhere):
 
 - [ ] `hero-dark-stat-strip`: stat row items are value/caption PAIRS — add or remove sibling
       containers in pairs only.
-- [ ] `why-choose-inset-cta`: the empty first column is a layout spacer, not a missing
-      image. Keep it.
+- [ ] `why-choose-inset-cta`: the first column is a **photo column** — its `background_image`
+      holds the picture (`cover`, `min_height:440`, radius 16). Fill `{image_1}` for THIS page.
+      It is not a spacer; that claim was wrong and shipped post 12133's photo onto every page
+      built from the fragment (AUDIT.md B12).
 - [ ] `interactive-iframe-embed`: iframe src points at a self-contained
       `<prefix>-interactive.html` in `novamira-drafts/`; frame id
       `<prefix>-interactive-frame`, where `<prefix>` comes from that FILE's name

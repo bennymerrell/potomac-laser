@@ -17,6 +17,9 @@ page:
 # Media referenced by image tokens. Both url and attachment_id are required
 # (SKILL.md §3 gate: zero image widgets with a missing id).
 assets:
+  whyus_team:
+    attachment_id: 0    # TODO real attachment ID
+    url: "https://www.potomac-laser.com/wp-content/uploads/YYYY/MM/pl-auto-whyus-team.jpg"
   eco_logo_1:
     attachment_id: 0    # TODO real attachment ID
     url: "https://www.potomac-laser.com/wp-content/uploads/YYYY/MM/pl-auto-eco-logo-1.png"
@@ -61,9 +64,11 @@ sections:
   # ──────────────────────────────────────────────────────────────────
   # why-choose-inset-cta
   # source: post 12133 section 1 · reference/snippets/why-choose-inset-cta.json
-  # NOTE: the empty first column is a layout spacer - keep it
+  # NOTE: the first column is a PHOTO column - its container background_image is
+  #       {image_1}. It is not a spacer (AUDIT.md B12).
   - pattern: why-choose-inset-cta
     tokens:
+      image_1: { asset: whyus_team }   # container background, not an image widget
       heading_1: ""   # was: WHY GOODFELLOW MICROFABRICATION
       heading_2: ""   # was: Why choose Goodfellow Microfabrication for CNC micromachining
       body_1: ""   # was: We deliver precision CNC micromachining for micro-scale compon…

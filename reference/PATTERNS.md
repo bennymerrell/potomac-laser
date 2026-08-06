@@ -177,10 +177,10 @@ listed per entry, and consolidated under [Unmapped colours](#unmapped-colours).
 | **Signature** | `739b2ea6f0` · 8 widgets · 25,476 bytes |
 | **Recognise when** | A white two-column "why choose us" / value-proposition section where one column holds the copy (eyebrow + H2 + two paragraphs) and the copy column ends in a **tinted inset card** containing a short heading and a duplicate of the hero's two CTA buttons. |
 | **Structure** | `container:full bg=gfwhite` → boxed → row → \[empty media column] + copy column (eyebrow → H2 → 2× `text-editor` → inset `container bg=#F9FAFB` with `heading` + button pair + note) |
-| **Tokens** | 10: `{heading_1..3}`, `{body_1..3}`, `{button_1..2}`, `{url_1..2}` |
+| **Tokens** | 11: `{heading_1..3}`, `{body_1..3}`, `{button_1..2}`, `{url_1..2}`, `{image_1}` (the first column's **background** image, not an image widget) |
 | **Globals** | 9 native · 1 CSS-var rewrite |
 | **Unmapped colours** | `#ECEEF2`, `#5F6878`, `#F9FAFB` (inset card bg), `#E5E7EB`, `#737C8D` |
-| **Notes** | The first column is an empty container in the source — it is a layout spacer, not a dropped image. Keep it or the copy column loses its offset. |
+| **Notes** | The first column is a **photo column**: a 52%-wide container whose `background_image` carries the picture, at `background_size:cover`, `min_height:440`, radius 16. It is NOT a layout spacer — an earlier version of this entry said so, because the URL sits in container settings rather than an image widget and is easy to miss (AUDIT.md B12). Fill `{image_1}` per page; leaving it unfilled ships a literal `{image_1}` as the CSS url. Because it is a background rather than an image widget, SKILL.md §3's attachment-id gate had to be widened to see it. |
 
 ### interactive-iframe-embed
 | | |

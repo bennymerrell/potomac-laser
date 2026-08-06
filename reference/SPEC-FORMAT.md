@@ -89,7 +89,7 @@ rejects.
 | Pattern | Total | heading | body | button | url | image | embed | faq_q/faq_a |
 |---|---|---|---|---|---|---|---|---|
 | `hero-dark-stat-strip` | 19 | 12 | 3 | 2 | 2 | – | – | – |
-| `why-choose-inset-cta` | 10 | 3 | 3 | 2 | 2 | – | – | – |
+| `why-choose-inset-cta` | 11 | 3 | 3 | 2 | 2 | – | 1 | – |
 | `interactive-iframe-embed` | 1 | – | – | – | – | – | 1 | – |
 | `spec-table-dark` | 23 | 12 | 11 | – | – | – | – | – |
 | `process-comparison-cards` | 29 | 12 | 13 | 2 | 2 | – | – | – |
@@ -166,8 +166,7 @@ together. The `tabs[]` count is free, unlike the fixed-arity patterns.
 **`cta-band-dark` — leave `#46587010` literal.** 8-digit hex with alpha; Elementor globals
 cannot express it.
 
-**`why-choose-inset-cta`** has no extra constraints, but its empty first column is a layout
-spacer — the assembler must not prune it as an empty container.
+**`why-choose-inset-cta`** — `{image_1}` is the first column's container **`background_image`**, not an `image` widget. That column is a photo column, not a layout spacer: the claim that it was empty was wrong, and because the URL sat in container settings it was hardcoded and unnoticed, so every page built from the fragment rendered post 12133's team photo (AUDIT.md B12). Supply it per page like any other image token; SKILL.md §3's id gate now checks background images too.
 
 **`interactive-iframe-embed`** — `embed_1`'s iframe `src` points at the uploaded
 `<slug-prefix>-interactive.html` under `novamira-drafts/`, with frame id
