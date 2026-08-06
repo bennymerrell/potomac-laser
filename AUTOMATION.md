@@ -28,14 +28,20 @@ a. UNPACK into a temp dir. Enumerate page-level HTML files — entry documents o
 
 **Resolve the manifest** by scanning `manifests/*.txt` for one whose `# zip:` directive matches this zip's filename exactly. Failing that, match on `# zip_sha256:`. The filename is authoritative and the hash is advisory: if the filename matches but the hash does not, **use the manifest** and report `"manifest predates this zip revision — re-check for new pages"` (a re-export legitimately changes the hash while curation stays valid).
 
-**A resolved manifest is the complete set of pages** — enumerate exactly those and nothing else. Each entry is a path relative to the zip root, optionally followed by the post type (`page`, `post_services` or `post_application`; default `page`). Blank lines and `#` lines are ignored.
+**A resolved manifest is the complete set of pages** — enumerate exactly those and nothing else. Each entry is a path relative to the zip root, optionally followed by the post type (`page`, `post_services` or `post_application`; default `page`) and optional `key=value` fields. Blank lines and `#` lines are ignored.
 
-**Parse rule — design filenames contain spaces, so do not split on the first whitespace.** Trim the line; if its LAST whitespace-separated token is exactly `page`, `post_services` or `post_application`, that token is the post type and everything before it, trimmed, is the path. Otherwise the whole trimmed line is the path and the type is `page`. The three are a closed set, and no design filename ends in one of them, so this never misreads a path.
+**Parse rule — design filenames contain spaces, so do not split on the first whitespace.** Trim the line, then:
+
+1. Pull out any `key=value` tokens. `interactive=<filename>` is the only key defined (3.c.iv).
+2. Of what remains, if the LAST whitespace-separated token is exactly `page`, `post_services` or `post_application`, that token is the post type and everything before it, trimmed, is the path.
+3. Otherwise the whole remainder is the path and the type is `page`.
+
+The three types are a closed set and no design filename ends in one of them, so this never misreads a path.
 
 ```
 # zip: Potomac Laser.zip
 # zip_sha256: 2f5215b4…
-CNC Micromachining.html                 post_services
+CNC Micromachining.html                 post_services  interactive=cnc-interactive.html
 Services & Applications.html            page
 uploads/sector-medical-potomac.html     post_application
 ```
@@ -101,7 +107,18 @@ iii. TRANSLATE into the standard handoff: - copy the page's source to specs/<slu
 
 ```
 
-iv. ASSETS: - Images: upload this page's images to the WP media library on potomac-laser.com via Novamira, with the `pl-auto-` filename prefix required by SKILL.md §3; record {token → attachment_id, url} in the spec. Dedupe within the zip — if an identical image was already uploaded for a sibling page in this run, reuse the existing attachment ID. - Interactive apps: if the page uses interactive-iframe-embed, the design export MUST contain the self-contained interactive HTML file (it ships its own CSS/JS — nothing compiles inside the iframe). Upload it to wp-content/uploads/novamira-drafts/ named <slug-prefix>-interactive.html and point the iframe's src at it, with frame id <slug-prefix>-interactive-frame. If the page has an interactive section but the export contains no such file, mark the page "failed: missing-interactive-asset" and move on.
+iv. ASSETS.
+
+**Interactive apps FIRST** — before uploading a single image, because a page that cannot resolve its interactive asset must not leave orphan attachments behind. If the page uses `interactive-iframe-embed`, resolve the asset in this order:
+
+1. **A file already on the server.** If the manifest entry carries `interactive=<filename>`, look for `wp-content/uploads/novamira-drafts/<filename>`. These files exist because the earlier hand-built work produced and tested one per service page (`cnc-`, `lm-`, `mhd-`, `rp-`, `3dp-interactive.html`) — self-contained, HubSpot-wired, and page-agnostic (they read `window.parent` for page identity). **Reuse by reference: point the iframe `src` at the existing file. NEVER modify, overwrite, or back up over it** — SKILL.md §1 forbids touching anything this run did not create, and these files are in use by existing pages. If a page needs different interactive content, a human makes a new file.
+   - [gate] Confirm the file exists and carries no external **dependency**: zero `<script src="http…">` and zero `<link rel="stylesheet" href="http…">`. Nothing compiles or resolves inside an iframe, so a dependency means a broken cluster. Other external `<link>`s are inert — the five existing files each carry a `rel="canonical"`, which is meaningless in an iframe and must NOT fail the gate; report it and continue. On a real dependency, fall through to 3 — do not "fix" the file.
+2. **A self-contained file in the export.** Upload it to `novamira-drafts/` as `<prefix>-interactive.html` and point the iframe at it. Same self-containment gate.
+3. **Neither.** Build the page **without that section** — do not fail the page. Record the section index and `deferred-interactive` in the ledger and report, and remove that section from `specs/<slug>/mock.html` so 3.c.vi compares like with like instead of failing verify on a section that was never meant to be there.
+
+The `<prefix>` for the frame id comes from the resolved filename (`cnc-interactive.html` → frame id `cnc-interactive-frame`), NOT from the `pl-auto-` slug — the id is part of the file's own contract with its embed bridge.
+
+**Then images:** upload this page's images to the WP media library on potomac-laser.com via Novamira, with the `pl-auto-` filename prefix required by SKILL.md §3; record {token → attachment_id, url} in the spec. Dedupe within the zip — if an identical image was already uploaded for a sibling page in this run, reuse the existing attachment ID.
 
 v. BUILD: follow the potomac-elementor skill build checklist exactly, including image ID re-attachment and per-pattern obligations. Matched sections are assembled from their fragments as usual; `UNMATCHED` sections use the Elementor JSON authored in §7 step 2. Create the page as a DRAFT on potomac-laser.com via Novamira. Regenerate the Elementor CSS for THIS POST ONLY after writing (`\Elementor\Core\Files\CSS\Post::create($post_id)->update();`) — NEVER the global `files_manager->clear_cache()`, which SKILL.md §4 forbids on production.
 

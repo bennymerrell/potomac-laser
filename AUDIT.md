@@ -27,7 +27,7 @@ and `build-state.json` is still `{"processed_zips": []}`.
 | C3 | TRANSLATE.md §10's blocking human review vs full autonomy | **OPEN** — follows from scope |
 | C4 | §2 delta rule excluded every status it defines | Fixed `16417be` |
 | C5 | Arity guidance differs between AUTOMATION.md and TRANSLATE.md | **OPEN** — same decision as B4 |
-| C6 | §3.c.iv unsatisfiable: the interactive cluster ships inline | **OPEN** — blocks all 5 service pages |
+| C6 | §3.c.iv looked for the interactive asset in the wrong place | Fixed `NEXT` — resolved from the server |
 | C7 | Broken `PATTERNS.md` links and HTML entities in AUTOMATION.md | Fixed `16417be` |
 | D1–D5 | Deployment gaps (branch, MCP config, agent type, localhost entry, report field) | **OPEN** |
 
@@ -75,30 +75,6 @@ each repeating unit's count in `spec.yaml`, have the assembler add and remove si
 have the validator check coverage against the *resolved* fragment rather than the file on disk. Until
 one of those, counts must stay identical to the fragments.
 
-## Open: C6 — §3.c.iv is unsatisfiable for this export, and it blocks all five service pages
-
-§3.c.iv requires the export to contain a self-contained interactive HTML file for any page using
-`interactive-iframe-embed`. Here the "Select your application" explorer ships **inline** in each
-service page — the `APPS` JS object that the zip's own `CLAUDE.md` flags as easy to miss — and **the
-export contains zero `<iframe>` elements at all**. Read literally, every service page is
-`failed: missing-interactive-asset`.
-
-Worse, §3.c.iv uploads images *before* checking for the interactive file, so a run would push ~10
-`pl-auto-` attachments per page to the live media library and then abandon the page. They land in the
-manifest, but nothing deletes them.
-
-Two further wrinkles in the same step: the design's images are base64 `data:` URIs embedded in the
-HTML (10 per service page), and extracting them to files before upload is a step the spec never
-describes; and `assets/` also holds file copies of some of them, so a rule is needed for which source
-wins.
-
-**Fix (human decision, then a spec change):** either extract the explorer into
-`<slug-prefix>-interactive.html` during translate — which is authoring, and needs the same treatment
-§7 got — or declare inline-interactive an accepted input and define how it is handled (most likely:
-lift the markup into an `html` widget, accepting that WindPress does not compile inside an iframe and
-so the file must carry its own CSS either way). Also move the interactive check *before* image upload,
-so a doomed page costs nothing.
-
 ## Open: C3 and C5 — two doc conflicts that follow from the decisions above
 
 - **C3.** TRANSLATE.md §10 requires human review of the match table before §0; AUTOMATION.md's
@@ -138,20 +114,67 @@ correct state today.
 
 ## What a run would do today
 
-Worth stating plainly, because the fixes changed it. Pre-flight now passes on its own — §0 takes a
-database backup if none is fresh. With `manifests/potomac-laser.txt` resolving, all 11 pages enumerate; the provenance check returns "not built" for every one (correctly — nothing has been built
-yet), so all 11 proceed. Then:
+Worth stating plainly, because the fixes changed it substantially. Pre-flight now passes on its own (§0
+takes a database backup if none is fresh). With `manifests/potomac-laser.txt` resolving, all 11 pages
+enumerate, and the provenance check returns "not built" for every one — correctly, since nothing has been
+built yet — so all 11 proceed. The five service pages resolve their explorers from the server. Then:
 
-- The **5 service pages** fail at §3.c.iv on the inline explorer (C6), after uploading their images.
-- The **6 remaining pages** are mostly `UNMATCHED` against a service-page library, so §7 mints until
-  the cap of 8 trips (B4) and the rest fail `pattern-budget-exhausted`.
+- **Service pages only** (comment out the six non-service manifest entries): **5 pages built**, needing
+  just 2 new patterns — a services card grid and a quote block — well inside §7's cap of 8. This is a
+  useful first run.
+- **All 11 at once:** the service pages mint their 2 patterns, then the remaining 6 pages need ~11–12
+  more against a budget of 6, so the cap trips (B4) and several fail `pattern-budget-exhausted`.
 
-Net expected output: **0–2 built pages, ~50 orphan attachments, and a long report.** C6 and B4 are now
-the only things between a passing pre-flight and a useful run.
+So run 1 should be phased. The remaining caveat is copy, not machinery: the reused explorers may carry
+stale `APPS` content (see C6).
 
 ---
 
 ## Resolved
+
+### C6 — the interactive asset was sought in the export, but it lives on the server (fixed `NEXT`)
+
+§3.c.iv required the design export to contain a self-contained interactive HTML file for any page using
+`interactive-iframe-embed`, and failed the page otherwise. This export contains none — the "Select your
+application" explorer ships **inline**, its 4,141-byte section carrying no script or style of its own
+while the behaviour sits in a 24.7 KB page-level script shared with the FAQ and the quote basket. Read
+literally, all five service pages were `failed: missing-interactive-asset`.
+
+The premise was wrong, not just the remedy. **The interactive clusters already exist on the server**,
+one per service page, from the earlier human-supervised work:
+
+| File | Bytes | Modified | Dependency gate |
+|---|---|---|---|
+| `cnc-interactive.html` | 106,891 | 2026-07-31 | PASS |
+| `lm-interactive.html` | 107,732 | 2026-07-31 | PASS |
+| `mhd-interactive.html` | 107,762 | 2026-07-31 | PASS |
+| `rp-interactive.html` | 107,796 | 2026-07-30 | PASS |
+| `3dp-interactive.html` | 107,479 | 2026-07-30 | PASS |
+
+All five carry `APPS` + `MATERIALS`, the basket, the HubSpot wiring (portal 143181153, form
+`9eb36566…`), and read `window.parent` for page identity, so they are page-agnostic. Zero external
+script or stylesheet dependencies.
+
+§3.c.iv is now a resolution order: (1) a server file named by the manifest's `interactive=` field —
+**referenced, never modified**, since these files belong to earlier work and to the pages already using
+them (SKILL.md §1); (2) a self-contained file shipped in the export, uploaded as before; (3) neither →
+build the page **without** that section, record `deferred-interactive`, and strip the section from
+`mock.html` so 3.c.vi does not fail verify on a section that was never going to be there. Deferral is
+now the rare fallback rather than the expected path. The interactive step also moved **ahead of image
+upload**, so a page that cannot resolve its asset no longer leaves orphan attachments. The frame id
+derives from the resolved filename (`cnc-interactive.html` → `cnc-interactive-frame`), not the
+`pl-auto-` slug, because the id is part of the file's contract with its embed bridge.
+
+The dependency gate was also corrected: it first tested for *any* external `<link>`, which failed all
+five on the `rel="canonical"` each carries — inert inside an iframe. It now tests only real
+dependencies: external `<script src>` and external `rel="stylesheet"`. Re-verified: all five PASS.
+
+**Open, for a human, not a blocker:** these files date from 2026-07-30/31 and were built for the
+*previous* iteration of these pages, while this design rewrites per-page explorer content — the zip's own
+`CLAUDE.md` insists the `APPS` summaries, chips and materials must be topic-specific. So the explorer
+will **work** but may carry **stale copy** until someone diffs the `APPS` data in those five files
+against the export. The run reports this rather than assuming it is fine. Editing them is a human's job:
+the automation may not touch them.
 
 ### B1 — the backup gate could never pass (fixed by self-serving a backup)
 
@@ -285,9 +308,7 @@ Everything below was checked and holds at `08c4e58`.
 
 ## Before the first run
 
-1. **C6** — decide how the inline interactive explorer is handled, and move the check ahead of image
-   upload so a failing page costs no orphan attachments.
-2. **B4** — raise the pattern cap for the first run or curate the zip to fit; decide whether arity
+1. **B4** — raise the pattern cap for the first run or curate the zip to fit; decide whether arity
    becomes a spec feature. Then align C5's wording across both docs.
 3. ~~**B2 residue** — get the allow-list to the coordinator.~~ **Done** — `manifests/potomac-laser.txt`
    is committed and resolves by zip filename; nothing goes inside the zip.

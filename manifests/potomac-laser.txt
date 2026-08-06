@@ -12,13 +12,19 @@
 # zip: Potomac Laser.zip
 # zip_sha256: 2f5215b42d491dae3eb7653c0d4e87c985723f7054b2916dc1937a8af331e14e
 #
-# Format:  <path relative to zip root>[  <post_type>]
+# Format:  <path relative to zip root>[  <post_type>][  interactive=<file>]
 #   post_type is `page` (default), `post_services` or `post_application` —
 #   nothing else (SKILL.md §1). Type follows what the page IS, because it sets
 #   the permalink and the theme template: services go to post_services
 #   (/services/<slug>/), application and sector pages to post_application.
-#   Filenames contain spaces, so the type is read as the LAST token on the line;
-#   if the last token isn't a post type, the whole line is the path.
+#   Filenames contain spaces, so key=value fields are pulled out first, then the
+#   type is read as the LAST remaining token; if that isn't a post type, the
+#   whole remainder is the path.
+#
+#   interactive=<file> names a SELF-CONTAINED interactive cluster already in
+#   wp-content/uploads/novamira-drafts/ (AUTOMATION.md §3.c.iv). The abbreviated
+#   filenames cannot be derived from the design filename, which is why they are
+#   declared here. The run REFERENCES these files and never modifies them.
 #
 # This list is COMPLETE: anything not listed is not built. Any HTML file in the
 # zip that is missing from this list is REPORTED as unlisted, so a re-export that
@@ -37,16 +43,22 @@
 # ---------------------------------------------------------------------------
 
 # Service pages — 12 sections each, built from the shared CNC template.
-# NOTE: all five carry the "Select your application" explorer INLINE (the APPS
-# JS object). AUTOMATION.md §3.c.iv expects a separate self-contained
-# interactive HTML file and will mark these "failed: missing-interactive-asset"
-# until that is resolved (AUDIT.md, contradiction 6). Expect them to fail the
-# first run even though they are correctly listed here.
-CNC Micromachining.html                        post_services
-Laser Micromachining.html                      post_services
-Micro-Hole Drilling.html                       post_services
-Rapid Prototyping.html                         post_services
-3D Printing.html                               post_services
+# The "Select your application" explorer ships INLINE in these design files (the
+# APPS JS object), but a built, tested, self-contained version of each already
+# exists on the server from the earlier hand-built work — declared below via
+# interactive=. The run references those files; it never extracts the explorer
+# from the design or edits the server copies.
+#
+# CAVEAT: those files date from 2026-07-30/31 and were built for the PREVIOUS
+# iteration of these pages. This design rewrites per-page explorer content (see
+# the zip's own CLAUDE.md: APPS summaries, chips, materials). So the explorer
+# will WORK but may carry stale copy until someone diffs the APPS data. The run
+# reports this rather than assuming it is fine.
+CNC Micromachining.html                        post_services  interactive=cnc-interactive.html
+Laser Micromachining.html                      post_services  interactive=lm-interactive.html
+Micro-Hole Drilling.html                       post_services  interactive=mhd-interactive.html
+Rapid Prototyping.html                         post_services  interactive=rp-interactive.html
+3D Printing.html                               post_services  interactive=3dp-interactive.html
 
 # Standard pages.
 About Our Group.html                           page

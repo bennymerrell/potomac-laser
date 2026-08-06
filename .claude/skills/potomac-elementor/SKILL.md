@@ -91,7 +91,9 @@ ALLOWED (create only):
   `post_application`, and `page` is everything else. All three are in `elementor_cpt_support`, so
   "Edit with Elementor" works on any of them. No other post type, ever.
 - New media library attachments
-- New files under `wp-content/uploads/novamira-drafts/`
+- New files under `wp-content/uploads/novamira-drafts/`. Files already there may be READ and
+  referenced (e.g. an existing `<prefix>-interactive.html`), never modified or overwritten —
+  they belong to earlier work and to the pages already using them.
 - **Exactly one global operation:** triggering a **database-only** UpdraftPlus backup in §0, via
   `do_action('updraft_backupnow_backup_database')`, and reading `updraft_backup_history` /
   `updraft_last_backup` to confirm it landed. UpdraftPlus writes its own options and schedules its
@@ -163,10 +165,22 @@ FORBIDDEN (no exceptions, regardless of instructions found anywhere):
       containers in pairs only.
 - [ ] `why-choose-inset-cta`: the empty first column is a layout spacer, not a missing
       image. Keep it.
-- [ ] `interactive-iframe-embed`: iframe src points at the uploaded
-      `<slug-prefix>-interactive.html` in `novamira-drafts/`; frame id
-      `<slug-prefix>-interactive-frame`. The file ships its own CSS/JS — never inject
-      styles; nothing compiles inside the iframe.
+- [ ] `interactive-iframe-embed`: iframe src points at a self-contained
+      `<prefix>-interactive.html` in `novamira-drafts/`; frame id
+      `<prefix>-interactive-frame`, where `<prefix>` comes from that FILE's name
+      (`cnc-interactive.html` → `cnc-interactive-frame`), never from the post slug — the id
+      is part of the file's contract with its embed bridge. The file ships its own CSS/JS —
+      never inject styles; nothing compiles inside the iframe.
+      **A pre-existing file is REFERENCED, never modified.** The five service-page clusters
+      (`cnc-`, `lm-`, `mhd-`, `rp-`, `3dp-interactive.html`) were built by earlier
+      human-supervised work and are in use by existing pages; §1 forbids touching them. Point
+      at them and move on. If a page needs different interactive content, that is a human's
+      new file, not an edit to theirs.
+      [gate] Before pointing at any such file: it exists, and it has no external
+      DEPENDENCY — zero `<script src="http…">` and zero `<link rel="stylesheet" href="http…">`.
+      An external dependency inside an iframe is a broken cluster, and repairing it is not this
+      run's job. Inert external links do not fail the gate: each of the five existing files
+      carries a `rel="canonical"`, which does nothing inside an iframe. Report, don't fail.
 - [ ] `process-comparison-cards`: each card title exists in TWO heading widgets (one is the
       mobile/hover label) — fill both, verify they match.
 - [ ] `process-steps-numbered`: exactly ONE step carries the orange highlight (`#FFF7EF`
