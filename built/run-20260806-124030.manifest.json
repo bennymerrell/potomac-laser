@@ -109,6 +109,60 @@
         12237,
         12238
       ]
+    },
+    {
+      "post_id": 12240,
+      "post_type": "post_services",
+      "post_status": "draft",
+      "slug": "pl-auto-laser-micromachining",
+      "title": "Laser Micromachining Services",
+      "design_page": "Laser Micromachining.html",
+      "preview_url": "https://www.potomac-laser.com/?post_type=post_services&p=12240&preview=true",
+      "data_sha256": "f50f8d81a82724f8f2a1a18bd21f7f114aca445178e1d70368f08becc6929376",
+      "sections_built": 12,
+      "sections_deferred": [],
+      "attachments_created": [],
+      "attachments_reused": [
+        12229,
+        12230,
+        12231,
+        12232,
+        12233,
+        12234,
+        12235,
+        12236,
+        12237,
+        12238
+      ],
+      "patterns_used": [
+        "hero-dark-stat-strip",
+        "why-choose-inset-cta",
+        "services-image-cards",
+        "interactive-iframe-embed",
+        "spec-table-dark",
+        "process-comparison-cards",
+        "process-steps-numbered",
+        "group-ecosystem-cards",
+        "testimonials-avatar-cards",
+        "quote-form-hubspot",
+        "faq-toggle",
+        "cta-band-dark"
+      ],
+      "patterns_authored": [],
+      "token_sources": {
+        "from_post_12226": "9 patterns, ALIGNED slot-for-slot",
+        "from_design_markup": [
+          "spec-table-dark",
+          "services-image-cards",
+          "quote-form-hubspot"
+        ]
+      },
+      "verification": {
+        "status": "PASS on the first attempt, zero fix iterations",
+        "checks": "12 sections; all headings LM-specific; 5 service cards in one row at 198px; why-us photo = attachment 12234; quote form wired and button bound; iframe -> lm-interactive.html; zero literal tokens"
+      },
+      "interventions": 1,
+      "intervention_detail": "Extraction from design markup needed a real HTML parser: regex found 15 of 24 nodes in the capabilities section and mapped a description onto heading_3. Fixed once, landed as tools/extract_leaves.py, and it generalises."
     }
   ],
   "attachments": [
@@ -206,5 +260,5 @@
     "Two defects the browser check caught that no local gate could: the design's action button is type=\"button\" so it never raised a submit event (form was inert), and one extracted CSS rule carried the selector list h1..h6/.hero-title/.section-title/.gf-services-title alongside .gf-rapid-left h2, restyling every heading on the page and breaking the already-verified services section.",
     "why-us restored as the 12th section once B12 tokenised its background photo. Verified in the browser: the photo column serves pl-auto-whyus-team.jpg (attachment 12234, this run's own file) at cover/440px/radius-16, and 12133's hardcoded novamira-drafts path is absent from the stored data. The widened \u00a73 gate \u2014 which now inspects container background images, not just image widgets \u2014 passed on 1 background image with a real int id."
   ],
-  "next_step": "Page complete at 12/12 sections. Remaining, all outside this page: verify+archive the HubSpot test contact; the funnels' 9eb36566 provenance (38 posts); B10 CCIT JS-rendered FAQ; then the 4 sibling service pages, which reuse both new patterns and need only copy substitution."
+  "next_step": "3 sibling service pages remain (Micro-Hole Drilling, Rapid Prototyping, 3D Printing) \u2014 same 12 patterns, prior builds 12225/12224/12223 for 9 sections each. Then the readiness decision."
 }

@@ -28,6 +28,18 @@
               "status": "deferred-form (B11)"
             }
           ]
+        },
+        {
+          "slug": "pl-auto-laser-micromachining",
+          "post_id": 12240,
+          "post_type": "post_services",
+          "design_page": "Laser Micromachining.html",
+          "preview_url": "https://www.potomac-laser.com/?post_type=post_services&p=12240&preview=true",
+          "build_type": "standard",
+          "status": "built",
+          "sections_built": 12,
+          "sections_deferred": [],
+          "note": "First page needing NO \u00a77 authoring \u2014 12/12 matched. All 10 images deduped to the CNC run's attachments; zero new uploads."
         }
       ],
       "new_patterns": [
