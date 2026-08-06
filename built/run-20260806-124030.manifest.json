@@ -52,7 +52,25 @@
       },
       "patterns_authored": [
         "services-image-cards (\u00a77 step 2 \u2014 NOT yet in the library; needs verify then tokenise)"
-      ]
+      ],
+      "verification": {
+        "server_side_render": {
+          "status": "PASS",
+          "rendered_bytes": 220509,
+          "literal_tokens": "none",
+          "template_literals": "none",
+          "scaffolding": "none",
+          "services_cards": "5 titles + 5 Learn-more links + 5 images",
+          "eco_images": 4,
+          "iframe": "cnc-interactive-frame present",
+          "post_css": "file, 14:02:21",
+          "b9_proof": "hero body_1 renders in full through '...Goodfellow Microfabrication' \u2014 the legend-sourced value stopped at '\u2014 with'"
+        },
+        "visual_diff_vs_mock": {
+          "status": "BLOCKED",
+          "reason": "draft preview 404s: Chrome has no authenticated WP editor session. Not resolved by minting an admin access link \u2014 that is a privileged action for a human to take."
+        }
+      }
     }
   ],
   "attachments": [
@@ -146,5 +164,5 @@
     "10 attachments created 2026-08-06 ~13:45Z, ids 12229-12238, all byte-identical to the design export's inline base64. 4 eco logos map to group-ecosystem-cards {image_1..4}; 5 service photos and 1 team photo belong to sections \u00a77 has yet to author.",
     "Spec rebuilt from post 12133's stored widget values after B9: fragment token order and 12133's value order walked with one traversal function, ALIGNED for all 9 patterns, 164 values resolved with markup intact. Validator: 0 errors under --automation. Design diff: 136/141 text values verbatim; the 5 others are decoration only (literal arrow/bullet glyphs 12133 stores as text). Zero content differences."
   ],
-  "next_step": "\u00a73.c.vi verify post 12239 against the mock in a browser; then \u00a77 steps 4-6 for services-image-cards (tokenise server-side, legend, PATTERNS.md entry). Rollback: trash 12239, delete attachments 12229-12238."
+  "next_step": "BLOCKED at \u00a77.3: services-image-cards may not enter the library until it renders correctly against the mock, which needs a logged-in browser. Everything else for post 12239 is done. Rollback: trash 12239, delete attachments 12229-12238."
 }
