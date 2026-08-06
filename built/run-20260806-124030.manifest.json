@@ -32,17 +32,12 @@
       "design_page": "CNC Micromachining.html",
       "preview_url": "https://www.potomac-laser.com/?post_type=post_services&p=12239&preview=true",
       "data_sha256": "6ac2f7254417c2e514c9819efddf022d88f11579670d09e2d7b20fb7fd010cd8",
-      "sections_built": 10,
+      "sections_built": 11,
       "sections_deferred": [
         {
-          "design_index": 1,
+          "index": 1,
           "id": "why-us",
-          "reason": "deferred-image: why-choose-inset-cta hides a hardcoded photo URL (B12); variant not minted"
-        },
-        {
-          "design_index": 9,
-          "id": "quote",
-          "reason": "deferred-form: 9 inputs/1 select/2 textareas/2 file inputs, no HubSpot wiring (B11)"
+          "status": "deferred-image \u2014 B12 now fixed, section can be added on the next build"
         }
       ],
       "provenance_meta": {
@@ -71,6 +66,27 @@
           "method": "12 computed properties measured on the draft vs the design mock",
           "diffs": 0,
           "iterations": "3 of 3 permitted"
+        }
+      },
+      "forms": {
+        "quote_section": {
+          "target_form": "[Potomac] Start a Project",
+          "guid": "9dba7d36-e36b-4a10-9411-9dc073dab7a0",
+          "portal": "143181153",
+          "mechanism": "direct Forms API v3 POST from an Elementor html widget (no Gravity Forms)",
+          "fields": [
+            "email",
+            "firstname",
+            "lastname",
+            "company",
+            "potomac_project_name",
+            "potomac_project_description",
+            "potomac_file_submission",
+            "hs_lead_status"
+          ],
+          "file_upload": "single, via existing /wp-json/cnc-quote/v1/upload (Snippet #12)",
+          "tracking": "UTM first/last touch in localStorage + hubspotutk cookie + GA4 lead_form_* events, PII sends field_filled only",
+          "test_submission": "NOT YET RUN \u2014 needs a deliverable address; creates a real contact in the live portal"
         }
       }
     }
@@ -165,7 +181,9 @@
     "First do_action call omitted the options array: UpdraftPlus initialised the job (log.a8ad5b4442bd.txt, 771b, 'Backup DB: 1') then died with TypeError 'Cannot access offset of type string on string'. No set produced. Retry WITH array('nocloud'=>0,'extradata'=>'','always_keep'=>0) succeeded in 21.8s.",
     "10 attachments created 2026-08-06 ~13:45Z, ids 12229-12238, all byte-identical to the design export's inline base64. 4 eco logos map to group-ecosystem-cards {image_1..4}; 5 service photos and 1 team photo belong to sections \u00a77 has yet to author.",
     "Spec rebuilt from post 12133's stored widget values after B9: fragment token order and 12133's value order walked with one traversal function, ALIGNED for all 9 patterns, 164 values resolved with markup intact. Validator: 0 errors under --automation. Design diff: 136/141 text values verbatim; the 5 others are decoration only (literal arrow/bullet glyphs 12133 stores as text). Zero content differences.",
-    "Elementor 4.x caches rendered HTML in _elementor_element_cache; a data update leaves new CSS pointing at stale markup. Clear it (plus _elementor_css) and regenerate per-post CSS after every data write. SKILL.md \u00a74 does not mention this."
+    "Elementor 4.x caches rendered HTML in _elementor_element_cache; a data update leaves new CSS pointing at stale markup. Clear it (plus _elementor_css) and regenerate per-post CSS after every data write. SKILL.md \u00a74 does not mention this.",
+    "Quote form built as an html widget, not an iframe: WindPress compiles Tailwind in rendered DOM but not inside iframe documents, and a form needs no overlay bridge.",
+    "Two defects the browser check caught that no local gate could: the design's action button is type=\"button\" so it never raised a submit event (form was inert), and one extracted CSS rule carried the selector list h1..h6/.hero-title/.section-title/.gf-services-title alongside .gf-rapid-left h2, restyling every heading on the page and breaking the already-verified services section."
   ],
-  "next_step": "Human review of build/potomac-laser before the 4 sibling service pages reuse services-image-cards. Then B12 (why-us photo) and B11 (quote form) decide the two deferred sections."
+  "next_step": "One test submission to [Potomac] Start a Project with a deliverable address, then verify the contact and its properties and archive it (HANDOFF Stage H). Then optionally rebuild with the why-us section now that B12 is fixed."
 }

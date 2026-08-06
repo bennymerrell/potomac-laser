@@ -1,0 +1,270 @@
+<style>
+.gf-rapid-wrap{max-width:1260px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:minmax(0,1.1fr) minmax(360px,.72fr);
+  gap:42px;
+  align-items:start;}
+.gf-rapid-kicker{display:flex;
+  align-items:center;
+  gap:14px;
+  color:#F5821F;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  margin-bottom:14px;}
+.gf-rapid-kicker span{width:32px;height:2px;background:#F5821F;display:inline-flex}
+.gf-rapid-left h2{margin:0 0 18px;
+  color:#1D3557;
+  font-family:'Inter',system-ui,sans-serif;
+  font-size:clamp(1.9rem,3vw,2.55rem);
+  line-height:1.12;
+  letter-spacing:-.03em;
+  font-weight:800;}
+.gf-rapid-copy{max-width:680px;color:#5F6878;font-size:15px;line-height:1.7;margin-bottom:36px}
+.gf-rapid-copy p{margin:0 0 10px}
+.gf-rapid-secure{font-size:13px;color:#737C8D}
+.gf-rapid-secure strong{color:#F5821F;font-weight:800}
+.gf-rapid-steps{display:grid;gap:14px;max-width:680px}
+.gf-rapid-step{position:relative;
+  background:#fff;
+  border:1px solid #E1E6EE;
+  border-radius:12px;
+  box-shadow:0 1px 2px rgba(15,42,68,.03);
+  padding:30px 22px 22px;
+  min-height:104px;}
+.gf-rapid-num{position:absolute;top:-16px;left:22px;width:38px;height:38px;border-radius:999px;
+  background:#F5821F;color:#fff;display:flex;align-items:center;justify-content:center;
+  font-weight:800;font-size:16px;box-shadow:0 10px 20px rgba(245,130,31,.2)}
+.gf-rapid-label{color:#F5821F;font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;margin-bottom:6px}
+.gf-rapid-step h3{margin:0 0 6px;color:#1D3557;font-size:15px;line-height:1.3;font-weight:800}
+.gf-rapid-step p{margin:0;color:#5F6878;font-size:13px;line-height:1.55}
+.gf-rapid-card{background:#fff;border:1px solid #E1E6EE;border-radius:18px;
+  box-shadow:0 18px 46px rgba(15,42,68,.08);padding:28px}
+.gf-rapid-progress{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;margin-bottom:28px}
+.gf-rapid-progress-item{display:flex;align-items:center;gap:10px;white-space:nowrap;color:#6B7280}
+.gf-rapid-progress-item span{width:30px;height:30px;border-radius:999px;display:flex;align-items:center;justify-content:center;
+  background:#F1F4F8;border:2px solid #E5E9EF;color:#6B7280;font-weight:800;font-size:13px}
+.gf-rapid-progress-item.active span{background:#F5821F;border-color:#FFE1CA;color:#fff;box-shadow:0 0 0 5px #FFF2E8}
+.gf-rapid-progress-item strong{color:#1D3557;font-size:13px;font-weight:800}
+.gf-rapid-progress-item:not(.active) strong{color:#6B7280}
+.gf-rapid-progress-line{height:3px;background:#E6E9EF;border-radius:999px;position:relative}
+.gf-rapid-progress-line::before{content:'';position:absolute;left:0;top:0;bottom:0;width:50%;background:#F5821F;border-radius:999px}
+.gf-rapid-form-title{color:#1D3557;font-size:17px;line-height:1.35;margin:0 0 22px;font-weight:800}
+.gf-rapid-card form{display:grid;gap:18px}
+.gf-rapid-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.gf-rapid-card label{display:grid;gap:8px}
+.gf-rapid-card label span{color:#6F7787;text-transform:uppercase;letter-spacing:.16em;font-size:10px;font-weight:800}
+.gf-rapid-card label span em{color:#F5821F;font-style:normal}
+.gf-rapid-card input,.gf-rapid-card textarea{width:100%;box-sizing:border-box;border:1px solid #DDE4EC;border-radius:12px;background:#fff;
+  padding:13px 16px;color:#1D3557;font-size:14px;font-family:'Inter',system-ui,sans-serif;
+  line-height:1.45;outline:none;transition:border-color .18s,box-shadow .18s}
+.gf-rapid-card input::placeholder,.gf-rapid-card textarea::placeholder{color:#A1A9B7}
+.gf-rapid-card input:focus,.gf-rapid-card textarea:focus{border-color:#F5821F;box-shadow:0 0 0 3px rgba(245,130,31,.12)}
+.gf-rapid-card textarea{min-height:96px;resize:vertical}
+.gf-rapid-upload{border:1px solid #DDE4EC;border-radius:12px;background:#FBFCFE;padding:12px 14px}
+.gf-rapid-upload input{border:0;padding:0;border-radius:0;background:transparent;font-size:12px;color:#697386}
+.gf-rapid-upload input::file-selector-button{border:0;background:#FFF2E8;color:#F5821F;border-radius:999px;padding:8px 14px;margin-right:10px;
+  font-size:12px;font-weight:800;cursor:pointer}
+.gf-rapid-card small{color:#737C8D;font-size:12px;line-height:1.5}
+.gf-rapid-actions{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:4px}
+.gf-rapid-actions p{margin:0;color:#8A93A3;font-size:12px}
+.gf-rapid-actions button{border:0;background:#F5821F;color:#fff;border-radius:999px;padding:14px 26px;min-width:170px;
+  font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;
+  box-shadow:0 10px 28px rgba(245,130,31,.22)}
+.gf-rapid-actions button:hover{background:#D96E10}
+.gf-rapid-wrap{grid-template-columns:1fr}
+.gf-rapid-card{max-width:680px}
+.gf-rapid-quote{padding:52px 18px}
+.gf-rapid-grid{grid-template-columns:1fr}
+.gf-rapid-card{padding:22px}
+.gf-rapid-progress{grid-template-columns:1fr;gap:10px}
+.gf-rapid-progress-line{display:none}
+.gf-rapid-actions{flex-direction:column;align-items:stretch}
+.gf-rapid-actions button{width:100%;min-width:0}
+.gf-rapid-left h2{font-size:2rem}
+@media(max-width:1100px){.gf-rapid-wrap{grid-template-columns:1fr}.gf-rapid-card{max-width:680px}}
+@media(max-width:640px){.gf-rapid-quote{padding:52px 18px}.gf-rapid-grid{grid-template-columns:1fr}.gf-rapid-card{padding:22px}.gf-rapid-progress{grid-template-columns:1fr;gap:10px}.gf-rapid-progress-line{display:none}.gf-rapid-actions{flex-direction:column;align-items:stretch}.gf-rapid-actions button{width:100%;min-width:0}.gf-rapid-left h2{font-size:2rem}}
+.gf-rapid-left h2{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif !important;
+  font-weight:800 !important;
+  letter-spacing:-0.03em;
+  color:#22395D;}
+.gf-rapid-card select:focus{border-color:#F5821F;box-shadow:0 0 0 3px rgba(245,130,31,.12)}
+.gf-rapid-note{padding:12px 14px;background:#FFF7F0;border:1px solid #FBE0C7;border-radius:12px;
+  font-size:12px;line-height:1.55;color:#5F6878}
+.gf-rapid-note strong{color:#D96E10;font-weight:800}
+.gf-rapid-card form[hidden]{display:none !important}
+.pl-confirm{padding:26px 4px;text-align:center}
+.pl-confirm-badge{width:46px;height:46px;border-radius:50%;background:#EAF7EE;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
+.pl-confirm-badge svg{width:24px;height:24px;fill:none;stroke:#1E9E52;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.pl-confirm h3{margin:0 0 8px;font-size:19px;font-weight:800;color:#15253D}
+.pl-confirm p{margin:0;font-size:14px;line-height:1.55;color:#5F6878}
+.pl-err{margin:0 0 14px;padding:10px 12px;border:1px solid #F0C2C2;background:#FDF3F3;color:#9B2C2C;border-radius:8px;font-size:13px;line-height:1.45}
+.pl-quote-busy{opacity:.6;pointer-events:none}
+</style>
+<div class="gf-rapid-wrap">
+<div class="gf-rapid-left">
+      <div class="gf-rapid-kicker"><span></span>Rapid Response Quote</div>
+      <h2>Ready to move forward?</h2>
+      <div class="gf-rapid-copy">
+        <p>Upload your drawing or request a quote — our engineering team will review your design and respond within 24 hours.</p>
+        <p>No redesign required to start — we'll help optimise your part.</p>
+        <p class="gf-rapid-secure"><strong>♢</strong> Uploads stay confidential. We can sign your NDA on request before you share files.</p>
+      </div>
+      <div class="gf-rapid-steps">
+        <div class="gf-rapid-step">
+          <div class="gf-rapid-num">1</div>
+          <div><div class="gf-rapid-label">Now</div><h3>You submit your request</h3><p>Name, email, description, drawing. No commitment.</p></div>
+        </div>
+        <div class="gf-rapid-step">
+          <div class="gf-rapid-num">2</div>
+          <div><div class="gf-rapid-label">Within hours</div><h3>Engineer reviews your part</h3><p>DFM check on geometry, tolerances, material fit.</p></div>
+        </div>
+        <div class="gf-rapid-step">
+          <div class="gf-rapid-num">3</div>
+          <div><div class="gf-rapid-label">Within 24 hours</div><h3>Quote &amp; process path confirmed</h3><p>Feasibility, recommended process, next steps.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gf-rapid-card">
+      <div class="gf-rapid-progress">
+        <div class="gf-rapid-progress-item active"><span>1</span><strong>Your part</strong></div>
+        <div class="gf-rapid-progress-line"></div>
+        <div class="gf-rapid-progress-item"><span>2</span><strong>Project details</strong></div>
+      </div>
+      <h3 class="gf-rapid-form-title">Step 1 — Tell us about your part</h3>
+      <form id="pl-quote-form" novalidate>
+        <div class="gf-rapid-grid">
+          <label><span>Your name <em>*</em></span><input id="r-name" name="name" type="text" autocomplete="name" placeholder="Dr. Jane Smith" required></label>
+          <label><span>Organisation</span><input id="r-org" name="org" type="text" autocomplete="organization" placeholder="University / Company"></label>
+        </div>
+        <label><span>Email <em>*</em></span><input id="r-email" name="email" type="email" autocomplete="email" placeholder="j.smith@example.com" required></label>
+        <label><span>Part description and requirements <em>*</em></span><textarea id="r-desc" name="description" rows="4" required placeholder="e.g. Titanium implant, 4 machined faces, ±8 µm on mating surfaces, 50 parts, first-article report required"></textarea></label>
+        <label>
+          <span>Upload drawing / CAD</span>
+          <div class="gf-rapid-upload"><input id="r-file" name="file" type="file" accept=".step,.stp,.stl,.iges,.igs,.pdf,.dxf,.dwg,.zip"></div>
+          <small>STEP, STL, IGES, PDF, DXF, DWG, or ZIP up to 25 MB</small>
+        </label>
+        <div class="gf-rapid-actions"><p>No commitment · 24h response</p><button type="button" type="submit" id="r-submit">Continue →</button></div>
+      </form></div>
+</div>
+<script>
+
+(function(){
+  var PORTAL='143181153', FORM='9dba7d36-e36b-4a10-9411-9dc073dab7a0', FORM_ID='rapid_response_quote';
+  var UPLOAD='/wp-json/cnc-quote/v1/upload';
+  var root=document.getElementById('pl-quote-form'); if(!root||root.dataset.plWired) return; root.dataset.plWired='1';
+  var card=root.closest('.gf-rapid-card');
+
+  function utm(){
+    var out={}, qs=new URLSearchParams(location.search);
+    ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid'].forEach(function(k){ var v=qs.get(k); if(v) out[k]=v; });
+    try{
+      if(Object.keys(out).length){ localStorage.setItem('pl_utm_last',JSON.stringify(out)); if(!localStorage.getItem('pl_utm_first')) localStorage.setItem('pl_utm_first',JSON.stringify(out)); }
+      else { out=JSON.parse(localStorage.getItem('pl_utm_last')||'null')||JSON.parse(localStorage.getItem('pl_utm_first')||'null')||{}; }
+    }catch(e){}
+    return out;
+  }
+  function hutk(){ var m=document.cookie.match(/hubspotutk=([^;]+)/); return m?m[1]:''; }
+  function track(ev,data){
+    var p={event:ev,form_id:FORM_ID,page_path:location.pathname};
+    var u=utm(); for(var k in u) p[k]=u[k];
+    if(data) for(var k2 in data) p[k2]=data[k2];
+    try{ (window.dataLayer=window.dataLayer||[]).push(p); }catch(e){}
+    try{ if(window.gtag) window.gtag('event',ev,p); }catch(e){}
+  }
+  function err(msg){
+    var prev=card&&card.querySelector('.pl-err'); if(prev) prev.remove();
+    var d=document.createElement('div'); d.className='pl-err'; d.textContent='⚠ '+msg;
+    root.parentNode.insertBefore(d,root);
+    try{ d.scrollIntoView({behavior:'smooth',block:'center'}); }catch(e){}
+  }
+  function done(msg){
+    if(!card) return;
+    card.innerHTML='<div class="pl-confirm"><div class="pl-confirm-badge">'
+      +'<svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div>'
+      +'<h3>Request received — thank you</h3><p>'+msg+'</p></div>';
+    try{ card.scrollIntoView({behavior:'smooth',block:'center'}); }catch(e){}
+  }
+  var started=false;
+  root.addEventListener('input',function(){ if(!started){ started=true; track('lead_form_start'); } },{once:false});
+  ['r-name','r-org','r-email','r-desc'].forEach(function(id){
+    var el=document.getElementById(id); if(!el) return;
+    el.addEventListener('blur',function(){
+      if(!el.value.trim()) return;
+      // PII never carries a value into analytics
+      var pii=(id==='r-name'||id==='r-email'||id==='r-desc');
+      track('lead_form_field', pii?{field_name:id.slice(2),field_filled:1}:{field_name:id.slice(2),field_value:el.value.trim().slice(0,60)});
+    });
+  });
+
+  async function upload(input){
+    if(!input||!input.files||!input.files[0]) return '';
+    var fd=new FormData(); fd.append('file',input.files[0]);
+    try{
+      var r=await fetch(UPLOAD,{method:'POST',body:fd}); var j=await r.json();
+      if(r.ok&&j&&j.url) return j.url;
+      err('That file could not be uploaded ('+((j&&j.error)||'unknown')+'). Send the request without it, or try a smaller file.');
+      return null;
+    }catch(e){ console.error(e); err('That file could not be uploaded. Send the request without it, or try again.'); return null; }
+  }
+
+  root.addEventListener('submit',async function(ev){
+    ev.preventDefault();
+    var prev=card&&card.querySelector('.pl-err'); if(prev) prev.remove();
+    var name=(document.getElementById('r-name').value||'').trim();
+    var org=(document.getElementById('r-org').value||'').trim();
+    var email=(document.getElementById('r-email').value||'').trim();
+    var desc=(document.getElementById('r-desc').value||'').trim();
+    if(!name||!email||!desc){ err('Please add your name, email, and a part description.'); return; }
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)){ err('That email address does not look right — please check it.'); return; }
+    root.classList.add('pl-quote-busy');
+    var fileUrl=await upload(document.getElementById('r-file'));
+    if(fileUrl===null){ root.classList.remove('pl-quote-busy'); return; }
+    var parts=name.split(/\s+/);
+    var fields={
+      email:email,
+      firstname:parts.shift(),
+      lastname:parts.join(' '),
+      company:org,
+      potomac_project_name:'Rapid Response Quote — '+document.title,
+      potomac_project_description:desc,
+      potomac_file_submission:fileUrl||'',
+      hs_lead_status:'NEW'
+    };
+    var u=utm(); for(var k in u) fields[k]=u[k];
+    var props=Object.keys(fields).filter(function(k){ return fields[k]!=null&&fields[k]!==''; })
+      .map(function(k){ return {objectTypeId:'0-1',name:k,value:String(fields[k])}; });
+    track('lead_form_submit',{fields_completed:props.length});
+    try{
+      var r=await fetch('https://api.hsforms.com/submissions/v3/integration/submit/'+PORTAL+'/'+FORM,{
+        method:'POST',headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({fields:props,context:{pageName:document.title,pageUri:location.href,hutk:hutk()||undefined}})
+      });
+      var j=await r.json().catch(function(){ return null; });
+      if(r.ok){ track('lead_form_submit_success'); done('Our engineers will review your request and respond within 24 hours.'); return; }
+      console.error('HubSpot submit failed',r.status,j);
+      track('lead_form_submit_error',{error:'http_'+r.status});
+      err('We could not send that just now. Please try again, or email inq@goodfellow.com.');
+    }catch(e){
+      console.error(e); track('lead_form_submit_error',{error:'network'});
+      err('We could not send that just now. Please check your connection, or email inq@goodfellow.com.');
+    }
+    root.classList.remove('pl-quote-busy');
+  });
+
+  // The design's action button is type="button", so it never raises a submit event.
+  // Bind it explicitly and route through the same handler; Enter-to-submit still works
+  // because the submit listener above stays in place.
+  Array.prototype.forEach.call(root.querySelectorAll('button'), function(b){
+    if(b.dataset.plBound) return; b.dataset.plBound='1';
+    b.addEventListener('click', function(ev){
+      ev.preventDefault();
+      root.dispatchEvent(new Event('submit', {cancelable:true, bubbles:false}));
+    });
+  });
+})();
+
+</script>
