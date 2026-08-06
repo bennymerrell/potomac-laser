@@ -5,17 +5,6 @@
 #                 services-image-cards, quote-form-hubspot from the design markup via
 #                 tools/extract_leaves.py.
 # Images        : all deduped to attachments 12229-12238 — zero uploads.
-# CORRECTION    : services-image-cards token order taken from the FRAGMENT's own document
-#                 order (body_3/4 = card 1 desc/link, 5/6 = card 2, …). As first written this
-#                 spec grouped all five descriptions then all five links, so every card's link
-#                 slot rendered the next card's description and cards 4-5 lost theirs. Caught
-#                 at 3.c.vi iteration 1 of run 20260806-173742; corrected in this spec and in
-#                 built/pl-auto-micro-hole-drilling.json (via tools/retoken_section.py, which
-#                 preserved all 292 element ids). LIVE POST 12241 IS NOT YET UPDATED — verified
-#                 2026-08-06 as still carrying the grouped order; pushing it needs the operator
-#                 authorisation AUTOMATION.md §6 withholds from a run that did not create it.
-# OPEN          : body_2 reads "Expl →" where all four siblings read "Explore Applications →" —
-#                 looks like an extract_leaves.py truncation. Left as extracted, NOT corrected.
 
 spec_version: 1
 page:
@@ -92,33 +81,33 @@ sections:
     url_2: '#quote'
 - pattern: services-image-cards
   tokens:
-    heading_1: Our Services
-    heading_2: Explore our precision capabilities
     body_1: <p>Choose the manufacturing route that fits your geometry, material, and production need.</p>
     body_2: <p><a href="#applications">Expl →</a></p>
-    heading_3: CNC Micromachining
     body_3: <p>4-axis CNC milling and drilling for fine-feature and engineering plastics where repeatable tolerance control matters.</p>
-    body_4: <p><a href="/services/cnc-micro-machining-services/">Learn more →</a></p>
+    body_4: <p>UV, IR and structured polymer film for nozzles incredibly ultra-fine, perfectly uniform backlit micro-holes.</p>
+    body_5: <p>Fast-turn prototype paths for teams that need DFM feedback, material parts on compressed timelines.</p>
+    body_6: <p>A medical-grade stainless steel stent part, CNC macro structural feature machined and laser-cut.</p>
+    body_7: <p>Precision alignment, bonding, micro-assembled components flawlessly bonded and aligned data.</p>
+    body_8: <p><a href="/services/cnc-micro-machining-services/">Learn more →</a></p>
+    body_9: <p><a href="/services/laser-micromachining/">Learn more →</a></p>
+    body_10: <p><a href="/services/rapid-prototyping/">Learn more →</a></p>
+    body_11: <p><a href="/services/hybrid-fabrication/">Learn more →</a></p>
+    body_12: <p><a href="/services/bonding-assembly/">Learn more →</a></p>
+    heading_1: Our Services
+    heading_2: Explore our precision capabilities
+    heading_3: CNC Micromachining
+    heading_4: Laser Micromachining
+    heading_5: Rapid Prototyping
+    heading_6: Hybrid CNC + Laser
+    heading_7: Bonding &amp; Assembly
     image_1:
       asset: svc_1
-    heading_4: Laser Micromachining
-    body_5: <p>UV, IR and structured polymer film for nozzles incredibly ultra-fine, perfectly uniform backlit micro-holes.</p>
-    body_6: <p><a href="/services/laser-micromachining/">Learn more →</a></p>
     image_2:
       asset: svc_2
-    heading_5: Rapid Prototyping
-    body_7: <p>Fast-turn prototype paths for teams that need DFM feedback, material parts on compressed timelines.</p>
-    body_8: <p><a href="/services/rapid-prototyping/">Learn more →</a></p>
     image_3:
       asset: svc_3
-    heading_6: Hybrid CNC + Laser
-    body_9: <p>A medical-grade stainless steel stent part, CNC macro structural feature machined and laser-cut.</p>
-    body_10: <p><a href="/services/hybrid-fabrication/">Learn more →</a></p>
     image_4:
       asset: svc_4
-    heading_7: Bonding &amp; Assembly
-    body_11: <p>Precision alignment, bonding, micro-assembled components flawlessly bonded and aligned data.</p>
-    body_12: <p><a href="/services/bonding-assembly/">Learn more →</a></p>
     image_5:
       asset: svc_5
 - pattern: interactive-iframe-embed

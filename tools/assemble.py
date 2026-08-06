@@ -12,10 +12,19 @@ Runs SKILL.md §2's gates on this side of the wire: no unfilled token survives, 
 design-time scaffolding (Tailwind CDN / unpkg / babel / tweaks panel), no external
 script or stylesheet, every image slot carries an id, and the result parses as JSON.
 
-`--self-test` re-assembles specs/pl-auto-micro-hole-drilling/spec.yaml and compares it
-to built/pl-auto-micro-hole-drilling.json — the page verified against its mock on
-2026-08-06 — with element ids normalised. Any difference means this assembler does not
-reproduce a build that is known good, so it must not be trusted on a new page.
+`--self-test` re-assembles tools/fixtures/mhd-preorder/spec.yaml and compares it to
+tools/fixtures/mhd-preorder/expected.json with element ids normalised. Any difference
+means this assembler does not reproduce a build produced by the earlier, pre-assembler
+path, so it must not be trusted on a new page.
+
+That fixture is a FROZEN COPY of the Micro-Hole Drilling spec and build as they stood at
+commit e5cffb6, kept only to pin the assembler's *mechanics* — token substitution, image
+id re-attachment, re-iding, section order. It is deliberately not updated: the live spec
+and build have since had their `services-image-cards` token order corrected (body_3/4 =
+card 1's description and link, 5/6 = card 2, …, not five descriptions then five links),
+so the fixture still carries that content defect. Do not read it as a content reference,
+and do not "fix" it — re-pointing the test at a current build would make it circular,
+since both sides would then come from this same assembler.
 
 The two structural `options` (`you_are_here_unit`, `highlight_step`) are verified
 against the fragment rather than applied blindly: the fragments were tokenised from
@@ -242,18 +251,18 @@ def normalise(data):
 
 
 def self_test():
-    spec_path = os.path.join(ROOT, 'specs', 'pl-auto-micro-hole-drilling', 'spec.yaml')
-    ref_path = os.path.join(ROOT, 'built', 'pl-auto-micro-hole-drilling.json')
+    spec_path = os.path.join(ROOT, 'tools', 'fixtures', 'mhd-preorder', 'spec.yaml')
+    ref_path = os.path.join(ROOT, 'tools', 'fixtures', 'mhd-preorder', 'expected.json')
     _, got = assemble(spec_path)
     with open(ref_path) as f:
         want = json.load(f)
     a = json.dumps(normalise(got), sort_keys=True, ensure_ascii=False)
     b = json.dumps(normalise(want), sort_keys=True, ensure_ascii=False)
     if a == b:
-        print('self-test PASS — reproduces built/pl-auto-micro-hole-drilling.json '
+        print('self-test PASS — reproduces tools/fixtures/mhd-preorder/expected.json '
               '(ids normalised)')
         return 0
-    print('self-test FAIL — assembly differs from the verified MHD build')
+    print('self-test FAIL — assembly differs from the frozen pre-assembler MHD build')
     import difflib
     la = json.dumps(normalise(got), indent=1, sort_keys=True, ensure_ascii=False).splitlines()
     lb = json.dumps(normalise(want), indent=1, sort_keys=True, ensure_ascii=False).splitlines()
