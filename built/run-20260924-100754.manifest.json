@@ -1,0 +1,304 @@
+{
+ "run_id": "20260924-100754",
+ "started_utc": "2026-09-24T10:07:54Z",
+ "mode": "autonomous coordinator run (AUTOMATION.md), RUN A",
+ "target": "potomac-laser.com (LIVE) via novamira-potomac-laser-co, PRODUCTION MODE",
+ "zip": {
+  "filename": "Potomac Laser.zip",
+  "sha256": "fab7225ce0879014418672228148420215c3a39fa6463bea2012d2ce7b798db9",
+  "source": "origin/project-zip e1320ef",
+  "manifest": "manifests/potomac-laser.txt",
+  "manifest_hash_matched": true
+ },
+ "recovery_floor": {
+  "gate": "SKILL.md \u00a70 \u2014 newest set was 2026-09-20T04:01:49Z (~102h, stale); TAKEN this run",
+  "updraft_set_timestamp": 1790244496,
+  "updraft_set_utc": "2026-09-24T10:08:16Z",
+  "backup_nonce": "ec283efbb074",
+  "db_file": "backup_2026-09-24-0608_Potomac_Laser_ec283efbb074-db.gz.crypt",
+  "db_size": 22284192,
+  "service": [
+   "dropbox"
+  ],
+  "updraft_last_backup_success": 1,
+  "updraft_last_backup_errors": [],
+  "duration_s": 28,
+  "trigger": "do_action('updraft_backupnow_backup_database', nocloud=0) \u2014 database only"
+ },
+ "posts_created": [
+  {
+   "post_id": 12268,
+   "post_type": "page",
+   "post_status": "draft",
+   "slug": "pl-auto-about-our-group",
+   "title": "About Our Group",
+   "design_page": "About - About Our Group.html",
+   "preview_url": "https://www.potomac-laser.com/?page_id=12268&preview=true",
+   "provenance_meta": {
+    "_pl_auto_page": "About - About Our Group.html",
+    "_pl_auto_zip": "fab7225ce0879014418672228148420215c3a39fa6463bea2012d2ce7b798db9",
+    "_pl_auto_run": "20260924-100754"
+   },
+   "page_settings_written": [
+    "_elementor_page_settings.custom_css (Inter font \u2014 per-post equivalent of Code Snippet #10)",
+    "_wp_page_template=elementor_header_footer"
+   ]
+  },
+  {
+   "post_id": 12277,
+   "post_type": "page",
+   "post_status": "draft",
+   "slug": "pl-auto-about-potomac",
+   "title": "About Goodfellow Microfabrication",
+   "design_page": "About - About Potomac.html",
+   "preview_url": "https://www.potomac-laser.com/?page_id=12277&preview=true",
+   "provenance_meta": {
+    "_pl_auto_page": "About - About Potomac.html",
+    "_pl_auto_zip": "fab7225ce0879014418672228148420215c3a39fa6463bea2012d2ce7b798db9",
+    "_pl_auto_run": "20260924-100754"
+   },
+   "page_settings_written": [
+    "_elementor_page_settings.custom_css (Inter font \u2014 per-post equivalent of Code Snippet #10)",
+    "_wp_page_template=elementor_header_footer"
+   ]
+  }
+ ],
+ "attachments_created": [
+  {
+   "attachment_id": 12264,
+   "file": "2026/09/pl-auto-group-logo-goodfellow.png",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-group-logo-goodfellow.png",
+   "sha256": "a524e7ed2323744a632dab34b2f392e84ecf1cabe77e94e8bfbb19d3e3a7242a",
+   "role": "split-rows-logo-alternating logo",
+   "page": "About - About Our Group.html",
+   "created_utc": "2026-09-24",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12265,
+   "file": "2026/09/pl-auto-group-logo-microfab.png",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-group-logo-microfab.png",
+   "sha256": "0b48595edee2103b509a06c4f7815f10aa165d5ee618a9aa3167e75081706b78",
+   "role": "split-rows-logo-alternating logo",
+   "page": "About - About Our Group.html",
+   "created_utc": "2026-09-24",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12266,
+   "file": "2026/09/pl-auto-group-logo-stp.png",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-group-logo-stp.png",
+   "sha256": "3eb7d6001fd1a737c8d7be19a658e59d913d04d2bd8e37a7df4fd4847b01e7b0",
+   "role": "split-rows-logo-alternating logo",
+   "page": "About - About Our Group.html",
+   "created_utc": "2026-09-24",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12267,
+   "file": "2026/09/pl-auto-group-logo-bas.png",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-group-logo-bas.png",
+   "sha256": "777e67c41d8bd25079e9866c25e78d94f205b8b54d91d98c1afd3ef4e026abbe",
+   "role": "split-rows-logo-alternating logo",
+   "page": "About - About Our Group.html",
+   "created_utc": "2026-09-24",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12269,
+   "file": "2026/09/pl-auto-about-team-facility.jpg",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-about-team-facility.jpg",
+   "sha256_source": "9eb5d3b9ee29d8a2a33c0a8c91631659dfc9dde9ca57425a97fa66d52536ffb9",
+   "role": "split media photo",
+   "page": "About - About Potomac.html"
+  },
+  {
+   "attachment_id": 12270,
+   "file": "2026/09/pl-auto-about-icon-history.svg",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-about-icon-history.svg",
+   "sha256_source": "e538613f1becac2a767f8df923b41537d1fdcff5eac9af47e5885cb6ee9fc67c",
+   "role": "card icon",
+   "page": "About - About Potomac.html",
+   "note": "Safe SVG sanitised the file on upload, so the stored bytes differ from the source"
+  },
+  {
+   "attachment_id": 12271,
+   "file": "2026/09/pl-auto-about-icon-partnership.svg",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-about-icon-partnership.svg",
+   "sha256_source": "1e5bc6b2d8464c9ef03468e130349104dc59b6c6e49aba8321e78cf94ae7fa0e",
+   "role": "card icon",
+   "page": "About - About Potomac.html",
+   "note": "Safe SVG sanitised the file on upload, so the stored bytes differ from the source"
+  },
+  {
+   "attachment_id": 12272,
+   "file": "2026/09/pl-auto-about-icon-group.svg",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-about-icon-group.svg",
+   "sha256_source": "95fbafce29066f233f3005b61ef1626b322192437cfd35b1b2a741636b041612",
+   "role": "card icon",
+   "page": "About - About Potomac.html",
+   "note": "Safe SVG sanitised the file on upload, so the stored bytes differ from the source"
+  },
+  {
+   "attachment_id": 12273,
+   "file": "2026/09/pl-auto-about-leader-simon-kenney.jpg",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-about-leader-simon-kenney.jpg",
+   "sha256_source": "b775f0a7d0393a03b6f4417b4104a42e4b558267c06b84d0aef251442a64eee8",
+   "role": "leadership portrait",
+   "page": "About - About Potomac.html"
+  },
+  {
+   "attachment_id": 12274,
+   "file": "2026/09/pl-auto-about-leader-andrew-watson.jpg",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-about-leader-andrew-watson.jpg",
+   "sha256_source": "62969177e3ab628c970a8edb26965fde59612f81661f68488bff0e13fbc4f5ee",
+   "role": "leadership portrait",
+   "page": "About - About Potomac.html"
+  },
+  {
+   "attachment_id": 12275,
+   "file": "2026/09/pl-auto-about-leader-mike-davis.jpg",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-about-leader-mike-davis.jpg",
+   "sha256_source": "1d334c494d623a95a2e7eb38f74a8a9c0ac941f6a8103e8f772b291a35d2bb40",
+   "role": "leadership portrait",
+   "page": "About - About Potomac.html"
+  },
+  {
+   "attachment_id": 12276,
+   "file": "2026/09/pl-auto-about-leader-saniya-shetty.jpg",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-about-leader-saniya-shetty.jpg",
+   "sha256_source": "fcedbc7f43b35b32e4df9ad854663930bdda5a14fe9fcdf263b1b3f254f9f96f",
+   "role": "leadership portrait",
+   "page": "About - About Potomac.html"
+  }
+ ],
+ "files_uploaded": [
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-100754/pl-auto-about-our-group.elementor.json",
+   "bytes": 55453,
+   "sha256": "e92576e5097b60d0cdd2df785fddb648ef0ad419977e054928a75f210c3ae8fb",
+   "role": "staged _elementor_data",
+   "dir_created": "wp-content/uploads/novamira-drafts/run-20260924-100754"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-100754/pl-auto-about-our-group.v2.elementor.json",
+   "bytes": 59836,
+   "sha256": "347fbe4d876f51b372ae2a45cb34a077b24bfefe0f69b8a02bcf78a1e2694ece",
+   "role": "staged _elementor_data, verify iteration 2"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-100754/pl-auto-about-our-group.v3.elementor.json",
+   "bytes": 59987,
+   "sha256": "f2d60bec57881eb4711858857f0f7215162f55a86b6db0f9a18706e7366f9cdd",
+   "role": "staged _elementor_data, verify iteration 3"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/legend-cards-dark.json",
+   "bytes": 56205,
+   "sha256": "5d1f91b7aebceaba2181aad25ce6e22cefeef287c37aaf3c212ce831324f0324",
+   "role": "\u00a77.4 tokenised fragment from post 12268"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/split-rows-logo-alternating.json",
+   "bytes": 132319,
+   "sha256": "dc75b5ee6ce3211812880b79fc294621867cd3621d63f39f65bb5901cdb07ce7",
+   "role": "\u00a77.4 tokenised fragment from post 12268",
+   "note": "rewritten in place by this run: 3 custom_css Kit hexes -> var(--e-global-color-*) (colour global map step)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-100754/pl-auto-about-potomac.elementor.json",
+   "bytes": 62657,
+   "sha256": "9c8bd6a3b26d7d813775cc0b89dad64858ceb3160022e391af0c5f1d53a641eb",
+   "role": "staged _elementor_data, verify iteration 1"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-100754/pl-auto-about-potomac.v2.elementor.json",
+   "bytes": 62629,
+   "sha256": "f60fcd9ef6796c03fbc3037ef7379331cabac0a4e06a4371e1499b8feb6bdeb7",
+   "role": "staged _elementor_data, verify iteration 2"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-100754/pl-auto-about-potomac.v3.elementor.json",
+   "bytes": 63413,
+   "sha256": "1fd236c648f466b53d25fc2bfae9431872372f6f746b3be8011930044a5d5a2b",
+   "role": "staged _elementor_data, verify iteration 3"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-100754/pl-auto-about-potomac.tokmap.json",
+   "bytes": 7231,
+   "sha256": "dbfae7997d644abec1b1f0095ea6282bf994360d57d6001bbde056de551fe4f0",
+   "role": "\u00a77.4 value->token inversion map for post 12277"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/hero-dark-centered-meta.json",
+   "bytes": 23574,
+   "sha256": "e1a805d83e6e32810ef242f43f9bf87a43cf1fde205ba1c78d338ae0bcfb38f5",
+   "role": "\u00a77.4 tokenised fragment from post 12277 (0 custom_css Kit var rewrites)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/split-media-prose.json",
+   "bytes": 23915,
+   "sha256": "feb90b69bc125f1a80bc673eac1756e3e6f9aec85144b41ed51045ddf41fb1d8",
+   "role": "\u00a77.4 tokenised fragment from post 12277 (0 custom_css Kit var rewrites)",
+   "note": "rewritten in place by this run: secondary button border_color #F5821F -> __globals__ gforange (colour global map step)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/icon-cards-3.json",
+   "bytes": 30175,
+   "sha256": "ce703ba45377c94b7cf1ce932c2b7f0f3ed098c72ea5f28c62363509e55f9895",
+   "role": "\u00a77.4 tokenised fragment from post 12277 (6 custom_css Kit var rewrites)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/profile-cards-4.json",
+   "bytes": 56493,
+   "sha256": "938a73cb0f1efd68af2c1b1b6db41dcf4bbbf2d9eb28c9501301721f72587258",
+   "role": "\u00a77.4 tokenised fragment from post 12277 (8 custom_css Kit var rewrites)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/stat-cards-6.json",
+   "bytes": 57558,
+   "sha256": "5e792a2bfc3b6b161517ee62dbe9ace1fff73dbbbf960f19d30ccdb48eb02e56",
+   "role": "\u00a77.4 tokenised fragment from post 12277 (0 custom_css Kit var rewrites)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-100754/pl-auto-about-our-group.v4.elementor.json",
+   "bytes": 60085,
+   "sha256": "c18d55d30cd7926ce8f0066aaf08182d71b2b0a9b3c1e3ee7ad4d40f84845b3c",
+   "role": "staged _elementor_data, \u00a73.d link pass"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-100754/pl-auto-about-potomac.v4.elementor.json",
+   "bytes": 63454,
+   "sha256": "9d49e5c10df3d1ae52af003d32efb0d30fb3effb8087bf0667ad034e7c4140e8",
+   "role": "staged _elementor_data, \u00a73.d link pass"
+  }
+ ],
+ "finished_utc": "2026-09-24",
+ "result": {
+  "zip_status": "partial",
+  "built": [
+   12268,
+   12277
+  ],
+  "failed_pattern_budget": 8,
+  "skipped_already_built": [
+   12239,
+   12240,
+   12241,
+   12242,
+   12243
+  ],
+  "patterns_minted": 7,
+  "pattern_budget": 8
+ },
+ "global_operations": [
+  "\u00a70 UpdraftPlus database-only backup, set 1790244496 (nonce ec283efbb074)"
+ ],
+ "not_touched": [
+  "posts 12239-12243",
+  "*-interactive.html files",
+  "Kit 11259",
+  "Code Snippets",
+  "wp_options (other than UpdraftPlus own writes from the \u00a70 trigger)"
+ ]
+}

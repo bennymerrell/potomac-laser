@@ -1,0 +1,3333 @@
+[
+ {
+  "id": "121cb32",
+  "elType": "container",
+  "isInner": false,
+  "settings": {
+   "flex_direction": "column",
+   "flex_align_items": "center",
+   "padding": {
+    "unit": "px",
+    "top": "80",
+    "right": "24",
+    "bottom": "80",
+    "left": "24",
+    "isLinked": false
+   },
+   "background_background": "classic",
+   "custom_css": "selector{background-image:radial-gradient(ellipse at 30% 0%,rgba(14,99,168,0.28) 0%,transparent 60%),radial-gradient(ellipse at 90% 100%,rgba(148,18,82,0.16) 0%,transparent 55%),linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);background-size:auto,auto,32px 32px,32px 32px;}",
+   "content_width": "full",
+   "background_color": "",
+   "__globals__": {
+    "background_color": "globals/colors?id=gfnavydp"
+   }
+  },
+  "elements": [
+   {
+    "id": "fc1618c",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+     "content_width": "boxed",
+     "flex_direction": "column",
+     "flex_align_items": "center",
+     "flex_gap": {
+      "unit": "px",
+      "column": "0",
+      "row": "0",
+      "isLinked": true
+     },
+     "padding": {
+      "unit": "px",
+      "top": "0",
+      "right": "0",
+      "bottom": "0",
+      "left": "0",
+      "isLinked": true
+     },
+     "boxed_width": {
+      "unit": "px",
+      "size": 1152
+     }
+    },
+    "elements": [
+     {
+      "id": "cef7177",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+       "flex_direction": "column",
+       "flex_align_items": "center",
+       "flex_gap": {
+        "unit": "px",
+        "column": "0",
+        "row": "0",
+        "isLinked": true
+       },
+       "width": {
+        "unit": "px",
+        "size": 760
+       },
+       "width_mobile": {
+        "unit": "%",
+        "size": 100
+       },
+       "content_width": "full",
+       "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+       }
+      },
+      "elements": [
+       {
+        "id": "bd575f1",
+        "elType": "widget",
+        "widgetType": "heading",
+        "settings": {
+         "title": "Why Us",
+         "header_size": "div",
+         "typography_typography": "custom",
+         "typography_font_family": "Inter",
+         "typography_font_size": {
+          "unit": "px",
+          "size": 12
+         },
+         "typography_font_weight": "600",
+         "title_color": "",
+         "__globals__": {
+          "title_color": "globals/colors?id=gforange"
+         },
+         "align": "center",
+         "typography_line_height": {
+          "unit": "px",
+          "size": 18
+         },
+         "typography_letter_spacing": {
+          "unit": "px",
+          "size": 1.68
+         },
+         "typography_text_transform": "uppercase"
+        },
+        "elements": []
+       },
+       {
+        "id": "e7a0485",
+        "elType": "widget",
+        "widgetType": "heading",
+        "settings": {
+         "title": "Four specialist brands. One Goodfellow Group.",
+         "header_size": "h2",
+         "typography_typography": "custom",
+         "typography_font_family": "Inter",
+         "typography_font_size": {
+          "unit": "px",
+          "size": 40
+         },
+         "typography_font_weight": "600",
+         "title_color": "",
+         "__globals__": {
+          "title_color": "globals/colors?id=gfwhite"
+         },
+         "align": "center",
+         "typography_line_height": {
+          "unit": "px",
+          "size": 44.8
+         },
+         "typography_letter_spacing": {
+          "unit": "px",
+          "size": -0.8
+         },
+         "_margin": {
+          "unit": "px",
+          "top": "12",
+          "right": "0",
+          "bottom": "16",
+          "left": "0",
+          "isLinked": false
+         }
+        },
+        "elements": []
+       },
+       {
+        "id": "f175cd5",
+        "elType": "widget",
+        "widgetType": "text-editor",
+        "settings": {
+         "editor": "<p>We deliver high-quality scientific materials and services across a wide range of industries and applications. Together, Goodfellow, Goodfellow Microfabrication, Suisse Technology Partners and the Bureau of Analysed Samples, we drive innovation from concept to market, becoming your one-stop shop for scientific and industrial material needs.</p>",
+         "typography_typography": "custom",
+         "typography_font_family": "Inter",
+         "typography_font_size": {
+          "unit": "px",
+          "size": 18
+         },
+         "typography_font_weight": "400",
+         "text_color": "rgba(255,255,255,0.74)",
+         "typography_line_height": {
+          "unit": "px",
+          "size": 29.7
+         },
+         "align": "center",
+         "custom_css": "selector p{font-size:18px;line-height:29.7px;font-weight:400;color:rgba(255,255,255,0.74);margin:0}"
+        },
+        "elements": []
+       }
+      ]
+     },
+     {
+      "id": "cba058c",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+       "flex_direction": "row",
+       "flex_align_items": "stretch",
+       "flex_gap": {
+        "unit": "px",
+        "column": "14",
+        "row": "14",
+        "isLinked": true
+       },
+       "flex_wrap": "wrap",
+       "width": {
+        "unit": "%",
+        "size": 100
+       },
+       "content_width": "full",
+       "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+       },
+       "margin": {
+        "unit": "px",
+        "top": "48",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": false
+       }
+      },
+      "elements": [
+       {
+        "id": "78c6b97",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "html_tag": "a",
+         "link": {
+          "url": "#split-row-1",
+          "is_external": "",
+          "nofollow": ""
+         },
+         "flex_direction": "column",
+         "flex_align_items": "stretch",
+         "flex_gap": {
+          "unit": "px",
+          "column": "6",
+          "row": "6",
+          "isLinked": true
+         },
+         "padding": {
+          "unit": "px",
+          "top": "18",
+          "right": "20",
+          "bottom": "18",
+          "left": "20",
+          "isLinked": false
+         },
+         "background_background": "classic",
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "#DCE1EA",
+         "border_radius": {
+          "unit": "px",
+          "top": "8",
+          "right": "8",
+          "bottom": "8",
+          "left": "8",
+          "isLinked": true
+         },
+         "width": {
+          "unit": "%",
+          "size": 23.9
+         },
+         "width_mobile": {
+          "unit": "%",
+          "size": 100
+         },
+         "custom_css": "selector{flex:0 0 calc((100% - 42px) / 4) !important;max-width:calc((100% - 42px) / 4) !important;text-decoration:none;transition:box-shadow .25s cubic-bezier(.25,.46,.45,.94),transform .25s cubic-bezier(.25,.46,.45,.94),border-color .25s cubic-bezier(.25,.46,.45,.94)}selector:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(15,22,32,.08);border-color:#C3CBD8}@media(max-width:879px){selector{flex:0 0 calc((100% - 14px) / 2) !important;max-width:calc((100% - 14px) / 2) !important}}",
+         "content_width": "full",
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gfwhite"
+         }
+        },
+        "elements": [
+         {
+          "id": "906f33e",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+           "flex_direction": "row",
+           "flex_align_items": "center",
+           "flex_gap": {
+            "unit": "px",
+            "column": "9",
+            "row": "9",
+            "isLinked": true
+           },
+           "content_width": "full",
+           "padding": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+           }
+          },
+          "elements": [
+           {
+            "id": "9d606cd",
+            "elType": "container",
+            "isInner": false,
+            "settings": {
+             "width": {
+              "unit": "px",
+              "size": 11
+             },
+             "min_height": {
+              "unit": "px",
+              "size": 11
+             },
+             "custom_css": "selector{flex-shrink:0}",
+             "background_background": "classic",
+             "border_radius": {
+              "unit": "%",
+              "top": "50",
+              "right": "50",
+              "bottom": "50",
+              "left": "50",
+              "isLinked": true
+             },
+             "content_width": "full",
+             "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+             },
+             "background_color": "",
+             "__globals__": {
+              "background_color": "globals/colors?id=gforange"
+             }
+            },
+            "elements": []
+           },
+           {
+            "id": "890398d",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+             "title": "Goodfellow",
+             "header_size": "div",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 18
+             },
+             "typography_font_weight": "600",
+             "title_color": "#0F1620",
+             "typography_line_height": {
+              "unit": "px",
+              "size": 27
+             },
+             "typography_letter_spacing": {
+              "unit": "px",
+              "size": -0.18
+             }
+            },
+            "elements": []
+           }
+          ]
+         },
+         {
+          "id": "76437ba",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Advanced Materials",
+           "header_size": "div",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 13
+           },
+           "typography_font_weight": "600",
+           "title_color": "#65718A",
+           "typography_line_height": {
+            "unit": "px",
+            "size": 19.5
+           },
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": 1.04
+           },
+           "typography_text_transform": "uppercase"
+          },
+          "elements": []
+         }
+        ]
+       },
+       {
+        "id": "9083d5a",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "html_tag": "a",
+         "link": {
+          "url": "#split-row-2",
+          "is_external": "",
+          "nofollow": ""
+         },
+         "flex_direction": "column",
+         "flex_align_items": "stretch",
+         "flex_gap": {
+          "unit": "px",
+          "column": "6",
+          "row": "6",
+          "isLinked": true
+         },
+         "padding": {
+          "unit": "px",
+          "top": "18",
+          "right": "20",
+          "bottom": "18",
+          "left": "20",
+          "isLinked": false
+         },
+         "background_background": "classic",
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "#DCE1EA",
+         "border_radius": {
+          "unit": "px",
+          "top": "8",
+          "right": "8",
+          "bottom": "8",
+          "left": "8",
+          "isLinked": true
+         },
+         "width": {
+          "unit": "%",
+          "size": 23.9
+         },
+         "width_mobile": {
+          "unit": "%",
+          "size": 100
+         },
+         "custom_css": "selector{flex:0 0 calc((100% - 42px) / 4) !important;max-width:calc((100% - 42px) / 4) !important;text-decoration:none;transition:box-shadow .25s cubic-bezier(.25,.46,.45,.94),transform .25s cubic-bezier(.25,.46,.45,.94),border-color .25s cubic-bezier(.25,.46,.45,.94)}selector:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(15,22,32,.08);border-color:#C3CBD8}@media(max-width:879px){selector{flex:0 0 calc((100% - 14px) / 2) !important;max-width:calc((100% - 14px) / 2) !important}}",
+         "content_width": "full",
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gfwhite"
+         }
+        },
+        "elements": [
+         {
+          "id": "335daff",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+           "flex_direction": "row",
+           "flex_align_items": "center",
+           "flex_gap": {
+            "unit": "px",
+            "column": "9",
+            "row": "9",
+            "isLinked": true
+           },
+           "content_width": "full",
+           "padding": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+           }
+          },
+          "elements": [
+           {
+            "id": "8438b6f",
+            "elType": "container",
+            "isInner": false,
+            "settings": {
+             "width": {
+              "unit": "px",
+              "size": 11
+             },
+             "min_height": {
+              "unit": "px",
+              "size": 11
+             },
+             "custom_css": "selector{flex-shrink:0}",
+             "background_background": "classic",
+             "border_radius": {
+              "unit": "%",
+              "top": "50",
+              "right": "50",
+              "bottom": "50",
+              "left": "50",
+              "isLinked": true
+             },
+             "content_width": "full",
+             "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+             },
+             "background_color": "",
+             "__globals__": {
+              "background_color": "globals/colors?id=gforange"
+             }
+            },
+            "elements": []
+           },
+           {
+            "id": "92e8fb2",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+             "title": "Goodfellow Microfabrication",
+             "header_size": "div",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 18
+             },
+             "typography_font_weight": "600",
+             "title_color": "#0F1620",
+             "typography_line_height": {
+              "unit": "px",
+              "size": 27
+             },
+             "typography_letter_spacing": {
+              "unit": "px",
+              "size": -0.18
+             }
+            },
+            "elements": []
+           }
+          ]
+         },
+         {
+          "id": "994fee3",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Microfabrication",
+           "header_size": "div",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 13
+           },
+           "typography_font_weight": "600",
+           "title_color": "#65718A",
+           "typography_line_height": {
+            "unit": "px",
+            "size": 19.5
+           },
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": 1.04
+           },
+           "typography_text_transform": "uppercase"
+          },
+          "elements": []
+         }
+        ]
+       },
+       {
+        "id": "7ebe24f",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "html_tag": "a",
+         "link": {
+          "url": "#split-row-3",
+          "is_external": "",
+          "nofollow": ""
+         },
+         "flex_direction": "column",
+         "flex_align_items": "stretch",
+         "flex_gap": {
+          "unit": "px",
+          "column": "6",
+          "row": "6",
+          "isLinked": true
+         },
+         "padding": {
+          "unit": "px",
+          "top": "18",
+          "right": "20",
+          "bottom": "18",
+          "left": "20",
+          "isLinked": false
+         },
+         "background_background": "classic",
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "#DCE1EA",
+         "border_radius": {
+          "unit": "px",
+          "top": "8",
+          "right": "8",
+          "bottom": "8",
+          "left": "8",
+          "isLinked": true
+         },
+         "width": {
+          "unit": "%",
+          "size": 23.9
+         },
+         "width_mobile": {
+          "unit": "%",
+          "size": 100
+         },
+         "custom_css": "selector{flex:0 0 calc((100% - 42px) / 4) !important;max-width:calc((100% - 42px) / 4) !important;text-decoration:none;transition:box-shadow .25s cubic-bezier(.25,.46,.45,.94),transform .25s cubic-bezier(.25,.46,.45,.94),border-color .25s cubic-bezier(.25,.46,.45,.94)}selector:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(15,22,32,.08);border-color:#C3CBD8}@media(max-width:879px){selector{flex:0 0 calc((100% - 14px) / 2) !important;max-width:calc((100% - 14px) / 2) !important}}",
+         "content_width": "full",
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gfwhite"
+         }
+        },
+        "elements": [
+         {
+          "id": "a4f999f",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+           "flex_direction": "row",
+           "flex_align_items": "center",
+           "flex_gap": {
+            "unit": "px",
+            "column": "9",
+            "row": "9",
+            "isLinked": true
+           },
+           "content_width": "full",
+           "padding": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+           }
+          },
+          "elements": [
+           {
+            "id": "552bdc4",
+            "elType": "container",
+            "isInner": false,
+            "settings": {
+             "width": {
+              "unit": "px",
+              "size": 11
+             },
+             "min_height": {
+              "unit": "px",
+              "size": 11
+             },
+             "custom_css": "selector{flex-shrink:0}",
+             "background_background": "classic",
+             "border_radius": {
+              "unit": "%",
+              "top": "50",
+              "right": "50",
+              "bottom": "50",
+              "left": "50",
+              "isLinked": true
+             },
+             "content_width": "full",
+             "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+             },
+             "background_color": "",
+             "__globals__": {
+              "background_color": "globals/colors?id=gfblue"
+             }
+            },
+            "elements": []
+           },
+           {
+            "id": "e12b39f",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+             "title": "Suisse TP",
+             "header_size": "div",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 18
+             },
+             "typography_font_weight": "600",
+             "title_color": "#0F1620",
+             "typography_line_height": {
+              "unit": "px",
+              "size": 27
+             },
+             "typography_letter_spacing": {
+              "unit": "px",
+              "size": -0.18
+             }
+            },
+            "elements": []
+           }
+          ]
+         },
+         {
+          "id": "eeab068",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Analytics &amp; Materials",
+           "header_size": "div",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 13
+           },
+           "typography_font_weight": "600",
+           "title_color": "#65718A",
+           "typography_line_height": {
+            "unit": "px",
+            "size": 19.5
+           },
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": 1.04
+           },
+           "typography_text_transform": "uppercase"
+          },
+          "elements": []
+         }
+        ]
+       },
+       {
+        "id": "1d50cc4",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "html_tag": "a",
+         "link": {
+          "url": "#split-row-4",
+          "is_external": "",
+          "nofollow": ""
+         },
+         "flex_direction": "column",
+         "flex_align_items": "stretch",
+         "flex_gap": {
+          "unit": "px",
+          "column": "6",
+          "row": "6",
+          "isLinked": true
+         },
+         "padding": {
+          "unit": "px",
+          "top": "18",
+          "right": "20",
+          "bottom": "18",
+          "left": "20",
+          "isLinked": false
+         },
+         "background_background": "classic",
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "#DCE1EA",
+         "border_radius": {
+          "unit": "px",
+          "top": "8",
+          "right": "8",
+          "bottom": "8",
+          "left": "8",
+          "isLinked": true
+         },
+         "width": {
+          "unit": "%",
+          "size": 23.9
+         },
+         "width_mobile": {
+          "unit": "%",
+          "size": 100
+         },
+         "custom_css": "selector{flex:0 0 calc((100% - 42px) / 4) !important;max-width:calc((100% - 42px) / 4) !important;text-decoration:none;transition:box-shadow .25s cubic-bezier(.25,.46,.45,.94),transform .25s cubic-bezier(.25,.46,.45,.94),border-color .25s cubic-bezier(.25,.46,.45,.94)}selector:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(15,22,32,.08);border-color:#C3CBD8}@media(max-width:879px){selector{flex:0 0 calc((100% - 14px) / 2) !important;max-width:calc((100% - 14px) / 2) !important}}",
+         "content_width": "full",
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gfwhite"
+         }
+        },
+        "elements": [
+         {
+          "id": "2cc7506",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+           "flex_direction": "row",
+           "flex_align_items": "center",
+           "flex_gap": {
+            "unit": "px",
+            "column": "9",
+            "row": "9",
+            "isLinked": true
+           },
+           "content_width": "full",
+           "padding": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+           }
+          },
+          "elements": [
+           {
+            "id": "71d8845",
+            "elType": "container",
+            "isInner": false,
+            "settings": {
+             "width": {
+              "unit": "px",
+              "size": 11
+             },
+             "min_height": {
+              "unit": "px",
+              "size": 11
+             },
+             "custom_css": "selector{flex-shrink:0}",
+             "background_background": "classic",
+             "border_radius": {
+              "unit": "%",
+              "top": "50",
+              "right": "50",
+              "bottom": "50",
+              "left": "50",
+              "isLinked": true
+             },
+             "content_width": "full",
+             "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+             },
+             "background_color": "#F08423"
+            },
+            "elements": []
+           },
+           {
+            "id": "fea929f",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+             "title": "BAS",
+             "header_size": "div",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 18
+             },
+             "typography_font_weight": "600",
+             "title_color": "#0F1620",
+             "typography_line_height": {
+              "unit": "px",
+              "size": 27
+             },
+             "typography_letter_spacing": {
+              "unit": "px",
+              "size": -0.18
+             }
+            },
+            "elements": []
+           }
+          ]
+         },
+         {
+          "id": "fc75921",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Reference Materials",
+           "header_size": "div",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 13
+           },
+           "typography_font_weight": "600",
+           "title_color": "#65718A",
+           "typography_line_height": {
+            "unit": "px",
+            "size": 19.5
+           },
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": 1.04
+           },
+           "typography_text_transform": "uppercase"
+          },
+          "elements": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "836f372",
+  "elType": "container",
+  "isInner": false,
+  "settings": {
+   "flex_direction": "column",
+   "flex_align_items": "center",
+   "padding": {
+    "unit": "px",
+    "top": "80",
+    "right": "24",
+    "bottom": "80",
+    "left": "24",
+    "isLinked": false
+   },
+   "background_background": "classic",
+   "content_width": "full",
+   "background_color": "",
+   "__globals__": {
+    "background_color": "globals/colors?id=gfwhite"
+   }
+  },
+  "elements": [
+   {
+    "id": "21de092",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+     "content_width": "boxed",
+     "flex_direction": "column",
+     "flex_align_items": "stretch",
+     "flex_gap": {
+      "unit": "px",
+      "column": "0",
+      "row": "96",
+      "isLinked": false
+     },
+     "padding": {
+      "unit": "px",
+      "top": "0",
+      "right": "0",
+      "bottom": "0",
+      "left": "0",
+      "isLinked": true
+     },
+     "boxed_width": {
+      "unit": "px",
+      "size": 1152
+     }
+    },
+    "elements": [
+     {
+      "id": "2094d6a",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+       "_element_id": "split-row-1",
+       "flex_direction": "row",
+       "flex_direction_mobile": "column",
+       "flex_align_items": "center",
+       "flex_gap": {
+        "unit": "px",
+        "column": "72",
+        "row": "40",
+        "isLinked": false
+       },
+       "flex_wrap": "wrap",
+       "content_width": "full",
+       "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+       }
+      },
+      "elements": [
+       {
+        "id": "ef8bcea",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "flex_direction": "column",
+         "flex_justify_content": "center",
+         "flex_align_items": "center",
+         "padding": {
+          "unit": "px",
+          "top": "48",
+          "right": "48",
+          "bottom": "48",
+          "left": "48",
+          "isLinked": true
+         },
+         "background_background": "classic",
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "#DCE1EA",
+         "border_radius": {
+          "unit": "px",
+          "top": "16",
+          "right": "16",
+          "bottom": "16",
+          "left": "16",
+          "isLinked": true
+         },
+         "width": {
+          "unit": "%",
+          "size": 47
+         },
+         "width_mobile": {
+          "unit": "%",
+          "size": 100
+         },
+         "custom_css": "selector{flex:0 0 calc((100% - 72px) / 2) !important;max-width:calc((100% - 72px) / 2) !important}@media(max-width:979px){selector{flex:0 0 100% !important;max-width:100% !important}}selector{position:relative;aspect-ratio:16/10;overflow:hidden;box-shadow:0 1px 2px rgba(15,22,32,.06),0 1px 1px rgba(15,22,32,.04)}selector::before{content:\"\";position:absolute;top:0;left:0;right:0;height:4px;background:#F5821F}",
+         "content_width": "full",
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gfwhite"
+         }
+        },
+        "elements": [
+         {
+          "id": "118196c",
+          "elType": "widget",
+          "widgetType": "image",
+          "settings": {
+           "image": {
+            "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-group-logo-goodfellow.png",
+            "id": 12264
+           },
+           "image_size": "full",
+           "custom_css": "selector{width:78%;text-align:center}selector img{max-width:100%;max-height:155px;width:auto;height:auto;object-fit:contain;display:inline-block}"
+          },
+          "elements": []
+         },
+         {
+          "id": "5962be1",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Since 1946",
+           "header_size": "div",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 12
+           },
+           "typography_font_weight": "400",
+           "title_color": "#65718A",
+           "typography_line_height": {
+            "unit": "px",
+            "size": 18
+           },
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": 0.48
+           },
+           "custom_css": "selector{position:absolute;right:16px;bottom:14px;width:auto}selector .elementor-heading-title{font-family:\"JetBrains Mono\",ui-monospace,\"SF Mono\",Menlo,monospace;background:#F6F8FB;border:1px solid #DCE1EA;border-radius:999px;padding:4px 11px}"
+          },
+          "elements": []
+         }
+        ]
+       },
+       {
+        "id": "9e9fe13",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "flex_direction": "column",
+         "flex_align_items": "flex-start",
+         "flex_gap": {
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+         },
+         "width": {
+          "unit": "%",
+          "size": 47
+         },
+         "width_mobile": {
+          "unit": "%",
+          "size": 100
+         },
+         "custom_css": "selector{flex:0 0 calc((100% - 72px) / 2) !important;max-width:calc((100% - 72px) / 2) !important}@media(max-width:979px){selector{flex:0 0 100% !important;max-width:100% !important}}",
+         "content_width": "full",
+         "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+         }
+        },
+        "elements": [
+         {
+          "id": "cd5518e",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+           "flex_direction": "row",
+           "flex_align_items": "center",
+           "flex_gap": {
+            "unit": "px",
+            "column": "10",
+            "row": "10",
+            "isLinked": true
+           },
+           "content_width": "full",
+           "padding": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+           },
+           "margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "14",
+            "left": "0",
+            "isLinked": false
+           }
+          },
+          "elements": [
+           {
+            "id": "38c61aa",
+            "elType": "container",
+            "isInner": false,
+            "settings": {
+             "width": {
+              "unit": "px",
+              "size": 9
+             },
+             "min_height": {
+              "unit": "px",
+              "size": 9
+             },
+             "custom_css": "selector{flex-shrink:0}",
+             "background_background": "classic",
+             "border_radius": {
+              "unit": "%",
+              "top": "50",
+              "right": "50",
+              "bottom": "50",
+              "left": "50",
+              "isLinked": true
+             },
+             "content_width": "full",
+             "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+             },
+             "background_color": "",
+             "__globals__": {
+              "background_color": "globals/colors?id=gforange"
+             }
+            },
+            "elements": []
+           },
+           {
+            "id": "203662e",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+             "title": "Advanced Materials",
+             "header_size": "div",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 12
+             },
+             "typography_font_weight": "600",
+             "title_color": "",
+             "__globals__": {
+              "title_color": "globals/colors?id=gforange"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 18
+             },
+             "typography_letter_spacing": {
+              "unit": "px",
+              "size": 1.44
+             },
+             "typography_text_transform": "uppercase"
+            },
+            "elements": []
+           }
+          ]
+         },
+         {
+          "id": "d9eca01",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Goodfellow",
+           "header_size": "h2",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 36
+           },
+           "typography_font_weight": "600",
+           "title_color": "#0F1620",
+           "typography_line_height": {
+            "unit": "px",
+            "size": 39.6
+           },
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": -0.72
+           },
+           "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "8",
+            "left": "0",
+            "isLinked": false
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "5f23f41",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+           "editor": "<p>A global leader in the supply of high-quality advanced materials, serving science and industry for over 75 years.</p>",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 16
+           },
+           "typography_font_weight": "600",
+           "text_color": "#0F1620",
+           "typography_line_height": {
+            "unit": "px",
+            "size": 24.8
+           },
+           "custom_css": "selector p{font-size:16px;line-height:24.8px;font-weight:600;color:#0F1620;margin:0}",
+           "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "12",
+            "left": "0",
+            "isLinked": false
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "830b40e",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+           "editor": "<p>With a vast range of over 170,000 products, including metals, alloys, ceramics, polymers and compounds, Goodfellow is dedicated to driving innovation and solving technical challenges. Our commitment to excellence is reflected in extensive product offerings and a customer-focused approach, making us a trusted partner for researchers and engineers worldwide.</p>",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 16
+           },
+           "typography_font_weight": "400",
+           "text_color": "",
+           "__globals__": {
+            "text_color": "globals/colors?id=gfink"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 27.2
+           },
+           "custom_css": "selector p{font-size:16px;line-height:27.2px;font-weight:400;margin:0}",
+           "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "22",
+            "left": "0",
+            "isLinked": false
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "6d9c47f",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+           "flex_direction": "row",
+           "flex_wrap": "wrap",
+           "flex_align_items": "center",
+           "flex_gap": {
+            "unit": "px",
+            "column": "10",
+            "row": "10",
+            "isLinked": true
+           },
+           "content_width": "full",
+           "padding": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+           },
+           "margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "24",
+            "left": "0",
+            "isLinked": false
+           }
+          },
+          "elements": [
+           {
+            "id": "3aacea5",
+            "elType": "widget",
+            "widgetType": "text-editor",
+            "settings": {
+             "editor": "<p><strong>170,000+</strong> materials</p>",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 14
+             },
+             "typography_font_weight": "400",
+             "text_color": "",
+             "__globals__": {
+              "text_color": "globals/colors?id=gfink"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 21
+             },
+             "custom_css": "selector p{font-size:14px;line-height:21px;font-weight:400;margin:0}selector{width:auto;background:#F6F8FB;border:1px solid #DCE1EA;border-radius:999px;padding:6px 13px}selector strong{font-weight:600;color:#0F1620}"
+            },
+            "elements": []
+           },
+           {
+            "id": "a684aa0",
+            "elType": "widget",
+            "widgetType": "text-editor",
+            "settings": {
+             "editor": "<p><strong>75+</strong> years</p>",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 14
+             },
+             "typography_font_weight": "400",
+             "text_color": "",
+             "__globals__": {
+              "text_color": "globals/colors?id=gfink"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 21
+             },
+             "custom_css": "selector p{font-size:14px;line-height:21px;font-weight:400;margin:0}selector{width:auto;background:#F6F8FB;border:1px solid #DCE1EA;border-radius:999px;padding:6px 13px}selector strong{font-weight:600;color:#0F1620}"
+            },
+            "elements": []
+           },
+           {
+            "id": "63dadcf",
+            "elType": "widget",
+            "widgetType": "text-editor",
+            "settings": {
+             "editor": "<p><strong>ISO 9001</strong> quality assured</p>",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 14
+             },
+             "typography_font_weight": "400",
+             "text_color": "",
+             "__globals__": {
+              "text_color": "globals/colors?id=gfink"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 21
+             },
+             "custom_css": "selector p{font-size:14px;line-height:21px;font-weight:400;margin:0}selector{width:auto;background:#F6F8FB;border:1px solid #DCE1EA;border-radius:999px;padding:6px 13px}selector strong{font-weight:600;color:#0F1620}"
+            },
+            "elements": []
+           }
+          ]
+         },
+         {
+          "id": "0b93012",
+          "elType": "widget",
+          "widgetType": "button",
+          "settings": {
+           "text": "Visit Goodfellow →",
+           "link": {
+            "url": "https://www.goodfellow.com/",
+            "is_external": "",
+            "nofollow": ""
+           },
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 15
+           },
+           "typography_font_weight": "600",
+           "border_radius": {
+            "unit": "px",
+            "top": "999",
+            "right": "999",
+            "bottom": "999",
+            "left": "999",
+            "isLinked": true
+           },
+           "text_padding": {
+            "unit": "px",
+            "top": "12",
+            "right": "24",
+            "bottom": "12",
+            "left": "24",
+            "isLinked": false
+           },
+           "background_color": "",
+           "__globals__": {
+            "background_color": "globals/colors?id=gforange",
+            "button_text_color": "globals/colors?id=gfwhite"
+           },
+           "button_text_color": "",
+           "custom_css": "selector .elementor-button{box-shadow:0 8px 24px rgba(245,130,31,.3)}"
+          },
+          "elements": []
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "id": "780df9d",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+       "_element_id": "split-row-2",
+       "flex_direction": "row-reverse",
+       "flex_direction_mobile": "column",
+       "flex_align_items": "center",
+       "flex_gap": {
+        "unit": "px",
+        "column": "72",
+        "row": "40",
+        "isLinked": false
+       },
+       "flex_wrap": "wrap",
+       "content_width": "full",
+       "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+       }
+      },
+      "elements": [
+       {
+        "id": "e6d8098",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "flex_direction": "column",
+         "flex_justify_content": "center",
+         "flex_align_items": "center",
+         "padding": {
+          "unit": "px",
+          "top": "48",
+          "right": "48",
+          "bottom": "48",
+          "left": "48",
+          "isLinked": true
+         },
+         "background_background": "classic",
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "#DCE1EA",
+         "border_radius": {
+          "unit": "px",
+          "top": "16",
+          "right": "16",
+          "bottom": "16",
+          "left": "16",
+          "isLinked": true
+         },
+         "width": {
+          "unit": "%",
+          "size": 47
+         },
+         "width_mobile": {
+          "unit": "%",
+          "size": 100
+         },
+         "custom_css": "selector{flex:0 0 calc((100% - 72px) / 2) !important;max-width:calc((100% - 72px) / 2) !important}@media(max-width:979px){selector{flex:0 0 100% !important;max-width:100% !important}}selector{position:relative;aspect-ratio:16/10;overflow:hidden;box-shadow:0 1px 2px rgba(15,22,32,.06),0 1px 1px rgba(15,22,32,.04)}selector::before{content:\"\";position:absolute;top:0;left:0;right:0;height:4px;background:#F5821F}",
+         "content_width": "full",
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gfwhite"
+         }
+        },
+        "elements": [
+         {
+          "id": "eb856a2",
+          "elType": "widget",
+          "widgetType": "image",
+          "settings": {
+           "image": {
+            "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-group-logo-microfab.png",
+            "id": 12265
+           },
+           "image_size": "full",
+           "custom_css": "selector{width:78%;text-align:center}selector img{max-width:100%;max-height:155px;width:auto;height:auto;object-fit:contain;display:inline-block}"
+          },
+          "elements": []
+         },
+         {
+          "id": "b18b695",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Since 1982",
+           "header_size": "div",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 12
+           },
+           "typography_font_weight": "400",
+           "title_color": "#65718A",
+           "typography_line_height": {
+            "unit": "px",
+            "size": 18
+           },
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": 0.48
+           },
+           "custom_css": "selector{position:absolute;right:16px;bottom:14px;width:auto}selector .elementor-heading-title{font-family:\"JetBrains Mono\",ui-monospace,\"SF Mono\",Menlo,monospace;background:#F6F8FB;border:1px solid #DCE1EA;border-radius:999px;padding:4px 11px}"
+          },
+          "elements": []
+         }
+        ]
+       },
+       {
+        "id": "8ec1247",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "flex_direction": "column",
+         "flex_align_items": "flex-start",
+         "flex_gap": {
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+         },
+         "width": {
+          "unit": "%",
+          "size": 47
+         },
+         "width_mobile": {
+          "unit": "%",
+          "size": 100
+         },
+         "custom_css": "selector{flex:0 0 calc((100% - 72px) / 2) !important;max-width:calc((100% - 72px) / 2) !important}@media(max-width:979px){selector{flex:0 0 100% !important;max-width:100% !important}}",
+         "content_width": "full",
+         "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+         }
+        },
+        "elements": [
+         {
+          "id": "4cdacc1",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+           "flex_direction": "row",
+           "flex_align_items": "center",
+           "flex_gap": {
+            "unit": "px",
+            "column": "10",
+            "row": "10",
+            "isLinked": true
+           },
+           "content_width": "full",
+           "padding": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+           },
+           "margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "14",
+            "left": "0",
+            "isLinked": false
+           }
+          },
+          "elements": [
+           {
+            "id": "50182b5",
+            "elType": "container",
+            "isInner": false,
+            "settings": {
+             "width": {
+              "unit": "px",
+              "size": 9
+             },
+             "min_height": {
+              "unit": "px",
+              "size": 9
+             },
+             "custom_css": "selector{flex-shrink:0}",
+             "background_background": "classic",
+             "border_radius": {
+              "unit": "%",
+              "top": "50",
+              "right": "50",
+              "bottom": "50",
+              "left": "50",
+              "isLinked": true
+             },
+             "content_width": "full",
+             "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+             },
+             "background_color": "",
+             "__globals__": {
+              "background_color": "globals/colors?id=gforange"
+             }
+            },
+            "elements": []
+           },
+           {
+            "id": "a46f6d0",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+             "title": "Microfabrication",
+             "header_size": "div",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 12
+             },
+             "typography_font_weight": "600",
+             "title_color": "",
+             "__globals__": {
+              "title_color": "globals/colors?id=gforange"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 18
+             },
+             "typography_letter_spacing": {
+              "unit": "px",
+              "size": 1.44
+             },
+             "typography_text_transform": "uppercase"
+            },
+            "elements": []
+           }
+          ]
+         },
+         {
+          "id": "7349a2c",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Goodfellow Microfabrication",
+           "header_size": "h2",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 36
+           },
+           "typography_font_weight": "600",
+           "title_color": "#0F1620",
+           "typography_line_height": {
+            "unit": "px",
+            "size": 39.6
+           },
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": -0.72
+           },
+           "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "8",
+            "left": "0",
+            "isLinked": false
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "fd65e7e",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+           "editor": "<p>One of the US leaders in microfabrication and digital manufacturing, rapid prototyping through full-scale production of precision devices.</p>",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 16
+           },
+           "typography_font_weight": "600",
+           "text_color": "#0F1620",
+           "typography_line_height": {
+            "unit": "px",
+            "size": 24.8
+           },
+           "custom_css": "selector p{font-size:16px;line-height:24.8px;font-weight:600;color:#0F1620;margin:0}",
+           "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "12",
+            "left": "0",
+            "isLinked": false
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "d0cf1c3",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+           "editor": "<p>Since 1982, the Baltimore-based Goodfellow Microfabrication team (formerly Potomac Photonics) has been at the forefront of innovation in medical-device manufacturing, biotech and electronics fabrication. By leveraging advanced laser and CNC technologies, the team delivers high-quality, cost-effective solutions that carry your project from concept to market.</p>",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 16
+           },
+           "typography_font_weight": "400",
+           "text_color": "",
+           "__globals__": {
+            "text_color": "globals/colors?id=gfink"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 27.2
+           },
+           "custom_css": "selector p{font-size:16px;line-height:27.2px;font-weight:400;margin:0}",
+           "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "22",
+            "left": "0",
+            "isLinked": false
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "79612e3",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+           "flex_direction": "row",
+           "flex_wrap": "wrap",
+           "flex_align_items": "center",
+           "flex_gap": {
+            "unit": "px",
+            "column": "10",
+            "row": "10",
+            "isLinked": true
+           },
+           "content_width": "full",
+           "padding": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+           },
+           "margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "24",
+            "left": "0",
+            "isLinked": false
+           }
+          },
+          "elements": [
+           {
+            "id": "923fe08",
+            "elType": "widget",
+            "widgetType": "text-editor",
+            "settings": {
+             "editor": "<p><strong>±10 µm</strong> tolerances</p>",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 14
+             },
+             "typography_font_weight": "400",
+             "text_color": "",
+             "__globals__": {
+              "text_color": "globals/colors?id=gfink"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 21
+             },
+             "custom_css": "selector p{font-size:14px;line-height:21px;font-weight:400;margin:0}selector{width:auto;background:#F6F8FB;border:1px solid #DCE1EA;border-radius:999px;padding:6px 13px}selector strong{font-weight:600;color:#0F1620}"
+            },
+            "elements": []
+           },
+           {
+            "id": "e3748cf",
+            "elType": "widget",
+            "widgetType": "text-editor",
+            "settings": {
+             "editor": "<p><strong>40+</strong> years</p>",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 14
+             },
+             "typography_font_weight": "400",
+             "text_color": "",
+             "__globals__": {
+              "text_color": "globals/colors?id=gfink"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 21
+             },
+             "custom_css": "selector p{font-size:14px;line-height:21px;font-weight:400;margin:0}selector{width:auto;background:#F6F8FB;border:1px solid #DCE1EA;border-radius:999px;padding:6px 13px}selector strong{font-weight:600;color:#0F1620}"
+            },
+            "elements": []
+           },
+           {
+            "id": "666d94f",
+            "elType": "widget",
+            "widgetType": "text-editor",
+            "settings": {
+             "editor": "<p><strong>Prototype → production</strong></p>",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 14
+             },
+             "typography_font_weight": "400",
+             "text_color": "",
+             "__globals__": {
+              "text_color": "globals/colors?id=gfink"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 21
+             },
+             "custom_css": "selector p{font-size:14px;line-height:21px;font-weight:400;margin:0}selector{width:auto;background:#F6F8FB;border:1px solid #DCE1EA;border-radius:999px;padding:6px 13px}selector strong{font-weight:600;color:#0F1620}"
+            },
+            "elements": []
+           }
+          ]
+         },
+         {
+          "id": "307ec4e",
+          "elType": "widget",
+          "widgetType": "button",
+          "settings": {
+           "text": "Explore microfabrication →",
+           "link": {
+            "url": "https://www.potomac-laser.com/?post_type=post_services&p=12239&preview=true",
+            "is_external": "",
+            "nofollow": ""
+           },
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 15
+           },
+           "typography_font_weight": "600",
+           "border_radius": {
+            "unit": "px",
+            "top": "999",
+            "right": "999",
+            "bottom": "999",
+            "left": "999",
+            "isLinked": true
+           },
+           "text_padding": {
+            "unit": "px",
+            "top": "12",
+            "right": "24",
+            "bottom": "12",
+            "left": "24",
+            "isLinked": false
+           },
+           "background_color": "",
+           "__globals__": {
+            "background_color": "globals/colors?id=gforange",
+            "button_text_color": "globals/colors?id=gfwhite"
+           },
+           "button_text_color": "",
+           "custom_css": "selector .elementor-button{box-shadow:0 8px 24px rgba(245,130,31,.3)}"
+          },
+          "elements": []
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "id": "d40da15",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+       "_element_id": "split-row-3",
+       "flex_direction": "row",
+       "flex_direction_mobile": "column",
+       "flex_align_items": "center",
+       "flex_gap": {
+        "unit": "px",
+        "column": "72",
+        "row": "40",
+        "isLinked": false
+       },
+       "flex_wrap": "wrap",
+       "content_width": "full",
+       "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+       }
+      },
+      "elements": [
+       {
+        "id": "8629b2f",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "flex_direction": "column",
+         "flex_justify_content": "center",
+         "flex_align_items": "center",
+         "padding": {
+          "unit": "px",
+          "top": "48",
+          "right": "48",
+          "bottom": "48",
+          "left": "48",
+          "isLinked": true
+         },
+         "background_background": "classic",
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "#DCE1EA",
+         "border_radius": {
+          "unit": "px",
+          "top": "16",
+          "right": "16",
+          "bottom": "16",
+          "left": "16",
+          "isLinked": true
+         },
+         "width": {
+          "unit": "%",
+          "size": 47
+         },
+         "width_mobile": {
+          "unit": "%",
+          "size": 100
+         },
+         "custom_css": "selector{flex:0 0 calc((100% - 72px) / 2) !important;max-width:calc((100% - 72px) / 2) !important}@media(max-width:979px){selector{flex:0 0 100% !important;max-width:100% !important}}selector{position:relative;aspect-ratio:16/10;overflow:hidden;box-shadow:0 1px 2px rgba(15,22,32,.06),0 1px 1px rgba(15,22,32,.04)}selector::before{content:\"\";position:absolute;top:0;left:0;right:0;height:4px;background:#1A71AB}",
+         "content_width": "full",
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gfwhite"
+         }
+        },
+        "elements": [
+         {
+          "id": "9cbbfae",
+          "elType": "widget",
+          "widgetType": "image",
+          "settings": {
+           "image": {
+            "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-group-logo-stp.png",
+            "id": 12266
+           },
+           "image_size": "full",
+           "custom_css": "selector{width:78%;text-align:center}selector img{max-width:100%;max-height:155px;width:auto;height:auto;object-fit:contain;display:inline-block}"
+          },
+          "elements": []
+         },
+         {
+          "id": "d037853",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Swiss labs",
+           "header_size": "div",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 12
+           },
+           "typography_font_weight": "400",
+           "title_color": "#65718A",
+           "typography_line_height": {
+            "unit": "px",
+            "size": 18
+           },
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": 0.48
+           },
+           "custom_css": "selector{position:absolute;right:16px;bottom:14px;width:auto}selector .elementor-heading-title{font-family:\"JetBrains Mono\",ui-monospace,\"SF Mono\",Menlo,monospace;background:#F6F8FB;border:1px solid #DCE1EA;border-radius:999px;padding:4px 11px}"
+          },
+          "elements": []
+         }
+        ]
+       },
+       {
+        "id": "b21d814",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "flex_direction": "column",
+         "flex_align_items": "flex-start",
+         "flex_gap": {
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+         },
+         "width": {
+          "unit": "%",
+          "size": 47
+         },
+         "width_mobile": {
+          "unit": "%",
+          "size": 100
+         },
+         "custom_css": "selector{flex:0 0 calc((100% - 72px) / 2) !important;max-width:calc((100% - 72px) / 2) !important}@media(max-width:979px){selector{flex:0 0 100% !important;max-width:100% !important}}",
+         "content_width": "full",
+         "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+         }
+        },
+        "elements": [
+         {
+          "id": "6ba843b",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+           "flex_direction": "row",
+           "flex_align_items": "center",
+           "flex_gap": {
+            "unit": "px",
+            "column": "10",
+            "row": "10",
+            "isLinked": true
+           },
+           "content_width": "full",
+           "padding": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+           },
+           "margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "14",
+            "left": "0",
+            "isLinked": false
+           }
+          },
+          "elements": [
+           {
+            "id": "644e513",
+            "elType": "container",
+            "isInner": false,
+            "settings": {
+             "width": {
+              "unit": "px",
+              "size": 9
+             },
+             "min_height": {
+              "unit": "px",
+              "size": 9
+             },
+             "custom_css": "selector{flex-shrink:0}",
+             "background_background": "classic",
+             "border_radius": {
+              "unit": "%",
+              "top": "50",
+              "right": "50",
+              "bottom": "50",
+              "left": "50",
+              "isLinked": true
+             },
+             "content_width": "full",
+             "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+             },
+             "background_color": "",
+             "__globals__": {
+              "background_color": "globals/colors?id=gfblue"
+             }
+            },
+            "elements": []
+           },
+           {
+            "id": "a5e2c7d",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+             "title": "Analytics &amp; Materials",
+             "header_size": "div",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 12
+             },
+             "typography_font_weight": "600",
+             "title_color": "",
+             "__globals__": {
+              "title_color": "globals/colors?id=gfblue"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 18
+             },
+             "typography_letter_spacing": {
+              "unit": "px",
+              "size": 1.44
+             },
+             "typography_text_transform": "uppercase"
+            },
+            "elements": []
+           }
+          ]
+         },
+         {
+          "id": "f78d5f7",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Suisse Technology Partners",
+           "header_size": "h2",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 36
+           },
+           "typography_font_weight": "600",
+           "title_color": "#0F1620",
+           "typography_line_height": {
+            "unit": "px",
+            "size": 39.6
+           },
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": -0.72
+           },
+           "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "8",
+            "left": "0",
+            "isLinked": false
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "07675d0",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+           "editor": "<p>A Swiss competence centre for material-based solutions and analytics, ensuring safe and innovative products for industrial customers.</p>",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 16
+           },
+           "typography_font_weight": "600",
+           "text_color": "#0F1620",
+           "typography_line_height": {
+            "unit": "px",
+            "size": 24.8
+           },
+           "custom_css": "selector p{font-size:16px;line-height:24.8px;font-weight:600;color:#0F1620;margin:0}",
+           "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "12",
+            "left": "0",
+            "isLinked": false
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "75cfb32",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+           "editor": "<p>STP provides specialised services in materials and surface technology. Their expertise spans technical safety, chemical analytics and packaging development, supported by certified and accredited laboratories. An interdisciplinary approach drives progress and innovation across every engagement.</p>",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 16
+           },
+           "typography_font_weight": "400",
+           "text_color": "",
+           "__globals__": {
+            "text_color": "globals/colors?id=gfink"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 27.2
+           },
+           "custom_css": "selector p{font-size:16px;line-height:27.2px;font-weight:400;margin:0}",
+           "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "22",
+            "left": "0",
+            "isLinked": false
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "6b3bfc7",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+           "flex_direction": "row",
+           "flex_wrap": "wrap",
+           "flex_align_items": "center",
+           "flex_gap": {
+            "unit": "px",
+            "column": "10",
+            "row": "10",
+            "isLinked": true
+           },
+           "content_width": "full",
+           "padding": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+           },
+           "margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "24",
+            "left": "0",
+            "isLinked": false
+           }
+          },
+          "elements": [
+           {
+            "id": "1550831",
+            "elType": "widget",
+            "widgetType": "text-editor",
+            "settings": {
+             "editor": "<p><strong>Accredited</strong> laboratories</p>",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 14
+             },
+             "typography_font_weight": "400",
+             "text_color": "",
+             "__globals__": {
+              "text_color": "globals/colors?id=gfink"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 21
+             },
+             "custom_css": "selector p{font-size:14px;line-height:21px;font-weight:400;margin:0}selector{width:auto;background:#F6F8FB;border:1px solid #DCE1EA;border-radius:999px;padding:6px 13px}selector strong{font-weight:600;color:#0F1620}"
+            },
+            "elements": []
+           },
+           {
+            "id": "70bf5fe",
+            "elType": "widget",
+            "widgetType": "text-editor",
+            "settings": {
+             "editor": "<p><strong>Surface</strong> technology</p>",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 14
+             },
+             "typography_font_weight": "400",
+             "text_color": "",
+             "__globals__": {
+              "text_color": "globals/colors?id=gfink"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 21
+             },
+             "custom_css": "selector p{font-size:14px;line-height:21px;font-weight:400;margin:0}selector{width:auto;background:#F6F8FB;border:1px solid #DCE1EA;border-radius:999px;padding:6px 13px}selector strong{font-weight:600;color:#0F1620}"
+            },
+            "elements": []
+           },
+           {
+            "id": "1f7d6ff",
+            "elType": "widget",
+            "widgetType": "text-editor",
+            "settings": {
+             "editor": "<p><strong>Failure</strong> investigation</p>",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 14
+             },
+             "typography_font_weight": "400",
+             "text_color": "",
+             "__globals__": {
+              "text_color": "globals/colors?id=gfink"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 21
+             },
+             "custom_css": "selector p{font-size:14px;line-height:21px;font-weight:400;margin:0}selector{width:auto;background:#F6F8FB;border:1px solid #DCE1EA;border-radius:999px;padding:6px 13px}selector strong{font-weight:600;color:#0F1620}"
+            },
+            "elements": []
+           }
+          ]
+         },
+         {
+          "id": "2ba0d6d",
+          "elType": "widget",
+          "widgetType": "button",
+          "settings": {
+           "text": "Visit Suisse TP →",
+           "link": {
+            "url": "https://suisse-tp.ch/",
+            "is_external": "",
+            "nofollow": ""
+           },
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 15
+           },
+           "typography_font_weight": "600",
+           "border_radius": {
+            "unit": "px",
+            "top": "999",
+            "right": "999",
+            "bottom": "999",
+            "left": "999",
+            "isLinked": true
+           },
+           "text_padding": {
+            "unit": "px",
+            "top": "12",
+            "right": "24",
+            "bottom": "12",
+            "left": "24",
+            "isLinked": false
+           },
+           "background_color": "",
+           "__globals__": {
+            "background_color": "globals/colors?id=gforange",
+            "button_text_color": "globals/colors?id=gfwhite"
+           },
+           "button_text_color": "",
+           "custom_css": "selector .elementor-button{box-shadow:0 8px 24px rgba(245,130,31,.3)}"
+          },
+          "elements": []
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "id": "cc30e68",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+       "_element_id": "split-row-4",
+       "flex_direction": "row-reverse",
+       "flex_direction_mobile": "column",
+       "flex_align_items": "center",
+       "flex_gap": {
+        "unit": "px",
+        "column": "72",
+        "row": "40",
+        "isLinked": false
+       },
+       "flex_wrap": "wrap",
+       "content_width": "full",
+       "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+       }
+      },
+      "elements": [
+       {
+        "id": "bc7dfa4",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "flex_direction": "column",
+         "flex_justify_content": "center",
+         "flex_align_items": "center",
+         "padding": {
+          "unit": "px",
+          "top": "48",
+          "right": "48",
+          "bottom": "48",
+          "left": "48",
+          "isLinked": true
+         },
+         "background_background": "classic",
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "#DCE1EA",
+         "border_radius": {
+          "unit": "px",
+          "top": "16",
+          "right": "16",
+          "bottom": "16",
+          "left": "16",
+          "isLinked": true
+         },
+         "width": {
+          "unit": "%",
+          "size": 47
+         },
+         "width_mobile": {
+          "unit": "%",
+          "size": 100
+         },
+         "custom_css": "selector{flex:0 0 calc((100% - 72px) / 2) !important;max-width:calc((100% - 72px) / 2) !important}@media(max-width:979px){selector{flex:0 0 100% !important;max-width:100% !important}}selector{position:relative;aspect-ratio:16/10;overflow:hidden;box-shadow:0 1px 2px rgba(15,22,32,.06),0 1px 1px rgba(15,22,32,.04)}selector::before{content:\"\";position:absolute;top:0;left:0;right:0;height:4px;background:#F08423}",
+         "content_width": "full",
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gfwhite"
+         }
+        },
+        "elements": [
+         {
+          "id": "c4dc5ca",
+          "elType": "widget",
+          "widgetType": "image",
+          "settings": {
+           "image": {
+            "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-group-logo-bas.png",
+            "id": 12267
+           },
+           "image_size": "full",
+           "custom_css": "selector{width:78%;text-align:center}selector img{max-width:100%;max-height:155px;width:auto;height:auto;object-fit:contain;display:inline-block}"
+          },
+          "elements": []
+         },
+         {
+          "id": "b8eaaa3",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Since 1935",
+           "header_size": "div",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 12
+           },
+           "typography_font_weight": "400",
+           "title_color": "#65718A",
+           "typography_line_height": {
+            "unit": "px",
+            "size": 18
+           },
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": 0.48
+           },
+           "custom_css": "selector{position:absolute;right:16px;bottom:14px;width:auto}selector .elementor-heading-title{font-family:\"JetBrains Mono\",ui-monospace,\"SF Mono\",Menlo,monospace;background:#F6F8FB;border:1px solid #DCE1EA;border-radius:999px;padding:4px 11px}"
+          },
+          "elements": []
+         }
+        ]
+       },
+       {
+        "id": "fdacb77",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "flex_direction": "column",
+         "flex_align_items": "flex-start",
+         "flex_gap": {
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+         },
+         "width": {
+          "unit": "%",
+          "size": 47
+         },
+         "width_mobile": {
+          "unit": "%",
+          "size": 100
+         },
+         "custom_css": "selector{flex:0 0 calc((100% - 72px) / 2) !important;max-width:calc((100% - 72px) / 2) !important}@media(max-width:979px){selector{flex:0 0 100% !important;max-width:100% !important}}",
+         "content_width": "full",
+         "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+         }
+        },
+        "elements": [
+         {
+          "id": "e5cff7f",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+           "flex_direction": "row",
+           "flex_align_items": "center",
+           "flex_gap": {
+            "unit": "px",
+            "column": "10",
+            "row": "10",
+            "isLinked": true
+           },
+           "content_width": "full",
+           "padding": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+           },
+           "margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "14",
+            "left": "0",
+            "isLinked": false
+           }
+          },
+          "elements": [
+           {
+            "id": "4c71170",
+            "elType": "container",
+            "isInner": false,
+            "settings": {
+             "width": {
+              "unit": "px",
+              "size": 9
+             },
+             "min_height": {
+              "unit": "px",
+              "size": 9
+             },
+             "custom_css": "selector{flex-shrink:0}",
+             "background_background": "classic",
+             "border_radius": {
+              "unit": "%",
+              "top": "50",
+              "right": "50",
+              "bottom": "50",
+              "left": "50",
+              "isLinked": true
+             },
+             "content_width": "full",
+             "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+             },
+             "background_color": "#F08423"
+            },
+            "elements": []
+           },
+           {
+            "id": "f94cec6",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+             "title": "Reference Materials",
+             "header_size": "div",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 12
+             },
+             "typography_font_weight": "600",
+             "title_color": "#F08423",
+             "typography_line_height": {
+              "unit": "px",
+              "size": 18
+             },
+             "typography_letter_spacing": {
+              "unit": "px",
+              "size": 1.44
+             },
+             "typography_text_transform": "uppercase"
+            },
+            "elements": []
+           }
+          ]
+         },
+         {
+          "id": "38d727d",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "The Bureau of Analysed Samples",
+           "header_size": "h2",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 36
+           },
+           "typography_font_weight": "600",
+           "title_color": "#0F1620",
+           "typography_line_height": {
+            "unit": "px",
+            "size": 39.6
+           },
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": -0.72
+           },
+           "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "8",
+            "left": "0",
+            "isLinked": false
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "b8445b7",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+           "editor": "<p>A renowned provider of Certified Reference Materials (CRMs) for chemical and spectroscopic analysis.</p>",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 16
+           },
+           "typography_font_weight": "600",
+           "text_color": "#0F1620",
+           "typography_line_height": {
+            "unit": "px",
+            "size": 24.8
+           },
+           "custom_css": "selector p{font-size:16px;line-height:24.8px;font-weight:600;color:#0F1620;margin:0}",
+           "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "12",
+            "left": "0",
+            "isLinked": false
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "8f34fc8",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+           "editor": "<p>Established in 1935, BAS continues the legacy of the British Chemical Standards movement, offering a wide range of materials for the iron and steel industry. Their CRMs are essential for ensuring accuracy and reliability in laboratory testing, making BAS a trusted partner for quality assurance across many industries.</p>",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 16
+           },
+           "typography_font_weight": "400",
+           "text_color": "",
+           "__globals__": {
+            "text_color": "globals/colors?id=gfink"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 27.2
+           },
+           "custom_css": "selector p{font-size:16px;line-height:27.2px;font-weight:400;margin:0}",
+           "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "22",
+            "left": "0",
+            "isLinked": false
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "f837ad0",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+           "flex_direction": "row",
+           "flex_wrap": "wrap",
+           "flex_align_items": "center",
+           "flex_gap": {
+            "unit": "px",
+            "column": "10",
+            "row": "10",
+            "isLinked": true
+           },
+           "content_width": "full",
+           "padding": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+           },
+           "margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "24",
+            "left": "0",
+            "isLinked": false
+           }
+          },
+          "elements": [
+           {
+            "id": "319da67",
+            "elType": "widget",
+            "widgetType": "text-editor",
+            "settings": {
+             "editor": "<p><strong>Since 1935</strong></p>",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 14
+             },
+             "typography_font_weight": "400",
+             "text_color": "",
+             "__globals__": {
+              "text_color": "globals/colors?id=gfink"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 21
+             },
+             "custom_css": "selector p{font-size:14px;line-height:21px;font-weight:400;margin:0}selector{width:auto;background:#F6F8FB;border:1px solid #DCE1EA;border-radius:999px;padding:6px 13px}selector strong{font-weight:600;color:#0F1620}"
+            },
+            "elements": []
+           },
+           {
+            "id": "db4178d",
+            "elType": "widget",
+            "widgetType": "text-editor",
+            "settings": {
+             "editor": "<p><strong>Certified</strong> reference materials</p>",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 14
+             },
+             "typography_font_weight": "400",
+             "text_color": "",
+             "__globals__": {
+              "text_color": "globals/colors?id=gfink"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 21
+             },
+             "custom_css": "selector p{font-size:14px;line-height:21px;font-weight:400;margin:0}selector{width:auto;background:#F6F8FB;border:1px solid #DCE1EA;border-radius:999px;padding:6px 13px}selector strong{font-weight:600;color:#0F1620}"
+            },
+            "elements": []
+           },
+           {
+            "id": "4da67d2",
+            "elType": "widget",
+            "widgetType": "text-editor",
+            "settings": {
+             "editor": "<p><strong>Iron &amp; steel</strong> standards</p>",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 14
+             },
+             "typography_font_weight": "400",
+             "text_color": "",
+             "__globals__": {
+              "text_color": "globals/colors?id=gfink"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 21
+             },
+             "custom_css": "selector p{font-size:14px;line-height:21px;font-weight:400;margin:0}selector{width:auto;background:#F6F8FB;border:1px solid #DCE1EA;border-radius:999px;padding:6px 13px}selector strong{font-weight:600;color:#0F1620}"
+            },
+            "elements": []
+           }
+          ]
+         },
+         {
+          "id": "b179dd3",
+          "elType": "widget",
+          "widgetType": "button",
+          "settings": {
+           "text": "Visit BAS →",
+           "link": {
+            "url": "https://www.basrid.co.uk/",
+            "is_external": "",
+            "nofollow": ""
+           },
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 15
+           },
+           "typography_font_weight": "600",
+           "border_radius": {
+            "unit": "px",
+            "top": "999",
+            "right": "999",
+            "bottom": "999",
+            "left": "999",
+            "isLinked": true
+           },
+           "text_padding": {
+            "unit": "px",
+            "top": "12",
+            "right": "24",
+            "bottom": "12",
+            "left": "24",
+            "isLinked": false
+           },
+           "background_color": "",
+           "__globals__": {
+            "background_color": "globals/colors?id=gforange",
+            "button_text_color": "globals/colors?id=gfwhite"
+           },
+           "button_text_color": "",
+           "custom_css": "selector .elementor-button{box-shadow:0 8px 24px rgba(245,130,31,.3)}"
+          },
+          "elements": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a3e3b77",
+  "elType": "container",
+  "settings": {
+   "content_width": "full",
+   "background_background": "gradient",
+   "background_color": "#16253D",
+   "background_color_b": "#213754",
+   "background_gradient_angle": {
+    "unit": "deg",
+    "size": 135
+   },
+   "padding": {
+    "unit": "px",
+    "top": "84",
+    "right": "56",
+    "bottom": "88",
+    "left": "56",
+    "isLinked": false
+   },
+   "flex_direction": "column",
+   "flex_align_items": "center",
+   "custom_css": "selector{position:relative;overflow:hidden;background-image:linear-gradient(135deg,#16253D 0%,#1B2E4A 52%,#213754 100%)!important}selector::before{content:'';position:absolute;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(rgba(245,130,31,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(245,130,31,.045) 1px,transparent 1px),radial-gradient(ellipse at 50% 0%,rgba(245,130,31,.12) 0%,transparent 55%);background-size:80px 80px,80px 80px,auto;background-repeat:repeat,repeat,no-repeat;background-position:0 0,0 0,center top}selector>*{position:relative;z-index:1}"
+  },
+  "elements": [
+   {
+    "id": "8c18722",
+    "elType": "container",
+    "settings": {
+     "flex_direction": "column",
+     "flex_align_items": "center",
+     "flex_gap": {
+      "unit": "px",
+      "column": "0",
+      "row": "18",
+      "isLinked": false
+     }
+    },
+    "elements": [
+     {
+      "id": "73c526b",
+      "elType": "container",
+      "settings": {
+       "content_width": "full",
+       "flex_direction": "row",
+       "flex_justify_content": "center",
+       "flex_align_items": "center",
+       "flex_gap": {
+        "unit": "px",
+        "column": "10",
+        "row": "0",
+        "isLinked": false
+       }
+      },
+      "elements": [
+       {
+        "id": "1bcf1f4",
+        "elType": "container",
+        "settings": {
+         "content_width": "full",
+         "width": {
+          "unit": "px",
+          "size": 28
+         },
+         "min_height": {
+          "unit": "px",
+          "size": 2
+         },
+         "background_background": "classic",
+         "background_color": "",
+         "_flex_shrink": "0",
+         "__globals__": {
+          "background_color": "globals/colors?id=gforange"
+         }
+        },
+        "elements": [],
+        "isInner": true
+       },
+       {
+        "id": "4ec1de3",
+        "elType": "widget",
+        "settings": {
+         "title": "One Partner, End to End",
+         "header_size": "div",
+         "title_color": "",
+         "typography_typography": "custom",
+         "typography_font_size": {
+          "unit": "px",
+          "size": 11
+         },
+         "typography_font_weight": "700",
+         "typography_letter_spacing": {
+          "unit": "px",
+          "size": 1.5
+         },
+         "typography_text_transform": "uppercase",
+         "__globals__": {
+          "title_color": "globals/colors?id=gforange"
+         }
+        },
+        "elements": [],
+        "widgetType": "heading"
+       }
+      ],
+      "isInner": true
+     },
+     {
+      "id": "043bf10",
+      "elType": "widget",
+      "settings": {
+       "title": "From material<br>to finished micro-part.",
+       "align": "center",
+       "title_color": "",
+       "typography_typography": "custom",
+       "typography_font_size": {
+        "unit": "px",
+        "size": 38
+       },
+       "typography_font_weight": "800",
+       "typography_line_height": {
+        "unit": "em",
+        "size": 1.1
+       },
+       "__globals__": {
+        "title_color": "globals/colors?id=gfwhite"
+       }
+      },
+      "elements": [],
+      "widgetType": "heading"
+     },
+     {
+      "id": "d7eb0dc",
+      "elType": "widget",
+      "settings": {
+       "editor": "<p>Source the right material and machine it with one trusted group. Share your CAD files and requirements, our engineers review every design for manufacturability and respond within one business day.</p>",
+       "align": "center",
+       "text_color": "#B6C0CC",
+       "typography_typography": "custom",
+       "typography_font_size": {
+        "unit": "px",
+        "size": 16
+       },
+       "typography_line_height": {
+        "unit": "em",
+        "size": 1.7
+       },
+       "_element_width": "initial",
+       "_element_custom_width": {
+        "unit": "px",
+        "size": 680
+       }
+      },
+      "elements": [],
+      "widgetType": "text-editor"
+     },
+     {
+      "id": "1ea352b",
+      "elType": "container",
+      "settings": {
+       "content_width": "full",
+       "flex_direction": "row",
+       "flex_justify_content": "center",
+       "flex_align_items": "center",
+       "flex_gap": {
+        "unit": "px",
+        "column": "14",
+        "row": "12",
+        "isLinked": false
+       },
+       "flex_wrap": "wrap",
+       "margin": {
+        "unit": "px",
+        "top": "8",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": false
+       }
+      },
+      "elements": [
+       {
+        "id": "66a39c0",
+        "elType": "widget",
+        "settings": {
+         "text": "Request a quote",
+         "link": {
+          "url": "https://www.potomac-laser.com/?post_type=post_services&p=12239&preview=true#quote"
+         },
+         "background_color": "",
+         "button_text_color": "",
+         "border_radius": {
+          "unit": "px",
+          "top": "40",
+          "right": "40",
+          "bottom": "40",
+          "left": "40",
+          "isLinked": true
+         },
+         "text_padding": {
+          "unit": "px",
+          "top": "15",
+          "right": "32",
+          "bottom": "15",
+          "left": "32",
+          "isLinked": false
+         },
+         "typography_typography": "custom",
+         "typography_font_size": {
+          "unit": "px",
+          "size": 13
+         },
+         "typography_font_weight": "700",
+         "typography_text_transform": "uppercase",
+         "typography_letter_spacing": {
+          "unit": "px",
+          "size": 1
+         },
+         "__globals__": {
+          "background_color": "globals/colors?id=gforange",
+          "button_text_color": "globals/colors?id=gfwhite"
+         }
+        },
+        "elements": [],
+        "widgetType": "button"
+       },
+       {
+        "id": "661eed0",
+        "elType": "widget",
+        "settings": {
+         "text": "View the project gallery",
+         "link": {
+          "url": "https://www.potomac-laser.com/project-gallery/"
+         },
+         "background_color": "#1B2E4A",
+         "button_text_color": "",
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "2",
+          "right": "2",
+          "bottom": "2",
+          "left": "2",
+          "isLinked": true
+         },
+         "border_color": "#46587010",
+         "border_radius": {
+          "unit": "px",
+          "top": "40",
+          "right": "40",
+          "bottom": "40",
+          "left": "40",
+          "isLinked": true
+         },
+         "text_padding": {
+          "unit": "px",
+          "top": "13",
+          "right": "30",
+          "bottom": "13",
+          "left": "30",
+          "isLinked": false
+         },
+         "typography_typography": "custom",
+         "typography_font_size": {
+          "unit": "px",
+          "size": 13
+         },
+         "typography_font_weight": "700",
+         "typography_text_transform": "uppercase",
+         "typography_letter_spacing": {
+          "unit": "px",
+          "size": 1
+         },
+         "__globals__": {
+          "button_text_color": "globals/colors?id=gfwhite"
+         }
+        },
+        "elements": [],
+        "widgetType": "button"
+       }
+      ],
+      "isInner": true
+     }
+    ],
+    "isInner": true
+   }
+  ],
+  "isInner": false
+ }
+]

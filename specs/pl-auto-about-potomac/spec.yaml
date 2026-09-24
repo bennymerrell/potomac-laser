@@ -1,0 +1,153 @@
+# spec.yaml — About Potomac  (run 20260924-100754, autonomous, RUN A)
+# Source design : Potomac Laser.zip (fab7225c…) :: About - About Potomac.html  (no tweak defaults)
+# MATCH (3.c.ii) — design images / fragment image slots in brackets:
+#   [0] #hero  dark, centred eyebrow + H1 + lede + 3 meta stats, NO buttons [0/0]
+#              -> UNMATCHED: hero-dark-stat-strip needs 2 CTAs + a tertiary link and a left column
+#              -> §7 MINTED hero-dark-centered-meta (verified iteration 3, tokenised from post 12277)
+#   [1] image | eyebrow + H2 + paragraph + 2 buttons, white [1/0 on why-choose-inset-cta]
+#              -> UNMATCHED: why-choose-inset-cta's copy column ends in a tinted inset card, and
+#                 its one image slot is a cover-photo background; this is a contained photo
+#              -> §7 MINTED split-media-prose (verified iteration 3, tokenised from post 12277)
+#   [2] subtle, centred head, 3 white cards (48px icon + title + text) [3/0]
+#              -> UNMATCHED (only group-ecosystem-cards has image slots: mid-navy, 4, badge)
+#              -> §7 MINTED icon-cards-3 (verified iteration 3, tokenised from post 12277)
+#   [3] white, centred head, 4 portrait cards (square photo + role + name + bio + link) [4/0]
+#              -> UNMATCHED -> §7 MINTED profile-cards-4 (verified iteration 3, tokenised from post 12277) (irregular: card 3 has no link,
+#                 card 4 is name-only — the fragment carries that shape, see PATTERNS Notes)
+#   [4] subtle, centred head, 6 stat cards (label + big value + line) [0/0]
+#              -> UNMATCHED (spec-table-dark is dark label/value ROWS, not cards)
+#              -> §7 MINTED stat-cards-6 (verified iteration 3, tokenised from post 12277)
+#   [5] .final-cta dark, eyebrow + H2 + 1 paragraph + exactly 2 buttons, last -> cta-band-dark [0/0]
+# Brand normalisation: "Potomac"/"Potomac Photonics" -> "Goodfellow Microfabrication" in the H1,
+#   hero lede, split paragraph, card 1 text and the facility photo alt. KEPT verbatim (past-tense
+#   history of the old company): Mike Davis's bio x3 ("joined Potomac", "led Potomac to ISO
+#   9001:2000", "Potomac's laser technologies"). Page title likewise normalised.
+# Links: §3.d link pass applied — CNC -> draft 12239 preview (pipeline-built); unbuilt targets ->
+#   their live counterparts (/project-gallery/, /services-applications/, /contact/).
+
+spec_version: 1
+page:
+  title: About Goodfellow Microfabrication
+  slug: pl-auto-about-potomac
+  post_type: page
+  post_status: draft
+assets:
+  about_team_facility:
+    attachment_id: 12269
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-about-team-facility.jpg
+  about_icon_history:
+    attachment_id: 12270
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-about-icon-history.svg
+  about_icon_partnership:
+    attachment_id: 12271
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-about-icon-partnership.svg
+  about_icon_group:
+    attachment_id: 12272
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-about-icon-group.svg
+  about_leader_simon:
+    attachment_id: 12273
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-about-leader-simon-kenney.jpg
+  about_leader_andrew:
+    attachment_id: 12274
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-about-leader-andrew-watson.jpg
+  about_leader_mike:
+    attachment_id: 12275
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-about-leader-mike-davis.jpg
+  about_leader_saniya:
+    attachment_id: 12276
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-about-leader-saniya-shetty.jpg
+sections:
+- pattern: hero-dark-centered-meta
+  tokens:
+    heading_1: About us
+    heading_2: The story of Goodfellow Microfabrication
+    body_1: <p>Since 1982, Goodfellow Microfabrication has been recognised by commercial and government agencies for contributions to <strong>medical device manufacturing, biotech and electronics fabrication</strong>. Now part of <a href="https://www.goodfellow.com/usa/" target="_blank" rel="noopener">Goodfellow, a leading supplier of advanced materials</a>, we are expanding our capabilities from our facility at the bwtech@UMBC Research and Technology Park in Baltimore, MD.</p>
+    heading_3: '1982'
+    heading_4: Founded
+    heading_5: 5K+
+    heading_6: Projects
+    heading_7: 100M+
+    heading_8: Holes drilled
+- pattern: split-media-prose
+  tokens:
+    image_1:
+      asset: about_team_facility
+    heading_1: Know the feature
+    heading_2: Rapid fabrication of precision devices, from prototyping to full-scale production
+    body_1: <p>From a single prototype to production volumes, Goodfellow Microfabrication combines laser micromachining, micro-CNC and 3D printing to help teams move miniature products to market quickly and cost-effectively.</p>
+    button_1: Our services
+    url_1: https://www.potomac-laser.com/services-applications/
+    button_2: Project gallery
+    url_2: https://www.potomac-laser.com/project-gallery/
+- pattern: icon-cards-3
+  tokens:
+    heading_1: How we work
+    heading_2: History, partnership and group strength
+    image_1:
+      asset: about_icon_history
+    heading_3: Proud history
+    body_1: <p>For over 40 years Goodfellow Microfabrication has helped clients develop miniature products and bring them to market quickly and cost-effectively. Since our founding in 1982 we have used a broad range of advanced technologies, from single prototypes to millions of parts, with a focus on precision and quality.</p>
+    image_2:
+      asset: about_icon_partnership
+    heading_4: Long-term partnership
+    body_2: <p>We prefer to partner on projects from the first prototypes through to product realisation, not just fabricate parts. That has meant taking on novel materials and production methods, as well as assembly and supply chain management for our partners.</p>
+    image_3:
+      asset: about_icon_group
+    heading_5: Backed by Goodfellow
+    body_3: <p>Our integration with <a href="https://www.goodfellow.com/usa" target="_blank" rel="noopener">Goodfellow</a> combines the resources and expertise of both companies. From engineers to support staff, the team works to your project objectives, with micro-manufacturing capability now supported by a global materials supplier.</p>
+- pattern: profile-cards-4
+  tokens:
+    heading_1: Our team
+    heading_2: Leadership
+    heading_3: Chief Executive Officer
+    heading_4: Simon Kenney
+    body_1: <p>Before joining Goodfellow, Simon spent 24 years at RS Components in sales, purchasing and product management. In 2010 he moved to Noida, India, on a one-year secondment to an RS joint venture, then led the Emerging Markets and Export team covering countries including Russia, Kazakhstan, Saudi Arabia and Israel.</p><p>Simon joined Goodfellow in 2016 with responsibility for strategic sales growth, sales planning, business development and the sales teams. Following the acquisition of the business by Battery Ventures in September 2021, he moved into the CEO role. He lives in Northamptonshire with his family and supports the Northampton Saints rugby team.</p>
+    body_2: <p><a href="https://uk.linkedin.com/in/simon-kenney-6012371/" target="_blank" rel="noopener">LinkedIn profile</a></p>
+    image_1:
+      asset: about_leader_simon
+    heading_5: Chief Financial Officer
+    heading_6: Andrew Watson
+    body_3: <p>Andrew has held senior finance positions for 15 years, qualifying through industry while studying in the evenings and at weekends. Before joining Goodfellow in 2016 he specialised in turnarounds, as Finance Director for a regional law firm and previously Group Financial Controller for a large motor retail group.</p><p>He is responsible for all financial aspects of the business and, alongside Simon, the creation and delivery of the growth strategy, and line manages the Finance and HR functions. Andrew is a Chartered Management Accountant and lives in Nottinghamshire with his family.</p>
+    body_4: <p><a href="https://www.linkedin.com/in/andrew-watson-83a18a15/" target="_blank" rel="noopener">LinkedIn profile</a></p>
+    image_2:
+      asset: about_leader_andrew
+    heading_7: Vice President, Manufacturing
+    heading_8: Mike Davis
+    body_5: '<p>Mike joined Potomac as a Sales and Marketing Administrator for what was then a fledgling contract manufacturing group. As that business grew, he built the Quality System, became a certified Lead Assessor through the Maryland ISO Consortium, and led Potomac to ISO 9001:2000 certification in January 2004 and ISO 13485:2003 certification a few years later.</p><p>To understand every part of quality, Mike became proficient with Potomac''s laser technologies: assembling production laser systems, creating programs, developing customer applications in R&amp;D and production, and training technicians. He moved into the role of Director of Operations and now leads the upgrade of the facility. Outside work he spends time with his family, plays sport and enjoys the occasional trip to Canada.</p>'
+    image_3:
+      asset: about_leader_mike
+    heading_9: R&amp;D Engineer
+    heading_10: Saniya Shetty
+    image_4:
+      asset: about_leader_saniya
+- pattern: stat-cards-6
+  tokens:
+    heading_1: By the numbers
+    heading_2: Four decades of micro-manufacturing
+    heading_3: Founded
+    heading_4: '1982'
+    body_1: <p>Over 40 years in micro-manufacturing technologies.</p>
+    heading_5: Projects
+    heading_6: 5K+
+    body_2: <p>Thousands of projects across medical, biotech, automotive, semiconductor and aerospace.</p>
+    heading_7: Holes
+    heading_8: 100M+
+    body_3: <p>Hundreds of millions of holes drilled, with diameters as small as 1 micron.</p>
+    heading_9: Lead time
+    heading_10: Rapid
+    body_4: <p>Parts turned around in as fast as 24 hours, depending on the application.</p>
+    heading_11: Technologies
+    heading_12: Expanding
+    body_5: <p>Market-driven micro-manufacturing technologies, continually advanced.</p>
+    heading_13: Materials
+    heading_14: Flexible
+    body_6: <p>Processes continually updated to machine new and emerging materials.</p>
+- pattern: cta-band-dark
+  tokens:
+    heading_1: Rapid response
+    heading_2: Talk to the team.
+    body_1: <p>Send a drawing or a short description of your project. Our engineers review every design and respond within one business day.</p>
+    button_1: Email us
+    url_1: https://www.potomac-laser.com/contact/
+    button_2: Send a drawing
+    url_2: https://www.potomac-laser.com/project-quote/#projectForm

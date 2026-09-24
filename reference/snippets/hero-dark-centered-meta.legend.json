@@ -1,0 +1,16 @@
+{
+    "pattern": "hero-dark-centered-meta",
+    "source_post": 12277,
+    "source_section_index": 0,
+    "tokens": {
+        "{heading_1}": "About us",
+        "{heading_2}": "The story of Goodfellow Microfabrication",
+        "{body_1}": "<p>Since 1982, Goodfellow Microfabrication has been recognised by commercial and government agencies for contributions to <strong>medical device manufacturing, biotech and electronics fabrication</strong>. Now part of <a href=\"https://www.goodfellow.com/usa/\" target=\"_blank\" rel=\"noopener\">Goodfellow, a leading supplier of advanced materials</a>, we are expanding our capabilities from our facility at the bwtech@UMBC Research and Technology Park in Baltimore, MD.</p>",
+        "{heading_3}": "1982",
+        "{heading_4}": "Founded",
+        "{heading_5}": "5K+",
+        "{heading_6}": "Projects",
+        "{heading_7}": "100M+",
+        "{heading_8}": "Holes drilled"
+    }
+}
