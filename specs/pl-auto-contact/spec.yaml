@@ -1,0 +1,98 @@
+# spec.yaml — Contact  (run 20260924-125928, autonomous, RUN A re-entry)
+# Source design : Potomac Laser.zip (fab7225c…) :: Contact - Contact.html, RENDERED WITH ITS TWEAK DEFAULTS
+#   (heroLayout "Contact form" moves the form card into the hero; showHeroCard false; showMap true;
+#   officeCols 2; showNewsletter false -> #newsletter not built). mock.html is that rendered DOM.
+# MATCH (3.c.ii):
+#   [0] #hero  dark split: eyebrow + H1 + lede + 2 CTAs | contact form card [0/0]
+#              -> UNMATCHED (quote-form-hubspot is the service quote form: timeline + upload, different
+#                 fields and HubSpot form) -> §7 candidate hero-split-contact-form
+#   [1] #get-in-touch  HQ panel (flag, city, 3 lines) | Google map [0/0] -> UNMATCHED -> §7 hq-panel-map
+#   [2] #offices  left head + 2-col grid (5 offices + 1 region card) + social row [0/0]
+#              -> UNMATCHED -> §7 candidate offices-grid-6-social
+# FORM: wired to HubSpot `[Potomac] Contact Form` 54d0ec75… (portal 143181153) — its fields are the
+#   design's exactly. The design's own handler only faked success. NOT live-tested: a test submission
+#   creates a real contact (HUBSPOT-FORMS.md: needs a human go-ahead).
+# Icons: design inline SVGs -> Font Awesome equivalents in native icon-list / social-icons widgets.
+# Brand: no present-tense "Potomac" in the copy (email address and social handles are identifiers).
+# Style-rule breaches kept verbatim: "Request a quote →", "Send message →", "Email the team →".
+
+spec_version: 1
+page:
+  title: Contact
+  slug: pl-auto-contact
+  post_type: page
+  post_status: draft
+sections:
+- pattern: hero-split-contact-form
+  tokens:
+    heading_1: Send a message
+    heading_2: Tell us about your project
+    body_1: Fields marked <em>*</em> are required. Our engineers review every enquiry for manufacturability, no redesign required to start.
+    heading_3: Thanks, your message is on its way. Our team will respond within one business day.
+    heading_4: First name
+    heading_5: Jane
+    heading_6: Last name
+    heading_7: Doe
+    heading_8: Email
+    heading_9: jane@company.com
+    heading_10: Phone
+    heading_11: +1 555 000 0000
+    heading_12: Company
+    heading_13: Acme Devices
+    heading_14: Website
+    heading_15: acme.com
+    heading_16: Message
+    heading_17: Tell us about your part, material, tolerances, feature sizes, quantities, and timeline.
+    button_1: Send message →
+    heading_18: No commitment · 24-hour response
+    heading_19: Contact Us
+    heading_20: What can we<br>help with <span class="pl-accent">today?</span>
+    body_2: <p>Ask our engineers about your project or request a rapid quotation. Share your requirements and <strong>we respond within one business day</strong>, with answers, feasibility, and a recommended process path. We've been doing this for over 40 years. Try us out.</p>
+    button_2: Request a quote →
+    url_1: Services - CNC Micromachining.html#quote
+    button_3: Call 443-543-5737
+    url_2: tel:+14435435737
+- pattern: hq-panel-map
+  tokens:
+    heading_1: Headquarters
+    heading_2: Baltimore, MD
+    heading_3: 1450 South Rolling Road<br>Baltimore, MD 21227, USA
+    heading_4: 443-543-5737
+    url_1: tel:+14435435737
+    heading_5: info@potomac-laser.com
+    url_2: mailto:info@potomac-laser.com
+    embed_1: <iframe title="Goodfellow Microfabrication, Baltimore, MD" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2897.9445719291243!2d-76.71027930415296!3d39.23382146518388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c1d6f04a78df%3A0xd81fb800436acb43!2sPotomac%20Photonics%20Inc.!5e0!3m2!1sen!2sid!4v1689661906881!5m2!1sen!2sid" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+- pattern: offices-grid-6-social
+  tokens:
+    heading_1: Worldwide
+    heading_2: Our global offices
+    body_1: <p>Part of the Goodfellow Group, with materials, microfabrication and analytics support across the US, Europe and Asia.</p>
+    heading_3: Cambridge
+    heading_4: Ermine Business Park, Huntingdon, Cambs, PE29 6WR, England
+    heading_5: +44 (0) 1480 424800
+    url_1: tel:+441480424800
+    heading_6: Pittsburgh
+    heading_7: 301 Grant Street, Suite 270, Pittsburgh, PA 15219, USA
+    heading_8: +1-800-821-2870
+    url_2: tel:+18008212870
+    heading_9: Hamburg
+    heading_10: Alstertwiete 3, D-20099, Hamburg, Germany
+    heading_11: +49 (0) 800 1000 579
+    url_3: tel:+498001000579
+    heading_12: Lille
+    heading_13: 229 rue Solférino, 59000, Lille, France
+    heading_14: +33 (0) 800 91 72 41
+    url_4: tel:+33800917241
+    heading_15: Shanghai
+    heading_16: Room 803, No. 568 Hengfeng Road, Jing'an District, Shanghai, 200070, China
+    heading_17: +86 (0) 21-5299 7072
+    url_5: tel:+862152997072
+    heading_18: Can't find your region?
+    body_2: <p>The Goodfellow Group serves 111+ countries. Reach the Baltimore team and we'll route you.</p>
+    button_1: Email the team →
+    url_6: mailto:info@potomac-laser.com
+    heading_19: Follow us
+    url_7: https://www.instagram.com/potomacphotonic/
+    url_8: https://www.facebook.com/potomacphotonics
+    url_9: https://www.linkedin.com/company/potomac-photonics/
+    url_10: https://twitter.com/PotomacPhotonic

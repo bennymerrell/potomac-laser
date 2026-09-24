@@ -85,6 +85,9 @@ omits `spec-table-dark`, which shifts every later section up by one.
 | `faq-accordion-filter-10` | — | — | — | — | — |   <!-- minted from 12300 (pl-auto-faqs, page) index 1 by run 20260924-125928 -->
 | `split-list-figure` | — | — | — | — | — |   <!-- minted from 12301 (pl-auto-quality-policy, page) index 1 by run 20260924-125928 -->
 | `check-list-centered` | — | — | — | — | — |   <!-- minted from 12301 (pl-auto-quality-policy, page) index 2 by run 20260924-125928 -->
+| `hero-split-contact-form` | — | — | — | — | — |   <!-- minted from 12302 (pl-auto-contact, page) index 0 by run 20260924-125928 -->
+| `hq-panel-map` | — | — | — | — | — |   <!-- minted from 12302 (pl-auto-contact, page) index 1 by run 20260924-125928 -->
+| `offices-grid-6-social` | — | — | — | — | — |   <!-- minted from 12302 (pl-auto-contact, page) index 2 by run 20260924-125928 -->
 
 ## Per-page variants
 
@@ -564,6 +567,48 @@ listed per entry, and consolidated under [Unmapped colours](#unmapped-colours).
 | **Globals** | 2 native `__globals__` refs · 1 `var(--e-global-color-gfink)` |
 | **Unmapped colours** | `#F6F8FB`, `#0F1620`, `#DCE1EA` |
 | **Notes** | **Verified on 12301** (iteration 1): section 640 = design; items 852×85/85/85/60 = design. |
+
+### hero-split-contact-form
+| | |
+|---|---|
+| **Snippet** | `reference/snippets/hero-split-contact-form.json` |
+| **Source** | post `12302` (`pl-auto-contact`, type `page`) section index `0` — minted by run 20260924-125928 (§7) |
+| **Used by** | 12302 at index 0 |
+| **Signature** | `89e2db97a9` (sha256 of the elType/widgetType tree, first 10 hex) · 5 containers + 6 widgets · 26,490 bytes |
+| **Recognise when** | The page's opening section on dark navy with a faint 32px grid (no glows), **wide (≈1392px) and split**: left, a white uppercase eyebrow, a very large H1 (~64px, may carry a `<br>` and an orange accent word), a lede and **two** CTAs (orange pill + white-outlined ghost); right, a **white contact form card** — orange kicker, H2, a "Fields marked * are required" line, then first/last name, email/phone, company/website (in pairs), a message textarea and one "Send message" button with a small note beside it. Discriminators: against `quote-form-hubspot`, this sits in the hero, has no timeline, no upload and no two-step indicator; against `hero-dark-stat-strip`, a form instead of stats. |
+| **Structure** | `container:full bg=gfnavydp pad 72/24/56` + grid `custom_css` → `container:boxed` (`boxed_width` 1392, row, gap 64) → left `container` (`calc((100% - 64px) * .55)`: `heading` eyebrow, `heading h1` with `.pl-accent`, `text-editor` lede, button row) + right `container` (`* .45`) → ONE `html` widget: scoped `<style>`, the card markup, and the submit `<script>` |
+| **Tokens** | 27 placeholders: `{heading_1..20}`, `{body_1..2}`, `{button_1..3}`, `{url_1..2}`. Inside the html widget (plain text, like `quote-form-hubspot`): `heading_1` kicker, `heading_2` card title, `body_1` required-fields line (carries `<em>*</em>`), `heading_3` success message, `heading_4..15` field labels + placeholders in pairs, `heading_16/17` message label/placeholder, `button_1` submit, `heading_18` note; then the left column: `heading_19` eyebrow, `heading_20` H1, `body_2` lede, `button_2/3` + `url_1/2` CTAs |
+| **Globals** | 6 native `__globals__` refs · 1 `var(--e-global-color-gforange)` (H1 accent) |
+| **Unmapped colours** | `rgba(255,255,255,0.78)` (lede), `rgba(255,255,255,0.32)` (ghost border); form colours in its scoped `<style>` (`#0F1620`, `#65718A`, `#DCE1EA`, `#9AA4B5`, success `#15803D`/`#EFFAF3`, error `#B91C1C`/`#FEF2F2`, focus orange) |
+| **Notes** | **Wired, not decorative:** posts to the HubSpot Forms API v3, portal `143181153`, form **`[Potomac] Contact Form`** `54d0ec75-106d-43eb-a420-0ff22e448e6d` (reference/HUBSPOT-FORMS.md, feed #18): `email`, `firstname`, `lastname`, `phone`, `company`, `website`, `potomac_message`, plus `hs_lead_status: NEW` and UTM; `context` carries `pageName`, `pageUri` and `hutk`; analytics `lead_form_*` with no PII values. The design's own handler only faked success. **Behaviour-tested short of sending** (12302): an empty submit and a bad email each show the in-card error, and nothing is posted. **Not yet proven end-to-end**: a live test submission creates a real HubSpot contact, so it needs a human go-ahead (HUBSPOT-FORMS.md §Verifying). Only the widget's own plain-text slots are `heading_*`; a `body_*` there fails the validator (it expects block markup) — the first tokenisation made that mistake and was replaced before commit. **Verified** (iteration 2): section 808 = design, card 598×680 = design, inputs 254×44, textarea 524×96. |
+
+### hq-panel-map
+| | |
+|---|---|
+| **Snippet** | `reference/snippets/hq-panel-map.json` |
+| **Source** | post `12302` (`pl-auto-contact`, type `page`) section index `1` — minted by run 20260924-125928 (§7) |
+| **Used by** | 12302 at index 1 |
+| **Signature** | `b00612bb21` (sha256 of the elType/widgetType tree, first 10 hex) · 7 containers + 4 widgets · 20,853 bytes |
+| **Recognise when** | A white section with **two equal-height panels side by side**: left, a dark navy card (faint grid) with an orange dot + uppercase "Headquarters"-style flag, a white city heading and **3 contact lines** (address, phone, email) with orange icons and hairlines between them; right, a slightly wider rounded **map embed**. |
+| **Structure** | `container:full bg=gfwhite pad 80/24` → `container:boxed` → row (stretch, gap 24) → panel `container` (`gfnavydp`, pad 30, radius 16, `flex:1`, grid `::before`) → flag row (7px dot + `heading`) mb 11, `heading h3` city mb 20, `icon-list` (3 items, 11px padding, hairlines) ; map `container` (`flex:1.3`, border, radius 16) → `html` iframe (min-height 260) |
+| **Tokens** | 8 placeholders: `{heading_1}` flag, `{heading_2}` city, `{heading_3..5}` the three lines (the address may carry `<br>`), `{url_1..2}` phone / email links, `{embed_1}` the map `<iframe>` |
+| **Globals** | 5 native `__globals__` refs · 2 `var(--e-global-color-gforange)` |
+| **Unmapped colours** | `rgba(255,255,255,0.86)` (lines), `rgba(255,255,255,.1)` (hairlines), `#DCE1EA` (map border) |
+| **Notes** | Icons are Font Awesome (`map-marker-alt`, `phone`, `envelope`) in a native `icon-list`, standing in for the design's inline SVGs, so the lines stay editable. The flag's bottom margin is 11 (6 + its 24px line box; iteration 1 was 5px short). **Verified on 12302** (iteration 2): section 462 = design; lines 463×69 / 46 / 46 = design; map 603×295 against 603×300. |
+
+### offices-grid-6-social
+| | |
+|---|---|
+| **Snippet** | `reference/snippets/offices-grid-6-social.json` |
+| **Source** | post `12302` (`pl-auto-contact`, type `page`) section index `2` — minted by run 20260924-125928 (§7) |
+| **Used by** | 12302 at index 2 |
+| **Signature** | `dcdaf0b0cd` (sha256 of the elType/widgetType tree, first 10 hex) · 11 containers + 18 widgets · 68,870 bytes |
+| **Recognise when** | A light-grey section with a **left-aligned** head (eyebrow + H2 + one grey lede), a **2-column** grid of **5 office cards** (city + an address line and a phone line, each with an orange icon) and **one highlighted card** in an orange tint ("Can't find your region?" + a line + an outlined button), then a "Follow us" row of **4 circular social icons**. |
+| **Structure** | `container:full bg=#F6F8FB pad 80/24` → `container:boxed` → head `container` (width 760, mb 40) → card row (`calc((100% - 18px)/2)`, gap 18, stretch) → 5 × office `container` (pad 26/24, border, radius 8, hover lift + orange left bar) → `heading h3` + `icon-list` (2 items) ; 1 × region `container` (`#FEF9F5`, border `#F9B067`) → `heading h3` + `text-editor` + `button` ; social row → `heading` + `social-icons` (4) |
+| **Tokens** | 32 placeholders: `{heading_1..19}`, `{body_1..2}`, `{button_1}`, `{url_1..10}`. Head = `heading_1` eyebrow, `heading_2` H2, `body_1` lede; office n = `heading_(3n)` city, `heading_(3n+1)` address, `heading_(3n+2)` phone, `url_n` tel link; region card = `heading_18`, `body_2`, `button_1`, `url_6`; `heading_19` "Follow us"; `url_7..10` social links |
+| **Globals** | 10 native `__globals__` refs · 26 `var(--e-global-color-*)` (`gforange` icons/bars/hover, `gfink` text) |
+| **Unmapped colours** | `#0F1620`, `#65718A`, `#DCE1EA`, `#C3CBD8`, `#FEF9F5` (region tint), `#F9B067` (region border) |
+| **Notes** | Social icons are the native `social-icons` widget (Instagram, Facebook, LinkedIn, X); their screen-reader labels come from the icon names ("facebook-f") rather than the design's aria-labels — a small accessibility regression to fix by hand if it matters. **Verified on 12302** (iteration 2): section 947 = design, cards 567×147 / 567×190 = design, social circles 40×40 = design. |
 
 ## Unmapped colours
 

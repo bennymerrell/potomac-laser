@@ -95,6 +95,21 @@
     "_pl_auto_run": "20260924-125928"
    },
    "page_template": "default"
+  },
+  {
+   "post_id": 12302,
+   "post_type": "page",
+   "post_status": "draft",
+   "slug": "pl-auto-contact",
+   "title": "Contact",
+   "design_page": "Contact - Contact.html",
+   "preview_url": "https://www.potomac-laser.com/?page_id=12302&preview=true",
+   "provenance_meta": {
+    "_pl_auto_page": "Contact - Contact.html",
+    "_pl_auto_zip": "fab7225ce0879014418672228148420215c3a39fa6463bea2012d2ce7b798db9",
+    "_pl_auto_run": "20260924-125928"
+   },
+   "page_template": "default"
   }
  ],
  "attachments_created": [
@@ -386,6 +401,51 @@
    "bytes": 37305,
    "sha256": "2c102791e4e9fb0a94980224a0185f28a92c4b9de761dd6df3636c3787bb54af",
    "role": "\u00a77.4 positional tokenise job"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/bundle-contact-v1.json",
+   "bytes": 48605,
+   "sha256": "ff0086f2f263e14e6bcda88ee4ba1aa04e22525280e1198349bf45c95ba50a2f",
+   "role": "bundle: contact v1 (7be97688\u2026)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/bundle-contact-v2.json",
+   "bytes": 48606,
+   "sha256": "33f165064d98053ba84658f802b58bdaae2d9b3af90cf88d2793edb545230360",
+   "role": "bundle: contact v2 (898ec738\u2026)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/hq-panel-map.json",
+   "bytes": 20853,
+   "sha256": "afafaa6820321dad6db53c12eca9260fbfa863ec1e0cecf4372f8fde0a903f00",
+   "role": "\u00a77.4 tokenised fragment from post 12302 \u00a71 (positional; 2 css var rewrites)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/offices-grid-6-social.json",
+   "bytes": 68870,
+   "sha256": "9f95df084897712acc82d197dec06dde2faf80bf8a16b3acbbf9fde23aed39eb",
+   "role": "\u00a77.4 tokenised fragment from post 12302 \u00a72 (positional; 18 css var rewrites)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/tok-contact.json",
+   "bytes": 44117,
+   "sha256": "ddbcdc5d2430070e58564f1e51e8a3f75f2730256fc3f6eafebbed5dd98fc97c",
+   "role": "\u00a77.4 positional tokenise job"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/hero-split-contact-form.json",
+   "bytes": 26490,
+   "sha256": "884a2a7c28687cf0d4c280e2c507c612fa4b16892ee4d08e084fb71f4d510cef",
+   "role": "\u00a77.4 tokenised fragment from post 12302 \u00a70 (positional; 0 css var rewrites)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/tok-contact-hero.json",
+   "bytes": 14173,
+   "sha256": "531689fe847933430c49fb464b59b5efca219d6d71ed1ba52a1bd0c6ed33a595",
+   "role": "\u00a77.4 positional re-tokenise job"
   }
+ ],
+ "notes": [
+  "hero-split-contact-form first tokenisation (sha 12ff5a83\u2026) removed by this run before commit: its status text was tokenised as body_* (validator requires block markup for body_*); re-tokenised with heading_* from the same, unchanged post 12302."
  ]
 }
