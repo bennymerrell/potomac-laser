@@ -20,8 +20,12 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import assemble as A
 
 # Widget settings keys that hold substituted text. Image slots are deliberately absent:
-# they carry attachment ids that must not be disturbed.
-TEXT_KEYS = ('title', 'editor')
+# they carry attachment ids that must not be disturbed. `html` is quote-form-hubspot's one
+# widget, whose tokens substitute inside it; `text` is a button label. Toggle widgets keep
+# their text one level down, in settings.tabs[].{tab_title,tab_content} — without TAB_KEYS
+# an FAQ copy edit is silently skipped (found 2026-09-24: 5 FAQ answers on LM/3DP).
+TEXT_KEYS = ('title', 'editor', 'html', 'text')
+TAB_KEYS = ('tab_title', 'tab_content')
 
 
 def shape(o, p=''):
@@ -46,6 +50,12 @@ def copy_text(src, dst, changes):
                 if k in d_set and k in s_set and d_set[k] != s_set[k]:
                     changes.append((dst.get('id'), dst.get('widgetType'), k, d_set[k], s_set[k]))
                     d_set[k] = s_set[k]
+            for n, (s_tab, d_tab) in enumerate(zip(s_set.get('tabs') or [], d_set.get('tabs') or [])):
+                for k in TAB_KEYS:
+                    if k in d_tab and k in s_tab and d_tab[k] != s_tab[k]:
+                        changes.append((dst.get('id'), dst.get('widgetType'), f'tabs[{n}].{k}',
+                                        d_tab[k], s_tab[k]))
+                        d_tab[k] = s_tab[k]
         for k in dst:
             if k in src:
                 copy_text(src[k], dst[k], changes)

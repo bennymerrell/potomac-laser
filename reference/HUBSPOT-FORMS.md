@@ -36,8 +36,9 @@ if it carries a field the target form does not have, so send only these.
 | Property | Source on the new quote section |
 |---|---|
 | `email` | Email * |
-| `firstname` / `lastname` | "Your name" split on the first space |
-| `company` | Organisation |
+| `firstname` | First name * (sent as entered; no splitting since 2026-09-24) |
+| `lastname` | Last name * |
+| `company` | Company * (required since 2026-09-24; was optional "Organisation") |
 | `phone` | not collected by this design — omit |
 | `potomac_project_name` | derive, e.g. `Rapid Response Quote — <page title>`, so the record is identifiable |
 | `potomac_project_description` | Part description **plus** the folded step-2 values (see below) |

@@ -1,5 +1,5 @@
 # spec.yaml — 3D Printing  (run 20260806-173742, sibling 5)
-# Source design : Potomac Laser.zip :: 3D Printing.html
+# Source design : Potomac Laser.zip :: Services - 3D Printing.html
 # MATCH         : 12 of 12, zero unmatched, no §7 authoring.
 # Token values  : read from the design markup by node-index alignment against
 #                 Micro-Hole Drilling (identical per-section structural signatures,
@@ -8,6 +8,10 @@
 #                 pattern's Notes mark spec rows adjustable.
 # Images        : all 10 byte-identical to the CNC run's — deduped to attachments
 #                 12229-12238, zero uploads.
+# REFRESH 2026-09-24 : copy carried from Services - 3D Printing.html (Potomac Laser.zip
+#                      fab7225c…) by tools/refresh_service_specs.py.
+#                      Section 3 (explorer) still the iframe embed — the
+#                      inline cluster replaces it in a later step.
 
 spec_version: 1
 page:
@@ -50,7 +54,7 @@ sections:
 - pattern: hero-dark-stat-strip
   tokens:
     body_2: <p><a href="#services">EXPLORE SERVICES →</a></p>
-    body_3: <p>Upload STEP, STL, or PDF — our engineers review it for manufacturability.</p>
+    body_3: <p>Upload STEP, STL, or PDF, our engineers review it for manufacturability.</p>
     button_1: Upload Drawing / CAD
     button_2: Request a Quote
     heading_11: '1982'
@@ -59,7 +63,7 @@ sections:
     url_2: '#quote'
     heading_1: 3D PRINTING CONTRACT SERVICES
     heading_2: Micro 3D Printing,<br>from Concept to<br><span style="color:#F5821F">Production</span>.
-    body_1: <p>Micro 3D printing takes you from concept to functional parts quickly and reliably. Goodfellow Microfabrication provides <strong>3D printing contract services</strong> — design-for-additive, prototyping, and small-batch production in biocompatible and advanced materials, integrated with laser machining, micro-CNC, and bonding.</p>
+    body_1: <p>Micro 3D printing takes you from concept to functional parts quickly and reliably. Goodfellow Microfabrication provides <strong>3D printing contract services</strong>, design-for-additive, prototyping, and small-batch production in biocompatible and advanced materials, integrated with laser machining, micro-CNC, and bonding.</p>
     heading_3: Micro
     heading_4: SCALE FEATURES
     heading_5: Bio
@@ -72,7 +76,7 @@ sections:
   tokens:
     heading_1: WHY GOODFELLOW MICROFABRICATION
     heading_3: Talk to the engineers who will review your design
-    body_3: <p>Upload STEP, STL, or PDF — our engineers review it for manufacturability.<br>No redesign required to start — we'll help optimise your part.</p>
+    body_3: <p>Upload STEP, STL, or PDF, our engineers review it for manufacturability.<br>No redesign required to start, we'll help optimise your part.</p>
     button_1: Upload Drawing / CAD
     button_2: Request a Quote
     image_1:
@@ -80,8 +84,8 @@ sections:
     url_1: '#quote'
     url_2: '#quote'
     heading_2: Why choose Goodfellow Microfabrication for 3D printing
-    body_1: <p>We deliver micro 3D printing contract services for advanced manufacturing — applying additive where it adds real technical and economic value, and combining it with laser machining, micro-CNC, and bonding under one roof.</p>
-    body_2: <ul><li><strong>Additive expertise</strong> — design and process knowledge that applies 3D printing where it adds real value.</li><li><strong>Complex geometries</strong> — support for intricate shapes, part consolidation, and micro-scale features.</li><li><strong>Broad materials</strong> — engineering plastics, acrylics, metals, ceramics, and FDA-compliant biocompatible options.</li><li><strong>Prototype to small-batch</strong> — rapid prototyping and small-batch production with scale-up support.</li><li><strong>One-stop integration</strong> — seamless combination with laser machining, CNC, bonding, and inspection.</li></ul>
+    body_1: <p>We deliver micro 3D printing contract services for advanced manufacturing, applying additive where it adds real technical and economic value, and combining it with laser machining, micro-CNC, and bonding under one roof.</p>
+    body_2: <ul><li><strong>Additive expertise</strong>, design and process knowledge that applies 3D printing where it adds real value.</li><li><strong>Complex geometries</strong>, support for intricate shapes, part consolidation, and micro-scale features.</li><li><strong>Broad materials</strong>, engineering plastics, acrylics, metals, ceramics, and FDA-compliant biocompatible options.</li><li><strong>Prototype to small-batch</strong>, rapid prototyping and small-batch production with scale-up support.</li><li><strong>One-stop integration</strong>, seamless combination with laser machining, CNC, bonding, and inspection.</li></ul>
 - pattern: services-image-cards
   tokens:
     heading_1: Our Services
@@ -118,8 +122,8 @@ sections:
     embed_1: '<iframe id="3dp-interactive-frame" src="https://www.potomac-laser.com/wp-content/uploads/novamira-drafts/3dp-interactive.html" title="3D Printing: services and quote request" scrolling="no" style="display:block;border:0;width:100%;min-height:640px" loading="eager"></iframe>'
 - pattern: spec-table-dark
   tokens:
-    body_1: <p>Engineering guidance — not fixed spec promises.</p>
-    body_10: <p>Material selection supported — customers often work with engineering to optimise for manufacturability.</p>
+    body_1: <p>Engineering guidance, not fixed spec promises.</p>
+    body_10: <p>Material selection supported, customers often work with engineering to optimise for manufacturability.</p>
     body_11: <p>Work with your own material or select from <strong>170,000+</strong> options.</p><p>Broader material matching and traceability support are available through the wider Goodfellow library.</p>
     heading_1: Technical Specifications
     heading_11: Material Support
@@ -136,7 +140,7 @@ sections:
     heading_7: Polymers
     body_6: <p>ABS, PLA, nylon, acrylics, specialty &amp; FDA-compliant biocompatible polymers</p>
     heading_8: Min order quantity
-    body_7: <p><strong>No MOQ</strong> — from early prototype through production transfer</p>
+    body_7: <p><strong>No MOQ</strong>, from early prototype through production transfer</p>
     heading_9: Team response
     body_8: <p><strong>Fast</strong> engineering response to new project enquiries</p>
     heading_10: Inspection
@@ -147,15 +151,15 @@ sections:
     heading_5: 'Best when you need:'
     heading_8: 'Best when you need:'
     heading_11: 'Best when you need:'
-    body_1: <p>Use this guide to identify the right process — or combine them for the best result.</p>
-    body_12: <p>Upload CAD (STEP, STL, IGES) or a drawing (PDF, DXF, DWG) — our engineers review it for manufacturability.</p><p>No redesign required to start — we'll help optimise your part.</p>
+    body_1: <p>Use this guide to identify the right process, or combine them for the best result.</p>
+    body_12: <p>Upload CAD (STEP, STL, IGES) or a drawing (PDF, DXF, DWG), our engineers review it for manufacturability.</p><p>No redesign required to start, we'll help optimise your part.</p>
     body_13: <p>Uploads stay confidential. We can sign your NDA on request before you share files.</p>
     button_1: Upload Drawing / CAD
     button_2: Request a Quote
     url_1: '#quote'
     url_2: '#quote'
     heading_2: 3D Printing vs. Micro-CNC vs. Laser
-    body_2: <p>Choose additive where it adds value — or combine it with subtractive and laser processes for the best result.</p>
+    body_2: <p>Choose additive where it adds value, or combine it with subtractive and laser processes for the best result.</p>
     heading_3: 3D Printing
     heading_4: 3D Printing
     body_3: <ul><li>Complex or consolidated geometry</li><li>Internal channels &amp; features</li><li>Rapid design iteration</li></ul>
@@ -206,7 +210,7 @@ sections:
   tokens:
     heading_1: THE GOODFELLOW GROUP
     heading_2: The Goodfellow Group
-    body_1: <p>The Goodfellow Group brings together material supply, precision fabrication, and testing capabilities — giving you access to a complete engineering ecosystem.</p>
+    body_1: <p>The Goodfellow Group brings together material supply, precision fabrication, and testing capabilities, giving you access to a complete engineering ecosystem.</p>
     heading_3: Material Supply
     body_2: <p>Global supply of advanced metals, alloys, ceramics, polymers, and compounds with research-quality flexibility and production-scale support across 170,000+ specialist materials.</p>
     body_3: <ul><li>170,000+ material grades</li><li>No minimum order</li></ul>
@@ -247,32 +251,32 @@ sections:
     heading_12: TK
     heading_13: Thomas Klein
     heading_14: Photon Dynamics GmbH
-    body_1: <p>"They redesigned our part for additive — fewer components, better performance, faster iterations."</p>
+    body_1: <p>"They redesigned our part for additive, fewer components, better performance, faster iterations."</p>
     body_2: <p>"Micro 3D-printed biomedical parts in a biocompatible material, exactly to spec."</p>
     body_3: <p>"One partner for printing, CNC, and laser finishing meant a genuinely one-stop build."</p>
 - pattern: quote-form-hubspot
   tokens:
-    heading_1: Rapid Response Quote
-    heading_2: Ready to move forward?
-    body_1: Upload your drawing or request a quote — our engineering team will review your design and respond within 24 hours.
-    body_2: No redesign required to start — we'll help optimise your part.
-    body_3: ♢ Uploads stay confidential. We can sign your NDA on request before you share files.
-    heading_3: '1'
-    heading_4: Now
-    body_4: You submit your request
-    heading_5: Name, email, description, drawing. No commitment.
-    heading_6: '2'
-    body_5: Within hours
-    heading_7: Engineer reviews your part
-    heading_8: DFM check on geometry, tolerances, material fit.
-    body_6: '3'
-    heading_9: Within 24 hours
-    heading_10: Quote &amp; process path confirmed
-    heading_11: Feasibility, recommended process, next steps.
+    body_1: Upload your drawing or request a quote, our engineering team will review your design and respond within 24 hours.
+    body_2: No redesign required to start, we'll help optimise your part.
+    body_3: Uploads stay confidential. We can sign your NDA on request before you share files.
+    body_4: Name, email, description, drawing. No commitment.
+    body_5: DFM check on geometry, tolerances, material fit.
+    body_6: Feasibility, recommended process, next steps.
+    body_7: e.g. Micro 3D-printed housing, complex internal channels, biocompatible material, 10 parts
     body_8: STEP, STL, IGES, PDF, DXF, DWG, or ZIP up to 25 MB
     body_9: No commitment · 24h response
     button_1: Continue →
-    body_7: e.g. Micro 3D-printed housing, complex internal channels, biocompatible material, 10 parts
+    heading_1: Rapid Response Quote
+    heading_2: Ready to move forward?
+    heading_3: Now
+    heading_4: You submit your request
+    heading_5: Within hours
+    heading_6: Engineer reviews your part
+    heading_7: Within 24 hours
+    heading_8: Quote &amp; process path confirmed
+    heading_9: Your part
+    heading_10: Complete
+    heading_11: Step 1, Tell us about your part
 - pattern: faq-toggle
   tokens:
     heading_1: FAQ
@@ -283,11 +287,11 @@ sections:
     faq_q_1: What are Potomac's 3D printing contract services?
     faq_a_1: <p>Potomac provides micro 3D printing contract services spanning product design, prototyping, and small-batch production in biocompatible and advanced materials, as part of a broader advanced-manufacturing offering that moves you from concept to functional parts.</p>
     faq_q_2: When does 3D printing make sense for my part?
-    faq_a_2: <p>Potomac helps apply 3D printing where it adds technical and economic value — for complex geometries, part consolidation, and rapid iteration — and advises against it where it does not, helping you avoid costly trial and error.</p>
+    faq_a_2: <p>Potomac helps apply 3D printing where it adds technical and economic value, for complex geometries, part consolidation, and rapid iteration, and advises against it where it does not, helping you avoid costly trial and error.</p>
     faq_q_3: What materials can Potomac 3D print?
     faq_a_3: <p>Materials include engineering plastics (ABS, PLA, nylon), acrylics and specialty polymers, metals, ceramics, and FDA-compliant biocompatible materials. Selection is guided by mechanical performance, thermal stability, chemical resistance, and regulatory requirements.</p>
     faq_q_4: Can you help redesign my part for additive?
-    faq_a_4: <p>Yes. Potomac works with your CAD models to optimise geometry for additive processes — re-engineering legacy designs, reducing part count through functional consolidation, and improving performance while lowering material usage and lead time.</p>
+    faq_a_4: <p>Yes. Potomac works with your CAD models to optimise geometry for additive processes, re-engineering legacy designs, reducing part count through functional consolidation, and improving performance while lowering material usage and lead time.</p>
     faq_q_5: Can Potomac make micro-scale or complex parts?
     faq_a_5: <p>Yes. Through in-house expertise and a network of qualified additive manufacturing partners, Potomac supports micro- and precision-scale 3D printing of complex geometries and fine features.</p>
     faq_q_6: Do you offer production, not just prototypes?
