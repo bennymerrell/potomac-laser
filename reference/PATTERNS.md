@@ -76,6 +76,9 @@ omits `spec-table-dark`, which shifts every later section up by one.
 | `icon-cards-3` | — | — | — | — | — |   <!-- minted from 12277 (pl-auto-about-potomac, page) index 2 by run 20260924-100754 -->
 | `profile-cards-4` | — | — | — | — | — |   <!-- minted from 12277 (pl-auto-about-potomac, page) index 3 by run 20260924-100754 -->
 | `stat-cards-6` | — | — | — | — | — |   <!-- minted from 12277 (pl-auto-about-potomac, page) index 4 by run 20260924-100754 -->
+| `hero-dark-centered` | — | — | — | — | — |   <!-- minted from 12295 (pl-auto-case-studies, page) index 0 by run 20260924-125928 -->
+| `image-link-cards-5` | — | — | — | — | — |   <!-- minted from 12295 (pl-auto-case-studies, page) index 1 by run 20260924-125928 -->
+| `image-link-cards-12-button` | — | — | — | — | — |   <!-- minted from 12296 (pl-auto-news, page) index 1 by run 20260924-125928 -->
 
 ## Per-page variants
 
@@ -429,6 +432,48 @@ listed per entry, and consolidated under [Unmapped colours](#unmapped-colours).
 | **Globals** | 25 native `__globals__` refs (`gforange` eyebrow + 6 labels, `gfwhite` 6 cards, `gfnavy` 6 values, `gfbody` 6 lines) · 0 CSS-var rewrites |
 | **Unmapped colours** | `#F6F8FB` (section bg), `#0F1620` (H2), `#DCE1EA` (card border), `rgba(0,0,0,.07)` (card shadow) |
 | **Notes** | Six is fixed in the fragment; a 3-card row is the same structure with cards 4–6 deleted and their tokens dropped (renumber). **Verified on 12277 at 1792px** (iteration 3): cards 371×170 = design, section 648 = design, word-for-word text match. |
+
+### hero-dark-centered
+| | |
+|---|---|
+| **Snippet** | `reference/snippets/hero-dark-centered.json` |
+| **Source** | post `12295` (`pl-auto-case-studies`, type `page`) section index `0` — minted by run 20260924-125928 (§7) |
+| **Used by** | 12295 at index 0, 12296 (`pl-auto-news`) at index 0 |
+| **Signature** | `4f1fa16177` (sha256 of the elType/widgetType tree, first 10 hex) · 2 containers + 3 widgets · 6,921 bytes |
+| **Recognise when** | The page's opening section on dark navy (flat `#0D1B2A` + faint 32px grid + two soft glows), **everything centred**, holding only a small uppercase orange eyebrow, one H1 (~54px) and one lede paragraph (may carry `<strong>` / an inline link) — **nothing else**: no meta stats, no buttons, no image. Discriminators: with a row of 3 stats it is `hero-dark-centered-meta`; with a CTA or 2 CTAs + stats it is `hero-dark-centered-cta` / `hero-dark-stat-strip`. |
+| **Structure** | `container:full bg=gfnavydp pad 72/24/64` + `custom_css` grid/glow → `container:boxed` (`boxed_width` 1200) column centred → `heading` eyebrow → `heading h1` (margin 43/0/18, title `max-width:22ch`, `text-wrap:balance`) → `text-editor` lede (`p` max-width 727) |
+| **Tokens** | 3 placeholders: `{heading_1}` eyebrow, `{heading_2}` H1, `{body_1}` lede |
+| **Globals** | 3 native `__globals__` refs (`gfnavydp` bg, `gforange` eyebrow, `gfwhite` H1) · 0 CSS-var rewrites |
+| **Unmapped colours** | `rgba(255,255,255,0.74)` (lede), `#fff` (3-digit, lede `strong`/`a`), grid/glow `rgba()` stops |
+| **Notes** | Same builder as `hero-dark-centered-meta` minus the meta row, **with one correction**: the H1 top margin is 43px (24px eyebrow line box + 20 + 18 − the widget's own 18px line) — at 38 the section is 5px short, which is also the residual on `hero-dark-centered-meta` (minted with 38; not edited). **Verified**: 12295 332px = design; 12296 390px = design 332 + one extra H1 line from the brand-normalised "News from Goodfellow Microfabrication". Tokenised positionally (build ≡ template, 0 leaf mismatches). |
+
+### image-link-cards-5
+| | |
+|---|---|
+| **Snippet** | `reference/snippets/image-link-cards-5.json` |
+| **Source** | post `12295` (`pl-auto-case-studies`, type `page`) section index `1` — minted by run 20260924-125928 (§7) |
+| **Used by** | 12295 at index 1 |
+| **Signature** | `6f5b0b1d1c` (sha256 of the elType/widgetType tree, first 10 hex) · 13 containers + 25 widgets · 74,151 bytes |
+| **Recognise when** | A light-grey (`#F6F8FB`) section with **no section head** holding a 3-column grid of **exactly 5** white cards, each card **one link** (the whole card is an `<a>`): an image flush to the top at 16:10, then an orange uppercase tag (category/date), a bold navy title, one grey paragraph, and an uppercase "Read the …" label pinned to the bottom; hover lifts the card and draws an orange bar along its bottom edge. Discriminators: against `profile-cards-4`, no head, 16:10 not square, whole-card link; against `services-image-cards`, 3-up not 5-up and no section head; with 12 cards and a closing button it is `image-link-cards-12-button`. |
+| **Structure** | `container:full bg=#F6F8FB pad 80/24` → `container:boxed` → card row (wrap, stretch, gap 20; `calc((100% - 40px)/3)`) → 5 × card `container` `html_tag:a` + `link` (border 1px `#DCE1EA`, radius 8, `overflow:hidden`, shadow, `::after` orange bar) → `image` (16:10 cover on `gfnavydp`) + body `container` (pad 20/22/24, gap 10) → `heading` tag + `heading h3` + `text-editor` + `text-editor` label (`margin-top:auto`) |
+| **Tokens** | 30 placeholders: `{image_1..5}`, `{heading_1..10}`, `{body_1..10}`, `{url_1..5}`. Card n = `image_n`, `heading_(2n-1)` tag, `heading_(2n)` title, `body_(2n-1)` text, `body_(2n)` label, `url_n` |
+| **Globals** | 25 native `__globals__` refs (`gfwhite` ×5 card bg, `gforange` ×5 tags, `gfnavy` ×10 titles + labels, `gfbody` ×5 text) · 15 `var(--e-global-color-*)` in `custom_css` (hover bar `gforange`, image backdrop `gfnavydp`, label `gfnavy`) |
+| **Unmapped colours** | `#F6F8FB` (section bg), `#DCE1EA` (card border), `rgba(0,0,0,.07)` / `rgba(15,42,68,.08)` (shadows) |
+| **Notes** | Card links open in a new tab (`is_external`), as the design's `target="_blank"`. Rows equalise per flex line, like the design's grid rows (478 / 455). The count is fixed at 5 — for other counts see `image-link-cards-12-button` or mint a sibling. **Verified on 12295** (iteration 2): cards 371×478 / 371×455 and images 369×230 = design; section 1114 = design; word-for-word text match (222/222). Tokenised positionally: the five "Read the case study" labels are identical, so value-based inversion would be ambiguous. |
+
+### image-link-cards-12-button
+| | |
+|---|---|
+| **Snippet** | `reference/snippets/image-link-cards-12-button.json` |
+| **Source** | post `12296` (`pl-auto-news`, type `page`) section index `1` — minted by run 20260924-125928 (§7) |
+| **Used by** | 12296 at index 1 |
+| **Signature** | `efe3827ff7` (sha256 of the elType/widgetType tree, first 10 hex) · 28 containers + 61 widgets · 177,876 bytes |
+| **Recognise when** | As `image-link-cards-5` — light grey, no head, whole-card links with a 16:10 image, tag, title, text and a pinned "Read the …" label — but **12 cards** (4 rows of 3) **followed by one centred white pill button outlined in orange** ("Older news"), 40px below the grid. |
+| **Structure** | as `image-link-cards-5`, with 12 cards, then a row `container` (centred, margin-top 40) → `button` (white bg, orange text and 1px orange border) |
+| **Tokens** | 74 placeholders: `{image_1..12}`, `{heading_1..24}`, `{body_1..24}`, `{url_1..13}`, `{button_1}`. Card n as `image-link-cards-5`; `url_13` is the button's link |
+| **Globals** | 63 native `__globals__` refs (incl. the button's `border_color` → `gforange`, mapped at tokenisation) · 36 `var(--e-global-color-*)` in `custom_css` |
+| **Unmapped colours** | as `image-link-cards-5` |
+| **Notes** | **Verified on 12296** (iteration 2): section 2329 vs design 2328, row heights 524/478/524/501 = design, button 132×41 centred, word-for-word text match (507/507), 12/12 images. |
 
 ## Unmapped colours
 

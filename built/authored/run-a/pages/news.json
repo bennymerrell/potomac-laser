@@ -1,0 +1,42 @@
+{
+ "slug": "pl-auto-news",
+ "title": "News",
+ "design_page": "About - News.html",
+ "header": "# spec.yaml — News  (run 20260924-125928, autonomous, RUN A re-entry)\n# Source design : Potomac Laser.zip (fab7225c…) :: About - News.html  (no tweak defaults)\n# MATCH (3.c.ii):\n#   [0] #hero  centred, no meta, no buttons [0/0] -> hero-dark-centered (minted this run by Case Studies — dedupe hit)\n#   [1] subtle, no head, 12 linked image cards + one centred secondary button [12/0]\n#              -> UNMATCHED: image-link-cards-5 has 5 cards and no button (fixed arity, TRANSLATE §6)\n#              -> §7 candidate image-link-cards-12-button\n#   [2] .final-cta -> cta-band-dark [0/0]\n# Brand normalisation: H1 \"News from Potomac\", lede \"at Potomac Photonics\" -> Goodfellow Microfabrication.\n#   KEPT verbatim: the 12 dated headlines and summaries (historical press items).\n# Links: url_* hold the design's page hrefs; §3.d link pass rewrites the internal ones.\n",
+ "assets": [
+  "news_img_1",
+  "news_img_2",
+  "news_img_3",
+  "news_img_4",
+  "news_img_5",
+  "news_img_6",
+  "news_img_7",
+  "news_img_8",
+  "news_img_9",
+  "news_img_10",
+  "news_img_11",
+  "news_img_12"
+ ],
+ "sections": [
+  {
+   "pattern": "hero-dark-centered",
+   "values": "news.hero-dark-centered.values.json"
+  },
+  {
+   "pattern": "image-link-cards-12-button",
+   "values": "news.image-link-cards-12-button.values.json"
+  },
+  {
+   "pattern": "cta-band-dark",
+   "values": {
+    "heading_1": "Rapid response",
+    "heading_2": "Talk to the team.",
+    "body_1": "<p>Send a drawing or a short description of your project. Our engineers review every design and respond within one business day.</p>",
+    "button_1": "Email us",
+    "url_1": "Contact - Contact.html",
+    "button_2": "Send a drawing",
+    "url_2": "https://www.potomac-laser.com/project-quote/#projectForm"
+   }
+  }
+ ]
+}
