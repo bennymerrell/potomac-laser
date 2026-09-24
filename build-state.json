@@ -124,7 +124,7 @@
       "run": "20260924-135039",
       "report": "built/run-20260924-135039.report.md (build branch)",
       "recovery_floor": "UpdraftPlus DB set 1790244496 (2026-09-24T10:08:16Z, nonce ec283efbb074), verified not taken (3.71 h old)",
-      "note": "RUN B complete: the nine Materials pages built as page drafts 12388-12396, 11 patterns minted (cap 20). The 15 RUN A and service entries were skipped as already built. Not merged: the build branch awaits human review. The report corrects run 20260924-125928: the library cta-band-dark is 10px taller than the designs' closing band; cta-band-dark-display is the design's band.",
+      "note": "RUN B complete: the nine Materials pages built as page drafts 12388-12396, 11 patterns minted (cap 20). The 15 RUN A and service entries were skipped as already built. Not merged: the build branch awaits human review. The report corrects run 20260924-125928: the library cta-band-dark is 10px taller than the designs' closing band; cta-band-dark-display is the design's band. Supervised run 20260924-150733: the 8 material pages rebuilt as post_material drafts 12397-12404 (page drafts 12389-12396 kept, marked superseded_page_draft); Snippet #10 extended to post_material drafts.",
       "pages": [
         {
           "slug": "pl-auto-cnc-micromachining",
@@ -338,83 +338,99 @@
         },
         {
           "slug": "pl-auto-adhesives",
-          "post_id": 12389,
-          "preview_url": "https://www.potomac-laser.com/?page_id=12389&preview=true",
+          "post_id": 12397,
+          "preview_url": "https://www.potomac-laser.com/?post_type=post_material&p=12397&preview=true",
           "build_type": null,
           "design_page": "Materials - Adhesives.html",
-          "post_type": "page",
+          "post_type": "post_material",
           "status": "built",
-          "run": "20260924-135039"
+          "run": "20260924-135039",
+          "superseded_page_draft": 12389,
+          "rebuilt_by_run": "20260924-150733"
         },
         {
           "slug": "pl-auto-glass",
-          "post_id": 12390,
-          "preview_url": "https://www.potomac-laser.com/?page_id=12390&preview=true",
+          "post_id": 12398,
+          "preview_url": "https://www.potomac-laser.com/?post_type=post_material&p=12398&preview=true",
           "build_type": null,
           "design_page": "Materials - Glass.html",
-          "post_type": "page",
+          "post_type": "post_material",
           "status": "built",
-          "run": "20260924-135039"
+          "run": "20260924-135039",
+          "superseded_page_draft": 12390,
+          "rebuilt_by_run": "20260924-150733"
         },
         {
           "slug": "pl-auto-kapton-polyimide",
-          "post_id": 12391,
-          "preview_url": "https://www.potomac-laser.com/?page_id=12391&preview=true",
+          "post_id": 12399,
+          "preview_url": "https://www.potomac-laser.com/?post_type=post_material&p=12399&preview=true",
           "build_type": null,
           "design_page": "Materials - Kapton Polyimide.html",
-          "post_type": "page",
+          "post_type": "post_material",
           "status": "built",
-          "run": "20260924-135039"
+          "run": "20260924-135039",
+          "superseded_page_draft": 12391,
+          "rebuilt_by_run": "20260924-150733"
         },
         {
           "slug": "pl-auto-metal-parts",
-          "post_id": 12392,
-          "preview_url": "https://www.potomac-laser.com/?page_id=12392&preview=true",
+          "post_id": 12400,
+          "preview_url": "https://www.potomac-laser.com/?post_type=post_material&p=12400&preview=true",
           "build_type": null,
           "design_page": "Materials - Metal Parts.html",
-          "post_type": "page",
+          "post_type": "post_material",
           "status": "built",
-          "run": "20260924-135039"
+          "run": "20260924-135039",
+          "superseded_page_draft": 12392,
+          "rebuilt_by_run": "20260924-150733"
         },
         {
           "slug": "pl-auto-plastic-micromachining",
-          "post_id": 12393,
-          "preview_url": "https://www.potomac-laser.com/?page_id=12393&preview=true",
+          "post_id": 12401,
+          "preview_url": "https://www.potomac-laser.com/?post_type=post_material&p=12401&preview=true",
           "build_type": null,
           "design_page": "Materials - Plastic Micromachining.html",
-          "post_type": "page",
+          "post_type": "post_material",
           "status": "built",
-          "run": "20260924-135039"
+          "run": "20260924-135039",
+          "superseded_page_draft": 12393,
+          "rebuilt_by_run": "20260924-150733"
         },
         {
           "slug": "pl-auto-polymers",
-          "post_id": 12394,
-          "preview_url": "https://www.potomac-laser.com/?page_id=12394&preview=true",
+          "post_id": 12402,
+          "preview_url": "https://www.potomac-laser.com/?post_type=post_material&p=12402&preview=true",
           "build_type": null,
           "design_page": "Materials - Polymers.html",
-          "post_type": "page",
+          "post_type": "post_material",
           "status": "built",
-          "run": "20260924-135039"
+          "run": "20260924-135039",
+          "superseded_page_draft": 12394,
+          "rebuilt_by_run": "20260924-150733"
         },
         {
           "slug": "pl-auto-stainless-steel",
-          "post_id": 12395,
-          "preview_url": "https://www.potomac-laser.com/?page_id=12395&preview=true",
+          "post_id": 12403,
+          "preview_url": "https://www.potomac-laser.com/?post_type=post_material&p=12403&preview=true",
           "build_type": null,
           "design_page": "Materials - Stainless Steel.html",
-          "post_type": "page",
+          "post_type": "post_material",
           "status": "built",
-          "run": "20260924-135039"
+          "run": "20260924-135039",
+          "superseded_page_draft": 12395,
+          "rebuilt_by_run": "20260924-150733"
         },
         {
           "slug": "pl-auto-thin-metal-foils",
-          "post_id": 12396,
-          "preview_url": "https://www.potomac-laser.com/?page_id=12396&preview=true",
+          "post_id": 12404,
+          "preview_url": "https://www.potomac-laser.com/?post_type=post_material&p=12404&preview=true",
           "build_type": null,
           "design_page": "Materials - Thin Metal Foils.html",
-          "post_type": "page",
+          "post_type": "post_material",
           "status": "built",
-          "run": "20260924-135039"
+          "run": "20260924-135039",
+          "superseded_page_draft": 12396,
+          "rebuilt_by_run": "20260924-150733"
         }
       ],
       "new_patterns": [
@@ -527,7 +543,8 @@
         }
       ],
       "runs": [
-        "20260924-135039"
+        "20260924-135039",
+        "20260924-150733"
       ]
     }
   ],

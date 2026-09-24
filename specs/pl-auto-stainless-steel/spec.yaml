@@ -13,7 +13,7 @@ spec_version: 1
 page:
   title: Stainless Steel
   slug: pl-auto-stainless-steel
-  post_type: page
+  post_type: post_material
   post_status: draft
 assets:
   mat_stainlessste_1:

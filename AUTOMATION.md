@@ -35,12 +35,12 @@ a. UNPACK into a temp dir. Enumerate page-level HTML files — entry documents o
 
 **Resolve the manifest** by scanning `manifests/*.txt` for one whose `# zip:` directive matches this zip's filename exactly. Failing that, match on `# zip_sha256:`. The filename is authoritative and the hash is advisory: if the filename matches but the hash does not, **use the manifest** and report `"manifest predates this zip revision — re-check for new pages"` (a re-export legitimately changes the hash while curation stays valid).
 
-**A resolved manifest is the complete set of pages** — enumerate exactly those and nothing else. Each entry is a path relative to the zip root, optionally followed by the post type (`page`, `post_services` or `post_application`; default `page`) and optional `key=value` fields. Blank lines and `#` lines are ignored.
+**A resolved manifest is the complete set of pages** — enumerate exactly those and nothing else. Each entry is a path relative to the zip root, optionally followed by the post type (`page`, `post_services`, `post_application` or `post_material`; default `page`) and optional `key=value` fields. Blank lines and `#` lines are ignored.
 
 **Parse rule — design filenames contain spaces, so do not split on the first whitespace.** Trim the line, then:
 
 1. Pull out `was=<old path>` first: it must be the LAST field, and because paths contain spaces its value is everything after `was=` to the end of the line, trimmed. Then pull out the remaining `key=value` tokens; `interactive=<filename>` (3.c.iv) is the only other key defined.
-2. Of what remains, if the LAST whitespace-separated token is exactly `page`, `post_services` or `post_application`, that token is the post type and everything before it, trimmed, is the path.
+2. Of what remains, if the LAST whitespace-separated token is exactly `page`, `post_services`, `post_application` or `post_material`, that token is the post type and everything before it, trimmed, is the path.
 3. Otherwise the whole remainder is the path and the type is `page`.
 
 The three types are a closed set and no design filename ends in one of them, so this never misreads a path.
@@ -75,14 +75,14 @@ c. FOR EACH page in the zip:
 
 i. IDENTITY: the question here is **"has this pipeline already created this page?"** — never "does anything with this slug exist?". Live pages and pre-process duplicates are irrelevant to it: they were made before this process existed, and a fresh draft is meant to be built alongside them, not skipped because of them.
 
-**Check by provenance, via Novamira:** query **postmeta directly** for a post with `_pl_auto_page` = this design page's path inside the zip, joined to `wp_posts` for its type and status, across every status and across `page`, `post_services` and `post_application`. **Do not use `get_posts`/`WP_Query` with `post_type=any`:** `any` silently excludes post types registered with `exclude_from_search`, and `post_services` is one — found 2026-09-24 (run 20260924-100754), where it returned nothing for posts 12239–12243 and would have drafted all five again.
+**Check by provenance, via Novamira:** query **postmeta directly** for a post with `_pl_auto_page` = this design page's path inside the zip, joined to `wp_posts` for its type and status, across every status and across `page`, `post_services`, `post_application` and `post_material`. **Do not use `get_posts`/`WP_Query` with `post_type=any`:** `any` silently excludes post types registered with `exclude_from_search`, and `post_services` is one — found 2026-09-24 (run 20260924-100754), where it returned nothing for posts 12239–12243 and would have drafted all five again.
 
 **If the manifest entry carries `was=<old path>`, query that path too.** A re-export can rename a page (the 2026-09-24 export prefixed every filename with its section), and the stamp holds the path the page had when it was built. A hit on either path is this page. Never re-stamp a post during this check: `_pl_auto_page` is rewritten only by the supervised job that refreshes that post.
 
 - **Hit** → this pipeline built it. Record `"skipped-already-built"` with the existing post_id and continue. The one exception: if this zip's status is `partial` and this page's recorded status is `"failed"` or missing, re-enter and rebuild it.
 - **Miss** → build it, regardless of what else lives at that slug. `build-state.json` is the ledger of record, but it lives on a build branch that may never merge — so if WP meta says this pipeline built a page and the ledger disagrees, trust WP and reconcile the ledger.
 
-**POST TYPE:** type follows what the page IS, because it sets the permalink and the theme template — a service page is `post_services` (`/services/<slug>/`), an application or sector page is `post_application`, everything else is `page`. Nothing else is permitted — SKILL.md §1. If the manifest gives a type for the page, use it; otherwise infer from the design and state the inference in the report. SKILL.md §4 gates every type against `elementor_cpt_support` before creating.
+**POST TYPE:** type follows what the page IS, because it sets the permalink and the theme template — a service page is `post_services` (`/services/<slug>/`), an application or sector page is `post_application`, a material page is `post_material` (`/material/<slug>/`; set `post_parent` to match the live material it replaces), everything else is `page`. Nothing else is permitted — SKILL.md §1. If the manifest gives a type for the page, use it; otherwise infer from the design and state the inference in the report. SKILL.md §4 gates every type against `elementor_cpt_support` before creating.
 
 **SLUG:** kebab-case from the filename or `<title>`, then namespace it: `pl-auto-<slug>`, mirroring the `pl-auto-` media prefix. Live pages keep the clean slugs, this run's drafts cannot collide with them, and WordPress cannot silently suffix them into something the report would misstate. Renaming at go-live is a human step.
 
@@ -162,7 +162,7 @@ On the coordinator branch, update build-state.json with per-page status under ea
           "preview_url": "…",
           "build_type": "standard" | "extend",
           "design_page": "CNC Micromachining.html",
-          "post_type": "page" | "post_services" | "post_application",
+          "post_type": "page" | "post_services" | "post_application" | "post_material",
           "status": "built" | "failed: <reason>" | "skipped-already-built"
         }
       ],

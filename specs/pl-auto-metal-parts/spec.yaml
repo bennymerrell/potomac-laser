@@ -14,7 +14,7 @@ spec_version: 1
 page:
   title: Metal Parts
   slug: pl-auto-metal-parts
-  post_type: page
+  post_type: post_material
   post_status: draft
 assets:
   mat_metalparts_1:

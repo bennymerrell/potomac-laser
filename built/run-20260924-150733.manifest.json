@@ -1,0 +1,140 @@
+{
+  "run_id": "20260924-150733",
+  "started_utc": "2026-09-24T15:07:33Z",
+  "mode": "SUPERVISED rebuild requested by the user in chat (\"I have now done step 1 please rebuild\"): the 8 Materials page drafts (12389-12396) recreated as post_material drafts so they can replace their live post_material equivalents. The user enabled Elementor for post_material (Elementor > Settings > Post Types) themselves. Content = the verified page drafts' _elementor_data, with Materials cross-links re-pointed to the new drafts; the Materials hub page draft 12388 has its links re-pointed too. The 8 page drafts are left untouched pending the user's decision.",
+  "target": "potomac-laser.com (LIVE) via novamira-potomac-laser-co, PRODUCTION MODE",
+  "recovery_floor": {
+    "gate": "SKILL.md §0 — verified, not taken",
+    "updraft_set_timestamp": 1790244496,
+    "updraft_set_utc": "2026-09-24T10:08:16Z",
+    "backup_nonce": "ec283efbb074",
+    "age_at_gate_hours": 4.98
+  },
+  "posts_created": [
+    {
+      "post_id": 12397,
+      "post_type": "post_material",
+      "status": "draft",
+      "slug": "pl-auto-adhesives",
+      "post_parent": 0,
+      "rebuilt_from_page_draft": 12389,
+      "replaces_live": 10956,
+      "preview_url": "https://www.potomac-laser.com/?post_type=post_material&p=12397&preview=true"
+    },
+    {
+      "post_id": 12398,
+      "post_type": "post_material",
+      "status": "draft",
+      "slug": "pl-auto-glass",
+      "post_parent": 0,
+      "rebuilt_from_page_draft": 12390,
+      "replaces_live": 108,
+      "preview_url": "https://www.potomac-laser.com/?post_type=post_material&p=12398&preview=true"
+    },
+    {
+      "post_id": 12399,
+      "post_type": "post_material",
+      "status": "draft",
+      "slug": "pl-auto-kapton-polyimide",
+      "post_parent": 0,
+      "rebuilt_from_page_draft": 12391,
+      "replaces_live": 8433,
+      "preview_url": "https://www.potomac-laser.com/?post_type=post_material&p=12399&preview=true"
+    },
+    {
+      "post_id": 12400,
+      "post_type": "post_material",
+      "status": "draft",
+      "slug": "pl-auto-metal-parts",
+      "post_parent": 0,
+      "rebuilt_from_page_draft": 12392,
+      "replaces_live": 5550,
+      "preview_url": "https://www.potomac-laser.com/?post_type=post_material&p=12400&preview=true"
+    },
+    {
+      "post_id": 12401,
+      "post_type": "post_material",
+      "status": "draft",
+      "slug": "pl-auto-plastic-micromachining",
+      "post_parent": 0,
+      "rebuilt_from_page_draft": 12393,
+      "replaces_live": 2502,
+      "preview_url": "https://www.potomac-laser.com/?post_type=post_material&p=12401&preview=true"
+    },
+    {
+      "post_id": 12402,
+      "post_type": "post_material",
+      "status": "draft",
+      "slug": "pl-auto-polymers",
+      "post_parent": 2502,
+      "rebuilt_from_page_draft": 12394,
+      "replaces_live": 1668,
+      "preview_url": "https://www.potomac-laser.com/?post_type=post_material&p=12402&preview=true"
+    },
+    {
+      "post_id": 12403,
+      "post_type": "post_material",
+      "status": "draft",
+      "slug": "pl-auto-stainless-steel",
+      "post_parent": 5550,
+      "rebuilt_from_page_draft": 12395,
+      "replaces_live": 2152,
+      "preview_url": "https://www.potomac-laser.com/?post_type=post_material&p=12403&preview=true"
+    },
+    {
+      "post_id": 12404,
+      "post_type": "post_material",
+      "status": "draft",
+      "slug": "pl-auto-thin-metal-foils",
+      "post_parent": 0,
+      "rebuilt_from_page_draft": 12396,
+      "replaces_live": 10958,
+      "preview_url": "https://www.potomac-laser.com/?post_type=post_material&p=12404&preview=true"
+    }
+  ],
+  "posts_modified": [
+    {
+      "post_id": 12388,
+      "change": "Materials hub page draft: 6 card links re-pointed from the page drafts to the post_material drafts",
+      "old_sha": "14038d77457258d749b8026ab378868a1fa0566cb72bd406de2b9fd9ba19468c",
+      "new_sha": "c8293be51839c3fbec6c250a254d61ac739619fa7a7d56fc963105417568c68f"
+    }
+  ],
+  "files_uploaded": [
+    {
+      "path": "wp-content/uploads/novamira-drafts/run-20260924-150733/rollback-12388.json",
+      "sha256": "14038d77457258d749b8026ab378868a1fa0566cb72bd406de2b9fd9ba19468c",
+      "role": "12388 _elementor_data before the link re-point; local copy built/run-20260924-150733.rollback-12388.json"
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/run-20260924-150733/snippet-10.proposed.php.txt",
+      "sha256": "4eec1712abe29ba770cc3eb2f422aa06a971e3115797a6b3a5b79883fb398579",
+      "role": "first snippet revision (public .txt; CSS/markup only, no secrets)"
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/run-20260924-150733/snippet-10.proposed2.php.txt",
+      "sha256": "63a1d6e26013486c5299f95b6c676582d8cef83db13db5a16c887f8c2a3dc309",
+      "role": "final snippet revision"
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/run-20260924-150733/snippet-10.before.php.txt",
+      "sha256": "29699b6367fc3de229c910289d551c5cea60b4ea544ae451f98d9f0d17346a35",
+      "role": "Snippet #10 code before this run (rollback)"
+    }
+  ],
+  "attachments_created": [],
+  "site_code_changed": {
+    "what": "Code Snippet #10 (\"CNC/Elementor full-bleed treatment…\"), approved by the user in chat (\"Apply, hide the extra band\")",
+    "before_sha256": "29699b6367fc3de229c910289d551c5cea60b4ea544ae451f98d9f0d17346a35",
+    "after_sha256": "63a1d6e26013486c5299f95b6c676582d8cef83db13db5a16c887f8c2a3dc309",
+    "intermediate_sha256": "4eec1712abe29ba770cc3eb2f422aa06a971e3115797a6b3a5b79883fb398579 (first save; the 1224 cap still applied to material drafts, fixed by the second save)",
+    "changes": [
+      "full-bleed target extended from stamped page drafts to stamped page + post_material drafts",
+      "post_material drafts exempt from the 1224px .e-con-inner cap (keep each section's boxed_width, as page drafts do)",
+      "post_material drafts: hide the template's trailing spacer and Rapid Response band"
+    ],
+    "scope_note": "applies only to Elementor posts stamped _pl_auto_page (pipeline drafts); live material posts carry no stamp — verified /material/glass/, /materials/ etc. return 200 without the fullbleed class",
+    "rollback": "restore reference/code-snippets/snippet-10.before-20260924-150733.php as Snippet #10 code"
+  },
+  "verified": "User's Chrome, own tab group (closed): all 8 post_material drafts render with the fullbleed class, no template title band, no Rapid Response band, section heights equal to the verified page drafts (Adhesives 332/555/464/620/453, Glass 332/539/628/866/453, Kapton 332/542/330/566/453, Metal Parts 332/527/378/772/453, Plastic 362/746/643/549/453, Polymers 332/330/634/453, Stainless 332/516/672/453, Thin Metal Foils 332/501/381/674/620/104/453), inner widths as the design (1200/1152/…/720), no broken images, no stale links, Plastic tabs work. Service draft 12239 still capped at 1224."
+}

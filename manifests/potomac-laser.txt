@@ -17,10 +17,11 @@
 #   the zip was `partial`; run 20260924-125928 built those 8 (19 patterns). RUN B keeps the cap.
 #
 # Format:  <path relative to zip root>[  <post_type>][  interactive=<file>][  was=<old path>]
-#   post_type is `page` (default), `post_services` or `post_application` —
-#   nothing else (SKILL.md §1). Type follows what the page IS, because it sets
-#   the permalink and the theme template: services go to post_services
-#   (/services/<slug>/), application and sector pages to post_application.
+#   post_type is `page` (default), `post_services`, `post_application` or
+#   `post_material` — nothing else (SKILL.md §1). Type follows what the page IS,
+#   because it sets the permalink and the theme template: services go to
+#   post_services (/services/<slug>/), application and sector pages to
+#   post_application, material pages to post_material (/material/<slug>/).
 #   Filenames contain spaces, so key=value fields are pulled out first, then the
 #   type is read as the LAST remaining token; if that isn't a post type, the
 #   whole remainder is the path.
@@ -70,7 +71,9 @@
 # so the first phase should mint most of what the second needs.
 #
 #   RUN A (DONE 2026-09-24): About (7), Contact, Project Gallery, Services & Applications.
-#   RUN B (ACTIVE): the nine Materials pages, as `page` (decided 2026-09-24).
+#   RUN B (DONE 2026-09-24): the nine Materials pages. Built as `page` by run 20260924-135039;
+#   the eight material pages rebuilt as `post_material` by supervised run 20260924-150733 (the hub
+#   stays a `page`, like live /materials/).
 #
 # To advance a phase: uncomment its block, then re-run. A zip marked "built" is
 # never reprocessed by §2, so this needs the human reset in AUTOMATION.md §5
@@ -98,15 +101,14 @@ Services - Services & Applications.html page
 
 # --- RUN B (ACTIVE since 2026-09-24; RUN A pages above are all built and will be skipped) ---
 Materials - Materials.html              page
-Materials - Adhesives.html              page
-Materials - Glass.html                  page
-Materials - Kapton Polyimide.html       page
-Materials - Metal Parts.html            page
-Materials - Plastic Micromachining.html page
-Materials - Polymers.html               page
-Materials - Stainless Steel.html        page
-Materials - Thin Metal Foils.html       page
-
+Materials - Adhesives.html              post_material
+Materials - Glass.html                  post_material
+Materials - Kapton Polyimide.html       post_material
+Materials - Metal Parts.html            post_material
+Materials - Plastic Micromachining.html post_material
+Materials - Polymers.html               post_material
+Materials - Stainless Steel.html        post_material
+Materials - Thin Metal Foils.html       post_material
 # ---------------------------------------------------------------------------
 # Deliberately NOT built, and why.
 #

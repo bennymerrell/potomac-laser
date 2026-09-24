@@ -14,7 +14,7 @@ spec_version: 1
 page:
   title: Glass Micromachining
   slug: pl-auto-glass
-  post_type: page
+  post_type: post_material
   post_status: draft
 assets:
   mat_glass_1:

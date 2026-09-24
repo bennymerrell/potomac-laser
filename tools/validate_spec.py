@@ -26,9 +26,10 @@ HONORIFICS = {"dr", "dr.", "prof", "prof.", "mr", "mr.", "ms", "ms.", "mrs", "mr
 
 # SKILL.md §1. Post type follows what the page IS, because it decides the permalink and
 # the theme template: a service page is `post_services` (/services/<slug>/), an
-# application or sector page is `post_application`, and `page` is everything else. All
-# three are in `elementor_cpt_support`, so "Edit with Elementor" works on any of them.
-ALLOWED_POST_TYPES = {"page", "post_services", "post_application"}
+# application or sector page is `post_application`, a material page is `post_material`
+# (/material/<slug>/), and `page` is everything else. All four are in
+# `elementor_cpt_support` (post_material since 2026-09-24), so "Edit with Elementor" works.
+ALLOWED_POST_TYPES = {"page", "post_services", "post_application", "post_material"}
 # Automation-built posts carry a provenance stamp; the slug is namespaced so the run's
 # drafts never collide with live pages (AUDIT.md B5).
 AUTO_SLUG_PREFIX = "pl-auto-"
