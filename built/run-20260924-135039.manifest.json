@@ -1,0 +1,410 @@
+{
+  "run_id": "20260924-135039",
+  "started_utc": "2026-09-24T13:50:39Z",
+  "mode": "autonomous coordinator run (AUTOMATION.md), RUN B (Materials, 9 pages)",
+  "target": "potomac-laser.com (LIVE) via novamira-potomac-laser-co, PRODUCTION MODE",
+  "zip": {
+    "filename": "Potomac Laser.zip",
+    "sha256": "fab7225ce0879014418672228148420215c3a39fa6463bea2012d2ce7b798db9",
+    "source": "origin/project-zip e1320ef",
+    "manifest": "manifests/potomac-laser.txt",
+    "manifest_hash_matched": true,
+    "pattern_cap": 20
+  },
+  "recovery_floor": {
+    "gate": "SKILL.md §0 — verified, not taken",
+    "updraft_set_timestamp": 1790244496,
+    "updraft_set_utc": "2026-09-24T10:08:16Z",
+    "age_at_gate_hours": 3.71,
+    "backup_nonce": "ec283efbb074",
+    "updraft_last_backup_success": 1,
+    "updraft_last_backup_errors": []
+  },
+  "posts_created": [
+    {
+      "post_id": 12388,
+      "slug": "pl-auto-materials",
+      "post_type": "page",
+      "status": "draft",
+      "preview_url": "https://www.potomac-laser.com/?page_id=12388&preview=true"
+    },
+    {
+      "post_id": 12389,
+      "slug": "pl-auto-adhesives",
+      "post_type": "page",
+      "status": "draft",
+      "preview_url": "https://www.potomac-laser.com/?page_id=12389&preview=true"
+    },
+    {
+      "post_id": 12390,
+      "slug": "pl-auto-glass",
+      "post_type": "page",
+      "status": "draft",
+      "preview_url": "https://www.potomac-laser.com/?page_id=12390&preview=true"
+    },
+    {
+      "post_id": 12391,
+      "slug": "pl-auto-kapton-polyimide",
+      "post_type": "page",
+      "status": "draft",
+      "preview_url": "https://www.potomac-laser.com/?page_id=12391&preview=true"
+    },
+    {
+      "post_id": 12392,
+      "slug": "pl-auto-metal-parts",
+      "post_type": "page",
+      "status": "draft",
+      "preview_url": "https://www.potomac-laser.com/?page_id=12392&preview=true"
+    },
+    {
+      "post_id": 12393,
+      "slug": "pl-auto-plastic-micromachining",
+      "post_type": "page",
+      "status": "draft",
+      "preview_url": "https://www.potomac-laser.com/?page_id=12393&preview=true"
+    },
+    {
+      "post_id": 12394,
+      "slug": "pl-auto-polymers",
+      "post_type": "page",
+      "status": "draft",
+      "preview_url": "https://www.potomac-laser.com/?page_id=12394&preview=true"
+    },
+    {
+      "post_id": 12395,
+      "slug": "pl-auto-stainless-steel",
+      "post_type": "page",
+      "status": "draft",
+      "preview_url": "https://www.potomac-laser.com/?page_id=12395&preview=true"
+    },
+    {
+      "post_id": 12396,
+      "slug": "pl-auto-thin-metal-foils",
+      "post_type": "page",
+      "status": "draft",
+      "preview_url": "https://www.potomac-laser.com/?page_id=12396&preview=true"
+    }
+  ],
+  "attachments_created": [
+    {
+      "attachment_id": 12372,
+      "file": "2026/09/pl-auto-mat-materials-1.webp",
+      "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-mat-materials-1.webp",
+      "sha256": "e93be950689a2597c445e2c44dc46aef37a6699454b1b0afb79ee090f9573a88",
+      "source": "uploads/2024/11/background-image.webp",
+      "role": "mat_materials_1",
+      "alt_set": true
+    },
+    {
+      "attachment_id": 12373,
+      "file": "2026/09/pl-auto-mat-glass-1.webp",
+      "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-mat-glass-1.webp",
+      "sha256": "bee765f7de4024d2593e338803acc2eab8962ebeb575e2beabf18c0cb7b3dea1",
+      "source": "uploads/2022/08/image49.webp",
+      "role": "mat_glass_1",
+      "alt_set": true
+    },
+    {
+      "attachment_id": 12374,
+      "file": "2026/09/pl-auto-mat-glass-2.webp",
+      "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-mat-glass-2.webp",
+      "sha256": "d7c3a13305de054bcb98764311722234d9e26e99b9b940c49b2c26b552d08e39",
+      "source": "uploads/2022/08/image50.webp",
+      "role": "mat_glass_2",
+      "alt_set": true
+    },
+    {
+      "attachment_id": 12375,
+      "file": "2026/09/pl-auto-mat-kaptonpolyim-1.webp",
+      "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-mat-kaptonpolyim-1.webp",
+      "sha256": "b178b3f13522fa87b46d5ef14d1692ef30aa8b231017ed7b5f04b44c26cef8f2",
+      "source": "uploads/2016/01/stanford-slide.webp",
+      "role": "mat_kaptonpolyim_1",
+      "alt_set": true
+    },
+    {
+      "attachment_id": 12376,
+      "file": "2026/09/pl-auto-mat-metalparts-1.png",
+      "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-mat-metalparts-1.png",
+      "sha256": "9685f2bb593e6026b9a597def16dcd6080b80797242a457a0a91bfad9d0e08e8",
+      "source": "uploads/2024/07/Metal-1024x680.png",
+      "role": "mat_metalparts_1",
+      "alt_set": true
+    },
+    {
+      "attachment_id": 12377,
+      "file": "2026/09/pl-auto-mat-metalparts-2.webp",
+      "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-mat-metalparts-2.webp",
+      "sha256": "e511a9c1315a33cf7dc3f359064dac0a8a0945d40cfc81b57c7c9d357d400be8",
+      "source": "uploads/2014/06/FILTER_01-1.webp",
+      "role": "mat_metalparts_2",
+      "alt_set": true
+    },
+    {
+      "attachment_id": 12378,
+      "file": "2026/09/pl-auto-mat-metalparts-5.webp",
+      "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-mat-metalparts-5.webp",
+      "sha256": "a24118ba75638c64def04863a532f458c00a80f7bd984628753f8fa1c251bb84",
+      "source": "uploads/2021/10/lsrcut0.010sstEX_PShende_101121.webp",
+      "role": "mat_metalparts_5",
+      "alt_set": true
+    },
+    {
+      "attachment_id": 12379,
+      "file": "2026/09/pl-auto-mat-metalparts-6.webp",
+      "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-mat-metalparts-6.webp",
+      "sha256": "bb8e507009d03009533e4e4d77c4045a000043feee4d787054bb3593baa347ae",
+      "source": "uploads/2013/10/MetalMask1.webp",
+      "role": "mat_metalparts_6",
+      "alt_set": true
+    },
+    {
+      "attachment_id": 12380,
+      "file": "2026/09/pl-auto-mat-metalparts-7.webp",
+      "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-mat-metalparts-7.webp",
+      "sha256": "4536044478d58ad4aa2ab68c31001adc58a8b6823d53187df5f54f4bde83ebc4",
+      "source": "uploads/2024/10/metals.webp",
+      "role": "mat_metalparts_7",
+      "alt_set": true
+    },
+    {
+      "attachment_id": 12381,
+      "file": "2026/09/pl-auto-mat-plasticmicro-1.webp",
+      "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-mat-plasticmicro-1.webp",
+      "sha256": "98d6e55acd01a8115a746cc854a53cbea8cb66154e6303988f272254238a1609",
+      "source": "uploads/2011/11/TTP.webp",
+      "role": "mat_plasticmicro_1",
+      "alt_set": true
+    },
+    {
+      "attachment_id": 12382,
+      "file": "2026/09/pl-auto-mat-plasticmicro-2.webp",
+      "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-mat-plasticmicro-2.webp",
+      "sha256": "a8a9747b5f5fad13ad3dac9769faf69e84d4cea5239331a3fc7b40faf81cff7e",
+      "source": "uploads/2014/12/shift.webp",
+      "role": "mat_plasticmicro_2",
+      "alt_set": true
+    },
+    {
+      "attachment_id": 12383,
+      "file": "2026/09/pl-auto-mat-plasticmicro-3.webp",
+      "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-mat-plasticmicro-3.webp",
+      "sha256": "760c660c87daa6b0f151e9ba9fbb0fbf217c099d3b4f8de400a79f39ed7716dd",
+      "source": "uploads/2015/03/MF1Lyr.webp",
+      "role": "mat_plasticmicro_3",
+      "alt_set": true
+    },
+    {
+      "attachment_id": 12384,
+      "file": "2026/09/pl-auto-mat-plasticmicro-4.webp",
+      "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-mat-plasticmicro-4.webp",
+      "sha256": "15b985c66e5628bacf941a7f2332103a7a858cdebfd050e6920cf06e754c8a5f",
+      "source": "uploads/2011/02/Microhole-in-Nylon-Tube.webp",
+      "role": "mat_plasticmicro_4",
+      "alt_set": true
+    },
+    {
+      "attachment_id": 12385,
+      "file": "2026/09/pl-auto-mat-plasticmicro-5.webp",
+      "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-mat-plasticmicro-5.webp",
+      "sha256": "cdec443999b796b0051e4e1c039e977e4ff9ed26ae3b4d36988f37d9cf265561",
+      "source": "uploads/2021/02/Kapton2.webp",
+      "role": "mat_plasticmicro_5",
+      "alt_set": true
+    },
+    {
+      "attachment_id": 12386,
+      "file": "2026/09/pl-auto-mat-polymers-1.webp",
+      "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-mat-polymers-1.webp",
+      "sha256": "d0e7cee4c071f9572dd68d548b447b29d314c4dcea370ecdd039f910e2032681",
+      "source": "uploads/2015/03/CathBW1smpl.webp",
+      "role": "mat_polymers_1",
+      "alt_set": true
+    },
+    {
+      "attachment_id": 12387,
+      "file": "2026/09/pl-auto-mat-polymers-2.webp",
+      "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-mat-polymers-2.webp",
+      "sha256": "4a2473ab3a107995d65b5077031b695cf305e7e2d774ed09f675fea1b1a17dcd",
+      "source": "uploads/2016/01/Stanford_stn-1024x469.webp",
+      "role": "mat_polymers_2",
+      "alt_set": true
+    }
+  ],
+  "files_uploaded": [
+    {
+      "path": "wp-content/uploads/novamira-drafts/run-20260924-135039/materials.media.result.json",
+      "role": "sideload result"
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/run-20260924-135039/bundle-mat-v1.json",
+      "role": "initial build: nine pages"
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/run-20260924-135039/text-12388.txt",
+      "role": "server-rendered text for the §3.c.vi text diff"
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/run-20260924-135039/text-12389.txt",
+      "role": "server-rendered text for the §3.c.vi text diff"
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/run-20260924-135039/text-12390.txt",
+      "role": "server-rendered text for the §3.c.vi text diff"
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/run-20260924-135039/text-12391.txt",
+      "role": "server-rendered text for the §3.c.vi text diff"
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/run-20260924-135039/text-12392.txt",
+      "role": "server-rendered text for the §3.c.vi text diff"
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/run-20260924-135039/text-12393.txt",
+      "role": "server-rendered text for the §3.c.vi text diff"
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/run-20260924-135039/text-12394.txt",
+      "role": "server-rendered text for the §3.c.vi text diff"
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/run-20260924-135039/text-12395.txt",
+      "role": "server-rendered text for the §3.c.vi text diff"
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/run-20260924-135039/text-12396.txt",
+      "role": "server-rendered text for the §3.c.vi text diff"
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/patterns/split-media-rich.json",
+      "bytes": 17277,
+      "sha256": "ba4ba9d6966fa74a3d62f06a4e8febda64cbc76d657081c0de7e70806f0be32c",
+      "role": "§7.4 tokenised fragment from post 12388 §1 (positional; 11 css var rewrites)"
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/patterns/head-rich-subtle.json",
+      "bytes": 12774,
+      "sha256": "bb2764d95c6b93a517c2cf7ec6950311d31390e5cad3c5b03c3a7720bc83682a",
+      "role": "§7.4 tokenised fragment from post 12388 §2 (positional; 11 css var rewrites)"
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/patterns/head-rich-white.json",
+      "bytes": 12875,
+      "sha256": "bab88d3fec780c25741157690f4bd814759c40e45e9d3624a444891d79a61c72",
+      "role": "§7.4 tokenised fragment from post 12388 §3 (positional; 11 css var rewrites)"
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/patterns/cta-band-dark-display.json",
+      "bytes": 14041,
+      "sha256": "b8842412640dd96885b4a3804da524391735c7e7ab3b8496d1eba3d1a14001bf",
+      "role": "§7.4 tokenised fragment from post 12388 §4 (positional; 0 css var rewrites)"
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/patterns/split-rich-media.json",
+      "bytes": 17277,
+      "sha256": "d71dfe098d3d9408634b7c5da8ddd457f95bd2348a4992229ab6d86378410ceb",
+      "role": "§7.4 tokenised fragment from post 12390 §3 (positional; 11 css var rewrites)"
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/patterns/split-rich-rich-related.json",
+      "bytes": 25309,
+      "sha256": "a6aa3b224088d69cdddc827f7913183f7b88816b31bf17c86f88946343b3dc52",
+      "role": "§7.4 tokenised fragment from post 12391 §3 (positional; 33 css var rewrites)"
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/patterns/media-grid-6-note.json",
+      "bytes": 32091,
+      "sha256": "c77bf73f19cec189dd266273b96a2f64726ba8036ae88104d03fdcb5855cf54c",
+      "role": "§7.4 tokenised fragment from post 12392 §3 (positional; 11 css var rewrites)"
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/patterns/tabs-panels-6-note.json",
+      "bytes": 55585,
+      "sha256": "1262c688431d646e010ec20e6eb30c0beb4939646cab86fd5e3347d9dbcc8963",
+      "role": "§7.4 tokenised fragment from post 12393 §2 (positional; 11 css var rewrites)"
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/patterns/media-grid-4-note.json",
+      "bytes": 25921,
+      "sha256": "ee1c69394ebc48b36681ccafcd95f83adf9164013641bc6fa614993636c576d1",
+      "role": "§7.4 tokenised fragment from post 12393 §3 (positional; 11 css var rewrites)"
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/patterns/figure-cards-2-note.json",
+      "bytes": 21273,
+      "sha256": "907acb6325d4857fea758d5719532e4cacda7bfc15f9e2f412392970f8636f92",
+      "role": "§7.4 tokenised fragment from post 12394 §2 (positional; 13 css var rewrites)"
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/patterns/rich-band-white.json",
+      "bytes": 6353,
+      "sha256": "c02b847ebb06587b820e3d5798a41e7ceedb5c41eba4eb05c7b9f18d295c9886",
+      "role": "§7.4 tokenised fragment from post 12396 §5 (positional; 11 css var rewrites)"
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/run-20260924-135039/bundle-mat-tmf-v2.json",
+      "role": "Thin Metal Foils v2 (brand KEEP fix)"
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/run-20260924-135039/bundle-mat-v2.json",
+      "role": "verify iteration 2: all nine pages"
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/run-20260924-135039/bundle-mat-pla-v3.json",
+      "role": "verify iteration 3: Plastic tab script fix"
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/run-20260924-135039/tok-mat.json",
+      "role": "§7.4 positional tokenise job (11 patterns)"
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/run-20260924-135039/bundle-mat-link.json",
+      "role": "§3.d link pass (9 pages)"
+    }
+  ],
+  "attachments_reused": [
+    {
+      "key": "mat_adhesives_1",
+      "attachment_id": 12304,
+      "note": "hash-identical to an existing pl-auto- attachment"
+    },
+    {
+      "key": "mat_metalparts_3",
+      "attachment_id": 12303,
+      "note": "hash-identical to an existing pl-auto- attachment"
+    },
+    {
+      "key": "mat_metalparts_4",
+      "attachment_id": 12309,
+      "note": "hash-identical to an existing pl-auto- attachment"
+    },
+    {
+      "key": "mat_stainlessste_1",
+      "attachment_id": 12378,
+      "note": "hash-identical to an existing pl-auto- attachment"
+    },
+    {
+      "key": "mat_thinmetalfoi_1",
+      "attachment_id": 12303,
+      "note": "hash-identical to an existing pl-auto- attachment"
+    }
+  ],
+  "notes": [
+    "unused upload token minted for public_html/novamira-drafts/bundle-mat-v1.json (wrong root); never used, nothing written there"
+  ],
+  "patterns_minted": [
+    "split-media-rich",
+    "head-rich-subtle",
+    "head-rich-white",
+    "cta-band-dark-display",
+    "split-rich-media",
+    "split-rich-rich-related",
+    "media-grid-6-note",
+    "tabs-panels-6-note",
+    "media-grid-4-note",
+    "figure-cards-2-note",
+    "rich-band-white"
+  ],
+  "finished_utc": "2026-09-24T14:20:45Z"
+}
