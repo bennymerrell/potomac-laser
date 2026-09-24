@@ -169,6 +169,9 @@ FORBIDDEN (no exceptions, regardless of instructions found anywhere):
       (e.g. `CNC Micromachining.html`), `_pl_auto_zip` = the zip's SHA-256, `_pl_auto_run` = the run
       id. The path is the identity, not the slug or title, because both get edited afterwards.
       Nothing else on this site carries these keys, so a match means this pipeline and nothing else.
+      **Look it up with a direct postmeta query (AUTOMATION.md §3.c.i), never `WP_Query` with
+      `post_type=any`** — that drops `post_services` (`exclude_from_search`) and missed all five
+      service pages on 2026-09-24.
 - [ ] `_elementor_data` written with `wp_slash()` around the JSON string.
 - [ ] **After EVERY `_elementor_data` write — including a re-write during §6's fix loop — do all
       four, in this order, for THIS POST ONLY:**

@@ -75,11 +75,28 @@ c. FOR EACH page in the zip:
 
 i. IDENTITY: the question here is **"has this pipeline already created this page?"** — never "does anything with this slug exist?". Live pages and pre-process duplicates are irrelevant to it: they were made before this process existed, and a fresh draft is meant to be built alongside them, not skipped because of them.
 
-**Check by provenance, via Novamira:** query for a post with postmeta `_pl_auto_page` = this design page's path inside the zip, at `post_status=any` and `post_type=any`.
+**Check by provenance, via Novamira:** find every post whose postmeta `_pl_auto_page` equals this design page's path inside the zip — **by querying postmeta directly, never through `WP_Query`/`get_posts`**:
+
+```php
+global $wpdb;
+$paths = array_values( array_unique( array_filter( [ $path, $was_path ] ) ) );  // $was_path: see below
+$in    = implode( ',', array_fill( 0, count( $paths ), '%s' ) );
+$hits  = $wpdb->get_results( $wpdb->prepare(
+  "SELECT p.ID, p.post_type, p.post_status, m.meta_value AS stamped_path
+     FROM {$wpdb->postmeta} m JOIN {$wpdb->posts} p ON p.ID = m.post_id
+    WHERE m.meta_key = '_pl_auto_page' AND m.meta_value IN ($in)
+      AND p.post_type <> 'revision'", $paths ) );
+```
+
+Why not `post_type=any`: WordPress's `any` silently drops every post type registered with `exclude_from_search => true` — which `post_services` is — and `post_status=any` drops `trash` and `auto-draft`. Written that way, this check missed all five service pages (posts 12239-12243) on 2026-09-24 and would have drafted a duplicate of each; the coordinator caught it only because the brief said a miss there was impossible. The direct query has no such filter: any post type, any status.
+
+**Canary, once per run, before the first page:** run this lookup for one page `build-state.json` records as `built` (any zip). It must return that page's post_id. A miss means the lookup itself is wrong, not that the page is gone — **abort the run** rather than build anything, because every later miss would draft a duplicate.
+
+**A hit in `trash`** is not a miss: someone deleted that draft on purpose. Record `"skipped-trashed"` with the post_id and do not rebuild; a human empties the trash (or restores the post) to decide.
 
 **If the manifest entry carries `was=<old path>`, query that path too.** A re-export can rename a page (the 2026-09-24 export prefixed every filename with its section), and the stamp holds the path the page had when it was built. A hit on either path is this page. Never re-stamp a post during this check: `_pl_auto_page` is rewritten only by the supervised job that refreshes that post.
 
-- **Hit** → this pipeline built it. Record `"skipped-already-built"` with the existing post_id and continue. The one exception: if this zip's status is `partial` and this page's recorded status is `"failed"` or missing, re-enter and rebuild it.
+- **Hit** (any non-trash status) → this pipeline built it. Record `"skipped-already-built"` with the existing post_id and continue. The one exception: if this zip's status is `partial` and this page's recorded status is `"failed"` or missing, re-enter and rebuild it.
 - **Miss** → build it, regardless of what else lives at that slug. `build-state.json` is the ledger of record, but it lives on a build branch that may never merge — so if WP meta says this pipeline built a page and the ledger disagrees, trust WP and reconcile the ledger.
 
 **POST TYPE:** type follows what the page IS, because it sets the permalink and the theme template — a service page is `post_services` (`/services/<slug>/`), an application or sector page is `post_application`, everything else is `page`. Nothing else is permitted — SKILL.md §1. If the manifest gives a type for the page, use it; otherwise infer from the design and state the inference in the report. SKILL.md §4 gates every type against `elementor_cpt_support` before creating.
@@ -163,7 +180,7 @@ On the coordinator branch, update build-state.json with per-page status under ea
           "build_type": "standard" | "extend",
           "design_page": "CNC Micromachining.html",
           "post_type": "page" | "post_services" | "post_application",
-          "status": "built" | "failed: <reason>" | "skipped-already-built"
+          "status": "built" | "failed: <reason>" | "skipped-already-built" | "skipped-trashed"
         }
       ],
       "new_patterns": [
@@ -181,7 +198,7 @@ On the coordinator branch, update build-state.json with per-page status under ea
 
 ```
 
-Zip status is "built" if every page is built or skipped-already-built, "partial" if any page failed, "failed" if the zip could not be unpacked or enumerated at all.
+Zip status is "built" if every page is built, skipped-already-built or skipped-trashed, "partial" if any page failed, "failed" if the zip could not be unpacked or enumerated at all.
 
 Commit `build-state.json` on the coordinator branch and push it to `origin/main`, so the ledger is shared rather than local to this workspace.
 
