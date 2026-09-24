@@ -1,0 +1,175 @@
+{
+  "run_id": "20260924-152914",
+  "started_utc": "2026-09-24T15:29:14Z",
+  "mode": "GO-LIVE, requested by the user in chat (\"enable all about pages and material posts ... live and published now ... keeping the original old versions in case we need to revert\"; Contact excluded, Materials hub included, by the user's answers). Method: swap — each old live post -> draft with a backup slug; the new draft takes its slug, parent, menu order, featured image/excerpt/SEO and is published; children and menu items re-pointed.",
+  "target": "potomac-laser.com (LIVE)",
+  "recovery_floor": {
+    "gate": "SKILL.md §0 — TAKEN for the go-live",
+    "updraft_set_timestamp": 1790263759,
+    "backup_nonce": "a02d96573826",
+    "updraft_last_backup_success": 1,
+    "updraft_last_backup_errors": [],
+    "note": "database only; uploaded per the install (Dropbox), local copy deleted"
+  },
+  "swaps": [
+    {
+      "published": 12268,
+      "url": "https://www.potomac-laser.com/about-our-group/",
+      "old_post": 12178,
+      "old_now": "draft",
+      "old_backup_slug": "about-our-group-pre-golive-20260924"
+    },
+    {
+      "published": 12277,
+      "url": "https://www.potomac-laser.com/about/",
+      "old_post": 19,
+      "old_now": "draft",
+      "old_backup_slug": "about-pre-golive-20260924"
+    },
+    {
+      "published": 12295,
+      "url": "https://www.potomac-laser.com/about/case-studies/",
+      "old_post": 391,
+      "old_now": "draft",
+      "old_backup_slug": "case-studies-pre-golive-20260924"
+    },
+    {
+      "published": 12296,
+      "url": "https://www.potomac-laser.com/about/news/",
+      "old_post": 465,
+      "old_now": "draft",
+      "old_backup_slug": "news-pre-golive-20260924"
+    },
+    {
+      "published": 12298,
+      "url": "https://www.potomac-laser.com/about/employment/",
+      "old_post": 6275,
+      "old_now": "draft",
+      "old_backup_slug": "employment-pre-golive-20260924"
+    },
+    {
+      "published": 12300,
+      "url": "https://www.potomac-laser.com/about/faqs/",
+      "old_post": 118,
+      "old_now": "draft",
+      "old_backup_slug": "faqs-pre-golive-20260924"
+    },
+    {
+      "published": 12301,
+      "url": "https://www.potomac-laser.com/about/quality-policy/",
+      "old_post": 640,
+      "old_now": "draft",
+      "old_backup_slug": "quality-policy-pre-golive-20260924"
+    },
+    {
+      "published": 12388,
+      "url": "https://www.potomac-laser.com/materials/",
+      "old_post": 96,
+      "old_now": "draft",
+      "old_backup_slug": "materials-pre-golive-20260924"
+    },
+    {
+      "published": 12397,
+      "url": "https://www.potomac-laser.com/material/pressure-sensitive-adhesives/",
+      "old_post": 10956,
+      "old_now": "draft",
+      "old_backup_slug": "pressure-sensitive-adhesives-pre-golive-20260924"
+    },
+    {
+      "published": 12398,
+      "url": "https://www.potomac-laser.com/material/glass/",
+      "old_post": 108,
+      "old_now": "draft",
+      "old_backup_slug": "glass-pre-golive-20260924"
+    },
+    {
+      "published": 12399,
+      "url": "https://www.potomac-laser.com/material/kapton-polyimide/",
+      "old_post": 8433,
+      "old_now": "draft",
+      "old_backup_slug": "kapton-polyimide-pre-golive-20260924"
+    },
+    {
+      "published": 12400,
+      "url": "https://www.potomac-laser.com/material/metal/",
+      "old_post": 5550,
+      "old_now": "draft",
+      "old_backup_slug": "metal-pre-golive-20260924"
+    },
+    {
+      "published": 12401,
+      "url": "https://www.potomac-laser.com/material/plastics/",
+      "old_post": 2502,
+      "old_now": "draft",
+      "old_backup_slug": "plastics-pre-golive-20260924"
+    },
+    {
+      "published": 12402,
+      "url": "https://www.potomac-laser.com/material/plastics/polymers/",
+      "old_post": 1668,
+      "old_now": "draft",
+      "old_backup_slug": "polymers-pre-golive-20260924"
+    },
+    {
+      "published": 12403,
+      "url": "https://www.potomac-laser.com/material/metal/stainless-steel/",
+      "old_post": 2152,
+      "old_now": "draft",
+      "old_backup_slug": "stainless-steel-pre-golive-20260924"
+    },
+    {
+      "published": 12404,
+      "url": "https://www.potomac-laser.com/material/thin-metal-foils/",
+      "old_post": 10958,
+      "old_now": "draft",
+      "old_backup_slug": "thin-metal-foils-pre-golive-20260924"
+    }
+  ],
+  "files_uploaded": [
+    {
+      "path": "wp-content/uploads/novamira-drafts/run-20260924-152914/rollback-golive.json",
+      "role": "pre-change snapshot of all 32 posts, children, menu items, AIOSEO rows and the new posts' _elementor_data"
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/run-20260924-152914/golive-dry.php.txt",
+      "role": "dry-run script"
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/run-20260924-152914/golive-run.php.txt",
+      "role": "execute script (the call that timed out)"
+    }
+  ],
+  "children_reparented": {
+    "to 12277 (/about/)": [
+      78,
+      398,
+      595,
+      1624,
+      11235,
+      11290,
+      11321
+    ],
+    "to 12295 (/about/case-studies/)": [
+      3614,
+      3617,
+      3620,
+      3623,
+      9552
+    ],
+    "to 12300 (/about/faqs/)": [
+      2251
+    ],
+    "to 12400 (/material/metal/)": [
+      289
+    ]
+  },
+  "menu_items_repointed": 45,
+  "aioseo_copied": {
+    "12277": "from 19 (title + description)",
+    "12268": "from 12178 (title + description)"
+  },
+  "links_rewritten": "preview URLs -> live permalinks; drafts not going live -> live pages: Contact 12302 -> /contact/ (old live page), Gallery 12357 -> /project-gallery/, S&A 12371 -> /services-applications/, CNC 12239 -> /services/cnc-micro-machining-services/ (#quote -> /project-quote/#projectForm), LM 12240 -> /services/laser-micromachining/",
+  "incident": "The first all-in-one execute call returned \"WordPress API error (405)\" (gateway timeout) but kept running server-side: it had drafted 12 of the 16 old posts before the new ones were published, so those URLs 404ed for roughly 10-15 minutes. Recovered by publishing in small batches (<=4 posts per call, ~3-10s per post), guarded and idempotent with the still-running request, whose target state is identical. Lesson: never put more than a few wp_update_post calls in one request on this host.",
+  "verified": "Logged out (curl): all 16 URLs 200 serving the new element ids, no preview links; children /about/leadership/, /about/newsletter-signup/, /about/facilities-matrix/, /about/employment-staging-only/, case-study details, /material/metal/flat-metal-sheet-and-foil/ 200; /contact/, /project-gallery/, /services-applications/, / 200; old backups 404 publicly; header/footer menus list the new URLs.",
+  "rollback": "Per swap: set the new post to draft (and give it back its pl-auto- slug), then restore the old post: post_status=publish, post_name=<original slug>; re-parent the children and menu items back (all original values in built/run-20260924-152914.rollback-golive.json). Also UpdraftPlus DB set 1790263759 (nonce a02d96573826), taken immediately before."
+}
