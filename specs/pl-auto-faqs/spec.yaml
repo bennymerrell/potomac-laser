@@ -56,7 +56,7 @@ sections:
     heading_10: Technical
     faq_q_10: What micro-manufacturing technologies does Goodfellow Microfabrication offer?
     faq_a_10: <p>A broad range, including laser machining, micro-CNC and 3D printing.</p>
-- pattern: cta-band-dark
+- pattern: cta-band-dark-display
   tokens:
     heading_1: Rapid response
     heading_2: Talk to the team.

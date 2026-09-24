@@ -183,7 +183,7 @@ sections:
     heading_3: Industries
     heading_4: Trusted since 1982
     body_2: <p>Recognised by commercial and government agencies alike for innovative contributions to medical device manufacturing, biotech and electronics fabrication, from our high-tech facility at bwtech@UMBC Research and Technology Park in Baltimore, MD.</p>
-- pattern: cta-band-dark
+- pattern: cta-band-dark-display
   tokens:
     heading_1: Get Started Today
     heading_2: Have a part in mind?

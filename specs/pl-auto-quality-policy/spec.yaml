@@ -42,7 +42,7 @@ sections:
     heading_1: Objectives
     heading_2: Our objectives
     body_1: <ul><li>Use our resources effectively to improve customer satisfaction, delivering products that meet specification, within the stated lead time and at the promised price</li><li>Make continual improvement of products, processes and systems an objective for every individual in the organisation</li><li>Implement new technologies and cost-effective processes that deliver consistent, predictable results, speeding up the development cycle of our customers' products</li><li>Partner with our suppliers to improve speed and flexibility in responding to our customers' needs</li></ul>
-- pattern: cta-band-dark
+- pattern: cta-band-dark-display
   tokens:
     heading_1: Rapid response
     heading_2: Talk to the team.

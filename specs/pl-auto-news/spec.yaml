@@ -149,7 +149,7 @@ sections:
     url_12: https://www.potomac-laser.com/news/potomac-3d-systems-workshop-feature-integrate-3d-printing-onto-factory-floor/
     button_1: Older news
     url_13: https://www.potomac-laser.com/about/news/?query-1-page=2
-- pattern: cta-band-dark
+- pattern: cta-band-dark-display
   tokens:
     heading_1: Rapid response
     heading_2: Talk to the team.

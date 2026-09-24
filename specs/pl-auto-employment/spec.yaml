@@ -76,7 +76,7 @@ sections:
     body_11: <p>Full time · US Office, Baltimore MD</p>
     body_12: <p>View details</p>
     url_6: https://www.potomac-laser.com/jobs/sales-engineer/
-- pattern: cta-band-dark
+- pattern: cta-band-dark-display
   tokens:
     heading_1: Get in touch
     heading_2: Send us your résumé.

@@ -142,7 +142,7 @@ sections:
     heading_13: Materials
     heading_14: Flexible
     body_6: <p>Processes continually updated to machine new and emerging materials.</p>
-- pattern: cta-band-dark
+- pattern: cta-band-dark-display
   tokens:
     heading_1: Rapid response
     heading_2: Talk to the team.

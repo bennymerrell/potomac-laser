@@ -80,7 +80,7 @@ sections:
     body_9: <p>An electronics company needed a 1-week turnaround on 21 designs with multiple microhole diameters, as small as 10 microns, in two materials.</p>
     body_10: <p>Read the case study</p>
     url_5: https://www.potomac-laser.com/about/case-studies/microhole-drilling-services/
-- pattern: cta-band-dark
+- pattern: cta-band-dark-display
   tokens:
     heading_1: Your project
     heading_2: Have a similar challenge?

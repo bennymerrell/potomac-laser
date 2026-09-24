@@ -419,7 +419,7 @@ sections:
       asset: gal_img_54
     heading_110: Laser Marking
     heading_111: Selective Removal of Metal Coatings
-- pattern: cta-band-dark
+- pattern: cta-band-dark-display
   tokens:
     heading_1: Get Started Today
     heading_2: See something close<br>to your part?

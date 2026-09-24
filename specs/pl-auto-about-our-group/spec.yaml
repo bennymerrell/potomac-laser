@@ -106,7 +106,7 @@ sections:
     body_20: <p><strong>Iron &amp; steel</strong> standards</p>
     button_4: Visit BAS →
     url_4: https://www.basrid.co.uk/
-- pattern: cta-band-dark
+- pattern: cta-band-dark-display
   tokens:
     heading_1: One Partner, End to End
     heading_2: From material<br>to finished micro-part.

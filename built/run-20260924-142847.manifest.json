@@ -1,0 +1,102 @@
+{
+  "run_id": "20260924-142847",
+  "started_utc": "2026-09-24T14:28:47Z",
+  "mode": "SUPERVISED pass requested by the user in chat (\"merge and swap the closing band on the earlier drafts\"): replace the closing cta-band-dark section on 9 pipeline drafts with cta-band-dark-display. Modifies posts earlier runs created (SKILL §1 normally forbids this; done only on the explicit user request, only the last section, only these 9 ids).",
+  "target": "potomac-laser.com (LIVE) via novamira-potomac-laser-co, PRODUCTION MODE",
+  "recovery_floor": {
+    "gate": "SKILL.md §0 — verified, not taken",
+    "updraft_set_timestamp": 1790244496,
+    "updraft_set_utc": "2026-09-24T10:08:16Z",
+    "age_at_gate_hours": 4.35,
+    "backup_nonce": "ec283efbb074",
+    "updraft_last_backup_success": 1,
+    "updraft_last_backup_errors": []
+  },
+  "posts_modified": [
+    {
+      "post_id": 12268,
+      "change": "closing section cta-band-dark -> cta-band-dark-display",
+      "section_index": 2,
+      "old_section_id": "a3e3b77",
+      "new_section_id": "c41dc44",
+      "preview_url": "https://www.potomac-laser.com/?page_id=12268&preview=true"
+    },
+    {
+      "post_id": 12277,
+      "change": "closing section cta-band-dark -> cta-band-dark-display",
+      "section_index": 5,
+      "old_section_id": "ab689d2",
+      "new_section_id": "115d5a4",
+      "preview_url": "https://www.potomac-laser.com/?page_id=12277&preview=true"
+    },
+    {
+      "post_id": 12295,
+      "change": "closing section cta-band-dark -> cta-band-dark-display",
+      "section_index": 2,
+      "old_section_id": "ca7295f",
+      "new_section_id": "4f64364",
+      "preview_url": "https://www.potomac-laser.com/?page_id=12295&preview=true"
+    },
+    {
+      "post_id": 12296,
+      "change": "closing section cta-band-dark -> cta-band-dark-display",
+      "section_index": 2,
+      "old_section_id": "68d6a62",
+      "new_section_id": "505baa4",
+      "preview_url": "https://www.potomac-laser.com/?page_id=12296&preview=true"
+    },
+    {
+      "post_id": 12298,
+      "change": "closing section cta-band-dark -> cta-band-dark-display",
+      "section_index": 3,
+      "old_section_id": "f6fe09b",
+      "new_section_id": "1dbb47e",
+      "preview_url": "https://www.potomac-laser.com/?page_id=12298&preview=true"
+    },
+    {
+      "post_id": 12300,
+      "change": "closing section cta-band-dark -> cta-band-dark-display",
+      "section_index": 2,
+      "old_section_id": "d6708bd",
+      "new_section_id": "ef8fba7",
+      "preview_url": "https://www.potomac-laser.com/?page_id=12300&preview=true"
+    },
+    {
+      "post_id": 12301,
+      "change": "closing section cta-band-dark -> cta-band-dark-display",
+      "section_index": 3,
+      "old_section_id": "9b88b8f",
+      "new_section_id": "3ac46f2",
+      "preview_url": "https://www.potomac-laser.com/?page_id=12301&preview=true"
+    },
+    {
+      "post_id": 12357,
+      "change": "closing section cta-band-dark -> cta-band-dark-display",
+      "section_index": 2,
+      "old_section_id": "427506e",
+      "new_section_id": "78ca3bf",
+      "preview_url": "https://www.potomac-laser.com/?page_id=12357&preview=true"
+    },
+    {
+      "post_id": 12371,
+      "change": "closing section cta-band-dark -> cta-band-dark-display",
+      "section_index": 5,
+      "old_section_id": "78d4553",
+      "new_section_id": "480970a",
+      "preview_url": "https://www.potomac-laser.com/?page_id=12371&preview=true"
+    }
+  ],
+  "files_uploaded": [
+    {
+      "path": "wp-content/uploads/novamira-drafts/run-20260924-142847/cta-swap.json",
+      "sha256": "b4dfa273cfedd8b8fcb2a9dbcedaa98ee8dfa0f2417f45d894cf90dcd3b19e20",
+      "role": "9 assembled cta-band-dark-display sections (values carried from each post's old band)"
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/run-20260924-142847/rollback-old-cta.json",
+      "sha256": "e56d40e0acb174961ab25bfd94d7ed61e2b3ff6ac7d48689cd3bc988bbb96bb3",
+      "role": "the 9 replaced sections as they were; local copy built/run-20260924-142847.rollback-old-cta.json"
+    }
+  ],
+  "attachments_created": []
+}
