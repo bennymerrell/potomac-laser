@@ -1,0 +1,65 @@
+# spec.yaml — FAQs  (run 20260924-125928, autonomous, RUN A re-entry)
+# Source design : Potomac Laser.zip (fab7225c…) :: About - FAQs.html  (no tweak defaults)
+# MATCH (3.c.ii):
+#   [0] #hero  centred, no meta, no buttons [0/0] -> hero-dark-centered (library; minted this run)
+#   [1] 880px column: 3 category chips + 10 accordion questions, no head [0/0]
+#              -> UNMATCHED: faq-toggle needs a left rail (eyebrow + H2 + intro + CTA) and has no filter
+#              -> §7 candidate faq-accordion-filter-10
+#   [2] .final-cta -> cta-band-dark [0/0]
+# Brand normalisation: FAQ question 10 "does Potomac offer" -> Goodfellow Microfabrication.
+# Filter: chips reuse text-link-cards-6-filter's widget/script; each item's category is a hidden label.
+
+spec_version: 1
+page:
+  title: FAQs
+  slug: pl-auto-faqs
+  post_type: page
+  post_status: draft
+sections:
+- pattern: hero-dark-centered
+  tokens:
+    heading_1: Help
+    heading_2: Frequently asked questions
+    body_1: <p>Answers on <strong>ordering, drawings, lead times, materials and capability</strong>. If your question is not here, our engineers will answer it directly.</p>
+- pattern: faq-accordion-filter-10
+  tokens:
+    embed_1: <button type="button" data-filter="all" aria-pressed="true">All</button><button type="button" data-filter="ordering" aria-pressed="false">Ordering</button><button type="button" data-filter="technical" aria-pressed="false">Technical</button>
+    heading_1: Ordering
+    faq_q_1: Do you take credit cards?
+    faq_a_1: <p>Yes, we do.</p>
+    heading_2: Technical
+    faq_q_2: If I cannot see it, how do I know you did it?
+    faq_a_2: <p>We verify all of our work with high-magnification inspection systems, and use machine vision and frame grabbing technologies when necessary. We supply Certificates of Conformance on request.</p>
+    heading_3: Ordering
+    faq_q_3: Can you expedite an order?
+    faq_a_3: <p>Yes. We will work with you to expedite orders. On some occasions a modest fee may apply to accommodate a rush order.</p>
+    heading_4: Ordering
+    faq_q_4: Do you accept orders for single parts and prototypes?
+    faq_a_4: <p>Yes. We gladly accept prototyping projects and aim to build a relationship that sees your product through to production.</p>
+    heading_5: Ordering
+    faq_q_5: In what format should drawings be submitted?
+    faq_a_5: <p>For laser and micro-CNC projects we prefer .dxf files, with units in millimetres and the drawing centred. 3D printing projects require an .stl file; please state the unit of measure to apply.</p>
+    heading_6: Ordering
+    faq_q_6: What is the typical lead time for a project?
+    faq_a_6: <p>Depending on the application, some projects can be completed within 24 to 48 hours of receiving the order. More complex or higher-volume projects can take up to 2 to 3 weeks.</p>
+    heading_7: Ordering
+    faq_q_7: What is required to get a proposal?
+    faq_a_7: <p>Typically, a description of your project and/or a drawing.</p>
+    heading_8: Technical
+    faq_q_8: What is the smallest feature size that can be machined?
+    faq_a_8: <p>About 1 micron. Feature size can be limited by the type and thickness of the material, and our staff can help you understand the limits for your material.</p>
+    heading_9: Technical
+    faq_q_9: What materials can be processed?
+    faq_a_9: <p>Almost any material, including polymers, metals, glass and ceramics. Our relationship with <a href="https://www.goodfellow.com/usa" target="_blank" rel="noopener">Goodfellow</a> has increased our access to new materials.</p>
+    heading_10: Technical
+    faq_q_10: What micro-manufacturing technologies does Goodfellow Microfabrication offer?
+    faq_a_10: <p>A broad range, including laser machining, micro-CNC and 3D printing.</p>
+- pattern: cta-band-dark
+  tokens:
+    heading_1: Rapid response
+    heading_2: Talk to the team.
+    body_1: <p>Send a drawing or a short description of your project. Our engineers review every design and respond within one business day.</p>
+    button_1: Email us
+    url_1: Contact - Contact.html
+    button_2: Send a drawing
+    url_2: https://www.potomac-laser.com/project-quote/#projectForm

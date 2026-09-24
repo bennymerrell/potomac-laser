@@ -18,7 +18,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(HERE)))
 sys.path.insert(0, os.path.join(ROOT, 'tools'))
 import assemble as A
 
-A.FRAGMENT_OVERRIDES[:] = [os.path.join(HERE, 'candidates')]
+A.FRAGMENT_OVERRIDES[:] = [os.path.join(HERE, 'candidates')]  # library patterns not in candidates/ fall through to reference/snippets/
 SCRATCH = '/private/tmp/claude-501/-Users-admin-orca-potomac-laser/d79e1efa-e1f9-4dfb-b04f-d08b0ac7ba4e/scratchpad/'
 
 ap = argparse.ArgumentParser()

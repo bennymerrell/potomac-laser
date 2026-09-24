@@ -65,6 +65,36 @@
     "_pl_auto_run": "20260924-125928"
    },
    "page_template": "default"
+  },
+  {
+   "post_id": 12300,
+   "post_type": "page",
+   "post_status": "draft",
+   "slug": "pl-auto-faqs",
+   "title": "FAQs",
+   "design_page": "About - FAQs.html",
+   "preview_url": "https://www.potomac-laser.com/?page_id=12300&preview=true",
+   "provenance_meta": {
+    "_pl_auto_page": "About - FAQs.html",
+    "_pl_auto_zip": "fab7225ce0879014418672228148420215c3a39fa6463bea2012d2ce7b798db9",
+    "_pl_auto_run": "20260924-125928"
+   },
+   "page_template": "default"
+  },
+  {
+   "post_id": 12301,
+   "post_type": "page",
+   "post_status": "draft",
+   "slug": "pl-auto-quality-policy",
+   "title": "Quality Policy",
+   "design_page": "About - Quality Policy.html",
+   "preview_url": "https://www.potomac-laser.com/?page_id=12301&preview=true",
+   "provenance_meta": {
+    "_pl_auto_page": "About - Quality Policy.html",
+    "_pl_auto_zip": "fab7225ce0879014418672228148420215c3a39fa6463bea2012d2ce7b798db9",
+    "_pl_auto_run": "20260924-125928"
+   },
+   "page_template": "default"
   }
  ],
  "attachments_created": [
@@ -230,6 +260,16 @@
    "role": "split media",
    "page": "About - Employment.html",
    "alt_set": true
+  },
+  {
+   "attachment_id": 12299,
+   "file": "2026/09/pl-auto-qp-iso-certificate.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-qp-iso-certificate.webp",
+   "sha256": "3f6034bc9f1d1d4d0d680726897d23a3e707d9fe53d8d88f8c91b5a904b029b7",
+   "source": "uploads/2025/03/ISO-Certificate-thru-June-11th-2026-2-1.webp",
+   "role": "certificate figure",
+   "page": "About - Quality Policy.html",
+   "alt_set": true
   }
  ],
  "files_uploaded": [
@@ -309,6 +349,42 @@
    "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/tok-emp.json",
    "bytes": 35755,
    "sha256": "592593d0385682f01da6c253501d71e2103116dd495fdb27f7cd3465ca307b0f",
+   "role": "\u00a77.4 positional tokenise job"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/bundle-faq-qp-v1.json",
+   "bytes": 59492,
+   "sha256": "045509c6297693cfee82bc58769dbba4dff0d75adc4bc7d27a73d52fabaa6679",
+   "role": "bundle: faqs v1 (735b1a0d\u2026), quality-policy v1 (75c9bbad\u2026)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/bundle-faq-v2.json",
+   "bytes": 39618,
+   "sha256": "398ceeef6228a2ca0d59b47ddedd5211421174344bad1fed6ffa14de4b01a910",
+   "role": "bundle: faqs v2 (11b27eb6\u2026)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/faq-accordion-filter-10.json",
+   "bytes": 69140,
+   "sha256": "50181c190d9893b2f16b02cafe456728af81a8d320415238d16e652e74f9c987",
+   "role": "\u00a77.4 tokenised fragment from post 12300 \u00a71 (positional; 0 css var rewrites)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/split-list-figure.json",
+   "bytes": 18111,
+   "sha256": "1ec8a044de0141b9650eb9570ee05cc46c9478fd645242f362889f1812a61961",
+   "role": "\u00a77.4 tokenised fragment from post 12301 \u00a71 (positional; 1 css var rewrites)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/check-list-centered.json",
+   "bytes": 10151,
+   "sha256": "5004c2f12fef10e05de1f947ae297c2bcd760f0372fc513bfafff78e462ae7ef",
+   "role": "\u00a77.4 tokenised fragment from post 12301 \u00a72 (positional; 1 css var rewrites)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/tok-faq-qp.json",
+   "bytes": 37305,
+   "sha256": "2c102791e4e9fb0a94980224a0185f28a92c4b9de761dd6df3636c3787bb54af",
    "role": "\u00a77.4 positional tokenise job"
   }
  ]

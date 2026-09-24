@@ -82,6 +82,9 @@ omits `spec-table-dark`, which shifts every later section up by one.
 | `hero-dark-centered-cta` | — | — | — | — | — |   <!-- minted from 12298 (pl-auto-employment, page) index 0 by run 20260924-125928 -->
 | `split-prose-list-media` | — | — | — | — | — |   <!-- minted from 12298 (pl-auto-employment, page) index 1 by run 20260924-125928 -->
 | `text-link-cards-6-filter` | — | — | — | — | — |   <!-- minted from 12298 (pl-auto-employment, page) index 2 by run 20260924-125928 -->
+| `faq-accordion-filter-10` | — | — | — | — | — |   <!-- minted from 12300 (pl-auto-faqs, page) index 1 by run 20260924-125928 -->
+| `split-list-figure` | — | — | — | — | — |   <!-- minted from 12301 (pl-auto-quality-policy, page) index 1 by run 20260924-125928 -->
+| `check-list-centered` | — | — | — | — | — |   <!-- minted from 12301 (pl-auto-quality-policy, page) index 2 by run 20260924-125928 -->
 
 ## Per-page variants
 
@@ -519,6 +522,48 @@ listed per entry, and consolidated under [Unmapped colours](#unmapped-colours).
 | **Globals** | 31 native `__globals__` refs · 6 `var(--e-global-color-gfnavy)` (labels) |
 | **Unmapped colours** | `#F6F8FB`, `#0F1620`, `#DCE1EA`, card shadows; the chips' own colours (`#F5821F`, `#15253D`, `#6B7280`, `#DCE1EA`) live in the html widget's scoped `<style>` |
 | **Notes** | **Behaviour-tested, not just screenshotted** (AUDIT.md B15): on 12298, Sales → 3 cards, HR → 1, Engineering → 1, All → 6, `aria-pressed` tracks the active chip. The script matches a chip's `data-filter` (the lower-cased label) against each card's first heading, so categories are content, not classes. **It must query the cards at click time**: the widget's script runs before the grid below it exists, and a load-time query made the filter inert on iteration 1. Cards stay native, editable widgets (the zip's CLAUDE.md "JS only shows/hides" rule). **Verified** (iteration 2): section 719 = design, chips 36px tall = design, cards 371×162 / 371×185, word-for-word text match. |
+
+### faq-accordion-filter-10
+| | |
+|---|---|
+| **Snippet** | `reference/snippets/faq-accordion-filter-10.json` |
+| **Source** | post `12300` (`pl-auto-faqs`, type `page`) section index `1` — minted by run 20260924-125928 (§7) |
+| **Used by** | 12300 at index 1 |
+| **Signature** | `6667f3c965` (sha256 of the elType/widgetType tree, first 10 hex) · 14 containers + 21 widgets · 69,140 bytes |
+| **Recognise when** | A white section holding a **narrow (~880px) column** with **no heading**: a centred row of category **filter chips**, then a flat list of **exactly 10** questions separated by hairlines, each a bold navy question with a **28px outlined "+" circle** on the right that rotates to "×" and turns the question orange when open; answers are plain paragraphs. Discriminators: against `faq-toggle`, no left rail (eyebrow + H2 + intro + CTA) and it has chips; against `text-link-cards-6-filter`, questions not cards. |
+| **Structure** | `container:full bg=gfwhite pad 80/24` → `container:boxed` → column `container` width 832 → `html` chips widget (as `text-link-cards-6-filter`, margin-bottom 28) → list `container` (top hairline) → 10 × item `container` (`css_classes: pl-filter-card`, bottom hairline) → `heading` category (`display:none`) + `toggle` (one tab; FA plus/minus icon kept only so Elementor renders `.elementor-toggle-icon`, glyphs hidden, circle drawn in CSS) |
+| **Tokens** | 31 placeholders: `{embed_1}` chips, `{heading_1..10}` item categories, `{faq_q_1..10}`, `{faq_a_1..10}` (answers are HTML) |
+| **Globals** | 1 native `__globals__` ref (section bg) · 40 `var(--e-global-color-*)` in the toggles' `custom_css` (`gfnavy` title, `gforange` active title + "+", `gfink` answer) |
+| **Unmapped colours** | `#DCE1EA` (hairlines, circle border); the chips' colours live in the html widget |
+| **Notes** | **A category is a hidden heading whose text equals a chip label** ("Ordering", "Technical"), so the shared chip script filters questions exactly as it filters cards. **An empty `selected_icon` makes Elementor omit the icon element**: iteration 1 rendered no circle and 65px rows (design 73). **Behaviour-tested on 12300** (iteration 2): Technical 4 / Ordering 6 / All 10; a question opens to 121px (73 + a 48px answer) with the circle rotated to "×". Rows 73px = design, section 955 = design; text matches the design except the 10 hidden category words. |
+
+### split-list-figure
+| | |
+|---|---|
+| **Snippet** | `reference/snippets/split-list-figure.json` |
+| **Source** | post `12301` (`pl-auto-quality-policy`, type `page`) section index `1` — minted by run 20260924-125928 (§7) |
+| **Used by** | 12301 at index 1 |
+| **Signature** | `d650f3c81d` (sha256 of the elType/widgetType tree, first 10 hex) · 6 containers + 5 widgets · 18,111 bytes |
+| **Recognise when** | A white two-column section, **top-aligned**: **left**, orange eyebrow + H2 + a check-list (bordered item cards with orange checks) and **no paragraph**; **right**, a **document-style figure** — the image inset 18px inside a white rounded frame with a soft shadow — with a small grey centred **caption** under it. Discriminators: against `split-prose-list-media`, no paragraph, the image is inset (not full-bleed in a dark frame), a caption, and top alignment. |
+| **Structure** | `container:full bg=gfwhite pad 80/24` → `container:boxed` → row (`flex_align_items:flex-start`, gap 72) → prose `container` (eyebrow mb 20, `heading h2` mb 18, `text-editor` list) + figure `container` → frame `container` (bg `gfwhite`, pad 18, border, radius 18, shadow) → `image` ; `heading` caption (13px, `#65718A`, margin-top 12) |
+| **Tokens** | 5 placeholders: `{heading_1}` eyebrow, `{heading_2}` H2, `{body_1}` list (`<ul><li>…</li></ul>`, count free), `{image_1}`, `{heading_3}` caption |
+| **Globals** | 4 native `__globals__` refs · 1 `var(--e-global-color-gfink)` (list text) |
+| **Unmapped colours** | `#0F1620` (H2), `#65718A` (caption), `#DCE1EA` (borders), `rgba(15,42,68,.12)` (shadow) |
+| **Notes** | **Verified on 12301** (iteration 1): section 879 = design; list items 540×111/60/60/85 = design; certificate 502×650 = design; caption 540×20 = design; word-for-word text. |
+
+### check-list-centered
+| | |
+|---|---|
+| **Snippet** | `reference/snippets/check-list-centered.json` |
+| **Source** | post `12301` (`pl-auto-quality-policy`, type `page`) section index `2` — minted by run 20260924-125928 (§7) |
+| **Used by** | 12301 at index 2 |
+| **Signature** | `a89d9c9dc6` (sha256 of the elType/widgetType tree, first 10 hex) · 4 containers + 3 widgets · 10,151 bytes |
+| **Recognise when** | A light-grey section with a **centred** eyebrow + H2 (no lede) and, below it, **one check-list** in a ~900px column — bordered white item cards with orange checks — and nothing else. |
+| **Structure** | `container:full bg=#F6F8FB pad 80/24` → `container:boxed` column centred → head (as `icon-cards-3`) → `container` width 852 → `text-editor` list |
+| **Tokens** | 3 placeholders: `{heading_1}` eyebrow, `{heading_2}` H2, `{body_1}` list (count free) |
+| **Globals** | 2 native `__globals__` refs · 1 `var(--e-global-color-gfink)` |
+| **Unmapped colours** | `#F6F8FB`, `#0F1620`, `#DCE1EA` |
+| **Notes** | **Verified on 12301** (iteration 1): section 640 = design; items 852×85/85/85/60 = design. |
 
 ## Unmapped colours
 

@@ -1,0 +1,29 @@
+{
+ "slug": "pl-auto-faqs",
+ "title": "FAQs",
+ "design_page": "About - FAQs.html",
+ "header": "# spec.yaml — FAQs  (run 20260924-125928, autonomous, RUN A re-entry)\n# Source design : Potomac Laser.zip (fab7225c…) :: About - FAQs.html  (no tweak defaults)\n# MATCH (3.c.ii):\n#   [0] #hero  centred, no meta, no buttons [0/0] -> hero-dark-centered (library; minted this run)\n#   [1] 880px column: 3 category chips + 10 accordion questions, no head [0/0]\n#              -> UNMATCHED: faq-toggle needs a left rail (eyebrow + H2 + intro + CTA) and has no filter\n#              -> §7 candidate faq-accordion-filter-10\n#   [2] .final-cta -> cta-band-dark [0/0]\n# Brand normalisation: FAQ question 10 \"does Potomac offer\" -> Goodfellow Microfabrication.\n# Filter: chips reuse text-link-cards-6-filter's widget/script; each item's category is a hidden label.\n",
+ "assets": [],
+ "sections": [
+  {
+   "pattern": "hero-dark-centered",
+   "values": "faqs.hero-dark-centered.values.json"
+  },
+  {
+   "pattern": "faq-accordion-filter-10",
+   "values": "faqs.faq-accordion-filter-10.values.json"
+  },
+  {
+   "pattern": "cta-band-dark",
+   "values": {
+    "heading_1": "Rapid response",
+    "heading_2": "Talk to the team.",
+    "body_1": "<p>Send a drawing or a short description of your project. Our engineers review every design and respond within one business day.</p>",
+    "button_1": "Email us",
+    "url_1": "Contact - Contact.html",
+    "button_2": "Send a drawing",
+    "url_2": "https://www.potomac-laser.com/project-quote/#projectForm"
+   }
+  }
+ ]
+}
