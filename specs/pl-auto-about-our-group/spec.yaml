@@ -1,0 +1,116 @@
+# spec.yaml — About Our Group  (run 20260924-100754, autonomous, RUN A)
+# Source design : Potomac Laser.zip (fab7225c…) :: About - About Our Group.html
+# Rendered set  : 3 of the file's 4 <section>s. #hero is hidden by the design's own default
+#                 (TWEAK_DEFAULTS.showHero:false) and design_handoff_about_page/README.md says
+#                 "Do not implement the hero" -> not built, removed from mock.html.
+# MATCH (3.c.ii):
+#   [0] #why-us  dark, centred eyebrow+H2+lede, then 4 linked legend cards (dot+name+role)
+#                -> UNMATCHED (no Recognise-when has a head + link-card legend; imgs 0/0)
+#                -> §7 MINTED legend-cards-dark (verified iteration 3, tokenised from post 12268 index 0)
+#   [1] #brands  4 alternating split rows: logo panel | eyebrow+H2+lead+body+3 stat pills+button
+#                -> UNMATCHED (group-ecosystem-cards is mid-navy 4-up cards w/ badge; design has
+#                   4 images, only ge-cards has image slots and its shape differs)
+#                -> §7 MINTED split-rows-logo-alternating (4 image slots / 4 design images; tokenised from 12268 index 1)
+#   [2] .final-cta dark, eyebrow + H2 + one paragraph + exactly two buttons, last -> cta-band-dark
+#                (imgs 0/0). Styling delta inherited from the fragment: flat #0D1B2A in the design
+#                vs the fragment's #16253D->#213754 gradient; fragments are not edited (§6).
+# Brand normalisation: lede "Potomac Photonics" -> "Goodfellow Microfabrication". KEPT
+#   "(formerly Potomac Photonics)" in row 2's body — it names the old brand on purpose.
+# Links: url_* hold the design's page hrefs; §3.d link pass rewrites them.
+
+spec_version: 1
+page:
+  title: About Our Group
+  slug: pl-auto-about-our-group
+  post_type: page
+  post_status: draft
+assets:
+  group_logo_goodfellow:
+    attachment_id: 12264
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-group-logo-goodfellow.png
+  group_logo_microfab:
+    attachment_id: 12265
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-group-logo-microfab.png
+  group_logo_stp:
+    attachment_id: 12266
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-group-logo-stp.png
+  group_logo_bas:
+    attachment_id: 12267
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-group-logo-bas.png
+sections:
+- pattern: legend-cards-dark
+  tokens:
+    heading_1: Why Us
+    heading_2: Four specialist brands. One Goodfellow Group.
+    body_1: <p>We deliver high-quality scientific materials and services across a wide range of industries and applications. Together, Goodfellow, Goodfellow Microfabrication, Suisse Technology Partners and the Bureau of Analysed Samples, we drive innovation from concept to market, becoming your one-stop shop for scientific and industrial material needs.</p>
+    heading_3: Goodfellow
+    heading_4: Advanced Materials
+    url_1: '#split-row-1'
+    heading_5: Goodfellow Microfabrication
+    heading_6: Microfabrication
+    url_2: '#split-row-2'
+    heading_7: Suisse TP
+    heading_8: Analytics &amp; Materials
+    url_3: '#split-row-3'
+    heading_9: BAS
+    heading_10: Reference Materials
+    url_4: '#split-row-4'
+- pattern: split-rows-logo-alternating
+  tokens:
+    image_1:
+      asset: group_logo_goodfellow
+    heading_1: Since 1946
+    heading_2: Advanced Materials
+    heading_3: Goodfellow
+    body_1: <p>A global leader in the supply of high-quality advanced materials, serving science and industry for over 75 years.</p>
+    body_2: <p>With a vast range of over 170,000 products, including metals, alloys, ceramics, polymers and compounds, Goodfellow is dedicated to driving innovation and solving technical challenges. Our commitment to excellence is reflected in extensive product offerings and a customer-focused approach, making us a trusted partner for researchers and engineers worldwide.</p>
+    body_3: <p><strong>170,000+</strong> materials</p>
+    body_4: <p><strong>75+</strong> years</p>
+    body_5: <p><strong>ISO 9001</strong> quality assured</p>
+    button_1: Visit Goodfellow →
+    url_1: https://www.goodfellow.com/
+    image_2:
+      asset: group_logo_microfab
+    heading_4: Since 1982
+    heading_5: Microfabrication
+    heading_6: Goodfellow Microfabrication
+    body_6: <p>One of the US leaders in microfabrication and digital manufacturing, rapid prototyping through full-scale production of precision devices.</p>
+    body_7: <p>Since 1982, the Baltimore-based Goodfellow Microfabrication team (formerly Potomac Photonics) has been at the forefront of innovation in medical-device manufacturing, biotech and electronics fabrication. By leveraging advanced laser and CNC technologies, the team delivers high-quality, cost-effective solutions that carry your project from concept to market.</p>
+    body_8: <p><strong>±10 µm</strong> tolerances</p>
+    body_9: <p><strong>40+</strong> years</p>
+    body_10: <p><strong>Prototype → production</strong></p>
+    button_2: Explore microfabrication →
+    url_2: Services - CNC Micromachining.html
+    image_3:
+      asset: group_logo_stp
+    heading_7: Swiss labs
+    heading_8: Analytics &amp; Materials
+    heading_9: Suisse Technology Partners
+    body_11: <p>A Swiss competence centre for material-based solutions and analytics, ensuring safe and innovative products for industrial customers.</p>
+    body_12: <p>STP provides specialised services in materials and surface technology. Their expertise spans technical safety, chemical analytics and packaging development, supported by certified and accredited laboratories. An interdisciplinary approach drives progress and innovation across every engagement.</p>
+    body_13: <p><strong>Accredited</strong> laboratories</p>
+    body_14: <p><strong>Surface</strong> technology</p>
+    body_15: <p><strong>Failure</strong> investigation</p>
+    button_3: Visit Suisse TP →
+    url_3: https://suisse-tp.ch/
+    image_4:
+      asset: group_logo_bas
+    heading_10: Since 1935
+    heading_11: Reference Materials
+    heading_12: The Bureau of Analysed Samples
+    body_16: <p>A renowned provider of Certified Reference Materials (CRMs) for chemical and spectroscopic analysis.</p>
+    body_17: <p>Established in 1935, BAS continues the legacy of the British Chemical Standards movement, offering a wide range of materials for the iron and steel industry. Their CRMs are essential for ensuring accuracy and reliability in laboratory testing, making BAS a trusted partner for quality assurance across many industries.</p>
+    body_18: <p><strong>Since 1935</strong></p>
+    body_19: <p><strong>Certified</strong> reference materials</p>
+    body_20: <p><strong>Iron &amp; steel</strong> standards</p>
+    button_4: Visit BAS →
+    url_4: https://www.basrid.co.uk/
+- pattern: cta-band-dark
+  tokens:
+    heading_1: One Partner, End to End
+    heading_2: From material<br>to finished micro-part.
+    body_1: <p>Source the right material and machine it with one trusted group. Share your CAD files and requirements, our engineers review every design for manufacturability and respond within one business day.</p>
+    button_1: Request a quote
+    url_1: Services - CNC Micromachining.html#quote
+    button_2: View the project gallery
+    url_2: Gallery - Project Gallery.html

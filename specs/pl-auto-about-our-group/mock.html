@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap">
+<title>About Our Group · Goodfellow Microfabrication</title>
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+/* ─────────────────────────────────────────────────────────────
+   ABOUT OUR GROUP, page-specific styles
+   Built on the shared Goodfellow Microfabrication tokens + styles.
+   ───────────────────────────────────────────────────────────── */
+
+/* Hero banner: navy-blue gradient to match service pages */
+/* Hero + Why Us: same treatment as the Project Gallery header */
+#hero.hero, #why-us {
+  position: relative;
+  background-color: var(--bg-dark);
+  background-image:
+    radial-gradient(ellipse at 30% 0%, rgba(14,99,168,0.28) 0%, transparent 60%),
+    radial-gradient(ellipse at 90% 100%, rgba(148,18,82,0.16) 0%, transparent 55%),
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: auto, auto, 32px 32px, 32px 32px;
+  color: #fff;
+}
+#why-us .section__title { color: #fff; font-weight: 600; letter-spacing: -0.02em; }
+#why-us .section__lede { color: rgba(255,255,255,0.74); }
+#why-us .eyebrow { color: #F5821F; }
+#hero .hero__eyebrow { color: #F5821F; }
+#hero .hero__title .accent { color: #fff; }
+
+/* Hero visual, framed group Venn diagram */
+.grouphero__visual {
+  position: relative;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: #0D1B2A;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+}
+.grouphero__visual img { display: block; width: 100%; height: auto; }
+.grouphero__visual-cap {
+  position: absolute; left: 16px; bottom: 14px;
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-12);
+  letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.75);
+  background: rgba(11,26,44,0.55);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.14);
+  padding: 5px 11px;
+  border-radius: var(--r-pill);
+}
+.grouphero__visual-cap .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--logo-teal); }
+
+/* Brand overview legend */
+.brand-legend {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 40px;
+}
+@media (min-width: 880px) { .brand-legend { grid-template-columns: repeat(4, 1fr); } }
+.brand-legend__item {
+  display: flex; flex-direction: column; gap: 6px;
+  padding: 18px 20px;
+  background: var(--bg-page);
+  border: 1px solid var(--border-1);
+  border-radius: var(--r-md);
+  text-decoration: none;
+  transition: box-shadow var(--dur-med) var(--ease-out), transform var(--dur-med) var(--ease-out), border-color var(--dur-med) var(--ease-out);
+}
+.brand-legend__item:hover { box-shadow: var(--shadow-2); transform: translateY(-2px); border-color: var(--border-strong); }
+.brand-legend__name {
+  display: flex; align-items: center; gap: 9px;
+  font-family: var(--font-display);
+  font-size: var(--fs-18);
+  font-weight: 600;
+  color: var(--fg-1);
+  letter-spacing: -0.01em;
+}
+.brand-legend__name .dot { width: 11px; height: 11px; border-radius: 50%; flex-shrink: 0; }
+.brand-legend__role {
+  font-size: var(--fs-13);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--fg-3);
+}
+
+/* Brand split rows */
+.brand-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+}
+@media (min-width: 980px) {
+  .brand-row { grid-template-columns: 1fr 1fr; gap: 72px; }
+  .brand-row--rev .brand-row__visual { order: 2; }
+}
+.brand-row + .brand-row { margin-top: 96px; }
+
+.brand-row__visual {
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+  aspect-ratio: 16 / 10;
+  border-radius: var(--r-lg);
+  background: var(--bg-page);
+  border: 1px solid var(--border-1);
+  box-shadow: var(--shadow-1);
+  padding: 48px;
+  overflow: hidden;
+}
+.section--subtle .brand-row__visual { background: #fff; }
+.brand-row__logo { max-width: 78%; max-height: 64%; width: auto; height: auto; object-fit: contain; }
+.brand-row__accent {
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 4px;
+}
+.brand-row__founded {
+  position: absolute; right: 16px; bottom: 14px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-12);
+  letter-spacing: 0.04em;
+  color: var(--fg-3);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-1);
+  border-radius: var(--r-pill);
+  padding: 4px 11px;
+}
+
+.brand-row__eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: var(--fs-12);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 14px;
+}
+.brand-row__eyebrow .dot { width: 9px; height: 9px; border-radius: 50%; }
+.brand-row__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 2.6vw, 2.25rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--fg-1);
+  margin: 0 0 8px;
+}
+.brand-row__lead {
+  font-size: var(--fs-16);
+  font-weight: 600;
+  color: var(--fg-1);
+  line-height: 1.55;
+  margin: 0 0 12px;
+}
+.brand-row__body {
+  font-size: var(--fs-16);
+  line-height: 1.7;
+  color: var(--fg-2);
+  margin: 0 0 22px;
+  text-wrap: pretty;
+}
+.brand-row__stats {
+  display: flex; flex-wrap: wrap; gap: 10px;
+  margin: 0 0 24px;
+}
+.brand-row__stat {
+  display: inline-flex; align-items: baseline; gap: 7px;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-1);
+  border-radius: var(--r-pill);
+  padding: 6px 13px;
+  font-size: var(--fs-14);
+  color: var(--fg-2);
+}
+.section--subtle .brand-row__stat { background: #fff; }
+.brand-row__stat strong { font-family: var(--font-display); font-weight: 600; color: var(--fg-1); }
+
+/* Hero content is visible by default. The shared stylesheet hides hero
+   content (opacity:0) and fades it in via a keyframe animation that only
+   completes while the tab is foregrounded, which fails in print/PDF and
+   offscreen capture. Brand voice is conservative, so we simply show it. */
+.hero__eyebrow.ha1,
+.hero__title.ha2,
+.hero__lede.ha3,
+.hero__cta-row.ha4,
+.hero__stats.ha5 { opacity: 1; animation: none; transform: none; }
+
+.ab-subnav{position:sticky;top:0;z-index:150;background:rgba(255,255,255,0.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--border-1)}
+.ab-subnav__inner{max-width:1260px;margin:0 auto;padding:12px 24px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+.ab-subnav__inner::-webkit-scrollbar{display:none}
+.ab-subnav a{flex-shrink:0;padding:9px 16px;border-radius:9999px;background:#F3F4F6;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#6B7280;text-decoration:none;transition:all .25s cubic-bezier(.25,.46,.45,.94)}
+.ab-subnav a:hover{background:#E9EBEF;color:#15253D}
+.ab-subnav a[aria-current="page"]{background:#F5821F;color:#fff}
+</style>
+<style id="about-tweak-style"></style>
+</head>
+<body>
+
+
+
+<!-- ─────────────────────────────────────────────────────────
+     WHY US, group intro
+     ───────────────────────────────────────────────────────── -->
+<section class="section section--subtle" id="why-us">
+  <div class="container">
+    <div class="section__head">
+      <div class="reveal eyebrow eyebrow--magenta" style="justify-content:center;display:inline-flex">Why Us</div>
+      <h2 class="reveal d1 section__title">Four specialist brands. One Goodfellow Group.</h2>
+      <p class="reveal d2 section__lede" style="margin-left:auto;margin-right:auto">We deliver high-quality scientific materials and services across a wide range of industries and applications. Together, Goodfellow, Potomac Photonics, Suisse Technology Partners and the Bureau of Analysed Samples, we drive innovation from concept to market, becoming your one-stop shop for scientific and industrial material needs.</p>
+    </div>
+
+    <div class="reveal d3 brand-legend">
+      <a href="#goodfellow" class="brand-legend__item">
+        <span class="brand-legend__name"><span class="dot" style="background:var(--gf-blue)"></span>Goodfellow</span>
+        <span class="brand-legend__role">Advanced Materials</span>
+      </a>
+      <a href="#potomac" class="brand-legend__item">
+        <span class="brand-legend__name"><span class="dot" style="background:var(--gf-magenta)"></span>Goodfellow Microfabrication</span>
+        <span class="brand-legend__role">Microfabrication</span>
+      </a>
+      <a href="#suisse" class="brand-legend__item">
+        <span class="brand-legend__name"><span class="dot" style="background:var(--logo-teal)"></span>Suisse TP</span>
+        <span class="brand-legend__role">Analytics &amp; Materials</span>
+      </a>
+      <a href="#bas" class="brand-legend__item">
+        <span class="brand-legend__name"><span class="dot" style="background:var(--logo-orange)"></span>BAS</span>
+        <span class="brand-legend__role">Reference Materials</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─────────────────────────────────────────────────────────
+     BRAND SECTIONS
+     ───────────────────────────────────────────────────────── -->
+<section class="section" id="brands">
+  <div class="container">
+
+    <!-- Goodfellow -->
+    <div class="brand-row reveal" id="goodfellow">
+      <div class="brand-row__visual">
+        <span class="brand-row__accent" style="background:var(--gf-blue)"></span>
+        <img class="brand-row__logo" src="https://www.potomac-laser.com/wp-content/uploads/2025/06/GF-Linear-logo_Advanced_logo_group_500.png" alt="Goodfellow Advanced Materials logo">
+        <span class="brand-row__founded">Since 1946</span>
+      </div>
+      <div>
+        <div class="brand-row__eyebrow" style="color:var(--gf-blue)"><span class="dot" style="background:var(--gf-blue)"></span>Advanced Materials</div>
+        <h2 class="brand-row__title">Goodfellow</h2>
+        <p class="brand-row__lead">A global leader in the supply of high-quality advanced materials, serving science and industry for over 75 years.</p>
+        <p class="brand-row__body">With a vast range of over 170,000 products, including metals, alloys, ceramics, polymers and compounds, Goodfellow is dedicated to driving innovation and solving technical challenges. Our commitment to excellence is reflected in extensive product offerings and a customer-focused approach, making us a trusted partner for researchers and engineers worldwide.</p>
+        <div class="brand-row__stats">
+          <span class="brand-row__stat"><strong>170,000+</strong> materials</span>
+          <span class="brand-row__stat"><strong>75+</strong> years</span>
+          <span class="brand-row__stat"><strong>ISO 9001</strong> quality assured</span>
+        </div>
+        <a href="https://www.goodfellow.com/" target="_blank" rel="noopener" class="btn btn--primary">Visit Goodfellow →</a>
+      </div>
+    </div>
+
+    <!-- Goodfellow Microfabrication -->
+    <div class="brand-row brand-row--rev reveal" id="potomac">
+      <div class="brand-row__visual">
+        <span class="brand-row__accent" style="background:var(--gf-magenta)"></span>
+        <img class="brand-row__logo" src="https://www.potomac-laser.com/wp-content/uploads/2025/06/Potomac_Master_AGC_logo_group_500.png" alt="Goodfellow Microfabrication logo">
+        <span class="brand-row__founded">Since 1982</span>
+      </div>
+      <div>
+        <div class="brand-row__eyebrow" style="color:var(--gf-magenta)"><span class="dot" style="background:var(--gf-magenta)"></span>Microfabrication</div>
+        <h2 class="brand-row__title">Goodfellow Microfabrication</h2>
+        <p class="brand-row__lead">One of the US leaders in microfabrication and digital manufacturing, rapid prototyping through full-scale production of precision devices.</p>
+        <p class="brand-row__body">Since 1982, the Baltimore-based Goodfellow Microfabrication team (formerly Potomac Photonics) has been at the forefront of innovation in medical-device manufacturing, biotech and electronics fabrication. By leveraging advanced laser and CNC technologies, the team delivers high-quality, cost-effective solutions that carry your project from concept to market.</p>
+        <div class="brand-row__stats">
+          <span class="brand-row__stat"><strong>±10 µm</strong> tolerances</span>
+          <span class="brand-row__stat"><strong>40+</strong> years</span>
+          <span class="brand-row__stat"><strong>Prototype → production</strong></span>
+        </div>
+        <a href="Services - CNC Micromachining.html" class="btn btn--primary">Explore microfabrication →</a>
+      </div>
+    </div>
+
+    <!-- Suisse Technology Partners -->
+    <div class="brand-row reveal" id="suisse">
+      <div class="brand-row__visual">
+        <span class="brand-row__accent" style="background:var(--logo-teal)"></span>
+        <img class="brand-row__logo" src="https://www.potomac-laser.com/wp-content/uploads/2025/06/STP_Master_AGC_logo_group_400.png" alt="Suisse Technology Partners logo">
+        <span class="brand-row__founded">Swiss labs</span>
+      </div>
+      <div>
+        <div class="brand-row__eyebrow" style="color:var(--logo-teal)"><span class="dot" style="background:var(--logo-teal)"></span>Analytics &amp; Materials</div>
+        <h2 class="brand-row__title">Suisse Technology Partners</h2>
+        <p class="brand-row__lead">A Swiss competence centre for material-based solutions and analytics, ensuring safe and innovative products for industrial customers.</p>
+        <p class="brand-row__body">STP provides specialised services in materials and surface technology. Their expertise spans technical safety, chemical analytics and packaging development, supported by certified and accredited laboratories. An interdisciplinary approach drives progress and innovation across every engagement.</p>
+        <div class="brand-row__stats">
+          <span class="brand-row__stat"><strong>Accredited</strong> laboratories</span>
+          <span class="brand-row__stat"><strong>Surface</strong> technology</span>
+          <span class="brand-row__stat"><strong>Failure</strong> investigation</span>
+        </div>
+        <a href="https://suisse-tp.ch/" target="_blank" rel="noopener" class="btn btn--primary">Visit Suisse TP →</a>
+      </div>
+    </div>
+
+    <!-- Bureau of Analysed Samples -->
+    <div class="brand-row brand-row--rev reveal" id="bas">
+      <div class="brand-row__visual">
+        <span class="brand-row__accent" style="background:var(--logo-orange)"></span>
+        <img class="brand-row__logo" src="https://www.potomac-laser.com/wp-content/uploads/2025/06/BAS_AGC_Full_grey_logo_group_400.png" alt="Bureau of Analysed Samples logo">
+        <span class="brand-row__founded">Since 1935</span>
+      </div>
+      <div>
+        <div class="brand-row__eyebrow" style="color:var(--logo-orange)"><span class="dot" style="background:var(--logo-orange)"></span>Reference Materials</div>
+        <h2 class="brand-row__title">The Bureau of Analysed Samples</h2>
+        <p class="brand-row__lead">A renowned provider of Certified Reference Materials (CRMs) for chemical and spectroscopic analysis.</p>
+        <p class="brand-row__body">Established in 1935, BAS continues the legacy of the British Chemical Standards movement, offering a wide range of materials for the iron and steel industry. Their CRMs are essential for ensuring accuracy and reliability in laboratory testing, making BAS a trusted partner for quality assurance across many industries.</p>
+        <div class="brand-row__stats">
+          <span class="brand-row__stat"><strong>Since 1935</strong></span>
+          <span class="brand-row__stat"><strong>Certified</strong> reference materials</span>
+          <span class="brand-row__stat"><strong>Iron &amp; steel</strong> standards</span>
+        </div>
+        <a href="https://www.basrid.co.uk/" target="_blank" rel="noopener" class="btn btn--primary">Visit BAS →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────────
+     FINAL CTA
+     ───────────────────────────────────────────────────────── -->
+<section class="final-cta">
+  <div class="final-cta__inner">
+    <div class="eyebrow eyebrow--on-dark" style="justify-content:center;display:inline-flex;color:#fff">One Partner, End to End</div>
+    <h2 class="final-cta__title">From material<br>to finished micro-part.</h2>
+    <p class="final-cta__copy">Source the right material and machine it with one trusted group. Share your CAD files and requirements, our engineers review every design for manufacturability and respond within one business day.</p>
+    <div class="final-cta__actions">
+      <a href="Services - CNC Micromachining.html#quote" class="btn btn--cta btn--lg">Request a quote</a>
+      <a href="Gallery - Project Gallery.html" class="btn btn--ghost-light btn--lg">View the project gallery</a>
+    </div>
+  </div>
+</section>
+
+<script>
+/* ── REVEAL ── */
+const revealEls = document.querySelectorAll('.reveal');
+const revealAll = () => revealEls.forEach(el => el.classList.add('visible'));
+if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  revealAll();
+} else {
+  const revealObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
+  }, {threshold:0.08, rootMargin:'0px 0px -20px 0px'});
+  revealEls.forEach(el => revealObs.observe(el));
+  /* Safety net: if the observer hasn't revealed the above-the-fold
+     content shortly after load (some embed/preview contexts never
+     fire intersections), show everything so nothing stays hidden. */
+  window.addEventListener('load', () => setTimeout(() => {
+    if (![...revealEls].some(el => el.classList.contains('visible'))) revealAll();
+  }, 400));
+}
+</script>
+
+
+
+
+
+</body>
+</html>

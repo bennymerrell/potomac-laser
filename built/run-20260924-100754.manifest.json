@@ -1,0 +1,120 @@
+{
+ "run_id": "20260924-100754",
+ "started_utc": "2026-09-24T10:07:54Z",
+ "mode": "autonomous coordinator run (AUTOMATION.md), RUN A",
+ "target": "potomac-laser.com (LIVE) via novamira-potomac-laser-co, PRODUCTION MODE",
+ "zip": {
+  "filename": "Potomac Laser.zip",
+  "sha256": "fab7225ce0879014418672228148420215c3a39fa6463bea2012d2ce7b798db9",
+  "source": "origin/project-zip e1320ef",
+  "manifest": "manifests/potomac-laser.txt",
+  "manifest_hash_matched": true
+ },
+ "recovery_floor": {
+  "gate": "SKILL.md \u00a70 \u2014 newest set was 2026-09-20T04:01:49Z (~102h, stale); TAKEN this run",
+  "updraft_set_timestamp": 1790244496,
+  "updraft_set_utc": "2026-09-24T10:08:16Z",
+  "backup_nonce": "ec283efbb074",
+  "db_file": "backup_2026-09-24-0608_Potomac_Laser_ec283efbb074-db.gz.crypt",
+  "db_size": 22284192,
+  "service": [
+   "dropbox"
+  ],
+  "updraft_last_backup_success": 1,
+  "updraft_last_backup_errors": [],
+  "duration_s": 28,
+  "trigger": "do_action('updraft_backupnow_backup_database', nocloud=0) \u2014 database only"
+ },
+ "posts_created": [
+  {
+   "post_id": 12268,
+   "post_type": "page",
+   "post_status": "draft",
+   "slug": "pl-auto-about-our-group",
+   "title": "About Our Group",
+   "design_page": "About - About Our Group.html",
+   "preview_url": "https://www.potomac-laser.com/?page_id=12268&preview=true",
+   "provenance_meta": {
+    "_pl_auto_page": "About - About Our Group.html",
+    "_pl_auto_zip": "fab7225ce0879014418672228148420215c3a39fa6463bea2012d2ce7b798db9",
+    "_pl_auto_run": "20260924-100754"
+   },
+   "page_settings_written": [
+    "_elementor_page_settings.custom_css (Inter font \u2014 per-post equivalent of Code Snippet #10)",
+    "_wp_page_template=elementor_header_footer"
+   ]
+  }
+ ],
+ "attachments_created": [
+  {
+   "attachment_id": 12264,
+   "file": "2026/09/pl-auto-group-logo-goodfellow.png",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-group-logo-goodfellow.png",
+   "sha256": "a524e7ed2323744a632dab34b2f392e84ecf1cabe77e94e8bfbb19d3e3a7242a",
+   "role": "split-rows-logo-alternating logo",
+   "page": "About - About Our Group.html",
+   "created_utc": "2026-09-24"
+  },
+  {
+   "attachment_id": 12265,
+   "file": "2026/09/pl-auto-group-logo-microfab.png",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-group-logo-microfab.png",
+   "sha256": "0b48595edee2103b509a06c4f7815f10aa165d5ee618a9aa3167e75081706b78",
+   "role": "split-rows-logo-alternating logo",
+   "page": "About - About Our Group.html",
+   "created_utc": "2026-09-24"
+  },
+  {
+   "attachment_id": 12266,
+   "file": "2026/09/pl-auto-group-logo-stp.png",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-group-logo-stp.png",
+   "sha256": "3eb7d6001fd1a737c8d7be19a658e59d913d04d2bd8e37a7df4fd4847b01e7b0",
+   "role": "split-rows-logo-alternating logo",
+   "page": "About - About Our Group.html",
+   "created_utc": "2026-09-24"
+  },
+  {
+   "attachment_id": 12267,
+   "file": "2026/09/pl-auto-group-logo-bas.png",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-group-logo-bas.png",
+   "sha256": "777e67c41d8bd25079e9866c25e78d94f205b8b54d91d98c1afd3ef4e026abbe",
+   "role": "split-rows-logo-alternating logo",
+   "page": "About - About Our Group.html",
+   "created_utc": "2026-09-24"
+  }
+ ],
+ "files_uploaded": [
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-100754/pl-auto-about-our-group.elementor.json",
+   "bytes": 55453,
+   "sha256": "e92576e5097b60d0cdd2df785fddb648ef0ad419977e054928a75f210c3ae8fb",
+   "role": "staged _elementor_data",
+   "dir_created": "wp-content/uploads/novamira-drafts/run-20260924-100754"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-100754/pl-auto-about-our-group.v2.elementor.json",
+   "bytes": 59836,
+   "sha256": "347fbe4d876f51b372ae2a45cb34a077b24bfefe0f69b8a02bcf78a1e2694ece",
+   "role": "staged _elementor_data, verify iteration 2"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-100754/pl-auto-about-our-group.v3.elementor.json",
+   "bytes": 59987,
+   "sha256": "f2d60bec57881eb4711858857f0f7215162f55a86b6db0f9a18706e7366f9cdd",
+   "role": "staged _elementor_data, verify iteration 3"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/legend-cards-dark.json",
+   "bytes": 56205,
+   "sha256": "5d1f91b7aebceaba2181aad25ce6e22cefeef287c37aaf3c212ce831324f0324",
+   "role": "\u00a77.4 tokenised fragment from post 12268"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/split-rows-logo-alternating.json",
+   "bytes": 132319,
+   "sha256": "dc75b5ee6ce3211812880b79fc294621867cd3621d63f39f65bb5901cdb07ce7",
+   "role": "\u00a77.4 tokenised fragment from post 12268",
+   "note": "rewritten in place by this run: 3 custom_css Kit hexes -> var(--e-global-color-*) (colour global map step)"
+  }
+ ]
+}
