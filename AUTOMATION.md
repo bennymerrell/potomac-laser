@@ -75,7 +75,7 @@ c. FOR EACH page in the zip:
 
 i. IDENTITY: the question here is **"has this pipeline already created this page?"** — never "does anything with this slug exist?". Live pages and pre-process duplicates are irrelevant to it: they were made before this process existed, and a fresh draft is meant to be built alongside them, not skipped because of them.
 
-**Check by provenance, via Novamira:** query for a post with postmeta `_pl_auto_page` = this design page's path inside the zip, at `post_status=any` and `post_type=any`.
+**Check by provenance, via Novamira:** query **postmeta directly** for a post with `_pl_auto_page` = this design page's path inside the zip, joined to `wp_posts` for its type and status, across every status and across `page`, `post_services` and `post_application`. **Do not use `get_posts`/`WP_Query` with `post_type=any`:** `any` silently excludes post types registered with `exclude_from_search`, and `post_services` is one — found 2026-09-24 (run 20260924-100754), where it returned nothing for posts 12239–12243 and would have drafted all five again.
 
 **If the manifest entry carries `was=<old path>`, query that path too.** A re-export can rename a page (the 2026-09-24 export prefixed every filename with its section), and the stamp holds the path the page had when it was built. A hit on either path is this page. Never re-stamp a post during this check: `_pl_auto_page` is rewritten only by the supervised job that refreshes that post.
 
@@ -248,7 +248,7 @@ Triggered per `UNMATCHED` section from 3.c.ii. The library's existing fragments 
 
 **8. VALIDATE:** run `python3 tools/validate_spec.py --automation` on every spec using a new pattern. A validator failure is a §7 failure: discard the pattern, fail the page, move on.
 
-**9. CAP:** at most 8 new patterns per zip. On the 9th unmatched section, stop minting — mark remaining pages `"failed: pattern-budget-exhausted"` and report. A design needing more than 8 new patterns is a library-design problem for a human, not an automation problem.
+**9. CAP:** at most 8 new patterns per zip **run**, unless the zip's manifest sets `# pattern_cap: <n>` (then at most n). The cap counts patterns minted by the current run only; patterns minted by an earlier run of the same zip (a `partial` re-entry) are library patterns by then and do not count. Before minting for a page, count the new patterns the whole page needs; if that exceeds what is left, do not mint for it — mark it `"failed: pattern-budget-exhausted"` with the count, and carry on with pages that need fewer or none. On the first unmatched section beyond the cap, stop minting — mark remaining pages `"failed: pattern-budget-exhausted"` and report. A design needing more than 8 new patterns is a library-design problem for a human, not an automation problem.
 
 **10. RECORD** each new pattern in build-state.json under `new_patterns`: id, source post_id, section index, the page that minted it, and which pages reused it.
 

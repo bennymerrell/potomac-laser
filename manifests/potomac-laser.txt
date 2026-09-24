@@ -11,6 +11,10 @@
 #
 # zip: Potomac Laser.zip
 # zip_sha256: fab7225ce0879014418672228148420215c3a39fa6463bea2012d2ce7b798db9
+# pattern_cap: 20
+#   Raised from the default 8 (AUTOMATION.md §7.9) on 2026-09-24: RUN A's ten pages need
+#   ~20 new section shapes. Run 20260924-100754 minted 7 and failed 8 pages on the budget;
+#   the zip is `partial`, so the next run re-enters only those 8 pages, with this cap.
 #
 # Format:  <path relative to zip root>[  <post_type>][  interactive=<file>][  was=<old path>]
 #   post_type is `page` (default), `post_services` or `post_application` —
