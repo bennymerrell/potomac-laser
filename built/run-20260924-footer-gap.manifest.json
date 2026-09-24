@@ -1,0 +1,13 @@
+{
+  "run_id": "20260924-footer-gap",
+  "mode": "SUPERVISED, requested in chat: remove the 50px gap between the new pages' content and the light blue footer (.foo-bottom margin-top: 50px).",
+  "site_code_changed": {
+    "what": "Code Snippet #10",
+    "before_sha256": "63a1d6e26013486c5299f95b6c676582d8cef83db13db5a16c887f8c2a3dc309",
+    "after_sha256": "0efeb3bc47e59d2847c301ed17b88f9d2c6c6ea20754d46372ebd1aef5fa27a8",
+    "change": "added: body.page.cnc-elementor-fullbleed .foo-bottom, body.single-post_material.cnc-elementor-fullbleed .foo-bottom {margin-top:0!important;margin-block-start:0!important} — the full-bleed class on pages/materials is only given to posts stamped _pl_auto_page, so it applies to the pipeline pages alone",
+    "rollback": "restore reference/code-snippets/snippet-10.before-20260924-footer-gap.php as Snippet #10 code"
+  },
+  "cache": "rocket_clean_post on the 17 published pipeline pages (the call timed out with 405 while purging but completed; all 17 cached URLs verified to carry the rule)",
+  "verified": "Chrome: gap content->footer 0px on /about/faqs/, /material/glass/, /contact/ (was 50); /services/cnc-micro-machining-services/ still 50px (untouched). All 17 pages 200, no PHP errors."
+}
