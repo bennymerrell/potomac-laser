@@ -8,6 +8,8 @@
 #   [2] .final-cta -> cta-band-dark [0/0]
 # Brand normalisation: FAQ question 10 "does Potomac offer" -> Goodfellow Microfabrication.
 # Filter: chips reuse text-link-cards-6-filter's widget/script; each item's category is a hidden label.
+# Links: §3.d link pass applied — design page hrefs -> this run's drafts (12302/12357/12371) and
+#   earlier drafts 12239 (CNC, #quote), 12268, 12277.
 
 spec_version: 1
 page:
@@ -60,6 +62,6 @@ sections:
     heading_2: Talk to the team.
     body_1: <p>Send a drawing or a short description of your project. Our engineers review every design and respond within one business day.</p>
     button_1: Email us
-    url_1: Contact - Contact.html
+    url_1: https://www.potomac-laser.com/?page_id=12302&preview=true
     button_2: Send a drawing
     url_2: https://www.potomac-laser.com/project-quote/#projectForm

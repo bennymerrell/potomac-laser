@@ -975,7 +975,7 @@
          "custom_css": "selector{box-shadow:0 2px 8px rgba(0,0,0,.07);overflow:hidden}selector{text-decoration:none;color:inherit;box-shadow:none;transition:border-color .25s,box-shadow .25s,transform .15s}selector:hover{border-color:#F5821F;box-shadow:0 4px 12px rgba(15,22,32,.08);transform:translateY(-2px)}selector:hover .elementor-widget-image img{transform:scale(1.04)}",
          "html_tag": "a",
          "link": {
-          "url": "Services - CNC Micromachining.html",
+          "url": "https://www.potomac-laser.com/?post_type=post_services&p=12239&preview=true",
           "is_external": "",
           "nofollow": ""
          },
@@ -3510,7 +3510,7 @@
         "settings": {
          "text": "Request a quote",
          "link": {
-          "url": "Services - CNC Micromachining.html#quote",
+          "url": "https://www.potomac-laser.com/?post_type=post_services&p=12239&preview=true#quote",
           "is_external": "",
           "nofollow": ""
          },
@@ -4149,7 +4149,7 @@
               "settings": {
                "text": "Learn more",
                "link": {
-                "url": "About - About Our Group.html",
+                "url": "https://www.potomac-laser.com/?page_id=12268&preview=true",
                 "is_external": "",
                 "nofollow": ""
                },
@@ -4392,7 +4392,7 @@
         "settings": {
          "text": "Request a quote",
          "link": {
-          "url": "Services - CNC Micromachining.html#quote"
+          "url": "https://www.potomac-laser.com/?post_type=post_services&p=12239&preview=true#quote"
          },
          "background_color": "",
          "button_text_color": "",

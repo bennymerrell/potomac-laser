@@ -9,6 +9,8 @@
 #   [2] .final-cta -> cta-band-dark [0/0] ("Upload CAD" is a button in the design; it goes to the quote form)
 # The design's PROJECTS JS array duplicates the static cards; the build uses only the static markup.
 # Brand: no "Potomac" in the copy.
+# Links: §3.d link pass applied — design page hrefs -> this run's drafts (12302/12357/12371) and
+#   earlier drafts 12239 (CNC, #quote), 12268, 12277.
 
 spec_version: 1
 page:
@@ -197,7 +199,7 @@ sections:
   tokens:
     heading_1: Request a quote for this part
     heading_2: Upload CAD
-    url_1: Services - CNC Micromachining.html#quote
+    url_1: https://www.potomac-laser.com/?post_type=post_services&p=12239&preview=true#quote
     heading_3: Filter
     embed_1: <button type="button" class="pl-gc on" data-filter="all" aria-pressed="true">All<span>54</span></button><button type="button" class="pl-gc" data-filter="assembly" aria-pressed="false">Assembly<span>3</span></button><button type="button" class="pl-gc" data-filter="ceramics" aria-pressed="false">Ceramics<span>2</span></button><button type="button" class="pl-gc" data-filter="diamond" aria-pressed="false">Diamond<span>2</span></button><button type="button" class="pl-gc" data-filter="electronics" aria-pressed="false">Electronics<span>3</span></button><button type="button" class="pl-gc" data-filter="featured" aria-pressed="false">Featured<span>4</span></button><button type="button" class="pl-gc" data-filter="glass micromachining" aria-pressed="false">Glass Micromachining<span>2</span></button><button type="button" class="pl-gc" data-filter="kapton" aria-pressed="false">Kapton<span>3</span></button><button type="button" class="pl-gc" data-filter="laser cutting" aria-pressed="false">Laser Cutting<span>3</span></button><button type="button" class="pl-gc" data-filter="laser marking" aria-pressed="false">Laser Marking<span>4</span></button><button type="button" class="pl-gc" data-filter="metal micromachining" aria-pressed="false">Metal Micromachining<span>8</span></button><button type="button" class="pl-gc" data-filter="microfluidics" aria-pressed="false">Microfluidics<span>5</span></button><button type="button" class="pl-gc" data-filter="microhole drilling" aria-pressed="false">Microhole Drilling<span>8</span></button><button type="button" class="pl-gc" data-filter="polymer" aria-pressed="false">Polymer<span>4</span></button><button type="button" class="pl-gc" data-filter="silicon wafer" aria-pressed="false">Silicon Wafer<span>3</span></button>
     body_1: <p class="pl-gal-count">Showing <strong>54</strong> projects</p>
@@ -423,6 +425,6 @@ sections:
     heading_2: See something close<br>to your part?
     body_1: <p>Share your CAD files and tolerance requirements. Engineers review every design for manufacturability and respond within one business day.</p>
     button_1: Request a quote
-    url_1: Services - CNC Micromachining.html#quote
+    url_1: https://www.potomac-laser.com/?post_type=post_services&p=12239&preview=true#quote
     button_2: Upload CAD
-    url_2: Services - CNC Micromachining.html#quote
+    url_2: https://www.potomac-laser.com/?post_type=post_services&p=12239&preview=true#quote

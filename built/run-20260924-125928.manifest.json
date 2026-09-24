@@ -1231,9 +1231,39 @@
    "bytes": 77280,
    "sha256": "92b17b0981a900213c786812f46928839110ced53e1210434158f264aac9c299",
    "role": "\u00a77.4 positional tokenise job"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/bundle-linkpass.json",
+   "bytes": 559070,
+   "sha256": "c79754ff5a16720991e0cb0a8cf0c7bfa1ee6158e902aa698fc113b2c6e81b04",
+   "role": "bundle: \u00a73.d link pass, 8 pages"
   }
  ],
  "notes": [
   "hero-split-contact-form first tokenisation (sha 12ff5a83\u2026) removed by this run before commit: its status text was tokenised as body_* (validator requires block markup for body_*); re-tokenised with heading_* from the same, unchanged post 12302."
+ ],
+ "finished_utc": "2026-09-24",
+ "result": {
+  "zip_status": "built",
+  "built": [
+   12295,
+   12296,
+   12298,
+   12300,
+   12301,
+   12302,
+   12357,
+   12371
+  ],
+  "failed": [],
+  "patterns_minted": 19,
+  "pattern_cap": 20
+ },
+ "global_operations": [],
+ "not_touched": [
+  "posts 12239-12243, 12268, 12277 (earlier runs)",
+  "Kit 11259",
+  "Code Snippets (Snippet #10 was changed BEFORE this run, as a separate supervised step)",
+  "*-interactive.html files"
  ]
 }

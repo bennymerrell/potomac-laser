@@ -14,6 +14,8 @@
 #   [5] .final-cta -> cta-band-dark [0/0]
 # Brand: no present-tense "Potomac" in the copy.
 # Style-rule breaches kept verbatim: 11 "→" in the card labels ("Learn more →", "View details →").
+# Links: §3.d link pass applied — design page hrefs -> this run's drafts (12302/12357/12371) and
+#   earlier drafts 12239 (CNC, #quote), 12268, 12277.
 
 spec_version: 1
 page:
@@ -91,7 +93,7 @@ sections:
     heading_5: CNC Micro Machining
     body_3: <p>4-axis CNC milling and drilling for fine-feature metals and engineering plastics at ±10 µm tolerances.</p>
     heading_6: Learn more →
-    url_2: Services - CNC Micromachining.html
+    url_2: https://www.potomac-laser.com/?post_type=post_services&p=12239&preview=true
     image_3:
       asset: sa_svc_3
     heading_7: Laser Micro-Hole Drilling
@@ -162,7 +164,7 @@ sections:
     heading_2: Submit your drawing, get a quick estimate
     body_1: <p>Send us your CAD or drawing and see if we're the right fit. Our engineers review every design for manufacturability and respond within one business day.</p>
     button_1: Request a quote
-    url_1: Services - CNC Micromachining.html#quote
+    url_1: https://www.potomac-laser.com/?post_type=post_services&p=12239&preview=true#quote
     button_2: Contact us
     url_2: /contact/
 - pattern: feature-cards-2-image
@@ -175,7 +177,7 @@ sections:
     heading_2: Everything you need for your business
     body_1: <p>The best parts start with the best materials. As part of the Goodfellow family, a global leader in high-quality material supply, we draw on an extensive range of superior materials, enhancing our precision microfabrication with 170,000+ grades.</p>
     button_2: Learn more
-    url_2: About - About Our Group.html
+    url_2: https://www.potomac-laser.com/?page_id=12268&preview=true
     image_2:
       asset: sa_feat_2
     heading_3: Industries
@@ -187,6 +189,6 @@ sections:
     heading_2: Have a part in mind?
     body_1: <p>Share your CAD files and tolerance requirements. Our engineers review every design for manufacturability and respond within one business day.</p>
     button_1: Request a quote
-    url_1: Services - CNC Micromachining.html#quote
+    url_1: https://www.potomac-laser.com/?post_type=post_services&p=12239&preview=true#quote
     button_2: Contact us
     url_2: /contact/

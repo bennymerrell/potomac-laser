@@ -12,6 +12,8 @@
 #   (historical case-study titles/text): "Wireless Sensor Project (WiSP) at Potomac Photonics",
 #   "A collaboration between Potomac Photonics, Potomac Mesosystems and Gray Technologies…".
 # Links: url_* hold the design's page hrefs; §3.d link pass rewrites the internal ones.
+# Links: §3.d link pass applied — design page hrefs -> this run's drafts (12302/12357/12371) and
+#   earlier drafts 12239 (CNC, #quote), 12268, 12277.
 
 spec_version: 1
 page:
@@ -86,4 +88,4 @@ sections:
     button_1: Send a drawing
     url_1: https://www.potomac-laser.com/project-quote/#projectForm
     button_2: View the project gallery
-    url_2: Gallery - Project Gallery.html
+    url_2: https://www.potomac-laser.com/?page_id=12357&preview=true

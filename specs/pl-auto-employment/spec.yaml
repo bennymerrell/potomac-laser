@@ -12,7 +12,8 @@
 # Brand normalisation: H1 "Careers at Potomac", lede "Potomac Photonics is always looking",
 #   eyebrow "Working at Potomac", CTA button "About Potomac", photo alt -> Goodfellow Microfabrication.
 # Filter: chips + a show/hide script in one html widget; cards stay native widgets (zip CLAUDE.md rule).
-# Links: url_* hold the design's hrefs; §3.d link pass rewrites the internal ones.
+# Links: §3.d link pass applied — design page hrefs -> this run's drafts (12302/12357/12371) and
+#   earlier drafts 12239 (CNC, #quote), 12268, 12277.
 
 spec_version: 1
 page:
@@ -81,6 +82,6 @@ sections:
     heading_2: Send us your résumé.
     body_1: <p>No matching role today? Get in touch and tell us about your experience. We keep strong candidates in mind for future openings.</p>
     button_1: Contact us
-    url_1: Contact - Contact.html
+    url_1: https://www.potomac-laser.com/?page_id=12302&preview=true
     button_2: About Goodfellow Microfabrication
-    url_2: About - About Potomac.html
+    url_2: https://www.potomac-laser.com/?page_id=12277&preview=true

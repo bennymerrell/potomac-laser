@@ -9,6 +9,8 @@
 # Brand normalisation: H1 "News from Potomac", lede "at Potomac Photonics" -> Goodfellow Microfabrication.
 #   KEPT verbatim: the 12 dated headlines and summaries (historical press items).
 # Links: url_* hold the design's page hrefs; §3.d link pass rewrites the internal ones.
+# Links: §3.d link pass applied — design page hrefs -> this run's drafts (12302/12357/12371) and
+#   earlier drafts 12239 (CNC, #quote), 12268, 12277.
 
 spec_version: 1
 page:
@@ -153,6 +155,6 @@ sections:
     heading_2: Talk to the team.
     body_1: <p>Send a drawing or a short description of your project. Our engineers review every design and respond within one business day.</p>
     button_1: Email us
-    url_1: Contact - Contact.html
+    url_1: https://www.potomac-laser.com/?page_id=12302&preview=true
     button_2: Send a drawing
     url_2: https://www.potomac-laser.com/project-quote/#projectForm
