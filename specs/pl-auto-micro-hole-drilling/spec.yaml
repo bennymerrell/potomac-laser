@@ -1,5 +1,5 @@
 # spec.yaml — Laser Micro-Hole Drilling  (run 20260806-124030, sibling 2)
-# Source design : Potomac Laser.zip :: Micro-Hole Drilling.html
+# Source design : Potomac Laser.zip :: Services - Micro-Hole Drilling.html
 # MATCH         : 12 of 12, zero unmatched, no §7 authoring.
 # Token values  : 9 patterns from post 12225 (ALIGNED slot-for-slot); spec-table-dark,
 #                 services-image-cards, quote-form-hubspot from the design markup via
@@ -20,6 +20,10 @@
 #                 returns exactly that, and no bare "Expl" appears anywhere in the design page.
 #                 So it was introduced when this token block was authored, not when it was
 #                 extracted. Corrected 2026-08-06 and pushed to post 12241.
+# REFRESH 2026-09-24 : copy carried from Services - Micro-Hole Drilling.html (Potomac Laser.zip
+#                      fab7225c…) by tools/refresh_service_specs.py.
+#                      Section 3 (explorer) still the iframe embed — the
+#                      inline cluster replaces it in a later step.
 
 spec_version: 1
 page:
@@ -61,9 +65,9 @@ assets:
 sections:
 - pattern: hero-dark-stat-strip
   tokens:
-    body_1: <p>Laser micro-hole drilling is a non-contact process that produces precise, repeatable micro-scale holes in metals, polymers, glass, silicon, and ceramics &mdash; with diameters from <strong>2 µm to 100 µm</strong>, and down to roughly 1 µm depending on material and geometry. Goodfellow Microfabrication matches UV and IR laser sources with micro-CNC drilling for medical, semiconductor, aerospace, and industrial applications.</p>
+    body_1: <p>Laser micro-hole drilling is a non-contact process that produces precise, repeatable micro-scale holes in metals, polymers, glass, silicon, and ceramics, with diameters from <strong>2 µm to 100 µm</strong>, and down to roughly 1 µm depending on material and geometry. Goodfellow Microfabrication matches UV and IR laser sources with micro-CNC drilling for medical, semiconductor, aerospace, and industrial applications.</p>
     body_2: <p><a href="#services">EXPLORE SERVICES →</a></p>
-    body_3: <p>Upload STEP, STL, or PDF — our engineers review it for manufacturability.</p>
+    body_3: <p>Upload STEP, STL, or PDF, our engineers review it for manufacturability.</p>
     button_1: Upload Drawing / CAD
     button_2: Request a Quote
     heading_1: LASER MICRO-HOLE DRILLING SERVICES
@@ -82,9 +86,9 @@ sections:
     url_2: '#quote'
 - pattern: why-choose-inset-cta
   tokens:
-    body_1: <p>We deliver precision laser micro-hole drilling for micro-scale components &mdash; from single prototypes through to high-volume production, with in-house engineering, multiple drilling technologies, and full quality control.</p>
-    body_2: <ul><li><strong>Holes down to 2 µm</strong> &mdash; ultra-small, repeatable micro-holes across metals, polymers, glass, and ceramics.</li><li><strong>Tight positional control</strong> &mdash; NIST-traceable stages and full inspection for consistent hole size and placement.</li><li><strong>High-speed throughput</strong> &mdash; thousands of holes drilled quickly and repeatably, from prototype to production.</li><li><strong>Multiple technologies in-house</strong> &mdash; UV and IR laser sources plus micro-CNC drilling, matched to your material.</li><li><strong>Engineering support</strong> &mdash; guidance on hole diameter, taper, edge quality, and spacing to improve manufacturability.</li></ul>
-    body_3: <p>Upload STEP, STL, or PDF — our engineers review it for manufacturability.<br>No redesign required to start — we’ll help optimise your part.</p>
+    body_1: <p>We deliver precision laser micro-hole drilling for micro-scale components, from single prototypes through to high-volume production, with in-house engineering, multiple drilling technologies, and full quality control.</p>
+    body_2: <ul><li><strong>Holes down to 2 µm</strong>, ultra-small, repeatable micro-holes across metals, polymers, glass, and ceramics.</li><li><strong>Tight positional control</strong>, NIST-traceable stages and full inspection for consistent hole size and placement.</li><li><strong>High-speed throughput</strong>, thousands of holes drilled quickly and repeatably, from prototype to production.</li><li><strong>Multiple technologies in-house</strong>, UV and IR laser sources plus micro-CNC drilling, matched to your material.</li><li><strong>Engineering support</strong>, guidance on hole diameter, taper, edge quality, and spacing to improve manufacturability.</li></ul>
+    body_3: <p>Upload STEP, STL, or PDF, our engineers review it for manufacturability.<br>No redesign required to start, we’ll help optimise your part.</p>
     button_1: Upload Drawing / CAD
     button_2: Request a Quote
     heading_1: WHY GOODFELLOW MICROFABRICATION
@@ -130,16 +134,16 @@ sections:
     embed_1: '<iframe id="mhd-interactive-frame" src="https://www.potomac-laser.com/wp-content/uploads/novamira-drafts/mhd-interactive.html" title="Laser Micro-Hole Drilling: services and quote request" scrolling="no" style="display:block;border:0;width:100%;min-height:640px" loading="eager"></iframe>'
 - pattern: spec-table-dark
   tokens:
-    body_1: <p>Engineering guidance — not fixed spec promises.</p>
+    body_1: <p>Engineering guidance, not fixed spec promises.</p>
     body_2: <p><strong>2 µm</strong> to <strong>100 µm</strong> · down to ~1 µm <span>(material dependent)</span></p>
     body_3: <p><strong>Round & tapered</strong> · angled and shaped holes via multi-axis systems</p>
     body_4: <p><strong>1000s</strong> of holes drilled quickly and repeatably in a single run</p>
     body_5: <p>Stainless steel, titanium, aluminium, copper, brass, tantalum, nickel, nitinol</p>
     body_6: <p>Kapton (PI), PC, PEEK, nylon, Mylar, PE, ABS, silicone (PDMS)</p>
-    body_7: <p><strong>No MOQ</strong> — from early prototype through production transfer</p>
+    body_7: <p><strong>No MOQ</strong>, from early prototype through production transfer</p>
     body_8: <p><strong>24 h</strong> rapid response to new drawings, specifications, and quote requests</p>
     body_9: <p>Optical metrology, positional verification, first-article review · ISO 13485:2016 processes</p>
-    body_10: <p>Material selection supported — customers often work with engineering to optimise for manufacturability.</p>
+    body_10: <p>Material selection supported, customers often work with engineering to optimise for manufacturability.</p>
     body_11: <p>Work with your own material or select from <strong>170,000+</strong> options.</p><p>Broader material matching and traceability support are available through the wider Goodfellow library.</p>
     heading_1: Technical Specifications
     heading_2: Laser Micro-Hole Drilling Capabilities
@@ -155,8 +159,8 @@ sections:
     heading_12: Material support available
 - pattern: process-comparison-cards
   tokens:
-    body_1: <p>Use this guide to identify the right process — or combine them for the best result.</p>
-    body_2: <p>Choose the right drilling process for your part — based on material, hole size, and taper.</p>
+    body_1: <p>Use this guide to identify the right process, or combine them for the best result.</p>
+    body_2: <p>Choose the right drilling process for your part, based on material, hole size, and taper.</p>
     body_3: <ul><li>Transparent and clear polymers</li><li>Very small, clean-edged holes</li><li>Heat-sensitive substrates</li></ul>
     body_4: <p><strong>Best for:</strong> polymers, films, thin substrates</p>
     body_5: <p><a href="/services/micro-hole-drilling/">See laser drilling →</a></p>
@@ -166,7 +170,7 @@ sections:
     body_9: <ul><li>Larger holes or zero taper</li><li>Thicker materials</li><li>Straight-wall precision</li></ul>
     body_10: <p><strong>Best for:</strong> zero-taper, larger diameters</p>
     body_11: <p><a href="#quote">See micro-CNC drilling →</a></p>
-    body_12: <p>Upload CAD (STEP, STL, IGES) or a drawing (PDF, DXF, DWG) — our engineers review it for manufacturability.</p><p>No redesign required to start — we’ll help optimise your part.</p>
+    body_12: <p>Upload CAD (STEP, STL, IGES) or a drawing (PDF, DXF, DWG), our engineers review it for manufacturability.</p><p>No redesign required to start, we’ll help optimise your part.</p>
     body_13: <p>Uploads stay confidential. We can sign your NDA on request before you share files.</p>
     button_1: Upload Drawing / CAD
     button_2: Request a Quote
@@ -216,7 +220,7 @@ sections:
   options:
     you_are_here_unit: 2
   tokens:
-    body_1: <p>The Goodfellow Group brings together material supply, precision fabrication, and testing capabilities — giving you access to a complete engineering ecosystem.</p>
+    body_1: <p>The Goodfellow Group brings together material supply, precision fabrication, and testing capabilities, giving you access to a complete engineering ecosystem.</p>
     body_2: <p>Global supply of advanced metals, alloys, ceramics, polymers, and compounds with research-quality flexibility and production-scale support across 170,000+ specialist materials.</p>
     body_3: <ul><li>170,000+ material grades</li><li>No minimum order</li></ul>
     body_4: <p><a href="https://goodfellow.com">Explore Materials →</a></p>
@@ -245,9 +249,9 @@ sections:
     url_1: '#quote'
 - pattern: testimonials-avatar-cards
   tokens:
-    body_1: <p>“2 µm holes in 10-mil silicon nitride for our probe cards — placement was spot on, batch after batch.”</p>
+    body_1: <p>“2 µm holes in 10-mil silicon nitride for our probe cards, placement was spot on, batch after batch.”</p>
     body_2: <p>“CCIT leak-test holes drilled and delivered inside a week. Accurate, repeatable, and fully documented.”</p>
-    body_3: <p>“They drilled 30 µm holes across a full metal sheet with consistent edge quality — exactly what our filter needed.”</p>
+    body_3: <p>“They drilled 30 µm holes across a full metal sheet with consistent edge quality, exactly what our filter needed.”</p>
     heading_1: CLIENT TESTIMONIALS
     heading_2: Trusted by engineers worldwide
     heading_3: ★★★★★
@@ -264,27 +268,27 @@ sections:
     heading_14: Photon Dynamics GmbH
 - pattern: quote-form-hubspot
   tokens:
-    body_1: Upload your drawing or request a quote — our engineering team will review your design and respond within 24 hours.
-    body_2: No redesign required to start — we'll help optimise your part.
-    body_3: ♢ Uploads stay confidential. We can sign your NDA on request before you share files.
-    body_4: You submit your request
-    body_5: Within hours
-    body_6: '3'
+    body_1: Upload your drawing or request a quote, our engineering team will review your design and respond within 24 hours.
+    body_2: No redesign required to start, we'll help optimise your part.
+    body_3: Uploads stay confidential. We can sign your NDA on request before you share files.
+    body_4: Name, email, description, drawing. No commitment.
+    body_5: DFM check on geometry, tolerances, material fit.
+    body_6: Feasibility, recommended process, next steps.
     body_7: e.g. 30 µm holes in 0.5 mm stainless sheet, 2,000 holes, ±5 µm position, first-article report
     body_8: STEP, STL, IGES, PDF, DXF, DWG, or ZIP up to 25 MB
     body_9: No commitment · 24h response
     button_1: Continue →
     heading_1: Rapid Response Quote
     heading_2: Ready to move forward?
-    heading_3: '1'
-    heading_4: Now
-    heading_5: Name, email, description, drawing. No commitment.
-    heading_6: '2'
-    heading_7: Engineer reviews your part
-    heading_8: DFM check on geometry, tolerances, material fit.
-    heading_9: Within 24 hours
-    heading_10: Quote & process path confirmed
-    heading_11: Feasibility, recommended process, next steps.
+    heading_3: Now
+    heading_4: You submit your request
+    heading_5: Within hours
+    heading_6: Engineer reviews your part
+    heading_7: Within 24 hours
+    heading_8: Quote &amp; process path confirmed
+    heading_9: Your part
+    heading_10: Complete
+    heading_11: Step 1, Tell us about your part
 - pattern: faq-toggle
   tokens:
     body_1: <p>Direct answers to the engineering, materials, and process questions buyers most often ask when evaluating a microfabrication partner.</p>

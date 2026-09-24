@@ -1,5 +1,5 @@
 # spec.yaml — Laser Micromachining  (run 20260806-124030, supervised sibling test)
-# Source design : Potomac Laser.zip :: Laser Micromachining.html
+# Source design : Potomac Laser.zip :: Services - Laser Micromachining.html
 # MATCH         : 12 of 12 sections, ZERO unmatched — the first page needing no §7 authoring.
 #                 services-image-cards and quote-form-hubspot came from the CNC mint;
 #                 why-choose-inset-cta matches now that B12 gave it an {image_1}.
@@ -17,6 +17,10 @@
 #                 preserved all 292 element ids). LIVE POST 12240 IS NOT YET UPDATED — verified
 #                 2026-08-06 as still carrying the grouped order; pushing it needs the operator
 #                 authorisation AUTOMATION.md §6 withholds from a run that did not create it.
+# REFRESH 2026-09-24 : copy carried from Services - Laser Micromachining.html (Potomac Laser.zip
+#                      fab7225c…) by tools/refresh_service_specs.py.
+#                      Section 3 (explorer) still the iframe embed — the
+#                      inline cluster replaces it in a later step.
 
 spec_version: 1
 page:
@@ -58,9 +62,9 @@ assets:
 sections:
 - pattern: hero-dark-stat-strip
   tokens:
-    body_1: <p>Laser micromachining is a non-contact process &mdash; a focused beam removes or modifies material to produce fine features and tight tolerances while minimizing mechanical stress and distortion. Goodfellow Microfabrication machines <strong>metals, polymers, ceramics, and glass</strong>, matching the right laser source &mdash; from deep-UV excimer to Nd:YAG &mdash; to your feature size, tolerance, volume, and material.</p>
+    body_1: <p>Laser micromachining is a non-contact process, a focused beam removes or modifies material to produce fine features and tight tolerances while minimizing mechanical stress and distortion. Goodfellow Microfabrication machines <strong>metals, polymers, ceramics, and glass</strong>, matching the right laser source, from deep-UV excimer to Nd:YAG, to your feature size, tolerance, volume, and material.</p>
     body_2: <p><a href="#services">EXPLORE SERVICES →</a></p>
-    body_3: <p>Upload STEP, STL, or PDF — our engineers review it for manufacturability.</p>
+    body_3: <p>Upload STEP, STL, or PDF, our engineers review it for manufacturability.</p>
     button_1: Upload Drawing / CAD
     button_2: Request a Quote
     heading_1: LASER MICROMACHINING SERVICES
@@ -79,9 +83,9 @@ sections:
     url_2: '#quote'
 - pattern: why-choose-inset-cta
   tokens:
-    body_1: <p>Since 1982, Goodfellow Microfabrication has set the standard for laser micromachining &mdash; non-contact, focused-beam machining of metals, polymers, ceramics, and glass for medical, microelectronics, photonics, and microfluidics programs, from prototyping through production.</p>
-    body_2: <ul><li><strong>Non-contact precision</strong> &mdash; a focused beam produces fine features and tight tolerances while minimizing mechanical stress and distortion.</li><li><strong>The right laser for the job</strong> &mdash; sources from deep-UV excimer to Nd:YAG, selected per feature size, tolerance, volume, and material.</li><li><strong>CAD-to-FAB, no tooling</strong> &mdash; custom parts without costly masks or hard tooling, keeping prototypes and production cost-effective.</li><li><strong>Metals, polymers, ceramics, glass</strong> &mdash; from stainless steel, copper, and nitinol to Kapton, PEEK, PMMA, and borosilicate.</li><li><strong>Minimal heat-affected zone</strong> &mdash; wavelength matched to the material, with IR for speed and UV for the finest features and thin foils.</li></ul>
-    body_3: <p>Upload STEP, STL, or PDF — our engineers review it for manufacturability.<br>No redesign required to start — we’ll help optimise your part.</p>
+    body_1: <p>Since 1982, Goodfellow Microfabrication has set the standard for laser micromachining, non-contact, focused-beam machining of metals, polymers, ceramics, and glass for medical, microelectronics, photonics, and microfluidics programs, from prototyping through production.</p>
+    body_2: <ul><li><strong>Non-contact precision</strong>, a focused beam produces fine features and tight tolerances while minimizing mechanical stress and distortion.</li><li><strong>The right laser for the job</strong>, sources from deep-UV excimer to Nd:YAG, selected per feature size, tolerance, volume, and material.</li><li><strong>CAD-to-FAB, no tooling</strong>, custom parts without costly masks or hard tooling, keeping prototypes and production cost-effective.</li><li><strong>Metals, polymers, ceramics, glass</strong>, from stainless steel, copper, and nitinol to Kapton, PEEK, PMMA, and borosilicate.</li><li><strong>Minimal heat-affected zone</strong>, wavelength matched to the material, with IR for speed and UV for the finest features and thin foils.</li></ul>
+    body_3: <p>Upload STEP, STL, or PDF, our engineers review it for manufacturability.<br>No redesign required to start, we’ll help optimise your part.</p>
     button_1: Upload Drawing / CAD
     button_2: Request a Quote
     heading_1: WHY GOODFELLOW MICROFABRICATION
@@ -103,7 +107,7 @@ sections:
     image_1:
       asset: svc_1
     heading_4: Laser Micromachining
-    body_5: <p>UV and IR laser machining of metals, polymers, ceramics, and glass — fine features, clean edges, no masks or tooling.</p>
+    body_5: <p>UV and IR laser machining of metals, polymers, ceramics, and glass, fine features, clean edges, no masks or tooling.</p>
     body_6: <p><a href="/services/laser-micromachining/">Learn more →</a></p>
     image_2:
       asset: svc_2
@@ -127,16 +131,16 @@ sections:
     embed_1: '<iframe id="lm-interactive-frame" src="https://www.potomac-laser.com/wp-content/uploads/novamira-drafts/lm-interactive.html" title="Laser Micromachining: services and quote request" scrolling="no" style="display:block;border:0;width:100%;min-height:640px" loading="eager"></iframe>'
 - pattern: spec-table-dark
   tokens:
-    body_1: <p>Engineering guidance — not fixed spec promises.</p>
-    body_2: <p><strong>Fast turnaround</strong> for prototype and production — hot-embossing molds typically in <strong>under a day</strong></p>
+    body_1: <p>Engineering guidance, not fixed spec promises.</p>
+    body_2: <p><strong>Fast turnaround</strong> for prototype and production, hot-embossing molds typically in <strong>under a day</strong></p>
     body_3: <p><strong>Deep-UV excimer → Nd:YAG</strong> · UV at 193, 248 & 355 nm for the finest features</p>
     body_4: <p><strong>Non-contact</strong> · minimal mechanical stress, distortion, and heat-affected zone</p>
-    body_5: <p>Stainless steel, copper, nitinol, tantalum, gold, aluminium — IR for speed & cost, UV for fine features & thin foils</p>
-    body_6: <p>Kapton, Cirlex, PEEK, polystyrene, PMMA, polycarbonate, PTFE, Mylar — wavelength matched to absorption</p>
-    body_7: <p><strong>No masks</strong> — CAD-to-FAB removes costly masks and hard tooling</p>
+    body_5: <p>Stainless steel, copper, nitinol, tantalum, gold, aluminium, IR for speed & cost, UV for fine features & thin foils</p>
+    body_6: <p>Kapton, Cirlex, PEEK, polystyrene, PMMA, polycarbonate, PTFE, Mylar, wavelength matched to absorption</p>
+    body_7: <p><strong>No masks</strong>, CAD-to-FAB removes costly masks and hard tooling</p>
     body_8: <p><strong>24 h</strong> rapid response to new drawings, specifications, and quote requests</p>
     body_9: <p>Inspection and dimensional verification · accredited materials testing via Goodfellow</p>
-    body_10: <p>Material selection supported — customers often work with engineering to optimise for manufacturability.</p>
+    body_10: <p>Material selection supported, customers often work with engineering to optimise for manufacturability.</p>
     body_11: <p>Work with your own material or select from <strong>170,000+</strong> options.</p><p>Broader material matching and traceability support are available through the wider Goodfellow library.</p>
     heading_1: Technical Specifications
     heading_2: Laser Micromachining Capabilities
@@ -152,9 +156,9 @@ sections:
     heading_12: Material support available
 - pattern: process-comparison-cards
   tokens:
-    body_1: <p>Use this guide to identify the right process — or combine them for the best result.</p>
-    body_2: <p>Choose the right prototyping process for your part — based on material, features, and function.</p>
-    body_3: <ul><li>Non-contact — no tooling stress</li><li>Fine features, clean edges</li><li>Minimal heat-affected zone</li></ul>
+    body_1: <p>Use this guide to identify the right process, or combine them for the best result.</p>
+    body_2: <p>Choose the right prototyping process for your part, based on material, features, and function.</p>
+    body_3: <ul><li>Non-contact, no tooling stress</li><li>Fine features, clean edges</li><li>Minimal heat-affected zone</li></ul>
     body_4: <p><strong>Best for:</strong> ultra-fine features</p>
     body_5: <p><a href="/services/laser-micromachining/">See laser micromachining →</a></p>
     body_6: <ul><li>Metals &amp; engineering plastics</li><li>Load-bearing parts</li><li>Production-matching finish</li></ul>
@@ -163,7 +167,7 @@ sections:
     body_9: <ul><li>Complex geometries</li><li>Microfluidic &amp; biomedical parts</li><li>Fixtures, housings, test parts</li></ul>
     body_10: <p><strong>Best for:</strong> complex geometry</p>
     body_11: <p><a href="/services/3d-printing/">See 3D printing →</a></p>
-    body_12: <p>Upload CAD (STEP, STL, IGES) or a drawing (PDF, DXF, DWG) — our engineers review it for manufacturability.</p><p>No redesign required to start — we’ll help optimise your part.</p>
+    body_12: <p>Upload CAD (STEP, STL, IGES) or a drawing (PDF, DXF, DWG), our engineers review it for manufacturability.</p><p>No redesign required to start, we’ll help optimise your part.</p>
     body_13: <p>Uploads stay confidential. We can sign your NDA on request before you share files.</p>
     button_1: Upload Drawing / CAD
     button_2: Request a Quote
@@ -188,7 +192,7 @@ sections:
     body_1: <p>A clear engineering workflow from first brief through material selection, DFM review, fabrication, validation, and delivery.</p>
     body_2: <p>Share your drawing, CAD file, application goal, tolerance needs, or early-stage project requirements.</p>
     body_3: <p>Use your own material or source precision metals, polymers, ceramics, and specialist grades through Goodfellow.</p>
-    body_4: <p>Collaborative review to select the right laser source and process — from deep-UV excimer to Nd:YAG — for your material and features.</p>
+    body_4: <p>Collaborative review to select the right laser source and process, from deep-UV excimer to Nd:YAG, for your material and features.</p>
     body_5: <p>Non-contact laser micromachining with the matched UV or IR source, plus bonding, assembly, and post-processing as needed.</p>
     body_6: <p>Inspection and dimensional verification, then iterate or transition to production.</p>
     body_7: <p>●&nbsp;&nbsp;Supported by the Goodfellow Group’s integrated material, fabrication, and testing capabilities.</p>
@@ -213,7 +217,7 @@ sections:
   options:
     you_are_here_unit: 2
   tokens:
-    body_1: <p>The Goodfellow Group brings together material supply, precision fabrication, and testing capabilities — giving you access to a complete engineering ecosystem.</p>
+    body_1: <p>The Goodfellow Group brings together material supply, precision fabrication, and testing capabilities, giving you access to a complete engineering ecosystem.</p>
     body_2: <p>Global supply of advanced metals, alloys, ceramics, polymers, and compounds with research-quality flexibility and production-scale support across 170,000+ specialist materials.</p>
     body_3: <ul><li>170,000+ material grades</li><li>No minimum order</li></ul>
     body_4: <p><a href="https://goodfellow.com">Explore Materials →</a></p>
@@ -242,7 +246,7 @@ sections:
     url_1: '#quote'
 - pattern: testimonials-avatar-cards
   tokens:
-    body_1: <p>“They laser-machined features others said were impossible — clean edges, no tooling, fast turnaround.”</p>
+    body_1: <p>“They laser-machined features others said were impossible, clean edges, no tooling, fast turnaround.”</p>
     body_2: <p>“The right laser wavelength for our polymer meant minimal heat damage and crisp, repeatable micro-features.”</p>
     body_3: <p>“CAD-to-FAB with no masks let us iterate metal shadow masks in days, not weeks.”</p>
     heading_1: CLIENT TESTIMONIALS
@@ -261,39 +265,39 @@ sections:
     heading_14: Photon Dynamics GmbH
 - pattern: quote-form-hubspot
   tokens:
-    body_1: Upload your drawing or request a quote — our engineering team will review your design and respond within 24 hours.
-    body_2: No redesign required to start — we'll help optimise your part.
-    body_3: ♢ Uploads stay confidential. We can sign your NDA on request before you share files.
-    body_4: You submit your request
-    body_5: Within hours
-    body_6: '3'
+    body_1: Upload your drawing or request a quote, our engineering team will review your design and respond within 24 hours.
+    body_2: No redesign required to start, we'll help optimise your part.
+    body_3: Uploads stay confidential. We can sign your NDA on request before you share files.
+    body_4: Name, email, description, drawing. No commitment.
+    body_5: DFM check on geometry, tolerances, material fit.
+    body_6: Feasibility, recommended process, next steps.
     body_7: e.g. Laser-cut 316L shadow mask, fine slots in thin foil, 10 parts
     body_8: STEP, STL, IGES, PDF, DXF, DWG, or ZIP up to 25 MB
     body_9: No commitment · 24h response
     button_1: Continue →
     heading_1: Rapid Response Quote
     heading_2: Ready to move forward?
-    heading_3: '1'
-    heading_4: Now
-    heading_5: Name, email, description, drawing. No commitment.
-    heading_6: '2'
-    heading_7: Engineer reviews your part
-    heading_8: DFM check on geometry, tolerances, material fit.
-    heading_9: Within 24 hours
-    heading_10: Quote & process path confirmed
-    heading_11: Feasibility, recommended process, next steps.
+    heading_3: Now
+    heading_4: You submit your request
+    heading_5: Within hours
+    heading_6: Engineer reviews your part
+    heading_7: Within 24 hours
+    heading_8: Quote &amp; process path confirmed
+    heading_9: Your part
+    heading_10: Complete
+    heading_11: Step 1, Tell us about your part
 - pattern: faq-toggle
   tokens:
     body_1: <p>Direct answers to the engineering, materials, and process questions buyers most often ask when evaluating a microfabrication partner.</p>
     button_1: Ask a Technical Question
     faq_a_1: <p>Laser micromachining is a precision, non-contact process that uses a focused laser beam to remove or modify material, producing fine features and tight tolerances at the micro scale while minimizing mechanical stress and distortion. Goodfellow Microfabrication has offered laser micromachining since 1982.</p>
-    faq_a_2: <p>Goodfellow Microfabrication laser micromachines metals, polymers, ceramics, and glass — including stainless steel, copper, nitinol, tantalum, gold, and aluminium, plus Kapton, Cirlex, PEEK, polystyrene, PMMA, polycarbonate, PTFE, and Mylar.</p>
+    faq_a_2: <p>Goodfellow Microfabrication laser micromachines metals, polymers, ceramics, and glass, including stainless steel, copper, nitinol, tantalum, gold, and aluminium, plus Kapton, Cirlex, PEEK, polystyrene, PMMA, polycarbonate, PTFE, and Mylar.</p>
     faq_a_3: <p>Goodfellow Microfabrication runs a range of laser sources, from deep-UV excimer to Nd:YAG. Engineers select the most appropriate system based on feature size, tolerance, volume, and material; UV systems at 193 nm, 248 nm, and 355 nm are used for the finest features and thin materials.</p>
     faq_a_4: <p>No. Goodfellow Microfabrication's CAD-to-FAB approach eliminates costly masks and tooling, making custom part manufacturing efficient and cost-effective for both prototypes and production parts.</p>
     faq_a_5: <p>For metals, IR lasers are used for quality and cost-effectiveness, with UV lasers for finer features and thin metal thicknesses, achieving minimal heat-affected zones. For polymers, the laser wavelength is matched to the material's absorption spectrum to keep the heat-affected zone minimal.</p>
-    faq_a_6: <p>Yes. Goodfellow Microfabrication has developed applications for molds and fixtures that require small features and tight tolerances — for example, laser micromachining a mold for hot embossing, typically in less than a day.</p>
+    faq_a_6: <p>Yes. Goodfellow Microfabrication has developed applications for molds and fixtures that require small features and tight tolerances, for example, laser micromachining a mold for hot embossing, typically in less than a day.</p>
     faq_a_7: <p>Yes. As a core microfabrication technology, laser micromachining is often combined with micro-CNC machining, bonding, and assembly to support both prototyping and production.</p>
-    faq_a_8: <p>Laser micromachining is widely used across medical devices, microelectronics, photonics, and microfluidics — and is often paired with micro-CNC, bonding, and assembly.</p>
+    faq_a_8: <p>Laser micromachining is widely used across medical devices, microelectronics, photonics, and microfluidics, and is often paired with micro-CNC, bonding, and assembly.</p>
     faq_q_1: What is laser micromachining?
     faq_q_2: What materials can be laser micromachined?
     faq_q_3: Which laser sources does Goodfellow Microfabrication use?

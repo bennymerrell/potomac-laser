@@ -1,5 +1,5 @@
 # spec.yaml — CNC Micromachining  (run 20260806-124030, supervised)
-# Source design : Potomac Laser.zip :: CNC Micromachining.html
+# Source design : Potomac Laser.zip :: Services - CNC Micromachining.html
 # Token values  : post 12133's STORED WIDGET VALUES, not the legends (AUDIT.md B9 — the
 #                 legends strip HTML and truncate at the first inline tag). Fragment token
 #                 order and 12133's value order were walked with one traversal function and
@@ -18,6 +18,10 @@
 #                 12133's values are kept: they match what the built pages already render.
 #                 ZERO content differences between this design and post 12133 for the 9
 #                 matched sections — expected, since 12133 was built from this same design.
+# REFRESH 2026-09-24 : copy carried from Services - CNC Micromachining.html (Potomac Laser.zip
+#                      fab7225c…) by tools/refresh_service_specs.py.
+#                      Section 3 (explorer) still the iframe embed — the
+#                      inline cluster replaces it in a later step.
 
 spec_version: 1
 page:
@@ -41,12 +45,27 @@ assets:
   whyus_team:
     attachment_id: 12234
     url: https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-whyus-team.jpg
+  svc_1:
+    attachment_id: 12230
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-cnc-micromachining.jpg
+  svc_2:
+    attachment_id: 12232
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-laser-micromachining.jpg
+  svc_3:
+    attachment_id: 12233
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-rapid-prototyping.jpg
+  svc_4:
+    attachment_id: 12231
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-hybrid-cnc-laser.jpg
+  svc_5:
+    attachment_id: 12229
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-bonding-assembly.jpg
 sections:
 - pattern: hero-dark-stat-strip
   tokens:
-    body_1: <p>CNC micromachining is a high-precision subtractive manufacturing process that produces features, holes, channels, and threads at the microscopic scale — with <strong>tolerances held to ±10 µm</strong> and features as small as 100 µm. Goodfellow Microfabrication delivers 4-axis CNC capability combined with laser micromachining for medical, aerospace, photonics, and electronics applications.</p>
+    body_1: <p>CNC micromachining is a high-precision subtractive manufacturing process that produces features, holes, channels, and threads at the microscopic scale, with <strong>tolerances held to ±10 µm</strong> and features as small as 100 µm. Goodfellow Microfabrication delivers 4-axis CNC capability combined with laser micromachining for medical, aerospace, photonics, and electronics applications.</p>
     body_2: <p><a href="#services">EXPLORE SERVICES →</a></p>
-    body_3: <p>Upload STEP, STL, or PDF — our engineers review it for manufacturability.</p>
+    body_3: <p>Upload STEP, STL, or PDF, our engineers review it for manufacturability.</p>
     button_1: Upload Drawing / CAD
     button_2: Request Material + Machining Quote
     heading_1: CNC MICROMACHINING SERVICES
@@ -65,9 +84,9 @@ sections:
     url_2: '#quote'
 - pattern: why-choose-inset-cta
   tokens:
-    body_1: <p>We deliver precision CNC micromachining for micro-scale components — supporting projects from early prototyping through to full-scale production with engineering-led manufacturing and in-house quality control.</p>
-    body_2: <ul><li><strong>Tight tolerance machining</strong> — achieving micro-scale tolerances for precision components in metals and polymers.</li><li><strong>In-house quality control</strong> — full inspection and validation for consistent CNC machining results.</li><li><strong>Scalable manufacturing</strong> — from prototype to production, maintaining accuracy and repeatability.</li><li><strong>Multi-process capability</strong> — CNC micromachining combined with laser and hybrid fabrication methods.</li><li><strong>Engineering support</strong> — guidance on design, tolerances, and material selection to improve manufacturability.</li></ul>
-    body_3: <p>Upload STEP, STL, or PDF — our engineers review it for manufacturability.<br>No redesign required to start — we’ll help optimise your part.</p>
+    body_1: <p>We deliver precision CNC micromachining for micro-scale components, supporting projects from early prototyping through to full-scale production with engineering-led manufacturing and in-house quality control.</p>
+    body_2: <ul><li><strong>Tight tolerance machining</strong>, achieving micro-scale tolerances for precision components in metals and polymers.</li><li><strong>In-house quality control</strong>, full inspection and validation for consistent CNC machining results.</li><li><strong>Scalable manufacturing</strong>, from prototype to production, maintaining accuracy and repeatability.</li><li><strong>Multi-process capability</strong>, CNC micromachining combined with laser and hybrid fabrication methods.</li><li><strong>Engineering support</strong>, guidance on design, tolerances, and material selection to improve manufacturability.</li></ul>
+    body_3: <p>Upload STEP, STL, or PDF, our engineers review it for manufacturability.<br>No redesign required to start, we’ll help optimise your part.</p>
     button_1: Upload Drawing / CAD
     button_2: Request Material + Machining Quote
     heading_1: WHY GOODFELLOW MICROFABRICATION
@@ -77,21 +96,52 @@ sections:
       asset: whyus_team
     url_1: '#quote'
     url_2: '#quote'
+- pattern: services-image-cards
+  tokens:
+    heading_1: Our Services
+    heading_2: Explore our precision capabilities
+    body_1: <p>Choose the manufacturing route that fits your geometry, material, and production need.</p>
+    body_2: <p><a href="#applications">Explore Applications →</a></p>
+    heading_3: CNC Micromachining
+    body_3: <p>4-axis CNC milling and drilling for fine-feature and engineering plastics where repeatable tolerance control matters.</p>
+    body_4: <p><a href="/services/cnc-micro-machining-services/">Learn more →</a></p>
+    image_1:
+      asset: svc_1
+    heading_4: Laser Micromachining
+    body_5: <p>UV, IR and structured polymer film for nozzles incredibly ultra-fine, perfectly uniform backlit micro-holes.</p>
+    body_6: <p><a href="/services/laser-micromachining/">Learn more →</a></p>
+    image_2:
+      asset: svc_2
+    heading_5: Rapid Prototyping
+    body_7: <p>Fast-turn prototype paths for teams that need DFM feedback, material parts on compressed timelines.</p>
+    body_8: <p><a href="/services/rapid-prototyping/">Learn more →</a></p>
+    image_3:
+      asset: svc_3
+    heading_6: Hybrid CNC + Laser
+    body_9: <p>A medical-grade stainless steel stent part, CNC macro structural feature machined and laser-cut.</p>
+    body_10: <p><a href="/services/hybrid-fabrication/">Learn more →</a></p>
+    image_4:
+      asset: svc_4
+    heading_7: Bonding &amp; Assembly
+    body_11: <p>Precision alignment, bonding, micro-assembled components flawlessly bonded and aligned data.</p>
+    body_12: <p><a href="/services/bonding-assembly/">Learn more →</a></p>
+    image_5:
+      asset: svc_5
 - pattern: interactive-iframe-embed
   tokens:
     embed_1: '<iframe id="cnc-interactive-frame" src="https://www.potomac-laser.com/wp-content/uploads/novamira-drafts/cnc-interactive.html" title="CNC Micromachining: services, applications, materials & quote" scrolling="no" style="display:block;border:0;width:100%;min-height:640px" loading="eager"></iframe>'
 - pattern: spec-table-dark
   tokens:
-    body_1: <p>Engineering guidance — not fixed spec promises.</p>
+    body_1: <p>Engineering guidance, not fixed spec promises.</p>
     body_2: <p>~10 µm achievable in plastics · ~20 µm typical in metals (design dependent)</p>
     body_3: <p>100 µm features · smaller possible via hybrid CNC + laser</p>
     body_4: <p>4-axis machining for undercuts, compound angles, and single-setup access</p>
     body_5: <p>SS 316L, Ti Gr23 / Gr5, aluminium, copper, nitinol</p>
     body_6: <p>PEEK, PMMA, COC/COP, PTFE, PC, Kapton</p>
-    body_7: <p>No MOQ — from early prototype through production transfer</p>
+    body_7: <p>No MOQ, from early prototype through production transfer</p>
     body_8: <p>24 h rapid response to new drawings, specifications, and quote requests</p>
     body_9: <p>Optical metrology, CMM, first-article review, and wider lab support where required</p>
-    body_10: <p>Material selection supported — customers often work with engineering to optimise for manufacturability.</p>
+    body_10: <p>Material selection supported, customers often work with engineering to optimise for manufacturability.</p>
     body_11: <p>Work with your own material or select from 170,000+ options. Broader material matching and traceability support are available through the wider Goodfellow library.</p>
     heading_1: TECHNICAL SPECIFICATIONS
     heading_2: CNC Micromachining Capabilities
@@ -107,8 +157,8 @@ sections:
     heading_12: Material support available
 - pattern: process-comparison-cards
   tokens:
-    body_1: <p>Use this guide to identify the right process — or combine them for the best result.</p>
-    body_2: <p>Choose the right process for your part — based on geometry, tolerance, and material.</p>
+    body_1: <p>Use this guide to identify the right process, or combine them for the best result.</p>
+    body_2: <p>Choose the right process for your part, based on geometry, tolerance, and material.</p>
     body_3: <ul><li>Tight tolerances and structural geometry</li><li>Threads, undercuts, or deep features</li><li>Consistent precision across parts</li></ul>
     body_4: <p><strong>Tolerance:</strong> ~10 µm (plastics) / ~20 µm (metals)</p>
     body_5: <p><a href="/services/cnc-micro-machining-services/">See CNC capabilities →</a></p>
@@ -118,7 +168,7 @@ sections:
     body_9: <ul><li>Larger parts (&gt;500 µm features)</li><li>Simpler geometries</li><li>Cost efficiency at scale</li></ul>
     body_10: <p><strong>Tolerance:</strong> ±25–50 µm typical</p>
     body_11: <p><a href="#quote">See conventional CNC capabilities →</a></p>
-    body_12: <p>Upload CAD (STEP, STL, IGES) or a drawing (PDF, DXF, DWG) — our engineers review it for manufacturability.</p><p>No redesign required to start — we’ll help optimise your part.</p>
+    body_12: <p>Upload CAD (STEP, STL, IGES) or a drawing (PDF, DXF, DWG), our engineers review it for manufacturability.</p><p>No redesign required to start, we’ll help optimise your part.</p>
     body_13: <p>Uploads stay confidential. We can sign your NDA on request before you share files.</p>
     button_1: Upload Drawing / CAD
     button_2: Request Material + Machining Quote
@@ -168,7 +218,7 @@ sections:
   options:
     you_are_here_unit: 2
   tokens:
-    body_1: <p>The Goodfellow Group brings together material supply, precision fabrication, and testing capabilities — giving you access to a complete engineering ecosystem.</p>
+    body_1: <p>The Goodfellow Group brings together material supply, precision fabrication, and testing capabilities, giving you access to a complete engineering ecosystem.</p>
     body_2: <p>Global supply of advanced metals, alloys, ceramics, polymers, and compounds with research-quality flexibility and production-scale support across 170,000+ specialist materials.</p>
     body_3: <ul><li>170,000+ material grades</li><li>No minimum order</li></ul>
     body_4: <p><a href="https://goodfellow.com">Explore Materials →</a></p>
@@ -197,8 +247,8 @@ sections:
     url_1: '#quote'
 - pattern: testimonials-avatar-cards
   tokens:
-    body_1: <p>“±8 µm across a batch of 200 titanium implant components — no rework. Genuinely exceptional.”</p>
-    body_2: <p>“Microfluidic prototype in 48 hours for a conference deadline. On time, within spec — with a DFM note that saved us two design iterations.”</p>
+    body_1: <p>“±8 µm across a batch of 200 titanium implant components, no rework. Genuinely exceptional.”</p>
+    body_2: <p>“Microfluidic prototype in 48 hours for a conference deadline. On time, within spec, with a DFM note that saved us two design iterations.”</p>
     body_3: <p>“The hybrid CNC + laser capability is unique. Structural features and fine holes on the same part, same day, from one vendor.”</p>
     heading_1: CLIENT TESTIMONIALS
     heading_2: Trusted by engineers worldwide
@@ -214,6 +264,29 @@ sections:
     heading_12: TK
     heading_13: Thomas Klein
     heading_14: Photon Dynamics GmbH
+- pattern: quote-form-hubspot
+  tokens:
+    body_1: Upload your drawing or request a quote, our engineering team will review your design and respond within 24 hours.
+    body_2: No redesign required to start, we'll help optimise your part.
+    body_3: Uploads stay confidential. We can sign your NDA on request before you share files.
+    body_4: Name, email, description, drawing. No commitment.
+    body_5: DFM check on geometry, tolerances, material fit.
+    body_6: Feasibility, recommended process, next steps.
+    body_7: e.g. Titanium implant, 4 machined faces, ±8 µm on mating surfaces, 50 parts, first-article report required
+    body_8: STEP, STL, IGES, PDF, DXF, DWG, or ZIP up to 25 MB
+    body_9: No commitment · 24h response
+    button_1: Continue →
+    heading_1: Rapid Response Quote
+    heading_2: Ready to move forward?
+    heading_3: Now
+    heading_4: You submit your request
+    heading_5: Within hours
+    heading_6: Engineer reviews your part
+    heading_7: Within 24 hours
+    heading_8: Quote &amp; process path confirmed
+    heading_9: Your part
+    heading_10: Complete
+    heading_11: Step 1, Tell us about your part
 - pattern: faq-toggle
   tokens:
     body_1: <p>Direct answers to the engineering, materials, and process questions buyers most often ask when evaluating a microfabrication partner.</p>
