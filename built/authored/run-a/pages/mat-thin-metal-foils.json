@@ -1,0 +1,73 @@
+{
+ "slug": "pl-auto-thin-metal-foils",
+ "title": "Thin Metal Foils",
+ "design_page": "Materials - Thin Metal Foils.html",
+ "header": "# spec.yaml — Thin Metal Foils  (run 20260924-135039, autonomous, RUN B)\n# Source design : Potomac Laser.zip (fab7225c…) :: Materials - Thin Metal Foils.html  (no tweak defaults)\n# MATCH (3.c.ii):\n#   [0] hero-dark-centered         library match (centred, no meta, no CTA)\n#   [1] split-media-rich           §7: photo left | eyebrow+H2+rich body (split-media-prose needs 2 buttons, fixed)\n#   [2] head-rich-subtle           §7: centred head + rich body on #F6F8FB (pills / cards / check-list, count free)\n#   [3] head-rich-white            §7: centred head + rich body, white\n#   [4] head-rich-subtle           §7: centred head + rich body on #F6F8FB (pills / cards / check-list, count free)\n#   [5] rich-band-white            §7: one centred Related line\n#   [6] cta-band-dark-display      §7: .final-cta at the Materials type scale (library cta-band-dark is 38/800 + gradient, 463px vs 453)\n# Rich body: list-like content is one text-editor slot in the fragment's class vocabulary (gen_materials.py).\n# Brand: present-tense 'Potomac' -> Goodfellow Microfabrication; merger-narrative sentences kept (run report).\n# Brand KEEP also masks 'Potomac Photonics, <a' (merger sentence whose 'now part of Goodfellow' is a link).\n# Links: design page hrefs are rewritten by the §3.d link pass.\n",
+ "assets": [
+  "mat_thinmetalfoi_1"
+ ],
+ "sections": [
+  {
+   "pattern": "hero-dark-centered",
+   "values": {
+    "heading_1": "Materials",
+    "heading_2": "Thin metal foils",
+    "body_1": "<p>Cutting, patterning and layering of <strong>thin metal foils</strong> for electronics, aerospace, medical devices, automotive and more.</p>"
+   }
+  },
+  {
+   "pattern": "split-media-rich",
+   "values": {
+    "image_1": {
+     "asset": "mat_thinmetalfoi_1"
+    },
+    "heading_1": "Laser micromachining",
+    "heading_2": "Complex and simple foil parts",
+    "body_1": "<p>Potomac Photonics, <a href=\"https://www.goodfellow.com/usa/resources/goodfellow-acquires-potomac-photonics/\" rel=\"noopener\" target=\"_blank\">now part of Goodfellow</a>, has developed a broad range of technologies to process thin metal foils, for complex and simple parts on a prototyping or production basis.</p><p>Being part of <a href=\"https://www.goodfellow.com/usa\" rel=\"noopener\" target=\"_blank\">Goodfellow</a> means we can source any thin metal foil to meet your material requirements.</p>"
+   }
+  },
+  {
+   "pattern": "head-rich-subtle",
+   "values": {
+    "heading_1": "Foil types",
+    "heading_2": "Foils we machine",
+    "body_1": "<p class=\"pills\"><span class=\"pill\">Stainless steel foils</span><span class=\"pill\">Aluminium foils</span><span class=\"pill\">Copper foils</span><span class=\"pill\">Titanium foils</span><span class=\"pill\">Nickel foils</span><span class=\"pill\">Precious metal foils (gold, silver, platinum)</span><span class=\"pill\">Alloy foils</span><span class=\"pill\">Customised metal foils</span><span class=\"pill\">And many more</span></p>"
+   }
+  },
+  {
+   "pattern": "head-rich-white",
+   "values": {
+    "heading_1": "Applications",
+    "heading_2": "Applications for thin metal foils",
+    "body_1": "<ul class=\"cards p26\"><li><span class=\"meta\">Electronics</span><h3>Electrical components</h3><p>Flexible circuits, EMI/RFI shielding and connectors, using the foils' electrical conductivity and precise tolerances.</p></li><li><span class=\"meta\">Aerospace</span><h3>Aerospace and defence</h3><p>Lightweight, strong foils for sensors, shielding and other components that must perform in extreme conditions.</p></li><li><span class=\"meta\">Medical</span><h3>Medical devices</h3><p>Precision-cut foils for surgical instruments, implants and diagnostic equipment, where biocompatibility and precision matter.</p></li><li><span class=\"meta\">Automotive</span><h3>Automotive</h3><p>Battery components, sensors and fuel cells, improving efficiency and performance.</p></li><li><span class=\"meta\">Energy</span><h3>Energy</h3><p>Solar panels, fuel cells and battery technologies, using the foils' conductive and durable properties.</p></li><li><span class=\"meta\">Industrial</span><h3>Industrial</h3><p>Gaskets, shims and spacers that need precise thickness and durability.</p></li></ul>"
+   }
+  },
+  {
+   "pattern": "head-rich-subtle",
+   "values": {
+    "heading_1": "Why Goodfellow Microfabrication",
+    "heading_2": "Why choose Goodfellow Microfabrication for thin metal foils",
+    "body_1": "<ul class=\"cards p26\"><li><h3>Wide range of materials</h3><p><a href=\"https://www.goodfellow.com/usa/form/thin-films-coated-thin-films\" rel=\"noopener\" target=\"_blank\">As part of Goodfellow, we can source any thin metal foil</a> for your application.</p></li><li><h3>Precision laser cutting</h3><p>Exacting tolerances and detailed designs through laser micromachining.</p></li><li><h3>Rapid turnaround</h3><p>Custom metal foil parts made quickly without compromising quality.</p></li><li><h3>Experience</h3><p>Extensive experience processing a wide variety of thin metal foils.</p></li><li><h3>Custom work</h3><p>We work with you to develop metal foil parts for your application and requirements.</p></li></ul>"
+   }
+  },
+  {
+   "pattern": "rich-band-white",
+   "values": {
+    "body_1": "<p class=\"related\">Related: <a href=\"Materials - Metal Parts.html\" style=\"font-weight:700\">Metal parts</a> · <a href=\"Materials - Stainless Steel.html\" style=\"font-weight:700\">Stainless steel</a></p>"
+   }
+  },
+  {
+   "pattern": "cta-band-dark-display",
+   "values": {
+    "heading_1": "Rapid response",
+    "heading_2": "Talk to the team.",
+    "body_1": "<p>Send a drawing or a short description of your project. Our engineers can recommend the best material and process for your requirements.</p>",
+    "button_1": "Email us",
+    "url_1": "Contact - Contact.html",
+    "button_2": "Send a drawing",
+    "url_2": "https://www.potomac-laser.com/project-quote/#projectForm"
+   }
+  }
+ ],
+ "version": "v2"
+}

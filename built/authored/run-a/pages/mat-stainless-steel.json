@@ -1,0 +1,50 @@
+{
+ "slug": "pl-auto-stainless-steel",
+ "title": "Stainless Steel",
+ "design_page": "Materials - Stainless Steel.html",
+ "header": "# spec.yaml — Stainless Steel  (run 20260924-135039, autonomous, RUN B)\n# Source design : Potomac Laser.zip (fab7225c…) :: Materials - Stainless Steel.html  (no tweak defaults)\n# MATCH (3.c.ii):\n#   [0] hero-dark-centered         library match (centred, no meta, no CTA)\n#   [1] split-rich-media           §7: rich body | photo right (split-prose-list-media fixes paragraph + list slots)\n#   [2] head-rich-subtle           §7: centred head + rich body on #F6F8FB (pills / cards / check-list, count free)\n#   [3] cta-band-dark-display      §7: .final-cta at the Materials type scale (library cta-band-dark is 38/800 + gradient, 463px vs 453)\n# Rich body: list-like content is one text-editor slot in the fragment's class vocabulary (gen_materials.py).\n# Brand: present-tense 'Potomac' -> Goodfellow Microfabrication; merger-narrative sentences kept (run report).\n# Links: design page hrefs are rewritten by the §3.d link pass.\n",
+ "assets": [
+  "mat_stainlessste_1"
+ ],
+ "sections": [
+  {
+   "pattern": "hero-dark-centered",
+   "values": {
+    "heading_1": "Materials",
+    "heading_2": "Stainless steel micromachining",
+    "body_1": "<p>Highly precise, extremely small features across <strong>all types and thicknesses of stainless steel</strong>.</p>"
+   }
+  },
+  {
+   "pattern": "split-rich-media",
+   "values": {
+    "heading_1": "The material",
+    "heading_2": "What makes a steel stainless",
+    "body_1": "<p>Stainless steels are iron-based alloys containing at least 10.5% chromium. A thin, dense chromium oxide film forms on the surface, providing corrosion resistance and preventing further oxidation.</p><p>There are five types of stainless steel, which differ with their other alloying additions and range from fully austenitic to fully ferritic.</p>",
+    "image_1": {
+     "asset": "mat_stainlessste_1"
+    }
+   }
+  },
+  {
+   "pattern": "head-rich-subtle",
+   "values": {
+    "heading_1": "Applications",
+    "heading_2": "Stainless steel applications",
+    "body_1": "<ul class=\"check narrow\"><li>Laser microcutting of stainless steel</li><li>Laser hole drilling in stainless steel</li><li>Welding of stainless steel components</li><li>Stainless steel CNC machining</li></ul><p class=\"note\">Part thickness, feature size and cut quality are the main factors in choosing a machining technology. Our engineering team works with you to understand your requirements and choose the right process. Related: <a href=\"Materials - Metal Parts.html\" style=\"font-weight:700\">Metal parts</a></p>"
+   }
+  },
+  {
+   "pattern": "cta-band-dark-display",
+   "values": {
+    "heading_1": "Rapid response",
+    "heading_2": "Talk to the team.",
+    "body_1": "<p>Send a drawing or a short description of your project. Our engineers can recommend the best material and process for your requirements.</p>",
+    "button_1": "Email us",
+    "url_1": "Contact - Contact.html",
+    "button_2": "Send a drawing",
+    "url_2": "https://www.potomac-laser.com/project-quote/#projectForm"
+   }
+  }
+ ]
+}

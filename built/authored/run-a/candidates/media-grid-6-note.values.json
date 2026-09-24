@@ -1,0 +1,23 @@
+{
+ "heading_1": "Gallery",
+ "heading_2": "Example parts",
+ "image_1": {
+  "asset": "mat_metalparts_2"
+ },
+ "image_2": {
+  "asset": "mat_metalparts_3"
+ },
+ "image_3": {
+  "asset": "mat_metalparts_4"
+ },
+ "image_4": {
+  "asset": "mat_metalparts_5"
+ },
+ "image_5": {
+  "asset": "mat_metalparts_6"
+ },
+ "image_6": {
+  "asset": "mat_metalparts_7"
+ },
+ "body_1": "<p class=\"related\">See more micromachined parts in the <a href=\"Gallery - Project Gallery.html\" style=\"font-weight:700\">project gallery</a>.</p>"
+}

@@ -1,0 +1,84 @@
+# spec.yaml — Metal Parts  (run 20260924-135039, autonomous, RUN B)
+# Source design : Potomac Laser.zip (fab7225c…) :: Materials - Metal Parts.html  (no tweak defaults)
+# MATCH (3.c.ii):
+#   [0] hero-dark-centered         library match (centred, no meta, no CTA)
+#   [1] split-rich-media           §7: rich body | photo right (split-prose-list-media fixes paragraph + list slots)
+#   [2] head-rich-subtle           §7: centred head + rich body on #F6F8FB (pills / cards / check-list, count free)
+#   [3] media-grid-6-note          §7: head + 6 framed photos + note
+#   [4] cta-band-dark-display      §7: .final-cta at the Materials type scale (library cta-band-dark is 38/800 + gradient, 463px vs 453)
+# Rich body: list-like content is one text-editor slot in the fragment's class vocabulary (gen_materials.py).
+# Brand: present-tense 'Potomac' -> Goodfellow Microfabrication; merger-narrative sentences kept (run report).
+# Links: design page hrefs rewritten by the §3.d link pass (drafts; Kapton blog + CCIT -> live pages).
+
+spec_version: 1
+page:
+  title: Metal Parts
+  slug: pl-auto-metal-parts
+  post_type: page
+  post_status: draft
+assets:
+  mat_metalparts_1:
+    attachment_id: 12376
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-mat-metalparts-1.png
+  mat_metalparts_2:
+    attachment_id: 12377
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-mat-metalparts-2.webp
+  mat_metalparts_3:
+    attachment_id: 12303
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-01.webp
+  mat_metalparts_4:
+    attachment_id: 12309
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-07.webp
+  mat_metalparts_5:
+    attachment_id: 12378
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-mat-metalparts-5.webp
+  mat_metalparts_6:
+    attachment_id: 12379
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-mat-metalparts-6.webp
+  mat_metalparts_7:
+    attachment_id: 12380
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-mat-metalparts-7.webp
+sections:
+- pattern: hero-dark-centered
+  tokens:
+    heading_1: Materials
+    heading_2: Precision metal parts
+    body_1: <p>Laser and micro-CNC tools that machine <strong>extremely precise features in almost any metal</strong>, as small as 1 micron.</p>
+- pattern: split-rich-media
+  tokens:
+    heading_1: Capability
+    heading_2: Precise features in almost any metal
+    body_1: <p>Using laser and micro-CNC technology, Goodfellow Microfabrication can fabricate features as small as 1 micron. Depending on the application, we can recommend the best material and process for your requirements.</p><p>We continually develop new processes that improve cut quality and reduce burrs, and use multi-axis machines to handle tubular parts and complex designs.</p>
+    image_1:
+      asset: mat_metalparts_1
+- pattern: head-rich-subtle
+  tokens:
+    heading_1: Metals
+    heading_2: Popular metals we machine
+    body_1: '<p class="pills"><span class="pill">Stainless steel</span><span class="pill">Tantalum</span><span class="pill">Tungsten</span><span class="pill">Titanium</span><span class="pill">Nitinol</span><span class="pill">Gold</span><span class="pill">Aluminium</span><span class="pill">Platinum</span><span class="pill">And many more</span></p><p class="related">Related: <a href="https://www.potomac-laser.com/?page_id=12395&preview=true" style="font-weight:700">Stainless steel</a> · <a href="https://www.potomac-laser.com/?page_id=12396&preview=true" style="font-weight:700">Thin metal foils</a></p>'
+- pattern: media-grid-6-note
+  tokens:
+    heading_1: Gallery
+    heading_2: Example parts
+    image_1:
+      asset: mat_metalparts_2
+    image_2:
+      asset: mat_metalparts_3
+    image_3:
+      asset: mat_metalparts_4
+    image_4:
+      asset: mat_metalparts_5
+    image_5:
+      asset: mat_metalparts_6
+    image_6:
+      asset: mat_metalparts_7
+    body_1: <p class="related">See more micromachined parts in the <a href="https://www.potomac-laser.com/?page_id=12357&preview=true" style="font-weight:700">project gallery</a>.</p>
+- pattern: cta-band-dark-display
+  tokens:
+    heading_1: Rapid response
+    heading_2: Talk to the team.
+    body_1: <p>Send a drawing or a short description of your project. Our engineers can recommend the best material and process for your requirements.</p>
+    button_1: Email us
+    url_1: https://www.potomac-laser.com/?page_id=12302&preview=true
+    button_2: Send a drawing
+    url_2: https://www.potomac-laser.com/project-quote/#projectForm

@@ -1,0 +1,125 @@
+{
+ "Materials": [
+  [
+   "mat_materials_1",
+   "https://www.potomac-laser.com/wp-content/uploads/2024/11/background-image.webp",
+   "Advanced materials from Goodfellow"
+  ]
+ ],
+ "Adhesives": [
+  [
+   "mat_adhesives_1",
+   "https://www.potomac-laser.com/wp-content/uploads/2024/11/AdhesiveLayer_TSorterberg_030124-768x507.png.webp",
+   "Laser-machined pressure-sensitive adhesive layer"
+  ]
+ ],
+ "Glass": [
+  [
+   "mat_glass_1",
+   "https://www.potomac-laser.com/wp-content/uploads/2022/08/image49.webp",
+   "Laser-machined glass part"
+  ],
+  [
+   "mat_glass_2",
+   "https://www.potomac-laser.com/wp-content/uploads/2022/08/image50.webp",
+   "Drilled glass component"
+  ]
+ ],
+ "Kapton Polyimide": [
+  [
+   "mat_kaptonpolyim_1",
+   "https://www.potomac-laser.com/wp-content/uploads/2016/01/stanford-slide.webp",
+   "Laser-micromachined Kapton polyimide part"
+  ]
+ ],
+ "Metal Parts": [
+  [
+   "mat_metalparts_1",
+   "https://www.potomac-laser.com/wp-content/uploads/2024/07/Metal-1024x680.png",
+   "Micromachined metal parts"
+  ],
+  [
+   "mat_metalparts_2",
+   "https://www.potomac-laser.com/wp-content/uploads/2014/06/FILTER_01-1.webp",
+   "Laser-drilled metal filter"
+  ],
+  [
+   "mat_metalparts_3",
+   "https://www.potomac-laser.com/wp-content/uploads/2024/11/Metal-foil.webp",
+   "Laser-machined metal foil"
+  ],
+  [
+   "mat_metalparts_4",
+   "https://www.potomac-laser.com/wp-content/uploads/2022/01/IMG_2880.webp",
+   "High-speed laser cutting of small metal parts"
+  ],
+  [
+   "mat_metalparts_5",
+   "https://www.potomac-laser.com/wp-content/uploads/2021/10/lsrcut0.010sstEX_PShende_101121.webp",
+   "Laser cut in 0.010 in stainless steel"
+  ],
+  [
+   "mat_metalparts_6",
+   "https://www.potomac-laser.com/wp-content/uploads/2013/10/MetalMask1.webp",
+   "Laser-cut metal mask"
+  ],
+  [
+   "mat_metalparts_7",
+   "https://www.potomac-laser.com/wp-content/uploads/2024/10/metals.webp",
+   "Assorted micromachined metal parts"
+  ]
+ ],
+ "Plastic Micromachining": [
+  [
+   "mat_plasticmicro_1",
+   "https://www.potomac-laser.com/wp-content/uploads/2011/11/TTP.webp",
+   "Micromachined polymer part"
+  ],
+  [
+   "mat_plasticmicro_2",
+   "https://www.potomac-laser.com/wp-content/uploads/2014/12/shift.webp",
+   "Laser-machined polymer part"
+  ],
+  [
+   "mat_plasticmicro_3",
+   "https://www.potomac-laser.com/wp-content/uploads/2015/03/MF1Lyr.webp",
+   "Single-layer polymer microfluidic device"
+  ],
+  [
+   "mat_plasticmicro_4",
+   "https://www.potomac-laser.com/wp-content/uploads/2011/02/Microhole-in-Nylon-Tube.webp",
+   "Microhole drilled in nylon tube"
+  ],
+  [
+   "mat_plasticmicro_5",
+   "https://www.potomac-laser.com/wp-content/uploads/2021/02/Kapton2.webp",
+   "Rapid laser cutting of Kapton"
+  ]
+ ],
+ "Polymers": [
+  [
+   "mat_polymers_1",
+   "https://www.potomac-laser.com/wp-content/uploads/2015/03/CathBW1smpl.webp",
+   "Laser micromachined medical grade silicone"
+  ],
+  [
+   "mat_polymers_2",
+   "https://www.potomac-laser.com/wp-content/uploads/2016/01/Stanford_stn-1024x469.webp",
+   "Rectangles cut in a Kapton stencil"
+  ]
+ ],
+ "Stainless Steel": [
+  [
+   "mat_stainlessste_1",
+   "https://www.potomac-laser.com/wp-content/uploads/2021/10/lsrcut0.010sstEX_PShende_101121.webp",
+   "Laser cut in 0.010 in stainless steel"
+  ]
+ ],
+ "Thin Metal Foils": [
+  [
+   "mat_thinmetalfoi_1",
+   "https://www.potomac-laser.com/wp-content/uploads/2024/11/Metal-foil.webp",
+   "Small holes in thin metal foil"
+  ]
+ ]
+}

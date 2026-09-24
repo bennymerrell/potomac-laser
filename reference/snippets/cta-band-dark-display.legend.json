@@ -1,0 +1,14 @@
+{
+    "pattern": "cta-band-dark-display",
+    "source_post": 12388,
+    "source_section_index": 4,
+    "tokens": {
+        "{heading_1}": "Rapid response",
+        "{heading_2}": "Talk to the team.",
+        "{body_1}": "<p>Send a drawing or a short description of your project. Our engineers can recommend the best material and process for your requirements.</p>",
+        "{button_1}": "Email us",
+        "{url_1}": "Contact - Contact.html",
+        "{button_2}": "Send a drawing",
+        "{url_2}": "https://www.potomac-laser.com/project-quote/#projectForm"
+    }
+}
