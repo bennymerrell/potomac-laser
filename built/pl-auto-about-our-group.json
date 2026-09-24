@@ -1979,7 +1979,7 @@
           "settings": {
            "text": "Explore microfabrication →",
            "link": {
-            "url": "Services - CNC Micromachining.html",
+            "url": "https://www.potomac-laser.com/?post_type=post_services&p=12239&preview=true",
             "is_external": "",
             "nofollow": ""
            },
@@ -3228,7 +3228,7 @@
         "settings": {
          "text": "Request a quote",
          "link": {
-          "url": "Services - CNC Micromachining.html#quote"
+          "url": "https://www.potomac-laser.com/?post_type=post_services&p=12239&preview=true#quote"
          },
          "background_color": "",
          "button_text_color": "",
@@ -3273,7 +3273,7 @@
         "settings": {
          "text": "View the project gallery",
          "link": {
-          "url": "Gallery - Project Gallery.html"
+          "url": "https://www.potomac-laser.com/project-gallery/"
          },
          "background_color": "#1B2E4A",
          "button_text_color": "",

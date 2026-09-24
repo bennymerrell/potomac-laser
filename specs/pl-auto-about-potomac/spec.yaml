@@ -22,7 +22,8 @@
 #   hero lede, split paragraph, card 1 text and the facility photo alt. KEPT verbatim (past-tense
 #   history of the old company): Mike Davis's bio x3 ("joined Potomac", "led Potomac to ISO
 #   9001:2000", "Potomac's laser technologies"). Page title likewise normalised.
-# Links: url_* hold the design's page hrefs; §3.d link pass rewrites them.
+# Links: §3.d link pass applied — CNC -> draft 12239 preview (pipeline-built); unbuilt targets ->
+#   their live counterparts (/project-gallery/, /services-applications/, /contact/).
 
 spec_version: 1
 page:
@@ -75,9 +76,9 @@ sections:
     heading_2: Rapid fabrication of precision devices, from prototyping to full-scale production
     body_1: <p>From a single prototype to production volumes, Goodfellow Microfabrication combines laser micromachining, micro-CNC and 3D printing to help teams move miniature products to market quickly and cost-effectively.</p>
     button_1: Our services
-    url_1: Services - Services &amp; Applications.html
+    url_1: https://www.potomac-laser.com/services-applications/
     button_2: Project gallery
-    url_2: Gallery - Project Gallery.html
+    url_2: https://www.potomac-laser.com/project-gallery/
 - pattern: icon-cards-3
   tokens:
     heading_1: How we work
@@ -147,6 +148,6 @@ sections:
     heading_2: Talk to the team.
     body_1: <p>Send a drawing or a short description of your project. Our engineers review every design and respond within one business day.</p>
     button_1: Email us
-    url_1: Contact - Contact.html
+    url_1: https://www.potomac-laser.com/contact/
     button_2: Send a drawing
     url_2: https://www.potomac-laser.com/project-quote/#projectForm

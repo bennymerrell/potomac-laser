@@ -259,6 +259,46 @@
    "bytes": 57558,
    "sha256": "5e792a2bfc3b6b161517ee62dbe9ace1fff73dbbbf960f19d30ccdb48eb02e56",
    "role": "\u00a77.4 tokenised fragment from post 12277 (0 custom_css Kit var rewrites)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-100754/pl-auto-about-our-group.v4.elementor.json",
+   "bytes": 60085,
+   "sha256": "c18d55d30cd7926ce8f0066aaf08182d71b2b0a9b3c1e3ee7ad4d40f84845b3c",
+   "role": "staged _elementor_data, \u00a73.d link pass"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-100754/pl-auto-about-potomac.v4.elementor.json",
+   "bytes": 63454,
+   "sha256": "9d49e5c10df3d1ae52af003d32efb0d30fb3effb8087bf0667ad034e7c4140e8",
+   "role": "staged _elementor_data, \u00a73.d link pass"
   }
+ ],
+ "finished_utc": "2026-09-24",
+ "result": {
+  "zip_status": "partial",
+  "built": [
+   12268,
+   12277
+  ],
+  "failed_pattern_budget": 8,
+  "skipped_already_built": [
+   12239,
+   12240,
+   12241,
+   12242,
+   12243
+  ],
+  "patterns_minted": 7,
+  "pattern_budget": 8
+ },
+ "global_operations": [
+  "\u00a70 UpdraftPlus database-only backup, set 1790244496 (nonce ec283efbb074)"
+ ],
+ "not_touched": [
+  "posts 12239-12243",
+  "*-interactive.html files",
+  "Kit 11259",
+  "Code Snippets",
+  "wp_options (other than UpdraftPlus own writes from the \u00a70 trigger)"
  ]
 }
