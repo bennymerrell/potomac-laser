@@ -1,0 +1,45 @@
+{
+  "run_id": "20260924-143850",
+  "started_utc": "2026-09-24T14:38:50Z",
+  "mode": "SUPERVISED pass requested by the user in chat (\"re-point the links on 12268 and 12277\"): §3.d link pass on two drafts from run 20260924-100754 — the 4 design-page links set to live counterparts are re-pointed to the drafts built since (12357, 12371, 12302). No other change.",
+  "target": "potomac-laser.com (LIVE) via novamira-potomac-laser-co, PRODUCTION MODE",
+  "recovery_floor": {
+    "gate": "SKILL.md §0 — verified, not taken",
+    "updraft_set_timestamp": 1790244496,
+    "updraft_set_utc": "2026-09-24T10:08:16Z",
+    "backup_nonce": "ec283efbb074",
+    "age_at_gate_hours": 4.51
+  },
+  "posts_modified": [
+    {
+      "post_id": 12268,
+      "links_rewritten": 1,
+      "map": {
+        "/project-gallery/": 12357
+      },
+      "old_sha": "4bdb3603f0b8e3272b20d787622fca2ad140c90d238e64263ee1fdcca9c7ae08",
+      "new_sha": "849f4023abe791679b007144ecaf9732f866d8d3103555ce48aabdcd91b645ea",
+      "preview_url": "https://www.potomac-laser.com/?page_id=12268&preview=true"
+    },
+    {
+      "post_id": 12277,
+      "links_rewritten": 3,
+      "map": {
+        "/services-applications/": 12371,
+        "/project-gallery/": 12357,
+        "/contact/": 12302
+      },
+      "old_sha": "bd1cf0004b62b391767123cf9d50832cba3a6393bf483065a9c72c6ff6e09e64",
+      "new_sha": "80ecf725c2afaa509972bae3094f39e8e35e9a0b6e8f111defda5bfd578536a7",
+      "preview_url": "https://www.potomac-laser.com/?page_id=12277&preview=true"
+    }
+  ],
+  "files_uploaded": [
+    {
+      "path": "wp-content/uploads/novamira-drafts/run-20260924-143850/rollback-old-data.json",
+      "sha256": "b82b4ef96d3f32095889a7b496567e410f9ed9e6e4e390e6cfd3ab3df463367f",
+      "role": "full _elementor_data of both posts before the rewrite; local copy built/run-20260924-143850.rollback-old-data.json"
+    }
+  ],
+  "attachments_created": []
+}

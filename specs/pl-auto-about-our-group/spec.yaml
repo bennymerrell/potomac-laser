@@ -17,7 +17,7 @@
 # Brand normalisation: lede "Potomac Photonics" -> "Goodfellow Microfabrication". KEPT
 #   "(formerly Potomac Photonics)" in row 2's body — it names the old brand on purpose.
 # Links: §3.d link pass applied — CNC -> draft 12239 preview (pipeline-built); unbuilt targets ->
-#   their live counterparts (/project-gallery/, /services-applications/, /contact/).
+#   drafts 12357 / 12371 / 12302 (re-pointed by supervised run 20260924-143850).
 
 spec_version: 1
 page:
@@ -114,4 +114,4 @@ sections:
     button_1: Request a quote
     url_1: https://www.potomac-laser.com/?post_type=post_services&p=12239&preview=true#quote
     button_2: View the project gallery
-    url_2: https://www.potomac-laser.com/project-gallery/
+    url_2: https://www.potomac-laser.com/?page_id=12357&preview=true
