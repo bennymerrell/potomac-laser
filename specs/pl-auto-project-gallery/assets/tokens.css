@@ -1,0 +1,336 @@
+/* ============================================================
+   Goodfellow Design System — Colors & Type
+   ------------------------------------------------------------
+   Tokens derived from the public Goodfellow Advanced Materials
+   website (goodfellow.com) and the multi-coloured "G" mark.
+   Where exact brand values were unavailable, conservative
+   substitutions are used and flagged in the README.
+   ============================================================ */
+
+/* -------------------- FONTS (Poppins — brand) --------------- */
+/* JetBrains Mono (code/SKUs/formulae) via Google Fonts until a self-hosted
+   file is supplied. @import must precede all other rules. --font-mono
+   keeps pointing at 'JetBrains Mono'. */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+/* Goodfellow brand font: Poppins, self-hosted (woff2). Four
+   weights ship: 300 Light, 400 Regular, 500 Medium, 700 Bold.
+   Weight 600 (used by headings) is mapped to the Bold file via
+   a weight RANGE so every weight renders from a real file with
+   no faux-bold synthesis. Mono keeps a system monospace stack —
+   Poppins has no monospaced cut. */
+@font-face {
+  font-family: 'Poppins'; font-style: normal; font-weight: 300;
+  font-display: swap; src: url('fonts/Poppins-Light.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Poppins'; font-style: normal; font-weight: 400;
+  font-display: swap; src: url('fonts/Poppins-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Poppins'; font-style: normal; font-weight: 500;
+  font-display: swap; src: url('fonts/Poppins-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Poppins'; font-style: normal; font-weight: 600 700;
+  font-display: swap; src: url('fonts/Poppins-Bold.woff2') format('woff2');
+}
+/* JetBrains Mono (code/SKUs/formulae) via Google Fonts until a self-hosted
+   file is supplied. --font-mono keeps pointing at 'JetBrains Mono'. */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+
+:root {
+  /* ---------- BRAND PALETTE (Goodfellow Microfabrication — orange on navy) ---------- */
+  --brand-primary:      #495C6D;   /* Slate — workhorse UI surface / nav */
+  --brand-tertiary:     #15253D;   /* Deep navy — headings, dark surfaces */
+  --brand-lightblue:    #1A71AB;   /* Mid blue — links, info */
+  --brand-brightblue:   var(--brand-lightblue);   /* RETIRED cyan — now mid blue (no cyan/teal in system) */
+  --brand-blue:         #F5821F;   /* Microfab ORANGE — primary/secondary CTA fill */
+  --brand-green:        #548139;   /* Olive green — success, positive */
+  --brand-magenta:      #F5821F;   /* Accent — remapped to Microfab orange */
+
+  /* ---------- BRAND ANCHOR (legacy token names → new palette) ---------- */
+  --gf-navy:            var(--brand-tertiary);
+  --gf-navy-mid:        #1D3557;   /* display headings */
+  --gf-navy-700:        #143049;
+  --gf-navy-800:        #0E2435;
+  --gf-navy-300:        #6B8AA0;
+  --gf-navy-100:        #DDE6ED;
+  --gf-navy-50:         #F0F4F8;
+
+  /* Aliases — older tokens keep working. Remapped to the canonical
+     Microfab ORANGE tokens (colors.css) so the single brand accent
+     (links, icons, stat numbers, eyebrows, chips, active states)
+     renders orange with the design system's exact tints/washes. */
+  --gf-blue:            #F5821F;   /* --orange */
+  --gf-blue-700:        #D96E10;   /* --orange-dark */
+  --gf-blue-800:        #B85B0C;
+  --gf-blue-300:        #F9B067;
+  --gf-blue-100:        #FFF2E8;   /* --orange-100 */
+  --gf-blue-50:         #FFF7F0;   /* --orange-50 */
+
+  --gf-magenta:         #F5821F;   /* --orange */
+  --gf-magenta-700:     #D96E10;   /* --orange-dark */
+  --gf-magenta-100:     #FFF2E8;   /* --orange-100 */
+
+  /* Aliases (legacy --gf-red tokens kept pointing at magenta) */
+  --gf-red:             var(--brand-magenta);
+  --gf-red-700:         var(--gf-magenta-700);
+  --gf-red-100:         var(--gf-magenta-100);
+
+  /* ---------- LOGO PALETTE ----------
+     Colours sampled from the multi-coloured "G" mark.
+     Used sparingly — for category chips, data viz, tag dots,
+     not as backgrounds. */
+  --logo-red:           #E2362E;
+  --logo-orange:        #F08423;
+  --logo-yellow:        #F5C518;
+  --logo-lime:          #8BC53F;
+  --logo-green:         #1F9D55;
+  --logo-teal:          var(--brand-lightblue);   /* RETIRED teal — remapped to mid blue */
+  --logo-sky:           var(--brand-blue);         /* RETIRED sky/cyan — remapped to true blue */
+  --logo-blue:          #2257A3;
+  --logo-violet:        #6B3FA0;
+  --logo-magenta:       #C4318E;
+  --logo-pink:          #E66BA5;
+  --logo-grey:          #6E6E70;
+
+  /* ---------- NEUTRALS ---------- */
+  --ink-1000:           #0F1620;   /* Headings */
+  --ink-900:            #1B2330;   /* Body strong */
+  --ink-700:            #3C4858;   /* Body */
+  --ink-500:            #65718A;   /* Secondary text */
+  --ink-400:            #8C97AB;   /* Tertiary / captions */
+  --ink-300:            #BAC2D1;   /* Hairlines on dark */
+  --ink-200:            #DCE1EA;   /* Borders */
+  --ink-100:            #ECEFF4;   /* Dividers */
+  --ink-50:             #F6F8FB;   /* Section bg */
+  --ink-0:              #FFFFFF;
+
+  /* ---------- SEMANTIC ---------- */
+  --success:            #1F9D55;
+  --success-bg:         #E6F4EC;
+  --warning:            #C77A0A;
+  --warning-bg:         #FBF1DD;
+  --danger:             #C62828;          /* True red reserved for system errors */
+  --danger-bg:          #FCE4E5;
+  --info:               var(--gf-blue);
+  --info-bg:            var(--gf-blue-100);
+
+  /* ---------- FOREGROUND / BACKGROUND ROLES ---------- */
+  --fg-1:               var(--ink-1000);  /* Primary text   */
+  --fg-2:               var(--ink-700);   /* Body          */
+  --fg-3:               var(--ink-500);   /* Secondary     */
+  --fg-4:               var(--ink-400);   /* Tertiary      */
+  --fg-on-brand:        var(--ink-0);
+  --fg-link:            var(--gf-blue);
+  --fg-link-hover:      var(--gf-blue-700);
+
+  --bg-page:            var(--ink-0);
+  --bg-subtle:          var(--ink-50);
+  --bg-sunken:          var(--ink-100);
+  --bg-brand:           var(--gf-blue);
+  --bg-brand-soft:      #FEF9F5;       /* --orange-soft (selected card fill) */
+  --bg-dark:            #0D1B2A;        /* --navy-deep (footer / inverse) */
+
+  /* ---------- CTA ROLES (ENFORCED) ----------
+     Canonical button colour for ALL Goodfellow surfaces.
+     Primary AND high-emphasis CTAs use --cta (true blue), hovering
+     to navy. Magenta is NEVER a button — highlight accent only. */
+  --cta:                #F5821F;       /* Microfab orange — primary/cta button fill */
+  --cta-hover:          #D96E10;       /* darker orange hover */
+  --cta-active:         #B85B0C;                 /* pressed */
+
+  --border-1:           var(--ink-200);
+  --border-2:           var(--ink-100);
+  --border-strong:      var(--ink-300);
+
+  /* ---------- TYPE FAMILIES (Nunito — matches CNC example) ---------- */
+  --font-sans:          'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display:       'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono:          'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* ---------- TYPE SCALE (1.200 — minor third) ---------- */
+  --fs-12: 0.750rem;
+  --fs-13: 0.8125rem;
+  --fs-14: 0.875rem;
+  --fs-15: 0.9375rem;
+  --fs-16: 1rem;
+  --fs-18: 1.125rem;
+  --fs-20: 1.25rem;
+  --fs-24: 1.5rem;
+  --fs-28: 1.75rem;
+  --fs-32: 2rem;
+  --fs-40: 2.5rem;
+  --fs-48: 3rem;
+  --fs-56: 3.5rem;
+  --fs-64: 4rem;
+
+  --lh-tight:   1.12; /* @kind font */
+  --lh-snug:    1.25; /* @kind font */
+  --lh-normal:  1.5;  /* @kind font */
+  --lh-relaxed: 1.6;  /* @kind font */
+
+  /* ---------- SPACING (4-px base) ---------- */
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-5:  20px;
+  --sp-6:  24px;
+  --sp-8:  32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+  --sp-16: 64px;
+  --sp-20: 80px;
+  --sp-24: 96px;
+
+  /* ---------- RADII (4 & 8 rule) ----------
+     Goodfellow uses only multiples of 4 — small UI gets 4 px,
+     larger surfaces get 8 px. Nothing in between. */
+  --r-sm:   4px;      /* Inputs, chips, small badges, hairline cards */
+  --r-md:   8px;      /* Default — buttons, cards, panels */
+  --r-lg:   16px;     /* Large surfaces, image masks (2× the 8 unit) */
+  --r-pill: 999px;    /* Pills / segmented controls */
+
+  /* Aliases — older code referenced --r-xs and --r-xl */
+  --r-xs:   var(--r-sm);
+  --r-xl:   var(--r-lg);
+
+  /* ---------- ELEVATION ---------- */
+  --shadow-1: 0 1px 2px rgba(15, 22, 32, 0.06), 0 1px 1px rgba(15, 22, 32, 0.04);
+  --shadow-2: 0 2px 4px rgba(15, 22, 32, 0.06), 0 4px 12px rgba(15, 22, 32, 0.06);
+  --shadow-3: 0 6px 14px rgba(15, 22, 32, 0.08), 0 16px 32px rgba(15, 22, 32, 0.06);
+  --shadow-focus: 0 0 0 3px rgba(245, 130, 31, 0.12);
+
+  /* ---------- MOTION ---------- */
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1); /* @kind other */
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1); /* @kind other */
+  --dur-fast: 120ms; /* @kind other */
+  --dur-med:  220ms; /* @kind other */
+  --dur-slow: 360ms; /* @kind other */
+
+  /* ---------- LAYOUT ---------- */
+  --container-narrow: 880px;
+  --container:        1200px;
+  --container-wide:   1440px;
+}
+
+/* ============================================================
+   SEMANTIC TYPOGRAPHY CLASSES
+   ============================================================ */
+body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-16);
+  line-height: var(--lh-normal);
+  color: var(--fg-2);
+  background: var(--bg-page);
+  -webkit-font-smoothing: antialiased;
+}
+
+.t-display-1, h1.display {
+  font-family: var(--font-display);
+  font-size: var(--fs-56);
+  line-height: var(--lh-tight);
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  color: var(--fg-1);
+}
+.t-display-2 {
+  font-family: var(--font-display);
+  font-size: var(--fs-40);
+  line-height: var(--lh-tight);
+  letter-spacing: -0.015em;
+  font-weight: 600;
+  color: var(--fg-1);
+}
+
+.t-h1, h1 {
+  font-family: var(--font-display);
+  font-size: var(--fs-40);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+  color: var(--fg-1);
+}
+.t-h2, h2 {
+  font-family: var(--font-display);
+  font-size: var(--fs-28);
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--fg-1);
+}
+.t-h3, h3 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-20);
+  line-height: 1.3;
+  font-weight: 600;
+  color: var(--fg-1);
+}
+.t-h4, h4 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-16);
+  line-height: 1.35;
+  font-weight: 600;
+  color: var(--fg-1);
+  letter-spacing: 0;
+}
+
+/* .t-eyebrow removed — eyebrows are banned in this design system. */
+
+.t-body, p {
+  font-family: var(--font-sans);
+  font-size: var(--fs-16);
+  line-height: var(--lh-relaxed);
+  color: var(--fg-2);
+}
+.t-body-lg {
+  font-size: var(--fs-18);
+  line-height: var(--lh-relaxed);
+  color: var(--fg-2);
+}
+.t-body-sm {
+  font-size: var(--fs-14);
+  line-height: var(--lh-normal);
+  color: var(--fg-3);
+}
+
+.t-caption, caption {
+  font-size: var(--fs-12);
+  line-height: var(--lh-normal);
+  color: var(--fg-4);
+  letter-spacing: 0.01em;
+}
+
+.t-stat-num {
+  font-family: var(--font-display);
+  font-size: var(--fs-48);
+  line-height: 1;
+  font-weight: 700;
+  color: var(--gf-blue);
+  letter-spacing: -0.02em;
+}
+.t-stat-label {
+  font-family: var(--font-sans);
+  font-size: var(--fs-14);
+  line-height: 1.35;
+  color: var(--fg-3);
+  max-width: 18ch;
+}
+
+code, .t-code {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  background: var(--bg-sunken);
+  padding: 0.12em 0.4em;
+  border-radius: var(--r-sm);
+  color: var(--ink-900);
+}
+
+a {
+  color: var(--fg-link);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+a:hover { color: var(--fg-link-hover); }

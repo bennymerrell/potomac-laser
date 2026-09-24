@@ -88,6 +88,8 @@ omits `spec-table-dark`, which shifts every later section up by one.
 | `hero-split-contact-form` | — | — | — | — | — |   <!-- minted from 12302 (pl-auto-contact, page) index 0 by run 20260924-125928 -->
 | `hq-panel-map` | — | — | — | — | — |   <!-- minted from 12302 (pl-auto-contact, page) index 1 by run 20260924-125928 -->
 | `offices-grid-6-social` | — | — | — | — | — |   <!-- minted from 12302 (pl-auto-contact, page) index 2 by run 20260924-125928 -->
+| `hero-dark-centered-meta-4` | — | — | — | — | — |   <!-- minted from 12357 (pl-auto-project-gallery, page) index 0 by run 20260924-125928 -->
+| `gallery-grid-filter-lightbox` | — | — | — | — | — |   <!-- minted from 12357 (pl-auto-project-gallery, page) index 1 by run 20260924-125928 -->
 
 ## Per-page variants
 
@@ -609,6 +611,34 @@ listed per entry, and consolidated under [Unmapped colours](#unmapped-colours).
 | **Globals** | 10 native `__globals__` refs · 26 `var(--e-global-color-*)` (`gforange` icons/bars/hover, `gfink` text) |
 | **Unmapped colours** | `#0F1620`, `#65718A`, `#DCE1EA`, `#C3CBD8`, `#FEF9F5` (region tint), `#F9B067` (region border) |
 | **Notes** | Social icons are the native `social-icons` widget (Instagram, Facebook, LinkedIn, X); their screen-reader labels come from the icon names ("facebook-f") rather than the design's aria-labels — a small accessibility regression to fix by hand if it matters. **Verified on 12302** (iteration 2): section 947 = design, cards 567×147 / 567×190 = design, social circles 40×40 = design. |
+
+### hero-dark-centered-meta-4
+| | |
+|---|---|
+| **Snippet** | `reference/snippets/hero-dark-centered-meta-4.json` |
+| **Source** | post `12357` (`pl-auto-project-gallery`, type `page`) section index `0` — minted by run 20260924-125928 (§7) |
+| **Used by** | 12357 at index 0 |
+| **Signature** | `ccd9ca296e` (sha256 of the elType/widgetType tree, first 10 hex) · 7 containers + 11 widgets · 28,520 bytes |
+| **Recognise when** | As `hero-dark-centered-meta` (dark navy grid + glows, centred eyebrow + H1 + lede, no buttons) but with **exactly 4** meta stats in a tighter row (28px gaps), a **white** eyebrow and a narrower H1 (18ch). With 3 stats it is `hero-dark-centered-meta`. |
+| **Structure** | as `hero-dark-centered-meta`: outer `gfnavydp` + grid/glow → boxed 1200 → eyebrow, `heading h1` (margin 43/0/18, `max-width:18ch`), `text-editor` lede (`p` max 704), meta row (gap 28, margin-top 32) → 4 × stat `container` (value + label) |
+| **Tokens** | 11 placeholders: `{heading_1}` eyebrow, `{heading_2}` H1, `{body_1}` lede, `{heading_3..10}` stat value/label pairs |
+| **Globals** | 7 native `__globals__` refs (`gfnavydp`, `gfwhite` ×6) · 0 CSS-var rewrites |
+| **Unmapped colours** | `rgba(255,255,255,0.74)`, `rgba(255,255,255,0.55)`, grid/glow stops |
+| **Notes** | The first stat ("54 projects shown") is static copy; the gallery's own runtime count is the separate "Showing N projects" line. **Verified on 12357** (iteration 2): section 513 = design. |
+
+### gallery-grid-filter-lightbox
+| | |
+|---|---|
+| **Snippet** | `reference/snippets/gallery-grid-filter-lightbox.json` |
+| **Source** | post `12357` (`pl-auto-project-gallery`, type `page`) section index `1` — minted by run 20260924-125928 (§7) |
+| **Used by** | 12357 at index 1 |
+| **Signature** | `47adfb8371` (sha256 of the elType/widgetType tree, first 10 hex) · 112 containers + 164 widgets · 529,946 bytes |
+| **Recognise when** | A project gallery: a **sticky, full-width white filter bar** ("Filter" label + wrapping category chips, each with a count pill, "All" first and orange when active), a small "Showing N projects" line, then a **3-column grid of 54 image cards** (4:3, 7px radius, image slightly zoomed) whose category badge + title appear on **hover**, and a **lightbox** that opens on click with the image, category, title, an "N / M" counter, prev/next, and two CTAs. |
+| **Structure** | `container:full bg=gfwhite` → bar `container` (full width, `rgba(255,255,255,.92)`, bottom hairline, `position:sticky`) → ONE `html` widget: bar markup (`{embed_1}` chips), the lightbox markup, scoped `<style>`, script ; boxed 1200 `container` (pad 40/24/80) → `text-editor` count (`.pl-gal-count`) + card row (`calc((100% - 36px)/3)`, gap 18; 2-up ≤760, 1-up ≤460) → 54 × card `container` (`css_classes: pl-gal-card`, bg `#ECEFF4`, radius 7, `overflow:hidden`) → `image` (4:3 cover, `scale(1.2)`) + overlay `container` (absolute, gradient, opacity 0 → 1 on hover) → `heading` category badge + `heading h3` title |
+| **Tokens** | 168 placeholders: `{image_1..54}`, `{heading_1..111}`, `{body_1}`, `{embed_1}`, `{url_1}`. `heading_1` "Filter", `heading_2/3` lightbox CTA labels, `url_1` their link, `embed_1` the chips' `<button data-filter>` markup (label + count), `body_1` the count line; card n = `image_n`, `heading_(2n+2)` category, `heading_(2n+3)` title; `heading_111`… see legend |
+| **Globals** | 109 native `__globals__` refs (`gfwhite`) · 0 CSS-var rewrites (the bar/lightbox colours live in the html widget) |
+| **Unmapped colours** | `#ECEFF4` (card backdrop), `rgba(14,99,168,.92)` (category badge — design value), overlay gradient `rgba(11,26,44,…)`; chips/lightbox colours in the widget's `<style>` |
+| **Notes** | **Behaviour-tested** (12357 iteration 2): Metal Micromachining → 8 and "Showing 8 projects", Diamond → 2, All → 54; a click opens the lightbox on that card ("2 / 2", category, title, image); next steps within the filtered set; Esc closes it and restores page scroll; CTA links resolve. **Scope rule:** the script must scope to the page section — the element whose parent carries `data-elementor-id` — **not** `closest(".e-parent")`, which stops at the bar's own container and left filter and lightbox inert on iteration 1. The lightbox is moved to `<body>` so `position:fixed` escapes any transformed ancestor. The chip counts are static copy in `{embed_1}` — keep them in step with the cards. Cards are native widgets (editable); the design's duplicate `PROJECTS` JS array is not used. Geometry: cards 388×291 = design, images 466×349 (the 1.2 crop) = design; section 26px taller than the design's filter bar + grid (5882 vs 5856). |
 
 ## Unmapped colours
 

@@ -1,0 +1,1067 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;display=swap">
+<title>Project Gallery · Goodfellow Microfabrication</title>
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+/* ─────────────────────────────────────────────────────────────
+   PROJECT GALLERY, page-specific styles
+   Built on the shared Goodfellow Microfabrication tokens + styles.
+   ───────────────────────────────────────────────────────────── */
+
+/* Gallery hero, compact dark band */
+.gal-hero {
+  position: relative;
+  background: var(--bg-dark);
+  color: #fff;
+  padding: 72px 24px 64px;
+  overflow: hidden;
+}
+.gal-hero__bg {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+}
+.gal-hero__bg::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 30% 0%, rgba(14,99,168,0.28) 0%, transparent 60%),
+              radial-gradient(ellipse at 90% 100%, rgba(148,18,82,0.16) 0%, transparent 55%);
+}
+.gal-hero__inner {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.gal-hero__inner .hero__eyebrow { justify-content: center; }
+.gal-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4.4vw, 3.4rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.04;
+  margin: 18px auto 18px;
+  max-width: 18ch;
+  color: #fff;
+}
+.gal-hero__lede {
+  font-size: var(--fs-18);
+  line-height: 1.65;
+  color: rgba(255,255,255,0.74);
+  max-width: 62ch;
+  margin: 0 auto;
+}
+.gal-hero__lede strong { color: #fff; font-weight: 600; }
+.gal-hero__meta {
+  display: flex; flex-wrap: wrap; gap: 28px;
+  margin-top: 32px;
+  justify-content: center;
+}
+.gal-hero__meta-item { display: flex; flex-direction: column; gap: 4px; }
+.gal-hero__meta-num {
+  font-family: var(--font-display);
+  font-size: var(--fs-28);
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.gal-hero__meta-label {
+  font-size: var(--fs-12);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  color: rgba(255,255,255,0.55);
+}
+
+/* Filter bar */
+.gal-filter {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-1);
+}
+.gal-filter__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.gal-filter__label {
+  font-size: var(--fs-12);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  color: var(--fg-3);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.gal-filter__chips {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-strong) transparent;
+  padding-bottom: 2px;
+  -webkit-overflow-scrolling: touch;
+}
+.gal-filter__chips::-webkit-scrollbar { height: 6px; }
+.gal-filter__chips::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 99px; }
+.gal-chip {
+  flex-shrink: 0;
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 8px 14px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--border-1);
+  background: #fff;
+  color: var(--fg-2);
+  font-family: var(--font-sans);
+  font-size: var(--fs-14);
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background var(--dur-fast) var(--ease-out),
+              border-color var(--dur-fast) var(--ease-out),
+              color var(--dur-fast) var(--ease-out);
+}
+.gal-chip:hover { background: var(--gf-blue-50); border-color: var(--gf-blue-100); }
+.gal-chip__count {
+  font-size: var(--fs-12);
+  font-weight: 600;
+  color: var(--fg-4);
+  background: var(--bg-subtle);
+  border-radius: var(--r-pill);
+  padding: 1px 8px;
+  transition: background var(--dur-fast), color var(--dur-fast);
+}
+.gal-chip.active {
+  background: var(--gf-blue);
+  border-color: var(--gf-blue);
+  color: #fff;
+}
+.gal-chip.active .gal-chip__count { background: rgba(255,255,255,0.22); color: #fff; }
+
+/* ── Filter style variants (driven by Tweaks → body[data-filter]) ── */
+body[data-filter="wrap"] .gal-filter__chips,
+body[data-filter="tabs"] .gal-filter__chips {
+  flex-wrap: wrap;
+  overflow: visible;
+  padding-bottom: 0;
+}
+body[data-filter="tabs"] .gal-filter__chips { gap: 2px; }
+body[data-filter="tabs"] .gal-chip {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 2px solid transparent;
+  padding: 8px 12px;
+  color: var(--fg-2);
+}
+body[data-filter="tabs"] .gal-chip:hover { background: transparent; color: var(--gf-blue); }
+body[data-filter="tabs"] .gal-chip.active {
+  background: transparent;
+  color: var(--gf-blue);
+  border-bottom-color: var(--gf-blue);
+}
+body[data-filter="tabs"] .gal-chip__count {
+  background: transparent;
+  color: var(--fg-4);
+  padding: 0 0 0 1px;
+}
+body[data-filter="tabs"] .gal-chip.active .gal-chip__count { color: var(--gf-blue); }
+.gal-filter__select { display: none; }
+body[data-filter="dropdown"] .gal-filter__chips { display: none; }
+body[data-filter="dropdown"] .gal-filter__select {
+  display: block;
+  flex: 1;
+  max-width: 320px;
+  appearance: none;
+  -webkit-appearance: none;
+  font-family: var(--font-sans);
+  font-size: var(--fs-15);
+  font-weight: 600;
+  color: var(--fg-1);
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat right 14px center;
+  border: 1px solid var(--border-1);
+  border-radius: var(--r-md);
+  padding: 9px 38px 9px 14px;
+  cursor: pointer;
+}
+body[data-filter="dropdown"] .gal-filter__select:hover { border-color: var(--gf-blue-300); }
+body[data-filter="dropdown"] .gal-filter__select:focus-visible { outline: none; box-shadow: var(--shadow-focus); }
+
+/* Grid */
+.gal-section { padding: 40px 24px 80px; }
+.gal-grid-wrap { max-width: 1200px; margin: 0 auto; }
+.gal-count {
+  font-size: var(--fs-14);
+  color: var(--fg-3);
+  margin: 0 0 20px;
+}
+.gal-count strong { color: var(--fg-1); font-weight: 600; }
+.gal-grid {
+  column-count: 4;
+  column-gap: 16px;
+}
+@media (max-width: 1080px) { .gal-grid { column-count: 3; } }
+@media (max-width: 760px)  { .gal-grid { column-count: 2; } }
+@media (max-width: 460px)  { .gal-grid { column-count: 1; } }
+
+.gal-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  break-inside: avoid;
+  margin-bottom: 16px;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  background: var(--bg-sunken);
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+  font-family: inherit;
+  box-shadow: none;
+  transition: transform var(--dur-med) var(--ease-out);
+}
+.gal-card:hover { transform: translateY(-2px); }
+.gal-card:focus-visible { outline: none; box-shadow: var(--shadow-focus); }
+.gal-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--bg-sunken);
+}
+.gal-card__overlay {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 16px;
+  background: linear-gradient(to top, rgba(11,26,44,0.82) 0%, rgba(11,26,44,0.30) 38%, transparent 64%);
+  opacity: 0;
+  transition: opacity var(--dur-med) var(--ease-out);
+}
+.gal-card:hover .gal-card__overlay,
+.gal-card:focus-visible .gal-card__overlay { opacity: 1; }
+.gal-card__cat {
+  font-size: var(--fs-12);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #fff;
+  background: rgba(14,99,168,0.92);
+  align-self: flex-start;
+  padding: 3px 9px;
+  border-radius: var(--r-sm);
+  margin-bottom: 8px;
+}
+.gal-card__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-16);
+  font-weight: 600;
+  line-height: 1.25;
+  color: #fff;
+  margin: 0;
+  text-wrap: pretty;
+}
+@media (hover: none) {
+  .gal-card__overlay { opacity: 1; }
+}
+
+.gal-empty {
+  text-align: center;
+  padding: 80px 20px;
+  color: var(--fg-3);
+  font-size: var(--fs-18);
+}
+
+/* Lightbox */
+.lb {
+  position: fixed; inset: 0;
+  z-index: 200;
+  display: none;
+  background: rgba(11,26,44,0.92);
+  backdrop-filter: blur(4px);
+}
+.lb.open { display: block; }
+.lb__stage {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  padding: 64px 80px;
+}
+@media (max-width: 720px) { .lb__stage { padding: 56px 12px 88px; } }
+.lb__fig { margin: 0; max-width: 100%; max-height: 100%; display: flex; flex-direction: column; align-items: center; }
+.lb__img {
+  max-width: 100%;
+  max-height: 78vh;
+  border-radius: var(--r-md);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+  background: var(--bg-sunken);
+}
+.lb__cap {
+  margin-top: 18px;
+  text-align: center;
+  max-width: 60ch;
+}
+.lb__cap-cat {
+  font-size: var(--fs-12);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  color: var(--gf-blue-300);
+  margin-bottom: 6px;
+}
+.lb__cap-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-20);
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+.lb__cta {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+body[data-modal-cta="none"] .lb__cta { display: none; }
+body[data-modal-cta="one"] .lb__cta .lb-cta-2 { display: none; }
+.lb__btn {
+  position: absolute;
+  display: flex; align-items: center; justify-content: center;
+  width: 48px; height: 48px;
+  border-radius: var(--r-pill);
+  border: 1px solid rgba(255,255,255,0.22);
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+}
+.lb__btn:hover { background: rgba(255,255,255,0.18); border-color: rgba(255,255,255,0.5); }
+.lb__btn svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.lb__close { top: 20px; right: 20px; }
+.lb__prev { left: 20px; top: 50%; transform: translateY(-50%); }
+.lb__next { right: 20px; top: 50%; transform: translateY(-50%); }
+@media (max-width: 720px) {
+  .lb__prev { top: auto; bottom: 20px; left: 50%; transform: translateX(-70px); }
+  .lb__next { top: auto; bottom: 20px; right: 50%; transform: translateX(70px); }
+}
+.lb__counter {
+  position: absolute;
+  top: 28px; left: 24px;
+  font-size: var(--fs-13);
+  font-weight: 600;
+  color: rgba(255,255,255,0.7);
+  font-variant-numeric: tabular-nums;
+}
+</style>
+<style id="gal-tweak-style">.gal-grid{column-count:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}.gal-card{margin-bottom:0;border-radius:7px;}.gal-card img{aspect-ratio:4 / 3;height:100%;width:100%;object-fit:cover;}@media(max-width:1080px){.gal-grid{grid-template-columns:repeat(3,1fr);}}@media(max-width:760px){.gal-grid{grid-template-columns:repeat(2,1fr);}}@media(max-width:460px){.gal-grid{grid-template-columns:1fr;}}.gal-card img{transform:scale(1.200);transform-origin:center;}</style>
+<style>
+.twk-launch{position:fixed;right:16px;bottom:16px;z-index:2147483000;display:flex;align-items:center;gap:8px;
+  font:700 11px/1 Inter,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#fff;
+  background:#15253D;border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:11px 16px;cursor:pointer;
+  box-shadow:0 10px 28px rgba(15,42,68,.28)}
+.twk-launch:hover{background:#1D3557}
+.twk-launch i{width:7px;height:7px;border-radius:50%;background:#F5821F;display:block}
+.twk-panel{position:fixed;right:16px;bottom:16px;z-index:2147483001;width:288px;max-height:78vh;overflow:auto;
+  background:#fff;border:1px solid #E5E7EB;border-radius:14px;box-shadow:0 22px 58px rgba(15,42,68,.22);
+  font-family:Inter,system-ui,sans-serif;color:#15253D}
+.twk-head{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:14px 16px;
+  border-bottom:1px solid #E5E7EB;position:sticky;top:0;background:#fff;border-radius:14px 14px 0 0}
+.twk-head b{font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#F5821F}
+.twk-x{width:26px;height:26px;border-radius:50%;border:0;background:#F3F4F6;color:#6B7280;cursor:pointer;font-size:15px;line-height:1}
+.twk-x:hover{background:#E5E7EB}
+.twk-body{padding:6px 16px 16px}
+.twk-sec{font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#9AA3B2;margin:16px 0 8px}
+.twk-row{margin:10px 0}
+.twk-lab{display:flex;align-items:center;justify-content:space-between;font-size:12px;font-weight:600;color:#4B5563;margin-bottom:6px}
+.twk-lab span{font-weight:700;color:#15253D}
+.twk-seg{display:flex;gap:6px;flex-wrap:wrap}
+.twk-seg button{flex:1 1 auto;min-width:64px;padding:7px 10px;border-radius:999px;border:1px solid #E5E7EB;background:#fff;
+  font:700 11px/1.2 Inter,system-ui,sans-serif;color:#4B5563;cursor:pointer}
+.twk-seg button:hover{border-color:#F1B07A}
+.twk-seg button.on{background:#FEF0E3;border-color:#F5821F;color:#D96E10}
+.twk-sw{width:40px;height:22px;border-radius:999px;border:0;background:#D8DDE5;position:relative;cursor:pointer;flex:0 0 auto}
+.twk-sw::after{content:"";position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:#fff;transition:left .16s}
+.twk-sw.on{background:#F5821F}
+.twk-sw.on::after{left:21px}
+.twk-range{width:100%;accent-color:#F5821F}
+.twk-sel{width:100%;padding:8px 10px;border:1px solid #E5E7EB;border-radius:10px;font:600 12px Inter,system-ui,sans-serif;color:#15253D;background:#fff}
+.twk-reset{margin-top:16px;width:100%;padding:9px;border-radius:999px;border:1px solid #E5E7EB;background:#fff;
+  font:700 10px/1 Inter,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#6B7280;cursor:pointer}
+.twk-reset:hover{border-color:#15253D;color:#15253D}
+@media print{.twk-launch,.twk-panel{display:none !important}}</style></head>
+<body data-modal-cta="two" data-filter="wrap">
+
+<!-- ─────────────────────────────────────────────────────────
+     GALLERY HERO
+     ───────────────────────────────────────────────────────── -->
+<section class="gal-hero">
+  <div class="gal-hero__bg"></div>
+  <div class="gal-hero__inner">
+    <div class="hero__eyebrow">Project Gallery</div>
+    <h1 class="gal-hero__title">Selected work from the microfabrication floor</h1>
+    <p class="gal-hero__lede">A cross-section of parts we have machined, drilled, cut, marked and assembled, across <strong>metals, polymers, glass, silicon and ceramics</strong>. Filter by capability or material to find work close to your own project, then send us your drawing.</p>
+    <div class="gal-hero__meta">
+      <div class="gal-hero__meta-item">
+        <span class="gal-hero__meta-num" id="meta-total">54</span>
+        <span class="gal-hero__meta-label">Projects shown</span>
+      </div>
+      <div class="gal-hero__meta-item">
+        <span class="gal-hero__meta-num">14</span>
+        <span class="gal-hero__meta-label">Capabilities</span>
+      </div>
+      <div class="gal-hero__meta-item">
+        <span class="gal-hero__meta-num">±10 µm</span>
+        <span class="gal-hero__meta-label">Typical tolerance</span>
+      </div>
+      <div class="gal-hero__meta-item">
+        <span class="gal-hero__meta-num">40+ yrs</span>
+        <span class="gal-hero__meta-label">Microfabrication</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────────
+     FILTER BAR
+     ───────────────────────────────────────────────────────── -->
+<div class="gal-filter">
+  <div class="gal-filter__inner">
+    <span class="gal-filter__label">Filter</span>
+    <div class="gal-filter__chips" id="filter-chips" role="tablist" aria-label="Filter projects by category">
+      <button class="gal-chip active" role="tab" aria-selected="true" data-gal-cat="All" onclick="setCat('All')">All<span class="gal-chip__count">54</span></button>
+      <button class="gal-chip" role="tab" aria-selected="false" data-gal-cat="Assembly" onclick="setCat('Assembly')">Assembly<span class="gal-chip__count">3</span></button>
+      <button class="gal-chip" role="tab" aria-selected="false" data-gal-cat="Ceramics" onclick="setCat('Ceramics')">Ceramics<span class="gal-chip__count">2</span></button>
+      <button class="gal-chip" role="tab" aria-selected="false" data-gal-cat="Diamond" onclick="setCat('Diamond')">Diamond<span class="gal-chip__count">2</span></button>
+      <button class="gal-chip" role="tab" aria-selected="false" data-gal-cat="Electronics" onclick="setCat('Electronics')">Electronics<span class="gal-chip__count">3</span></button>
+      <button class="gal-chip" role="tab" aria-selected="false" data-gal-cat="Featured" onclick="setCat('Featured')">Featured<span class="gal-chip__count">4</span></button>
+      <button class="gal-chip" role="tab" aria-selected="false" data-gal-cat="Glass Micromachining" onclick="setCat('Glass Micromachining')">Glass Micromachining<span class="gal-chip__count">2</span></button>
+      <button class="gal-chip" role="tab" aria-selected="false" data-gal-cat="Kapton" onclick="setCat('Kapton')">Kapton<span class="gal-chip__count">3</span></button>
+      <button class="gal-chip" role="tab" aria-selected="false" data-gal-cat="Laser Cutting" onclick="setCat('Laser Cutting')">Laser Cutting<span class="gal-chip__count">3</span></button>
+      <button class="gal-chip" role="tab" aria-selected="false" data-gal-cat="Laser Marking" onclick="setCat('Laser Marking')">Laser Marking<span class="gal-chip__count">4</span></button>
+      <button class="gal-chip" role="tab" aria-selected="false" data-gal-cat="Metal Micromachining" onclick="setCat('Metal Micromachining')">Metal Micromachining<span class="gal-chip__count">8</span></button>
+      <button class="gal-chip" role="tab" aria-selected="false" data-gal-cat="Microfluidics" onclick="setCat('Microfluidics')">Microfluidics<span class="gal-chip__count">5</span></button>
+      <button class="gal-chip" role="tab" aria-selected="false" data-gal-cat="Microhole Drilling" onclick="setCat('Microhole Drilling')">Microhole Drilling<span class="gal-chip__count">8</span></button>
+      <button class="gal-chip" role="tab" aria-selected="false" data-gal-cat="Polymer" onclick="setCat('Polymer')">Polymer<span class="gal-chip__count">4</span></button>
+      <button class="gal-chip" role="tab" aria-selected="false" data-gal-cat="Silicon Wafer" onclick="setCat('Silicon Wafer')">Silicon Wafer<span class="gal-chip__count">3</span></button>
+    </div>
+    <select class="gal-filter__select" id="filter-select" aria-label="Filter projects by category" onchange="setCat(this.value)">
+      <option value="All" selected="">All projects (54)</option>
+      <option value="Assembly">Assembly (3)</option>
+      <option value="Ceramics">Ceramics (2)</option>
+      <option value="Diamond">Diamond (2)</option>
+      <option value="Electronics">Electronics (3)</option>
+      <option value="Featured">Featured (4)</option>
+      <option value="Glass Micromachining">Glass Micromachining (2)</option>
+      <option value="Kapton">Kapton (3)</option>
+      <option value="Laser Cutting">Laser Cutting (3)</option>
+      <option value="Laser Marking">Laser Marking (4)</option>
+      <option value="Metal Micromachining">Metal Micromachining (8)</option>
+      <option value="Microfluidics">Microfluidics (5)</option>
+      <option value="Microhole Drilling">Microhole Drilling (8)</option>
+      <option value="Polymer">Polymer (4)</option>
+      <option value="Silicon Wafer">Silicon Wafer (3)</option>
+    </select>
+  </div>
+</div>
+
+<!-- ─────────────────────────────────────────────────────────
+     GRID
+     ───────────────────────────────────────────────────────── -->
+<section class="gal-section">
+  <div class="gal-grid-wrap">
+    <p class="gal-count" id="gal-count">Showing <strong id="gal-count-n">54</strong> <span id="gal-count-word">projects</span><span id="gal-count-in" hidden=""> in <strong id="gal-count-cat">All</strong></span></p>
+    <div class="gal-grid" id="gal-grid">
+      <button class="gal-card" data-gal-card="" data-gal-cat="Metal Micromachining" onclick="openLb(this)" aria-label="Thin Metal Foils">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2024/11/Metal-foil.webp" alt="Thin Metal Foils" loading="eager" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Metal Micromachining</span>
+          <span class="gal-card__title">Thin Metal Foils</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Polymer" onclick="openLb(this)" aria-label="Pressure-Sensitive Adhesives">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2024/11/AdhesiveLayer_TSorterberg_030124-768x507.png.webp" alt="Pressure-Sensitive Adhesives" loading="eager" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Polymer</span>
+          <span class="gal-card__title">Pressure-Sensitive Adhesives</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Laser Cutting" onclick="openLb(this)" aria-label="Laser Cutting for Precision Backlighting">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2024/05/ss_.008_20umholes_70umspace_EricM_1-1224x838.webp" alt="Laser Cutting for Precision Backlighting" loading="eager" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Laser Cutting</span>
+          <span class="gal-card__title">Laser Cutting for Precision Backlighting</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Microhole Drilling" onclick="openLb(this)" aria-label="Laser Small Holes in Copper">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2022/06/copperEXII_PShende022522-1224x871.webp" alt="Laser Small Holes in Copper" loading="eager" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Microhole Drilling</span>
+          <span class="gal-card__title">Laser Small Holes in Copper</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Laser Marking" onclick="openLb(this)" aria-label="Laser-Marked Glass Slide">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2022/06/LsrEtchEX_MGreco_060122-1224x838.webp" alt="Laser-Marked Glass Slide" loading="eager" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Laser Marking</span>
+          <span class="gal-card__title">Laser-Marked Glass Slide</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Kapton" onclick="openLb(this)" aria-label="Laser Cutting Polyimide Rings">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2022/02/rings.webp" alt="Laser Cutting Polyimide Rings" loading="eager" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Kapton</span>
+          <span class="gal-card__title">Laser Cutting Polyimide Rings</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Laser Cutting" onclick="openLb(this)" aria-label="High-Speed Laser Cutting of Metal Parts">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2022/01/IMG_2880.webp" alt="High-Speed Laser Cutting of Metal Parts" loading="eager" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Laser Cutting</span>
+          <span class="gal-card__title">High-Speed Laser Cutting of Metal Parts</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Microhole Drilling" onclick="openLb(this)" aria-label="Calibrated Micro Holes for CCIT / Leak Testing">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2021/02/2B7382D0-FC1B-4D95-BF31-B3848787D219-2.webp" alt="Calibrated Micro Holes for CCIT / Leak Testing" loading="eager" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Microhole Drilling</span>
+          <span class="gal-card__title">Calibrated Micro Holes for CCIT / Leak Testing</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Microhole Drilling" onclick="openLb(this)" aria-label="Small Hole Drilling Experts">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2021/10/lsrdrillEXP_25um_100umsst_PShende_101221-1-1224x851.webp" alt="Small Hole Drilling Experts" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Microhole Drilling</span>
+          <span class="gal-card__title">Small Hole Drilling Experts</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Laser Cutting" onclick="openLb(this)" aria-label="Precision Laser Cutting of Metal">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2021/10/lsrcut0.010sstEX_PShende_101121-1224x805.webp" alt="Precision Laser Cutting of Metal" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Laser Cutting</span>
+          <span class="gal-card__title">Precision Laser Cutting of Metal</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Microfluidics" onclick="openLb(this)" aria-label="Fabrication of Microfluidic Devices">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2021/09/Photo.webp" alt="Fabrication of Microfluidic Devices" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Microfluidics</span>
+          <span class="gal-card__title">Fabrication of Microfluidic Devices</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Microfluidics" onclick="openLb(this)" aria-label="Pillars for Microfluidic Applications">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2021/09/m011.webp" alt="Pillars for Microfluidic Applications" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Microfluidics</span>
+          <span class="gal-card__title">Pillars for Microfluidic Applications</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Featured" onclick="openLb(this)" aria-label="Laser Micromachining Services">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2021/09/JMiller_090221-1224x855.webp" alt="Laser Micromachining Services" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Featured</span>
+          <span class="gal-card__title">Laser Micromachining Services</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Featured" onclick="openLb(this)" aria-label="Rapid Prototyping to Production">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2021/08/Kapton_083121.webp" alt="Rapid Prototyping to Production" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Featured</span>
+          <span class="gal-card__title">Rapid Prototyping to Production</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Microfluidics" onclick="openLb(this)" aria-label="Rapid-Turn Microfluidics: Herringbone Mixer">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2021/06/MFluidicsEx_AAndar_051721_1-1224x838.webp" alt="Rapid-Turn Microfluidics: Herringbone Mixer" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Microfluidics</span>
+          <span class="gal-card__title">Rapid-Turn Microfluidics: Herringbone Mixer</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Kapton" onclick="openLb(this)" aria-label="Experts at DuPont Kapton® Laser Cutting">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2021/05/KaptononSlideexp_051221-1224x819.webp" alt="Experts at DuPont Kapton® Laser Cutting" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Kapton</span>
+          <span class="gal-card__title">Experts at DuPont Kapton® Laser Cutting</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Metal Micromachining" onclick="openLb(this)" aria-label="Laser Cutting of Metal Tubing">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2021/04/SSTtubingEX_041521-1224x819.webp" alt="Laser Cutting of Metal Tubing" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Metal Micromachining</span>
+          <span class="gal-card__title">Laser Cutting of Metal Tubing</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Glass Micromachining" onclick="openLb(this)" aria-label="Glass Coverslips">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2020/10/glass-coverslips.webp" alt="Glass Coverslips" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Glass Micromachining</span>
+          <span class="gal-card__title">Glass Coverslips</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Silicon Wafer" onclick="openLb(this)" aria-label="SU-8 Silicon Mold for Microfluidics">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2020/10/silicon-mold.webp" alt="SU-8 Silicon Mold for Microfluidics" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Silicon Wafer</span>
+          <span class="gal-card__title">SU-8 Silicon Mold for Microfluidics</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Metal Micromachining" onclick="openLb(this)" aria-label="Precision Micro Masks">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2020/08/Mask-1224x853.webp" alt="Precision Micro Masks" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Metal Micromachining</span>
+          <span class="gal-card__title">Precision Micro Masks</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Metal Micromachining" onclick="openLb(this)" aria-label="Laser Micromachining Stainless Steel">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2020/04/JMiller2_043020_1-1224x831.webp" alt="Laser Micromachining Stainless Steel" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Metal Micromachining</span>
+          <span class="gal-card__title">Laser Micromachining Stainless Steel</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Microhole Drilling" onclick="openLb(this)" aria-label="Small Holes in Metal Nozzle">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2020/03/Holesin-metal-1.webp" alt="Small Holes in Metal Nozzle" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Microhole Drilling</span>
+          <span class="gal-card__title">Small Holes in Metal Nozzle</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Ceramics" onclick="openLb(this)" aria-label="Laser Cutting Ceramic">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2018/05/Ceramic.webp" alt="Laser Cutting Ceramic" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Ceramics</span>
+          <span class="gal-card__title">Laser Cutting Ceramic</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Microhole Drilling" onclick="openLb(this)" aria-label="Micro Holes for Invisible Backlighting">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2018/04/Backlighting.webp" alt="Micro Holes for Invisible Backlighting" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Microhole Drilling</span>
+          <span class="gal-card__title">Micro Holes for Invisible Backlighting</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Silicon Wafer" onclick="openLb(this)" aria-label="Silicon Wafer Dicing and Resizing">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2018/02/SiliconWafer.webp" alt="Silicon Wafer Dicing and Resizing" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Silicon Wafer</span>
+          <span class="gal-card__title">Silicon Wafer Dicing and Resizing</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Assembly" onclick="openLb(this)" aria-label="Laser Welding of Plastics">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2018/02/Welded-Chip.webp" alt="Laser Welding of Plastics" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Assembly</span>
+          <span class="gal-card__title">Laser Welding of Plastics</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Silicon Wafer" onclick="openLb(this)" aria-label="Custom Silicon Wafer Cutting">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2018/01/PP_SIL_WAFER_2.webp" alt="Custom Silicon Wafer Cutting" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Silicon Wafer</span>
+          <span class="gal-card__title">Custom Silicon Wafer Cutting</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Microfluidics" onclick="openLb(this)" aria-label="Rapid Microfluidic Chip Fabrication">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2017/09/Microfluidic9.webp" alt="Rapid Microfluidic Chip Fabrication" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Microfluidics</span>
+          <span class="gal-card__title">Rapid Microfluidic Chip Fabrication</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Polymer" onclick="openLb(this)" aria-label="PEEK Tubing">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2017/08/PolymerTube.webp" alt="PEEK Tubing" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Polymer</span>
+          <span class="gal-card__title">PEEK Tubing</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Microhole Drilling" onclick="openLb(this)" aria-label="Micro Holes in Tungsten">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2017/05/ZacII.webp" alt="Micro Holes in Tungsten" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Microhole Drilling</span>
+          <span class="gal-card__title">Micro Holes in Tungsten</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Diamond" onclick="openLb(this)" aria-label="Diamond: Precision Machined Gear">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2013/03/Diamond-Gear.webp" alt="Diamond: Precision Machined Gear" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Diamond</span>
+          <span class="gal-card__title">Diamond: Precision Machined Gear</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Diamond" onclick="openLb(this)" aria-label="Diamond: Precision Machining">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2013/03/scan0001-719x1024.webp" alt="Diamond: Precision Machining" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Diamond</span>
+          <span class="gal-card__title">Diamond: Precision Machining</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Ceramics" onclick="openLb(this)" aria-label="Probe Card: 90 µm Holes in Silicon Nitride">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2013/03/Probe-Card-in-10mil-thick-Silicon-Nitride-with-90um-microholes-sm.webp" alt="Probe Card: 90 µm Holes in Silicon Nitride" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Ceramics</span>
+          <span class="gal-card__title">Probe Card: 90 µm Holes in Silicon Nitride</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Assembly" onclick="openLb(this)" aria-label="Pick-and-Place Assembly System">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2013/03/PnP31.webp" alt="Pick-and-Place Assembly System" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Assembly</span>
+          <span class="gal-card__title">Pick-and-Place Assembly System</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Assembly" onclick="openLb(this)" aria-label="Miniature Systems Assembly">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2013/03/Assembly-min.webp" alt="Miniature Systems Assembly" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Assembly</span>
+          <span class="gal-card__title">Miniature Systems Assembly</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Electronics" onclick="openLb(this)" aria-label="Via Hole Drilling: 30 µm Holes">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2013/03/Amkor-via.webp" alt="Via Hole Drilling: 30 µm Holes" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Electronics</span>
+          <span class="gal-card__title">Via Hole Drilling: 30 µm Holes</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Laser Marking" onclick="openLb(this)" aria-label="Laser-Marked QR Device">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2013/03/QRD-1024x819.webp" alt="Laser-Marked QR Device" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Laser Marking</span>
+          <span class="gal-card__title">Laser-Marked QR Device</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Metal Micromachining" onclick="openLb(this)" aria-label="Stainless-Steel Gears on a Penny">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2013/04/Stainless-Steel-gears-on-back-of-penny-sm.webp" alt="Stainless-Steel Gears on a Penny" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Metal Micromachining</span>
+          <span class="gal-card__title">Stainless-Steel Gears on a Penny</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Microhole Drilling" onclick="openLb(this)" aria-label="20-Micron Pinholes in Tantalum">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2014/01/20-Micron-Hole-in-Tantalum.webp" alt="20-Micron Pinholes in Tantalum" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Microhole Drilling</span>
+          <span class="gal-card__title">20-Micron Pinholes in Tantalum</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Metal Micromachining" onclick="openLb(this)" aria-label="Laser Cutting Stents">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2013/04/Stout-Stent-5X-post-Electropolish-a.webp" alt="Laser Cutting Stents" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Metal Micromachining</span>
+          <span class="gal-card__title">Laser Cutting Stents</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Polymer" onclick="openLb(this)" aria-label="Hot Embossing: Teflon">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2018/03/Teflon2.webp" alt="Hot Embossing: Teflon" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Polymer</span>
+          <span class="gal-card__title">Hot Embossing: Teflon</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Polymer" onclick="openLb(this)" aria-label="Micro Channels in Polystyrene">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2013/09/Micro-Channels-in-Polystyrene.webp" alt="Micro Channels in Polystyrene" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Polymer</span>
+          <span class="gal-card__title">Micro Channels in Polystyrene</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Microfluidics" onclick="openLb(this)" aria-label="3D-Printed Mold for PDMS Microfluidics">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2018/02/PDMS-Mold.webp" alt="3D-Printed Mold for PDMS Microfluidics" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Microfluidics</span>
+          <span class="gal-card__title">3D-Printed Mold for PDMS Microfluidics</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Metal Micromachining" onclick="openLb(this)" aria-label="Custom Nitinol Washers">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2013/03/Nitinol-Washers-on-US-penny-35x-1024x819.webp" alt="Custom Nitinol Washers" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Metal Micromachining</span>
+          <span class="gal-card__title">Custom Nitinol Washers</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Laser Marking" onclick="openLb(this)" aria-label="2D Data-Matrix Barcode on Glass: 110 µm Dots">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2013/03/2d-barcode-at-20x-on-glass1.webp" alt="2D Data-Matrix Barcode on Glass: 110 µm Dots" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Laser Marking</span>
+          <span class="gal-card__title">2D Data-Matrix Barcode on Glass: 110 µm Dots</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Microhole Drilling" onclick="openLb(this)" aria-label="Catheter Hole Drilling">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2014/01/Catheter-1224x957.webp" alt="Catheter Hole Drilling" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Microhole Drilling</span>
+          <span class="gal-card__title">Catheter Hole Drilling</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Electronics" onclick="openLb(this)" aria-label="Patterned Metal on Polymer Substrate">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2013/03/Patterning.webp" alt="Patterned Metal on Polymer Substrate" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Electronics</span>
+          <span class="gal-card__title">Patterned Metal on Polymer Substrate</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Metal Micromachining" onclick="openLb(this)" aria-label="Laser-Cut Tantalum Shadow Mask">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2014/04/TantalumMask-PL-cropped-1224x905.webp" alt="Laser-Cut Tantalum Shadow Mask" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Metal Micromachining</span>
+          <span class="gal-card__title">Laser-Cut Tantalum Shadow Mask</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Glass Micromachining" onclick="openLb(this)" aria-label="Small Holes in Glass">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2013/03/GlassHoles1.webp" alt="Small Holes in Glass" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Glass Micromachining</span>
+          <span class="gal-card__title">Small Holes in Glass</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Featured" onclick="openLb(this)" aria-label="Precision Ophthalmic Medical Part">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2015/02/Ophthalmic-Device.webp" alt="Precision Ophthalmic Medical Part" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Featured</span>
+          <span class="gal-card__title">Precision Ophthalmic Medical Part</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Featured" onclick="openLb(this)" aria-label="Micro 3D Printing: Ear Model">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2014/09/Ear_pc.webp" alt="Micro 3D Printing: Ear Model" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Featured</span>
+          <span class="gal-card__title">Micro 3D Printing: Ear Model</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Kapton" onclick="openLb(this)" aria-label="Holes in Kapton® (Polyimide)">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2013/04/KaptonHoles.webp" alt="Holes in Kapton® (Polyimide)" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Kapton</span>
+          <span class="gal-card__title">Holes in Kapton® (Polyimide)</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Electronics" onclick="openLb(this)" aria-label="Conductive Lines on a Medical Device">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2013/03/Conductive-Lines-1024x819.webp" alt="Conductive Lines on a Medical Device" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Electronics</span>
+          <span class="gal-card__title">Conductive Lines on a Medical Device</span>
+        </span>
+      </button>
+      <button class="gal-card" data-gal-card="" data-gal-cat="Laser Marking" onclick="openLb(this)" aria-label="Selective Removal of Metal Coatings">
+        <img src="https://www.potomac-laser.com/wp-content/uploads/2013/03/Selective-removal-of-metal-material.webp" alt="Selective Removal of Metal Coatings" loading="lazy" decoding="async">
+        <span class="gal-card__overlay">
+          <span class="gal-card__cat">Laser Marking</span>
+          <span class="gal-card__title">Selective Removal of Metal Coatings</span>
+        </span>
+      </button>
+    </div>
+    <div class="gal-empty" id="gal-empty" style="display:none">No projects in this category yet.</div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────────
+     LIGHTBOX
+     ───────────────────────────────────────────────────────── -->
+<div class="lb" id="lb" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Project image viewer">
+  <div class="lb__counter" id="lb-counter"></div>
+  <button class="lb__btn lb__close" onclick="closeLb()" aria-label="Close viewer">
+    <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+  </button>
+  <button class="lb__btn lb__prev" onclick="stepLb(-1)" aria-label="Previous">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+  </button>
+  <button class="lb__btn lb__next" onclick="stepLb(1)" aria-label="Next">
+    <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+  </button>
+  <div class="lb__stage" id="lb-stage">
+    <figure class="lb__fig">
+      <img class="lb__img" id="lb-img" alt="">
+      <figcaption class="lb__cap">
+        <div class="lb__cap-cat" id="lb-cat"></div>
+        <p class="lb__cap-title" id="lb-title"></p>
+        <div class="lb__cta" id="lb-cta">
+          <button class="btn btn--cta lb-cta-1" onclick="goToQuote()">Request a quote for this part</button>
+          <button class="btn btn--ghost-light lb-cta-2" onclick="goToQuote()">Upload CAD</button>
+        </div>
+      </figcaption>
+    </figure>
+  </div>
+</div>
+
+<!-- ─────────────────────────────────────────────────────────
+     FINAL CTA
+     ───────────────────────────────────────────────────────── -->
+<section class="final-cta">
+  <div class="final-cta__inner">
+    <div class="eyebrow eyebrow--on-dark" style="justify-content:center;display:inline-flex;color:#fff">Get Started Today</div>
+    <h2 class="final-cta__title">See something close<br>to your part?</h2>
+    <p class="final-cta__copy">Share your CAD files and tolerance requirements. Engineers review every design for manufacturability and respond within one business day.</p>
+    <div class="final-cta__actions">
+      <a href="Services - CNC Micromachining.html#quote" class="btn btn--cta btn--lg">Request a quote</a>
+      <button class="btn btn--ghost-light btn--lg" onclick="goToQuote()">Upload CAD</button>
+    </div>
+  </div>
+</section>
+
+<script>
+const CDN = 'https://www.potomac-laser.com/wp-content/uploads/';
+
+/* Curated project set, real microfabrication work, categorised by capability/material. */
+const PROJECTS = [
+  {t:"Thin Metal Foils", c:"Metal Micromachining", img:"2024/11/Metal-foil.webp"},
+  {t:"Pressure-Sensitive Adhesives", c:"Polymer", img:"2024/11/AdhesiveLayer_TSorterberg_030124-768x507.png.webp"},
+  {t:"Laser Cutting for Precision Backlighting", c:"Laser Cutting", img:"2024/05/ss_.008_20umholes_70umspace_EricM_1-1224x838.webp"},
+  {t:"Laser Small Holes in Copper", c:"Microhole Drilling", img:"2022/06/copperEXII_PShende022522-1224x871.webp"},
+  {t:"Laser-Marked Glass Slide", c:"Laser Marking", img:"2022/06/LsrEtchEX_MGreco_060122-1224x838.webp"},
+  {t:"Laser Cutting Polyimide Rings", c:"Kapton", img:"2022/02/rings.webp"},
+  {t:"High-Speed Laser Cutting of Metal Parts", c:"Laser Cutting", img:"2022/01/IMG_2880.webp"},
+  {t:"Calibrated Micro Holes for CCIT / Leak Testing", c:"Microhole Drilling", img:"2021/02/2B7382D0-FC1B-4D95-BF31-B3848787D219-2.webp"},
+  {t:"Small Hole Drilling Experts", c:"Microhole Drilling", img:"2021/10/lsrdrillEXP_25um_100umsst_PShende_101221-1-1224x851.webp"},
+  {t:"Precision Laser Cutting of Metal", c:"Laser Cutting", img:"2021/10/lsrcut0.010sstEX_PShende_101121-1224x805.webp"},
+  {t:"Fabrication of Microfluidic Devices", c:"Microfluidics", img:"2021/09/Photo.webp"},
+  {t:"Pillars for Microfluidic Applications", c:"Microfluidics", img:"2021/09/m011.webp"},
+  {t:"Laser Micromachining Services", c:"Featured", img:"2021/09/JMiller_090221-1224x855.webp"},
+  {t:"Rapid Prototyping to Production", c:"Featured", img:"2021/08/Kapton_083121.webp"},
+  {t:"Rapid-Turn Microfluidics: Herringbone Mixer", c:"Microfluidics", img:"2021/06/MFluidicsEx_AAndar_051721_1-1224x838.webp"},
+  {t:"Experts at DuPont Kapton® Laser Cutting", c:"Kapton", img:"2021/05/KaptononSlideexp_051221-1224x819.webp"},
+  {t:"Laser Cutting of Metal Tubing", c:"Metal Micromachining", img:"2021/04/SSTtubingEX_041521-1224x819.webp"},
+  {t:"Glass Coverslips", c:"Glass Micromachining", img:"2020/10/glass-coverslips.webp"},
+  {t:"SU-8 Silicon Mold for Microfluidics", c:"Silicon Wafer", img:"2020/10/silicon-mold.webp"},
+  {t:"Precision Micro Masks", c:"Metal Micromachining", img:"2020/08/Mask-1224x853.webp"},
+  {t:"Laser Micromachining Stainless Steel", c:"Metal Micromachining", img:"2020/04/JMiller2_043020_1-1224x831.webp"},
+  {t:"Small Holes in Metal Nozzle", c:"Microhole Drilling", img:"2020/03/Holesin-metal-1.webp"},
+  {t:"Laser Cutting Ceramic", c:"Ceramics", img:"2018/05/Ceramic.webp"},
+  {t:"Micro Holes for Invisible Backlighting", c:"Microhole Drilling", img:"2018/04/Backlighting.webp"},
+  {t:"Silicon Wafer Dicing and Resizing", c:"Silicon Wafer", img:"2018/02/SiliconWafer.webp"},
+  {t:"Laser Welding of Plastics", c:"Assembly", img:"2018/02/Welded-Chip.webp"},
+  {t:"Custom Silicon Wafer Cutting", c:"Silicon Wafer", img:"2018/01/PP_SIL_WAFER_2.webp"},
+  {t:"Rapid Microfluidic Chip Fabrication", c:"Microfluidics", img:"2017/09/Microfluidic9.webp"},
+  {t:"PEEK Tubing", c:"Polymer", img:"2017/08/PolymerTube.webp"},
+  {t:"Micro Holes in Tungsten", c:"Microhole Drilling", img:"2017/05/ZacII.webp"},
+  {t:"Diamond: Precision Machined Gear", c:"Diamond", img:"2013/03/Diamond-Gear.webp"},
+  {t:"Diamond: Precision Machining", c:"Diamond", img:"2013/03/scan0001-719x1024.webp"},
+  {t:"Probe Card: 90 µm Holes in Silicon Nitride", c:"Ceramics", img:"2013/03/Probe-Card-in-10mil-thick-Silicon-Nitride-with-90um-microholes-sm.webp"},
+  {t:"Pick-and-Place Assembly System", c:"Assembly", img:"2013/03/PnP31.webp"},
+  {t:"Miniature Systems Assembly", c:"Assembly", img:"2013/03/Assembly-min.webp"},
+  {t:"Via Hole Drilling: 30 µm Holes", c:"Electronics", img:"2013/03/Amkor-via.webp"},
+  {t:"Laser-Marked QR Device", c:"Laser Marking", img:"2013/03/QRD-1024x819.webp"},
+  {t:"Stainless-Steel Gears on a Penny", c:"Metal Micromachining", img:"2013/04/Stainless-Steel-gears-on-back-of-penny-sm.webp"},
+  {t:"20-Micron Pinholes in Tantalum", c:"Microhole Drilling", img:"2014/01/20-Micron-Hole-in-Tantalum.webp"},
+  {t:"Laser Cutting Stents", c:"Metal Micromachining", img:"2013/04/Stout-Stent-5X-post-Electropolish-a.webp"},
+  {t:"Hot Embossing: Teflon", c:"Polymer", img:"2018/03/Teflon2.webp"},
+  {t:"Micro Channels in Polystyrene", c:"Polymer", img:"2013/09/Micro-Channels-in-Polystyrene.webp"},
+  {t:"3D-Printed Mold for PDMS Microfluidics", c:"Microfluidics", img:"2018/02/PDMS-Mold.webp"},
+  {t:"Custom Nitinol Washers", c:"Metal Micromachining", img:"2013/03/Nitinol-Washers-on-US-penny-35x-1024x819.webp"},
+  {t:"2D Data-Matrix Barcode on Glass: 110 µm Dots", c:"Laser Marking", img:"2013/03/2d-barcode-at-20x-on-glass1.webp"},
+  {t:"Catheter Hole Drilling", c:"Microhole Drilling", img:"2014/01/Catheter-1224x957.webp"},
+  {t:"Patterned Metal on Polymer Substrate", c:"Electronics", img:"2013/03/Patterning.webp"},
+  {t:"Laser-Cut Tantalum Shadow Mask", c:"Metal Micromachining", img:"2014/04/TantalumMask-PL-cropped-1224x905.webp"},
+  {t:"Small Holes in Glass", c:"Glass Micromachining", img:"2013/03/GlassHoles1.webp"},
+  {t:"Precision Ophthalmic Medical Part", c:"Featured", img:"2015/02/Ophthalmic-Device.webp"},
+  {t:"Micro 3D Printing: Ear Model", c:"Featured", img:"2014/09/Ear_pc.webp"},
+  {t:"Holes in Kapton® (Polyimide)", c:"Kapton", img:"2013/04/KaptonHoles.webp"},
+  {t:"Conductive Lines on a Medical Device", c:"Electronics", img:"2013/03/Conductive-Lines-1024x819.webp"},
+  {t:"Selective Removal of Metal Coatings", c:"Laser Marking", img:"2013/03/Selective-removal-of-metal-material.webp"},
+];
+
+/* fixed category order matching the source site */
+const CATS = ["All","Assembly","Ceramics","Diamond","Electronics","Featured","Glass Micromachining","Kapton","Laser Cutting","Laser Marking","Metal Micromachining","Microfluidics","Microhole Drilling","Polymer","Silicon Wafer"];
+
+let activeCat = "All";
+let visible = []; // currently-visible project indices (for lightbox nav)
+
+/* ── FILTERING (static markup; JS only shows/hides) ── */
+function galCards() { return [...document.querySelectorAll('#gal-grid [data-gal-card]')]; }
+
+function renderGrid() {
+  visible = [];
+  galCards().forEach(card => {
+    const on = activeCat === "All" || card.dataset.galCat === activeCat;
+    card.hidden = !on;
+    if (on) visible.push(card);
+  });
+  document.getElementById('gal-empty').style.display = visible.length ? 'none' : 'block';
+  document.getElementById('gal-count-n').textContent = visible.length;
+  document.getElementById('gal-count-word').textContent = visible.length === 1 ? 'project' : 'projects';
+  const inWrap = document.getElementById('gal-count-in');
+  inWrap.hidden = activeCat === "All";
+  document.getElementById('gal-count-cat').textContent = activeCat;
+}
+
+function setCat(cat) {
+  activeCat = cat;
+  document.querySelectorAll('#filter-chips [data-gal-cat]').forEach(b => {
+    const on = b.dataset.galCat === cat;
+    b.classList.toggle('active', on);
+    b.setAttribute('aria-selected', on);
+  });
+  const sel = document.getElementById('filter-select');
+  if (sel) sel.value = cat;
+  renderGrid();
+}
+
+/* ── LIGHTBOX ── */
+let lbPos = 0;
+function openLb(card) {
+  lbPos = visible.indexOf(card);
+  if (lbPos < 0) lbPos = 0;
+  paintLb();
+  const lb = document.getElementById('lb');
+  lb.classList.add('open');
+  lb.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+function paintLb() {
+  const card = visible[lbPos];
+  if (!card) return;
+  const img = card.querySelector('img');
+  document.getElementById('lb-img').src = img.src;
+  document.getElementById('lb-img').alt = img.alt;
+  document.getElementById('lb-cat').textContent = card.querySelector('.gal-card__cat').textContent;
+  document.getElementById('lb-title').textContent = card.querySelector('.gal-card__title').textContent;
+  document.getElementById('lb-counter').textContent = (lbPos + 1) + ' / ' + visible.length;
+}
+function stepLb(d) {
+  lbPos = (lbPos + d + visible.length) % visible.length;
+  paintLb();
+}
+function closeLb() {
+  const lb = document.getElementById('lb');
+  lb.classList.remove('open');
+  lb.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => {
+  if (!document.getElementById('lb').classList.contains('open')) return;
+  if (e.key === 'Escape') closeLb();
+  else if (e.key === 'ArrowLeft') stepLb(-1);
+  else if (e.key === 'ArrowRight') stepLb(1);
+});
+document.getElementById('lb-stage').addEventListener('click', e => {
+  if (e.target.id === 'lb-stage') closeLb();
+});
+
+function goToQuote() { window.location.href = 'Services - CNC Micromachining.html#quote'; }
+
+/* ── INIT ── */
+renderGrid();
+</script>
+
+<!-- ─────────────────────────────────────────────────────────
+     TWEAKS, gallery item dimensions
+     ───────────────────────────────────────────────────────── -->
+
+
+<button class="twk-launch"><i></i>Tweaks</button><div class="twk-panel" hidden=""><div class="twk-head"><b>Tweaks</b><button class="twk-x">×</button></div><div class="twk-body"><div class="twk-sec">Grid</div><div class="twk-row"><div class="twk-lab"><em style="font-style:normal">Layout</em></div><div class="twk-seg"><button class="on">Uniform</button><button class="">Masonry</button></div></div><div class="twk-row"><div class="twk-lab"><em style="font-style:normal">Columns</em><span>3</span></div><input type="range" class="twk-range" min="2" max="6" step="1"></div><div class="twk-row"><div class="twk-lab"><em style="font-style:normal">Gap</em><span>18px</span></div><input type="range" class="twk-range" min="0" max="40" step="1"></div><div class="twk-row"><div class="twk-lab"><em style="font-style:normal">Corner radius</em><span>7px</span></div><input type="range" class="twk-range" min="0" max="24" step="1"></div><div class="twk-row"><div class="twk-lab"><em style="font-style:normal">Aspect</em></div><select class="twk-sel"><option value="1:1">1:1</option><option value="4:3">4:3</option><option value="3:2">3:2</option><option value="16:9">16:9</option><option value="3:4">3:4</option></select></div><div class="twk-row"><div class="twk-lab"><em style="font-style:normal">Crop</em><span>20%</span></div><input type="range" class="twk-range" min="0" max="40" step="1"></div><div class="twk-sec">Cards</div><div class="twk-row"><div class="twk-lab"><em style="font-style:normal">Caption</em></div><div class="twk-seg"><button class="on">On hover</button><button class="">Always</button></div></div><div class="twk-sec">Chrome</div><div class="twk-row"><div class="twk-lab"><em style="font-style:normal">Modal CTAs</em></div><div class="twk-seg"><button class="">One</button><button class="on">Two</button></div></div><div class="twk-row"><div class="twk-lab"><em style="font-style:normal">Filter style</em></div><div class="twk-seg"><button class="on">Wrap</button><button class="">Scrolling</button></div></div><button class="twk-reset">Reset to defaults</button></div></div>
+
+
+
+</body></html>
