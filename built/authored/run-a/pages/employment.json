@@ -1,0 +1,35 @@
+{
+ "slug": "pl-auto-employment",
+ "title": "Employment",
+ "design_page": "About - Employment.html",
+ "header": "# spec.yaml — Employment  (run 20260924-125928, autonomous, RUN A re-entry)\n# Source design : Potomac Laser.zip (fab7225c…) :: About - Employment.html  (no tweak defaults)\n# MATCH (3.c.ii) — design images / fragment image slots in brackets:\n#   [0] #hero  centred, no meta, ONE CTA [0/0] -> UNMATCHED (hero-dark-centered has no button,\n#              hero-dark-stat-strip needs 2 CTAs + stats) -> §7 candidate hero-dark-centered-cta\n#   [1] prose (eyebrow, H2, paragraph, 5-item check-list) | photo RIGHT [1/1 on split-media-prose]\n#              -> UNMATCHED: split-media-prose is photo LEFT with paragraph + 2 buttons, no list\n#              -> §7 candidate split-prose-list-media\n#   [2] #openings subtle, centred head + 5 category chips + 6 text-only whole-card links [0/0]\n#              -> UNMATCHED (no image, filter chips) -> §7 candidate text-link-cards-6-filter\n#   [3] .final-cta -> cta-band-dark [0/0]\n# Brand normalisation: H1 \"Careers at Potomac\", lede \"Potomac Photonics is always looking\",\n#   eyebrow \"Working at Potomac\", CTA button \"About Potomac\", photo alt -> Goodfellow Microfabrication.\n# Filter: chips + a show/hide script in one html widget; cards stay native widgets (zip CLAUDE.md rule).\n# Links: url_* hold the design's hrefs; §3.d link pass rewrites the internal ones.\n",
+ "assets": [
+  "emp_benefits"
+ ],
+ "sections": [
+  {
+   "pattern": "hero-dark-centered-cta",
+   "values": "hero-dark-centered-cta.values.json"
+  },
+  {
+   "pattern": "split-prose-list-media",
+   "values": "split-prose-list-media.values.json"
+  },
+  {
+   "pattern": "text-link-cards-6-filter",
+   "values": "text-link-cards-6-filter.values.json"
+  },
+  {
+   "pattern": "cta-band-dark",
+   "values": {
+    "heading_1": "Get in touch",
+    "heading_2": "Send us your résumé.",
+    "body_1": "<p>No matching role today? Get in touch and tell us about your experience. We keep strong candidates in mind for future openings.</p>",
+    "button_1": "Contact us",
+    "url_1": "Contact - Contact.html",
+    "button_2": "About Goodfellow Microfabrication",
+    "url_2": "About - About Potomac.html"
+   }
+  }
+ ]
+}

@@ -50,6 +50,21 @@
     "_pl_auto_run": "20260924-125928"
    },
    "page_template": "default (Code Snippet #10 full-bleed via _pl_auto_page)"
+  },
+  {
+   "post_id": 12298,
+   "post_type": "page",
+   "post_status": "draft",
+   "slug": "pl-auto-employment",
+   "title": "Employment",
+   "design_page": "About - Employment.html",
+   "preview_url": "https://www.potomac-laser.com/?page_id=12298&preview=true",
+   "provenance_meta": {
+    "_pl_auto_page": "About - Employment.html",
+    "_pl_auto_zip": "fab7225ce0879014418672228148420215c3a39fa6463bea2012d2ce7b798db9",
+    "_pl_auto_run": "20260924-125928"
+   },
+   "page_template": "default"
   }
  ],
  "attachments_created": [
@@ -205,6 +220,16 @@
    "source": "uploads/2014/03/Potomac_Henry-copy.webp",
    "role": "link card image",
    "page": "About - News.html"
+  },
+  {
+   "attachment_id": 12297,
+   "file": "2026/09/pl-auto-emp-benefits.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-emp-benefits.webp",
+   "sha256": "5767c8e48e6e6956fb4841c16e1bac167fbf6489f260c79c67222305256c7ed1",
+   "source": "uploads/2024/05/TS_KAP-1024x683.webp",
+   "role": "split media",
+   "page": "About - Employment.html",
+   "alt_set": true
   }
  ],
  "files_uploaded": [
@@ -248,6 +273,42 @@
    "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/tok-cs-news.json",
    "bytes": 82145,
    "sha256": "16e02f57c3b9dd86465bf594b048ec8f4ecc831883d32b8e8f9242e2217fb656",
+   "role": "\u00a77.4 positional tokenise job"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/bundle-emp-v1.json",
+   "bytes": 45239,
+   "sha256": "c4f8f292b0e566da710158e0e06c614286651807e6a17738b835a184d31a5947",
+   "role": "bundle: employment v1 (6cc3a9d5\u2026)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/bundle-emp-v2.json",
+   "bytes": 45279,
+   "sha256": "98a2b78c30bfef1280c82153cd0db503dc23fc5e8ed8efcbc0326b41304b0a8a",
+   "role": "bundle: employment v2 (d61d03a0\u2026)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/hero-dark-centered-cta.json",
+   "bytes": 10898,
+   "sha256": "d73dfabf7f84a94d7a058b0b8d9897fed42c6c0d15133a879087bd21d38e9af7",
+   "role": "\u00a77.4 tokenised fragment from post 12298 \u00a70 (positional; 0 css var rewrites)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/split-prose-list-media.json",
+   "bytes": 16554,
+   "sha256": "a89d370cbf05b7e635589b7dd955761ae66530d79778661bd59f9614f56254ba",
+   "role": "\u00a77.4 tokenised fragment from post 12298 \u00a71 (positional; 1 css var rewrites)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/text-link-cards-6-filter.json",
+   "bytes": 74277,
+   "sha256": "5c804ba76b6c81c3fccaf704b86c7de8aec14ac30876abc4080eb4ad7cc00a10",
+   "role": "\u00a77.4 tokenised fragment from post 12298 \u00a72 (positional; 6 css var rewrites)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/tok-emp.json",
+   "bytes": 35755,
+   "sha256": "592593d0385682f01da6c253501d71e2103116dd495fdb27f7cd3465ca307b0f",
    "role": "\u00a77.4 positional tokenise job"
   }
  ]
