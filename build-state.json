@@ -124,7 +124,7 @@
       "run": "20260924-135039",
       "report": "built/run-20260924-135039.report.md (build branch)",
       "recovery_floor": "UpdraftPlus DB set 1790244496 (2026-09-24T10:08:16Z, nonce ec283efbb074), verified not taken (3.71 h old)",
-      "note": "RUN B complete: the nine Materials pages built as page drafts 12388-12396, 11 patterns minted (cap 20). The 15 RUN A and service entries were skipped as already built. Not merged: the build branch awaits human review. The report corrects run 20260924-125928: the library cta-band-dark is 10px taller than the designs' closing band; cta-band-dark-display is the design's band. Supervised run 20260924-150733: the 8 material pages rebuilt as post_material drafts 12397-12404 (page drafts 12389-12396 kept, marked superseded_page_draft); Snippet #10 extended to post_material drafts.",
+      "note": "RUN B complete: the nine Materials pages built as page drafts 12388-12396, 11 patterns minted (cap 20). The 15 RUN A and service entries were skipped as already built. Not merged: the build branch awaits human review. The report corrects run 20260924-125928: the library cta-band-dark is 10px taller than the designs' closing band; cta-band-dark-display is the design's band. Supervised run 20260924-150733: the 8 material pages rebuilt as post_material drafts 12397-12404 (page drafts 12389-12396 kept, marked superseded_page_draft); Snippet #10 extended to post_material drafts. Run 20260924-152432: page drafts 12389-12396 moved to Trash.",
       "pages": [
         {
           "slug": "pl-auto-cnc-micromachining",
@@ -346,7 +346,8 @@
           "status": "built",
           "run": "20260924-135039",
           "superseded_page_draft": 12389,
-          "rebuilt_by_run": "20260924-150733"
+          "rebuilt_by_run": "20260924-150733",
+          "superseded_page_draft_status": "trash"
         },
         {
           "slug": "pl-auto-glass",
@@ -358,7 +359,8 @@
           "status": "built",
           "run": "20260924-135039",
           "superseded_page_draft": 12390,
-          "rebuilt_by_run": "20260924-150733"
+          "rebuilt_by_run": "20260924-150733",
+          "superseded_page_draft_status": "trash"
         },
         {
           "slug": "pl-auto-kapton-polyimide",
@@ -370,7 +372,8 @@
           "status": "built",
           "run": "20260924-135039",
           "superseded_page_draft": 12391,
-          "rebuilt_by_run": "20260924-150733"
+          "rebuilt_by_run": "20260924-150733",
+          "superseded_page_draft_status": "trash"
         },
         {
           "slug": "pl-auto-metal-parts",
@@ -382,7 +385,8 @@
           "status": "built",
           "run": "20260924-135039",
           "superseded_page_draft": 12392,
-          "rebuilt_by_run": "20260924-150733"
+          "rebuilt_by_run": "20260924-150733",
+          "superseded_page_draft_status": "trash"
         },
         {
           "slug": "pl-auto-plastic-micromachining",
@@ -394,7 +398,8 @@
           "status": "built",
           "run": "20260924-135039",
           "superseded_page_draft": 12393,
-          "rebuilt_by_run": "20260924-150733"
+          "rebuilt_by_run": "20260924-150733",
+          "superseded_page_draft_status": "trash"
         },
         {
           "slug": "pl-auto-polymers",
@@ -406,7 +411,8 @@
           "status": "built",
           "run": "20260924-135039",
           "superseded_page_draft": 12394,
-          "rebuilt_by_run": "20260924-150733"
+          "rebuilt_by_run": "20260924-150733",
+          "superseded_page_draft_status": "trash"
         },
         {
           "slug": "pl-auto-stainless-steel",
@@ -418,7 +424,8 @@
           "status": "built",
           "run": "20260924-135039",
           "superseded_page_draft": 12395,
-          "rebuilt_by_run": "20260924-150733"
+          "rebuilt_by_run": "20260924-150733",
+          "superseded_page_draft_status": "trash"
         },
         {
           "slug": "pl-auto-thin-metal-foils",
@@ -430,7 +437,8 @@
           "status": "built",
           "run": "20260924-135039",
           "superseded_page_draft": 12396,
-          "rebuilt_by_run": "20260924-150733"
+          "rebuilt_by_run": "20260924-150733",
+          "superseded_page_draft_status": "trash"
         }
       ],
       "new_patterns": [

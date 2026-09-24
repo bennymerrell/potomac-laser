@@ -1,0 +1,49 @@
+{
+  "run_id": "20260924-152432",
+  "mode": "SUPERVISED, requested in chat (\"Trash the old page drafts\"): the 8 superseded Run B page drafts moved to Trash (reversible from WP Trash).",
+  "target": "potomac-laser.com (LIVE)",
+  "posts_trashed": [
+    {
+      "post_id": 12389,
+      "previous_status": "draft",
+      "superseded_by": 12397
+    },
+    {
+      "post_id": 12390,
+      "previous_status": "draft",
+      "superseded_by": 12398
+    },
+    {
+      "post_id": 12391,
+      "previous_status": "draft",
+      "superseded_by": 12399
+    },
+    {
+      "post_id": 12392,
+      "previous_status": "draft",
+      "superseded_by": 12400
+    },
+    {
+      "post_id": 12393,
+      "previous_status": "draft",
+      "superseded_by": 12401
+    },
+    {
+      "post_id": 12394,
+      "previous_status": "draft",
+      "superseded_by": 12402
+    },
+    {
+      "post_id": 12395,
+      "previous_status": "draft",
+      "superseded_by": 12403
+    },
+    {
+      "post_id": 12396,
+      "previous_status": "draft",
+      "superseded_by": 12404
+    }
+  ],
+  "guards": "each had to be a page draft stamped by run 20260924-135039, with an existing post_material draft whose _pl_auto_rebuilt_from = it and whose _pl_auto_page matches",
+  "rollback": "restore each from Pages > Trash (WordPress restores it as draft)"
+}
