@@ -1,0 +1,12 @@
+{
+    "pattern": "split-rich-rich-related",
+    "source_post": 12391,
+    "source_section_index": 3,
+    "tokens": {
+        "{heading_1}": "Capabilities",
+        "{heading_2}": "Features in Kapton",
+        "{body_1}": "<p>Laser micromachining of micro-holes, blind holes, channels, complex shapes, washers and patterning. Precise channels can also be milled into Kapton and filled with conductive pastes and nano-materials.</p><p>Call us or send your drawing to discuss. For an immediate order, upload your drawing to our InstaQuote app.</p>",
+        "{body_2}": "<ul class=\"check\"><li>Laser micromachining of polyimide</li><li>Laser hole drilling of polyimide</li><li>Laser cutting of polyimide</li><li>Laser patterning of metallised polyimide</li><li>Many more</li></ul>",
+        "{body_3}": "<p class=\"related\">Related: <a href=\"Materials - Polymers.html\" style=\"font-weight:700\">Polymers</a> · <a href=\"Materials - Plastic Micromachining.html\" style=\"font-weight:700\">Plastic micromachining</a> · <a href=\"Blog - Kapton.dc.html\" style=\"font-weight:700\">Machining Kapton for aerospace</a></p>"
+    }
+}

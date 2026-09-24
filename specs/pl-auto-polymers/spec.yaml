@@ -1,0 +1,53 @@
+# spec.yaml — Polymers  (run 20260924-135039, autonomous, RUN B)
+# Source design : Potomac Laser.zip (fab7225c…) :: Materials - Polymers.html  (no tweak defaults)
+# MATCH (3.c.ii):
+#   [0] hero-dark-centered         library match (centred, no meta, no CTA)
+#   [1] head-rich-white            §7: centred head + rich body, white
+#   [2] figure-cards-2-note        §7: 2 photo cards + caption + note
+#   [3] cta-band-dark-display      §7: .final-cta at the Materials type scale (library cta-band-dark is 38/800 + gradient, 463px vs 453)
+# Rich body: list-like content is one text-editor slot in the fragment's class vocabulary (gen_materials.py).
+# Brand: present-tense 'Potomac' -> Goodfellow Microfabrication; merger-narrative sentences kept (run report).
+# Links: design page hrefs rewritten by the §3.d link pass (drafts; Kapton blog + CCIT -> live pages).
+
+spec_version: 1
+page:
+  title: Polymers
+  slug: pl-auto-polymers
+  post_type: page
+  post_status: draft
+assets:
+  mat_polymers_1:
+    attachment_id: 12386
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-mat-polymers-1.webp
+  mat_polymers_2:
+    attachment_id: 12387
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-mat-polymers-2.webp
+sections:
+- pattern: hero-dark-centered
+  tokens:
+    heading_1: Materials
+    heading_2: Custom-cut polymers
+    body_1: <p>Custom cutting of <strong>practically every type of polymer</strong>, quickly and cost-effectively, including parts with complex designs and small features.</p>
+- pattern: head-rich-white
+  tokens:
+    heading_1: Polymers
+    heading_2: Polymers we have cut
+    body_1: <p class="pills"><span class="pill">Kapton (polyimide)</span><span class="pill">PET (Mylar)</span><span class="pill">Ultem</span><span class="pill">Nylon</span><span class="pill">PEEK</span><span class="pill">Silicone</span><span class="pill">PMMA</span><span class="pill">PTFE</span></p>
+- pattern: figure-cards-2-note
+  tokens:
+    image_1:
+      asset: mat_polymers_1
+    body_1: <p><p class="ab-card__text">Laser micromachining of medical grade silicone.</p></p>
+    image_2:
+      asset: mat_polymers_2
+    body_2: <p><p class="ab-card__text">Rectangles 16.7 by 110 microns in a Kapton stencil.</p></p>
+    body_3: '<p class="related">More examples in the <a href="https://www.potomac-laser.com/?page_id=12357&preview=true" style="font-weight:700">project gallery</a>. Related: <a href="https://www.potomac-laser.com/?page_id=12391&preview=true" style="font-weight:700">Custom Kapton parts</a> · <a href="https://www.potomac-laser.com/?post_type=post_services&p=12240&preview=true" style="font-weight:700">Laser microcutting</a> · <a href="https://www.potomac-laser.com/?page_id=12393&preview=true" style="font-weight:700">Plastic micromachining</a></p>'
+- pattern: cta-band-dark-display
+  tokens:
+    heading_1: Rapid response
+    heading_2: Talk to the team.
+    body_1: <p>Send a drawing or a short description of your project. Our engineers can recommend the best material and process for your requirements.</p>
+    button_1: Email us
+    url_1: https://www.potomac-laser.com/?page_id=12302&preview=true
+    button_2: Send a drawing
+    url_2: https://www.potomac-laser.com/project-quote/#projectForm

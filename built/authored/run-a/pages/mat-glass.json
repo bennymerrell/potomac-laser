@@ -1,0 +1,62 @@
+{
+ "slug": "pl-auto-glass",
+ "title": "Glass Micromachining",
+ "design_page": "Materials - Glass.html",
+ "header": "# spec.yaml — Glass Micromachining  (run 20260924-135039, autonomous, RUN B)\n# Source design : Potomac Laser.zip (fab7225c…) :: Materials - Glass.html  (no tweak defaults)\n# MATCH (3.c.ii):\n#   [0] hero-dark-centered         library match (centred, no meta, no CTA)\n#   [1] split-media-rich           §7: photo left | eyebrow+H2+rich body (split-media-prose needs 2 buttons, fixed)\n#   [2] head-rich-subtle           §7: centred head + rich body on #F6F8FB (pills / cards / check-list, count free)\n#   [3] split-rich-media           §7: rich body | photo right (split-prose-list-media fixes paragraph + list slots)\n#   [4] cta-band-dark-display      §7: .final-cta at the Materials type scale (library cta-band-dark is 38/800 + gradient, 463px vs 453)\n# Rich body: list-like content is one text-editor slot in the fragment's class vocabulary (gen_materials.py).\n# Brand: present-tense 'Potomac' -> Goodfellow Microfabrication; merger-narrative sentences kept (run report).\n# Links: design page hrefs are rewritten by the §3.d link pass.\n",
+ "assets": [
+  "mat_glass_1",
+  "mat_glass_2"
+ ],
+ "sections": [
+  {
+   "pattern": "hero-dark-centered",
+   "values": {
+    "heading_1": "Materials",
+    "heading_2": "Glass micromachining",
+    "body_1": "<p>Tools to machine <strong>complex features in glass as small as 1 micron</strong>, with hole drilling, cutting and marking.</p>"
+   }
+  },
+  {
+   "pattern": "split-media-rich",
+   "values": {
+    "image_1": {
+     "asset": "mat_glass_1"
+    },
+    "heading_1": "The material",
+    "heading_2": "Machining an amorphous solid",
+    "body_1": "<p>Glass is an amorphous solid, usually inorganic. Unlike crystalline solids it has no regular internal structure, and it is generally hard and brittle.</p><p>Using high-accuracy motion systems, Goodfellow Microfabrication holds tight positional tolerances across large parts, with line widths as narrow as 10 microns depending on the type of glass.</p><p>We have extensive experience drilling holes for leak testing of pharmaceutical vials and ampoules. See our <a href=\"Applications - CCIT AW.html\" style=\"font-weight:700\">leak test hole drilling</a> capability.</p>"
+   }
+  },
+  {
+   "pattern": "head-rich-subtle",
+   "values": {
+    "heading_1": "Services",
+    "heading_2": "Glass services",
+    "body_1": "<ul class=\"cards p26\"><li><span class=\"meta\">Marking</span><h3>Laser engraving</h3><p>Detailed, permanent markings for branding and identification.</p></li><li><span class=\"meta\">Marking</span><h3>Inkjet printing</h3><p>High-resolution markings for product information and appearance.</p></li><li><span class=\"meta\">Marking</span><h3>Etching</h3><p>Subtle designs that improve the appearance of glass products.</p></li><li><span class=\"meta\">Drilling</span><h3>Automated hole drilling</h3><p>Automated drilling equipment that improves efficiency and reduces turnaround times.</p></li><li><span class=\"meta\">Drilling</span><h3>Precision drilling</h3><p>Small to large diameter holes, drilled accurately and consistently.</p></li><li><span class=\"meta\">Drilling</span><h3>Custom drilling</h3><p>Drilling processes developed to your project requirements.</p></li></ul>"
+   }
+  },
+  {
+   "pattern": "split-rich-media",
+   "values": {
+    "heading_1": "Glass types",
+    "heading_2": "Glasses we machine",
+    "body_1": "<p class=\"pills\"><span class=\"pill\">Borosilicates</span><span class=\"pill\">Glass ceramics</span><span class=\"pill\">Schott glass</span><span class=\"pill\">Fused silica</span></p><p class=\"eb\">Industries</p><p class=\"pills\"><span class=\"pill\">Medical devices</span><span class=\"pill\">Electronics</span><span class=\"pill\">Aerospace</span><span class=\"pill\">Biotechnology</span><span class=\"pill\">Automotive</span><span class=\"pill\">Alternative energy and photovoltaics</span></p>",
+    "image_1": {
+     "asset": "mat_glass_2"
+    }
+   }
+  },
+  {
+   "pattern": "cta-band-dark-display",
+   "values": {
+    "heading_1": "Rapid response",
+    "heading_2": "Talk to the team.",
+    "body_1": "<p>Send a drawing or a short description of your project. Our engineers can recommend the best material and process for your requirements.</p>",
+    "button_1": "Email us",
+    "url_1": "Contact - Contact.html",
+    "button_2": "Send a drawing",
+    "url_2": "https://www.potomac-laser.com/project-quote/#projectForm"
+   }
+  }
+ ]
+}

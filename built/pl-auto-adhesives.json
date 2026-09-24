@@ -1,0 +1,1123 @@
+[
+ {
+  "id": "9f70c85",
+  "elType": "container",
+  "isInner": false,
+  "settings": {
+   "flex_direction": "column",
+   "flex_align_items": "center",
+   "padding": {
+    "unit": "px",
+    "top": "72",
+    "right": "24",
+    "bottom": "64",
+    "left": "24",
+    "isLinked": false
+   },
+   "background_background": "classic",
+   "custom_css": "selector{overflow:hidden;background-image:radial-gradient(ellipse at 30% 0%,rgba(14,99,168,0.28) 0%,transparent 60%),radial-gradient(ellipse at 90% 100%,rgba(148,18,82,0.16) 0%,transparent 55%),linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);background-size:auto,auto,32px 32px,32px 32px;}",
+   "content_width": "full",
+   "background_color": "",
+   "__globals__": {
+    "background_color": "globals/colors?id=gfnavydp"
+   }
+  },
+  "elements": [
+   {
+    "id": "23463bf",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+     "content_width": "boxed",
+     "flex_direction": "column",
+     "flex_align_items": "center",
+     "flex_gap": {
+      "unit": "px",
+      "column": "0",
+      "row": "0",
+      "isLinked": true
+     },
+     "boxed_width": {
+      "unit": "px",
+      "size": 1200
+     },
+     "padding": {
+      "unit": "px",
+      "top": "0",
+      "right": "0",
+      "bottom": "0",
+      "left": "0",
+      "isLinked": true
+     }
+    },
+    "elements": [
+     {
+      "id": "9926737",
+      "elType": "widget",
+      "widgetType": "heading",
+      "settings": {
+       "title": "Materials",
+       "header_size": "div",
+       "typography_typography": "custom",
+       "typography_font_family": "Inter",
+       "typography_font_size": {
+        "unit": "px",
+        "size": 12
+       },
+       "typography_font_weight": "600",
+       "title_color": "",
+       "__globals__": {
+        "title_color": "globals/colors?id=gforange"
+       },
+       "align": "center",
+       "typography_line_height": {
+        "unit": "px",
+        "size": 18
+       },
+       "typography_letter_spacing": {
+        "unit": "px",
+        "size": 2.16
+       },
+       "typography_text_transform": "uppercase"
+      },
+      "elements": []
+     },
+     {
+      "id": "6bbefc8",
+      "elType": "widget",
+      "widgetType": "heading",
+      "settings": {
+       "title": "Pressure-sensitive adhesives",
+       "header_size": "h1",
+       "typography_typography": "custom",
+       "typography_font_family": "Inter",
+       "typography_font_size": {
+        "unit": "px",
+        "size": 54.4
+       },
+       "typography_font_weight": "600",
+       "title_color": "",
+       "__globals__": {
+        "title_color": "globals/colors?id=gfwhite"
+       },
+       "align": "center",
+       "typography_line_height": {
+        "unit": "px",
+        "size": 57.66
+       },
+       "typography_letter_spacing": {
+        "unit": "px",
+        "size": -1.088
+       },
+       "custom_css": "selector .elementor-heading-title{max-width:22ch;margin:0 auto;text-wrap:balance}",
+       "_margin": {
+        "unit": "px",
+        "top": "43",
+        "right": "0",
+        "bottom": "18",
+        "left": "0",
+        "isLinked": false
+       }
+      },
+      "elements": []
+     },
+     {
+      "id": "508801b",
+      "elType": "widget",
+      "widgetType": "text-editor",
+      "settings": {
+       "editor": "<p>Rapid turnaround on <strong>custom parts made from high-performance pressure-sensitive adhesives</strong>, from prototypes to production.</p>",
+       "typography_typography": "custom",
+       "typography_font_family": "Inter",
+       "typography_font_size": {
+        "unit": "px",
+        "size": 18
+       },
+       "typography_font_weight": "400",
+       "text_color": "rgba(255,255,255,0.74)",
+       "typography_line_height": {
+        "unit": "px",
+        "size": 29.7
+       },
+       "align": "center",
+       "custom_css": "selector p{font-size:18px;line-height:29.7px;font-weight:400;color:rgba(255,255,255,0.74);margin:0}selector a{font-size:inherit;line-height:inherit}selector p{max-width:727px;margin:0 auto}selector strong{color:#fff;font-weight:600}selector a{color:#fff;text-decoration:underline;text-underline-offset:3px}"
+      },
+      "elements": []
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "5d02fec",
+  "elType": "container",
+  "isInner": false,
+  "settings": {
+   "flex_direction": "column",
+   "flex_align_items": "center",
+   "padding": {
+    "unit": "px",
+    "top": "80",
+    "right": "24",
+    "bottom": "80",
+    "left": "24",
+    "isLinked": false
+   },
+   "background_background": "classic",
+   "content_width": "full",
+   "background_color": "",
+   "__globals__": {
+    "background_color": "globals/colors?id=gfwhite"
+   }
+  },
+  "elements": [
+   {
+    "id": "49ae904",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+     "content_width": "boxed",
+     "flex_direction": "column",
+     "flex_align_items": "stretch",
+     "flex_gap": {
+      "unit": "px",
+      "column": "0",
+      "row": "0",
+      "isLinked": true
+     },
+     "padding": {
+      "unit": "px",
+      "top": "0",
+      "right": "0",
+      "bottom": "0",
+      "left": "0",
+      "isLinked": true
+     },
+     "boxed_width": {
+      "unit": "px",
+      "size": 1152
+     }
+    },
+    "elements": [
+     {
+      "id": "e79d337",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+       "flex_direction": "row",
+       "flex_wrap": "wrap",
+       "flex_align_items": "center",
+       "flex_gap": {
+        "unit": "px",
+        "column": "72",
+        "row": "48",
+        "isLinked": false
+       },
+       "content_width": "full",
+       "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+       }
+      },
+      "elements": [
+       {
+        "id": "e1bfb82",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "background_background": "classic",
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "#DCE1EA",
+         "border_radius": {
+          "unit": "px",
+          "top": "18",
+          "right": "18",
+          "bottom": "18",
+          "left": "18",
+          "isLinked": true
+         },
+         "custom_css": "selector{overflow:hidden;box-shadow:0 22px 58px rgba(15,42,68,.12)}selector{flex:0 0 calc((100% - 72px) / 2) !important;max-width:calc((100% - 72px) / 2) !important}@media(max-width:979px){selector{flex:0 0 100% !important;max-width:100% !important}}",
+         "content_width": "full",
+         "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+         },
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gfnavydp"
+         }
+        },
+        "elements": [
+         {
+          "id": "c20596a",
+          "elType": "widget",
+          "widgetType": "image",
+          "settings": {
+           "image": {
+            "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-02.webp",
+            "id": 12304
+           },
+           "image_size": "full",
+           "custom_css": "selector img{display:block;width:100%;height:auto}"
+          },
+          "elements": []
+         }
+        ]
+       },
+       {
+        "id": "1f79655",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "flex_direction": "column",
+         "flex_align_items": "stretch",
+         "flex_gap": {
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+         },
+         "custom_css": "selector{flex:0 0 calc((100% - 72px) / 2) !important;max-width:calc((100% - 72px) / 2) !important}@media(max-width:979px){selector{flex:0 0 100% !important;max-width:100% !important}}",
+         "content_width": "full",
+         "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+         }
+        },
+        "elements": [
+         {
+          "id": "90cc8eb",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Laser micromachining",
+           "header_size": "div",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 12
+           },
+           "typography_font_weight": "600",
+           "title_color": "",
+           "__globals__": {
+            "title_color": "globals/colors?id=gforange"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 18
+           },
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": 1.68
+           },
+           "typography_text_transform": "uppercase",
+           "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "20",
+            "left": "0",
+            "isLinked": false
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "4ebc644",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Precise features in adhesive layers",
+           "header_size": "h2",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 36
+           },
+           "typography_font_weight": "600",
+           "title_color": "#0F1620",
+           "typography_line_height": {
+            "unit": "px",
+            "size": 41.4
+           },
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": -0.72
+           },
+           "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "18",
+            "left": "0",
+            "isLinked": false
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "60eb742",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+           "editor": "<p>Pressure-sensitive adhesives are used across biotech, microfluidics, medical devices, electronics and aerospace. Goodfellow Microfabrication has developed a broad range of technologies to process them, for complex and simple parts on a prototyping or production basis.</p><p>Customers use these materials in applications such as microfluidics and medical devices, to bond layers together. Our laser technology covers cutting, patterning, layering and more.</p>",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 16
+           },
+           "typography_font_weight": "400",
+           "text_color": "",
+           "__globals__": {
+            "text_color": "globals/colors?id=gfink"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 28
+           },
+           "custom_css": "selector p{font-size:16px;line-height:28px;font-weight:400;margin:0}selector a{font-size:inherit;line-height:inherit}selector p{margin:0 0 16px}selector p:last-child{margin-bottom:0}selector a{color:#15253D;text-decoration:none}selector a:hover{color:#F5821F}selector p.pills{display:flex;flex-wrap:wrap;gap:10px;margin:0}selector .pill{display:inline-flex;align-items:center;padding:9px 16px;border:1.5px solid #DCE1EA;border-radius:9999px;background:#fff;font:700 13.5px/20.25px Inter,system-ui,sans-serif;color:#15253D;text-decoration:none;transition:all .3s cubic-bezier(.25,.46,.45,.94)}selector a.pill:hover{border-color:#F5821F;color:#15253D;transform:translateY(-1px);box-shadow:0 8px 20px rgba(245,130,31,.12)}selector p.pills + p.eb{margin-top:28px}selector p.eb{margin:0 0 14px;font:600 12px/18px Inter,system-ui,sans-serif;letter-spacing:1.68px;text-transform:uppercase;color:#F5821F}selector ul.check{list-style:none;margin:0;padding:0;display:grid;gap:12px}selector ul.check li{position:relative;margin:0;font-size:15.5px;line-height:25.575px;color:#3C4858;padding:16px 18px 16px 48px;background:#fff;border:1px solid #DCE1EA;border-radius:12px}selector ul.check li::before{content:\"\";position:absolute;left:18px;top:20px;width:18px;height:18px;background:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F5821F' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E\") no-repeat center/18px}selector ul.cards{list-style:none;margin:0;padding:0;display:grid;gap:20px;grid-template-columns:repeat(3,minmax(0,1fr))}@media(max-width:979px){selector ul.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:620px){selector ul.cards{grid-template-columns:1fr}}selector ul.cards li{margin:0;display:flex;flex-direction:column;gap:10px;background:#fff;border:1px solid #DCE1EA;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.07);padding:24px 24px 26px;transition:transform .3s cubic-bezier(.25,.46,.45,.94),box-shadow .3s cubic-bezier(.25,.46,.45,.94)}selector ul.cards.p26 li{padding:26px 24px}selector ul.cards li > a{display:flex;flex-direction:column;gap:10px;flex:1;color:inherit;text-decoration:none}selector ul.cards li:has(> a):hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(15,42,68,.08)}selector ul.cards .meta{display:block;font:700 11px/16.5px Inter,system-ui,sans-serif;letter-spacing:1.54px;text-transform:uppercase;color:#F5821F}selector ul.cards h3{margin:0;font:700 17.6px/22.88px Inter,system-ui,sans-serif;letter-spacing:-.176px;color:#15253D}selector ul.cards p{margin:0;font-size:14px;line-height:23.1px;color:#6B7280}selector ul.cards .more{display:block;margin-top:auto;font:800 11.5px/17.25px Inter,system-ui,sans-serif;letter-spacing:1.15px;text-transform:uppercase;color:#15253D}selector p.related{margin:24px 0 0;font-size:15px;line-height:24px;text-align:center}selector ul + p.related{margin-top:28px}selector p.note{margin:28px auto 0;max-width:760px;font-size:15.5px;line-height:27.125px;text-align:center}selector ul.check.narrow{max-width:760px;margin:0 auto}selector p.aside{margin:28px 0 0;font-size:15px;line-height:26.25px;text-align:center}selector p.related a,selector p.note a,selector p.aside a{font-weight:700}selector p{text-wrap:pretty}selector p:not([class]):last-child{margin-bottom:16px}"
+          },
+          "elements": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "7e52d5b",
+  "elType": "container",
+  "isInner": false,
+  "settings": {
+   "flex_direction": "column",
+   "flex_align_items": "center",
+   "padding": {
+    "unit": "px",
+    "top": "80",
+    "right": "24",
+    "bottom": "80",
+    "left": "24",
+    "isLinked": false
+   },
+   "background_background": "classic",
+   "content_width": "full",
+   "background_color": "#F6F8FB"
+  },
+  "elements": [
+   {
+    "id": "ef079d0",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+     "content_width": "boxed",
+     "flex_direction": "column",
+     "flex_align_items": "center",
+     "flex_gap": {
+      "unit": "px",
+      "column": "0",
+      "row": "0",
+      "isLinked": true
+     },
+     "padding": {
+      "unit": "px",
+      "top": "0",
+      "right": "0",
+      "bottom": "0",
+      "left": "0",
+      "isLinked": true
+     },
+     "boxed_width": {
+      "unit": "px",
+      "size": 1152
+     }
+    },
+    "elements": [
+     {
+      "id": "844314b",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+       "flex_direction": "column",
+       "flex_align_items": "center",
+       "flex_gap": {
+        "unit": "px",
+        "column": "0",
+        "row": "0",
+        "isLinked": true
+       },
+       "width": {
+        "unit": "px",
+        "size": 760
+       },
+       "width_mobile": {
+        "unit": "%",
+        "size": 100
+       },
+       "content_width": "full",
+       "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+       },
+       "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "48",
+        "left": "0",
+        "isLinked": false
+       }
+      },
+      "elements": [
+       {
+        "id": "b848cef",
+        "elType": "widget",
+        "widgetType": "heading",
+        "settings": {
+         "title": "Adhesive types",
+         "header_size": "div",
+         "typography_typography": "custom",
+         "typography_font_family": "Inter",
+         "typography_font_size": {
+          "unit": "px",
+          "size": 12
+         },
+         "typography_font_weight": "600",
+         "title_color": "",
+         "__globals__": {
+          "title_color": "globals/colors?id=gforange"
+         },
+         "align": "center",
+         "typography_line_height": {
+          "unit": "px",
+          "size": 18
+         },
+         "typography_letter_spacing": {
+          "unit": "px",
+          "size": 1.68
+         },
+         "typography_text_transform": "uppercase"
+        },
+        "elements": []
+       },
+       {
+        "id": "fac879f",
+        "elType": "widget",
+        "widgetType": "heading",
+        "settings": {
+         "title": "Adhesives we process",
+         "header_size": "h2",
+         "typography_typography": "custom",
+         "typography_font_family": "Inter",
+         "typography_font_size": {
+          "unit": "px",
+          "size": 40
+         },
+         "typography_font_weight": "600",
+         "title_color": "#0F1620",
+         "align": "center",
+         "typography_line_height": {
+          "unit": "px",
+          "size": 44.8
+         },
+         "typography_letter_spacing": {
+          "unit": "px",
+          "size": -0.8
+         },
+         "_margin": {
+          "unit": "px",
+          "top": "18",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": false
+         }
+        },
+        "elements": []
+       }
+      ]
+     },
+     {
+      "id": "62368fd",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+       "width": {
+        "unit": "%",
+        "size": 100
+       },
+       "content_width": "full",
+       "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+       }
+      },
+      "elements": [
+       {
+        "id": "d76ed50",
+        "elType": "widget",
+        "widgetType": "text-editor",
+        "settings": {
+         "editor": "<p class=\"pills\"><span class=\"pill\">Acrylic adhesives</span><span class=\"pill\">Silicone adhesives</span><span class=\"pill\">Rubber-based adhesives</span><span class=\"pill\">UV-curable adhesives</span><span class=\"pill\">Hot melt adhesives</span><span class=\"pill\">Conductive adhesives</span><span class=\"pill\">Biomedical-grade adhesives</span><span class=\"pill\">Multi-layer adhesive systems</span><span class=\"pill\">Custom formulated adhesives</span><span class=\"pill\">And many more</span></p><p class=\"note\">Precision laser cutting suits biotech and microfluidics, where accuracy and reliability matter: detailed microfluidic channels, multi-layer biomedical devices and precise bonding.</p>",
+         "typography_typography": "custom",
+         "typography_font_family": "Inter",
+         "typography_font_size": {
+          "unit": "px",
+          "size": 16
+         },
+         "typography_font_weight": "400",
+         "text_color": "",
+         "__globals__": {
+          "text_color": "globals/colors?id=gfink"
+         },
+         "typography_line_height": {
+          "unit": "px",
+          "size": 28
+         },
+         "custom_css": "selector p{font-size:16px;line-height:28px;font-weight:400;margin:0}selector a{font-size:inherit;line-height:inherit}selector p{margin:0 0 16px}selector p:last-child{margin-bottom:0}selector a{color:#15253D;text-decoration:none}selector a:hover{color:#F5821F}selector p.pills{display:flex;flex-wrap:wrap;gap:10px;margin:0}selector .pill{display:inline-flex;align-items:center;padding:9px 16px;border:1.5px solid #DCE1EA;border-radius:9999px;background:#fff;font:700 13.5px/20.25px Inter,system-ui,sans-serif;color:#15253D;text-decoration:none;transition:all .3s cubic-bezier(.25,.46,.45,.94)}selector a.pill:hover{border-color:#F5821F;color:#15253D;transform:translateY(-1px);box-shadow:0 8px 20px rgba(245,130,31,.12)}selector p.pills + p.eb{margin-top:28px}selector p.eb{margin:0 0 14px;font:600 12px/18px Inter,system-ui,sans-serif;letter-spacing:1.68px;text-transform:uppercase;color:#F5821F}selector ul.check{list-style:none;margin:0;padding:0;display:grid;gap:12px}selector ul.check li{position:relative;margin:0;font-size:15.5px;line-height:25.575px;color:#3C4858;padding:16px 18px 16px 48px;background:#fff;border:1px solid #DCE1EA;border-radius:12px}selector ul.check li::before{content:\"\";position:absolute;left:18px;top:20px;width:18px;height:18px;background:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F5821F' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E\") no-repeat center/18px}selector ul.cards{list-style:none;margin:0;padding:0;display:grid;gap:20px;grid-template-columns:repeat(3,minmax(0,1fr))}@media(max-width:979px){selector ul.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:620px){selector ul.cards{grid-template-columns:1fr}}selector ul.cards li{margin:0;display:flex;flex-direction:column;gap:10px;background:#fff;border:1px solid #DCE1EA;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.07);padding:24px 24px 26px;transition:transform .3s cubic-bezier(.25,.46,.45,.94),box-shadow .3s cubic-bezier(.25,.46,.45,.94)}selector ul.cards.p26 li{padding:26px 24px}selector ul.cards li > a{display:flex;flex-direction:column;gap:10px;flex:1;color:inherit;text-decoration:none}selector ul.cards li:has(> a):hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(15,42,68,.08)}selector ul.cards .meta{display:block;font:700 11px/16.5px Inter,system-ui,sans-serif;letter-spacing:1.54px;text-transform:uppercase;color:#F5821F}selector ul.cards h3{margin:0;font:700 17.6px/22.88px Inter,system-ui,sans-serif;letter-spacing:-.176px;color:#15253D}selector ul.cards p{margin:0;font-size:14px;line-height:23.1px;color:#6B7280}selector ul.cards .more{display:block;margin-top:auto;font:800 11.5px/17.25px Inter,system-ui,sans-serif;letter-spacing:1.15px;text-transform:uppercase;color:#15253D}selector p.related{margin:24px 0 0;font-size:15px;line-height:24px;text-align:center}selector ul + p.related{margin-top:28px}selector p.note{margin:28px auto 0;max-width:760px;font-size:15.5px;line-height:27.125px;text-align:center}selector ul.check.narrow{max-width:760px;margin:0 auto}selector p.aside{margin:28px 0 0;font-size:15px;line-height:26.25px;text-align:center}selector p.related a,selector p.note a,selector p.aside a{font-weight:700}selector p.pills{justify-content:center}"
+        },
+        "elements": []
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "77a849f",
+  "elType": "container",
+  "isInner": false,
+  "settings": {
+   "flex_direction": "column",
+   "flex_align_items": "center",
+   "padding": {
+    "unit": "px",
+    "top": "80",
+    "right": "24",
+    "bottom": "80",
+    "left": "24",
+    "isLinked": false
+   },
+   "background_background": "classic",
+   "content_width": "full",
+   "background_color": "",
+   "__globals__": {
+    "background_color": "globals/colors?id=gfwhite"
+   }
+  },
+  "elements": [
+   {
+    "id": "2511765",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+     "content_width": "boxed",
+     "flex_direction": "column",
+     "flex_align_items": "center",
+     "flex_gap": {
+      "unit": "px",
+      "column": "0",
+      "row": "0",
+      "isLinked": true
+     },
+     "padding": {
+      "unit": "px",
+      "top": "0",
+      "right": "0",
+      "bottom": "0",
+      "left": "0",
+      "isLinked": true
+     },
+     "boxed_width": {
+      "unit": "px",
+      "size": 1152
+     }
+    },
+    "elements": [
+     {
+      "id": "4f4b49b",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+       "flex_direction": "column",
+       "flex_align_items": "center",
+       "flex_gap": {
+        "unit": "px",
+        "column": "0",
+        "row": "0",
+        "isLinked": true
+       },
+       "width": {
+        "unit": "px",
+        "size": 760
+       },
+       "width_mobile": {
+        "unit": "%",
+        "size": 100
+       },
+       "content_width": "full",
+       "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+       },
+       "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "48",
+        "left": "0",
+        "isLinked": false
+       }
+      },
+      "elements": [
+       {
+        "id": "1451943",
+        "elType": "widget",
+        "widgetType": "heading",
+        "settings": {
+         "title": "Why Goodfellow Microfabrication",
+         "header_size": "div",
+         "typography_typography": "custom",
+         "typography_font_family": "Inter",
+         "typography_font_size": {
+          "unit": "px",
+          "size": 12
+         },
+         "typography_font_weight": "600",
+         "title_color": "",
+         "__globals__": {
+          "title_color": "globals/colors?id=gforange"
+         },
+         "align": "center",
+         "typography_line_height": {
+          "unit": "px",
+          "size": 18
+         },
+         "typography_letter_spacing": {
+          "unit": "px",
+          "size": 1.68
+         },
+         "typography_text_transform": "uppercase"
+        },
+        "elements": []
+       },
+       {
+        "id": "5a0d109",
+        "elType": "widget",
+        "widgetType": "heading",
+        "settings": {
+         "title": "Why choose Goodfellow Microfabrication for adhesives",
+         "header_size": "h2",
+         "typography_typography": "custom",
+         "typography_font_family": "Inter",
+         "typography_font_size": {
+          "unit": "px",
+          "size": 40
+         },
+         "typography_font_weight": "600",
+         "title_color": "#0F1620",
+         "align": "center",
+         "typography_line_height": {
+          "unit": "px",
+          "size": 44.8
+         },
+         "typography_letter_spacing": {
+          "unit": "px",
+          "size": -0.8
+         },
+         "_margin": {
+          "unit": "px",
+          "top": "18",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": false
+         }
+        },
+        "elements": []
+       }
+      ]
+     },
+     {
+      "id": "2ea42a7",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+       "width": {
+        "unit": "%",
+        "size": 100
+       },
+       "content_width": "full",
+       "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+       }
+      },
+      "elements": [
+       {
+        "id": "160216d",
+        "elType": "widget",
+        "widgetType": "text-editor",
+        "settings": {
+         "editor": "<ul class=\"cards p26\"><li><h3>Precision laser cutting</h3><p>Exacting tolerances and detailed designs through laser micromachining.</p></li><li><h3>Rapid turnaround</h3><p>Custom adhesive parts made quickly without compromising quality.</p></li><li><h3>Experience</h3><p>Extensive experience processing a wide variety of pressure-sensitive adhesives.</p></li><li><h3>Custom work</h3><p>We work with you to develop adhesive parts for your application and requirements.</p></li><li><h3>Layer bonding</h3><p>Bonding of different adhesive layers for complex, multi-functional assemblies.</p></li></ul>",
+         "typography_typography": "custom",
+         "typography_font_family": "Inter",
+         "typography_font_size": {
+          "unit": "px",
+          "size": 16
+         },
+         "typography_font_weight": "400",
+         "text_color": "",
+         "__globals__": {
+          "text_color": "globals/colors?id=gfink"
+         },
+         "typography_line_height": {
+          "unit": "px",
+          "size": 28
+         },
+         "custom_css": "selector p{font-size:16px;line-height:28px;font-weight:400;margin:0}selector a{font-size:inherit;line-height:inherit}selector p{margin:0 0 16px}selector p:last-child{margin-bottom:0}selector a{color:#15253D;text-decoration:none}selector a:hover{color:#F5821F}selector p.pills{display:flex;flex-wrap:wrap;gap:10px;margin:0}selector .pill{display:inline-flex;align-items:center;padding:9px 16px;border:1.5px solid #DCE1EA;border-radius:9999px;background:#fff;font:700 13.5px/20.25px Inter,system-ui,sans-serif;color:#15253D;text-decoration:none;transition:all .3s cubic-bezier(.25,.46,.45,.94)}selector a.pill:hover{border-color:#F5821F;color:#15253D;transform:translateY(-1px);box-shadow:0 8px 20px rgba(245,130,31,.12)}selector p.pills + p.eb{margin-top:28px}selector p.eb{margin:0 0 14px;font:600 12px/18px Inter,system-ui,sans-serif;letter-spacing:1.68px;text-transform:uppercase;color:#F5821F}selector ul.check{list-style:none;margin:0;padding:0;display:grid;gap:12px}selector ul.check li{position:relative;margin:0;font-size:15.5px;line-height:25.575px;color:#3C4858;padding:16px 18px 16px 48px;background:#fff;border:1px solid #DCE1EA;border-radius:12px}selector ul.check li::before{content:\"\";position:absolute;left:18px;top:20px;width:18px;height:18px;background:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F5821F' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E\") no-repeat center/18px}selector ul.cards{list-style:none;margin:0;padding:0;display:grid;gap:20px;grid-template-columns:repeat(3,minmax(0,1fr))}@media(max-width:979px){selector ul.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:620px){selector ul.cards{grid-template-columns:1fr}}selector ul.cards li{margin:0;display:flex;flex-direction:column;gap:10px;background:#fff;border:1px solid #DCE1EA;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.07);padding:24px 24px 26px;transition:transform .3s cubic-bezier(.25,.46,.45,.94),box-shadow .3s cubic-bezier(.25,.46,.45,.94)}selector ul.cards.p26 li{padding:26px 24px}selector ul.cards li > a{display:flex;flex-direction:column;gap:10px;flex:1;color:inherit;text-decoration:none}selector ul.cards li:has(> a):hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(15,42,68,.08)}selector ul.cards .meta{display:block;font:700 11px/16.5px Inter,system-ui,sans-serif;letter-spacing:1.54px;text-transform:uppercase;color:#F5821F}selector ul.cards h3{margin:0;font:700 17.6px/22.88px Inter,system-ui,sans-serif;letter-spacing:-.176px;color:#15253D}selector ul.cards p{margin:0;font-size:14px;line-height:23.1px;color:#6B7280}selector ul.cards .more{display:block;margin-top:auto;font:800 11.5px/17.25px Inter,system-ui,sans-serif;letter-spacing:1.15px;text-transform:uppercase;color:#15253D}selector p.related{margin:24px 0 0;font-size:15px;line-height:24px;text-align:center}selector ul + p.related{margin-top:28px}selector p.note{margin:28px auto 0;max-width:760px;font-size:15.5px;line-height:27.125px;text-align:center}selector ul.check.narrow{max-width:760px;margin:0 auto}selector p.aside{margin:28px 0 0;font-size:15px;line-height:26.25px;text-align:center}selector p.related a,selector p.note a,selector p.aside a{font-weight:700}selector p.pills{justify-content:center}"
+        },
+        "elements": []
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ce1ec93",
+  "elType": "container",
+  "isInner": false,
+  "settings": {
+   "background_background": "classic",
+   "padding": {
+    "unit": "px",
+    "top": "96",
+    "right": "24",
+    "bottom": "96",
+    "left": "24",
+    "isLinked": false
+   },
+   "custom_css": "selector{position:relative;overflow:hidden}selector::before{content:\"\";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.043) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.043) 1px,transparent 1px);background-size:28px 28px;opacity:.5;pointer-events:none}selector > .e-con-inner{position:relative}",
+   "content_width": "full",
+   "background_color": "",
+   "__globals__": {
+    "background_color": "globals/colors?id=gfnavydp"
+   }
+  },
+  "elements": [
+   {
+    "id": "339f267",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+     "content_width": "boxed",
+     "boxed_width": {
+      "unit": "px",
+      "size": 720
+     },
+     "flex_direction": "column",
+     "flex_align_items": "center",
+     "flex_gap": {
+      "unit": "px",
+      "column": "0",
+      "row": "0",
+      "isLinked": true
+     },
+     "padding": {
+      "unit": "px",
+      "top": "0",
+      "right": "0",
+      "bottom": "0",
+      "left": "0",
+      "isLinked": true
+     }
+    },
+    "elements": [
+     {
+      "id": "31cbcc0",
+      "elType": "widget",
+      "widgetType": "heading",
+      "settings": {
+       "title": "Rapid response",
+       "header_size": "div",
+       "typography_typography": "custom",
+       "typography_font_family": "Inter",
+       "typography_font_size": {
+        "unit": "px",
+        "size": 12
+       },
+       "typography_font_weight": "600",
+       "title_color": "",
+       "__globals__": {
+        "title_color": "globals/colors?id=gfwhite"
+       },
+       "align": "center",
+       "typography_line_height": {
+        "unit": "px",
+        "size": 24
+       },
+       "typography_letter_spacing": {
+        "unit": "px",
+        "size": 1.68
+       },
+       "typography_text_transform": "uppercase"
+      },
+      "elements": []
+     },
+     {
+      "id": "49fcee4",
+      "elType": "widget",
+      "widgetType": "heading",
+      "settings": {
+       "title": "Talk to the team.",
+       "header_size": "h2",
+       "typography_typography": "custom",
+       "typography_font_family": "Inter",
+       "typography_font_size": {
+        "unit": "px",
+        "size": 56
+       },
+       "typography_font_weight": "600",
+       "title_color": "",
+       "__globals__": {
+        "title_color": "globals/colors?id=gfwhite"
+       },
+       "align": "center",
+       "typography_line_height": {
+        "unit": "px",
+        "size": 58.8
+       },
+       "typography_letter_spacing": {
+        "unit": "px",
+        "size": -1.4
+       },
+       "_margin": {
+        "unit": "px",
+        "top": "20",
+        "right": "0",
+        "bottom": "20",
+        "left": "0",
+        "isLinked": false
+       }
+      },
+      "elements": []
+     },
+     {
+      "id": "8bae456",
+      "elType": "widget",
+      "widgetType": "text-editor",
+      "settings": {
+       "editor": "<p>Send a drawing or a short description of your project. Our engineers can recommend the best material and process for your requirements.</p>",
+       "typography_typography": "custom",
+       "typography_font_family": "Inter",
+       "typography_font_size": {
+        "unit": "px",
+        "size": 18
+       },
+       "typography_font_weight": "400",
+       "text_color": "rgba(255,255,255,.8)",
+       "typography_line_height": {
+        "unit": "px",
+        "size": 29.7
+       },
+       "align": "center",
+       "custom_css": "selector p{font-size:18px;line-height:29.7px;font-weight:400;color:rgba(255,255,255,.8);margin:0}selector a{font-size:inherit;line-height:inherit}",
+       "_element_width": "initial",
+       "_element_custom_width": {
+        "unit": "px",
+        "size": 600
+       },
+       "_margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "32",
+        "left": "0",
+        "isLinked": false
+       }
+      },
+      "elements": []
+     },
+     {
+      "id": "0bd2c54",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+       "flex_direction": "row",
+       "flex_wrap": "wrap",
+       "flex_justify_content": "center",
+       "flex_align_items": "center",
+       "flex_gap": {
+        "unit": "px",
+        "column": "12",
+        "row": "12",
+        "isLinked": true
+       },
+       "content_width": "full",
+       "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+       }
+      },
+      "elements": [
+       {
+        "id": "2c6faa4",
+        "elType": "widget",
+        "widgetType": "button",
+        "settings": {
+         "text": "Email us",
+         "link": {
+          "url": "https://www.potomac-laser.com/?page_id=12302&preview=true",
+          "is_external": "",
+          "nofollow": ""
+         },
+         "typography_typography": "custom",
+         "typography_font_family": "Inter",
+         "typography_font_size": {
+          "unit": "px",
+          "size": 15
+         },
+         "typography_font_weight": "600",
+         "border_radius": {
+          "unit": "px",
+          "top": "999",
+          "right": "999",
+          "bottom": "999",
+          "left": "999",
+          "isLinked": true
+         },
+         "text_padding": {
+          "unit": "px",
+          "top": "15",
+          "right": "28",
+          "bottom": "15",
+          "left": "28",
+          "isLinked": false
+         },
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gforange",
+          "button_text_color": "globals/colors?id=gfwhite"
+         },
+         "button_text_color": "",
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "rgba(0,0,0,0)",
+         "custom_css": "selector .elementor-button{box-shadow:0 8px 24px rgba(245,130,31,.3)}"
+        },
+        "elements": []
+       },
+       {
+        "id": "ed4cde4",
+        "elType": "widget",
+        "widgetType": "button",
+        "settings": {
+         "text": "Send a drawing",
+         "link": {
+          "url": "https://www.potomac-laser.com/project-quote/#projectForm",
+          "is_external": "",
+          "nofollow": ""
+         },
+         "typography_typography": "custom",
+         "typography_font_family": "Inter",
+         "typography_font_size": {
+          "unit": "px",
+          "size": 15
+         },
+         "typography_font_weight": "600",
+         "border_radius": {
+          "unit": "px",
+          "top": "999",
+          "right": "999",
+          "bottom": "999",
+          "left": "999",
+          "isLinked": true
+         },
+         "text_padding": {
+          "unit": "px",
+          "top": "15",
+          "right": "28",
+          "bottom": "15",
+          "left": "28",
+          "isLinked": false
+         },
+         "background_color": "rgba(0,0,0,0)",
+         "button_text_color": "",
+         "__globals__": {
+          "button_text_color": "globals/colors?id=gfwhite"
+         },
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "rgba(255,255,255,.32)"
+        },
+        "elements": []
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+]

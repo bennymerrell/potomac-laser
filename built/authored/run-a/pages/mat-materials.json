@@ -1,0 +1,58 @@
+{
+ "slug": "pl-auto-materials",
+ "title": "Materials",
+ "design_page": "Materials - Materials.html",
+ "header": "# spec.yaml — Materials  (run 20260924-135039, autonomous, RUN B)\n# Source design : Potomac Laser.zip (fab7225c…) :: Materials - Materials.html  (no tweak defaults)\n# MATCH (3.c.ii):\n#   [0] hero-dark-centered         library match (centred, no meta, no CTA)\n#   [1] split-media-rich           §7: photo left | eyebrow+H2+rich body (split-media-prose needs 2 buttons, fixed)\n#   [2] head-rich-subtle           §7: centred head + rich body on #F6F8FB (pills / cards / check-list, count free)\n#   [3] head-rich-white            §7: centred head + rich body, white\n#   [4] cta-band-dark-display      §7: .final-cta at the Materials type scale (library cta-band-dark is 38/800 + gradient, 463px vs 453)\n# Rich body: list-like content is one text-editor slot in the fragment's class vocabulary (gen_materials.py).\n# Brand: present-tense 'Potomac' -> Goodfellow Microfabrication; merger-narrative sentences kept (run report).\n# Links: design page hrefs are rewritten by the §3.d link pass.\n",
+ "assets": [
+  "mat_materials_1"
+ ],
+ "sections": [
+  {
+   "pattern": "hero-dark-centered",
+   "values": {
+    "heading_1": "Our materials",
+    "heading_2": "Materials for micromanufacturing",
+    "body_1": "<p>Potomac Photonics has joined the <a href=\"https://www.goodfellow.com/usa\" rel=\"noopener\" target=\"_blank\">Goodfellow family</a>, combining <strong>microfabrication expertise with advanced materials</strong> supplied to science and industry since 1946.</p>"
+   }
+  },
+  {
+   "pattern": "split-media-rich",
+   "values": {
+    "image_1": {
+     "asset": "mat_materials_1"
+    },
+    "heading_1": "Potomac and Goodfellow",
+    "heading_2": "Materials and micromanufacturing from one group",
+    "body_1": "<p>With a long history of helping clients develop miniature products and bring them to market quickly, Potomac Photonics now combines its expertise with <a href=\"https://www.goodfellow.com/usa/about-us\" rel=\"noopener\" target=\"_blank\">Goodfellow's work in materials science</a>.</p><p>Goodfellow has supplied science and industry worldwide since 1946, contributing to <a href=\"https://www.goodfellow.com/usa/resources/category/case-studies/\" rel=\"noopener\" target=\"_blank\">projects</a> from cochlear implants to the ignition of nuclear fusion. Its aim is to be a partner for every specialist material, designed, manufactured and delivered globally.</p><p>Together, Potomac's microfabrication and <a href=\"https://www.goodfellow.com/usa/services/goodfellow-technical-solutions\" rel=\"noopener\" target=\"_blank\">Goodfellow's materials expertise</a> help accelerate product development across a wide range of industries.</p>"
+   }
+  },
+  {
+   "pattern": "head-rich-subtle",
+   "values": {
+    "heading_1": "Goodfellow Microfabrication",
+    "heading_2": "Materials we machine",
+    "body_1": "<ul class=\"cards\"><li><a href=\"Materials - Metal Parts.html\"><span class=\"meta\">Goodfellow Microfabrication</span><h3>Metal Parts</h3><p>Precise features in almost any metal, as small as 1 micron.</p><span class=\"more\">View material</span></a></li><li><a href=\"Materials - Plastic Micromachining.html\"><span class=\"meta\">Goodfellow Microfabrication</span><h3>Plastic Micromachining</h3><p>Almost any polymer, from single prototypes to production runs.</p><span class=\"more\">View material</span></a></li><li><a href=\"Materials - Adhesives.html\"><span class=\"meta\">Goodfellow Microfabrication</span><h3>Pressure-Sensitive Adhesives</h3><p>Cutting and patterning of adhesive layers.</p><span class=\"more\">View material</span></a></li><li><a href=\"Materials - Thin Metal Foils.html\"><span class=\"meta\">Goodfellow Microfabrication</span><h3>Thin Metal Foils</h3><p>Laser machining of thin metal foils.</p><span class=\"more\">View material</span></a></li><li><a href=\"Materials - Kapton Polyimide.html\"><span class=\"meta\">Goodfellow Microfabrication</span><h3>Kapton, Polyimide</h3><p>Kapton HN and VN held on the shelf.</p><span class=\"more\">View material</span></a></li><li><a href=\"https://www.potomac-laser.com/material/ceramics/\"><span class=\"meta\">Goodfellow Microfabrication</span><h3>Ceramics and PZT</h3><p>Laser cutting of ceramic and PZT.</p><span class=\"more\">View material</span></a></li><li><a href=\"https://www.potomac-laser.com/material/microfluidics-polymers-vs-glass/\"><span class=\"meta\">Goodfellow Microfabrication</span><h3>Microfluidics: polymers vs. glass</h3><p>Choosing a substrate for microfluidic devices.</p><span class=\"more\">View material</span></a></li><li><a href=\"https://www.potomac-laser.com/material/silicon-2/\"><span class=\"meta\">Goodfellow Microfabrication</span><h3>Silicon wafers</h3><p>Laser micromachining of silicon wafers.</p><span class=\"more\">View material</span></a></li><li><a href=\"Materials - Glass.html\"><span class=\"meta\">Goodfellow Microfabrication</span><h3>Glass</h3><p>Micromachining of glass substrates.</p><span class=\"more\">View material</span></a></li></ul>"
+   }
+  },
+  {
+   "pattern": "head-rich-white",
+   "values": {
+    "heading_1": "Goodfellow",
+    "heading_2": "Materials from Goodfellow",
+    "body_1": "<p class=\"pills\"><a class=\"pill\" href=\"https://goodfellow.com/material/alloys/\">Alloys</a><a class=\"pill\" href=\"https://www.goodfellow.com/material/biopolymers\">Biopolymers</a><a class=\"pill\" href=\"https://www.goodfellow.com/material/ceramics\">Ceramics</a><a class=\"pill\" href=\"https://www.goodfellow.com/material/chemical-compounds\">Chemical Compounds</a><a class=\"pill\" href=\"https://www.goodfellow.com/material/composites\">Composites</a><a class=\"pill\" href=\"https://www.goodfellow.com/material/compounds\">Compounds</a><a class=\"pill\" href=\"https://www.goodfellow.com/material/gemstones\">Gemstones</a><a class=\"pill\" href=\"https://www.goodfellow.com/material/glasses\">Glasses</a><a class=\"pill\" href=\"https://www.goodfellow.com/material/intermetallics\">Intermetallics</a><a class=\"pill\" href=\"https://www.goodfellow.com/material/metals\">Metals</a><a class=\"pill\" href=\"https://www.goodfellow.com/material/nanomaterials\">Nanomaterials</a><a class=\"pill\" href=\"https://www.goodfellow.com/material/polymers\">Polymers</a><a class=\"pill\" href=\"https://www.goodfellow.com/material/polymer-composites\">Polymer Composites</a><a class=\"pill\" href=\"https://www.goodfellow.com/material/precious-metals\">Precious Metals</a><a class=\"pill\" href=\"https://www.goodfellow.com/material/rare-earth-metals\">Rare Earth Metals</a></p>"
+   }
+  },
+  {
+   "pattern": "cta-band-dark-display",
+   "values": {
+    "heading_1": "Rapid response",
+    "heading_2": "Talk to the team.",
+    "body_1": "<p>Send a drawing or a short description of your project. Our engineers can recommend the best material and process for your requirements.</p>",
+    "button_1": "Email us",
+    "url_1": "Contact - Contact.html",
+    "button_2": "Send a drawing",
+    "url_2": "https://www.potomac-laser.com/project-quote/#projectForm"
+   }
+  }
+ ]
+}

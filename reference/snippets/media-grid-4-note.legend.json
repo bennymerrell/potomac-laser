@@ -1,0 +1,14 @@
+{
+    "pattern": "media-grid-4-note",
+    "source_post": 12393,
+    "source_section_index": 3,
+    "tokens": {
+        "{heading_1}": "Gallery",
+        "{heading_2}": "Example parts",
+        "{image_1}": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-mat-plasticmicro-2.webp",
+        "{image_2}": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-mat-plasticmicro-3.webp",
+        "{image_3}": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-mat-plasticmicro-4.webp",
+        "{image_4}": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-mat-plasticmicro-5.webp",
+        "{body_1}": "<p class=\"related\">See more micromachined parts in the <a href=\"Gallery - Project Gallery.html\" style=\"font-weight:700\">project gallery</a>.</p>"
+    }
+}

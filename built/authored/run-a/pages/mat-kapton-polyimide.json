@@ -1,0 +1,60 @@
+{
+ "slug": "pl-auto-kapton-polyimide",
+ "title": "Kapton Polyimide",
+ "design_page": "Materials - Kapton Polyimide.html",
+ "header": "# spec.yaml — Kapton Polyimide  (run 20260924-135039, autonomous, RUN B)\n# Source design : Potomac Laser.zip (fab7225c…) :: Materials - Kapton Polyimide.html  (no tweak defaults)\n# MATCH (3.c.ii):\n#   [0] hero-dark-centered         library match (centred, no meta, no CTA)\n#   [1] split-media-rich           §7: photo left | eyebrow+H2+rich body (split-media-prose needs 2 buttons, fixed)\n#   [2] head-rich-subtle           §7: centred head + rich body on #F6F8FB (pills / cards / check-list, count free)\n#   [3] split-rich-rich-related    §7: prose | check-list + centred Related line\n#   [4] cta-band-dark-display      §7: .final-cta at the Materials type scale (library cta-band-dark is 38/800 + gradient, 463px vs 453)\n# Rich body: list-like content is one text-editor slot in the fragment's class vocabulary (gen_materials.py).\n# Brand: present-tense 'Potomac' -> Goodfellow Microfabrication; merger-narrative sentences kept (run report).\n# Links: design page hrefs are rewritten by the §3.d link pass.\n",
+ "assets": [
+  "mat_kaptonpolyim_1"
+ ],
+ "sections": [
+  {
+   "pattern": "hero-dark-centered",
+   "values": {
+    "heading_1": "Materials",
+    "heading_2": "Kapton polyimide",
+    "body_1": "<p>Custom parts in <strong>DuPont Kapton polyimide</strong>, one of the most versatile materials for medical, biotech, aerospace, automotive and photovoltaics.</p>"
+   }
+  },
+  {
+   "pattern": "split-media-rich",
+   "values": {
+    "image_1": {
+     "asset": "mat_kaptonpolyim_1"
+    },
+    "heading_1": "Laser micromachining",
+    "heading_2": "Over 30 years machining Kapton",
+    "body_1": "<p>Goodfellow Microfabrication has micromachined Kapton polyimide films for over 30 years, fabricating complex and simple parts on a prototyping or production basis. Our technology machines all types of Kapton polyimide, including hole drilling, cutting and more.</p><p>We stock Kapton HN film in 0.001 in, 0.003 in and 0.005 in thicknesses for rapid turnaround on custom prototype parts.</p>"
+   }
+  },
+  {
+   "pattern": "head-rich-subtle",
+   "values": {
+    "heading_1": "Kapton grades",
+    "heading_2": "Examples we machine",
+    "body_1": "<p class=\"pills\"><span class=\"pill\">Kapton HN</span><span class=\"pill\">Kapton FN</span><span class=\"pill\">Kapton FCR</span><span class=\"pill\">Kapton CR</span><span class=\"pill\">Kapton HPP-ST</span><span class=\"pill\">Kapton PV</span><span class=\"pill\">Kapton EN</span><span class=\"pill\">Cirlex</span><span class=\"pill\">Vespel</span><span class=\"pill\">Many more</span></p>"
+   }
+  },
+  {
+   "pattern": "split-rich-rich-related",
+   "values": {
+    "heading_1": "Capabilities",
+    "heading_2": "Features in Kapton",
+    "body_1": "<p>Laser micromachining of micro-holes, blind holes, channels, complex shapes, washers and patterning. Precise channels can also be milled into Kapton and filled with conductive pastes and nano-materials.</p><p>Call us or send your drawing to discuss. For an immediate order, upload your drawing to our InstaQuote app.</p>",
+    "body_2": "<ul class=\"check\"><li>Laser micromachining of polyimide</li><li>Laser hole drilling of polyimide</li><li>Laser cutting of polyimide</li><li>Laser patterning of metallised polyimide</li><li>Many more</li></ul>",
+    "body_3": "<p class=\"related\">Related: <a href=\"Materials - Polymers.html\" style=\"font-weight:700\">Polymers</a> · <a href=\"Materials - Plastic Micromachining.html\" style=\"font-weight:700\">Plastic micromachining</a> · <a href=\"Blog - Kapton.dc.html\" style=\"font-weight:700\">Machining Kapton for aerospace</a></p>"
+   }
+  },
+  {
+   "pattern": "cta-band-dark-display",
+   "values": {
+    "heading_1": "Rapid response",
+    "heading_2": "Talk to the team.",
+    "body_1": "<p>Send a drawing or a short description of your project. Our engineers can recommend the best material and process for your requirements.</p>",
+    "button_1": "Email us",
+    "url_1": "Contact - Contact.html",
+    "button_2": "Send a drawing",
+    "url_2": "https://www.potomac-laser.com/project-quote/#projectForm"
+   }
+  }
+ ]
+}

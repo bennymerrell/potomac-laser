@@ -1,0 +1,492 @@
+{
+ "Materials": [
+  {
+   "pattern": "hero-dark-centered",
+   "values": {
+    "heading_1": "Our materials",
+    "heading_2": "Materials for micromanufacturing",
+    "body_1": "<p>Potomac Photonics has joined the <a href=\"https://www.goodfellow.com/usa\" rel=\"noopener\" target=\"_blank\">Goodfellow family</a>, combining <strong>microfabrication expertise with advanced materials</strong> supplied to science and industry since 1946.</p>"
+   }
+  },
+  {
+   "pattern": "split-media-rich",
+   "values": {
+    "image_1": {
+     "asset": "mat_materials_1"
+    },
+    "heading_1": "Potomac and Goodfellow",
+    "heading_2": "Materials and micromanufacturing from one group",
+    "body_1": "<p>With a long history of helping clients develop miniature products and bring them to market quickly, Potomac Photonics now combines its expertise with <a href=\"https://www.goodfellow.com/usa/about-us\" rel=\"noopener\" target=\"_blank\">Goodfellow's work in materials science</a>.</p><p>Goodfellow has supplied science and industry worldwide since 1946, contributing to <a href=\"https://www.goodfellow.com/usa/resources/category/case-studies/\" rel=\"noopener\" target=\"_blank\">projects</a> from cochlear implants to the ignition of nuclear fusion. Its aim is to be a partner for every specialist material, designed, manufactured and delivered globally.</p><p>Together, Potomac's microfabrication and <a href=\"https://www.goodfellow.com/usa/services/goodfellow-technical-solutions\" rel=\"noopener\" target=\"_blank\">Goodfellow's materials expertise</a> help accelerate product development across a wide range of industries.</p>"
+   }
+  },
+  {
+   "pattern": "head-rich-subtle",
+   "values": {
+    "heading_1": "Goodfellow Microfabrication",
+    "heading_2": "Materials we machine",
+    "body_1": "<ul class=\"cards\"><li><a href=\"Materials - Metal Parts.html\"><span class=\"meta\">Goodfellow Microfabrication</span><h3>Metal Parts</h3><p>Precise features in almost any metal, as small as 1 micron.</p><span class=\"more\">View material</span></a></li><li><a href=\"Materials - Plastic Micromachining.html\"><span class=\"meta\">Goodfellow Microfabrication</span><h3>Plastic Micromachining</h3><p>Almost any polymer, from single prototypes to production runs.</p><span class=\"more\">View material</span></a></li><li><a href=\"Materials - Adhesives.html\"><span class=\"meta\">Goodfellow Microfabrication</span><h3>Pressure-Sensitive Adhesives</h3><p>Cutting and patterning of adhesive layers.</p><span class=\"more\">View material</span></a></li><li><a href=\"Materials - Thin Metal Foils.html\"><span class=\"meta\">Goodfellow Microfabrication</span><h3>Thin Metal Foils</h3><p>Laser machining of thin metal foils.</p><span class=\"more\">View material</span></a></li><li><a href=\"Materials - Kapton Polyimide.html\"><span class=\"meta\">Goodfellow Microfabrication</span><h3>Kapton, Polyimide</h3><p>Kapton HN and VN held on the shelf.</p><span class=\"more\">View material</span></a></li><li><a href=\"https://www.potomac-laser.com/material/ceramics/\"><span class=\"meta\">Goodfellow Microfabrication</span><h3>Ceramics and PZT</h3><p>Laser cutting of ceramic and PZT.</p><span class=\"more\">View material</span></a></li><li><a href=\"https://www.potomac-laser.com/material/microfluidics-polymers-vs-glass/\"><span class=\"meta\">Goodfellow Microfabrication</span><h3>Microfluidics: polymers vs. glass</h3><p>Choosing a substrate for microfluidic devices.</p><span class=\"more\">View material</span></a></li><li><a href=\"https://www.potomac-laser.com/material/silicon-2/\"><span class=\"meta\">Goodfellow Microfabrication</span><h3>Silicon wafers</h3><p>Laser micromachining of silicon wafers.</p><span class=\"more\">View material</span></a></li><li><a href=\"Materials - Glass.html\"><span class=\"meta\">Goodfellow Microfabrication</span><h3>Glass</h3><p>Micromachining of glass substrates.</p><span class=\"more\">View material</span></a></li></ul>"
+   }
+  },
+  {
+   "pattern": "head-rich-white",
+   "values": {
+    "heading_1": "Goodfellow",
+    "heading_2": "Materials from Goodfellow",
+    "body_1": "<p class=\"pills\"><a class=\"pill\" href=\"https://goodfellow.com/material/alloys/\">Alloys</a><a class=\"pill\" href=\"https://www.goodfellow.com/material/biopolymers\">Biopolymers</a><a class=\"pill\" href=\"https://www.goodfellow.com/material/ceramics\">Ceramics</a><a class=\"pill\" href=\"https://www.goodfellow.com/material/chemical-compounds\">Chemical Compounds</a><a class=\"pill\" href=\"https://www.goodfellow.com/material/composites\">Composites</a><a class=\"pill\" href=\"https://www.goodfellow.com/material/compounds\">Compounds</a><a class=\"pill\" href=\"https://www.goodfellow.com/material/gemstones\">Gemstones</a><a class=\"pill\" href=\"https://www.goodfellow.com/material/glasses\">Glasses</a><a class=\"pill\" href=\"https://www.goodfellow.com/material/intermetallics\">Intermetallics</a><a class=\"pill\" href=\"https://www.goodfellow.com/material/metals\">Metals</a><a class=\"pill\" href=\"https://www.goodfellow.com/material/nanomaterials\">Nanomaterials</a><a class=\"pill\" href=\"https://www.goodfellow.com/material/polymers\">Polymers</a><a class=\"pill\" href=\"https://www.goodfellow.com/material/polymer-composites\">Polymer Composites</a><a class=\"pill\" href=\"https://www.goodfellow.com/material/precious-metals\">Precious Metals</a><a class=\"pill\" href=\"https://www.goodfellow.com/material/rare-earth-metals\">Rare Earth Metals</a></p>"
+   }
+  },
+  {
+   "pattern": "cta-band-dark-display",
+   "values": {
+    "heading_1": "Rapid response",
+    "heading_2": "Talk to the team.",
+    "body_1": "<p>Send a drawing or a short description of your project. Our engineers can recommend the best material and process for your requirements.</p>",
+    "button_1": "Email us",
+    "url_1": "Contact - Contact.html",
+    "button_2": "Send a drawing",
+    "url_2": "https://www.potomac-laser.com/project-quote/#projectForm"
+   }
+  }
+ ],
+ "Adhesives": [
+  {
+   "pattern": "hero-dark-centered",
+   "values": {
+    "heading_1": "Materials",
+    "heading_2": "Pressure-sensitive adhesives",
+    "body_1": "<p>Rapid turnaround on <strong>custom parts made from high-performance pressure-sensitive adhesives</strong>, from prototypes to production.</p>"
+   }
+  },
+  {
+   "pattern": "split-media-rich",
+   "values": {
+    "image_1": {
+     "asset": "mat_adhesives_1"
+    },
+    "heading_1": "Laser micromachining",
+    "heading_2": "Precise features in adhesive layers",
+    "body_1": "<p>Pressure-sensitive adhesives are used across biotech, microfluidics, medical devices, electronics and aerospace. Goodfellow Microfabrication has developed a broad range of technologies to process them, for complex and simple parts on a prototyping or production basis.</p><p>Customers use these materials in applications such as microfluidics and medical devices, to bond layers together. Our laser technology covers cutting, patterning, layering and more.</p>"
+   }
+  },
+  {
+   "pattern": "head-rich-subtle",
+   "values": {
+    "heading_1": "Adhesive types",
+    "heading_2": "Adhesives we process",
+    "body_1": "<p class=\"pills\"><span class=\"pill\">Acrylic adhesives</span><span class=\"pill\">Silicone adhesives</span><span class=\"pill\">Rubber-based adhesives</span><span class=\"pill\">UV-curable adhesives</span><span class=\"pill\">Hot melt adhesives</span><span class=\"pill\">Conductive adhesives</span><span class=\"pill\">Biomedical-grade adhesives</span><span class=\"pill\">Multi-layer adhesive systems</span><span class=\"pill\">Custom formulated adhesives</span><span class=\"pill\">And many more</span></p><p class=\"note\">Precision laser cutting suits biotech and microfluidics, where accuracy and reliability matter: detailed microfluidic channels, multi-layer biomedical devices and precise bonding.</p>"
+   }
+  },
+  {
+   "pattern": "head-rich-white",
+   "values": {
+    "heading_1": "Why Goodfellow Microfabrication",
+    "heading_2": "Why choose Goodfellow Microfabrication for adhesives",
+    "body_1": "<ul class=\"cards p26\"><li><h3>Precision laser cutting</h3><p>Exacting tolerances and detailed designs through laser micromachining.</p></li><li><h3>Rapid turnaround</h3><p>Custom adhesive parts made quickly without compromising quality.</p></li><li><h3>Experience</h3><p>Extensive experience processing a wide variety of pressure-sensitive adhesives.</p></li><li><h3>Custom work</h3><p>We work with you to develop adhesive parts for your application and requirements.</p></li><li><h3>Layer bonding</h3><p>Bonding of different adhesive layers for complex, multi-functional assemblies.</p></li></ul>"
+   }
+  },
+  {
+   "pattern": "cta-band-dark-display",
+   "values": {
+    "heading_1": "Rapid response",
+    "heading_2": "Talk to the team.",
+    "body_1": "<p>Send a drawing or a short description of your project. Our engineers can recommend the best material and process for your requirements.</p>",
+    "button_1": "Email us",
+    "url_1": "Contact - Contact.html",
+    "button_2": "Send a drawing",
+    "url_2": "https://www.potomac-laser.com/project-quote/#projectForm"
+   }
+  }
+ ],
+ "Glass": [
+  {
+   "pattern": "hero-dark-centered",
+   "values": {
+    "heading_1": "Materials",
+    "heading_2": "Glass micromachining",
+    "body_1": "<p>Tools to machine <strong>complex features in glass as small as 1 micron</strong>, with hole drilling, cutting and marking.</p>"
+   }
+  },
+  {
+   "pattern": "split-media-rich",
+   "values": {
+    "image_1": {
+     "asset": "mat_glass_1"
+    },
+    "heading_1": "The material",
+    "heading_2": "Machining an amorphous solid",
+    "body_1": "<p>Glass is an amorphous solid, usually inorganic. Unlike crystalline solids it has no regular internal structure, and it is generally hard and brittle.</p><p>Using high-accuracy motion systems, Goodfellow Microfabrication holds tight positional tolerances across large parts, with line widths as narrow as 10 microns depending on the type of glass.</p><p>We have extensive experience drilling holes for leak testing of pharmaceutical vials and ampoules. See our <a href=\"Applications - CCIT AW.html\" style=\"font-weight:700\">leak test hole drilling</a> capability.</p>"
+   }
+  },
+  {
+   "pattern": "head-rich-subtle",
+   "values": {
+    "heading_1": "Services",
+    "heading_2": "Glass services",
+    "body_1": "<ul class=\"cards p26\"><li><span class=\"meta\">Marking</span><h3>Laser engraving</h3><p>Detailed, permanent markings for branding and identification.</p></li><li><span class=\"meta\">Marking</span><h3>Inkjet printing</h3><p>High-resolution markings for product information and appearance.</p></li><li><span class=\"meta\">Marking</span><h3>Etching</h3><p>Subtle designs that improve the appearance of glass products.</p></li><li><span class=\"meta\">Drilling</span><h3>Automated hole drilling</h3><p>Automated drilling equipment that improves efficiency and reduces turnaround times.</p></li><li><span class=\"meta\">Drilling</span><h3>Precision drilling</h3><p>Small to large diameter holes, drilled accurately and consistently.</p></li><li><span class=\"meta\">Drilling</span><h3>Custom drilling</h3><p>Drilling processes developed to your project requirements.</p></li></ul>"
+   }
+  },
+  {
+   "pattern": "split-rich-media",
+   "values": {
+    "heading_1": "Glass types",
+    "heading_2": "Glasses we machine",
+    "body_1": "<p class=\"pills\"><span class=\"pill\">Borosilicates</span><span class=\"pill\">Glass ceramics</span><span class=\"pill\">Schott glass</span><span class=\"pill\">Fused silica</span></p><p class=\"eb\">Industries</p><p class=\"pills\"><span class=\"pill\">Medical devices</span><span class=\"pill\">Electronics</span><span class=\"pill\">Aerospace</span><span class=\"pill\">Biotechnology</span><span class=\"pill\">Automotive</span><span class=\"pill\">Alternative energy and photovoltaics</span></p>",
+    "image_1": {
+     "asset": "mat_glass_2"
+    }
+   }
+  },
+  {
+   "pattern": "cta-band-dark-display",
+   "values": {
+    "heading_1": "Rapid response",
+    "heading_2": "Talk to the team.",
+    "body_1": "<p>Send a drawing or a short description of your project. Our engineers can recommend the best material and process for your requirements.</p>",
+    "button_1": "Email us",
+    "url_1": "Contact - Contact.html",
+    "button_2": "Send a drawing",
+    "url_2": "https://www.potomac-laser.com/project-quote/#projectForm"
+   }
+  }
+ ],
+ "Kapton Polyimide": [
+  {
+   "pattern": "hero-dark-centered",
+   "values": {
+    "heading_1": "Materials",
+    "heading_2": "Kapton polyimide",
+    "body_1": "<p>Custom parts in <strong>DuPont Kapton polyimide</strong>, one of the most versatile materials for medical, biotech, aerospace, automotive and photovoltaics.</p>"
+   }
+  },
+  {
+   "pattern": "split-media-rich",
+   "values": {
+    "image_1": {
+     "asset": "mat_kaptonpolyim_1"
+    },
+    "heading_1": "Laser micromachining",
+    "heading_2": "Over 30 years machining Kapton",
+    "body_1": "<p>Goodfellow Microfabrication has micromachined Kapton polyimide films for over 30 years, fabricating complex and simple parts on a prototyping or production basis. Our technology machines all types of Kapton polyimide, including hole drilling, cutting and more.</p><p>We stock Kapton HN film in 0.001 in, 0.003 in and 0.005 in thicknesses for rapid turnaround on custom prototype parts.</p>"
+   }
+  },
+  {
+   "pattern": "head-rich-subtle",
+   "values": {
+    "heading_1": "Kapton grades",
+    "heading_2": "Examples we machine",
+    "body_1": "<p class=\"pills\"><span class=\"pill\">Kapton HN</span><span class=\"pill\">Kapton FN</span><span class=\"pill\">Kapton FCR</span><span class=\"pill\">Kapton CR</span><span class=\"pill\">Kapton HPP-ST</span><span class=\"pill\">Kapton PV</span><span class=\"pill\">Kapton EN</span><span class=\"pill\">Cirlex</span><span class=\"pill\">Vespel</span><span class=\"pill\">Many more</span></p>"
+   }
+  },
+  {
+   "pattern": "split-rich-rich-related",
+   "values": {
+    "heading_1": "Capabilities",
+    "heading_2": "Features in Kapton",
+    "body_1": "<p>Laser micromachining of micro-holes, blind holes, channels, complex shapes, washers and patterning. Precise channels can also be milled into Kapton and filled with conductive pastes and nano-materials.</p><p>Call us or send your drawing to discuss. For an immediate order, upload your drawing to our InstaQuote app.</p>",
+    "body_2": "<ul class=\"check\"><li>Laser micromachining of polyimide</li><li>Laser hole drilling of polyimide</li><li>Laser cutting of polyimide</li><li>Laser patterning of metallised polyimide</li><li>Many more</li></ul>",
+    "body_3": "<p class=\"related\">Related: <a href=\"Materials - Polymers.html\" style=\"font-weight:700\">Polymers</a> · <a href=\"Materials - Plastic Micromachining.html\" style=\"font-weight:700\">Plastic micromachining</a> · <a href=\"Blog - Kapton.dc.html\" style=\"font-weight:700\">Machining Kapton for aerospace</a></p>"
+   }
+  },
+  {
+   "pattern": "cta-band-dark-display",
+   "values": {
+    "heading_1": "Rapid response",
+    "heading_2": "Talk to the team.",
+    "body_1": "<p>Send a drawing or a short description of your project. Our engineers can recommend the best material and process for your requirements.</p>",
+    "button_1": "Email us",
+    "url_1": "Contact - Contact.html",
+    "button_2": "Send a drawing",
+    "url_2": "https://www.potomac-laser.com/project-quote/#projectForm"
+   }
+  }
+ ],
+ "Metal Parts": [
+  {
+   "pattern": "hero-dark-centered",
+   "values": {
+    "heading_1": "Materials",
+    "heading_2": "Precision metal parts",
+    "body_1": "<p>Laser and micro-CNC tools that machine <strong>extremely precise features in almost any metal</strong>, as small as 1 micron.</p>"
+   }
+  },
+  {
+   "pattern": "split-rich-media",
+   "values": {
+    "heading_1": "Capability",
+    "heading_2": "Precise features in almost any metal",
+    "body_1": "<p>Using laser and micro-CNC technology, Goodfellow Microfabrication can fabricate features as small as 1 micron. Depending on the application, we can recommend the best material and process for your requirements.</p><p>We continually develop new processes that improve cut quality and reduce burrs, and use multi-axis machines to handle tubular parts and complex designs.</p>",
+    "image_1": {
+     "asset": "mat_metalparts_1"
+    }
+   }
+  },
+  {
+   "pattern": "head-rich-subtle",
+   "values": {
+    "heading_1": "Metals",
+    "heading_2": "Popular metals we machine",
+    "body_1": "<p class=\"pills\"><span class=\"pill\">Stainless steel</span><span class=\"pill\">Tantalum</span><span class=\"pill\">Tungsten</span><span class=\"pill\">Titanium</span><span class=\"pill\">Nitinol</span><span class=\"pill\">Gold</span><span class=\"pill\">Aluminium</span><span class=\"pill\">Platinum</span><span class=\"pill\">And many more</span></p><p class=\"related\">Related: <a href=\"Materials - Stainless Steel.html\" style=\"font-weight:700\">Stainless steel</a> · <a href=\"Materials - Thin Metal Foils.html\" style=\"font-weight:700\">Thin metal foils</a></p>"
+   }
+  },
+  {
+   "pattern": "media-grid-6-note",
+   "values": {
+    "heading_1": "Gallery",
+    "heading_2": "Example parts",
+    "image_1": {
+     "asset": "mat_metalparts_2"
+    },
+    "image_2": {
+     "asset": "mat_metalparts_3"
+    },
+    "image_3": {
+     "asset": "mat_metalparts_4"
+    },
+    "image_4": {
+     "asset": "mat_metalparts_5"
+    },
+    "image_5": {
+     "asset": "mat_metalparts_6"
+    },
+    "image_6": {
+     "asset": "mat_metalparts_7"
+    },
+    "body_1": "<p class=\"related\">See more micromachined parts in the <a href=\"Gallery - Project Gallery.html\" style=\"font-weight:700\">project gallery</a>.</p>"
+   }
+  },
+  {
+   "pattern": "cta-band-dark-display",
+   "values": {
+    "heading_1": "Rapid response",
+    "heading_2": "Talk to the team.",
+    "body_1": "<p>Send a drawing or a short description of your project. Our engineers can recommend the best material and process for your requirements.</p>",
+    "button_1": "Email us",
+    "url_1": "Contact - Contact.html",
+    "button_2": "Send a drawing",
+    "url_2": "https://www.potomac-laser.com/project-quote/#projectForm"
+   }
+  }
+ ],
+ "Plastic Micromachining": [
+  {
+   "pattern": "hero-dark-centered",
+   "values": {
+    "heading_1": "Materials",
+    "heading_2": "Plastic micromachining",
+    "body_1": "<p>Technologies and processes to micromachine <strong>almost any polymer on the market</strong>, with features down to a micron, from single prototypes to production runs of millions of parts.</p>"
+   }
+  },
+  {
+   "pattern": "split-media-rich",
+   "values": {
+    "image_1": {
+     "asset": "mat_plasticmicro_1"
+    },
+    "heading_1": "Projects",
+    "heading_2": "What customers bring to us",
+    "body_1": "<ul class=\"check\"><li>Fabricating custom plastic parts</li><li>Patterning of metallised plastics</li><li>Precision cutting of polymer and plastic sheets</li><li>Part singulation</li><li>Polymer circuit excision</li><li>Small-hole drilling in almost any polymer</li><li>Blind channels and holes</li></ul>"
+   }
+  },
+  {
+   "pattern": "tabs-panels-6-note",
+   "values": {
+    "heading_1": "Types of plastic",
+    "heading_2": "Plastics we machine",
+    "embed_1": "<button type=\"button\" role=\"tab\" aria-selected=\"true\">Kapton</button><button type=\"button\" role=\"tab\" aria-selected=\"false\">PEEK</button><button type=\"button\" role=\"tab\" aria-selected=\"false\">Polycarbonate</button><button type=\"button\" role=\"tab\" aria-selected=\"false\">BoPET</button><button type=\"button\" role=\"tab\" aria-selected=\"false\">Nylon</button><button type=\"button\" role=\"tab\" aria-selected=\"false\">ABS</button>",
+    "heading_3": "Kapton",
+    "body_1": "<p>A polyimide film developed by DuPont and used in consumer electronics, solar and wind energy, aerospace, automotive, medical devices and biotechnology. It has good insulation and temperature characteristics and comes in many types, sizes and thicknesses. Goodfellow Microfabrication carries Kapton HN and VN on the shelf and can turn around custom parts in as little as 24 hours in some cases.</p>",
+    "heading_4": "PEEK",
+    "body_2": "<p>Polyether ether ketone is a colourless thermoplastic used in medical, biotech, aerospace and automotive applications. It has high tensile strength, a wide temperature range and strong wear resistance. Goodfellow Microfabrication has extensive experience fabricating precision PEEK parts, such as microfluidic devices and complex automotive parts.</p>",
+    "heading_5": "Polycarbonate",
+    "body_3": "<p>One of the most widely used thermoplastics: durable, scratch resistant and inexpensive. Also known as Lexan, Makroclear and Makrolon, it is used in automotive, defence, medical device, biotech, electronics and alternative energy.</p>",
+    "heading_6": "BoPET",
+    "body_4": "<p>Biaxially-oriented polyethylene terephthalate is a polyester film used in biotech, electrical and packaging applications. Also known as Hostaphan, Melinex and Mylar, it can be metallised with conductive coatings such as ITO and patterned by Goodfellow Microfabrication.</p>",
+    "heading_7": "Nylon",
+    "body_5": "<p>Also known as polyamide, nylon is a durable synthetic polymer available in many configurations. Goodfellow Microfabrication has machined precision features in nylon, including blind channels in nylon rods for a medical device application.</p>",
+    "heading_8": "ABS",
+    "body_6": "<p>Acrylonitrile butadiene styrene is a tough thermoplastic with good heat resistance, used for mechanical parts and components and available in many types and colours. Alongside machining complex ABS parts, Goodfellow Microfabrication can laser mark ABS quickly and cost-effectively.</p>",
+    "body_7": "<p class=\"aside\">Goodfellow Microfabrication stocks a wide range of these polymers. If a material is not in stock, we can source it quickly from our network of qualified suppliers. There is no minimum order quantity. Related: <a href=\"Materials - Polymers.html\" style=\"font-weight:700\">Polymers</a> · <a href=\"Materials - Kapton Polyimide.html\" style=\"font-weight:700\">Kapton</a></p>"
+   }
+  },
+  {
+   "pattern": "media-grid-4-note",
+   "values": {
+    "heading_1": "Gallery",
+    "heading_2": "Example parts",
+    "image_1": {
+     "asset": "mat_plasticmicro_2"
+    },
+    "image_2": {
+     "asset": "mat_plasticmicro_3"
+    },
+    "image_3": {
+     "asset": "mat_plasticmicro_4"
+    },
+    "image_4": {
+     "asset": "mat_plasticmicro_5"
+    },
+    "body_1": "<p class=\"related\">See more micromachined parts in the <a href=\"Gallery - Project Gallery.html\" style=\"font-weight:700\">project gallery</a>.</p>"
+   }
+  },
+  {
+   "pattern": "cta-band-dark-display",
+   "values": {
+    "heading_1": "Rapid response",
+    "heading_2": "Talk to the team.",
+    "body_1": "<p>Send a drawing or a short description of your project. Our engineers can recommend the best material and process for your requirements.</p>",
+    "button_1": "Email us",
+    "url_1": "Contact - Contact.html",
+    "button_2": "Send a drawing",
+    "url_2": "https://www.potomac-laser.com/project-quote/#projectForm"
+   }
+  }
+ ],
+ "Polymers": [
+  {
+   "pattern": "hero-dark-centered",
+   "values": {
+    "heading_1": "Materials",
+    "heading_2": "Custom-cut polymers",
+    "body_1": "<p>Custom cutting of <strong>practically every type of polymer</strong>, quickly and cost-effectively, including parts with complex designs and small features.</p>"
+   }
+  },
+  {
+   "pattern": "head-rich-white",
+   "values": {
+    "heading_1": "Polymers",
+    "heading_2": "Polymers we have cut",
+    "body_1": "<p class=\"pills\"><span class=\"pill\">Kapton (polyimide)</span><span class=\"pill\">PET (Mylar)</span><span class=\"pill\">Ultem</span><span class=\"pill\">Nylon</span><span class=\"pill\">PEEK</span><span class=\"pill\">Silicone</span><span class=\"pill\">PMMA</span><span class=\"pill\">PTFE</span></p>"
+   }
+  },
+  {
+   "pattern": "figure-cards-2-note",
+   "values": {
+    "image_1": {
+     "asset": "mat_polymers_1"
+    },
+    "body_1": "<p><p class=\"ab-card__text\">Laser micromachining of medical grade silicone.</p></p>",
+    "image_2": {
+     "asset": "mat_polymers_2"
+    },
+    "body_2": "<p><p class=\"ab-card__text\">Rectangles 16.7 by 110 microns in a Kapton stencil.</p></p>",
+    "body_3": "<p class=\"related\">More examples in the <a href=\"Gallery - Project Gallery.html\" style=\"font-weight:700\">project gallery</a>. Related: <a href=\"Materials - Kapton Polyimide.html\" style=\"font-weight:700\">Custom Kapton parts</a> · <a href=\"Services - Laser Micromachining.html\" style=\"font-weight:700\">Laser microcutting</a> · <a href=\"Materials - Plastic Micromachining.html\" style=\"font-weight:700\">Plastic micromachining</a></p>"
+   }
+  },
+  {
+   "pattern": "cta-band-dark-display",
+   "values": {
+    "heading_1": "Rapid response",
+    "heading_2": "Talk to the team.",
+    "body_1": "<p>Send a drawing or a short description of your project. Our engineers can recommend the best material and process for your requirements.</p>",
+    "button_1": "Email us",
+    "url_1": "Contact - Contact.html",
+    "button_2": "Send a drawing",
+    "url_2": "https://www.potomac-laser.com/project-quote/#projectForm"
+   }
+  }
+ ],
+ "Stainless Steel": [
+  {
+   "pattern": "hero-dark-centered",
+   "values": {
+    "heading_1": "Materials",
+    "heading_2": "Stainless steel micromachining",
+    "body_1": "<p>Highly precise, extremely small features across <strong>all types and thicknesses of stainless steel</strong>.</p>"
+   }
+  },
+  {
+   "pattern": "split-rich-media",
+   "values": {
+    "heading_1": "The material",
+    "heading_2": "What makes a steel stainless",
+    "body_1": "<p>Stainless steels are iron-based alloys containing at least 10.5% chromium. A thin, dense chromium oxide film forms on the surface, providing corrosion resistance and preventing further oxidation.</p><p>There are five types of stainless steel, which differ with their other alloying additions and range from fully austenitic to fully ferritic.</p>",
+    "image_1": {
+     "asset": "mat_stainlessste_1"
+    }
+   }
+  },
+  {
+   "pattern": "head-rich-subtle",
+   "values": {
+    "heading_1": "Applications",
+    "heading_2": "Stainless steel applications",
+    "body_1": "<ul class=\"check narrow\"><li>Laser microcutting of stainless steel</li><li>Laser hole drilling in stainless steel</li><li>Welding of stainless steel components</li><li>Stainless steel CNC machining</li></ul><p class=\"note\">Part thickness, feature size and cut quality are the main factors in choosing a machining technology. Our engineering team works with you to understand your requirements and choose the right process. Related: <a href=\"Materials - Metal Parts.html\" style=\"font-weight:700\">Metal parts</a></p>"
+   }
+  },
+  {
+   "pattern": "cta-band-dark-display",
+   "values": {
+    "heading_1": "Rapid response",
+    "heading_2": "Talk to the team.",
+    "body_1": "<p>Send a drawing or a short description of your project. Our engineers can recommend the best material and process for your requirements.</p>",
+    "button_1": "Email us",
+    "url_1": "Contact - Contact.html",
+    "button_2": "Send a drawing",
+    "url_2": "https://www.potomac-laser.com/project-quote/#projectForm"
+   }
+  }
+ ],
+ "Thin Metal Foils": [
+  {
+   "pattern": "hero-dark-centered",
+   "values": {
+    "heading_1": "Materials",
+    "heading_2": "Thin metal foils",
+    "body_1": "<p>Cutting, patterning and layering of <strong>thin metal foils</strong> for electronics, aerospace, medical devices, automotive and more.</p>"
+   }
+  },
+  {
+   "pattern": "split-media-rich",
+   "values": {
+    "image_1": {
+     "asset": "mat_thinmetalfoi_1"
+    },
+    "heading_1": "Laser micromachining",
+    "heading_2": "Complex and simple foil parts",
+    "body_1": "<p>Potomac Photonics, <a href=\"https://www.goodfellow.com/usa/resources/goodfellow-acquires-potomac-photonics/\" rel=\"noopener\" target=\"_blank\">now part of Goodfellow</a>, has developed a broad range of technologies to process thin metal foils, for complex and simple parts on a prototyping or production basis.</p><p>Being part of <a href=\"https://www.goodfellow.com/usa\" rel=\"noopener\" target=\"_blank\">Goodfellow</a> means we can source any thin metal foil to meet your material requirements.</p>"
+   }
+  },
+  {
+   "pattern": "head-rich-subtle",
+   "values": {
+    "heading_1": "Foil types",
+    "heading_2": "Foils we machine",
+    "body_1": "<p class=\"pills\"><span class=\"pill\">Stainless steel foils</span><span class=\"pill\">Aluminium foils</span><span class=\"pill\">Copper foils</span><span class=\"pill\">Titanium foils</span><span class=\"pill\">Nickel foils</span><span class=\"pill\">Precious metal foils (gold, silver, platinum)</span><span class=\"pill\">Alloy foils</span><span class=\"pill\">Customised metal foils</span><span class=\"pill\">And many more</span></p>"
+   }
+  },
+  {
+   "pattern": "head-rich-white",
+   "values": {
+    "heading_1": "Applications",
+    "heading_2": "Applications for thin metal foils",
+    "body_1": "<ul class=\"cards p26\"><li><span class=\"meta\">Electronics</span><h3>Electrical components</h3><p>Flexible circuits, EMI/RFI shielding and connectors, using the foils' electrical conductivity and precise tolerances.</p></li><li><span class=\"meta\">Aerospace</span><h3>Aerospace and defence</h3><p>Lightweight, strong foils for sensors, shielding and other components that must perform in extreme conditions.</p></li><li><span class=\"meta\">Medical</span><h3>Medical devices</h3><p>Precision-cut foils for surgical instruments, implants and diagnostic equipment, where biocompatibility and precision matter.</p></li><li><span class=\"meta\">Automotive</span><h3>Automotive</h3><p>Battery components, sensors and fuel cells, improving efficiency and performance.</p></li><li><span class=\"meta\">Energy</span><h3>Energy</h3><p>Solar panels, fuel cells and battery technologies, using the foils' conductive and durable properties.</p></li><li><span class=\"meta\">Industrial</span><h3>Industrial</h3><p>Gaskets, shims and spacers that need precise thickness and durability.</p></li></ul>"
+   }
+  },
+  {
+   "pattern": "head-rich-subtle",
+   "values": {
+    "heading_1": "Why Goodfellow Microfabrication",
+    "heading_2": "Why choose Goodfellow Microfabrication for thin metal foils",
+    "body_1": "<ul class=\"cards p26\"><li><h3>Wide range of materials</h3><p><a href=\"https://www.goodfellow.com/usa/form/thin-films-coated-thin-films\" rel=\"noopener\" target=\"_blank\">As part of Goodfellow, we can source any thin metal foil</a> for your application.</p></li><li><h3>Precision laser cutting</h3><p>Exacting tolerances and detailed designs through laser micromachining.</p></li><li><h3>Rapid turnaround</h3><p>Custom metal foil parts made quickly without compromising quality.</p></li><li><h3>Experience</h3><p>Extensive experience processing a wide variety of thin metal foils.</p></li><li><h3>Custom work</h3><p>We work with you to develop metal foil parts for your application and requirements.</p></li></ul>"
+   }
+  },
+  {
+   "pattern": "rich-band-white",
+   "values": {
+    "body_1": "<p class=\"related\">Related: <a href=\"Materials - Metal Parts.html\" style=\"font-weight:700\">Metal parts</a> · <a href=\"Materials - Stainless Steel.html\" style=\"font-weight:700\">Stainless steel</a></p>"
+   }
+  },
+  {
+   "pattern": "cta-band-dark-display",
+   "values": {
+    "heading_1": "Rapid response",
+    "heading_2": "Talk to the team.",
+    "body_1": "<p>Send a drawing or a short description of your project. Our engineers can recommend the best material and process for your requirements.</p>",
+    "button_1": "Email us",
+    "url_1": "Contact - Contact.html",
+    "button_2": "Send a drawing",
+    "url_2": "https://www.potomac-laser.com/project-quote/#projectForm"
+   }
+  }
+ ]
+}

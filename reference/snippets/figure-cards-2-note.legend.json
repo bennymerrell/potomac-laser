@@ -1,0 +1,12 @@
+{
+    "pattern": "figure-cards-2-note",
+    "source_post": 12394,
+    "source_section_index": 2,
+    "tokens": {
+        "{image_1}": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-mat-polymers-1.webp",
+        "{body_1}": "<p><p class=\"ab-card__text\">Laser micromachining of medical grade silicone.</p></p>",
+        "{image_2}": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-mat-polymers-2.webp",
+        "{body_2}": "<p><p class=\"ab-card__text\">Rectangles 16.7 by 110 microns in a Kapton stencil.</p></p>",
+        "{body_3}": "<p class=\"related\">More examples in the <a href=\"Gallery - Project Gallery.html\" style=\"font-weight:700\">project gallery</a>. Related: <a href=\"Materials - Kapton Polyimide.html\" style=\"font-weight:700\">Custom Kapton parts</a> · <a href=\"Services - Laser Micromachining.html\" style=\"font-weight:700\">Laser microcutting</a> · <a href=\"Materials - Plastic Micromachining.html\" style=\"font-weight:700\">Plastic micromachining</a></p>"
+    }
+}

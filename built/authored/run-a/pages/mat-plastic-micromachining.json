@@ -1,0 +1,87 @@
+{
+ "slug": "pl-auto-plastic-micromachining",
+ "title": "Plastic Micromachining",
+ "design_page": "Materials - Plastic Micromachining.html",
+ "header": "# spec.yaml — Plastic Micromachining  (run 20260924-135039, autonomous, RUN B)\n# Source design : Potomac Laser.zip (fab7225c…) :: Materials - Plastic Micromachining.html  (no tweak defaults)\n# MATCH (3.c.ii):\n#   [0] hero-dark-centered         library match (centred, no meta, no CTA)\n#   [1] split-media-rich           §7: photo left | eyebrow+H2+rich body (split-media-prose needs 2 buttons, fixed)\n#   [2] tabs-panels-6-note         §7: head + 6 tabs + 6 static panels + note (JS only shows/hides)\n#   [3] media-grid-4-note          §7: head + 4 framed photos + note\n#   [4] cta-band-dark-display      §7: .final-cta at the Materials type scale (library cta-band-dark is 38/800 + gradient, 463px vs 453)\n# Rich body: list-like content is one text-editor slot in the fragment's class vocabulary (gen_materials.py).\n# Brand: present-tense 'Potomac' -> Goodfellow Microfabrication; merger-narrative sentences kept (run report).\n# Links: design page hrefs are rewritten by the §3.d link pass.\n",
+ "assets": [
+  "mat_plasticmicro_1",
+  "mat_plasticmicro_2",
+  "mat_plasticmicro_3",
+  "mat_plasticmicro_4",
+  "mat_plasticmicro_5"
+ ],
+ "sections": [
+  {
+   "pattern": "hero-dark-centered",
+   "values": {
+    "heading_1": "Materials",
+    "heading_2": "Plastic micromachining",
+    "body_1": "<p>Technologies and processes to micromachine <strong>almost any polymer on the market</strong>, with features down to a micron, from single prototypes to production runs of millions of parts.</p>"
+   }
+  },
+  {
+   "pattern": "split-media-rich",
+   "values": {
+    "image_1": {
+     "asset": "mat_plasticmicro_1"
+    },
+    "heading_1": "Projects",
+    "heading_2": "What customers bring to us",
+    "body_1": "<ul class=\"check\"><li>Fabricating custom plastic parts</li><li>Patterning of metallised plastics</li><li>Precision cutting of polymer and plastic sheets</li><li>Part singulation</li><li>Polymer circuit excision</li><li>Small-hole drilling in almost any polymer</li><li>Blind channels and holes</li></ul>"
+   }
+  },
+  {
+   "pattern": "tabs-panels-6-note",
+   "values": {
+    "heading_1": "Types of plastic",
+    "heading_2": "Plastics we machine",
+    "embed_1": "<button type=\"button\" role=\"tab\" aria-selected=\"true\">Kapton</button><button type=\"button\" role=\"tab\" aria-selected=\"false\">PEEK</button><button type=\"button\" role=\"tab\" aria-selected=\"false\">Polycarbonate</button><button type=\"button\" role=\"tab\" aria-selected=\"false\">BoPET</button><button type=\"button\" role=\"tab\" aria-selected=\"false\">Nylon</button><button type=\"button\" role=\"tab\" aria-selected=\"false\">ABS</button>",
+    "heading_3": "Kapton",
+    "body_1": "<p>A polyimide film developed by DuPont and used in consumer electronics, solar and wind energy, aerospace, automotive, medical devices and biotechnology. It has good insulation and temperature characteristics and comes in many types, sizes and thicknesses. Goodfellow Microfabrication carries Kapton HN and VN on the shelf and can turn around custom parts in as little as 24 hours in some cases.</p>",
+    "heading_4": "PEEK",
+    "body_2": "<p>Polyether ether ketone is a colourless thermoplastic used in medical, biotech, aerospace and automotive applications. It has high tensile strength, a wide temperature range and strong wear resistance. Goodfellow Microfabrication has extensive experience fabricating precision PEEK parts, such as microfluidic devices and complex automotive parts.</p>",
+    "heading_5": "Polycarbonate",
+    "body_3": "<p>One of the most widely used thermoplastics: durable, scratch resistant and inexpensive. Also known as Lexan, Makroclear and Makrolon, it is used in automotive, defence, medical device, biotech, electronics and alternative energy.</p>",
+    "heading_6": "BoPET",
+    "body_4": "<p>Biaxially-oriented polyethylene terephthalate is a polyester film used in biotech, electrical and packaging applications. Also known as Hostaphan, Melinex and Mylar, it can be metallised with conductive coatings such as ITO and patterned by Goodfellow Microfabrication.</p>",
+    "heading_7": "Nylon",
+    "body_5": "<p>Also known as polyamide, nylon is a durable synthetic polymer available in many configurations. Goodfellow Microfabrication has machined precision features in nylon, including blind channels in nylon rods for a medical device application.</p>",
+    "heading_8": "ABS",
+    "body_6": "<p>Acrylonitrile butadiene styrene is a tough thermoplastic with good heat resistance, used for mechanical parts and components and available in many types and colours. Alongside machining complex ABS parts, Goodfellow Microfabrication can laser mark ABS quickly and cost-effectively.</p>",
+    "body_7": "<p class=\"aside\">Goodfellow Microfabrication stocks a wide range of these polymers. If a material is not in stock, we can source it quickly from our network of qualified suppliers. There is no minimum order quantity. Related: <a href=\"Materials - Polymers.html\" style=\"font-weight:700\">Polymers</a> · <a href=\"Materials - Kapton Polyimide.html\" style=\"font-weight:700\">Kapton</a></p>"
+   }
+  },
+  {
+   "pattern": "media-grid-4-note",
+   "values": {
+    "heading_1": "Gallery",
+    "heading_2": "Example parts",
+    "image_1": {
+     "asset": "mat_plasticmicro_2"
+    },
+    "image_2": {
+     "asset": "mat_plasticmicro_3"
+    },
+    "image_3": {
+     "asset": "mat_plasticmicro_4"
+    },
+    "image_4": {
+     "asset": "mat_plasticmicro_5"
+    },
+    "body_1": "<p class=\"related\">See more micromachined parts in the <a href=\"Gallery - Project Gallery.html\" style=\"font-weight:700\">project gallery</a>.</p>"
+   }
+  },
+  {
+   "pattern": "cta-band-dark-display",
+   "values": {
+    "heading_1": "Rapid response",
+    "heading_2": "Talk to the team.",
+    "body_1": "<p>Send a drawing or a short description of your project. Our engineers can recommend the best material and process for your requirements.</p>",
+    "button_1": "Email us",
+    "url_1": "Contact - Contact.html",
+    "button_2": "Send a drawing",
+    "url_2": "https://www.potomac-laser.com/project-quote/#projectForm"
+   }
+  }
+ ]
+}

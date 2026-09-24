@@ -95,6 +95,17 @@ omits `spec-table-dark`, which shifts every later section up by one.
 | `service-cards-6-button` | — | — | — | — | — |   <!-- minted from 12371 (pl-auto-services-and-applications, page) index 2 by run 20260924-125928 -->
 | `estimate-band-split` | — | — | — | — | — |   <!-- minted from 12371 (pl-auto-services-and-applications, page) index 3 by run 20260924-125928 -->
 | `feature-cards-2-image` | — | — | — | — | — |   <!-- minted from 12371 (pl-auto-services-and-applications, page) index 4 by run 20260924-125928 -->
+| `split-media-rich` | — | — | — | — | — |   <!-- minted from 12388 (pl-auto-materials, page) index 1 by run 20260924-135039 -->
+| `head-rich-subtle` | — | — | — | — | — |   <!-- minted from 12388 (pl-auto-materials, page) index 2 by run 20260924-135039 -->
+| `head-rich-white` | — | — | — | — | — |   <!-- minted from 12388 (pl-auto-materials, page) index 3 by run 20260924-135039 -->
+| `cta-band-dark-display` | — | — | — | — | — |   <!-- minted from 12388 (pl-auto-materials, page) index 4 by run 20260924-135039 -->
+| `split-rich-media` | — | — | — | — | — |   <!-- minted from 12390 (pl-auto-glass, page) index 3 by run 20260924-135039 -->
+| `split-rich-rich-related` | — | — | — | — | — |   <!-- minted from 12391 (pl-auto-kapton-polyimide, page) index 3 by run 20260924-135039 -->
+| `media-grid-6-note` | — | — | — | — | — |   <!-- minted from 12392 (pl-auto-metal-parts, page) index 3 by run 20260924-135039 -->
+| `tabs-panels-6-note` | — | — | — | — | — |   <!-- minted from 12393 (pl-auto-plastic-micromachining, page) index 2 by run 20260924-135039 -->
+| `media-grid-4-note` | — | — | — | — | — |   <!-- minted from 12393 (pl-auto-plastic-micromachining, page) index 3 by run 20260924-135039 -->
+| `figure-cards-2-note` | — | — | — | — | — |   <!-- minted from 12394 (pl-auto-polymers, page) index 2 by run 20260924-135039 -->
+| `rich-band-white` | — | — | — | — | — |   <!-- minted from 12396 (pl-auto-thin-metal-foils, page) index 5 by run 20260924-135039 -->
 
 ## Per-page variants
 
@@ -714,6 +725,160 @@ listed per entry, and consolidated under [Unmapped colours](#unmapped-colours).
 | **Globals** | native refs incl. the light button's `border_color` → `gforange` (tokenisation colour map) |
 | **Unmapped colours** | `#F6F8FB`, `#DCE1EA`, `#0F1620`, `rgba(255,255,255,0.78)`, `rgba(255,255,255,0.32)` |
 | **Notes** | The photos are image widgets with real attachment ids (not CSS backgrounds), so the SKILL §3 id gate covers them. **Verified on 12371** (iteration 1 = 2): section 556 = design, cards 564×396 = design, photo opacities .16 / .28 = design. |
+
+### split-media-rich
+| | |
+|---|---|
+| **Snippet** | `reference/snippets/split-media-rich.json` |
+| **Source** | post `12388` section index `1` — minted by run 20260924-135039 (§7) |
+| **Used by** | 12388 at index 1, 12389 at index 1, 12390 at index 1, 12391 at index 1, 12393 at index 1, 12396 at index 1 |
+| **Signature** | `d1bdf544aa` · 5 containers + 4 widgets · 17,277 bytes |
+| **Recognise when** | A white two-column section: a **framed photo on the left** (navy frame, radius 18, soft shadow) and on the right an orange uppercase eyebrow, an H2 (36px, 600) and a **free-form rich body** — paragraphs, and optionally pill rows, check-lists or card grids. No buttons. Discriminators: against `split-media-prose`, no fixed two-button row and the body is one rich slot; mirrored (photo right) it is `split-rich-media`. |
+| **Structure** | `container:full bg=gfwhite pad 80/24` → boxed 1152 → row (wrap, gap 48/72, `align-items:center`; 2-up via `flex:0 0 calc(50% - 36px)`) → media `container` (`#0D1B2A`, border, radius 18) → `image` ; prose `container` → eyebrow `heading`, `heading h2`, `text-editor` (rich) |
+| **Tokens** | 4 placeholders: `{image_1}`, `{heading_1}` eyebrow, `{heading_2}` H2, `{body_1}` rich body |
+| **Globals** | 4 native `__globals__` refs · 11 `var(--e-global-color-*)` rewrites |
+| **Unmapped colours** | `#0F1620`, `#DCE1EA`, `rgba(0,0,0,.07)`, `rgba(15,42,68,.08)`, `rgba(15,42,68,.12)`, `rgba(245,130,31,.12)` |
+| **Notes** | **Rich-body vocabulary** (shared by every Materials pattern; one `text-editor` whose `custom_css` styles these classes, so items can be added or removed freely): plain `<p>`; `<p class="pills">` of `<a class="pill">`/`<span class="pill">`; `<p class="eb">` sub-eyebrow; `<ul class="check">` (add `narrow` for a centred 760px column); `<ul class="cards">` of `<li>` (optional `<span class="meta">`, `<h3>`, `<p>`, `<span class="more">`; wrap the card in `<a>` for a whole-card link; add `p26` for the 26/24 card padding); `<p class="related">`, `<p class="note">` (760px centred), `<p class="aside">` (15px at 1.75). Here the last plain paragraph keeps its 16px bottom margin, as `.ab-prose p` does in the design. **Verified** (iteration 2): 12388 §1 668 vs design 667, 12390 §1 539 = design; 12389 §1 and 12393 §1 are taller only by brand-normalised lines (+28/+2). |
+
+### head-rich-subtle
+| | |
+|---|---|
+| **Snippet** | `reference/snippets/head-rich-subtle.json` |
+| **Source** | post `12388` section index `2` — minted by run 20260924-135039 (§7) |
+| **Used by** | 12388 at index 2, 12389 at index 2, 12390 at index 2, 12391 at index 2, 12392 at index 2, 12395 at index 2, 12396 at index 2, 12396 at index 4 |
+| **Signature** | `a89d9c9dc6` · 4 containers + 3 widgets · 12,774 bytes |
+| **Recognise when** | A **light-grey (`#F6F8FB`)** full-width section with a centred eyebrow + H2 head and one rich body beneath it at full container width: pill rows (optionally with sub-eyebrows), a 3-up card grid, or a check-list. Discriminators: against `check-list-centered`, the body is not confined to an 852px check-list column and uses the rich vocabulary; on white it is `head-rich-white`. |
+| **Structure** | `container:full bg=#F6F8FB pad 80/24` → boxed 1152 → head `container` (centred, mb 48) → eyebrow `heading` + `heading h2` (40px, 600) ; `text-editor` (rich) |
+| **Tokens** | 3 placeholders: `{heading_1}` eyebrow, `{heading_2}` H2, `{body_1}` rich body |
+| **Globals** | 2 native `__globals__` refs · 11 `var(--e-global-color-*)` rewrites |
+| **Unmapped colours** | `#0F1620`, `#DCE1EA`, `#F6F8FB`, `rgba(0,0,0,.07)`, `rgba(15,42,68,.08)`, `rgba(245,130,31,.12)` |
+| **Notes** | Body uses the rich-body vocabulary (see `split-media-rich` Notes). Same tree as `check-list-centered` and `head-rich-white`; kept separate because fragments carry fixed settings and the vocabulary has no style tokens (background, column width, body type). **Verified** (iteration 2): 12388 §2 837 = design, 12390 §2 628 = design, 12395 §2 672 = design (after the `narrow`/`note` fix); 12389 §3 and 12396 §4 +45 where the brand-normalised H2 wraps. |
+
+### head-rich-white
+| | |
+|---|---|
+| **Snippet** | `reference/snippets/head-rich-white.json` |
+| **Source** | post `12388` section index `3` — minted by run 20260924-135039 (§7) |
+| **Used by** | 12388 at index 3, 12389 at index 3, 12394 at index 1, 12396 at index 3 |
+| **Signature** | `a89d9c9dc6` · 4 containers + 3 widgets · 12,875 bytes |
+| **Recognise when** | As `head-rich-subtle` on a **white** background. |
+| **Structure** | as `head-rich-subtle`, `bg=gfwhite` |
+| **Tokens** | 3 placeholders: `{heading_1}` eyebrow, `{heading_2}` H2, `{body_1}` rich body |
+| **Globals** | 3 native `__globals__` refs · 11 `var(--e-global-color-*)` rewrites |
+| **Unmapped colours** | `#0F1620`, `#DCE1EA`, `rgba(0,0,0,.07)`, `rgba(15,42,68,.08)`, `rgba(245,130,31,.12)` |
+| **Notes** | Body uses the rich-body vocabulary (see `split-media-rich` Notes). Differs from `head-rich-subtle` only in background — the first merge candidate if the library grows a background token. **Verified** (iteration 2): 12388 §3 381 = design, 12394 §1 330 = design, 12396 §3 674 = design; 12389 §3 +45 (brand-normalised H2 wraps). |
+
+### cta-band-dark-display
+| | |
+|---|---|
+| **Snippet** | `reference/snippets/cta-band-dark-display.json` |
+| **Source** | post `12388` section index `4` — minted by run 20260924-135039 (§7) |
+| **Used by** | 12388 at index 4, 12389 at index 4, 12390 at index 4, 12391 at index 4, 12392 at index 4, 12393 at index 4, 12394 at index 3, 12395 at index 3, 12396 at index 6 |
+| **Signature** | `09792544e2` · 3 containers + 5 widgets · 14,041 bytes |
+| **Recognise when** | The page's **closing** dark band at the Claude Design type scale: solid deep navy `#0D1B2A` with a faint 28px grid, a centred white uppercase eyebrow (no dash), a **56px / 600** H2, an 18px lede at 80% white (max 600) and two 15px pill buttons (orange with glow + ghost). Discriminators: `cta-band-dark` has a 135° gradient, a dashed eyebrow and a 38px / 800 H2 (463px vs 453 at 1440+); the mid-page left-right band is `estimate-band-split`. |
+| **Structure** | `container:full bg=gfnavydp pad 96/24` + grid `::before` → boxed 720 (column, centred) → eyebrow `heading` (12/24) ; `heading h2` (margin 20/0) ; `text-editor` (600px, mb 32) ; buttons `container` (row, gap 12) → 2 × `button` |
+| **Tokens** | 7 placeholders: `{heading_1}` eyebrow, `{heading_2}` H2, `{body_1}`, `{button_1..2}`, `{url_1..2}` |
+| **Globals** | 6 native `__globals__` refs · 0 `var(--e-global-color-*)` rewrites |
+| **Unmapped colours** | —, `rgba(0,0,0,0)`, `rgba(245,130,31,.3)`, `rgba(255,255,255,.043)`, `rgba(255,255,255,.32)`, `rgba(255,255,255,.8)` |
+| **Notes** | Minted because the library band does not match these designs. The Run A designs carry the same `.final-cta` markup, and Run A closed them with `cta-band-dark`: measured on FAQs 12300, 463px against the design's 453 (H2 38 vs 56px) — see the run 20260924-135039 report. **Verified** (iteration 2): 453 = design on all nine Materials pages. |
+
+### split-rich-media
+| | |
+|---|---|
+| **Snippet** | `reference/snippets/split-rich-media.json` |
+| **Source** | post `12390` section index `3` — minted by run 20260924-135039 (§7) |
+| **Used by** | 12390 at index 3, 12392 at index 1, 12395 at index 1 |
+| **Signature** | `df7ef4b4b9` · 5 containers + 4 widgets · 17,277 bytes |
+| **Recognise when** | As `split-media-rich` mirrored: eyebrow + H2 + rich body on the **left**, framed photo on the **right**. |
+| **Structure** | as `split-media-rich`, children swapped |
+| **Tokens** | 4 placeholders: `{heading_1}` eyebrow, `{heading_2}` H2, `{body_1}` rich body, `{image_1}` |
+| **Globals** | 4 native `__globals__` refs · 11 `var(--e-global-color-*)` rewrites |
+| **Unmapped colours** | `#0F1620`, `#DCE1EA`, `rgba(0,0,0,.07)`, `rgba(15,42,68,.08)`, `rgba(15,42,68,.12)`, `rgba(245,130,31,.12)` |
+| **Notes** | Body uses the rich-body vocabulary (see `split-media-rich` Notes). **Verified** (iteration 2): 12390 §3 866 = design, 12395 §1 516 = design; 12392 §1 +8 from one brand-normalised line. |
+
+### split-rich-rich-related
+| | |
+|---|---|
+| **Snippet** | `reference/snippets/split-rich-rich-related.json` |
+| **Source** | post `12391` section index `3` — minted by run 20260924-135039 (§7) |
+| **Used by** | 12391 at index 3 |
+| **Signature** | `d89a543341` · 5 containers + 5 widgets · 25,309 bytes |
+| **Recognise when** | A white section with **two text columns**: left eyebrow + H2 + prose, right a rich body (typically a check-list), then a **centred "Related:" line** across the full width. |
+| **Structure** | `container:full bg=gfwhite pad 80/24` → boxed 1152 → row (`align-items:flex-start`, gap 48/72) → prose `container` + rich `container` ; `text-editor` related line (margin-top 36) |
+| **Tokens** | 5 placeholders: `{heading_1}` eyebrow, `{heading_2}` H2, `{body_1}` prose, `{body_2}` right column, `{body_3}` related line |
+| **Globals** | 5 native `__globals__` refs · 33 `var(--e-global-color-*)` rewrites |
+| **Unmapped colours** | `#0F1620`, `#DCE1EA`, `rgba(0,0,0,.07)`, `rgba(15,42,68,.08)`, `rgba(245,130,31,.12)` |
+| **Notes** | Bodies use the rich-body vocabulary (see `split-media-rich` Notes). **Verified** (iteration 1 = 2): 12391 §3 566 vs design 565. |
+
+### media-grid-6-note
+| | |
+|---|---|
+| **Snippet** | `reference/snippets/media-grid-6-note.json` |
+| **Source** | post `12392` section index `3` — minted by run 20260924-135039 (§7) |
+| **Used by** | 12392 at index 3 |
+| **Signature** | `ed27cc6ffa` · 10 containers + 9 widgets · 32,091 bytes |
+| **Recognise when** | A light-grey section with a centred eyebrow + H2 head, a **grid of 6 framed photos** (4:3, 4-up, radius 12) and a centred note/related line beneath. |
+| **Structure** | `container:full bg=#F6F8FB pad 80/24` → boxed → head ; grid `container` (wrap, gap 14; 4-up, 2-up ≤979) → 6 × frame `container` → `image` ; `text-editor` note (margin-top 28) |
+| **Tokens** | 9 placeholders: `{heading_1..2}`, `{image_1..6}`, `{body_1}` note |
+| **Globals** | 8 native `__globals__` refs · 11 `var(--e-global-color-*)` rewrites |
+| **Unmapped colours** | `#0F1620`, `#DCE1EA`, `#F6F8FB`, `rgba(0,0,0,.07)`, `rgba(15,42,68,.08)`, `rgba(245,130,31,.12)` |
+| **Notes** | Fixed at 6 images; with 4 it is `media-grid-4-note`. **Verified** (iteration 1 = 2): 12392 §3 772 vs design 771; all 7 images load. |
+
+### tabs-panels-6-note
+| | |
+|---|---|
+| **Snippet** | `reference/snippets/tabs-panels-6-note.json` |
+| **Source** | post `12393` section index `2` — minted by run 20260924-135039 (§7) |
+| **Used by** | 12393 at index 2 |
+| **Signature** | `74054921ba` · 10 containers + 16 widgets · 55,585 bytes |
+| **Recognise when** | A light-grey section with a centred head, a **row of 6 pill tabs** (active = orange) and one white panel (H3 + paragraph) per tab, only the active panel shown, then a centred note. Discriminators: tabs, not a filter over cards (`text-link-cards-6-filter`) or an accordion (`faq-accordion-filter-10`). |
+| **Structure** | `container:full bg=#F6F8FB pad 80/24` → boxed → head ; column `container` (912px) → `html` tablist (buttons + style + script) ; 6 × panel `container.pl-tab-panel` (white, radius 18, pad 28/30) → `heading h3` + `text-editor` ; `text-editor` note |
+| **Tokens** | 16 placeholders: `{heading_1..2}` head, `{embed_1}` the tab buttons (`<button type="button" role="tab" aria-selected=…>`), panel n = `{heading_(n+2)}` + `{body_n}`, `{body_7}` note |
+| **Globals** | 20 native `__globals__` refs · 11 `var(--e-global-color-*)` rewrites |
+| **Unmapped colours** | `#0F1620`, `#15253D`, `#6B7280`, `#DCE1EA`, `#F5821F`, `#F6F8FB`, `rgba(0,0,0,.07)`, `rgba(15,42,68,.08)`, `rgba(245,130,31,.12)` |
+| **Notes** | The script walks up to the element whose parent carries `data-elementor-id` and toggles `.pl-tab-panel` by index, setting inline `display:flex` (panels 2–6 are hidden by their own `custom_css`; iteration 1 cleared the inline style and so showed **no** panel for tabs 2–6). Tab count must equal panel count. Kit hexes inside the html widget's `<style>` stay literal — the colour map rewrites `custom_css` only. **Verified** (iteration 3): section 643 = design; clicking each tab shows exactly its panel and moves `aria-selected`; panel heights 207/207/180/180/180/180 vs design 208/180/180/180/153/180 (brand-normalised lines in PEEK and Nylon). |
+
+### media-grid-4-note
+| | |
+|---|---|
+| **Snippet** | `reference/snippets/media-grid-4-note.json` |
+| **Source** | post `12393` section index `3` — minted by run 20260924-135039 (§7) |
+| **Used by** | 12393 at index 3 |
+| **Signature** | `8f1c98b699` · 8 containers + 7 widgets · 25,921 bytes |
+| **Recognise when** | As `media-grid-6-note` with **4** photos. |
+| **Structure** | as `media-grid-6-note`, 4 frames |
+| **Tokens** | 7 placeholders: `{heading_1..2}`, `{image_1..4}`, `{body_1}` note |
+| **Globals** | 6 native `__globals__` refs · 11 `var(--e-global-color-*)` rewrites |
+| **Unmapped colours** | `#0F1620`, `#DCE1EA`, `#F6F8FB`, `rgba(0,0,0,.07)`, `rgba(15,42,68,.08)`, `rgba(245,130,31,.12)` |
+| **Notes** | **Verified** (iteration 2): 12393 §3 549 = design (after the `aside` class fix, 545 in iteration 1). |
+
+### figure-cards-2-note
+| | |
+|---|---|
+| **Snippet** | `reference/snippets/figure-cards-2-note.json` |
+| **Source** | post `12394` section index `2` — minted by run 20260924-135039 (§7) |
+| **Used by** | 12394 at index 2 |
+| **Signature** | `0df99c5d8b` · 7 containers + 5 widgets · 21,273 bytes |
+| **Recognise when** | A light-grey section with **two side-by-side photo cards** (image over a short caption) and a centred note beneath; no head. |
+| **Structure** | `container:full bg=#F6F8FB pad 80/24` → boxed → row (2-up) → 2 × card `container` → `image` + caption `container` (pad 20/22/24) → `text-editor` ; `text-editor` note |
+| **Tokens** | 5 placeholders: `{image_1..2}`, `{body_1..2}` captions, `{body_3}` note |
+| **Globals** | 5 native `__globals__` refs · 13 `var(--e-global-color-*)` rewrites |
+| **Unmapped colours** | `#DCE1EA`, `#F6F8FB`, `rgba(0,0,0,.07)`, `rgba(15,42,68,.08)`, `rgba(245,130,31,.12)` |
+| **Notes** | **Verified** (iteration 1 = 2): 12394 §2 634 = design. |
+
+### rich-band-white
+| | |
+|---|---|
+| **Snippet** | `reference/snippets/rich-band-white.json` |
+| **Source** | post `12396` section index `5` — minted by run 20260924-135039 (§7) |
+| **Used by** | 12396 at index 5 |
+| **Signature** | `4e530f9029` · 2 containers + 1 widgets · 6,353 bytes |
+| **Recognise when** | A short white band holding **one centred line** (typically "Related: …"), between two larger sections. |
+| **Structure** | `container:full bg=gfwhite pad 0/24/80` (it continues the section above) → boxed 1152 → `text-editor` |
+| **Tokens** | 1 placeholder: `{body_1}` |
+| **Globals** | 2 native `__globals__` refs · 11 `var(--e-global-color-*)` rewrites |
+| **Unmapped colours** | `#DCE1EA`, `rgba(0,0,0,.07)`, `rgba(15,42,68,.08)`, `rgba(245,130,31,.12)` |
+| **Notes** | Body uses the rich-body vocabulary (see `split-media-rich` Notes). **Verified** (iteration 1 = 2): 12396 §5 104 = design. |
 
 ## Unmapped colours
 
