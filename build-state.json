@@ -115,6 +115,420 @@
           "location": "merged to main by a human at 6111139"
         }
       ]
+    },
+    {
+      "zip_hash": "fab7225ce0879014418672228148420215c3a39fa6463bea2012d2ce7b798db9",
+      "filename": "Potomac Laser.zip",
+      "branch": "build/potomac-laser-fab7225c",
+      "status": "built",
+      "run": "20260924-135039",
+      "report": "built/run-20260924-135039.report.md (build branch)",
+      "recovery_floor": "UpdraftPlus DB set 1790244496 (2026-09-24T10:08:16Z, nonce ec283efbb074), verified not taken (3.71 h old)",
+      "note": "RUN B complete: the nine Materials pages built as page drafts 12388-12396, 11 patterns minted (cap 20). The 15 RUN A and service entries were skipped as already built. Not merged: the build branch awaits human review. The report corrects run 20260924-125928: the library cta-band-dark is 10px taller than the designs' closing band; cta-band-dark-display is the design's band.",
+      "pages": [
+        {
+          "slug": "pl-auto-cnc-micromachining",
+          "post_id": 12239,
+          "preview_url": "https://www.potomac-laser.com/?post_type=post_services&p=12239&preview=true",
+          "build_type": null,
+          "design_page": "Services - CNC Micromachining.html",
+          "post_type": "post_services",
+          "status": "skipped-already-built",
+          "run": "20260924-135039",
+          "matched_via": "was=CNC Micromachining.html",
+          "note": "not written; refresh is the separate supervised job"
+        },
+        {
+          "slug": "pl-auto-laser-micromachining",
+          "post_id": 12240,
+          "preview_url": "https://www.potomac-laser.com/?post_type=post_services&p=12240&preview=true",
+          "build_type": null,
+          "design_page": "Services - Laser Micromachining.html",
+          "post_type": "post_services",
+          "status": "skipped-already-built",
+          "run": "20260924-135039",
+          "matched_via": "was=Laser Micromachining.html",
+          "note": "not written; refresh is the separate supervised job"
+        },
+        {
+          "slug": "pl-auto-micro-hole-drilling",
+          "post_id": 12241,
+          "preview_url": "https://www.potomac-laser.com/?post_type=post_services&p=12241&preview=true",
+          "build_type": null,
+          "design_page": "Services - Micro-Hole Drilling.html",
+          "post_type": "post_services",
+          "status": "skipped-already-built",
+          "run": "20260924-135039",
+          "matched_via": "was=Micro-Hole Drilling.html",
+          "note": "not written; refresh is the separate supervised job"
+        },
+        {
+          "slug": "pl-auto-rapid-prototyping",
+          "post_id": 12242,
+          "preview_url": "https://www.potomac-laser.com/?post_type=post_services&p=12242&preview=true",
+          "build_type": null,
+          "design_page": "Services - Rapid Prototyping.html",
+          "post_type": "post_services",
+          "status": "skipped-already-built",
+          "run": "20260924-135039",
+          "matched_via": "was=Rapid Prototyping.html",
+          "note": "not written; refresh is the separate supervised job"
+        },
+        {
+          "slug": "pl-auto-3d-printing",
+          "post_id": 12243,
+          "preview_url": "https://www.potomac-laser.com/?post_type=post_services&p=12243&preview=true",
+          "build_type": null,
+          "design_page": "Services - 3D Printing.html",
+          "post_type": "post_services",
+          "status": "skipped-already-built",
+          "run": "20260924-135039",
+          "matched_via": "was=3D Printing.html",
+          "note": "not written; refresh is the separate supervised job"
+        },
+        {
+          "slug": "pl-auto-about-our-group",
+          "post_id": 12268,
+          "preview_url": "https://www.potomac-laser.com/?page_id=12268&preview=true",
+          "build_type": "extend",
+          "design_page": "About - About Our Group.html",
+          "post_type": "page",
+          "status": "skipped-already-built",
+          "run": "20260924-135039",
+          "sections_built": 3,
+          "verify_iterations": 3,
+          "note": "RUN A page; stamped draft found by path, not written",
+          "built_by_run": "20260924-100754"
+        },
+        {
+          "slug": "pl-auto-about-potomac",
+          "post_id": 12277,
+          "preview_url": "https://www.potomac-laser.com/?page_id=12277&preview=true",
+          "build_type": "extend",
+          "design_page": "About - About Potomac.html",
+          "post_type": "page",
+          "status": "skipped-already-built",
+          "run": "20260924-135039",
+          "sections_built": 6,
+          "verify_iterations": 3,
+          "built_by_run": "20260924-100754",
+          "note": "RUN A page; stamped draft found by path, not written"
+        },
+        {
+          "slug": "pl-auto-case-studies",
+          "post_id": 12295,
+          "preview_url": "https://www.potomac-laser.com/?page_id=12295&preview=true",
+          "build_type": "extend",
+          "design_page": "About - Case Studies.html",
+          "post_type": "page",
+          "status": "skipped-already-built",
+          "run": "20260924-135039",
+          "verify_iterations": 2,
+          "previous_status": "failed: pattern-budget-exhausted (run 20260924-100754)",
+          "built_by_run": "20260924-125928",
+          "note": "RUN A page; stamped draft found by path, not written"
+        },
+        {
+          "slug": "pl-auto-employment",
+          "post_id": 12298,
+          "preview_url": "https://www.potomac-laser.com/?page_id=12298&preview=true",
+          "build_type": "extend",
+          "design_page": "About - Employment.html",
+          "post_type": "page",
+          "status": "skipped-already-built",
+          "run": "20260924-135039",
+          "verify_iterations": 2,
+          "previous_status": "failed: pattern-budget-exhausted (run 20260924-100754)",
+          "built_by_run": "20260924-125928",
+          "note": "RUN A page; stamped draft found by path, not written"
+        },
+        {
+          "slug": "pl-auto-faqs",
+          "post_id": 12300,
+          "preview_url": "https://www.potomac-laser.com/?page_id=12300&preview=true",
+          "build_type": "extend",
+          "design_page": "About - FAQs.html",
+          "post_type": "page",
+          "status": "skipped-already-built",
+          "run": "20260924-135039",
+          "verify_iterations": 2,
+          "previous_status": "failed: pattern-budget-exhausted (run 20260924-100754)",
+          "built_by_run": "20260924-125928",
+          "note": "RUN A page; stamped draft found by path, not written"
+        },
+        {
+          "slug": "pl-auto-news",
+          "post_id": 12296,
+          "preview_url": "https://www.potomac-laser.com/?page_id=12296&preview=true",
+          "build_type": "extend",
+          "design_page": "About - News.html",
+          "post_type": "page",
+          "status": "skipped-already-built",
+          "run": "20260924-135039",
+          "verify_iterations": 2,
+          "previous_status": "failed: pattern-budget-exhausted (run 20260924-100754)",
+          "built_by_run": "20260924-125928",
+          "note": "RUN A page; stamped draft found by path, not written"
+        },
+        {
+          "slug": "pl-auto-quality-policy",
+          "post_id": 12301,
+          "preview_url": "https://www.potomac-laser.com/?page_id=12301&preview=true",
+          "build_type": "extend",
+          "design_page": "About - Quality Policy.html",
+          "post_type": "page",
+          "status": "skipped-already-built",
+          "run": "20260924-135039",
+          "verify_iterations": 1,
+          "previous_status": "failed: pattern-budget-exhausted (run 20260924-100754)",
+          "built_by_run": "20260924-125928",
+          "note": "RUN A page; stamped draft found by path, not written"
+        },
+        {
+          "slug": "pl-auto-contact",
+          "post_id": 12302,
+          "preview_url": "https://www.potomac-laser.com/?page_id=12302&preview=true",
+          "build_type": "extend",
+          "design_page": "Contact - Contact.html",
+          "post_type": "page",
+          "status": "skipped-already-built",
+          "run": "20260924-135039",
+          "verify_iterations": 2,
+          "previous_status": "failed: pattern-budget-exhausted (run 20260924-100754)",
+          "built_by_run": "20260924-125928",
+          "note": "RUN A page; stamped draft found by path, not written"
+        },
+        {
+          "slug": "pl-auto-project-gallery",
+          "post_id": 12357,
+          "preview_url": "https://www.potomac-laser.com/?page_id=12357&preview=true",
+          "build_type": "extend",
+          "design_page": "Gallery - Project Gallery.html",
+          "post_type": "page",
+          "status": "skipped-already-built",
+          "run": "20260924-135039",
+          "verify_iterations": 2,
+          "previous_status": "failed: pattern-budget-exhausted (run 20260924-100754)",
+          "built_by_run": "20260924-125928",
+          "note": "RUN A page; stamped draft found by path, not written"
+        },
+        {
+          "slug": "pl-auto-services-and-applications",
+          "post_id": 12371,
+          "preview_url": "https://www.potomac-laser.com/?page_id=12371&preview=true",
+          "build_type": "extend",
+          "design_page": "Services - Services & Applications.html",
+          "post_type": "page",
+          "status": "skipped-already-built",
+          "run": "20260924-135039",
+          "verify_iterations": 2,
+          "previous_status": "failed: pattern-budget-exhausted (run 20260924-100754)",
+          "built_by_run": "20260924-125928",
+          "note": "RUN A page; stamped draft found by path, not written"
+        },
+        {
+          "slug": "pl-auto-materials",
+          "post_id": 12388,
+          "preview_url": "https://www.potomac-laser.com/?page_id=12388&preview=true",
+          "build_type": null,
+          "design_page": "Materials - Materials.html",
+          "post_type": "page",
+          "status": "built",
+          "run": "20260924-135039"
+        },
+        {
+          "slug": "pl-auto-adhesives",
+          "post_id": 12389,
+          "preview_url": "https://www.potomac-laser.com/?page_id=12389&preview=true",
+          "build_type": null,
+          "design_page": "Materials - Adhesives.html",
+          "post_type": "page",
+          "status": "built",
+          "run": "20260924-135039"
+        },
+        {
+          "slug": "pl-auto-glass",
+          "post_id": 12390,
+          "preview_url": "https://www.potomac-laser.com/?page_id=12390&preview=true",
+          "build_type": null,
+          "design_page": "Materials - Glass.html",
+          "post_type": "page",
+          "status": "built",
+          "run": "20260924-135039"
+        },
+        {
+          "slug": "pl-auto-kapton-polyimide",
+          "post_id": 12391,
+          "preview_url": "https://www.potomac-laser.com/?page_id=12391&preview=true",
+          "build_type": null,
+          "design_page": "Materials - Kapton Polyimide.html",
+          "post_type": "page",
+          "status": "built",
+          "run": "20260924-135039"
+        },
+        {
+          "slug": "pl-auto-metal-parts",
+          "post_id": 12392,
+          "preview_url": "https://www.potomac-laser.com/?page_id=12392&preview=true",
+          "build_type": null,
+          "design_page": "Materials - Metal Parts.html",
+          "post_type": "page",
+          "status": "built",
+          "run": "20260924-135039"
+        },
+        {
+          "slug": "pl-auto-plastic-micromachining",
+          "post_id": 12393,
+          "preview_url": "https://www.potomac-laser.com/?page_id=12393&preview=true",
+          "build_type": null,
+          "design_page": "Materials - Plastic Micromachining.html",
+          "post_type": "page",
+          "status": "built",
+          "run": "20260924-135039"
+        },
+        {
+          "slug": "pl-auto-polymers",
+          "post_id": 12394,
+          "preview_url": "https://www.potomac-laser.com/?page_id=12394&preview=true",
+          "build_type": null,
+          "design_page": "Materials - Polymers.html",
+          "post_type": "page",
+          "status": "built",
+          "run": "20260924-135039"
+        },
+        {
+          "slug": "pl-auto-stainless-steel",
+          "post_id": 12395,
+          "preview_url": "https://www.potomac-laser.com/?page_id=12395&preview=true",
+          "build_type": null,
+          "design_page": "Materials - Stainless Steel.html",
+          "post_type": "page",
+          "status": "built",
+          "run": "20260924-135039"
+        },
+        {
+          "slug": "pl-auto-thin-metal-foils",
+          "post_id": 12396,
+          "preview_url": "https://www.potomac-laser.com/?page_id=12396&preview=true",
+          "build_type": null,
+          "design_page": "Materials - Thin Metal Foils.html",
+          "post_type": "page",
+          "status": "built",
+          "run": "20260924-135039"
+        }
+      ],
+      "new_patterns": [
+        {
+          "id": "split-media-rich",
+          "source_post_id": 12388,
+          "section_index": 1,
+          "minted_by": "pl-auto-materials",
+          "reused_by": [
+            "Materials - Adhesives.html",
+            "Materials - Glass.html",
+            "Materials - Kapton Polyimide.html",
+            "Materials - Plastic Micromachining.html",
+            "Materials - Thin Metal Foils.html"
+          ]
+        },
+        {
+          "id": "head-rich-subtle",
+          "source_post_id": 12388,
+          "section_index": 2,
+          "minted_by": "pl-auto-materials",
+          "reused_by": [
+            "Materials - Adhesives.html",
+            "Materials - Glass.html",
+            "Materials - Kapton Polyimide.html",
+            "Materials - Metal Parts.html",
+            "Materials - Stainless Steel.html",
+            "Materials - Thin Metal Foils.html",
+            "Materials - Thin Metal Foils.html"
+          ]
+        },
+        {
+          "id": "head-rich-white",
+          "source_post_id": 12388,
+          "section_index": 3,
+          "minted_by": "pl-auto-materials",
+          "reused_by": [
+            "Materials - Adhesives.html",
+            "Materials - Polymers.html",
+            "Materials - Thin Metal Foils.html"
+          ]
+        },
+        {
+          "id": "cta-band-dark-display",
+          "source_post_id": 12388,
+          "section_index": 4,
+          "minted_by": "pl-auto-materials",
+          "reused_by": [
+            "Materials - Adhesives.html",
+            "Materials - Glass.html",
+            "Materials - Kapton Polyimide.html",
+            "Materials - Metal Parts.html",
+            "Materials - Plastic Micromachining.html",
+            "Materials - Polymers.html",
+            "Materials - Stainless Steel.html",
+            "Materials - Thin Metal Foils.html"
+          ]
+        },
+        {
+          "id": "split-rich-media",
+          "source_post_id": 12390,
+          "section_index": 3,
+          "minted_by": "pl-auto-glass",
+          "reused_by": [
+            "Materials - Metal Parts.html",
+            "Materials - Stainless Steel.html"
+          ]
+        },
+        {
+          "id": "split-rich-rich-related",
+          "source_post_id": 12391,
+          "section_index": 3,
+          "minted_by": "pl-auto-kapton-polyimide",
+          "reused_by": []
+        },
+        {
+          "id": "media-grid-6-note",
+          "source_post_id": 12392,
+          "section_index": 3,
+          "minted_by": "pl-auto-metal-parts",
+          "reused_by": []
+        },
+        {
+          "id": "tabs-panels-6-note",
+          "source_post_id": 12393,
+          "section_index": 2,
+          "minted_by": "pl-auto-plastic-micromachining",
+          "reused_by": []
+        },
+        {
+          "id": "media-grid-4-note",
+          "source_post_id": 12393,
+          "section_index": 3,
+          "minted_by": "pl-auto-plastic-micromachining",
+          "reused_by": []
+        },
+        {
+          "id": "figure-cards-2-note",
+          "source_post_id": 12394,
+          "section_index": 2,
+          "minted_by": "pl-auto-polymers",
+          "reused_by": []
+        },
+        {
+          "id": "rich-band-white",
+          "source_post_id": 12396,
+          "section_index": 5,
+          "minted_by": "pl-auto-thin-metal-foils",
+          "reused_by": []
+        }
+      ],
+      "runs": [
+        "20260924-135039"
+      ]
     }
   ],
   "archived_zips": [
