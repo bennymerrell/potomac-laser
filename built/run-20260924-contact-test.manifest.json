@@ -1,0 +1,44 @@
+{
+  "run_id": "20260924-contact-test",
+  "mode": "SUPERVISED, requested in chat (\"Do the test without the connector\"): one HubSpot test submission from the Contact draft 12302; beforehand the draft form was changed to also send lifecyclestage=lead (matching live Gravity Forms feed #18).",
+  "posts_modified": [
+    {
+      "post_id": 12302,
+      "status": "draft (not live)",
+      "change": "form JS: d.lifecyclestage=\"lead\" after hs_lead_status",
+      "old_sha": "51e29f2910d1484537b8c3d0c49de13a8a38bb34aeb68980fc439a2adf06d645",
+      "new_sha": "8dfda53dc298b8a5230249cb3033daf6b669a2a7e3c06de42c065d74bfb0a03d",
+      "rollback": "built/run-20260924-contact-test.rollback-12302.json"
+    }
+  ],
+  "test_submission": {
+    "endpoint": "https://api.hsforms.com/submissions/v3/integration/submit/143181153/54d0ec75-106d-43eb-a420-0ff22e448e6d",
+    "form": "[Potomac] Contact Form (same GUID as live GF feed #18)",
+    "http_status": 200,
+    "response_body": "{\"inlineMessage\":\"\"}",
+    "fields_sent": [
+      "email=ben.merrell@goodfellow.com",
+      "firstname=Ben",
+      "lastname=Merrell (TEST)",
+      "phone=+1 555 000 0000",
+      "company=Goodfellow (pipeline test)",
+      "potomac_message=PIPELINE TEST - please ignore…",
+      "hs_lead_status=NEW",
+      "lifecyclestage=lead",
+      "utm_source=pipeline-test",
+      "utm_medium=test",
+      "utm_campaign=contact-form-wiring-test"
+    ],
+    "context": [
+      "pageName",
+      "pageUri (draft preview URL)",
+      "hutk present"
+    ],
+    "page_result": "in-page success message shown",
+    "submitted_via": "user's Chrome, own tab group (closed), real click"
+  },
+  "open": [
+    "User to find the contact in HubSpot (portal 143181153) and archive it; if an existing record uses that email, HubSpot updated it (firstname/lastname/phone/company) rather than creating one",
+    "hutk belongs to the site tracking script (leadin portal 677962) — attribution across portals unverified"
+  ]
+}
