@@ -2,7 +2,7 @@
  "pattern": "quote-form-hubspot",
  "source_post": 12239,
  "source_section_index": 9,
- "note": "Tokens substitute INSIDE one `html` widget, so body_* values are PLAIN TEXT, not block markup — unlike every other fragment, where body_* fills a text-editor. tools/validate_spec.py exempts this pattern from the HTML-slot check for that reason. Values are verbatim, markup intact (AUDIT.md B9). The HubSpot wiring, CSS and JS are deliberately NOT tokenised: they are identical on every page and must not be edited per page.",
+ "note": "Tokens substitute INSIDE one `html` widget, so body_* values are PLAIN TEXT, not block markup — unlike every other fragment, where body_* fills a text-editor. tools/validate_spec.py exempts this pattern from the HTML-slot check for that reason. Values are verbatim, markup intact (AUDIT.md B9). The HubSpot wiring, CSS and JS are deliberately NOT tokenised: they are identical on every page and must not be edited per page. REVISED 2026-09-24: the untokenised form now collects First name, Last name and Company (all required) and sends them straight to firstname/lastname/company; see PATTERNS.md Notes.",
  "wiring": {
   "contract": "reference/HUBSPOT-FORMS.md",
   "form": "[Potomac] Start a Project",

@@ -26,6 +26,10 @@ so the fixture still carries that content defect. Do not read it as a content re
 and do not "fix" it — re-pointing the test at a current build would make it circular,
 since both sides would then come from this same assembler.
 
+For the same reason the fixture pins a copy of any fragment the library later revises, in
+tools/fixtures/mhd-preorder/snippets/ (searched first, self-test only). First entry:
+quote-form-hubspot, as it stood before the 2026-09-24 split-name change.
+
 The two structural `options` (`you_are_here_unit`, `highlight_step`) are verified
 against the fragment rather than applied blindly: the fragments were tokenised from
 post 12133, whose badge already sits on unit 2 and whose highlight is already step 3,
@@ -54,8 +58,15 @@ class Fail(Exception):
     pass
 
 
+# Directories searched before the library. Only --self-test sets this: its fixture pins
+# the fragments the library has since changed, so the test keeps pinning the assembler's
+# mechanics instead of failing every time a fragment is revised on purpose.
+FRAGMENT_OVERRIDES = []
+
+
 def load_fragment(pattern):
-    p = os.path.join(SNIPPETS, pattern + '.json')
+    p = next((q for q in (os.path.join(d, pattern + '.json') for d in FRAGMENT_OVERRIDES)
+              if os.path.exists(q)), os.path.join(SNIPPETS, pattern + '.json'))
     if not os.path.exists(p):
         raise Fail(f'no fragment for pattern {pattern!r}')
     with open(p) as f:
@@ -253,6 +264,7 @@ def normalise(data):
 def self_test():
     spec_path = os.path.join(ROOT, 'tools', 'fixtures', 'mhd-preorder', 'spec.yaml')
     ref_path = os.path.join(ROOT, 'tools', 'fixtures', 'mhd-preorder', 'expected.json')
+    FRAGMENT_OVERRIDES[:] = [os.path.join(ROOT, 'tools', 'fixtures', 'mhd-preorder', 'snippets')]
     _, got = assemble(spec_path)
     with open(ref_path) as f:
         want = json.load(f)
