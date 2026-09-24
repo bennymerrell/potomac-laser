@@ -1,0 +1,40 @@
+{
+  "run_id": "20260924-145227",
+  "started_utc": "2026-09-24T14:52:27Z",
+  "mode": "SUPERVISED pass requested by the user in chat (\"fix the Potomac text in the RP and 3DP FAQs\"): present-tense brand normalisation (Potomac -> Goodfellow Microfabrication) in the FAQ toggle of service drafts 12242 and 12243 only. Service pages are off limits to the autonomous run; this is the user-directed exception.",
+  "target": "potomac-laser.com (LIVE) via novamira-potomac-laser-co, PRODUCTION MODE",
+  "recovery_floor": {
+    "gate": "SKILL.md §0 — verified, not taken",
+    "updraft_set_timestamp": 1790244496,
+    "updraft_set_utc": "2026-09-24T10:08:16Z",
+    "backup_nonce": "ec283efbb074",
+    "age_at_gate_hours": 4.74
+  },
+  "posts_modified": [
+    {
+      "post_id": 12242,
+      "element": "965503d (FAQ toggle, section 10)",
+      "replacements": 6,
+      "old_sha": "e9b2f05e8c3bf07159054a06785d916790ed0dbfc8f56663fd5859e5b9a33c16",
+      "new_sha": "0696db987728d3e353b3c844fcd8011ff206b79a522f66a19c490db1377a339e",
+      "preview_url": "https://www.potomac-laser.com/?post_type=post_services&p=12242&preview=true"
+    },
+    {
+      "post_id": 12243,
+      "element": "5c52688 (FAQ toggle, section 10)",
+      "replacements": 8,
+      "old_sha": "65da2a1d2377dfeffce8c20e1435023b57067249ec921927bdf6e6fd1e98c889",
+      "new_sha": "a904681919258409cf0f3d80cefdf5c9bc3b9a74a805db32b896b5eaa9b006e2",
+      "preview_url": "https://www.potomac-laser.com/?post_type=post_services&p=12243&preview=true"
+    }
+  ],
+  "files_uploaded": [
+    {
+      "path": "wp-content/uploads/novamira-drafts/run-20260924-145227/rollback-old-data.json",
+      "sha256": "6e3caba82abecdc901191e4b2ddc0460762f6cb8172217bf018546a8fe42ccb2",
+      "role": "full _elementor_data of both posts before the change; local copy built/run-20260924-145227.rollback-old-data.json"
+    }
+  ],
+  "attachments_created": [],
+  "result": "All 14 FAQ strings were present tense and replaced (\"Potomac\" -> \"Goodfellow Microfabrication\", \"Potomac's\" -> \"Goodfellow Microfabrication's\"). The rendered pages contain no other \"Potomac\" text. Verified in the user's Chrome: 8 FAQ items each, toggles open. The em dashes in these answers were left as they are (out of scope). Note: the current design ALSO reads \"Potomac\" here; the fix applies the pipeline's present-tense brand rule, as on the other three service drafts."
+}

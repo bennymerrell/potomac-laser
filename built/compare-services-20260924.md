@@ -74,8 +74,10 @@ Only a few real copy changes remain, and they repeat across the pages:
 - **Quote section:** the new two-step copy ("Step 1 Tell us about your part", "2 Complete", First name / Last name /
   Company, the tolerance options). The drafts read "Organisation" and have a single step.
 - **CNC FAQ:** "…add it to your **basket**" where the draft says "quote request".
-- **Defect in the drafts: RP 12242 and 3DP 12243 FAQs still say "Potomac"** (6 and 7 times, present tense). The design
-  now reads "Goodfellow Microfabrication", and the other three drafts were normalised.
+- **RP 12242 and 3DP 12243 FAQs said "Potomac"** (6 and 8 times, present tense). **Correction:** this line first claimed
+  the design reads "Goodfellow Microfabrication" there. It does not: the design also says "Potomac". The diff had applied
+  the brand normalisation to the design side. The drafts had skipped the pipeline's present-tense brand rule, which the
+  other three service drafts got. **Fixed** by supervised run 20260924-145227 (14 strings, FAQ widgets only).
 - **Everything else is word-for-word the same** once dashes are normalised: why-us, services, capabilities, comparison,
   process, group, testimonials, and the other FAQ answers.
 
@@ -91,5 +93,4 @@ Only a few real copy changes remain, and they repeat across the pages:
   restyled variants or a re-extraction from the new design.
 - **Unchanged and reusable:** the Services section (`services-image-cards`) and the process steps (~20–60px off, mostly
   type scale).
-- **Also at refresh time:** re-stamp `_pl_auto_page` to the `Services - *.html` paths (already decided), fix the RP/3DP FAQ
-  brand text, and report the remaining arrows and dashes to the designer.
+- **Also at refresh time:** re-stamp `_pl_auto_page` to the `Services - *.html` paths (already decided), report the remaining arrows and dashes to the designer.
