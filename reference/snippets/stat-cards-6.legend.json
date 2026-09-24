@@ -1,0 +1,27 @@
+{
+    "pattern": "stat-cards-6",
+    "source_post": 12277,
+    "source_section_index": 4,
+    "tokens": {
+        "{heading_1}": "By the numbers",
+        "{heading_2}": "Four decades of micro-manufacturing",
+        "{heading_3}": "Founded",
+        "{heading_4}": "1982",
+        "{body_1}": "<p>Over 40 years in micro-manufacturing technologies.</p>",
+        "{heading_5}": "Projects",
+        "{heading_6}": "5K+",
+        "{body_2}": "<p>Thousands of projects across medical, biotech, automotive, semiconductor and aerospace.</p>",
+        "{heading_7}": "Holes",
+        "{heading_8}": "100M+",
+        "{body_3}": "<p>Hundreds of millions of holes drilled, with diameters as small as 1 micron.</p>",
+        "{heading_9}": "Lead time",
+        "{heading_10}": "Rapid",
+        "{body_4}": "<p>Parts turned around in as fast as 24 hours, depending on the application.</p>",
+        "{heading_11}": "Technologies",
+        "{heading_12}": "Expanding",
+        "{body_5}": "<p>Market-driven micro-manufacturing technologies, continually advanced.</p>",
+        "{heading_13}": "Materials",
+        "{heading_14}": "Flexible",
+        "{body_6}": "<p>Processes continually updated to machine new and emerging materials.</p>"
+    }
+}

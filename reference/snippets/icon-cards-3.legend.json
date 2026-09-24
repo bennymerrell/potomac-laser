@@ -1,0 +1,18 @@
+{
+    "pattern": "icon-cards-3",
+    "source_post": 12277,
+    "source_section_index": 2,
+    "tokens": {
+        "{heading_1}": "How we work",
+        "{heading_2}": "History, partnership and group strength",
+        "{image_1}": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-about-icon-history.svg",
+        "{heading_3}": "Proud history",
+        "{body_1}": "<p>For over 40 years Goodfellow Microfabrication has helped clients develop miniature products and bring them to market quickly and cost-effectively. Since our founding in 1982 we have used a broad range of advanced technologies, from single prototypes to millions of parts, with a focus on precision and quality.</p>",
+        "{image_2}": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-about-icon-partnership.svg",
+        "{heading_4}": "Long-term partnership",
+        "{body_2}": "<p>We prefer to partner on projects from the first prototypes through to product realisation, not just fabricate parts. That has meant taking on novel materials and production methods, as well as assembly and supply chain management for our partners.</p>",
+        "{image_3}": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-about-icon-group.svg",
+        "{heading_5}": "Backed by Goodfellow",
+        "{body_3}": "<p>Our integration with <a href=\"https://www.goodfellow.com/usa\" target=\"_blank\" rel=\"noopener\">Goodfellow</a> combines the resources and expertise of both companies. From engineers to support staff, the team works to your project objectives, with micro-manufacturing capability now supported by a global materials supplier.</p>"
+    }
+}

@@ -71,6 +71,11 @@ omits `spec-table-dark`, which shifts every later section up by one.
 | `quote-form-hubspot` | — | — | — | — | — |   <!-- minted from 12239 index 9; wired to [Potomac] Start a Project -->   <!-- minted from 12239 (pl-auto-cnc-micromachining) index 2; not present on the original five -->
 | `legend-cards-dark` | — | — | — | — | — |   <!-- minted from 12268 (pl-auto-about-our-group, page) index 0 by run 20260924-100754 -->
 | `split-rows-logo-alternating` | — | — | — | — | — |   <!-- minted from 12268 (pl-auto-about-our-group, page) index 1 by run 20260924-100754 -->
+| `hero-dark-centered-meta` | — | — | — | — | — |   <!-- minted from 12277 (pl-auto-about-potomac, page) index 0 by run 20260924-100754 -->
+| `split-media-prose` | — | — | — | — | — |   <!-- minted from 12277 (pl-auto-about-potomac, page) index 1 by run 20260924-100754 -->
+| `icon-cards-3` | — | — | — | — | — |   <!-- minted from 12277 (pl-auto-about-potomac, page) index 2 by run 20260924-100754 -->
+| `profile-cards-4` | — | — | — | — | — |   <!-- minted from 12277 (pl-auto-about-potomac, page) index 3 by run 20260924-100754 -->
+| `stat-cards-6` | — | — | — | — | — |   <!-- minted from 12277 (pl-auto-about-potomac, page) index 4 by run 20260924-100754 -->
 
 ## Per-page variants
 
@@ -354,6 +359,76 @@ listed per entry, and consolidated under [Unmapped colours](#unmapped-colours).
 | **Globals** | 35 native `__globals__` refs (`gfwhite` section/panel bg + buttons' text, `gforange` rows 1–2 dot/eyebrow + all buttons, `gfblue` row 3 dot/eyebrow, `gfink` body + pill text) · **3** `var(--e-global-color-*)` rewrites (the `::before` accent bar in `custom_css`: `gforange` ×2, `gfblue` ×1) |
 | **Unmapped colours** | `#0F1620` (H2, lead, pill `<strong>`), `#65718A` (founded pill text), `#DCE1EA` (panel + pill borders), `#F6F8FB` (pill fill — design `--bg-subtle`), `#F08423` (row 4 accent/dot/eyebrow — `--logo-orange`), `rgba(15,22,32,.06)`/`.04` (panel shadow), `rgba(245,130,31,.3)` (button shadow) |
 | **Notes** | **Accent colours are per row position** (orange, orange, blue, `#F08423`) — the four group brands, same limitation as `legend-cards-dark`. **Anchors are fixed**: rows carry `_element_id` `split-row-1..4` because the vocabulary has no anchor token; jump links must target those. **Adjustable count:** duplicate or delete a whole row container, keep `row`/`row-reverse` alternating, and renumber that row's tokens; stat pills are a fixed 3 per row (a row with fewer leaves an empty pill — drop the widget instead). Pills need `selector{width:auto}` on the text-editor so they size to content. On a `page` the Code Snippet #10 1224px cap does not apply, so `boxed_width` 1152 is set on the section itself (design `.container` 1200 − 2 × 24). **Verified on 12268 at 1792px** (iteration 3): exact word-for-word text match, rows 422–437px vs design 430, logos 345×76 / 345×77 / 345×132 / 297×155 vs design 345×76 / 345×77 / 345×132 / 293×153. Legend keeps full markup. |
+
+### hero-dark-centered-meta
+| | |
+|---|---|
+| **Snippet** | `reference/snippets/hero-dark-centered-meta.json` |
+| **Source** | post `12277` (`pl-auto-about-potomac`, type `page`) section index `0` — minted by run 20260924-100754 (§7) |
+| **Used by** | 12277 at index 0 |
+| **Signature** | `d09ff47676` (sha256 of the elType/widgetType tree, first 10 hex) · 6 containers + 9 widgets · 23,574 bytes |
+| **Recognise when** | The page's opening section on dark navy (flat `#0D1B2A` + faint 32px grid + two soft glows), **everything centred**: small uppercase orange eyebrow, one H1 (~54px), one lede paragraph capped ~727px that may carry `<strong>` and an inline link, then a centred row of **exactly 3 meta stats** (white value ~28px over a dim uppercase label) — and **no buttons, no image, no divider**. Discriminators: against `hero-dark-stat-strip`, that one is left-aligned in a 60% column with two CTAs + a tertiary link and a rule above 5 stats; against `legend-cards-dark`, an H1 and stats rather than an H2 and link cards. A centred hero with **no** meta row, or with a CTA instead, is a different variant — this fragment's stat count is fixed at 3. |
+| **Structure** | `container:full bg=gfnavydp pad 72/24/64` + `custom_css` grid/glow → `container:boxed` (`boxed_width` 1200) column centred → `heading` eyebrow → `heading h1` (margin 38/0/18, title `max-width:22ch`, `text-wrap:balance`) → `text-editor` lede (`p` max-width 727, `strong` white 600, `a` white underlined) → meta row `container` (row, wrap, centred, gap 28/40, margin-top 32) → 3 × stat `container` (column, gap 4, `width:auto`) → `heading` value + `heading` label |
+| **Tokens** | 9 placeholders: `{heading_1..8}`, `{body_1}`. `heading_1` eyebrow, `heading_2` H1, `body_1` lede; stat n = `heading_(2n+1)` value, `heading_(2n+2)` label |
+| **Globals** | 6 native `__globals__` refs (`gfnavydp` section bg, `gforange` eyebrow, `gfwhite` H1 + 3 values) · 0 CSS-var rewrites |
+| **Unmapped colours** | `rgba(255,255,255,0.74)` (lede), `rgba(255,255,255,0.55)` (stat labels), `#fff` (3-digit, lede `strong`/`a` in `custom_css`), plus the grid/glow `rgba()` stops |
+| **Notes** | The eyebrow-to-H1 gap is 38px because the design's eyebrow sits in a 24px line box with a 20px margin and the H1 carries an 18px margin; do not "correct" it to 20. The lede and H1 widths must be capped on the inner `p` / `.elementor-heading-title`, not on the widget — a widget-level `max-width` is ignored inside a flex container (cost verify iteration 1 on 12277). Every text widget names `Inter` and every nested container sets `padding:0` (see `legend-cards-dark` Notes). Inline links in the lede need `font-size:inherit` — the theme sizes bare `a` at 16px (iteration 2). **Verified on 12277 at 1792px** (iteration 3): word-for-word text match; lede 727×150 vs design 727×148. The section is 570px vs the design's 517 **only because the brand-normalised H1** ("The story of Goodfellow Microfabrication") wraps to two lines where the design's "The story of Potomac" is one. |
+
+### split-media-prose
+| | |
+|---|---|
+| **Snippet** | `reference/snippets/split-media-prose.json` |
+| **Source** | post `12277` (`pl-auto-about-potomac`, type `page`) section index `1` — minted by run 20260924-100754 (§7) |
+| **Used by** | 12277 at index 1 |
+| **Signature** | `054b8ffacd` (sha256 of the elType/widgetType tree, first 10 hex) · 6 containers + 6 widgets · 23,915 bytes |
+| **Recognise when** | A white two-column section: **left, one photo** shown whole (not cropped) in a rounded 18px frame with a deep soft shadow; **right, prose** — orange uppercase eyebrow, an H2 (~36px), one paragraph, then **two pill buttons side by side** (solid orange primary + white outlined-orange secondary). Photo on the left. Discriminators: against `why-choose-inset-cta`, no tinted inset card and the image is an `<img>` in a frame, not a cover-photo background; against `split-rows-logo-alternating`, one row, a photo rather than a logo panel, and no stat pills. A split whose copy column is a **list** instead of a paragraph + buttons, or whose image is on the **right**, is a different variant. |
+| **Structure** | `container:full bg=gfwhite pad 80/24` → `container:boxed` → row `container` (wrap, centred, gap 72; each column `calc((100% - 72px)/2)`, full width under 980px) → media `container` (bg `gfnavydp`, border 1px `#DCE1EA`, radius 18, `overflow:hidden`, shadow) → `image` ; prose `container` (column, flex-start) → `heading` eyebrow (mb 14) → `heading h2` (mb 18) → `text-editor` (mb 16) → button row `container` (gap 12, mt 8) → 2 × `button` |
+| **Tokens** | 8 placeholders: `{image_1}`, `{heading_1..2}`, `{body_1}`, `{button_1..2}`, `{url_1..2}` |
+| **Globals** | 9 native `__globals__` refs (`gfwhite` section bg + primary text + secondary bg, `gfnavydp` media bg, `gforange` eyebrow + primary bg + secondary text + secondary border, `gfink` paragraph) · 0 CSS-var rewrites. The secondary button's `border_color` was mapped to `gforange` at tokenisation (colour-map step) — the verified post 12277 still stores it as the literal hex, which renders identically |
+| **Unmapped colours** | `#0F1620` (H2), `#DCE1EA` (frame border), `rgba(15,42,68,.12)` (frame shadow), `rgba(245,130,31,.3)` (primary button shadow) |
+| **Notes** | **Verified on 12277 at 1792px** (iteration 3): word-for-word text match; photo 538×227 vs design 540×229 (the 1px frame border). Section 511px vs design 480 **only because the brand-normalised paragraph** ("Goodfellow Microfabrication combines…" for "Potomac combines…") wraps to 4 lines at the same 540px column where the design's is 3 — confirmed by measuring the design mock in the same browser. |
+
+### icon-cards-3
+| | |
+|---|---|
+| **Snippet** | `reference/snippets/icon-cards-3.json` |
+| **Source** | post `12277` (`pl-auto-about-potomac`, type `page`) section index `2` — minted by run 20260924-100754 (§7) |
+| **Used by** | 12277 at index 2 |
+| **Signature** | `9788c68030` (sha256 of the elType/widgetType tree, first 10 hex) · 7 containers + 11 widgets · 30,175 bytes |
+| **Recognise when** | A light-grey (`#F6F8FB`) section: **centred** eyebrow + H2 with **no lede**, then **3 equal white cards** in a row, each a small **48px icon** top-left, a short bold title (~17.6px, navy) and one paragraph of grey text (links allowed inline). No buttons, no card links, no photos. Discriminators: against `testimonials-avatar-cards`, no stars, no quote, no initials circle; against `group-ecosystem-cards`, light background, 3 cards, icons not logos, no feature list or badge; against `stat-cards-6`, an icon and a title rather than a label + big value. |
+| **Structure** | `container:full bg=#F6F8FB pad 80/24` → `container:boxed` column centred → head `container` width 760 (eyebrow `heading` + `heading h2` margin-top 18) margin-bottom 48 → card row `container` (wrap, stretch, gap 20; children `calc((100% - 40px)/3)`, full width under 980px) → 3 × card `container` (bg `gfwhite`, border 1px `#DCE1EA`, radius 8, pad 28/26, gap 14, shadow) → `image` (48×48) + `heading h3` + `text-editor` |
+| **Tokens** | 11 placeholders: `{heading_1..5}`, `{body_1..3}`, `{image_1..3}`. `heading_1` eyebrow, `heading_2` H2; card n = `image_n`, `heading_(n+2)`, `body_n` |
+| **Globals** | 10 native `__globals__` refs (`gforange` eyebrow, `gfwhite` 3 card backgrounds, `gfnavy` 3 titles, `gfbody` 3 texts) · **6** `var(--e-global-color-*)` rewrites (card text link colour `gfnavy` / hover `gforange`, ×3) |
+| **Unmapped colours** | `#F6F8FB` (section bg — design `--bg-subtle`), `#0F1620` (H2), `#DCE1EA` (card border), `rgba(0,0,0,.07)` (card shadow) |
+| **Notes** | The eyebrow/H2 head is shared with `profile-cards-4` and `stat-cards-6` (same measurements); the 18px H2 offset reproduces the design's 12px margin inside a 24px eyebrow line box — `legend-cards-dark`, minted earlier with 12px, sits 6px shorter than its design for this reason. SVG icons upload through Safe SVG, which sanitises (rewrites) the file, so an icon's stored SHA-256 differs from the source. **Verified on 12277 at 1792px** (iteration 3): cards 371×319 = design, section 607 = design, icons 48×48, word-for-word text match. |
+
+### profile-cards-4
+| | |
+|---|---|
+| **Snippet** | `reference/snippets/profile-cards-4.json` |
+| **Source** | post `12277` (`pl-auto-about-potomac`, type `page`) section index `3` — minted by run 20260924-100754 (§7) |
+| **Used by** | 12277 at index 3 |
+| **Signature** | `96de263766` (sha256 of the elType/widgetType tree, first 10 hex) · 12 containers + 19 widgets · 56,493 bytes |
+| **Recognise when** | A white "team / leadership" section: **centred** eyebrow + H2 with no lede, then **4 equal-height cards** in one row, each a **square portrait photo flush to the top**, then a padded body of orange uppercase role, bold navy name, **bio paragraphs**, and an uppercase "LinkedIn profile"-style link pinned to the card's bottom. **This fragment is irregular, exactly as the source design is:** cards 1–2 have bio + link, card 3 has a bio and **no link**, card 4 is **name-only** (photo + role + name). Discriminators: against `testimonials-avatar-cards`, real photos not initials, no stars or quotes; against `icon-cards-3`, full-bleed photos and a role line. |
+| **Structure** | `container:full bg=gfwhite pad 80/24` → `container:boxed` column centred → head (as `icon-cards-3`) → card row (`calc((100% - 60px)/4)`, stretch) → 4 × card `container` (bg `gfwhite`, border 1px `#DCE1EA`, radius 8, pad 0, `overflow:hidden`, shadow) → `image` (1:1, cover) + body `container` (pad 20/22/24, gap 10, `flex:1 1 auto`) → `heading` role + `heading h3` name [+ `text-editor` bio] [+ `text-editor` link, `margin-top:auto`] |
+| **Tokens** | 19 placeholders: `{heading_1..10}`, `{body_1..5}`, `{image_1..4}`. `heading_1` eyebrow, `heading_2` H2; card 1 = `image_1` `heading_3` role `heading_4` name `body_1` bio `body_2` link; card 2 = `image_2` `heading_5/6` `body_3/4`; card 3 = `image_3` `heading_7/8` `body_5` (bio only); card 4 = `image_4` `heading_9/10` |
+| **Globals** | 19 native `__globals__` refs (`gfwhite` section + 4 cards, `gforange` eyebrow + 4 roles, `gfnavy` 4 names + 2 links, `gfbody` 3 bios) · **8** `var(--e-global-color-*)` rewrites (photo backdrop `gfnavydp` ×4, link colour `gfnavy` / hover `gforange`) |
+| **Unmapped colours** | `#0F1620` (H2), `#DCE1EA` (card border), `rgba(0,0,0,.07)` (card shadow) |
+| **Notes** | **Why irregular:** `tools/validate_spec.py` rejects an empty token value, and a §7 validator failure discards the pattern (§7.8), so "optional" slots cannot be expressed as empty strings. To reuse for a team whose cards all have bio + link, copy card 1's bio/link `text-editor` pair into cards 3–4 and renumber; to drop a link, delete that widget. The bio slot is one `text-editor` holding one or more `<p>` (`p + p` gets 10px). The link is its own widget with `margin-top:auto`, which is what pins it to the bottom of an equal-height card. **Verified on 12277 at 1792px** (iteration 3): cards 273×1050 = design, section 1339 vs 1338, portraits 271×271, word-for-word text match (one typographic difference: WordPress curls the apostrophe in "Potomac's"). |
+
+### stat-cards-6
+| | |
+|---|---|
+| **Snippet** | `reference/snippets/stat-cards-6.json` |
+| **Source** | post `12277` (`pl-auto-about-potomac`, type `page`) section index `4` — minted by run 20260924-100754 (§7) |
+| **Used by** | 12277 at index 4 |
+| **Signature** | `be331053a6` (sha256 of the elType/widgetType tree, first 10 hex) · 10 containers + 20 widgets · 57,558 bytes |
+| **Recognise when** | A light-grey (`#F6F8FB`) "by the numbers" section: **centred** eyebrow + H2 with no lede, then **6 white cards in a 3 × 2 grid**, each an orange uppercase label, one **big navy value** (~35px, a number *or* a single word such as "Rapid"), and one short grey line. No icons, no images, no links. Discriminators: against `spec-table-dark`, light cards in a grid rather than dark label/value rows; against `hero-dark-stat-strip` / `hero-dark-centered-meta`, a standalone light section with a description per value; against `icon-cards-3`, no icon and a big value in place of a title. |
+| **Structure** | `container:full bg=#F6F8FB pad 80/24` → `container:boxed` column centred → head (as `icon-cards-3`) → card row (`calc((100% - 40px)/3)`, wrap, stretch, gap 20) → 6 × card `container` (bg `gfwhite`, border 1px `#DCE1EA`, radius 8, pad 26/24, gap 8, shadow) → `heading` label + `heading` value + `text-editor` |
+| **Tokens** | 20 placeholders: `{heading_1..14}`, `{body_1..6}`. `heading_1` eyebrow, `heading_2` H2; card n = `heading_(2n+1)` label, `heading_(2n+2)` value, `body_n` line |
+| **Globals** | 25 native `__globals__` refs (`gforange` eyebrow + 6 labels, `gfwhite` 6 cards, `gfnavy` 6 values, `gfbody` 6 lines) · 0 CSS-var rewrites |
+| **Unmapped colours** | `#F6F8FB` (section bg), `#0F1620` (H2), `#DCE1EA` (card border), `rgba(0,0,0,.07)` (card shadow) |
+| **Notes** | Six is fixed in the fragment; a 3-card row is the same structure with cards 4–6 deleted and their tokens dropped (renumber). **Verified on 12277 at 1792px** (iteration 3): cards 371×170 = design, section 648 = design, word-for-word text match. |
 
 ## Unmapped colours
 

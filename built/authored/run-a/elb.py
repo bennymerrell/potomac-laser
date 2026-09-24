@@ -102,7 +102,9 @@ def text(html, size, color=None, weight='400', lh=None, align=None, extra_css=''
         s['align'] = align
     col = f'color:{color};' if color and not KIT.get(color.upper()) else ''
     s['custom_css'] = (f'selector p{{font-size:{size}px;{f"line-height:{lh}px;" if lh else ""}'
-                       f'font-weight:{weight};{col}margin:0}}' + extra_css)
+                       f'font-weight:{weight};{col}margin:0}}'
+                       # the theme sizes bare `a` at 16px, which beats inheritance (12277 iter 2)
+                       'selector a{font-size:inherit;line-height:inherit}' + extra_css)
     s.update(extra)
     return {'id': _id(), 'elType': 'widget', 'widgetType': 'text-editor', 'settings': s, 'elements': []}
 
