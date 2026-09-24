@@ -601,7 +601,7 @@
       "run": "20260924-100754",
       "report": "built/run-20260924-100754.report.md and built/run-20260924-125928.report.md (build branch)",
       "recovery_floor": "UpdraftPlus DB set 1790244496 (2026-09-24T10:08:16Z, nonce ec283efbb074), taken by this run",
-      "note": "RUN A complete. Run 20260924-100754 built About Our Group + About Potomac (7 patterns) and failed 8 pages on the then-cap of 8; after the human-approved merge of the build branch and pattern_cap 20, run 20260924-125928 re-entered the partial zip and built the other 8 (19 patterns). Branch suffixed with the hash because build/potomac-laser holds the 2026-08-06 zip. Advancing to RUN B needs the AUTOMATION.md §5 reset (delete this entry) after uncommenting the block. Run 20260924-152914: the 7 About pages published (go-live); Contact, Project Gallery and Services & Applications remain drafts.",
+      "note": "RUN A complete. Run 20260924-100754 built About Our Group + About Potomac (7 patterns) and failed 8 pages on the then-cap of 8; after the human-approved merge of the build branch and pattern_cap 20, run 20260924-125928 re-entered the partial zip and built the other 8 (19 patterns). Branch suffixed with the hash because build/potomac-laser holds the 2026-08-06 zip. Advancing to RUN B needs the AUTOMATION.md §5 reset (delete this entry) after uncommenting the block. Run 20260924-152914: the 7 About pages published (go-live); Contact, Project Gallery and Services & Applications remain drafts. Run 20260924-contact-golive: Contact published after a successful HubSpot test.",
       "pages": [
         {
           "slug": "pl-auto-cnc-micromachining",
@@ -783,10 +783,14 @@
           "build_type": "extend",
           "design_page": "Contact - Contact.html",
           "post_type": "page",
-          "status": "built",
+          "status": "published",
           "run": "20260924-125928",
           "verify_iterations": 2,
-          "previous_status": "failed: pattern-budget-exhausted (run 20260924-100754)"
+          "previous_status": "failed: pattern-budget-exhausted (run 20260924-100754)",
+          "live_url": "https://www.potomac-laser.com/contact/",
+          "replaced_live_post": 15,
+          "published_by_run": "20260924-contact-golive",
+          "old_post_backup": "15 -> draft, slug contact-pre-golive-20260924"
         },
         {
           "slug": "pl-auto-project-gallery",

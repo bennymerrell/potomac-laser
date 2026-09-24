@@ -1,0 +1,24 @@
+{
+  "run_id": "20260924-contact-golive",
+  "mode": "GO-LIVE, requested in chat (\"Make the Contact page live now\"), after the HubSpot test submission was accepted (run 20260924-contact-test).",
+  "recovery_floor": "UpdraftPlus DB set 1790263759 (nonce a02d96573826), 0.63 h old",
+  "swaps": [
+    {
+      "published": 12302,
+      "url": "https://www.potomac-laser.com/contact/",
+      "old_post": 15,
+      "old_now": "draft",
+      "old_backup_slug": "contact-pre-golive-20260924"
+    }
+  ],
+  "menu_items_repointed": [
+    54,
+    9943,
+    10391
+  ],
+  "children_reparented": [],
+  "links_rewritten": "CNC #quote preview link -> /project-quote/#projectForm",
+  "verified": "Logged out: /contact/ 200 serving 12302 (fullbleed, new form wired to 143181153/54d0ec75…, no Gravity Form #1, no preview links); old backup slug 404; /contact-form-confirmation/ still 200; About pages link /contact/.",
+  "note": "The Gravity Forms newsletter block (GF #5) that the old page showed is not on the new page (the design hides the newsletter band). The new form has no CAPTCHA.",
+  "rollback": "set 12302 to draft with slug pl-auto-contact; set 15 to publish with slug contact; set menu items 54, 9943, 10391 _menu_item_object_id back to 15 (all in built/run-20260924-contact-golive.rollback-contact.json)"
+}
