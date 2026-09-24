@@ -14,7 +14,7 @@
 # pattern_cap: 20
 #   Raised from the default 8 (AUTOMATION.md §7.9) on 2026-09-24: RUN A's ten pages need
 #   ~20 new section shapes. Run 20260924-100754 minted 7 and failed 8 pages on the budget;
-#   the zip is `partial`, so the next run re-enters only those 8 pages, with this cap.
+#   the zip was `partial`; run 20260924-125928 built those 8 (19 patterns). RUN B keeps the cap.
 #
 # Format:  <path relative to zip root>[  <post_type>][  interactive=<file>][  was=<old path>]
 #   post_type is `page` (default), `post_services` or `post_application` —
@@ -69,8 +69,8 @@
 # pages share one skeleton (ab-hero / section / section--subtle / final-cta),
 # so the first phase should mint most of what the second needs.
 #
-#   RUN A (ACTIVE): About (7), Contact, Project Gallery, Services & Applications.
-#   RUN B: the nine Materials pages, as `page` (decided 2026-09-24).
+#   RUN A (DONE 2026-09-24): About (7), Contact, Project Gallery, Services & Applications.
+#   RUN B (ACTIVE): the nine Materials pages, as `page` (decided 2026-09-24).
 #
 # To advance a phase: uncomment its block, then re-run. A zip marked "built" is
 # never reprocessed by §2, so this needs the human reset in AUTOMATION.md §5
@@ -84,7 +84,7 @@ Services - Micro-Hole Drilling.html     post_services  interactive=mhd-interacti
 Services - Rapid Prototyping.html       post_services  interactive=rp-interactive.html   was=Rapid Prototyping.html
 Services - 3D Printing.html             post_services  interactive=3dp-interactive.html  was=3D Printing.html
 
-# --- RUN A (ACTIVE) ---
+# --- RUN A (built 2026-09-24 — listed so §3.c.i skips them) ---
 About - About Our Group.html            page
 About - About Potomac.html              page
 About - Case Studies.html               page
@@ -96,16 +96,16 @@ Contact - Contact.html                  page
 Gallery - Project Gallery.html          page
 Services - Services & Applications.html page
 
-# --- RUN B: uncomment these nine ---
-# Materials - Materials.html              page
-# Materials - Adhesives.html              page
-# Materials - Glass.html                  page
-# Materials - Kapton Polyimide.html       page
-# Materials - Metal Parts.html            page
-# Materials - Plastic Micromachining.html page
-# Materials - Polymers.html               page
-# Materials - Stainless Steel.html        page
-# Materials - Thin Metal Foils.html       page
+# --- RUN B (ACTIVE since 2026-09-24; RUN A pages above are all built and will be skipped) ---
+Materials - Materials.html              page
+Materials - Adhesives.html              page
+Materials - Glass.html                  page
+Materials - Kapton Polyimide.html       page
+Materials - Metal Parts.html            page
+Materials - Plastic Micromachining.html page
+Materials - Polymers.html               page
+Materials - Stainless Steel.html        page
+Materials - Thin Metal Foils.html       page
 
 # ---------------------------------------------------------------------------
 # Deliberately NOT built, and why.

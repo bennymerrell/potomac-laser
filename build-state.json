@@ -115,7 +115,9 @@
           "location": "merged to main by a human at 6111139"
         }
       ]
-    },
+    }
+  ],
+  "archived_zips": [
     {
       "zip_hash": "fab7225ce0879014418672228148420215c3a39fa6463bea2012d2ce7b798db9",
       "filename": "Potomac Laser.zip",
@@ -518,7 +520,11 @@
       "runs": [
         "20260924-100754",
         "20260924-125928"
-      ]
+      ],
+      "archived": {
+        "on": "2026-09-24",
+        "why": "AUTOMATION.md §5 reset, requested by the user (\"merge and start Run B\"): a zip recorded \"built\" is never reprocessed, so advancing to RUN B needs this entry out of processed_zips. Kept here instead of deleted so the RUN A record survives; §2 reads processed_zips only."
+      }
     }
   ]
 }
