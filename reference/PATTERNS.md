@@ -90,6 +90,11 @@ omits `spec-table-dark`, which shifts every later section up by one.
 | `offices-grid-6-social` | — | — | — | — | — |   <!-- minted from 12302 (pl-auto-contact, page) index 2 by run 20260924-125928 -->
 | `hero-dark-centered-meta-4` | — | — | — | — | — |   <!-- minted from 12357 (pl-auto-project-gallery, page) index 0 by run 20260924-125928 -->
 | `gallery-grid-filter-lightbox` | — | — | — | — | — |   <!-- minted from 12357 (pl-auto-project-gallery, page) index 1 by run 20260924-125928 -->
+| `hero-dark-centered-meta-4-bold` | — | — | — | — | — |   <!-- minted from 12371 (pl-auto-services-and-applications, page) index 0 by run 20260924-125928 -->
+| `service-cards-5-caps` | — | — | — | — | — |   <!-- minted from 12371 (pl-auto-services-and-applications, page) index 1 by run 20260924-125928 -->
+| `service-cards-6-button` | — | — | — | — | — |   <!-- minted from 12371 (pl-auto-services-and-applications, page) index 2 by run 20260924-125928 -->
+| `estimate-band-split` | — | — | — | — | — |   <!-- minted from 12371 (pl-auto-services-and-applications, page) index 3 by run 20260924-125928 -->
+| `feature-cards-2-image` | — | — | — | — | — |   <!-- minted from 12371 (pl-auto-services-and-applications, page) index 4 by run 20260924-125928 -->
 
 ## Per-page variants
 
@@ -639,6 +644,76 @@ listed per entry, and consolidated under [Unmapped colours](#unmapped-colours).
 | **Globals** | 109 native `__globals__` refs (`gfwhite`) · 0 CSS-var rewrites (the bar/lightbox colours live in the html widget) |
 | **Unmapped colours** | `#ECEFF4` (card backdrop), `rgba(14,99,168,.92)` (category badge — design value), overlay gradient `rgba(11,26,44,…)`; chips/lightbox colours in the widget's `<style>` |
 | **Notes** | **Behaviour-tested** (12357 iteration 2): Metal Micromachining → 8 and "Showing 8 projects", Diamond → 2, All → 54; a click opens the lightbox on that card ("2 / 2", category, title, image); next steps within the filtered set; Esc closes it and restores page scroll; CTA links resolve. **Scope rule:** the script must scope to the page section — the element whose parent carries `data-elementor-id` — **not** `closest(".e-parent")`, which stops at the bar's own container and left filter and lightbox inert on iteration 1. The lightbox is moved to `<body>` so `position:fixed` escapes any transformed ancestor. The chip counts are static copy in `{embed_1}` — keep them in step with the cards. Cards are native widgets (editable); the design's duplicate `PROJECTS` JS array is not used. Geometry: cards 388×291 = design, images 466×349 (the 1.2 crop) = design; section 26px taller than the design's filter bar + grid (5882 vs 5856). |
+
+### hero-dark-centered-meta-4-bold
+| | |
+|---|---|
+| **Snippet** | `reference/snippets/hero-dark-centered-meta-4-bold.json` |
+| **Source** | post `12371` (`pl-auto-services-and-applications`, type `page`) section index `0` — minted by run 20260924-125928 (§7) |
+| **Used by** | 12371 at index 0 |
+| **Signature** | `ccd9ca296e` — **the same element tree as `hero-dark-centered-meta-4`**; the two differ only in settings · 7 containers + 11 widgets · 28,475 bytes |
+| **Recognise when** | As `hero-dark-centered-meta-4` but **bolder and narrower**: a 900px column, a **700-weight 56px H1** (20ch), an **orange** eyebrow, a looser lede (30.6px line height), stats at weight 700 with 32px gaps, and an orange-and-blue glow. Pick between the two on the H1 weight and the eyebrow colour. |
+| **Structure** | as `hero-dark-centered-meta-4`, with `boxed_width` 900, padding 76/24/64, H1 margin 24/0/18, meta margin-top 34 |
+| **Tokens** | 11 placeholders: `{heading_1}` eyebrow, `{heading_2}` H1, `{body_1}` lede, `{heading_3..10}` stat pairs |
+| **Globals** | native refs for `gfnavydp`, `gforange`, `gfwhite` · 0 CSS-var rewrites |
+| **Unmapped colours** | `rgba(255,255,255,0.76)`, `rgba(255,255,255,0.55)`, glow stops `rgba(245,130,31,.16)` / `rgba(14,99,168,.22)` |
+| **Notes** | Kept separate rather than parameterising `hero-dark-centered-meta-4`: fragments carry fixed settings and the vocabulary has no style tokens. This eyebrow has no bottom margin in the design, so the H1 offset is 24 (iteration 1 was 18px tall at 42). **Verified on 12371** (iteration 2): section 597 = design, H1 755×176 = design. |
+
+### service-cards-5-caps
+| | |
+|---|---|
+| **Snippet** | `reference/snippets/service-cards-5-caps.json` |
+| **Source** | post `12371` section index `1` — minted by run 20260924-125928 (§7) |
+| **Used by** | 12371 at index 1 |
+| **Signature** | `804a4ff548` · 20 containers + 25 widgets · 81,098 bytes |
+| **Recognise when** | A white "our services" section: centred eyebrow + H2 + grey lede, **5 equal whole-card links in one row** (image 4:3 over a soft orange-tint backdrop, bold title, grey description, orange "Learn more →"), then a centred wrapping row of **capability pills** (outlined, an arrow appearing on hover), then one centred large outlined "View all …" button. Discriminators: against `services-image-cards`, a grey lede instead of an orange link, whole-card links with a text label rather than a bordered pill, plus the pill row and closing button; with 6 cards in 3 columns and no pills it is `service-cards-6-button`. |
+| **Structure** | `container:full bg=gfwhite pad 80/24` → boxed → head (width 760, mb 48) → card row (5-up; 3-up ≤1179, 2-up ≤859, 1-up ≤559) → 5 × card `container` `html_tag:a` → media `container` (4:3, `#FEF9F5`) → `image` (absolute cover, hover zoom) ; body `container` (pad 24, gap 12) → `heading h3` + `text-editor` (flex 1) + `heading` label ; `text-editor` pills (one `<p>` of links, margin-top 32) ; button row (margin-top 36) |
+| **Tokens** | 31 placeholders: `{heading_1..12}`, `{body_1..7}`, `{image_1..5}`, `{url_1..6}`, `{button_1}`. Head = `heading_1`, `heading_2`, `body_1`; card n = `image_n`, `heading_(2n+1)` title, `body_(n+1)` text, `heading_(2n+2)` label, `url_n`; `body_7` = pills (`<p><a href>…</a>…</p>`, count free); `button_1` + `url_6` |
+| **Globals** | native refs + 8 `var(--e-global-color-*)` · 1 control global (button border) |
+| **Unmapped colours** | `#0F1620`, `#65718A`, `#DCE1EA`, `#FEF9F5` (media tint), `#FFF7F0` (pill hover) |
+| **Notes** | The pill row is one token, so pills can be added or removed freely. **Verified on 12371** (iteration 2): section 987 = design, cards 214×412 = design, media 212×159, pills 43px tall = design, button 180×47 = design. |
+
+### service-cards-6-button
+| | |
+|---|---|
+| **Snippet** | `reference/snippets/service-cards-6-button.json` |
+| **Source** | post `12371` section index `2` — minted by run 20260924-125928 (§7) |
+| **Used by** | 12371 at index 2 |
+| **Signature** | `bc06c009dd` · 23 containers + 28 widgets · 91,431 bytes |
+| **Recognise when** | As `service-cards-5-caps` on a light-grey background, but **6 cards in a 3 × 2 grid** with a **16:10** image and a "View details →" label, **no pill row**, then one centred large outlined "View all …" button. |
+| **Structure** | as `service-cards-5-caps` (3-up, 1-up ≤979), `bg=#F6F8FB`, button row margin-top 40 |
+| **Tokens** | 35 placeholders: `{heading_1..14}`, `{body_1..7}`, `{image_1..6}`, `{url_1..7}`, `{button_1}` (card n as above; `url_7` = button) |
+| **Globals** | native refs + 6 `var(--e-global-color-*)` · 1 control global |
+| **Unmapped colours** | as `service-cards-5-caps`, plus `#F6F8FB` |
+| **Notes** | **Verified on 12371** (iteration 2): section 1347 = design, cards 371×438 = design, button 207×47 = design. |
+
+### estimate-band-split
+| | |
+|---|---|
+| **Snippet** | `reference/snippets/estimate-band-split.json` |
+| **Source** | post `12371` section index `3` — minted by run 20260924-125928 (§7) |
+| **Used by** | 12371 at index 3 |
+| **Signature** | `06e9804f23` · 4 containers + 5 widgets · 14,672 bytes |
+| **Recognise when** | A **mid-page** dark conversion band (navy 135° gradient + faint 40px grid) laid out **left-right**: white uppercase eyebrow, H2 (~38px, 700) and one short paragraph on the left, **two buttons** (orange pill + ghost) on the right. Discriminators: against `cta-band-dark`, it is not the page's closing section, and its copy is left-aligned with the buttons beside it rather than centred beneath. |
+| **Structure** | `container:full pad 56/24` + gradient/grid `custom_css` → boxed 1152 → row (`space-between`, wrap, gap 28) → copy `container` (eyebrow, `heading h2` margin 14/0/10, `text-editor` max 525) + buttons `container` |
+| **Tokens** | 7 placeholders: `{heading_1}` eyebrow, `{heading_2}` H2, `{body_1}`, `{button_1..2}`, `{url_1..2}` |
+| **Globals** | native `gfwhite`/`gforange` refs · 0 CSS-var rewrites |
+| **Unmapped colours** | gradient stops `#16253D` / `#1B2E4A` / `#213754`, `rgba(255,255,255,0.78)`, `rgba(255,255,255,0.32)` |
+| **Notes** | **Verified on 12371** (iteration 2): section 279 = design, H2 763×46 = design. |
+
+### feature-cards-2-image
+| | |
+|---|---|
+| **Snippet** | `reference/snippets/feature-cards-2-image.json` |
+| **Source** | post `12371` section index `4` — minted by run 20260924-125928 (§7) |
+| **Used by** | 12371 at index 4 |
+| **Signature** | `be0ab3c0f8` · 9 containers + 10 widgets · 38,249 bytes |
+| **Recognise when** | A white section with **two large side-by-side feature cards** (radius 16, 40px padding, ~320px min height), each over a **faded full-bleed photo**: the first light (grey tint, photo at 16% opacity, orange eyebrow, dark text, outlined orange button), the second **dark** (navy, photo at 28% with screen blend, white text, ghost button). Each has an eyebrow, an H3 (28px, 700), a paragraph and a button pinned to the bottom. |
+| **Structure** | `container:full bg=gfwhite pad 80/24` → boxed → row (2-up, gap 24; stacks ≤899) → 2 × card `container` (relative, `overflow:hidden`) → `image` (absolute, cover, opacity) + body `container` (z-index 1) → eyebrow, `heading h3`, `text-editor`, button `container` (`margin-top:auto`) |
+| **Tokens** | 12 placeholders: `{image_1..2}`, `{heading_1..4}`, `{body_1..2}`, `{button_1..2}`, `{url_1..2}` |
+| **Globals** | native refs incl. the light button's `border_color` → `gforange` (tokenisation colour map) |
+| **Unmapped colours** | `#F6F8FB`, `#DCE1EA`, `#0F1620`, `rgba(255,255,255,0.78)`, `rgba(255,255,255,0.32)` |
+| **Notes** | The photos are image widgets with real attachment ids (not CSS backgrounds), so the SKILL §3 id gate covers them. **Verified on 12371** (iteration 1 = 2): section 556 = design, cards 564×396 = design, photo opacities .16 / .28 = design. |
 
 ## Unmapped colours
 

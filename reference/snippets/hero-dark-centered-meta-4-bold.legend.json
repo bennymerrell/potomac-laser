@@ -1,0 +1,18 @@
+{
+    "pattern": "hero-dark-centered-meta-4-bold",
+    "source_post": 12371,
+    "source_section_index": 0,
+    "tokens": {
+        "{heading_1}": "Services &amp; Applications",
+        "{heading_2}": "Precision micromanufacturing for demanding applications",
+        "{body_1}": "<p>A comprehensive range of micromanufacturing services tailored to your exact needs, from precision small-hole drilling to features as small as <strong>1 micron</strong>. Our technologies support everything from <strong>aerospace components</strong> to fully fabricated <strong>microfluidic devices</strong> advancing biotech and medical diagnostics.</p>",
+        "{heading_3}": "12",
+        "{heading_4}": "Capabilities",
+        "{heading_5}": "1 µm",
+        "{heading_6}": "Smallest feature",
+        "{heading_7}": "±10 µm",
+        "{heading_8}": "Typical tolerance",
+        "{heading_9}": "Est. 1982",
+        "{heading_10}": "Micromanufacturing"
+    }
+}

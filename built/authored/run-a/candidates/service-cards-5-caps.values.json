@@ -1,0 +1,43 @@
+{
+ "heading_1": "Our Services",
+ "heading_2": "Check out our growing list of capabilities",
+ "body_1": "<p>We are innovators at our core, constantly evolving to meet market demands and pioneering new micro-manufacturing technologies.</p>",
+ "image_1": {
+  "asset": "sa_svc_1"
+ },
+ "heading_3": "Rapid Prototyping",
+ "body_2": "<p>Fast-turn prototype paths with DFM feedback so design teams get real parts on compressed timelines.</p>",
+ "heading_4": "Learn more →",
+ "url_1": "/services/rapid-prototyping-services/",
+ "image_2": {
+  "asset": "sa_svc_2"
+ },
+ "heading_5": "CNC Micro Machining",
+ "body_3": "<p>4-axis CNC milling and drilling for fine-feature metals and engineering plastics at ±10 µm tolerances.</p>",
+ "heading_6": "Learn more →",
+ "url_2": "Services - CNC Micromachining.html",
+ "image_3": {
+  "asset": "sa_svc_3"
+ },
+ "heading_7": "Laser Micro-Hole Drilling",
+ "body_4": "<p>Micro-holes down to a single micron in almost any substrate: vias, nozzles, filters and dense arrays.</p>",
+ "heading_8": "Learn more →",
+ "url_3": "/services/micro-hole-drilling/",
+ "image_4": {
+  "asset": "sa_svc_4"
+ },
+ "heading_9": "Laser Micromachining",
+ "body_5": "<p>UV and IR laser processing for ultra-fine features in metals, polymers, glass, ceramics and thin films.</p>",
+ "heading_10": "Learn more →",
+ "url_4": "/services/laser-micromachining/",
+ "image_5": {
+  "asset": "sa_svc_5"
+ },
+ "heading_11": "3D Printing Contract Services",
+ "body_6": "<p>Micro-scale additive manufacturing for intricate geometries conventional processes can't reach.</p>",
+ "heading_12": "Learn more →",
+ "url_5": "/services/3d-printing-contract-services/",
+ "body_7": "<p><a href=\"/services/laser-cutting/\">Laser Cutting</a><a href=\"/services/laser-micromachining-welding/\">Laser Micro Welding</a><a href=\"/services/laser-marking-applications/\">Laser Marking</a><a href=\"/services/laser-patterning/\">Laser Patterning</a><a href=\"/services/3d-printing/\">Micro 3D Printing</a><a href=\"/services/hot-embossing/\">Hot Embossing</a><a href=\"/services/bonding-assembly/\">Bonding &amp; Assembly</a></p>",
+ "button_1": "View all services",
+ "url_6": "/services/"
+}

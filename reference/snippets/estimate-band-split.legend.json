@@ -1,0 +1,14 @@
+{
+    "pattern": "estimate-band-split",
+    "source_post": 12371,
+    "source_section_index": 3,
+    "tokens": {
+        "{heading_1}": "Get an estimate",
+        "{heading_2}": "Submit your drawing, get a quick estimate",
+        "{body_1}": "<p>Send us your CAD or drawing and see if we're the right fit. Our engineers review every design for manufacturability and respond within one business day.</p>",
+        "{button_1}": "Request a quote",
+        "{url_1}": "Services - CNC Micromachining.html#quote",
+        "{button_2}": "Contact us",
+        "{url_2}": "/contact/"
+    }
+}

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap">
+<title>Services &amp; Applications · Goodfellow Microfabrication</title>
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* ─────────────────────────────────────────────────────────────
+   SERVICES & APPLICATIONS — page-specific styles
+   Built on the shared Goodfellow Microfabrication tokens + styles.
+   ───────────────────────────────────────────────────────────── */
+
+/* Hero — compact dark band (matches gallery hero) */
+.sa-hero { position: relative; background: var(--bg-dark); color: #fff; padding: 76px 24px 64px; overflow: hidden; }
+.sa-hero__bg { position: absolute; inset: 0; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 32px 32px; }
+.sa-hero__bg::after { content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 28% 0%, rgba(245,130,31,0.16) 0%, transparent 58%),
+              radial-gradient(ellipse at 92% 100%, rgba(14,99,168,0.22) 0%, transparent 55%); }
+.sa-hero__inner { position: relative; max-width: 900px; margin: 0 auto; text-align: center; }
+.sa-hero__inner .eyebrow { justify-content: center; }
+.sa-hero__title { font-family: var(--font-display); font-size: clamp(2.2rem, 4.6vw, 3.5rem);
+  font-weight: 700; letter-spacing: -0.02em; line-height: 1.05; margin: 18px auto; max-width: 20ch; color: #fff; }
+.sa-hero__lede { font-size: var(--fs-18); line-height: 1.7; color: rgba(255,255,255,0.76); max-width: 68ch; margin: 0 auto; }
+.sa-hero__lede strong { color: #fff; font-weight: 600; }
+.sa-hero__meta { display: flex; flex-wrap: wrap; gap: 32px; margin-top: 34px; justify-content: center; }
+.sa-hero__meta-item { display: flex; flex-direction: column; gap: 4px; }
+.sa-hero__meta-num { font-family: var(--font-display); font-size: var(--fs-28); font-weight: 700; color: #fff; letter-spacing: -0.01em; }
+.sa-hero__meta-label { font-size: var(--fs-12); font-weight: 600; text-transform: uppercase; letter-spacing: 0.10em; color: rgba(255,255,255,0.55); }
+
+/* Services grid — 5 across at desktop full size */
+.sa-services-5 { grid-template-columns: 1fr; }
+@media (min-width: 560px)  { .sa-services-5 { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 860px)  { .sa-services-5 { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1180px) { .sa-services-5 { grid-template-columns: repeat(5, 1fr); } }
+
+/* Applications grid — reuses service-card look, taller media for photography */
+.sa-app-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+@media (min-width: 640px)  { .sa-app-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .sa-app-grid { grid-template-columns: repeat(3, 1fr); } }
+.sa-app-grid .service-card__media { aspect-ratio: 16 / 10; }
+
+/* Capability pill list */
+.sa-caps { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 8px; }
+.sa-cap { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: var(--r-pill);
+  border: 1px solid var(--border-1); background: #fff; color: var(--fg-1); font-size: var(--fs-14); font-weight: 600;
+  transition: border-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out),
+              background var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out); }
+.sa-cap::after { content: '→'; color: var(--gf-blue); font-weight: 700; transform: translateX(-2px);
+  opacity: 0; transition: opacity var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out); }
+.sa-cap:hover { border-color: var(--gf-blue); color: var(--gf-blue); background: var(--gf-blue-50); transform: translateY(-1px); }
+.sa-cap:hover::after { opacity: 1; transform: translateX(0); }
+
+/* Estimate band — mid-page CTA */
+.sa-estimate { position: relative; overflow: hidden; background: linear-gradient(135deg,#16253D 0%,#1B2E4A 55%,#213754 100%); color: #fff; }
+.sa-estimate__bg { position: absolute; inset: 0; pointer-events: none;
+  background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 40px 40px; }
+.sa-estimate__inner { position: relative; max-width: 1200px; margin: 0 auto; padding: 56px 24px;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 28px; }
+.sa-estimate__title { font-family: var(--font-display); font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 700; letter-spacing: -0.015em; color: #fff; margin: 8px 0 10px; }
+.sa-estimate__copy { font-size: var(--fs-16); line-height: 1.65; color: rgba(255,255,255,0.78); max-width: 52ch; margin: 0; }
+.sa-estimate__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* Feature split — Materials & Industries */
+.sa-feature { display: grid; grid-template-columns: 1fr; gap: 24px; }
+@media (min-width: 900px) { .sa-feature { grid-template-columns: repeat(2, 1fr); } }
+.sa-feature__card { position: relative; overflow: hidden; border-radius: var(--r-lg); border: 1px solid var(--border-1);
+  background: var(--bg-subtle); padding: 40px; display: flex; flex-direction: column; min-height: 320px; }
+.sa-feature__card--dark { background: var(--bg-dark); border-color: transparent; }
+.sa-feature__card--dark .sa-feature__title, .sa-feature__card--dark .sa-feature__copy { color: #fff; }
+.sa-feature__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.16; }
+.sa-feature__card--dark .sa-feature__img { opacity: 0.28; mix-blend-mode: screen; }
+.sa-feature__body { position: relative; z-index: 1; display: flex; flex-direction: column; height: 100%; }
+.sa-feature__title { font-family: var(--font-display); font-size: var(--fs-28); font-weight: 700; letter-spacing: -0.015em; color: var(--fg-1); margin: 10px 0 12px; }
+.sa-feature__copy { font-size: var(--fs-16); line-height: 1.7; color: var(--fg-2); margin: 0 0 24px; max-width: 46ch; }
+.sa-feature__card--dark .sa-feature__copy { color: rgba(255,255,255,0.78); }
+.sa-feature__link { margin-top: auto; align-self: flex-start; }
+</style>
+</head>
+<body>
+
+<!-- ─────────────────────────────────────────────────────────
+     HERO
+     ───────────────────────────────────────────────────────── -->
+<section class="sa-hero">
+  <div class="sa-hero__bg"></div>
+  <div class="sa-hero__inner">
+    <div class="eyebrow">Services &amp; Applications</div>
+    <h1 class="sa-hero__title">Precision micromanufacturing for demanding applications</h1>
+    <p class="sa-hero__lede">A comprehensive range of micromanufacturing services tailored to your exact needs, from precision small-hole drilling to features as small as <strong>1 micron</strong>. Our technologies support everything from <strong>aerospace components</strong> to fully fabricated <strong>microfluidic devices</strong> advancing biotech and medical diagnostics.</p>
+    <div class="sa-hero__meta">
+      <div class="sa-hero__meta-item"><span class="sa-hero__meta-num">12</span><span class="sa-hero__meta-label">Capabilities</span></div>
+      <div class="sa-hero__meta-item"><span class="sa-hero__meta-num">1 µm</span><span class="sa-hero__meta-label">Smallest feature</span></div>
+      <div class="sa-hero__meta-item"><span class="sa-hero__meta-num">±10 µm</span><span class="sa-hero__meta-label">Typical tolerance</span></div>
+      <div class="sa-hero__meta-item"><span class="sa-hero__meta-num">Est. 1982</span><span class="sa-hero__meta-label">Micromanufacturing</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────────
+     SERVICES
+     ───────────────────────────────────────────────────────── -->
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <div class="eyebrow" style="justify-content:center">Our Services</div>
+      <h2 class="section__title">Check out our growing list of capabilities</h2>
+      <p class="section__lede">We are innovators at our core, constantly evolving to meet market demands and pioneering new micro-manufacturing technologies.</p>
+    </div>
+
+    <div class="services-grid sa-services-5">
+      <a href="/services/rapid-prototyping-services/" class="service-card reveal">
+        <div class="service-card__media"><img src="https://www.potomac-laser.com/wp-content/uploads/2013/04/3D-Parts-1024x819-400x320.webp" alt="Rapid prototyping of 3D parts" loading="lazy"></div>
+        <div class="service-card__body">
+          <h3>Rapid Prototyping</h3>
+          <p>Fast-turn prototype paths with DFM feedback so design teams get real parts on compressed timelines.</p>
+          <span class="service-card__link">Learn more →</span>
+        </div>
+      </a>
+      <a href="Services - CNC Micromachining.html" class="service-card reveal d1">
+        <div class="service-card__media"><img src="https://www.potomac-laser.com/wp-content/uploads/2026/02/cnc_aerospace_comp-400x218.jpeg" alt="Micro CNC of aerospace components" loading="lazy"></div>
+        <div class="service-card__body">
+          <h3>CNC Micro Machining</h3>
+          <p>4-axis CNC milling and drilling for fine-feature metals and engineering plastics at ±10 µm tolerances.</p>
+          <span class="service-card__link">Learn more →</span>
+        </div>
+      </a>
+      <a href="/services/micro-hole-drilling/" class="service-card reveal d2">
+        <div class="service-card__media"><img src="https://www.potomac-laser.com/wp-content/uploads/2015/07/FILTER_01-350x230.jpg.webp" alt="Laser micro-hole drilling" loading="lazy"></div>
+        <div class="service-card__body">
+          <h3>Laser Micro-Hole Drilling</h3>
+          <p>Micro-holes down to a single micron in almost any substrate: vias, nozzles, filters and dense arrays.</p>
+          <span class="service-card__link">Learn more →</span>
+        </div>
+      </a>
+      <a href="/services/laser-micromachining/" class="service-card reveal d3">
+        <div class="service-card__media"><img src="https://www.potomac-laser.com/wp-content/uploads/2014/12/shift-400x264.webp" alt="Laser micromachining" loading="lazy"></div>
+        <div class="service-card__body">
+          <h3>Laser Micromachining</h3>
+          <p>UV and IR laser processing for ultra-fine features in metals, polymers, glass, ceramics and thin films.</p>
+          <span class="service-card__link">Learn more →</span>
+        </div>
+      </a>
+      <a href="/services/3d-printing-contract-services/" class="service-card reveal d4">
+        <div class="service-card__media"><img src="https://www.potomac-laser.com/wp-content/uploads/2014/07/PMidLit-400x261.webp" alt="3D printing contract services" loading="lazy"></div>
+        <div class="service-card__body">
+          <h3>3D Printing Contract Services</h3>
+          <p>Micro-scale additive manufacturing for intricate geometries conventional processes can't reach.</p>
+          <span class="service-card__link">Learn more →</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="sa-caps reveal" style="margin-top:32px">
+      <a href="/services/laser-cutting/" class="sa-cap">Laser Cutting</a>
+      <a href="/services/laser-micromachining-welding/" class="sa-cap">Laser Micro Welding</a>
+      <a href="/services/laser-marking-applications/" class="sa-cap">Laser Marking</a>
+      <a href="/services/laser-patterning/" class="sa-cap">Laser Patterning</a>
+      <a href="/services/3d-printing/" class="sa-cap">Micro 3D Printing</a>
+      <a href="/services/hot-embossing/" class="sa-cap">Hot Embossing</a>
+      <a href="/services/bonding-assembly/" class="sa-cap">Bonding &amp; Assembly</a>
+    </div>
+
+    <div style="display:flex;justify-content:center;margin-top:36px">
+      <a href="/services/" class="btn btn--secondary btn--lg">View all services</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────────
+     APPLICATIONS
+     ───────────────────────────────────────────────────────── -->
+<section class="section section--subtle">
+  <div class="container">
+    <div class="section__head">
+      <div class="eyebrow" style="justify-content:center">Our Applications</div>
+      <h2 class="section__title">Changing the world one micron at a time</h2>
+      <p class="section__lede">Our customers span many industries: medical device, biotech, semiconductor, automotive, aerospace and more.</p>
+    </div>
+
+    <div class="sa-app-grid">
+      <a href="/application/microfluidics/" class="service-card reveal">
+        <div class="service-card__media"><img src="https://www.potomac-laser.com/wp-content/uploads/2016/04/MFluidic_sphere_cs-400x268.webp" alt="Microfluidic device fabrication" loading="lazy"></div>
+        <div class="service-card__body">
+          <h3>Microfluidic Device Fabrication</h3>
+          <p>Micro-drilling for microfluidic devices, precise vias, channels and ports in glass, polymers and foils, from rapid prototyping to scalable production.</p>
+          <span class="service-card__link">View details →</span>
+        </div>
+      </a>
+      <a href="/application/leak-test-hole-drilling/" class="service-card reveal d1">
+        <div class="service-card__media"><img src="https://www.potomac-laser.com/wp-content/uploads/2013/03/Leak-Test-Vials-400x266.webp" alt="Leak-test vials" loading="lazy"></div>
+        <div class="service-card__body">
+          <h3>CCIT Leak-Test Calibration</h3>
+          <p>Laser-drilled micro-holes in glass and polymer vials and ampoules for container closure integrity and leak-test system validation.</p>
+          <span class="service-card__link">View details →</span>
+        </div>
+      </a>
+      <a href="/application/potomac-rd-notebook-invisible-hole-backlighting-applications/" class="service-card reveal d2">
+        <div class="service-card__media"><img src="https://www.potomac-laser.com/wp-content/uploads/2015/02/MH_Lit2-400x275.webp" alt="Invisible backlighting micro-holes" loading="lazy"></div>
+        <div class="service-card__body">
+          <h3>Invisible Backlighting</h3>
+          <p>High-resolution micro-hole drilling for concealed displays, precise, uniform holes for invisible backlit indicators and controls.</p>
+          <span class="service-card__link">View details →</span>
+        </div>
+      </a>
+      <a href="/application/laser-hole-drilling/" class="service-card reveal">
+        <div class="service-card__media"><img src="https://www.potomac-laser.com/wp-content/uploads/2011/02/pl-metal1.webp" alt="Small-hole drilling in metal" loading="lazy"></div>
+        <div class="service-card__body">
+          <h3>Small-Hole Drilling</h3>
+          <p>Quick, cost-effective small-hole drilling in most materials, microholes as small as 1 micron in almost any substrate.</p>
+          <span class="service-card__link">View details →</span>
+        </div>
+      </a>
+      <a href="/application/probe-cards/" class="service-card reveal d1">
+        <div class="service-card__media"><img src="https://www.potomac-laser.com/wp-content/uploads/2011/02/PL-Probe-Card.webp" alt="Probe card micro-hole drilling" loading="lazy"></div>
+        <div class="service-card__body">
+          <h3>Probe Card Micro-Hole Drilling</h3>
+          <p>Micro-hole drilling for probe cards in silicon nitride, polyimide, Ultem and other engineered substrates.</p>
+          <span class="service-card__link">View details →</span>
+        </div>
+      </a>
+      <a href="/application/catheter-hole-drilling/" class="service-card reveal d2">
+        <div class="service-card__media"><img src="https://www.potomac-laser.com/wp-content/uploads/2010/12/scan0003-400x589.webp" alt="Catheter micro-hole drilling" loading="lazy"></div>
+        <div class="service-card__body">
+          <h3>Catheter Micro-Hole Drilling</h3>
+          <p>Precision laser micro-hole drilling for medical catheters, hole sizes down to microns, biocompatible materials, ISO 13485 and fast turnaround.</p>
+          <span class="service-card__link">View details →</span>
+        </div>
+      </a>
+    </div>
+
+    <div style="display:flex;justify-content:center;margin-top:40px">
+      <a href="/applications/" class="btn btn--secondary btn--lg">View all applications</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────────
+     ESTIMATE BAND
+     ───────────────────────────────────────────────────────── -->
+<section class="sa-estimate">
+  <div class="sa-estimate__bg"></div>
+  <div class="sa-estimate__inner">
+    <div>
+      <div class="eyebrow eyebrow--on-dark" style="color:#fff">Get an estimate</div>
+      <h2 class="sa-estimate__title">Submit your drawing, get a quick estimate</h2>
+      <p class="sa-estimate__copy">Send us your CAD or drawing and see if we're the right fit. Our engineers review every design for manufacturability and respond within one business day.</p>
+    </div>
+    <div class="sa-estimate__actions">
+      <a href="Services - CNC Micromachining.html#quote" class="btn btn--cta btn--lg">Request a quote</a>
+      <a href="/contact/" class="btn btn--ghost-light btn--lg">Contact us</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────────
+     MATERIALS & INDUSTRIES
+     ───────────────────────────────────────────────────────── -->
+<section class="section">
+  <div class="container">
+    <div class="sa-feature">
+      <div class="sa-feature__card reveal">
+        <img class="sa-feature__img" src="https://www.potomac-laser.com/wp-content/uploads/2022/08/las.webp" alt="" aria-hidden="true" loading="lazy">
+        <div class="sa-feature__body">
+          <div class="eyebrow">Materials</div>
+          <h3 class="sa-feature__title">Everything you need for your business</h3>
+          <p class="sa-feature__copy">The best parts start with the best materials. As part of the Goodfellow family, a global leader in high-quality material supply, we draw on an extensive range of superior materials, enhancing our precision microfabrication with 170,000+ grades.</p>
+          <a href="/materials/" class="btn btn--secondary sa-feature__link">Learn more</a>
+        </div>
+      </div>
+      <div class="sa-feature__card sa-feature__card--dark reveal d1">
+        <img class="sa-feature__img" src="https://www.potomac-laser.com/wp-content/uploads/2022/08/mur.webp" alt="" aria-hidden="true" loading="lazy">
+        <div class="sa-feature__body">
+          <div class="eyebrow eyebrow--on-dark" style="color:#fff">Industries</div>
+          <h3 class="sa-feature__title">Trusted since 1982</h3>
+          <p class="sa-feature__copy">Recognised by commercial and government agencies alike for innovative contributions to medical device manufacturing, biotech and electronics fabrication, from our high-tech facility at bwtech@UMBC Research and Technology Park in Baltimore, MD.</p>
+          <a href="About - About Our Group.html" class="btn btn--ghost-light sa-feature__link">Learn more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────────
+     FINAL CTA
+     ───────────────────────────────────────────────────────── -->
+<section class="final-cta">
+  <div class="final-cta__inner">
+    <div class="eyebrow eyebrow--on-dark" style="justify-content:center;display:inline-flex;color:#fff">Get Started Today</div>
+    <h2 class="final-cta__title">Have a part in mind?</h2>
+    <p class="final-cta__copy">Share your CAD files and tolerance requirements. Our engineers review every design for manufacturability and respond within one business day.</p>
+    <div class="final-cta__actions">
+      <a href="Services - CNC Micromachining.html#quote" class="btn btn--cta btn--lg">Request a quote</a>
+      <a href="/contact/" class="btn btn--ghost-light btn--lg">Contact us</a>
+    </div>
+  </div>
+</section>
+
+<script>
+/* ── REVEAL ── */
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
+}, {threshold:0.08, rootMargin:'0px 0px -20px 0px'});
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+</script>
+
+</body>
+</html>

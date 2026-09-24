@@ -1,0 +1,18 @@
+{
+ "button_1": "Learn more",
+ "url_1": "/materials/",
+ "image_1": {
+  "asset": "sa_feat_1"
+ },
+ "heading_1": "Materials",
+ "heading_2": "Everything you need for your business",
+ "body_1": "<p>The best parts start with the best materials. As part of the Goodfellow family, a global leader in high-quality material supply, we draw on an extensive range of superior materials, enhancing our precision microfabrication with 170,000+ grades.</p>",
+ "button_2": "Learn more",
+ "url_2": "About - About Our Group.html",
+ "image_2": {
+  "asset": "sa_feat_2"
+ },
+ "heading_3": "Industries",
+ "heading_4": "Trusted since 1982",
+ "body_2": "<p>Recognised by commercial and government agencies alike for innovative contributions to medical device manufacturing, biotech and electronics fabrication, from our high-tech facility at bwtech@UMBC Research and Technology Park in Baltimore, MD.</p>"
+}
