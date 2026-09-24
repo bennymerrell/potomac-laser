@@ -1,0 +1,35 @@
+{
+ "slug": "pl-auto-quality-policy",
+ "title": "Quality Policy",
+ "design_page": "About - Quality Policy.html",
+ "header": "# spec.yaml — Quality Policy  (run 20260924-125928, autonomous, RUN A re-entry)\n# Source design : Potomac Laser.zip (fab7225c…) :: About - Quality Policy.html  (no tweak defaults)\n# MATCH (3.c.ii):\n#   [0] #hero  centred, no meta, no buttons [0/0] -> hero-dark-centered (library)\n#   [1] top-aligned split: eyebrow + H2 + 4-item check-list | framed certificate + caption [1/1]\n#              -> UNMATCHED: split-prose-list-media has a paragraph and a full-bleed photo, no caption,\n#                 centred alignment -> §7 candidate split-list-figure\n#   [2] subtle, centred head + one 4-item check-list in a 900px column [0/0]\n#              -> UNMATCHED -> §7 candidate check-list-centered\n#   [3] .final-cta -> cta-band-dark [0/0]\n# Brand: no present-tense \"Potomac\" in the copy. KEPT: certificate alt \"Potomac Photonics ISO 13485:2016\n#   certificate\" — it describes a document issued in that name.\n",
+ "assets": [
+  "qp_certificate"
+ ],
+ "sections": [
+  {
+   "pattern": "hero-dark-centered",
+   "values": "quality-policy.hero-dark-centered.values.json"
+  },
+  {
+   "pattern": "split-list-figure",
+   "values": "quality-policy.split-list-figure.values.json"
+  },
+  {
+   "pattern": "check-list-centered",
+   "values": "quality-policy.check-list-centered.values.json"
+  },
+  {
+   "pattern": "cta-band-dark",
+   "values": {
+    "heading_1": "Rapid response",
+    "heading_2": "Talk to the team.",
+    "body_1": "<p>Send a drawing or a short description of your project. Our engineers review every design and respond within one business day.</p>",
+    "button_1": "Email us",
+    "url_1": "Contact - Contact.html",
+    "button_2": "Send a drawing",
+    "url_2": "https://www.potomac-laser.com/project-quote/#projectForm"
+   }
+  }
+ ]
+}

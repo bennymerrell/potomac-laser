@@ -1,0 +1,12 @@
+{
+    "pattern": "split-list-figure",
+    "source_post": 12301,
+    "source_section_index": 1,
+    "tokens": {
+        "{heading_1}": "Our commitments",
+        "{heading_2}": "To achieve these goals, we will",
+        "{body_1}": "<ul><li>Meet all requirements of ISO 13485:2016, along with all applicable statutory and implied national and international standards</li><li>Achieve all of our quality objectives as set out by Management</li><li>Maintain the awareness and competency of our employees</li><li>Continually improve our processes and products while maintaining the safety and efficacy of our devices</li></ul>",
+        "{image_1}": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-qp-iso-certificate.webp",
+        "{heading_3}": "ISO 13485:2016 certificate"
+    }
+}

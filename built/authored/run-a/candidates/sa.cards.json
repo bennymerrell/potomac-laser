@@ -1,0 +1,94 @@
+{
+ "svc": [
+  {
+   "href": "/services/rapid-prototyping-services/",
+   "img": "https://www.potomac-laser.com/wp-content/uploads/2013/04/3D-Parts-1024x819-400x320.webp",
+   "alt": "Rapid prototyping of 3D parts",
+   "title": "Rapid Prototyping",
+   "text": "Fast-turn prototype paths with DFM feedback so design teams get real parts on compressed timelines.",
+   "label": "Learn more →"
+  },
+  {
+   "href": "Services - CNC Micromachining.html",
+   "img": "https://www.potomac-laser.com/wp-content/uploads/2026/02/cnc_aerospace_comp-400x218.jpeg",
+   "alt": "Micro CNC of aerospace components",
+   "title": "CNC Micro Machining",
+   "text": "4-axis CNC milling and drilling for fine-feature metals and engineering plastics at ±10 µm tolerances.",
+   "label": "Learn more →"
+  },
+  {
+   "href": "/services/micro-hole-drilling/",
+   "img": "https://www.potomac-laser.com/wp-content/uploads/2015/07/FILTER_01-350x230.jpg.webp",
+   "alt": "Laser micro-hole drilling",
+   "title": "Laser Micro-Hole Drilling",
+   "text": "Micro-holes down to a single micron in almost any substrate: vias, nozzles, filters and dense arrays.",
+   "label": "Learn more →"
+  },
+  {
+   "href": "/services/laser-micromachining/",
+   "img": "https://www.potomac-laser.com/wp-content/uploads/2014/12/shift-400x264.webp",
+   "alt": "Laser micromachining",
+   "title": "Laser Micromachining",
+   "text": "UV and IR laser processing for ultra-fine features in metals, polymers, glass, ceramics and thin films.",
+   "label": "Learn more →"
+  },
+  {
+   "href": "/services/3d-printing-contract-services/",
+   "img": "https://www.potomac-laser.com/wp-content/uploads/2014/07/PMidLit-400x261.webp",
+   "alt": "3D printing contract services",
+   "title": "3D Printing Contract Services",
+   "text": "Micro-scale additive manufacturing for intricate geometries conventional processes can't reach.",
+   "label": "Learn more →"
+  }
+ ],
+ "app": [
+  {
+   "href": "/application/microfluidics/",
+   "img": "https://www.potomac-laser.com/wp-content/uploads/2016/04/MFluidic_sphere_cs-400x268.webp",
+   "alt": "Microfluidic device fabrication",
+   "title": "Microfluidic Device Fabrication",
+   "text": "Micro-drilling for microfluidic devices, precise vias, channels and ports in glass, polymers and foils, from rapid prototyping to scalable production.",
+   "label": "View details →"
+  },
+  {
+   "href": "/application/leak-test-hole-drilling/",
+   "img": "https://www.potomac-laser.com/wp-content/uploads/2013/03/Leak-Test-Vials-400x266.webp",
+   "alt": "Leak-test vials",
+   "title": "CCIT Leak-Test Calibration",
+   "text": "Laser-drilled micro-holes in glass and polymer vials and ampoules for container closure integrity and leak-test system validation.",
+   "label": "View details →"
+  },
+  {
+   "href": "/application/potomac-rd-notebook-invisible-hole-backlighting-applications/",
+   "img": "https://www.potomac-laser.com/wp-content/uploads/2015/02/MH_Lit2-400x275.webp",
+   "alt": "Invisible backlighting micro-holes",
+   "title": "Invisible Backlighting",
+   "text": "High-resolution micro-hole drilling for concealed displays, precise, uniform holes for invisible backlit indicators and controls.",
+   "label": "View details →"
+  },
+  {
+   "href": "/application/laser-hole-drilling/",
+   "img": "https://www.potomac-laser.com/wp-content/uploads/2011/02/pl-metal1.webp",
+   "alt": "Small-hole drilling in metal",
+   "title": "Small-Hole Drilling",
+   "text": "Quick, cost-effective small-hole drilling in most materials, microholes as small as 1 micron in almost any substrate.",
+   "label": "View details →"
+  },
+  {
+   "href": "/application/probe-cards/",
+   "img": "https://www.potomac-laser.com/wp-content/uploads/2011/02/PL-Probe-Card.webp",
+   "alt": "Probe card micro-hole drilling",
+   "title": "Probe Card Micro-Hole Drilling",
+   "text": "Micro-hole drilling for probe cards in silicon nitride, polyimide, Ultem and other engineered substrates.",
+   "label": "View details →"
+  },
+  {
+   "href": "/application/catheter-hole-drilling/",
+   "img": "https://www.potomac-laser.com/wp-content/uploads/2010/12/scan0003-400x589.webp",
+   "alt": "Catheter micro-hole drilling",
+   "title": "Catheter Micro-Hole Drilling",
+   "text": "Precision laser micro-hole drilling for medical catheters, hole sizes down to microns, biocompatible materials, ISO 13485 and fast turnaround.",
+   "label": "View details →"
+  }
+ ]
+}

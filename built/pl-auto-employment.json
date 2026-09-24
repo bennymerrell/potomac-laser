@@ -1,0 +1,2019 @@
+[
+ {
+  "id": "1c45402",
+  "elType": "container",
+  "isInner": false,
+  "settings": {
+   "flex_direction": "column",
+   "flex_align_items": "center",
+   "padding": {
+    "unit": "px",
+    "top": "72",
+    "right": "24",
+    "bottom": "64",
+    "left": "24",
+    "isLinked": false
+   },
+   "background_background": "classic",
+   "custom_css": "selector{overflow:hidden;background-image:radial-gradient(ellipse at 30% 0%,rgba(14,99,168,0.28) 0%,transparent 60%),radial-gradient(ellipse at 90% 100%,rgba(148,18,82,0.16) 0%,transparent 55%),linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);background-size:auto,auto,32px 32px,32px 32px;}",
+   "content_width": "full",
+   "background_color": "",
+   "__globals__": {
+    "background_color": "globals/colors?id=gfnavydp"
+   }
+  },
+  "elements": [
+   {
+    "id": "efeae89",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+     "content_width": "boxed",
+     "flex_direction": "column",
+     "flex_align_items": "center",
+     "flex_gap": {
+      "unit": "px",
+      "column": "0",
+      "row": "0",
+      "isLinked": true
+     },
+     "boxed_width": {
+      "unit": "px",
+      "size": 1200
+     },
+     "padding": {
+      "unit": "px",
+      "top": "0",
+      "right": "0",
+      "bottom": "0",
+      "left": "0",
+      "isLinked": true
+     }
+    },
+    "elements": [
+     {
+      "id": "cd817d0",
+      "elType": "widget",
+      "widgetType": "heading",
+      "settings": {
+       "title": "Careers",
+       "header_size": "div",
+       "typography_typography": "custom",
+       "typography_font_family": "Inter",
+       "typography_font_size": {
+        "unit": "px",
+        "size": 12
+       },
+       "typography_font_weight": "600",
+       "title_color": "",
+       "__globals__": {
+        "title_color": "globals/colors?id=gforange"
+       },
+       "align": "center",
+       "typography_line_height": {
+        "unit": "px",
+        "size": 18
+       },
+       "typography_letter_spacing": {
+        "unit": "px",
+        "size": 2.16
+       },
+       "typography_text_transform": "uppercase"
+      },
+      "elements": []
+     },
+     {
+      "id": "22c56dc",
+      "elType": "widget",
+      "widgetType": "heading",
+      "settings": {
+       "title": "Careers at Goodfellow Microfabrication",
+       "header_size": "h1",
+       "typography_typography": "custom",
+       "typography_font_family": "Inter",
+       "typography_font_size": {
+        "unit": "px",
+        "size": 54.4
+       },
+       "typography_font_weight": "600",
+       "title_color": "",
+       "__globals__": {
+        "title_color": "globals/colors?id=gfwhite"
+       },
+       "align": "center",
+       "typography_line_height": {
+        "unit": "px",
+        "size": 57.66
+       },
+       "typography_letter_spacing": {
+        "unit": "px",
+        "size": -1.088
+       },
+       "custom_css": "selector .elementor-heading-title{max-width:22ch;margin:0 auto;text-wrap:balance}",
+       "_margin": {
+        "unit": "px",
+        "top": "43",
+        "right": "0",
+        "bottom": "18",
+        "left": "0",
+        "isLinked": false
+       }
+      },
+      "elements": []
+     },
+     {
+      "id": "c2ab7f6",
+      "elType": "widget",
+      "widgetType": "text-editor",
+      "settings": {
+       "editor": "<p>Ready to advance your career with a high-tech manufacturer? Goodfellow Microfabrication is always looking for <strong>detail-oriented, multitasking professionals</strong> to join the team in Maryland, whether your experience is in shipping and receiving, operations or another area.</p>",
+       "typography_typography": "custom",
+       "typography_font_family": "Inter",
+       "typography_font_size": {
+        "unit": "px",
+        "size": 18
+       },
+       "typography_font_weight": "400",
+       "text_color": "rgba(255,255,255,0.74)",
+       "typography_line_height": {
+        "unit": "px",
+        "size": 29.7
+       },
+       "align": "center",
+       "custom_css": "selector p{font-size:18px;line-height:29.7px;font-weight:400;color:rgba(255,255,255,0.74);margin:0}selector a{font-size:inherit;line-height:inherit}selector p{max-width:727px;margin:0 auto}selector strong{color:#fff;font-weight:600}selector a{color:#fff;text-decoration:underline;text-underline-offset:3px}"
+      },
+      "elements": []
+     },
+     {
+      "id": "ff1c53d",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+       "flex_direction": "row",
+       "flex_wrap": "wrap",
+       "flex_justify_content": "center",
+       "flex_gap": {
+        "unit": "px",
+        "column": "12",
+        "row": "12",
+        "isLinked": true
+       },
+       "content_width": "full",
+       "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+       },
+       "margin": {
+        "unit": "px",
+        "top": "30",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": false
+       }
+      },
+      "elements": [
+       {
+        "id": "800b263",
+        "elType": "widget",
+        "widgetType": "button",
+        "settings": {
+         "text": "View openings",
+         "link": {
+          "url": "#openings",
+          "is_external": "",
+          "nofollow": ""
+         },
+         "typography_typography": "custom",
+         "typography_font_family": "Inter",
+         "typography_font_size": {
+          "unit": "px",
+          "size": 15
+         },
+         "typography_font_weight": "600",
+         "border_radius": {
+          "unit": "px",
+          "top": "999",
+          "right": "999",
+          "bottom": "999",
+          "left": "999",
+          "isLinked": true
+         },
+         "text_padding": {
+          "unit": "px",
+          "top": "15",
+          "right": "28",
+          "bottom": "15",
+          "left": "28",
+          "isLinked": false
+         },
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gforange",
+          "button_text_color": "globals/colors?id=gfwhite"
+         },
+         "button_text_color": "",
+         "custom_css": "selector .elementor-button{box-shadow:0 8px 24px rgba(245,130,31,.3)}selector .elementor-button{border:1px solid transparent}"
+        },
+        "elements": []
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "b44ffc8",
+  "elType": "container",
+  "isInner": false,
+  "settings": {
+   "flex_direction": "column",
+   "flex_align_items": "center",
+   "padding": {
+    "unit": "px",
+    "top": "80",
+    "right": "24",
+    "bottom": "80",
+    "left": "24",
+    "isLinked": false
+   },
+   "background_background": "classic",
+   "content_width": "full",
+   "background_color": "",
+   "__globals__": {
+    "background_color": "globals/colors?id=gfwhite"
+   }
+  },
+  "elements": [
+   {
+    "id": "2f7d6ec",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+     "content_width": "boxed",
+     "flex_direction": "column",
+     "flex_align_items": "stretch",
+     "flex_gap": {
+      "unit": "px",
+      "column": "0",
+      "row": "0",
+      "isLinked": true
+     },
+     "padding": {
+      "unit": "px",
+      "top": "0",
+      "right": "0",
+      "bottom": "0",
+      "left": "0",
+      "isLinked": true
+     },
+     "boxed_width": {
+      "unit": "px",
+      "size": 1152
+     }
+    },
+    "elements": [
+     {
+      "id": "6eb9878",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+       "flex_direction": "row",
+       "flex_wrap": "wrap",
+       "flex_align_items": "center",
+       "flex_gap": {
+        "unit": "px",
+        "column": "72",
+        "row": "48",
+        "isLinked": false
+       },
+       "content_width": "full",
+       "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+       }
+      },
+      "elements": [
+       {
+        "id": "6ddb62b",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "flex_direction": "column",
+         "flex_align_items": "stretch",
+         "flex_gap": {
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+         },
+         "custom_css": "selector{flex:0 0 calc((100% - 72px) / 2) !important;max-width:calc((100% - 72px) / 2) !important}@media(max-width:979px){selector{flex:0 0 100% !important;max-width:100% !important}}",
+         "content_width": "full",
+         "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+         }
+        },
+        "elements": [
+         {
+          "id": "61fbfcb",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Working at Goodfellow Microfabrication",
+           "header_size": "div",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 12
+           },
+           "typography_font_weight": "600",
+           "title_color": "",
+           "__globals__": {
+            "title_color": "globals/colors?id=gforange"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 18
+           },
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": 1.68
+           },
+           "typography_text_transform": "uppercase",
+           "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "20",
+            "left": "0",
+            "isLinked": false
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "b265a1e",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Benefits",
+           "header_size": "h2",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 36
+           },
+           "typography_font_weight": "600",
+           "title_color": "#0F1620",
+           "typography_line_height": {
+            "unit": "px",
+            "size": 41.4
+           },
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": -0.72
+           },
+           "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "18",
+            "left": "0",
+            "isLinked": false
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "83b159a",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+           "editor": "<p>We offer competitive pay and a comprehensive benefits package. If there is no role listed that matches your experience, we still welcome your résumé for future opportunities.</p>",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 16
+           },
+           "typography_font_weight": "400",
+           "text_color": "",
+           "__globals__": {
+            "text_color": "globals/colors?id=gfink"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 28
+           },
+           "custom_css": "selector p{font-size:16px;line-height:28px;font-weight:400;margin:0}selector a{font-size:inherit;line-height:inherit}",
+           "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "16",
+            "left": "0",
+            "isLinked": false
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "9ac8f48",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+           "editor": "<ul><li>Competitive pay</li><li>401(k) with matching</li><li>Health, dental and vision insurance</li><li>Life insurance</li><li>Paid time off</li></ul>",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 15.5
+           },
+           "typography_font_weight": "400",
+           "text_color": "",
+           "__globals__": {
+            "text_color": "globals/colors?id=gfink"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 25.575
+           },
+           "custom_css": "selector p{font-size:15.5px;line-height:25.575px;font-weight:400;margin:0}selector a{font-size:inherit;line-height:inherit}selector ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}selector li{position:relative;margin:0;font-size:15.5px;line-height:25.575px;color:#3C4858;padding:16px 18px 16px 48px;background:#fff;border:1px solid #DCE1EA;border-radius:12px}selector li::before{content:\"\";position:absolute;left:18px;top:20px;width:18px;height:18px;background:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F5821F' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E\") no-repeat center/18px}"
+          },
+          "elements": []
+         }
+        ]
+       },
+       {
+        "id": "765690d",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "background_background": "classic",
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "#DCE1EA",
+         "border_radius": {
+          "unit": "px",
+          "top": "18",
+          "right": "18",
+          "bottom": "18",
+          "left": "18",
+          "isLinked": true
+         },
+         "custom_css": "selector{overflow:hidden;box-shadow:0 22px 58px rgba(15,42,68,.12)}selector{flex:0 0 calc((100% - 72px) / 2) !important;max-width:calc((100% - 72px) / 2) !important}@media(max-width:979px){selector{flex:0 0 100% !important;max-width:100% !important}}",
+         "content_width": "full",
+         "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+         },
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gfnavydp"
+         }
+        },
+        "elements": [
+         {
+          "id": "5947d9a",
+          "elType": "widget",
+          "widgetType": "image",
+          "settings": {
+           "image": {
+            "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-emp-benefits.webp",
+            "id": 12297
+           },
+           "image_size": "full",
+           "custom_css": "selector img{display:block;width:100%;height:auto}"
+          },
+          "elements": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "c13ce56",
+  "elType": "container",
+  "isInner": false,
+  "settings": {
+   "flex_direction": "column",
+   "flex_align_items": "center",
+   "padding": {
+    "unit": "px",
+    "top": "80",
+    "right": "24",
+    "bottom": "80",
+    "left": "24",
+    "isLinked": false
+   },
+   "background_background": "classic",
+   "content_width": "full",
+   "background_color": "#F6F8FB",
+   "_element_id": "openings"
+  },
+  "elements": [
+   {
+    "id": "158043c",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+     "content_width": "boxed",
+     "flex_direction": "column",
+     "flex_align_items": "center",
+     "flex_gap": {
+      "unit": "px",
+      "column": "0",
+      "row": "0",
+      "isLinked": true
+     },
+     "padding": {
+      "unit": "px",
+      "top": "0",
+      "right": "0",
+      "bottom": "0",
+      "left": "0",
+      "isLinked": true
+     },
+     "boxed_width": {
+      "unit": "px",
+      "size": 1152
+     }
+    },
+    "elements": [
+     {
+      "id": "e47f620",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+       "flex_direction": "column",
+       "flex_align_items": "center",
+       "flex_gap": {
+        "unit": "px",
+        "column": "0",
+        "row": "0",
+        "isLinked": true
+       },
+       "width": {
+        "unit": "px",
+        "size": 760
+       },
+       "width_mobile": {
+        "unit": "%",
+        "size": 100
+       },
+       "content_width": "full",
+       "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+       },
+       "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "48",
+        "left": "0",
+        "isLinked": false
+       }
+      },
+      "elements": [
+       {
+        "id": "8680979",
+        "elType": "widget",
+        "widgetType": "heading",
+        "settings": {
+         "title": "Openings",
+         "header_size": "div",
+         "typography_typography": "custom",
+         "typography_font_family": "Inter",
+         "typography_font_size": {
+          "unit": "px",
+          "size": 12
+         },
+         "typography_font_weight": "600",
+         "title_color": "",
+         "__globals__": {
+          "title_color": "globals/colors?id=gforange"
+         },
+         "align": "center",
+         "typography_line_height": {
+          "unit": "px",
+          "size": 18
+         },
+         "typography_letter_spacing": {
+          "unit": "px",
+          "size": 1.68
+         },
+         "typography_text_transform": "uppercase"
+        },
+        "elements": []
+       },
+       {
+        "id": "43d82c5",
+        "elType": "widget",
+        "widgetType": "heading",
+        "settings": {
+         "title": "Current roles",
+         "header_size": "h2",
+         "typography_typography": "custom",
+         "typography_font_family": "Inter",
+         "typography_font_size": {
+          "unit": "px",
+          "size": 40
+         },
+         "typography_font_weight": "600",
+         "title_color": "#0F1620",
+         "align": "center",
+         "typography_line_height": {
+          "unit": "px",
+          "size": 44.8
+         },
+         "typography_letter_spacing": {
+          "unit": "px",
+          "size": -0.8
+         },
+         "_margin": {
+          "unit": "px",
+          "top": "18",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": false
+         }
+        },
+        "elements": []
+       }
+      ]
+     },
+     {
+      "id": "e5d55f9",
+      "elType": "widget",
+      "widgetType": "html",
+      "settings": {
+       "html": "<div class=\"pl-chips\" data-pl-chips role=\"group\" aria-label=\"Filter\"><button type=\"button\" data-filter=\"all\" aria-pressed=\"true\">All</button><button type=\"button\" data-filter=\"sales\" aria-pressed=\"false\">Sales</button><button type=\"button\" data-filter=\"production\" aria-pressed=\"false\">Production</button><button type=\"button\" data-filter=\"hr\" aria-pressed=\"false\">HR</button><button type=\"button\" data-filter=\"engineering\" aria-pressed=\"false\">Engineering</button></div><style>.pl-chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}.pl-chips button{border:1.5px solid #DCE1EA;background:#fff;border-radius:9999px;padding:9px 18px;font:700 12px/15px Inter,system-ui,sans-serif;letter-spacing:.72px;text-transform:uppercase;color:#6B7280;cursor:pointer;transition:all .25s cubic-bezier(.25,.46,.45,.94)}.pl-chips button:hover{border-color:#F5821F;color:#15253D}.pl-chips button[aria-pressed=\"true\"]{background:#F5821F;border-color:#F5821F;color:#fff}</style><script>(function(){var g=document.currentScript.previousElementSibling.previousElementSibling;var scope=g.closest(\".e-parent\")||document;g.querySelectorAll(\"button[data-filter]\").forEach(function(b){b.addEventListener(\"click\",function(){var v=b.getAttribute(\"data-filter\");g.querySelectorAll(\"button[data-filter]\").forEach(function(x){x.setAttribute(\"aria-pressed\",x===b?\"true\":\"false\");});scope.querySelectorAll(\".pl-filter-card\").forEach(function(c){var h=c.querySelector(\".elementor-heading-title\");var cat=h?h.textContent.trim().toLowerCase():\"\";c.style.display=(v===\"all\"||cat===v)?\"\":\"none\";});});});})();</script>",
+       "_margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "28",
+        "left": "0",
+        "isLinked": false
+       }
+      },
+      "elements": []
+     },
+     {
+      "id": "c51583a",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+       "flex_direction": "row",
+       "flex_wrap": "wrap",
+       "flex_align_items": "stretch",
+       "flex_gap": {
+        "unit": "px",
+        "column": "20",
+        "row": "20",
+        "isLinked": true
+       },
+       "width": {
+        "unit": "%",
+        "size": 100
+       },
+       "custom_css": "selector > .e-con{flex:0 0 calc((100% - 40px) / 3) !important;max-width:calc((100% - 40px) / 3) !important}@media(max-width:979px){selector > .e-con{flex:0 0 100% !important;max-width:100% !important}}",
+       "content_width": "full",
+       "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+       }
+      },
+      "elements": [
+       {
+        "id": "3fd072c",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "flex_direction": "column",
+         "flex_align_items": "stretch",
+         "flex_gap": {
+          "unit": "px",
+          "column": "10",
+          "row": "10",
+          "isLinked": true
+         },
+         "padding": {
+          "unit": "px",
+          "top": "24",
+          "right": "24",
+          "bottom": "26",
+          "left": "24",
+          "isLinked": false
+         },
+         "background_background": "classic",
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "#DCE1EA",
+         "border_radius": {
+          "unit": "px",
+          "top": "8",
+          "right": "8",
+          "bottom": "8",
+          "left": "8",
+          "isLinked": true
+         },
+         "custom_css": "selector{box-shadow:0 2px 8px rgba(0,0,0,.07);overflow:hidden}selector{text-decoration:none;color:inherit;transition:transform .3s cubic-bezier(.25,.46,.45,.94),box-shadow .3s cubic-bezier(.25,.46,.45,.94)}selector:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(15,42,68,.08)}",
+         "html_tag": "a",
+         "link": {
+          "url": "https://www.potomac-laser.com/jobs/account-manager-sales-support/",
+          "is_external": "on",
+          "nofollow": ""
+         },
+         "css_classes": "pl-filter-card",
+         "content_width": "full",
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gfwhite"
+         }
+        },
+        "elements": [
+         {
+          "id": "d519aed",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Sales",
+           "header_size": "div",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 11
+           },
+           "typography_font_weight": "700",
+           "title_color": "",
+           "__globals__": {
+            "title_color": "globals/colors?id=gforange"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 16.5
+           },
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": 1.54
+           },
+           "typography_text_transform": "uppercase"
+          },
+          "elements": []
+         },
+         {
+          "id": "68c6265",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Account Manager, Sales Support",
+           "header_size": "h3",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 17.6
+           },
+           "typography_font_weight": "700",
+           "title_color": "",
+           "__globals__": {
+            "title_color": "globals/colors?id=gfnavy"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 22.88
+           },
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": -0.176
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "a01df9c",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+           "editor": "<p>Full time · US Office, Baltimore MD</p>",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 14
+           },
+           "typography_font_weight": "400",
+           "text_color": "",
+           "__globals__": {
+            "text_color": "globals/colors?id=gfbody"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 23.1
+           },
+           "custom_css": "selector p{font-size:14px;line-height:23.1px;font-weight:400;margin:0}selector a{font-size:inherit;line-height:inherit}"
+          },
+          "elements": []
+         },
+         {
+          "id": "cab80b9",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+           "editor": "<p>View details</p>",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 11.5
+           },
+           "typography_font_weight": "800",
+           "text_color": "",
+           "__globals__": {
+            "text_color": "globals/colors?id=gfnavy"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 17.25
+           },
+           "custom_css": "selector p{font-size:11.5px;line-height:17.25px;font-weight:800;margin:0}selector a{font-size:inherit;line-height:inherit}selector a, selector p{font-size:11.5px;font-weight:800;letter-spacing:1.15px;text-transform:uppercase;color:#15253D;text-decoration:none;line-height:17.25px}selector{margin-top:auto}"
+          },
+          "elements": []
+         }
+        ]
+       },
+       {
+        "id": "6dc137e",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "flex_direction": "column",
+         "flex_align_items": "stretch",
+         "flex_gap": {
+          "unit": "px",
+          "column": "10",
+          "row": "10",
+          "isLinked": true
+         },
+         "padding": {
+          "unit": "px",
+          "top": "24",
+          "right": "24",
+          "bottom": "26",
+          "left": "24",
+          "isLinked": false
+         },
+         "background_background": "classic",
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "#DCE1EA",
+         "border_radius": {
+          "unit": "px",
+          "top": "8",
+          "right": "8",
+          "bottom": "8",
+          "left": "8",
+          "isLinked": true
+         },
+         "custom_css": "selector{box-shadow:0 2px 8px rgba(0,0,0,.07);overflow:hidden}selector{text-decoration:none;color:inherit;transition:transform .3s cubic-bezier(.25,.46,.45,.94),box-shadow .3s cubic-bezier(.25,.46,.45,.94)}selector:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(15,42,68,.08)}",
+         "html_tag": "a",
+         "link": {
+          "url": "https://www.potomac-laser.com/jobs/internal-account-manager/",
+          "is_external": "on",
+          "nofollow": ""
+         },
+         "css_classes": "pl-filter-card",
+         "content_width": "full",
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gfwhite"
+         }
+        },
+        "elements": [
+         {
+          "id": "fc375ad",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Sales",
+           "header_size": "div",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 11
+           },
+           "typography_font_weight": "700",
+           "title_color": "",
+           "__globals__": {
+            "title_color": "globals/colors?id=gforange"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 16.5
+           },
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": 1.54
+           },
+           "typography_text_transform": "uppercase"
+          },
+          "elements": []
+         },
+         {
+          "id": "5fc3b46",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Internal Account Manager",
+           "header_size": "h3",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 17.6
+           },
+           "typography_font_weight": "700",
+           "title_color": "",
+           "__globals__": {
+            "title_color": "globals/colors?id=gfnavy"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 22.88
+           },
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": -0.176
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "c128f85",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+           "editor": "<p>Full time · US Office, Baltimore MD</p>",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 14
+           },
+           "typography_font_weight": "400",
+           "text_color": "",
+           "__globals__": {
+            "text_color": "globals/colors?id=gfbody"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 23.1
+           },
+           "custom_css": "selector p{font-size:14px;line-height:23.1px;font-weight:400;margin:0}selector a{font-size:inherit;line-height:inherit}"
+          },
+          "elements": []
+         },
+         {
+          "id": "eb0323d",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+           "editor": "<p>View details</p>",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 11.5
+           },
+           "typography_font_weight": "800",
+           "text_color": "",
+           "__globals__": {
+            "text_color": "globals/colors?id=gfnavy"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 17.25
+           },
+           "custom_css": "selector p{font-size:11.5px;line-height:17.25px;font-weight:800;margin:0}selector a{font-size:inherit;line-height:inherit}selector a, selector p{font-size:11.5px;font-weight:800;letter-spacing:1.15px;text-transform:uppercase;color:#15253D;text-decoration:none;line-height:17.25px}selector{margin-top:auto}"
+          },
+          "elements": []
+         }
+        ]
+       },
+       {
+        "id": "2d8d1ed",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "flex_direction": "column",
+         "flex_align_items": "stretch",
+         "flex_gap": {
+          "unit": "px",
+          "column": "10",
+          "row": "10",
+          "isLinked": true
+         },
+         "padding": {
+          "unit": "px",
+          "top": "24",
+          "right": "24",
+          "bottom": "26",
+          "left": "24",
+          "isLinked": false
+         },
+         "background_background": "classic",
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "#DCE1EA",
+         "border_radius": {
+          "unit": "px",
+          "top": "8",
+          "right": "8",
+          "bottom": "8",
+          "left": "8",
+          "isLinked": true
+         },
+         "custom_css": "selector{box-shadow:0 2px 8px rgba(0,0,0,.07);overflow:hidden}selector{text-decoration:none;color:inherit;transition:transform .3s cubic-bezier(.25,.46,.45,.94),box-shadow .3s cubic-bezier(.25,.46,.45,.94)}selector:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(15,42,68,.08)}",
+         "html_tag": "a",
+         "link": {
+          "url": "https://www.potomac-laser.com/jobs/process-engineer/",
+          "is_external": "on",
+          "nofollow": ""
+         },
+         "css_classes": "pl-filter-card",
+         "content_width": "full",
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gfwhite"
+         }
+        },
+        "elements": [
+         {
+          "id": "c6b974e",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Engineering",
+           "header_size": "div",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 11
+           },
+           "typography_font_weight": "700",
+           "title_color": "",
+           "__globals__": {
+            "title_color": "globals/colors?id=gforange"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 16.5
+           },
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": 1.54
+           },
+           "typography_text_transform": "uppercase"
+          },
+          "elements": []
+         },
+         {
+          "id": "0d8faaf",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Process Engineer",
+           "header_size": "h3",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 17.6
+           },
+           "typography_font_weight": "700",
+           "title_color": "",
+           "__globals__": {
+            "title_color": "globals/colors?id=gfnavy"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 22.88
+           },
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": -0.176
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "e207551",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+           "editor": "<p>Full time · US Office, Baltimore MD</p>",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 14
+           },
+           "typography_font_weight": "400",
+           "text_color": "",
+           "__globals__": {
+            "text_color": "globals/colors?id=gfbody"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 23.1
+           },
+           "custom_css": "selector p{font-size:14px;line-height:23.1px;font-weight:400;margin:0}selector a{font-size:inherit;line-height:inherit}"
+          },
+          "elements": []
+         },
+         {
+          "id": "64c5349",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+           "editor": "<p>View details</p>",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 11.5
+           },
+           "typography_font_weight": "800",
+           "text_color": "",
+           "__globals__": {
+            "text_color": "globals/colors?id=gfnavy"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 17.25
+           },
+           "custom_css": "selector p{font-size:11.5px;line-height:17.25px;font-weight:800;margin:0}selector a{font-size:inherit;line-height:inherit}selector a, selector p{font-size:11.5px;font-weight:800;letter-spacing:1.15px;text-transform:uppercase;color:#15253D;text-decoration:none;line-height:17.25px}selector{margin-top:auto}"
+          },
+          "elements": []
+         }
+        ]
+       },
+       {
+        "id": "e337bf6",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "flex_direction": "column",
+         "flex_align_items": "stretch",
+         "flex_gap": {
+          "unit": "px",
+          "column": "10",
+          "row": "10",
+          "isLinked": true
+         },
+         "padding": {
+          "unit": "px",
+          "top": "24",
+          "right": "24",
+          "bottom": "26",
+          "left": "24",
+          "isLinked": false
+         },
+         "background_background": "classic",
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "#DCE1EA",
+         "border_radius": {
+          "unit": "px",
+          "top": "8",
+          "right": "8",
+          "bottom": "8",
+          "left": "8",
+          "isLinked": true
+         },
+         "custom_css": "selector{box-shadow:0 2px 8px rgba(0,0,0,.07);overflow:hidden}selector{text-decoration:none;color:inherit;transition:transform .3s cubic-bezier(.25,.46,.45,.94),box-shadow .3s cubic-bezier(.25,.46,.45,.94)}selector:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(15,42,68,.08)}",
+         "html_tag": "a",
+         "link": {
+          "url": "https://www.potomac-laser.com/jobs/hr-administrator-hr-advisor/",
+          "is_external": "on",
+          "nofollow": ""
+         },
+         "css_classes": "pl-filter-card",
+         "content_width": "full",
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gfwhite"
+         }
+        },
+        "elements": [
+         {
+          "id": "e2fb3bd",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "HR",
+           "header_size": "div",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 11
+           },
+           "typography_font_weight": "700",
+           "title_color": "",
+           "__globals__": {
+            "title_color": "globals/colors?id=gforange"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 16.5
+           },
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": 1.54
+           },
+           "typography_text_transform": "uppercase"
+          },
+          "elements": []
+         },
+         {
+          "id": "dfcd6c1",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "HR Administrator / HR Advisor",
+           "header_size": "h3",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 17.6
+           },
+           "typography_font_weight": "700",
+           "title_color": "",
+           "__globals__": {
+            "title_color": "globals/colors?id=gfnavy"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 22.88
+           },
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": -0.176
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "dd4ed60",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+           "editor": "<p>Part time · US Office, Baltimore MD</p>",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 14
+           },
+           "typography_font_weight": "400",
+           "text_color": "",
+           "__globals__": {
+            "text_color": "globals/colors?id=gfbody"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 23.1
+           },
+           "custom_css": "selector p{font-size:14px;line-height:23.1px;font-weight:400;margin:0}selector a{font-size:inherit;line-height:inherit}"
+          },
+          "elements": []
+         },
+         {
+          "id": "dd02fee",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+           "editor": "<p>View details</p>",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 11.5
+           },
+           "typography_font_weight": "800",
+           "text_color": "",
+           "__globals__": {
+            "text_color": "globals/colors?id=gfnavy"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 17.25
+           },
+           "custom_css": "selector p{font-size:11.5px;line-height:17.25px;font-weight:800;margin:0}selector a{font-size:inherit;line-height:inherit}selector a, selector p{font-size:11.5px;font-weight:800;letter-spacing:1.15px;text-transform:uppercase;color:#15253D;text-decoration:none;line-height:17.25px}selector{margin-top:auto}"
+          },
+          "elements": []
+         }
+        ]
+       },
+       {
+        "id": "8b3497c",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "flex_direction": "column",
+         "flex_align_items": "stretch",
+         "flex_gap": {
+          "unit": "px",
+          "column": "10",
+          "row": "10",
+          "isLinked": true
+         },
+         "padding": {
+          "unit": "px",
+          "top": "24",
+          "right": "24",
+          "bottom": "26",
+          "left": "24",
+          "isLinked": false
+         },
+         "background_background": "classic",
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "#DCE1EA",
+         "border_radius": {
+          "unit": "px",
+          "top": "8",
+          "right": "8",
+          "bottom": "8",
+          "left": "8",
+          "isLinked": true
+         },
+         "custom_css": "selector{box-shadow:0 2px 8px rgba(0,0,0,.07);overflow:hidden}selector{text-decoration:none;color:inherit;transition:transform .3s cubic-bezier(.25,.46,.45,.94),box-shadow .3s cubic-bezier(.25,.46,.45,.94)}selector:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(15,42,68,.08)}",
+         "html_tag": "a",
+         "link": {
+          "url": "https://www.potomac-laser.com/jobs/production-technician/",
+          "is_external": "on",
+          "nofollow": ""
+         },
+         "css_classes": "pl-filter-card",
+         "content_width": "full",
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gfwhite"
+         }
+        },
+        "elements": [
+         {
+          "id": "37df989",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Production",
+           "header_size": "div",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 11
+           },
+           "typography_font_weight": "700",
+           "title_color": "",
+           "__globals__": {
+            "title_color": "globals/colors?id=gforange"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 16.5
+           },
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": 1.54
+           },
+           "typography_text_transform": "uppercase"
+          },
+          "elements": []
+         },
+         {
+          "id": "0071ecb",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Production Technician",
+           "header_size": "h3",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 17.6
+           },
+           "typography_font_weight": "700",
+           "title_color": "",
+           "__globals__": {
+            "title_color": "globals/colors?id=gfnavy"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 22.88
+           },
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": -0.176
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "f4b7472",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+           "editor": "<p>Part time · Full time, hybrid · US Office, Baltimore MD</p>",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 14
+           },
+           "typography_font_weight": "400",
+           "text_color": "",
+           "__globals__": {
+            "text_color": "globals/colors?id=gfbody"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 23.1
+           },
+           "custom_css": "selector p{font-size:14px;line-height:23.1px;font-weight:400;margin:0}selector a{font-size:inherit;line-height:inherit}"
+          },
+          "elements": []
+         },
+         {
+          "id": "fc4369c",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+           "editor": "<p>View details</p>",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 11.5
+           },
+           "typography_font_weight": "800",
+           "text_color": "",
+           "__globals__": {
+            "text_color": "globals/colors?id=gfnavy"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 17.25
+           },
+           "custom_css": "selector p{font-size:11.5px;line-height:17.25px;font-weight:800;margin:0}selector a{font-size:inherit;line-height:inherit}selector a, selector p{font-size:11.5px;font-weight:800;letter-spacing:1.15px;text-transform:uppercase;color:#15253D;text-decoration:none;line-height:17.25px}selector{margin-top:auto}"
+          },
+          "elements": []
+         }
+        ]
+       },
+       {
+        "id": "26b8403",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "flex_direction": "column",
+         "flex_align_items": "stretch",
+         "flex_gap": {
+          "unit": "px",
+          "column": "10",
+          "row": "10",
+          "isLinked": true
+         },
+         "padding": {
+          "unit": "px",
+          "top": "24",
+          "right": "24",
+          "bottom": "26",
+          "left": "24",
+          "isLinked": false
+         },
+         "background_background": "classic",
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "#DCE1EA",
+         "border_radius": {
+          "unit": "px",
+          "top": "8",
+          "right": "8",
+          "bottom": "8",
+          "left": "8",
+          "isLinked": true
+         },
+         "custom_css": "selector{box-shadow:0 2px 8px rgba(0,0,0,.07);overflow:hidden}selector{text-decoration:none;color:inherit;transition:transform .3s cubic-bezier(.25,.46,.45,.94),box-shadow .3s cubic-bezier(.25,.46,.45,.94)}selector:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(15,42,68,.08)}",
+         "html_tag": "a",
+         "link": {
+          "url": "https://www.potomac-laser.com/jobs/sales-engineer/",
+          "is_external": "on",
+          "nofollow": ""
+         },
+         "css_classes": "pl-filter-card",
+         "content_width": "full",
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gfwhite"
+         }
+        },
+        "elements": [
+         {
+          "id": "fdbed01",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Sales",
+           "header_size": "div",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 11
+           },
+           "typography_font_weight": "700",
+           "title_color": "",
+           "__globals__": {
+            "title_color": "globals/colors?id=gforange"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 16.5
+           },
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": 1.54
+           },
+           "typography_text_transform": "uppercase"
+          },
+          "elements": []
+         },
+         {
+          "id": "687ad9b",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Sales Engineer",
+           "header_size": "h3",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 17.6
+           },
+           "typography_font_weight": "700",
+           "title_color": "",
+           "__globals__": {
+            "title_color": "globals/colors?id=gfnavy"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 22.88
+           },
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": -0.176
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "a8478ac",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+           "editor": "<p>Full time · US Office, Baltimore MD</p>",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 14
+           },
+           "typography_font_weight": "400",
+           "text_color": "",
+           "__globals__": {
+            "text_color": "globals/colors?id=gfbody"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 23.1
+           },
+           "custom_css": "selector p{font-size:14px;line-height:23.1px;font-weight:400;margin:0}selector a{font-size:inherit;line-height:inherit}"
+          },
+          "elements": []
+         },
+         {
+          "id": "11552a4",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+           "editor": "<p>View details</p>",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 11.5
+           },
+           "typography_font_weight": "800",
+           "text_color": "",
+           "__globals__": {
+            "text_color": "globals/colors?id=gfnavy"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 17.25
+           },
+           "custom_css": "selector p{font-size:11.5px;line-height:17.25px;font-weight:800;margin:0}selector a{font-size:inherit;line-height:inherit}selector a, selector p{font-size:11.5px;font-weight:800;letter-spacing:1.15px;text-transform:uppercase;color:#15253D;text-decoration:none;line-height:17.25px}selector{margin-top:auto}"
+          },
+          "elements": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "f6fe09b",
+  "elType": "container",
+  "settings": {
+   "content_width": "full",
+   "background_background": "gradient",
+   "background_color": "#16253D",
+   "background_color_b": "#213754",
+   "background_gradient_angle": {
+    "unit": "deg",
+    "size": 135
+   },
+   "padding": {
+    "unit": "px",
+    "top": "84",
+    "right": "56",
+    "bottom": "88",
+    "left": "56",
+    "isLinked": false
+   },
+   "flex_direction": "column",
+   "flex_align_items": "center",
+   "custom_css": "selector{position:relative;overflow:hidden;background-image:linear-gradient(135deg,#16253D 0%,#1B2E4A 52%,#213754 100%)!important}selector::before{content:'';position:absolute;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(rgba(245,130,31,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(245,130,31,.045) 1px,transparent 1px),radial-gradient(ellipse at 50% 0%,rgba(245,130,31,.12) 0%,transparent 55%);background-size:80px 80px,80px 80px,auto;background-repeat:repeat,repeat,no-repeat;background-position:0 0,0 0,center top}selector>*{position:relative;z-index:1}"
+  },
+  "elements": [
+   {
+    "id": "4800dcb",
+    "elType": "container",
+    "settings": {
+     "flex_direction": "column",
+     "flex_align_items": "center",
+     "flex_gap": {
+      "unit": "px",
+      "column": "0",
+      "row": "18",
+      "isLinked": false
+     }
+    },
+    "elements": [
+     {
+      "id": "cb56910",
+      "elType": "container",
+      "settings": {
+       "content_width": "full",
+       "flex_direction": "row",
+       "flex_justify_content": "center",
+       "flex_align_items": "center",
+       "flex_gap": {
+        "unit": "px",
+        "column": "10",
+        "row": "0",
+        "isLinked": false
+       }
+      },
+      "elements": [
+       {
+        "id": "3581a84",
+        "elType": "container",
+        "settings": {
+         "content_width": "full",
+         "width": {
+          "unit": "px",
+          "size": 28
+         },
+         "min_height": {
+          "unit": "px",
+          "size": 2
+         },
+         "background_background": "classic",
+         "background_color": "",
+         "_flex_shrink": "0",
+         "__globals__": {
+          "background_color": "globals/colors?id=gforange"
+         }
+        },
+        "elements": [],
+        "isInner": true
+       },
+       {
+        "id": "16f96e0",
+        "elType": "widget",
+        "settings": {
+         "title": "Get in touch",
+         "header_size": "div",
+         "title_color": "",
+         "typography_typography": "custom",
+         "typography_font_size": {
+          "unit": "px",
+          "size": 11
+         },
+         "typography_font_weight": "700",
+         "typography_letter_spacing": {
+          "unit": "px",
+          "size": 1.5
+         },
+         "typography_text_transform": "uppercase",
+         "__globals__": {
+          "title_color": "globals/colors?id=gforange"
+         }
+        },
+        "elements": [],
+        "widgetType": "heading"
+       }
+      ],
+      "isInner": true
+     },
+     {
+      "id": "c987aec",
+      "elType": "widget",
+      "settings": {
+       "title": "Send us your résumé.",
+       "align": "center",
+       "title_color": "",
+       "typography_typography": "custom",
+       "typography_font_size": {
+        "unit": "px",
+        "size": 38
+       },
+       "typography_font_weight": "800",
+       "typography_line_height": {
+        "unit": "em",
+        "size": 1.1
+       },
+       "__globals__": {
+        "title_color": "globals/colors?id=gfwhite"
+       }
+      },
+      "elements": [],
+      "widgetType": "heading"
+     },
+     {
+      "id": "af22224",
+      "elType": "widget",
+      "settings": {
+       "editor": "<p>No matching role today? Get in touch and tell us about your experience. We keep strong candidates in mind for future openings.</p>",
+       "align": "center",
+       "text_color": "#B6C0CC",
+       "typography_typography": "custom",
+       "typography_font_size": {
+        "unit": "px",
+        "size": 16
+       },
+       "typography_line_height": {
+        "unit": "em",
+        "size": 1.7
+       },
+       "_element_width": "initial",
+       "_element_custom_width": {
+        "unit": "px",
+        "size": 680
+       }
+      },
+      "elements": [],
+      "widgetType": "text-editor"
+     },
+     {
+      "id": "375709c",
+      "elType": "container",
+      "settings": {
+       "content_width": "full",
+       "flex_direction": "row",
+       "flex_justify_content": "center",
+       "flex_align_items": "center",
+       "flex_gap": {
+        "unit": "px",
+        "column": "14",
+        "row": "12",
+        "isLinked": false
+       },
+       "flex_wrap": "wrap",
+       "margin": {
+        "unit": "px",
+        "top": "8",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": false
+       }
+      },
+      "elements": [
+       {
+        "id": "ea6e3c3",
+        "elType": "widget",
+        "settings": {
+         "text": "Contact us",
+         "link": {
+          "url": "https://www.potomac-laser.com/?page_id=12302&preview=true"
+         },
+         "background_color": "",
+         "button_text_color": "",
+         "border_radius": {
+          "unit": "px",
+          "top": "40",
+          "right": "40",
+          "bottom": "40",
+          "left": "40",
+          "isLinked": true
+         },
+         "text_padding": {
+          "unit": "px",
+          "top": "15",
+          "right": "32",
+          "bottom": "15",
+          "left": "32",
+          "isLinked": false
+         },
+         "typography_typography": "custom",
+         "typography_font_size": {
+          "unit": "px",
+          "size": 13
+         },
+         "typography_font_weight": "700",
+         "typography_text_transform": "uppercase",
+         "typography_letter_spacing": {
+          "unit": "px",
+          "size": 1
+         },
+         "__globals__": {
+          "background_color": "globals/colors?id=gforange",
+          "button_text_color": "globals/colors?id=gfwhite"
+         }
+        },
+        "elements": [],
+        "widgetType": "button"
+       },
+       {
+        "id": "449f92c",
+        "elType": "widget",
+        "settings": {
+         "text": "About Goodfellow Microfabrication",
+         "link": {
+          "url": "https://www.potomac-laser.com/?page_id=12277&preview=true"
+         },
+         "background_color": "#1B2E4A",
+         "button_text_color": "",
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "2",
+          "right": "2",
+          "bottom": "2",
+          "left": "2",
+          "isLinked": true
+         },
+         "border_color": "#46587010",
+         "border_radius": {
+          "unit": "px",
+          "top": "40",
+          "right": "40",
+          "bottom": "40",
+          "left": "40",
+          "isLinked": true
+         },
+         "text_padding": {
+          "unit": "px",
+          "top": "13",
+          "right": "30",
+          "bottom": "13",
+          "left": "30",
+          "isLinked": false
+         },
+         "typography_typography": "custom",
+         "typography_font_size": {
+          "unit": "px",
+          "size": 13
+         },
+         "typography_font_weight": "700",
+         "typography_text_transform": "uppercase",
+         "typography_letter_spacing": {
+          "unit": "px",
+          "size": 1
+         },
+         "__globals__": {
+          "button_text_color": "globals/colors?id=gfwhite"
+         }
+        },
+        "elements": [],
+        "widgetType": "button"
+       }
+      ],
+      "isInner": true
+     }
+    ],
+    "isInner": true
+   }
+  ],
+  "isInner": false
+ }
+]

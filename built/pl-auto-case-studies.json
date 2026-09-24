@@ -1,0 +1,1553 @@
+[
+ {
+  "id": "f07ce84",
+  "elType": "container",
+  "isInner": false,
+  "settings": {
+   "flex_direction": "column",
+   "flex_align_items": "center",
+   "padding": {
+    "unit": "px",
+    "top": "72",
+    "right": "24",
+    "bottom": "64",
+    "left": "24",
+    "isLinked": false
+   },
+   "background_background": "classic",
+   "custom_css": "selector{overflow:hidden;background-image:radial-gradient(ellipse at 30% 0%,rgba(14,99,168,0.28) 0%,transparent 60%),radial-gradient(ellipse at 90% 100%,rgba(148,18,82,0.16) 0%,transparent 55%),linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);background-size:auto,auto,32px 32px,32px 32px;}",
+   "content_width": "full",
+   "background_color": "",
+   "__globals__": {
+    "background_color": "globals/colors?id=gfnavydp"
+   }
+  },
+  "elements": [
+   {
+    "id": "73ae00b",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+     "content_width": "boxed",
+     "flex_direction": "column",
+     "flex_align_items": "center",
+     "flex_gap": {
+      "unit": "px",
+      "column": "0",
+      "row": "0",
+      "isLinked": true
+     },
+     "boxed_width": {
+      "unit": "px",
+      "size": 1200
+     },
+     "padding": {
+      "unit": "px",
+      "top": "0",
+      "right": "0",
+      "bottom": "0",
+      "left": "0",
+      "isLinked": true
+     }
+    },
+    "elements": [
+     {
+      "id": "320d3b6",
+      "elType": "widget",
+      "widgetType": "heading",
+      "settings": {
+       "title": "Proof",
+       "header_size": "div",
+       "typography_typography": "custom",
+       "typography_font_family": "Inter",
+       "typography_font_size": {
+        "unit": "px",
+        "size": 12
+       },
+       "typography_font_weight": "600",
+       "title_color": "",
+       "__globals__": {
+        "title_color": "globals/colors?id=gforange"
+       },
+       "align": "center",
+       "typography_line_height": {
+        "unit": "px",
+        "size": 18
+       },
+       "typography_letter_spacing": {
+        "unit": "px",
+        "size": 2.16
+       },
+       "typography_text_transform": "uppercase"
+      },
+      "elements": []
+     },
+     {
+      "id": "49ca880",
+      "elType": "widget",
+      "widgetType": "heading",
+      "settings": {
+       "title": "Case studies",
+       "header_size": "h1",
+       "typography_typography": "custom",
+       "typography_font_family": "Inter",
+       "typography_font_size": {
+        "unit": "px",
+        "size": 54.4
+       },
+       "typography_font_weight": "600",
+       "title_color": "",
+       "__globals__": {
+        "title_color": "globals/colors?id=gfwhite"
+       },
+       "align": "center",
+       "typography_line_height": {
+        "unit": "px",
+        "size": 57.66
+       },
+       "typography_letter_spacing": {
+        "unit": "px",
+        "size": -1.088
+       },
+       "custom_css": "selector .elementor-heading-title{max-width:22ch;margin:0 auto;text-wrap:balance}",
+       "_margin": {
+        "unit": "px",
+        "top": "43",
+        "right": "0",
+        "bottom": "18",
+        "left": "0",
+        "isLinked": false
+       }
+      },
+      "elements": []
+     },
+     {
+      "id": "405c3cb",
+      "elType": "widget",
+      "widgetType": "text-editor",
+      "settings": {
+       "editor": "<p>How Goodfellow Microfabrication has solved micro-manufacturing problems for <strong>semiconductor, aerospace, medical device and electronics</strong> customers.</p>",
+       "typography_typography": "custom",
+       "typography_font_family": "Inter",
+       "typography_font_size": {
+        "unit": "px",
+        "size": 18
+       },
+       "typography_font_weight": "400",
+       "text_color": "rgba(255,255,255,0.74)",
+       "typography_line_height": {
+        "unit": "px",
+        "size": 29.7
+       },
+       "align": "center",
+       "custom_css": "selector p{font-size:18px;line-height:29.7px;font-weight:400;color:rgba(255,255,255,0.74);margin:0}selector a{font-size:inherit;line-height:inherit}selector p{max-width:727px;margin:0 auto}selector strong{color:#fff;font-weight:600}selector a{color:#fff;text-decoration:underline;text-underline-offset:3px}"
+      },
+      "elements": []
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "5c801d1",
+  "elType": "container",
+  "isInner": false,
+  "settings": {
+   "flex_direction": "column",
+   "flex_align_items": "center",
+   "padding": {
+    "unit": "px",
+    "top": "80",
+    "right": "24",
+    "bottom": "80",
+    "left": "24",
+    "isLinked": false
+   },
+   "background_background": "classic",
+   "content_width": "full",
+   "background_color": "#F6F8FB"
+  },
+  "elements": [
+   {
+    "id": "6644c02",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+     "content_width": "boxed",
+     "flex_direction": "column",
+     "flex_align_items": "stretch",
+     "flex_gap": {
+      "unit": "px",
+      "column": "0",
+      "row": "0",
+      "isLinked": true
+     },
+     "padding": {
+      "unit": "px",
+      "top": "0",
+      "right": "0",
+      "bottom": "0",
+      "left": "0",
+      "isLinked": true
+     },
+     "boxed_width": {
+      "unit": "px",
+      "size": 1152
+     }
+    },
+    "elements": [
+     {
+      "id": "4d3ab05",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+       "flex_direction": "row",
+       "flex_wrap": "wrap",
+       "flex_align_items": "stretch",
+       "flex_gap": {
+        "unit": "px",
+        "column": "20",
+        "row": "20",
+        "isLinked": true
+       },
+       "width": {
+        "unit": "%",
+        "size": 100
+       },
+       "custom_css": "selector > .e-con{flex:0 0 calc((100% - 40px) / 3) !important;max-width:calc((100% - 40px) / 3) !important}@media(max-width:979px){selector > .e-con{flex:0 0 100% !important;max-width:100% !important}}",
+       "content_width": "full",
+       "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+       }
+      },
+      "elements": [
+       {
+        "id": "6f50eaa",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "flex_direction": "column",
+         "flex_align_items": "stretch",
+         "flex_gap": {
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+         },
+         "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+         },
+         "background_background": "classic",
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "#DCE1EA",
+         "border_radius": {
+          "unit": "px",
+          "top": "8",
+          "right": "8",
+          "bottom": "8",
+          "left": "8",
+          "isLinked": true
+         },
+         "custom_css": "selector{box-shadow:0 2px 8px rgba(0,0,0,.07);overflow:hidden}selector{position:relative;text-decoration:none;color:inherit;transition:transform .3s cubic-bezier(.25,.46,.45,.94),box-shadow .3s cubic-bezier(.25,.46,.45,.94)}selector:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(15,42,68,.08)}selector::after{content:\"\";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--e-global-color-gforange);transform:scaleX(0);transform-origin:left;transition:transform .3s cubic-bezier(.25,.46,.45,.94)}selector:hover::after{transform:scaleX(1)}",
+         "html_tag": "a",
+         "link": {
+          "url": "https://www.potomac-laser.com/about/case-studies/wireless-sensor-project-wisp-at-potomac-photonics/",
+          "is_external": "on",
+          "nofollow": ""
+         },
+         "content_width": "full",
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gfwhite"
+         }
+        },
+        "elements": [
+         {
+          "id": "c7aaa18",
+          "elType": "widget",
+          "widgetType": "image",
+          "settings": {
+           "image": {
+            "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-cs-card-1.webp",
+            "id": 12278
+           },
+           "image_size": "full",
+           "custom_css": "selector{margin:0;background:#0D1B2A}selector img{display:block;width:100%;aspect-ratio:16/10;height:auto;object-fit:cover}"
+          },
+          "elements": []
+         },
+         {
+          "id": "023bf88",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+           "flex_direction": "column",
+           "flex_align_items": "stretch",
+           "flex_gap": {
+            "unit": "px",
+            "column": "10",
+            "row": "10",
+            "isLinked": true
+           },
+           "padding": {
+            "unit": "px",
+            "top": "20",
+            "right": "22",
+            "bottom": "24",
+            "left": "22",
+            "isLinked": false
+           },
+           "custom_css": "selector{flex:1 1 auto}",
+           "content_width": "full"
+          },
+          "elements": [
+           {
+            "id": "950fcdd",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+             "title": "Collaboration",
+             "header_size": "div",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 11
+             },
+             "typography_font_weight": "700",
+             "title_color": "",
+             "__globals__": {
+              "title_color": "globals/colors?id=gforange"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 16.5
+             },
+             "typography_letter_spacing": {
+              "unit": "px",
+              "size": 1.54
+             },
+             "typography_text_transform": "uppercase"
+            },
+            "elements": []
+           },
+           {
+            "id": "a7a091b",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+             "title": "Wireless Sensor Project (WiSP) at Potomac Photonics",
+             "header_size": "h3",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 17.6
+             },
+             "typography_font_weight": "700",
+             "title_color": "",
+             "__globals__": {
+              "title_color": "globals/colors?id=gfnavy"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 22.88
+             },
+             "typography_letter_spacing": {
+              "unit": "px",
+              "size": -0.176
+             }
+            },
+            "elements": []
+           },
+           {
+            "id": "f3603a6",
+            "elType": "widget",
+            "widgetType": "text-editor",
+            "settings": {
+             "editor": "<p>A collaboration between Potomac Photonics, Potomac Mesosystems and Gray Technologies to create a network of wireless sensor nodes that communicate with mobile devices.</p>",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 14
+             },
+             "typography_font_weight": "400",
+             "text_color": "",
+             "__globals__": {
+              "text_color": "globals/colors?id=gfbody"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 23.1
+             },
+             "custom_css": "selector p{font-size:14px;line-height:23.1px;font-weight:400;margin:0}selector a{font-size:inherit;line-height:inherit}"
+            },
+            "elements": []
+           },
+           {
+            "id": "07181f6",
+            "elType": "widget",
+            "widgetType": "text-editor",
+            "settings": {
+             "editor": "<p>Read the case study</p>",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 11.5
+             },
+             "typography_font_weight": "800",
+             "text_color": "",
+             "__globals__": {
+              "text_color": "globals/colors?id=gfnavy"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 17.25
+             },
+             "custom_css": "selector p{font-size:11.5px;line-height:17.25px;font-weight:800;margin:0}selector a{font-size:inherit;line-height:inherit}selector a, selector p{font-size:11.5px;font-weight:800;letter-spacing:1.15px;text-transform:uppercase;color:#15253D;text-decoration:none;line-height:17.25px}selector{margin-top:auto}"
+            },
+            "elements": []
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "id": "d998483",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "flex_direction": "column",
+         "flex_align_items": "stretch",
+         "flex_gap": {
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+         },
+         "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+         },
+         "background_background": "classic",
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "#DCE1EA",
+         "border_radius": {
+          "unit": "px",
+          "top": "8",
+          "right": "8",
+          "bottom": "8",
+          "left": "8",
+          "isLinked": true
+         },
+         "custom_css": "selector{box-shadow:0 2px 8px rgba(0,0,0,.07);overflow:hidden}selector{position:relative;text-decoration:none;color:inherit;transition:transform .3s cubic-bezier(.25,.46,.45,.94),box-shadow .3s cubic-bezier(.25,.46,.45,.94)}selector:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(15,42,68,.08)}selector::after{content:\"\";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--e-global-color-gforange);transform:scaleX(0);transform-origin:left;transition:transform .3s cubic-bezier(.25,.46,.45,.94)}selector:hover::after{transform:scaleX(1)}",
+         "html_tag": "a",
+         "link": {
+          "url": "https://www.potomac-laser.com/about/case-studies/laser-micromachining-ramp-up-of-complex-semiconductor-part/",
+          "is_external": "on",
+          "nofollow": ""
+         },
+         "content_width": "full",
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gfwhite"
+         }
+        },
+        "elements": [
+         {
+          "id": "ba19165",
+          "elType": "widget",
+          "widgetType": "image",
+          "settings": {
+           "image": {
+            "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-cs-card-2.webp",
+            "id": 12279
+           },
+           "image_size": "full",
+           "custom_css": "selector{margin:0;background:#0D1B2A}selector img{display:block;width:100%;aspect-ratio:16/10;height:auto;object-fit:cover}"
+          },
+          "elements": []
+         },
+         {
+          "id": "e0cd2ad",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+           "flex_direction": "column",
+           "flex_align_items": "stretch",
+           "flex_gap": {
+            "unit": "px",
+            "column": "10",
+            "row": "10",
+            "isLinked": true
+           },
+           "padding": {
+            "unit": "px",
+            "top": "20",
+            "right": "22",
+            "bottom": "24",
+            "left": "22",
+            "isLinked": false
+           },
+           "custom_css": "selector{flex:1 1 auto}",
+           "content_width": "full"
+          },
+          "elements": [
+           {
+            "id": "6fe7750",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+             "title": "Semiconductor",
+             "header_size": "div",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 11
+             },
+             "typography_font_weight": "700",
+             "title_color": "",
+             "__globals__": {
+              "title_color": "globals/colors?id=gforange"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 16.5
+             },
+             "typography_letter_spacing": {
+              "unit": "px",
+              "size": 1.54
+             },
+             "typography_text_transform": "uppercase"
+            },
+            "elements": []
+           },
+           {
+            "id": "d774541",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+             "title": "Laser micromachining: ramp-up of complex semiconductor part",
+             "header_size": "h3",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 17.6
+             },
+             "typography_font_weight": "700",
+             "title_color": "",
+             "__globals__": {
+              "title_color": "globals/colors?id=gfnavy"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 22.88
+             },
+             "typography_letter_spacing": {
+              "unit": "px",
+              "size": -0.176
+             }
+            },
+            "elements": []
+           },
+           {
+            "id": "d3b26f3",
+            "elType": "widget",
+            "widgetType": "text-editor",
+            "settings": {
+             "editor": "<p>A Fortune 500 contract manufacturer needed a process for very high aspect ratio channels in a copper substrate, used for chip cooling in high-end computers.</p>",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 14
+             },
+             "typography_font_weight": "400",
+             "text_color": "",
+             "__globals__": {
+              "text_color": "globals/colors?id=gfbody"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 23.1
+             },
+             "custom_css": "selector p{font-size:14px;line-height:23.1px;font-weight:400;margin:0}selector a{font-size:inherit;line-height:inherit}"
+            },
+            "elements": []
+           },
+           {
+            "id": "5743553",
+            "elType": "widget",
+            "widgetType": "text-editor",
+            "settings": {
+             "editor": "<p>Read the case study</p>",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 11.5
+             },
+             "typography_font_weight": "800",
+             "text_color": "",
+             "__globals__": {
+              "text_color": "globals/colors?id=gfnavy"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 17.25
+             },
+             "custom_css": "selector p{font-size:11.5px;line-height:17.25px;font-weight:800;margin:0}selector a{font-size:inherit;line-height:inherit}selector a, selector p{font-size:11.5px;font-weight:800;letter-spacing:1.15px;text-transform:uppercase;color:#15253D;text-decoration:none;line-height:17.25px}selector{margin-top:auto}"
+            },
+            "elements": []
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "id": "7fe4361",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "flex_direction": "column",
+         "flex_align_items": "stretch",
+         "flex_gap": {
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+         },
+         "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+         },
+         "background_background": "classic",
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "#DCE1EA",
+         "border_radius": {
+          "unit": "px",
+          "top": "8",
+          "right": "8",
+          "bottom": "8",
+          "left": "8",
+          "isLinked": true
+         },
+         "custom_css": "selector{box-shadow:0 2px 8px rgba(0,0,0,.07);overflow:hidden}selector{position:relative;text-decoration:none;color:inherit;transition:transform .3s cubic-bezier(.25,.46,.45,.94),box-shadow .3s cubic-bezier(.25,.46,.45,.94)}selector:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(15,42,68,.08)}selector::after{content:\"\";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--e-global-color-gforange);transform:scaleX(0);transform-origin:left;transition:transform .3s cubic-bezier(.25,.46,.45,.94)}selector:hover::after{transform:scaleX(1)}",
+         "html_tag": "a",
+         "link": {
+          "url": "https://www.potomac-laser.com/about/case-studies/strain-gauge-circuit-to-be-embedded-in-fiberglass/",
+          "is_external": "on",
+          "nofollow": ""
+         },
+         "content_width": "full",
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gfwhite"
+         }
+        },
+        "elements": [
+         {
+          "id": "f03bbcb",
+          "elType": "widget",
+          "widgetType": "image",
+          "settings": {
+           "image": {
+            "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-cs-card-3.webp",
+            "id": 12280
+           },
+           "image_size": "full",
+           "custom_css": "selector{margin:0;background:#0D1B2A}selector img{display:block;width:100%;aspect-ratio:16/10;height:auto;object-fit:cover}"
+          },
+          "elements": []
+         },
+         {
+          "id": "e19b297",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+           "flex_direction": "column",
+           "flex_align_items": "stretch",
+           "flex_gap": {
+            "unit": "px",
+            "column": "10",
+            "row": "10",
+            "isLinked": true
+           },
+           "padding": {
+            "unit": "px",
+            "top": "20",
+            "right": "22",
+            "bottom": "24",
+            "left": "22",
+            "isLinked": false
+           },
+           "custom_css": "selector{flex:1 1 auto}",
+           "content_width": "full"
+          },
+          "elements": [
+           {
+            "id": "21754a3",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+             "title": "Aerospace",
+             "header_size": "div",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 11
+             },
+             "typography_font_weight": "700",
+             "title_color": "",
+             "__globals__": {
+              "title_color": "globals/colors?id=gforange"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 16.5
+             },
+             "typography_letter_spacing": {
+              "unit": "px",
+              "size": 1.54
+             },
+             "typography_text_transform": "uppercase"
+            },
+            "elements": []
+           },
+           {
+            "id": "d8b64c9",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+             "title": "Strain gauge circuit to be embedded in fibreglass",
+             "header_size": "h3",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 17.6
+             },
+             "typography_font_weight": "700",
+             "title_color": "",
+             "__globals__": {
+              "title_color": "globals/colors?id=gfnavy"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 22.88
+             },
+             "typography_letter_spacing": {
+              "unit": "px",
+              "size": -0.176
+             }
+            },
+            "elements": []
+           },
+           {
+            "id": "f11678c",
+            "elType": "widget",
+            "widgetType": "text-editor",
+            "settings": {
+             "editor": "<p>An airframe research group needed miniature, single-layer electronic circuits that could be embedded in a fibreglass structure without mechanical perturbation.</p>",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 14
+             },
+             "typography_font_weight": "400",
+             "text_color": "",
+             "__globals__": {
+              "text_color": "globals/colors?id=gfbody"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 23.1
+             },
+             "custom_css": "selector p{font-size:14px;line-height:23.1px;font-weight:400;margin:0}selector a{font-size:inherit;line-height:inherit}"
+            },
+            "elements": []
+           },
+           {
+            "id": "c7e072d",
+            "elType": "widget",
+            "widgetType": "text-editor",
+            "settings": {
+             "editor": "<p>Read the case study</p>",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 11.5
+             },
+             "typography_font_weight": "800",
+             "text_color": "",
+             "__globals__": {
+              "text_color": "globals/colors?id=gfnavy"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 17.25
+             },
+             "custom_css": "selector p{font-size:11.5px;line-height:17.25px;font-weight:800;margin:0}selector a{font-size:inherit;line-height:inherit}selector a, selector p{font-size:11.5px;font-weight:800;letter-spacing:1.15px;text-transform:uppercase;color:#15253D;text-decoration:none;line-height:17.25px}selector{margin-top:auto}"
+            },
+            "elements": []
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "id": "78e3850",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "flex_direction": "column",
+         "flex_align_items": "stretch",
+         "flex_gap": {
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+         },
+         "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+         },
+         "background_background": "classic",
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "#DCE1EA",
+         "border_radius": {
+          "unit": "px",
+          "top": "8",
+          "right": "8",
+          "bottom": "8",
+          "left": "8",
+          "isLinked": true
+         },
+         "custom_css": "selector{box-shadow:0 2px 8px rgba(0,0,0,.07);overflow:hidden}selector{position:relative;text-decoration:none;color:inherit;transition:transform .3s cubic-bezier(.25,.46,.45,.94),box-shadow .3s cubic-bezier(.25,.46,.45,.94)}selector:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(15,42,68,.08)}selector::after{content:\"\";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--e-global-color-gforange);transform:scaleX(0);transform-origin:left;transition:transform .3s cubic-bezier(.25,.46,.45,.94)}selector:hover::after{transform:scaleX(1)}",
+         "html_tag": "a",
+         "link": {
+          "url": "https://www.potomac-laser.com/about/case-studies/prototyping-at-the-speed-of-light/",
+          "is_external": "on",
+          "nofollow": ""
+         },
+         "content_width": "full",
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gfwhite"
+         }
+        },
+        "elements": [
+         {
+          "id": "63478b4",
+          "elType": "widget",
+          "widgetType": "image",
+          "settings": {
+           "image": {
+            "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-cs-card-4.webp",
+            "id": 12281
+           },
+           "image_size": "full",
+           "custom_css": "selector{margin:0;background:#0D1B2A}selector img{display:block;width:100%;aspect-ratio:16/10;height:auto;object-fit:cover}"
+          },
+          "elements": []
+         },
+         {
+          "id": "a4f8740",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+           "flex_direction": "column",
+           "flex_align_items": "stretch",
+           "flex_gap": {
+            "unit": "px",
+            "column": "10",
+            "row": "10",
+            "isLinked": true
+           },
+           "padding": {
+            "unit": "px",
+            "top": "20",
+            "right": "22",
+            "bottom": "24",
+            "left": "22",
+            "isLinked": false
+           },
+           "custom_css": "selector{flex:1 1 auto}",
+           "content_width": "full"
+          },
+          "elements": [
+           {
+            "id": "5bf6a84",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+             "title": "Medical device",
+             "header_size": "div",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 11
+             },
+             "typography_font_weight": "700",
+             "title_color": "",
+             "__globals__": {
+              "title_color": "globals/colors?id=gforange"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 16.5
+             },
+             "typography_letter_spacing": {
+              "unit": "px",
+              "size": 1.54
+             },
+             "typography_text_transform": "uppercase"
+            },
+            "elements": []
+           },
+           {
+            "id": "d4d23af",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+             "title": "Prototyping at the speed of light",
+             "header_size": "h3",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 17.6
+             },
+             "typography_font_weight": "700",
+             "title_color": "",
+             "__globals__": {
+              "title_color": "globals/colors?id=gfnavy"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 22.88
+             },
+             "typography_letter_spacing": {
+              "unit": "px",
+              "size": -0.176
+             }
+            },
+            "elements": []
+           },
+           {
+            "id": "b0d2b12",
+            "elType": "widget",
+            "widgetType": "text-editor",
+            "settings": {
+             "editor": "<p>A start-up medical device company wanted to shorten prototyping lead times of 6+ weeks caused by fabricating new masks for each design change.</p>",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 14
+             },
+             "typography_font_weight": "400",
+             "text_color": "",
+             "__globals__": {
+              "text_color": "globals/colors?id=gfbody"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 23.1
+             },
+             "custom_css": "selector p{font-size:14px;line-height:23.1px;font-weight:400;margin:0}selector a{font-size:inherit;line-height:inherit}"
+            },
+            "elements": []
+           },
+           {
+            "id": "6df829d",
+            "elType": "widget",
+            "widgetType": "text-editor",
+            "settings": {
+             "editor": "<p>Read the case study</p>",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 11.5
+             },
+             "typography_font_weight": "800",
+             "text_color": "",
+             "__globals__": {
+              "text_color": "globals/colors?id=gfnavy"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 17.25
+             },
+             "custom_css": "selector p{font-size:11.5px;line-height:17.25px;font-weight:800;margin:0}selector a{font-size:inherit;line-height:inherit}selector a, selector p{font-size:11.5px;font-weight:800;letter-spacing:1.15px;text-transform:uppercase;color:#15253D;text-decoration:none;line-height:17.25px}selector{margin-top:auto}"
+            },
+            "elements": []
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "id": "0093239",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "flex_direction": "column",
+         "flex_align_items": "stretch",
+         "flex_gap": {
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+         },
+         "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+         },
+         "background_background": "classic",
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "#DCE1EA",
+         "border_radius": {
+          "unit": "px",
+          "top": "8",
+          "right": "8",
+          "bottom": "8",
+          "left": "8",
+          "isLinked": true
+         },
+         "custom_css": "selector{box-shadow:0 2px 8px rgba(0,0,0,.07);overflow:hidden}selector{position:relative;text-decoration:none;color:inherit;transition:transform .3s cubic-bezier(.25,.46,.45,.94),box-shadow .3s cubic-bezier(.25,.46,.45,.94)}selector:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(15,42,68,.08)}selector::after{content:\"\";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--e-global-color-gforange);transform:scaleX(0);transform-origin:left;transition:transform .3s cubic-bezier(.25,.46,.45,.94)}selector:hover::after{transform:scaleX(1)}",
+         "html_tag": "a",
+         "link": {
+          "url": "https://www.potomac-laser.com/about/case-studies/microhole-drilling-services/",
+          "is_external": "on",
+          "nofollow": ""
+         },
+         "content_width": "full",
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gfwhite"
+         }
+        },
+        "elements": [
+         {
+          "id": "346acce",
+          "elType": "widget",
+          "widgetType": "image",
+          "settings": {
+           "image": {
+            "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-cs-card-5.webp",
+            "id": 12282
+           },
+           "image_size": "full",
+           "custom_css": "selector{margin:0;background:#0D1B2A}selector img{display:block;width:100%;aspect-ratio:16/10;height:auto;object-fit:cover}"
+          },
+          "elements": []
+         },
+         {
+          "id": "e7b9e67",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+           "flex_direction": "column",
+           "flex_align_items": "stretch",
+           "flex_gap": {
+            "unit": "px",
+            "column": "10",
+            "row": "10",
+            "isLinked": true
+           },
+           "padding": {
+            "unit": "px",
+            "top": "20",
+            "right": "22",
+            "bottom": "24",
+            "left": "22",
+            "isLinked": false
+           },
+           "custom_css": "selector{flex:1 1 auto}",
+           "content_width": "full"
+          },
+          "elements": [
+           {
+            "id": "628cd34",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+             "title": "Electronics",
+             "header_size": "div",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 11
+             },
+             "typography_font_weight": "700",
+             "title_color": "",
+             "__globals__": {
+              "title_color": "globals/colors?id=gforange"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 16.5
+             },
+             "typography_letter_spacing": {
+              "unit": "px",
+              "size": 1.54
+             },
+             "typography_text_transform": "uppercase"
+            },
+            "elements": []
+           },
+           {
+            "id": "a8226e5",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+             "title": "Microhole drilling case study",
+             "header_size": "h3",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 17.6
+             },
+             "typography_font_weight": "700",
+             "title_color": "",
+             "__globals__": {
+              "title_color": "globals/colors?id=gfnavy"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 22.88
+             },
+             "typography_letter_spacing": {
+              "unit": "px",
+              "size": -0.176
+             }
+            },
+            "elements": []
+           },
+           {
+            "id": "a7acac6",
+            "elType": "widget",
+            "widgetType": "text-editor",
+            "settings": {
+             "editor": "<p>An electronics company needed a 1-week turnaround on 21 designs with multiple microhole diameters, as small as 10 microns, in two materials.</p>",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 14
+             },
+             "typography_font_weight": "400",
+             "text_color": "",
+             "__globals__": {
+              "text_color": "globals/colors?id=gfbody"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 23.1
+             },
+             "custom_css": "selector p{font-size:14px;line-height:23.1px;font-weight:400;margin:0}selector a{font-size:inherit;line-height:inherit}"
+            },
+            "elements": []
+           },
+           {
+            "id": "d839e96",
+            "elType": "widget",
+            "widgetType": "text-editor",
+            "settings": {
+             "editor": "<p>Read the case study</p>",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 11.5
+             },
+             "typography_font_weight": "800",
+             "text_color": "",
+             "__globals__": {
+              "text_color": "globals/colors?id=gfnavy"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 17.25
+             },
+             "custom_css": "selector p{font-size:11.5px;line-height:17.25px;font-weight:800;margin:0}selector a{font-size:inherit;line-height:inherit}selector a, selector p{font-size:11.5px;font-weight:800;letter-spacing:1.15px;text-transform:uppercase;color:#15253D;text-decoration:none;line-height:17.25px}selector{margin-top:auto}"
+            },
+            "elements": []
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ca7295f",
+  "elType": "container",
+  "settings": {
+   "content_width": "full",
+   "background_background": "gradient",
+   "background_color": "#16253D",
+   "background_color_b": "#213754",
+   "background_gradient_angle": {
+    "unit": "deg",
+    "size": 135
+   },
+   "padding": {
+    "unit": "px",
+    "top": "84",
+    "right": "56",
+    "bottom": "88",
+    "left": "56",
+    "isLinked": false
+   },
+   "flex_direction": "column",
+   "flex_align_items": "center",
+   "custom_css": "selector{position:relative;overflow:hidden;background-image:linear-gradient(135deg,#16253D 0%,#1B2E4A 52%,#213754 100%)!important}selector::before{content:'';position:absolute;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(rgba(245,130,31,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(245,130,31,.045) 1px,transparent 1px),radial-gradient(ellipse at 50% 0%,rgba(245,130,31,.12) 0%,transparent 55%);background-size:80px 80px,80px 80px,auto;background-repeat:repeat,repeat,no-repeat;background-position:0 0,0 0,center top}selector>*{position:relative;z-index:1}"
+  },
+  "elements": [
+   {
+    "id": "a9b030c",
+    "elType": "container",
+    "settings": {
+     "flex_direction": "column",
+     "flex_align_items": "center",
+     "flex_gap": {
+      "unit": "px",
+      "column": "0",
+      "row": "18",
+      "isLinked": false
+     }
+    },
+    "elements": [
+     {
+      "id": "4bb30e0",
+      "elType": "container",
+      "settings": {
+       "content_width": "full",
+       "flex_direction": "row",
+       "flex_justify_content": "center",
+       "flex_align_items": "center",
+       "flex_gap": {
+        "unit": "px",
+        "column": "10",
+        "row": "0",
+        "isLinked": false
+       }
+      },
+      "elements": [
+       {
+        "id": "5667851",
+        "elType": "container",
+        "settings": {
+         "content_width": "full",
+         "width": {
+          "unit": "px",
+          "size": 28
+         },
+         "min_height": {
+          "unit": "px",
+          "size": 2
+         },
+         "background_background": "classic",
+         "background_color": "",
+         "_flex_shrink": "0",
+         "__globals__": {
+          "background_color": "globals/colors?id=gforange"
+         }
+        },
+        "elements": [],
+        "isInner": true
+       },
+       {
+        "id": "9d9b3bb",
+        "elType": "widget",
+        "settings": {
+         "title": "Your project",
+         "header_size": "div",
+         "title_color": "",
+         "typography_typography": "custom",
+         "typography_font_size": {
+          "unit": "px",
+          "size": 11
+         },
+         "typography_font_weight": "700",
+         "typography_letter_spacing": {
+          "unit": "px",
+          "size": 1.5
+         },
+         "typography_text_transform": "uppercase",
+         "__globals__": {
+          "title_color": "globals/colors?id=gforange"
+         }
+        },
+        "elements": [],
+        "widgetType": "heading"
+       }
+      ],
+      "isInner": true
+     },
+     {
+      "id": "23d1510",
+      "elType": "widget",
+      "settings": {
+       "title": "Have a similar challenge?",
+       "align": "center",
+       "title_color": "",
+       "typography_typography": "custom",
+       "typography_font_size": {
+        "unit": "px",
+        "size": 38
+       },
+       "typography_font_weight": "800",
+       "typography_line_height": {
+        "unit": "em",
+        "size": 1.1
+       },
+       "__globals__": {
+        "title_color": "globals/colors?id=gfwhite"
+       }
+      },
+      "elements": [],
+      "widgetType": "heading"
+     },
+     {
+      "id": "ad005a2",
+      "elType": "widget",
+      "settings": {
+       "editor": "<p>Send a drawing or a short description. Our engineers review every design for manufacturability and respond within one business day.</p>",
+       "align": "center",
+       "text_color": "#B6C0CC",
+       "typography_typography": "custom",
+       "typography_font_size": {
+        "unit": "px",
+        "size": 16
+       },
+       "typography_line_height": {
+        "unit": "em",
+        "size": 1.7
+       },
+       "_element_width": "initial",
+       "_element_custom_width": {
+        "unit": "px",
+        "size": 680
+       }
+      },
+      "elements": [],
+      "widgetType": "text-editor"
+     },
+     {
+      "id": "7d1f9fc",
+      "elType": "container",
+      "settings": {
+       "content_width": "full",
+       "flex_direction": "row",
+       "flex_justify_content": "center",
+       "flex_align_items": "center",
+       "flex_gap": {
+        "unit": "px",
+        "column": "14",
+        "row": "12",
+        "isLinked": false
+       },
+       "flex_wrap": "wrap",
+       "margin": {
+        "unit": "px",
+        "top": "8",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": false
+       }
+      },
+      "elements": [
+       {
+        "id": "3289ced",
+        "elType": "widget",
+        "settings": {
+         "text": "Send a drawing",
+         "link": {
+          "url": "https://www.potomac-laser.com/project-quote/#projectForm"
+         },
+         "background_color": "",
+         "button_text_color": "",
+         "border_radius": {
+          "unit": "px",
+          "top": "40",
+          "right": "40",
+          "bottom": "40",
+          "left": "40",
+          "isLinked": true
+         },
+         "text_padding": {
+          "unit": "px",
+          "top": "15",
+          "right": "32",
+          "bottom": "15",
+          "left": "32",
+          "isLinked": false
+         },
+         "typography_typography": "custom",
+         "typography_font_size": {
+          "unit": "px",
+          "size": 13
+         },
+         "typography_font_weight": "700",
+         "typography_text_transform": "uppercase",
+         "typography_letter_spacing": {
+          "unit": "px",
+          "size": 1
+         },
+         "__globals__": {
+          "background_color": "globals/colors?id=gforange",
+          "button_text_color": "globals/colors?id=gfwhite"
+         }
+        },
+        "elements": [],
+        "widgetType": "button"
+       },
+       {
+        "id": "24798a2",
+        "elType": "widget",
+        "settings": {
+         "text": "View the project gallery",
+         "link": {
+          "url": "https://www.potomac-laser.com/?page_id=12357&preview=true"
+         },
+         "background_color": "#1B2E4A",
+         "button_text_color": "",
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "2",
+          "right": "2",
+          "bottom": "2",
+          "left": "2",
+          "isLinked": true
+         },
+         "border_color": "#46587010",
+         "border_radius": {
+          "unit": "px",
+          "top": "40",
+          "right": "40",
+          "bottom": "40",
+          "left": "40",
+          "isLinked": true
+         },
+         "text_padding": {
+          "unit": "px",
+          "top": "13",
+          "right": "30",
+          "bottom": "13",
+          "left": "30",
+          "isLinked": false
+         },
+         "typography_typography": "custom",
+         "typography_font_size": {
+          "unit": "px",
+          "size": 13
+         },
+         "typography_font_weight": "700",
+         "typography_text_transform": "uppercase",
+         "typography_letter_spacing": {
+          "unit": "px",
+          "size": 1
+         },
+         "__globals__": {
+          "button_text_color": "globals/colors?id=gfwhite"
+         }
+        },
+        "elements": [],
+        "widgetType": "button"
+       }
+      ],
+      "isInner": true
+     }
+    ],
+    "isInner": true
+   }
+  ],
+  "isInner": false
+ }
+]

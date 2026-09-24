@@ -1,0 +1,1839 @@
+[
+ {
+  "id": "e74f683",
+  "elType": "container",
+  "isInner": false,
+  "settings": {
+   "flex_direction": "column",
+   "flex_align_items": "center",
+   "padding": {
+    "unit": "px",
+    "top": "72",
+    "right": "24",
+    "bottom": "56",
+    "left": "24",
+    "isLinked": false
+   },
+   "background_background": "classic",
+   "custom_css": "selector{background-image:linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);background-size:32px 32px}",
+   "content_width": "full",
+   "background_color": "",
+   "__globals__": {
+    "background_color": "globals/colors?id=gfnavydp"
+   }
+  },
+  "elements": [
+   {
+    "id": "efef251",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+     "content_width": "boxed",
+     "boxed_width": {
+      "unit": "px",
+      "size": 1392
+     },
+     "flex_direction": "row",
+     "flex_wrap": "wrap",
+     "flex_align_items": "center",
+     "flex_gap": {
+      "unit": "px",
+      "column": "64",
+      "row": "40",
+      "isLinked": false
+     },
+     "padding": {
+      "unit": "px",
+      "top": "0",
+      "right": "0",
+      "bottom": "0",
+      "left": "0",
+      "isLinked": true
+     }
+    },
+    "elements": [
+     {
+      "id": "35bb3db",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+       "flex_direction": "column",
+       "flex_align_items": "flex-start",
+       "flex_gap": {
+        "unit": "px",
+        "column": "0",
+        "row": "0",
+        "isLinked": true
+       },
+       "custom_css": "selector{flex:0 0 calc((100% - 64px) * .55) !important;max-width:calc((100% - 64px) * .55) !important}@media(max-width:1023px){selector{flex:0 0 100% !important;max-width:100% !important}}",
+       "content_width": "full",
+       "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+       }
+      },
+      "elements": [
+       {
+        "id": "2d4c444",
+        "elType": "widget",
+        "widgetType": "heading",
+        "settings": {
+         "title": "Contact Us",
+         "header_size": "div",
+         "typography_typography": "custom",
+         "typography_font_family": "Inter",
+         "typography_font_size": {
+          "unit": "px",
+          "size": 12
+         },
+         "typography_font_weight": "600",
+         "title_color": "",
+         "__globals__": {
+          "title_color": "globals/colors?id=gfwhite"
+         },
+         "typography_line_height": {
+          "unit": "px",
+          "size": 18
+         },
+         "typography_letter_spacing": {
+          "unit": "px",
+          "size": 2.16
+         },
+         "typography_text_transform": "uppercase",
+         "_margin": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "26",
+          "left": "0",
+          "isLinked": false
+         }
+        },
+        "elements": []
+       },
+       {
+        "id": "ee080c3",
+        "elType": "widget",
+        "widgetType": "heading",
+        "settings": {
+         "title": "What can we<br>help with <span class=\"pl-accent\">today?</span>",
+         "header_size": "h1",
+         "typography_typography": "custom",
+         "typography_font_family": "Inter",
+         "typography_font_size": {
+          "unit": "px",
+          "size": 64
+         },
+         "typography_font_weight": "600",
+         "title_color": "",
+         "__globals__": {
+          "title_color": "globals/colors?id=gfwhite"
+         },
+         "typography_line_height": {
+          "unit": "px",
+          "size": 67.2
+         },
+         "typography_letter_spacing": {
+          "unit": "px",
+          "size": -1.6
+         },
+         "custom_css": "selector .pl-accent{color:var(--e-global-color-gforange)}",
+         "_margin": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "24",
+          "left": "0",
+          "isLinked": false
+         }
+        },
+        "elements": []
+       },
+       {
+        "id": "2bdecf2",
+        "elType": "widget",
+        "widgetType": "text-editor",
+        "settings": {
+         "editor": "<p>Ask our engineers about your project or request a rapid quotation. Share your requirements and <strong>we respond within one business day</strong>, with answers, feasibility, and a recommended process path. We've been doing this for over 40 years. Try us out.</p>",
+         "typography_typography": "custom",
+         "typography_font_family": "Inter",
+         "typography_font_size": {
+          "unit": "px",
+          "size": 18
+         },
+         "typography_font_weight": "400",
+         "text_color": "rgba(255,255,255,0.78)",
+         "typography_line_height": {
+          "unit": "px",
+          "size": 29.7
+         },
+         "custom_css": "selector p{font-size:18px;line-height:29.7px;font-weight:400;color:rgba(255,255,255,0.78);margin:0}selector a{font-size:inherit;line-height:inherit}selector p{max-width:580px}selector strong{color:#fff;font-weight:600}",
+         "_margin": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "32",
+          "left": "0",
+          "isLinked": false
+         }
+        },
+        "elements": []
+       },
+       {
+        "id": "178a42f",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "flex_direction": "row",
+         "flex_wrap": "wrap",
+         "flex_gap": {
+          "unit": "px",
+          "column": "12",
+          "row": "12",
+          "isLinked": true
+         },
+         "content_width": "full",
+         "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+         },
+         "margin": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "24",
+          "left": "0",
+          "isLinked": false
+         }
+        },
+        "elements": [
+         {
+          "id": "54fe816",
+          "elType": "widget",
+          "widgetType": "button",
+          "settings": {
+           "text": "Request a quote →",
+           "link": {
+            "url": "https://www.potomac-laser.com/?post_type=post_services&p=12239&preview=true#quote",
+            "is_external": "",
+            "nofollow": ""
+           },
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 15
+           },
+           "typography_font_weight": "600",
+           "border_radius": {
+            "unit": "px",
+            "top": "999",
+            "right": "999",
+            "bottom": "999",
+            "left": "999",
+            "isLinked": true
+           },
+           "text_padding": {
+            "unit": "px",
+            "top": "15",
+            "right": "28",
+            "bottom": "15",
+            "left": "28",
+            "isLinked": false
+           },
+           "background_color": "",
+           "__globals__": {
+            "background_color": "globals/colors?id=gforange",
+            "button_text_color": "globals/colors?id=gfwhite"
+           },
+           "button_text_color": "",
+           "custom_css": "selector .elementor-button{box-shadow:0 8px 24px rgba(245,130,31,.3)}selector .elementor-button{border:1px solid transparent}"
+          },
+          "elements": []
+         },
+         {
+          "id": "6ef92b5",
+          "elType": "widget",
+          "widgetType": "button",
+          "settings": {
+           "text": "Call 443-543-5737",
+           "link": {
+            "url": "tel:+14435435737",
+            "is_external": "",
+            "nofollow": ""
+           },
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 15
+           },
+           "typography_font_weight": "600",
+           "border_radius": {
+            "unit": "px",
+            "top": "999",
+            "right": "999",
+            "bottom": "999",
+            "left": "999",
+            "isLinked": true
+           },
+           "text_padding": {
+            "unit": "px",
+            "top": "15",
+            "right": "28",
+            "bottom": "15",
+            "left": "28",
+            "isLinked": false
+           },
+           "button_text_color": "",
+           "__globals__": {
+            "button_text_color": "globals/colors?id=gfwhite"
+           },
+           "border_border": "solid",
+           "border_width": {
+            "unit": "px",
+            "top": "1",
+            "right": "1",
+            "bottom": "1",
+            "left": "1",
+            "isLinked": true
+           },
+           "border_color": "rgba(255,255,255,0.32)",
+           "custom_css": "selector .elementor-button{background:transparent}"
+          },
+          "elements": []
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "id": "7a547e1",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+       "flex_direction": "column",
+       "flex_gap": {
+        "unit": "px",
+        "column": "0",
+        "row": "0",
+        "isLinked": true
+       },
+       "custom_css": "selector{flex:0 0 calc((100% - 64px) * .45) !important;max-width:calc((100% - 64px) * .45) !important}@media(max-width:1023px){selector{flex:0 0 100% !important;max-width:100% !important}}",
+       "content_width": "full",
+       "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+       }
+      },
+      "elements": [
+       {
+        "id": "e9839e0",
+        "elType": "widget",
+        "widgetType": "html",
+        "settings": {
+         "html": "<style>.pl-cf{background:#fff;border:1px solid #DCE1EA;border-radius:16px;box-shadow:0 30px 70px rgba(0,0,0,.4);padding:36px;color:#0F1620;font-family:Inter,system-ui,sans-serif}.pl-cf *{box-sizing:border-box}.pl-cf .k{margin:0 0 10px;font:700 12px/19.2px Inter,system-ui,sans-serif;letter-spacing:1.68px;text-transform:uppercase;color:#F5821F}.pl-cf h2{margin:0 0 8px;font:600 28px/33.6px Inter,system-ui,sans-serif;letter-spacing:-.28px;color:#0F1620}.pl-cf .sub{margin:0 0 28px;font-size:15px;line-height:24px;color:#65718A}.pl-cf .sub em{color:#F5821F;font-style:normal}.pl-cf .st{display:none;align-items:center;gap:10px;background:#EFFAF3;border:1px solid rgba(34,197,94,.25);color:#15803D;border-radius:8px;padding:14px 16px;font-size:15px;font-weight:600;margin-bottom:22px}.pl-cf .st.show{display:flex}.pl-cf .st svg{width:20px;height:20px;flex-shrink:0}.pl-cf .err{background:#FEF2F2;border:1px solid rgba(220,38,38,.25);color:#B91C1C;border-radius:8px;padding:12px 14px;font-size:14px;margin-bottom:18px}.pl-cf form{display:flex;flex-direction:column;gap:18px}.pl-cf .g{display:grid;grid-template-columns:1fr 1fr;gap:16px}.pl-cf .f{display:flex;flex-direction:column;gap:8px}.pl-cf label{font:600 12px/18px Inter,system-ui,sans-serif;letter-spacing:1.44px;text-transform:uppercase;color:#65718A}.pl-cf label em{color:#F5821F;font-style:normal}.pl-cf input,.pl-cf textarea{width:100%;padding:12px 14px;border:1px solid #DCE1EA;border-radius:4px;background:#fff;font:400 15px/18px Inter,system-ui,sans-serif;color:#0F1620;margin:0}.pl-cf textarea{min-height:96px;line-height:22.5px;resize:vertical}.pl-cf input:focus,.pl-cf textarea:focus{outline:none;border-color:#F5821F;box-shadow:0 0 0 3px rgba(245,130,31,.2)}.pl-cf ::placeholder{color:#9AA4B5}.pl-cf .a{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:8px}.pl-cf button{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 28px;border:1px solid transparent;border-radius:999px;background:#F5821F;color:#fff;font:600 15px/15px Inter,system-ui,sans-serif;box-shadow:0 8px 24px rgba(245,130,31,.3);cursor:pointer;transition:transform .15s,background .15s}.pl-cf button:hover{background:#D96E10;transform:translateY(-1px)}.pl-cf.busy button{opacity:.6;pointer-events:none}.pl-cf .m{font-size:13px;line-height:19.5px;color:#65718A}@media(max-width:560px){.pl-cf{padding:24px}.pl-cf .g{grid-template-columns:1fr}}</style><div class=\"pl-cf\"><p class=\"k\">Send a message</p><h2>Tell us about your project</h2><p class=\"sub\">Fields marked <em>*</em> are required. Our engineers review every enquiry for manufacturability, no redesign required to start.</p><div class=\"st\" role=\"status\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg>Thanks, your message is on its way. Our team will respond within one business day.</div><form novalidate><div class=\"g\"><div class=\"f\"><label for=\"pl-cf-fname\">First name <em>*</em></label><input type=\"text\" id=\"pl-cf-fname\" name=\"fname\" placeholder=\"Jane\" required></div><div class=\"f\"><label for=\"pl-cf-lname\">Last name <em>*</em></label><input type=\"text\" id=\"pl-cf-lname\" name=\"lname\" placeholder=\"Doe\" required></div></div><div class=\"g\"><div class=\"f\"><label for=\"pl-cf-email\">Email <em>*</em></label><input type=\"email\" id=\"pl-cf-email\" name=\"email\" placeholder=\"jane@company.com\" required></div><div class=\"f\"><label for=\"pl-cf-phone\">Phone <em>*</em></label><input type=\"text\" id=\"pl-cf-phone\" name=\"phone\" placeholder=\"+1 555 000 0000\" required></div></div><div class=\"g\"><div class=\"f\"><label for=\"pl-cf-company\">Company <em>*</em></label><input type=\"text\" id=\"pl-cf-company\" name=\"company\" placeholder=\"Acme Devices\" required></div><div class=\"f\"><label for=\"pl-cf-website\">Website</label><input type=\"text\" id=\"pl-cf-website\" name=\"website\" placeholder=\"acme.com\"></div></div><div class=\"f\"><label for=\"pl-cf-message\">Message <em>*</em></label><textarea id=\"pl-cf-message\" name=\"message\" placeholder=\"Tell us about your part, material, tolerances, feature sizes, quantities, and timeline.\" required></textarea></div><div class=\"a\"><button type=\"submit\">Send message →</button><span class=\"m\">No commitment · 24-hour response</span></div></form></div><script>(function(){var PORTAL=\"143181153\",FORM=\"54d0ec75-106d-43eb-a420-0ff22e448e6d\",FORM_ID=\"contact_form\";var card=document.currentScript.parentElement.querySelector(\".pl-cf\");if(!card||card.dataset.plWired)return;card.dataset.plWired=\"1\";var f=card.querySelector(\"form\"),st=card.querySelector(\".st\");function utm(){var o={},q=new URLSearchParams(location.search);[\"utm_source\",\"utm_medium\",\"utm_campaign\",\"utm_term\",\"utm_content\",\"gclid\"].forEach(function(k){var v=q.get(k);if(v)o[k]=v;});try{if(Object.keys(o).length){localStorage.setItem(\"pl_utm_last\",JSON.stringify(o));if(!localStorage.getItem(\"pl_utm_first\"))localStorage.setItem(\"pl_utm_first\",JSON.stringify(o));}else{o=JSON.parse(localStorage.getItem(\"pl_utm_last\")||\"null\")||JSON.parse(localStorage.getItem(\"pl_utm_first\")||\"null\")||{};}}catch(e){}return o;}function hutk(){var m=document.cookie.match(/hubspotutk=([^;]+)/);return m?m[1]:\"\";}function track(ev,d){var p={event:ev,form_id:FORM_ID,page_path:location.pathname},u=utm(),k;for(k in u)p[k]=u[k];if(d)for(k in d)p[k]=d[k];try{(window.dataLayer=window.dataLayer||[]).push(p);}catch(e){}try{if(window.gtag)window.gtag(\"event\",ev,p);}catch(e){}}function err(m){var o=card.querySelector(\".err\");if(o)o.remove();var d=document.createElement(\"div\");d.className=\"err\";d.setAttribute(\"role\",\"alert\");d.textContent=m;f.parentNode.insertBefore(d,f);}var started=false;f.addEventListener(\"input\",function(){if(!started){started=true;track(\"lead_form_start\");}});function v(n){var e=f.elements[n];return e?(e.value||\"\").trim():\"\";}f.addEventListener(\"submit\",async function(ev){ev.preventDefault();var o=card.querySelector(\".err\");if(o)o.remove();var d={email:v(\"email\"),firstname:v(\"fname\"),lastname:v(\"lname\"),phone:v(\"phone\"),company:v(\"company\"),website:v(\"website\"),potomac_message:v(\"message\")};if(!d.firstname||!d.lastname||!d.email||!d.phone||!d.company||!d.potomac_message){err(\"Please fill in every field marked *.\");track(\"lead_form_submit_error\",{error:\"validation\"});return;}if(!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]{2,}$/.test(d.email)){err(\"That email address does not look right. Please check it.\");track(\"lead_form_submit_error\",{error:\"email\"});return;}d.hs_lead_status=\"NEW\";var u=utm(),k;for(k in u)d[k]=u[k];var props=Object.keys(d).filter(function(k){return d[k]!=null&&d[k]!==\"\";}).map(function(k){return{objectTypeId:\"0-1\",name:k,value:String(d[k])};});card.classList.add(\"busy\");track(\"lead_form_submit\",{fields_completed:props.length});try{var r=await fetch(\"https://api.hsforms.com/submissions/v3/integration/submit/\"+PORTAL+\"/\"+FORM,{method:\"POST\",headers:{\"Content-Type\":\"application/json\"},body:JSON.stringify({fields:props,context:{pageName:document.title,pageUri:location.href,hutk:hutk()||undefined}})});if(r.ok){track(\"lead_form_submit_success\");st.classList.add(\"show\");f.reset();card.classList.remove(\"busy\");try{st.scrollIntoView({behavior:\"smooth\",block:\"center\"});}catch(e){}return;}var j=await r.json().catch(function(){return null;});console.error(\"HubSpot submit failed\",r.status,j);track(\"lead_form_submit_error\",{error:\"http_\"+r.status});err(\"We could not send that just now. Please try again, or email info@potomac-laser.com.\");}catch(e){console.error(e);track(\"lead_form_submit_error\",{error:\"network\"});err(\"We could not send that just now. Please check your connection, or email info@potomac-laser.com.\");}card.classList.remove(\"busy\");});})();</script>"
+        },
+        "elements": []
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "28d6e03",
+  "elType": "container",
+  "isInner": false,
+  "settings": {
+   "flex_direction": "column",
+   "flex_align_items": "center",
+   "padding": {
+    "unit": "px",
+    "top": "80",
+    "right": "24",
+    "bottom": "80",
+    "left": "24",
+    "isLinked": false
+   },
+   "background_background": "classic",
+   "content_width": "full",
+   "background_color": "",
+   "__globals__": {
+    "background_color": "globals/colors?id=gfwhite"
+   }
+  },
+  "elements": [
+   {
+    "id": "361621e",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+     "content_width": "boxed",
+     "flex_direction": "column",
+     "flex_align_items": "stretch",
+     "flex_gap": {
+      "unit": "px",
+      "column": "0",
+      "row": "0",
+      "isLinked": true
+     },
+     "padding": {
+      "unit": "px",
+      "top": "0",
+      "right": "0",
+      "bottom": "0",
+      "left": "0",
+      "isLinked": true
+     },
+     "boxed_width": {
+      "unit": "px",
+      "size": 1152
+     }
+    },
+    "elements": [
+     {
+      "id": "1a3227a",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+       "flex_direction": "row",
+       "flex_wrap": "wrap",
+       "flex_align_items": "stretch",
+       "flex_gap": {
+        "unit": "px",
+        "column": "24",
+        "row": "24",
+        "isLinked": true
+       },
+       "content_width": "full",
+       "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+       }
+      },
+      "elements": [
+       {
+        "id": "5338020",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "flex_direction": "column",
+         "flex_align_items": "stretch",
+         "flex_gap": {
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+         },
+         "padding": {
+          "unit": "px",
+          "top": "30",
+          "right": "30",
+          "bottom": "30",
+          "left": "30",
+          "isLinked": true
+         },
+         "background_background": "classic",
+         "border_radius": {
+          "unit": "px",
+          "top": "16",
+          "right": "16",
+          "bottom": "16",
+          "left": "16",
+          "isLinked": true
+         },
+         "custom_css": "selector{position:relative;overflow:hidden;flex:1 1 0 !important}selector::before{content:\"\";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.05) 1px,transparent 1px);background-size:26px 26px;opacity:.5;pointer-events:none}selector > *{position:relative;z-index:1}@media(max-width:759px){selector{flex:0 0 100% !important}}",
+         "content_width": "full",
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gfnavydp"
+         }
+        },
+        "elements": [
+         {
+          "id": "1ec59c3",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+           "flex_direction": "row",
+           "flex_align_items": "center",
+           "flex_gap": {
+            "unit": "px",
+            "column": "8",
+            "row": "8",
+            "isLinked": true
+           },
+           "content_width": "full",
+           "padding": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+           },
+           "margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "11",
+            "left": "0",
+            "isLinked": false
+           }
+          },
+          "elements": [
+           {
+            "id": "5cdf790",
+            "elType": "container",
+            "isInner": false,
+            "settings": {
+             "width": {
+              "unit": "px",
+              "size": 7
+             },
+             "min_height": {
+              "unit": "px",
+              "size": 7
+             },
+             "custom_css": "selector{flex-shrink:0}",
+             "background_background": "classic",
+             "border_radius": {
+              "unit": "%",
+              "top": "50",
+              "right": "50",
+              "bottom": "50",
+              "left": "50",
+              "isLinked": true
+             },
+             "content_width": "full",
+             "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+             },
+             "background_color": "",
+             "__globals__": {
+              "background_color": "globals/colors?id=gforange"
+             }
+            },
+            "elements": []
+           },
+           {
+            "id": "8e9a0bb",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+             "title": "Headquarters",
+             "header_size": "div",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 12
+             },
+             "typography_font_weight": "700",
+             "title_color": "",
+             "__globals__": {
+              "title_color": "globals/colors?id=gforange"
+             },
+             "typography_line_height": {
+              "unit": "px",
+              "size": 19.2
+             },
+             "typography_letter_spacing": {
+              "unit": "px",
+              "size": 1.68
+             },
+             "typography_text_transform": "uppercase"
+            },
+            "elements": []
+           }
+          ]
+         },
+         {
+          "id": "0013873",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Baltimore, MD",
+           "header_size": "h3",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 24
+           },
+           "typography_font_weight": "600",
+           "title_color": "",
+           "__globals__": {
+            "title_color": "globals/colors?id=gfwhite"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 31.2
+           },
+           "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "20",
+            "left": "0",
+            "isLinked": false
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "309ebaf",
+          "elType": "widget",
+          "widgetType": "icon-list",
+          "settings": {
+           "icon_list": [
+            {
+             "text": "1450 South Rolling Road<br>Baltimore, MD 21227, USA",
+             "selected_icon": {
+              "value": "fas fa-map-marker-alt",
+              "library": "fa-solid"
+             },
+             "_id": "i0ab12c"
+            },
+            {
+             "text": "443-543-5737",
+             "selected_icon": {
+              "value": "fas fa-phone",
+              "library": "fa-solid"
+             },
+             "_id": "i1ab12c",
+             "link": {
+              "url": "tel:+14435435737",
+              "is_external": "",
+              "nofollow": ""
+             }
+            },
+            {
+             "text": "info@potomac-laser.com",
+             "selected_icon": {
+              "value": "fas fa-envelope",
+              "library": "fa-solid"
+             },
+             "_id": "i2ab12c",
+             "link": {
+              "url": "mailto:info@potomac-laser.com",
+              "is_external": "",
+              "nofollow": ""
+             }
+            }
+           ],
+           "space_between": {
+            "unit": "px",
+            "size": 0
+           },
+           "icon_size": {
+            "unit": "px",
+            "size": 18
+           },
+           "custom_css": "selector .elementor-icon-list-item{align-items:flex-start!important}selector .elementor-icon-list-icon{margin-top:3px}selector .elementor-icon-list-icon i{color:#F5821F;font-size:18px}selector .elementor-icon-list-icon svg{fill:#F5821F;width:18px;height:18px}selector .elementor-icon-list-text,selector a .elementor-icon-list-text{color:rgba(255,255,255,0.86);font:400 15px/23.25px Inter,system-ui,sans-serif;padding-left:13px}selector .elementor-icon-list-item{padding:11px 0!important;margin:0!important}selector .elementor-icon-list-item + .elementor-icon-list-item{border-top:1px solid rgba(255,255,255,.1)}"
+          },
+          "elements": []
+         }
+        ]
+       },
+       {
+        "id": "0809898",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "#DCE1EA",
+         "border_radius": {
+          "unit": "px",
+          "top": "16",
+          "right": "16",
+          "bottom": "16",
+          "left": "16",
+          "isLinked": true
+         },
+         "custom_css": "selector{overflow:hidden;line-height:0;flex:1.3 1 0 !important;box-shadow:0 1px 2px rgba(15,22,32,.06),0 1px 1px rgba(15,22,32,.04)}selector .elementor-widget-html,selector .elementor-widget-container{height:100%}selector iframe{width:100%;height:100%;min-height:260px;border:0;display:block;filter:grayscale(.15)}@media(max-width:759px){selector{flex:0 0 100% !important}}",
+         "content_width": "full",
+         "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+         }
+        },
+        "elements": [
+         {
+          "id": "c5e0f01",
+          "elType": "widget",
+          "widgetType": "html",
+          "settings": {
+           "html": "<iframe title=\"Goodfellow Microfabrication, Baltimore, MD\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2897.9445719291243!2d-76.71027930415296!3d39.23382146518388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c1d6f04a78df%3A0xd81fb800436acb43!2sPotomac%20Photonics%20Inc.!5e0!3m2!1sen!2sid!4v1689661906881!5m2!1sen!2sid\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\" allowfullscreen></iframe>"
+          },
+          "elements": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "7c5f7f1",
+  "elType": "container",
+  "isInner": false,
+  "settings": {
+   "flex_direction": "column",
+   "flex_align_items": "center",
+   "padding": {
+    "unit": "px",
+    "top": "80",
+    "right": "24",
+    "bottom": "80",
+    "left": "24",
+    "isLinked": false
+   },
+   "background_background": "classic",
+   "content_width": "full",
+   "background_color": "#F6F8FB"
+  },
+  "elements": [
+   {
+    "id": "b30feab",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+     "content_width": "boxed",
+     "flex_direction": "column",
+     "flex_align_items": "stretch",
+     "flex_gap": {
+      "unit": "px",
+      "column": "0",
+      "row": "0",
+      "isLinked": true
+     },
+     "padding": {
+      "unit": "px",
+      "top": "0",
+      "right": "0",
+      "bottom": "0",
+      "left": "0",
+      "isLinked": true
+     },
+     "boxed_width": {
+      "unit": "px",
+      "size": 1152
+     }
+    },
+    "elements": [
+     {
+      "id": "2cf5754",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+       "flex_direction": "column",
+       "flex_align_items": "flex-start",
+       "flex_gap": {
+        "unit": "px",
+        "column": "0",
+        "row": "0",
+        "isLinked": true
+       },
+       "width": {
+        "unit": "px",
+        "size": 760
+       },
+       "width_mobile": {
+        "unit": "%",
+        "size": 100
+       },
+       "content_width": "full",
+       "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+       },
+       "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "40",
+        "left": "0",
+        "isLinked": false
+       }
+      },
+      "elements": [
+       {
+        "id": "69077a6",
+        "elType": "widget",
+        "widgetType": "heading",
+        "settings": {
+         "title": "Worldwide",
+         "header_size": "div",
+         "typography_typography": "custom",
+         "typography_font_family": "Inter",
+         "typography_font_size": {
+          "unit": "px",
+          "size": 12
+         },
+         "typography_font_weight": "600",
+         "title_color": "",
+         "__globals__": {
+          "title_color": "globals/colors?id=gforange"
+         },
+         "typography_line_height": {
+          "unit": "px",
+          "size": 18
+         },
+         "typography_letter_spacing": {
+          "unit": "px",
+          "size": 1.68
+         },
+         "typography_text_transform": "uppercase"
+        },
+        "elements": []
+       },
+       {
+        "id": "be7940a",
+        "elType": "widget",
+        "widgetType": "heading",
+        "settings": {
+         "title": "Our global offices",
+         "header_size": "h2",
+         "typography_typography": "custom",
+         "typography_font_family": "Inter",
+         "typography_font_size": {
+          "unit": "px",
+          "size": 40
+         },
+         "typography_font_weight": "600",
+         "title_color": "#0F1620",
+         "typography_line_height": {
+          "unit": "px",
+          "size": 44.8
+         },
+         "typography_letter_spacing": {
+          "unit": "px",
+          "size": -0.8
+         },
+         "_margin": {
+          "unit": "px",
+          "top": "18",
+          "right": "0",
+          "bottom": "16",
+          "left": "0",
+          "isLinked": false
+         }
+        },
+        "elements": []
+       },
+       {
+        "id": "57ae5cc",
+        "elType": "widget",
+        "widgetType": "text-editor",
+        "settings": {
+         "editor": "<p>Part of the Goodfellow Group, with materials, microfabrication and analytics support across the US, Europe and Asia.</p>",
+         "typography_typography": "custom",
+         "typography_font_family": "Inter",
+         "typography_font_size": {
+          "unit": "px",
+          "size": 18
+         },
+         "typography_font_weight": "400",
+         "text_color": "#65718A",
+         "typography_line_height": {
+          "unit": "px",
+          "size": 29.7
+         },
+         "custom_css": "selector p{font-size:18px;line-height:29.7px;font-weight:400;color:#65718A;margin:0}selector a{font-size:inherit;line-height:inherit}"
+        },
+        "elements": []
+       }
+      ]
+     },
+     {
+      "id": "b6a2aa0",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+       "flex_direction": "row",
+       "flex_wrap": "wrap",
+       "flex_align_items": "stretch",
+       "flex_gap": {
+        "unit": "px",
+        "column": "18",
+        "row": "18",
+        "isLinked": true
+       },
+       "width": {
+        "unit": "%",
+        "size": 100
+       },
+       "custom_css": "selector > .e-con{flex:0 0 calc((100% - 18px) / 2) !important;max-width:calc((100% - 18px) / 2) !important}@media(max-width:979px){selector > .e-con{flex:0 0 100% !important;max-width:100% !important}}",
+       "content_width": "full",
+       "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+       }
+      },
+      "elements": [
+       {
+        "id": "e2a8b95",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "flex_direction": "column",
+         "flex_gap": {
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+         },
+         "padding": {
+          "unit": "px",
+          "top": "26",
+          "right": "24",
+          "bottom": "26",
+          "left": "24",
+          "isLinked": false
+         },
+         "background_background": "classic",
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "#DCE1EA",
+         "border_radius": {
+          "unit": "px",
+          "top": "8",
+          "right": "8",
+          "bottom": "8",
+          "left": "8",
+          "isLinked": true
+         },
+         "custom_css": "selector{position:relative;transition:transform .25s cubic-bezier(.25,.46,.45,.94),box-shadow .25s cubic-bezier(.25,.46,.45,.94),border-color .25s}selector:hover{transform:translateY(-3px);box-shadow:0 4px 12px rgba(15,22,32,.08);border-color:#C3CBD8}selector::after{content:\"\";position:absolute;left:0;top:24px;bottom:24px;width:3px;border-radius:0 3px 3px 0;background:var(--e-global-color-gforange);transform:scaleY(0);transform-origin:top;transition:transform .25s}selector:hover::after{transform:scaleY(1)}",
+         "content_width": "full",
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gfwhite"
+         }
+        },
+        "elements": [
+         {
+          "id": "309c17a",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Cambridge",
+           "header_size": "h3",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 20
+           },
+           "typography_font_weight": "600",
+           "title_color": "#0F1620",
+           "typography_line_height": {
+            "unit": "px",
+            "size": 26
+           },
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": -0.2
+           },
+           "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "4",
+            "left": "0",
+            "isLinked": false
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "6d9dd11",
+          "elType": "widget",
+          "widgetType": "icon-list",
+          "settings": {
+           "icon_list": [
+            {
+             "text": "Ermine Business Park, Huntingdon, Cambs, PE29 6WR, England",
+             "selected_icon": {
+              "value": "fas fa-map-marker-alt",
+              "library": "fa-solid"
+             },
+             "_id": "i0ab12c"
+            },
+            {
+             "text": "+44 (0) 1480 424800",
+             "selected_icon": {
+              "value": "fas fa-phone",
+              "library": "fa-solid"
+             },
+             "_id": "i1ab12c",
+             "link": {
+              "url": "tel:+441480424800",
+              "is_external": "",
+              "nofollow": ""
+             }
+            }
+           ],
+           "space_between": {
+            "unit": "px",
+            "size": 0
+           },
+           "icon_size": {
+            "unit": "px",
+            "size": 16
+           },
+           "custom_css": "selector .elementor-icon-list-item{align-items:flex-start!important}selector .elementor-icon-list-icon{margin-top:3px}selector .elementor-icon-list-icon i{color:#F5821F;font-size:16px}selector .elementor-icon-list-icon svg{fill:#F5821F;width:16px;height:16px}selector .elementor-icon-list-text,selector a .elementor-icon-list-text{color:#3C4858;font:400 14px/21.7px Inter,system-ui,sans-serif;padding-left:13px}selector .elementor-icon-list-item{padding:10px 0 0!important;margin:0!important}selector .elementor-icon-list-text{padding-left:11px!important}"
+          },
+          "elements": []
+         }
+        ]
+       },
+       {
+        "id": "ee30400",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "flex_direction": "column",
+         "flex_gap": {
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+         },
+         "padding": {
+          "unit": "px",
+          "top": "26",
+          "right": "24",
+          "bottom": "26",
+          "left": "24",
+          "isLinked": false
+         },
+         "background_background": "classic",
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "#DCE1EA",
+         "border_radius": {
+          "unit": "px",
+          "top": "8",
+          "right": "8",
+          "bottom": "8",
+          "left": "8",
+          "isLinked": true
+         },
+         "custom_css": "selector{position:relative;transition:transform .25s cubic-bezier(.25,.46,.45,.94),box-shadow .25s cubic-bezier(.25,.46,.45,.94),border-color .25s}selector:hover{transform:translateY(-3px);box-shadow:0 4px 12px rgba(15,22,32,.08);border-color:#C3CBD8}selector::after{content:\"\";position:absolute;left:0;top:24px;bottom:24px;width:3px;border-radius:0 3px 3px 0;background:var(--e-global-color-gforange);transform:scaleY(0);transform-origin:top;transition:transform .25s}selector:hover::after{transform:scaleY(1)}",
+         "content_width": "full",
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gfwhite"
+         }
+        },
+        "elements": [
+         {
+          "id": "cbebb1d",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Pittsburgh",
+           "header_size": "h3",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 20
+           },
+           "typography_font_weight": "600",
+           "title_color": "#0F1620",
+           "typography_line_height": {
+            "unit": "px",
+            "size": 26
+           },
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": -0.2
+           },
+           "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "4",
+            "left": "0",
+            "isLinked": false
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "aac61bb",
+          "elType": "widget",
+          "widgetType": "icon-list",
+          "settings": {
+           "icon_list": [
+            {
+             "text": "301 Grant Street, Suite 270, Pittsburgh, PA 15219, USA",
+             "selected_icon": {
+              "value": "fas fa-map-marker-alt",
+              "library": "fa-solid"
+             },
+             "_id": "i0ab12c"
+            },
+            {
+             "text": "+1-800-821-2870",
+             "selected_icon": {
+              "value": "fas fa-phone",
+              "library": "fa-solid"
+             },
+             "_id": "i1ab12c",
+             "link": {
+              "url": "tel:+18008212870",
+              "is_external": "",
+              "nofollow": ""
+             }
+            }
+           ],
+           "space_between": {
+            "unit": "px",
+            "size": 0
+           },
+           "icon_size": {
+            "unit": "px",
+            "size": 16
+           },
+           "custom_css": "selector .elementor-icon-list-item{align-items:flex-start!important}selector .elementor-icon-list-icon{margin-top:3px}selector .elementor-icon-list-icon i{color:#F5821F;font-size:16px}selector .elementor-icon-list-icon svg{fill:#F5821F;width:16px;height:16px}selector .elementor-icon-list-text,selector a .elementor-icon-list-text{color:#3C4858;font:400 14px/21.7px Inter,system-ui,sans-serif;padding-left:13px}selector .elementor-icon-list-item{padding:10px 0 0!important;margin:0!important}selector .elementor-icon-list-text{padding-left:11px!important}"
+          },
+          "elements": []
+         }
+        ]
+       },
+       {
+        "id": "31b42c8",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "flex_direction": "column",
+         "flex_gap": {
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+         },
+         "padding": {
+          "unit": "px",
+          "top": "26",
+          "right": "24",
+          "bottom": "26",
+          "left": "24",
+          "isLinked": false
+         },
+         "background_background": "classic",
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "#DCE1EA",
+         "border_radius": {
+          "unit": "px",
+          "top": "8",
+          "right": "8",
+          "bottom": "8",
+          "left": "8",
+          "isLinked": true
+         },
+         "custom_css": "selector{position:relative;transition:transform .25s cubic-bezier(.25,.46,.45,.94),box-shadow .25s cubic-bezier(.25,.46,.45,.94),border-color .25s}selector:hover{transform:translateY(-3px);box-shadow:0 4px 12px rgba(15,22,32,.08);border-color:#C3CBD8}selector::after{content:\"\";position:absolute;left:0;top:24px;bottom:24px;width:3px;border-radius:0 3px 3px 0;background:var(--e-global-color-gforange);transform:scaleY(0);transform-origin:top;transition:transform .25s}selector:hover::after{transform:scaleY(1)}",
+         "content_width": "full",
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gfwhite"
+         }
+        },
+        "elements": [
+         {
+          "id": "7605aed",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Hamburg",
+           "header_size": "h3",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 20
+           },
+           "typography_font_weight": "600",
+           "title_color": "#0F1620",
+           "typography_line_height": {
+            "unit": "px",
+            "size": 26
+           },
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": -0.2
+           },
+           "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "4",
+            "left": "0",
+            "isLinked": false
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "c691e68",
+          "elType": "widget",
+          "widgetType": "icon-list",
+          "settings": {
+           "icon_list": [
+            {
+             "text": "Alstertwiete 3, D-20099, Hamburg, Germany",
+             "selected_icon": {
+              "value": "fas fa-map-marker-alt",
+              "library": "fa-solid"
+             },
+             "_id": "i0ab12c"
+            },
+            {
+             "text": "+49 (0) 800 1000 579",
+             "selected_icon": {
+              "value": "fas fa-phone",
+              "library": "fa-solid"
+             },
+             "_id": "i1ab12c",
+             "link": {
+              "url": "tel:+498001000579",
+              "is_external": "",
+              "nofollow": ""
+             }
+            }
+           ],
+           "space_between": {
+            "unit": "px",
+            "size": 0
+           },
+           "icon_size": {
+            "unit": "px",
+            "size": 16
+           },
+           "custom_css": "selector .elementor-icon-list-item{align-items:flex-start!important}selector .elementor-icon-list-icon{margin-top:3px}selector .elementor-icon-list-icon i{color:#F5821F;font-size:16px}selector .elementor-icon-list-icon svg{fill:#F5821F;width:16px;height:16px}selector .elementor-icon-list-text,selector a .elementor-icon-list-text{color:#3C4858;font:400 14px/21.7px Inter,system-ui,sans-serif;padding-left:13px}selector .elementor-icon-list-item{padding:10px 0 0!important;margin:0!important}selector .elementor-icon-list-text{padding-left:11px!important}"
+          },
+          "elements": []
+         }
+        ]
+       },
+       {
+        "id": "37fa728",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "flex_direction": "column",
+         "flex_gap": {
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+         },
+         "padding": {
+          "unit": "px",
+          "top": "26",
+          "right": "24",
+          "bottom": "26",
+          "left": "24",
+          "isLinked": false
+         },
+         "background_background": "classic",
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "#DCE1EA",
+         "border_radius": {
+          "unit": "px",
+          "top": "8",
+          "right": "8",
+          "bottom": "8",
+          "left": "8",
+          "isLinked": true
+         },
+         "custom_css": "selector{position:relative;transition:transform .25s cubic-bezier(.25,.46,.45,.94),box-shadow .25s cubic-bezier(.25,.46,.45,.94),border-color .25s}selector:hover{transform:translateY(-3px);box-shadow:0 4px 12px rgba(15,22,32,.08);border-color:#C3CBD8}selector::after{content:\"\";position:absolute;left:0;top:24px;bottom:24px;width:3px;border-radius:0 3px 3px 0;background:var(--e-global-color-gforange);transform:scaleY(0);transform-origin:top;transition:transform .25s}selector:hover::after{transform:scaleY(1)}",
+         "content_width": "full",
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gfwhite"
+         }
+        },
+        "elements": [
+         {
+          "id": "4e478b3",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Lille",
+           "header_size": "h3",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 20
+           },
+           "typography_font_weight": "600",
+           "title_color": "#0F1620",
+           "typography_line_height": {
+            "unit": "px",
+            "size": 26
+           },
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": -0.2
+           },
+           "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "4",
+            "left": "0",
+            "isLinked": false
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "476e745",
+          "elType": "widget",
+          "widgetType": "icon-list",
+          "settings": {
+           "icon_list": [
+            {
+             "text": "229 rue Solférino, 59000, Lille, France",
+             "selected_icon": {
+              "value": "fas fa-map-marker-alt",
+              "library": "fa-solid"
+             },
+             "_id": "i0ab12c"
+            },
+            {
+             "text": "+33 (0) 800 91 72 41",
+             "selected_icon": {
+              "value": "fas fa-phone",
+              "library": "fa-solid"
+             },
+             "_id": "i1ab12c",
+             "link": {
+              "url": "tel:+33800917241",
+              "is_external": "",
+              "nofollow": ""
+             }
+            }
+           ],
+           "space_between": {
+            "unit": "px",
+            "size": 0
+           },
+           "icon_size": {
+            "unit": "px",
+            "size": 16
+           },
+           "custom_css": "selector .elementor-icon-list-item{align-items:flex-start!important}selector .elementor-icon-list-icon{margin-top:3px}selector .elementor-icon-list-icon i{color:#F5821F;font-size:16px}selector .elementor-icon-list-icon svg{fill:#F5821F;width:16px;height:16px}selector .elementor-icon-list-text,selector a .elementor-icon-list-text{color:#3C4858;font:400 14px/21.7px Inter,system-ui,sans-serif;padding-left:13px}selector .elementor-icon-list-item{padding:10px 0 0!important;margin:0!important}selector .elementor-icon-list-text{padding-left:11px!important}"
+          },
+          "elements": []
+         }
+        ]
+       },
+       {
+        "id": "6052353",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "flex_direction": "column",
+         "flex_gap": {
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+         },
+         "padding": {
+          "unit": "px",
+          "top": "26",
+          "right": "24",
+          "bottom": "26",
+          "left": "24",
+          "isLinked": false
+         },
+         "background_background": "classic",
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "#DCE1EA",
+         "border_radius": {
+          "unit": "px",
+          "top": "8",
+          "right": "8",
+          "bottom": "8",
+          "left": "8",
+          "isLinked": true
+         },
+         "custom_css": "selector{position:relative;transition:transform .25s cubic-bezier(.25,.46,.45,.94),box-shadow .25s cubic-bezier(.25,.46,.45,.94),border-color .25s}selector:hover{transform:translateY(-3px);box-shadow:0 4px 12px rgba(15,22,32,.08);border-color:#C3CBD8}selector::after{content:\"\";position:absolute;left:0;top:24px;bottom:24px;width:3px;border-radius:0 3px 3px 0;background:var(--e-global-color-gforange);transform:scaleY(0);transform-origin:top;transition:transform .25s}selector:hover::after{transform:scaleY(1)}",
+         "content_width": "full",
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gfwhite"
+         }
+        },
+        "elements": [
+         {
+          "id": "1675338",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Shanghai",
+           "header_size": "h3",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 20
+           },
+           "typography_font_weight": "600",
+           "title_color": "#0F1620",
+           "typography_line_height": {
+            "unit": "px",
+            "size": 26
+           },
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": -0.2
+           },
+           "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "4",
+            "left": "0",
+            "isLinked": false
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "0c4bfa0",
+          "elType": "widget",
+          "widgetType": "icon-list",
+          "settings": {
+           "icon_list": [
+            {
+             "text": "Room 803, No. 568 Hengfeng Road, Jing'an District, Shanghai, 200070, China",
+             "selected_icon": {
+              "value": "fas fa-map-marker-alt",
+              "library": "fa-solid"
+             },
+             "_id": "i0ab12c"
+            },
+            {
+             "text": "+86 (0) 21-5299 7072",
+             "selected_icon": {
+              "value": "fas fa-phone",
+              "library": "fa-solid"
+             },
+             "_id": "i1ab12c",
+             "link": {
+              "url": "tel:+862152997072",
+              "is_external": "",
+              "nofollow": ""
+             }
+            }
+           ],
+           "space_between": {
+            "unit": "px",
+            "size": 0
+           },
+           "icon_size": {
+            "unit": "px",
+            "size": 16
+           },
+           "custom_css": "selector .elementor-icon-list-item{align-items:flex-start!important}selector .elementor-icon-list-icon{margin-top:3px}selector .elementor-icon-list-icon i{color:#F5821F;font-size:16px}selector .elementor-icon-list-icon svg{fill:#F5821F;width:16px;height:16px}selector .elementor-icon-list-text,selector a .elementor-icon-list-text{color:#3C4858;font:400 14px/21.7px Inter,system-ui,sans-serif;padding-left:13px}selector .elementor-icon-list-item{padding:10px 0 0!important;margin:0!important}selector .elementor-icon-list-text{padding-left:11px!important}"
+          },
+          "elements": []
+         }
+        ]
+       },
+       {
+        "id": "05b0165",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "flex_direction": "column",
+         "flex_justify_content": "center",
+         "flex_align_items": "flex-start",
+         "flex_gap": {
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+         },
+         "padding": {
+          "unit": "px",
+          "top": "26",
+          "right": "24",
+          "bottom": "26",
+          "left": "24",
+          "isLinked": false
+         },
+         "background_background": "classic",
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "#F9B067",
+         "border_radius": {
+          "unit": "px",
+          "top": "8",
+          "right": "8",
+          "bottom": "8",
+          "left": "8",
+          "isLinked": true
+         },
+         "custom_css": "selector{position:relative;transition:transform .25s cubic-bezier(.25,.46,.45,.94),box-shadow .25s cubic-bezier(.25,.46,.45,.94),border-color .25s}selector:hover{transform:translateY(-3px);box-shadow:0 4px 12px rgba(15,22,32,.08);border-color:#C3CBD8}selector::after{content:\"\";position:absolute;left:0;top:24px;bottom:24px;width:3px;border-radius:0 3px 3px 0;background:var(--e-global-color-gforange);transform:scaleY(0);transform-origin:top;transition:transform .25s}selector:hover::after{transform:scaleY(1)}",
+         "content_width": "full",
+         "background_color": "#FEF9F5"
+        },
+        "elements": [
+         {
+          "id": "9af5b5b",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+           "title": "Can't find your region?",
+           "header_size": "h3",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 20
+           },
+           "typography_font_weight": "600",
+           "title_color": "#0F1620",
+           "typography_line_height": {
+            "unit": "px",
+            "size": 26
+           },
+           "typography_letter_spacing": {
+            "unit": "px",
+            "size": -0.2
+           },
+           "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "8",
+            "left": "0",
+            "isLinked": false
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "dc89b10",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+           "editor": "<p>The Goodfellow Group serves 111+ countries. Reach the Baltimore team and we'll route you.</p>",
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 14
+           },
+           "typography_font_weight": "400",
+           "text_color": "",
+           "__globals__": {
+            "text_color": "globals/colors?id=gfink"
+           },
+           "typography_line_height": {
+            "unit": "px",
+            "size": 22.4
+           },
+           "custom_css": "selector p{font-size:14px;line-height:22.4px;font-weight:400;margin:0}selector a{font-size:inherit;line-height:inherit}",
+           "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "16",
+            "left": "0",
+            "isLinked": false
+           }
+          },
+          "elements": []
+         },
+         {
+          "id": "1171c8e",
+          "elType": "widget",
+          "widgetType": "button",
+          "settings": {
+           "text": "Email the team →",
+           "link": {
+            "url": "mailto:info@potomac-laser.com",
+            "is_external": "",
+            "nofollow": ""
+           },
+           "typography_typography": "custom",
+           "typography_font_family": "Inter",
+           "typography_font_size": {
+            "unit": "px",
+            "size": 15
+           },
+           "typography_font_weight": "600",
+           "border_radius": {
+            "unit": "px",
+            "top": "999",
+            "right": "999",
+            "bottom": "999",
+            "left": "999",
+            "isLinked": true
+           },
+           "text_padding": {
+            "unit": "px",
+            "top": "12",
+            "right": "24",
+            "bottom": "12",
+            "left": "24",
+            "isLinked": false
+           },
+           "background_color": "",
+           "__globals__": {
+            "background_color": "globals/colors?id=gfwhite",
+            "button_text_color": "globals/colors?id=gforange"
+           },
+           "button_text_color": "",
+           "border_border": "solid",
+           "border_width": {
+            "unit": "px",
+            "top": "1",
+            "right": "1",
+            "bottom": "1",
+            "left": "1",
+            "isLinked": true
+           },
+           "border_color": "#F5821F"
+          },
+          "elements": []
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "id": "35b449b",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+       "flex_direction": "row",
+       "flex_wrap": "wrap",
+       "flex_align_items": "center",
+       "flex_gap": {
+        "unit": "px",
+        "column": "12",
+        "row": "12",
+        "isLinked": true
+       },
+       "content_width": "full",
+       "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+       },
+       "margin": {
+        "unit": "px",
+        "top": "30",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": false
+       }
+      },
+      "elements": [
+       {
+        "id": "f90548e",
+        "elType": "widget",
+        "widgetType": "heading",
+        "settings": {
+         "title": "Follow us",
+         "header_size": "div",
+         "typography_typography": "custom",
+         "typography_font_family": "Inter",
+         "typography_font_size": {
+          "unit": "px",
+          "size": 13
+         },
+         "typography_font_weight": "600",
+         "title_color": "#65718A",
+         "typography_line_height": {
+          "unit": "px",
+          "size": 19.5
+         }
+        },
+        "elements": []
+       },
+       {
+        "id": "c0d4410",
+        "elType": "widget",
+        "widgetType": "social-icons",
+        "settings": {
+         "social_icon_list": [
+          {
+           "social_icon": {
+            "value": "fab fa-instagram",
+            "library": "fa-brands"
+           },
+           "link": {
+            "url": "https://www.instagram.com/potomacphotonic/",
+            "is_external": "on",
+            "nofollow": ""
+           },
+           "_id": "s0cd34e"
+          },
+          {
+           "social_icon": {
+            "value": "fab fa-facebook-f",
+            "library": "fa-brands"
+           },
+           "link": {
+            "url": "https://www.facebook.com/potomacphotonics",
+            "is_external": "on",
+            "nofollow": ""
+           },
+           "_id": "s1cd34e"
+          },
+          {
+           "social_icon": {
+            "value": "fab fa-linkedin-in",
+            "library": "fa-brands"
+           },
+           "link": {
+            "url": "https://www.linkedin.com/company/potomac-photonics/",
+            "is_external": "on",
+            "nofollow": ""
+           },
+           "_id": "s2cd34e"
+          },
+          {
+           "social_icon": {
+            "value": "fab fa-x-twitter",
+            "library": "fa-brands"
+           },
+           "link": {
+            "url": "https://twitter.com/PotomacPhotonic",
+            "is_external": "on",
+            "nofollow": ""
+           },
+           "_id": "s3cd34e"
+          }
+         ],
+         "shape": "circle",
+         "icon_color": "custom",
+         "icon_size": {
+          "unit": "px",
+          "size": 18
+         },
+         "icon_padding": {
+          "unit": "em",
+          "size": 0
+         },
+         "icon_spacing": {
+          "unit": "px",
+          "size": 12
+         },
+         "custom_css": "selector .elementor-social-icon{width:40px;height:40px;display:inline-grid;place-items:center;background:transparent;border:1px solid #DCE1EA;border-radius:50%;color:#3C4858;transition:all .15s}selector .elementor-social-icon i{color:#3C4858;font-size:18px}selector .elementor-social-icon svg{fill:#3C4858;width:18px;height:18px}selector .elementor-social-icon:hover{background:var(--e-global-color-gforange);border-color:var(--e-global-color-gforange);transform:translateY(-2px)}selector .elementor-social-icon:hover i{color:#fff}selector .elementor-social-icon:hover svg{fill:#fff}"
+        },
+        "elements": []
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+]

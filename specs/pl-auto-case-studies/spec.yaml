@@ -1,0 +1,91 @@
+# spec.yaml — Case Studies  (run 20260924-125928, autonomous, RUN A re-entry)
+# Source design : Potomac Laser.zip (fab7225c…) :: About - Case Studies.html  (no tweak defaults)
+# MATCH (3.c.ii) — design images / fragment image slots in brackets:
+#   [0] #hero  centred eyebrow + H1 + lede, NO meta row, no buttons [0/0]
+#              -> UNMATCHED: hero-dark-centered-meta requires exactly 3 meta stats
+#              -> §7 candidate hero-dark-centered
+#   [1] subtle, NO section head, 5 linked cards (16:10 image, tag, title, text, "Read …" label) [5/0]
+#              -> UNMATCHED: profile-cards-4 has a head, square photos and 4 cards
+#              -> §7 candidate image-link-cards-5
+#   [2] .final-cta -> cta-band-dark [0/0]
+# Brand normalisation: hero lede "How Potomac has solved" -> Goodfellow Microfabrication. KEPT verbatim
+#   (historical case-study titles/text): "Wireless Sensor Project (WiSP) at Potomac Photonics",
+#   "A collaboration between Potomac Photonics, Potomac Mesosystems and Gray Technologies…".
+# Links: url_* hold the design's page hrefs; §3.d link pass rewrites the internal ones.
+# Links: §3.d link pass applied — design page hrefs -> this run's drafts (12302/12357/12371) and
+#   earlier drafts 12239 (CNC, #quote), 12268, 12277.
+
+spec_version: 1
+page:
+  title: Case Studies
+  slug: pl-auto-case-studies
+  post_type: page
+  post_status: draft
+assets:
+  cs_img_1:
+    attachment_id: 12278
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-cs-card-1.webp
+  cs_img_2:
+    attachment_id: 12279
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-cs-card-2.webp
+  cs_img_3:
+    attachment_id: 12280
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-cs-card-3.webp
+  cs_img_4:
+    attachment_id: 12281
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-cs-card-4.webp
+  cs_img_5:
+    attachment_id: 12282
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-cs-card-5.webp
+sections:
+- pattern: hero-dark-centered
+  tokens:
+    heading_1: Proof
+    heading_2: Case studies
+    body_1: <p>How Goodfellow Microfabrication has solved micro-manufacturing problems for <strong>semiconductor, aerospace, medical device and electronics</strong> customers.</p>
+- pattern: image-link-cards-5
+  tokens:
+    image_1:
+      asset: cs_img_1
+    heading_1: Collaboration
+    heading_2: Wireless Sensor Project (WiSP) at Potomac Photonics
+    body_1: <p>A collaboration between Potomac Photonics, Potomac Mesosystems and Gray Technologies to create a network of wireless sensor nodes that communicate with mobile devices.</p>
+    body_2: <p>Read the case study</p>
+    url_1: https://www.potomac-laser.com/about/case-studies/wireless-sensor-project-wisp-at-potomac-photonics/
+    image_2:
+      asset: cs_img_2
+    heading_3: Semiconductor
+    heading_4: 'Laser micromachining: ramp-up of complex semiconductor part'
+    body_3: <p>A Fortune 500 contract manufacturer needed a process for very high aspect ratio channels in a copper substrate, used for chip cooling in high-end computers.</p>
+    body_4: <p>Read the case study</p>
+    url_2: https://www.potomac-laser.com/about/case-studies/laser-micromachining-ramp-up-of-complex-semiconductor-part/
+    image_3:
+      asset: cs_img_3
+    heading_5: Aerospace
+    heading_6: Strain gauge circuit to be embedded in fibreglass
+    body_5: <p>An airframe research group needed miniature, single-layer electronic circuits that could be embedded in a fibreglass structure without mechanical perturbation.</p>
+    body_6: <p>Read the case study</p>
+    url_3: https://www.potomac-laser.com/about/case-studies/strain-gauge-circuit-to-be-embedded-in-fiberglass/
+    image_4:
+      asset: cs_img_4
+    heading_7: Medical device
+    heading_8: Prototyping at the speed of light
+    body_7: <p>A start-up medical device company wanted to shorten prototyping lead times of 6+ weeks caused by fabricating new masks for each design change.</p>
+    body_8: <p>Read the case study</p>
+    url_4: https://www.potomac-laser.com/about/case-studies/prototyping-at-the-speed-of-light/
+    image_5:
+      asset: cs_img_5
+    heading_9: Electronics
+    heading_10: Microhole drilling case study
+    body_9: <p>An electronics company needed a 1-week turnaround on 21 designs with multiple microhole diameters, as small as 10 microns, in two materials.</p>
+    body_10: <p>Read the case study</p>
+    url_5: https://www.potomac-laser.com/about/case-studies/microhole-drilling-services/
+- pattern: cta-band-dark
+  tokens:
+    heading_1: Your project
+    heading_2: Have a similar challenge?
+    body_1: <p>Send a drawing or a short description. Our engineers review every design for manufacturability and respond within one business day.</p>
+    button_1: Send a drawing
+    url_1: https://www.potomac-laser.com/project-quote/#projectForm
+    button_2: View the project gallery
+    url_2: https://www.potomac-laser.com/?page_id=12357&preview=true

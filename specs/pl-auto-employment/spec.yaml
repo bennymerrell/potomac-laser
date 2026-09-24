@@ -1,0 +1,87 @@
+# spec.yaml — Employment  (run 20260924-125928, autonomous, RUN A re-entry)
+# Source design : Potomac Laser.zip (fab7225c…) :: About - Employment.html  (no tweak defaults)
+# MATCH (3.c.ii) — design images / fragment image slots in brackets:
+#   [0] #hero  centred, no meta, ONE CTA [0/0] -> UNMATCHED (hero-dark-centered has no button,
+#              hero-dark-stat-strip needs 2 CTAs + stats) -> §7 candidate hero-dark-centered-cta
+#   [1] prose (eyebrow, H2, paragraph, 5-item check-list) | photo RIGHT [1/1 on split-media-prose]
+#              -> UNMATCHED: split-media-prose is photo LEFT with paragraph + 2 buttons, no list
+#              -> §7 candidate split-prose-list-media
+#   [2] #openings subtle, centred head + 5 category chips + 6 text-only whole-card links [0/0]
+#              -> UNMATCHED (no image, filter chips) -> §7 candidate text-link-cards-6-filter
+#   [3] .final-cta -> cta-band-dark [0/0]
+# Brand normalisation: H1 "Careers at Potomac", lede "Potomac Photonics is always looking",
+#   eyebrow "Working at Potomac", CTA button "About Potomac", photo alt -> Goodfellow Microfabrication.
+# Filter: chips + a show/hide script in one html widget; cards stay native widgets (zip CLAUDE.md rule).
+# Links: §3.d link pass applied — design page hrefs -> this run's drafts (12302/12357/12371) and
+#   earlier drafts 12239 (CNC, #quote), 12268, 12277.
+
+spec_version: 1
+page:
+  title: Employment
+  slug: pl-auto-employment
+  post_type: page
+  post_status: draft
+assets:
+  emp_benefits:
+    attachment_id: 12297
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-emp-benefits.webp
+sections:
+- pattern: hero-dark-centered-cta
+  tokens:
+    button_1: View openings
+    url_1: '#openings'
+    heading_1: Careers
+    heading_2: Careers at Goodfellow Microfabrication
+    body_1: <p>Ready to advance your career with a high-tech manufacturer? Goodfellow Microfabrication is always looking for <strong>detail-oriented, multitasking professionals</strong> to join the team in Maryland, whether your experience is in shipping and receiving, operations or another area.</p>
+- pattern: split-prose-list-media
+  tokens:
+    heading_1: Working at Goodfellow Microfabrication
+    heading_2: Benefits
+    body_1: <p>We offer competitive pay and a comprehensive benefits package. If there is no role listed that matches your experience, we still welcome your résumé for future opportunities.</p>
+    body_2: <ul><li>Competitive pay</li><li>401(k) with matching</li><li>Health, dental and vision insurance</li><li>Life insurance</li><li>Paid time off</li></ul>
+    image_1:
+      asset: emp_benefits
+- pattern: text-link-cards-6-filter
+  tokens:
+    heading_1: Openings
+    heading_2: Current roles
+    embed_1: <button type="button" data-filter="all" aria-pressed="true">All</button><button type="button" data-filter="sales" aria-pressed="false">Sales</button><button type="button" data-filter="production" aria-pressed="false">Production</button><button type="button" data-filter="hr" aria-pressed="false">HR</button><button type="button" data-filter="engineering" aria-pressed="false">Engineering</button>
+    heading_3: Sales
+    heading_4: Account Manager, Sales Support
+    body_1: <p>Full time · US Office, Baltimore MD</p>
+    body_2: <p>View details</p>
+    url_1: https://www.potomac-laser.com/jobs/account-manager-sales-support/
+    heading_5: Sales
+    heading_6: Internal Account Manager
+    body_3: <p>Full time · US Office, Baltimore MD</p>
+    body_4: <p>View details</p>
+    url_2: https://www.potomac-laser.com/jobs/internal-account-manager/
+    heading_7: Engineering
+    heading_8: Process Engineer
+    body_5: <p>Full time · US Office, Baltimore MD</p>
+    body_6: <p>View details</p>
+    url_3: https://www.potomac-laser.com/jobs/process-engineer/
+    heading_9: HR
+    heading_10: HR Administrator / HR Advisor
+    body_7: <p>Part time · US Office, Baltimore MD</p>
+    body_8: <p>View details</p>
+    url_4: https://www.potomac-laser.com/jobs/hr-administrator-hr-advisor/
+    heading_11: Production
+    heading_12: Production Technician
+    body_9: <p>Part time · Full time, hybrid · US Office, Baltimore MD</p>
+    body_10: <p>View details</p>
+    url_5: https://www.potomac-laser.com/jobs/production-technician/
+    heading_13: Sales
+    heading_14: Sales Engineer
+    body_11: <p>Full time · US Office, Baltimore MD</p>
+    body_12: <p>View details</p>
+    url_6: https://www.potomac-laser.com/jobs/sales-engineer/
+- pattern: cta-band-dark
+  tokens:
+    heading_1: Get in touch
+    heading_2: Send us your résumé.
+    body_1: <p>No matching role today? Get in touch and tell us about your experience. We keep strong candidates in mind for future openings.</p>
+    button_1: Contact us
+    url_1: https://www.potomac-laser.com/?page_id=12302&preview=true
+    button_2: About Goodfellow Microfabrication
+    url_2: https://www.potomac-laser.com/?page_id=12277&preview=true

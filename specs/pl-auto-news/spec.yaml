@@ -1,0 +1,160 @@
+# spec.yaml — News  (run 20260924-125928, autonomous, RUN A re-entry)
+# Source design : Potomac Laser.zip (fab7225c…) :: About - News.html  (no tweak defaults)
+# MATCH (3.c.ii):
+#   [0] #hero  centred, no meta, no buttons [0/0] -> hero-dark-centered (minted this run by Case Studies — dedupe hit)
+#   [1] subtle, no head, 12 linked image cards + one centred secondary button [12/0]
+#              -> UNMATCHED: image-link-cards-5 has 5 cards and no button (fixed arity, TRANSLATE §6)
+#              -> §7 candidate image-link-cards-12-button
+#   [2] .final-cta -> cta-band-dark [0/0]
+# Brand normalisation: H1 "News from Potomac", lede "at Potomac Photonics" -> Goodfellow Microfabrication.
+#   KEPT verbatim: the 12 dated headlines and summaries (historical press items).
+# Links: url_* hold the design's page hrefs; §3.d link pass rewrites the internal ones.
+# Links: §3.d link pass applied — design page hrefs -> this run's drafts (12302/12357/12371) and
+#   earlier drafts 12239 (CNC, #quote), 12268, 12277.
+
+spec_version: 1
+page:
+  title: News
+  slug: pl-auto-news
+  post_type: page
+  post_status: draft
+assets:
+  news_img_1:
+    attachment_id: 12283
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-news-card-1.webp
+  news_img_2:
+    attachment_id: 12284
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-news-card-2.webp
+  news_img_3:
+    attachment_id: 12285
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-news-card-3.webp
+  news_img_4:
+    attachment_id: 12286
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-news-card-4.webp
+  news_img_5:
+    attachment_id: 12287
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-news-card-5.webp
+  news_img_6:
+    attachment_id: 12288
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-news-card-6.webp
+  news_img_7:
+    attachment_id: 12289
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-news-card-7.webp
+  news_img_8:
+    attachment_id: 12290
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-news-card-8.webp
+  news_img_9:
+    attachment_id: 12291
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-news-card-9.webp
+  news_img_10:
+    attachment_id: 12292
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-news-card-10.webp
+  news_img_11:
+    attachment_id: 12293
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-news-card-11.webp
+  news_img_12:
+    attachment_id: 12294
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-news-card-12.webp
+sections:
+- pattern: hero-dark-centered
+  tokens:
+    heading_1: Newsroom
+    heading_2: News from Goodfellow Microfabrication
+    body_1: <p>Awards, programmes, grants and features from over four decades of <strong>micro-manufacturing</strong> at Goodfellow Microfabrication.</p>
+- pattern: image-link-cards-12-button
+  tokens:
+    image_1:
+      asset: news_img_1
+    heading_1: November 8, 2015
+    heading_2: Potomac Photonics Honored with Baltimore County New Directions Award
+    body_1: <p>Potomac Photonics was selected as one of the 2015 Baltimore County New Directions Award recipients, recognising county companies at the leading edge of engineering and manufacturing.</p>
+    body_2: <p>Read the story</p>
+    url_1: https://www.potomac-laser.com/news/potomac-photonics-honored-with-baltimore-county-new-directions-award/
+    image_2:
+      asset: news_img_2
+    heading_3: July 27, 2015
+    heading_4: Potomac Photonics' Digital Fabrication Brings Iterative Design Process to Asthma Research at Anderson Cancer Center
+    body_3: <p>CAD-based laser micromachining gave a research team at the University of Texas MD Anderson Cancer Center a quick, economical way to test and change designs.</p>
+    body_4: <p>Read the story</p>
+    url_2: https://www.potomac-laser.com/news/potomac-photonics-digital-fabrication-brings-iterative-design-process-to-asthma-research-at-anderson-cancer-center/
+    image_3:
+      asset: news_img_3
+    heading_5: May 27, 2015
+    heading_6: Potomac's Rapid Prototyping of Custom Microfluidic Devices Featured in Commercial Micro Manufacturing Magazine
+    body_5: <p>The UK magazine featured Potomac's rapid prototyping programme for custom microfluidic devices, using micromilling, laser micromachining and hot embossing replication.</p>
+    body_6: <p>Read the story</p>
+    url_3: https://www.potomac-laser.com/news/potomacs-rapid-prototyping-of-custom-microfluidic-devices-featured-in-commercial-micro-manufacturing-magazine/
+    image_4:
+      asset: news_img_4
+    heading_7: April 22, 2015
+    heading_8: Potomac Photonics Invited to Demo at NASA Technology Day on Capitol Hill
+    body_7: <p>Following a number of collaborations with NASA, Potomac was invited to take part in the 2015 NASA Technology Day on the Hill.</p>
+    body_8: <p>Read the story</p>
+    url_4: https://www.potomac-laser.com/news/potomac-photonics-invited-to-demo-at-nasa-technology-day-on-the-hill/
+    image_5:
+      asset: news_img_5
+    heading_9: February 24, 2015
+    heading_10: Potomac Photonics Announces FAST TRACK Program to Fabricate Custom Microfluidic Devices
+    body_9: <p>FAST TRACK is a manufacturing process to quickly and economically build complete custom microfluidic devices from a CAD drawing.</p>
+    body_10: <p>Read the story</p>
+    url_5: https://www.potomac-laser.com/news/potomac-photonics-announces-fast-track-program-to-fabricate-custom-microfluidic-devices/
+    image_6:
+      asset: news_img_6
+    heading_11: January 15, 2015
+    heading_12: Excimer Laser Pioneer Adds UV Laser Micromachining Contract Service Capabilities
+    body_11: <p>Potomac added ultraviolet lasers from Coherent to its micromachining contract service facility at bwtech@UMBC.</p>
+    body_12: <p>Read the story</p>
+    url_6: https://www.potomac-laser.com/news/excimer-laser-pioneer-adds-uv-laser-micromachining-contract-service-capabilities/
+    image_7:
+      asset: news_img_7
+    heading_13: October 20, 2014
+    heading_14: Potomac Serves as Program Chair for Interactive DigiFabCon
+    body_13: <p>Potomac served as Program Chair for the annual Digital Fabrication Conference at the Maritime Conference Center in Baltimore.</p>
+    body_14: <p>Read the story</p>
+    url_7: https://www.potomac-laser.com/news/potomac-serves-program-chair-interactive-digifabcon/
+    image_8:
+      asset: news_img_8
+    heading_15: August 11, 2014
+    heading_16: Potomac Awarded $100,000 Maryland Industrial Partnership Grant to Increase Microfluidic Device Production
+    body_15: <p>In partnership with UMBC, Potomac was awarded a $100,000 MIPS grant to increase manufacturing capacity for hot embossed microfluidic devices.</p>
+    body_16: <p>Read the story</p>
+    url_8: https://www.potomac-laser.com/news/potomac-awarded-100000-maryland-industrial-partnership-grant-increase-microfluidic-device-production/
+    image_9:
+      asset: news_img_9
+    heading_17: July 29, 2014
+    heading_18: Digital Fabrication Service Provider Potomac Photonics Expands Website with 3D Printing Section
+    body_17: <p>A new section of the website added technical information, application guidance and equipment details for additive manufacturing.</p>
+    body_18: <p>Read the story</p>
+    url_9: https://www.potomac-laser.com/news/digital-fabrication-service-provider-potomac-photonics-expands-website-3d-printing-section/
+    image_10:
+      asset: news_img_10
+    heading_19: July 1, 2014
+    heading_20: Potomac Photonics Micro-3D Prints Map of UMBC 4,000x Smaller than the Campus
+    body_19: <p>Using a model generated by aerial robotic photography, Potomac 3D printed a map of the UMBC campus at 1/4,000 of full scale.</p>
+    body_20: <p>Read the story</p>
+    url_10: https://www.potomac-laser.com/news/potomac-photonics-micro-3d-prints-map-umbc-4000x-smaller-university-maryland-baltimore-county-campus/
+    image_11:
+      asset: news_img_11
+    heading_21: June 17, 2014
+    heading_22: Potomac Innovation in Micro Digital Fabrication Featured on Maryland Public Television
+    body_21: <p>Maryland Public Television featured Potomac's work in micro digital fabrication, which began with laser micromachining after the company's founding in 1982.</p>
+    body_22: <p>Read the story</p>
+    url_11: https://www.potomac-laser.com/news/potomac-featured-maryland-public-television/
+    image_12:
+      asset: news_img_12
+    heading_23: June 9, 2014
+    heading_24: Potomac 3D Systems Workshop to Feature How to Integrate 3D Printing onto the Factory Floor
+    body_23: <p>Potomac presented a workshop in the 3D Systems 3D Printing 2.0 series on integrating 3D printing into production.</p>
+    body_24: <p>Read the story</p>
+    url_12: https://www.potomac-laser.com/news/potomac-3d-systems-workshop-feature-integrate-3d-printing-onto-factory-floor/
+    button_1: Older news
+    url_13: https://www.potomac-laser.com/about/news/?query-1-page=2
+- pattern: cta-band-dark
+  tokens:
+    heading_1: Rapid response
+    heading_2: Talk to the team.
+    body_1: <p>Send a drawing or a short description of your project. Our engineers review every design and respond within one business day.</p>
+    button_1: Email us
+    url_1: https://www.potomac-laser.com/?page_id=12302&preview=true
+    button_2: Send a drawing
+    url_2: https://www.potomac-laser.com/project-quote/#projectForm

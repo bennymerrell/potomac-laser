@@ -1,0 +1,511 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;display=swap">
+<title>Contact · Goodfellow Microfabrication</title>
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+/* ─────────────────────────────────────────────────────────────
+   CONTACT, page-specific styles
+   Built on the shared Goodfellow Microfabrication tokens + styles.
+   ───────────────────────────────────────────────────────────── */
+
+/* Show hero content by default (shared stylesheet fades it in via an
+   animation that fails in print/offscreen capture, brand voice is
+   conservative, so we simply show it). */
+.hero__eyebrow.ha1,
+.hero__title.ha2,
+.hero__lede.ha3,
+.hero__cta-row.ha4 { opacity: 1; animation: none; transform: none; }
+
+.contact-hero .hero__inner { align-items: center; }
+
+/* Quick-contact card floating in the hero (right column) */
+.qc-card {
+  display: block;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--r-lg);
+  padding: 12px;
+  box-shadow: 0 22px 58px rgba(0,0,0,0.35);
+  backdrop-filter: blur(4px);
+}
+.qc-row {
+  display: flex; align-items: flex-start; gap: 16px;
+  padding: 18px 16px;
+  border-radius: var(--r-md);
+  text-decoration: none;
+  transition: background var(--dur-fast) var(--ease-out);
+}
+.qc-row + .qc-row { border-top: 1px solid rgba(255,255,255,0.09); }
+a.qc-row:hover { background: rgba(255,255,255,0.05); }
+.qc-ic {
+  flex-shrink: 0;
+  width: 42px; height: 42px;
+  display: grid; place-items: center;
+  border-radius: var(--r-md);
+  background: rgba(245,130,31,0.14);
+  color: var(--gf-blue);
+}
+.qc-ic svg { width: 20px; height: 20px; }
+.qc-label {
+  font-size: var(--fs-12); font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--gf-blue); margin: 0 0 5px;
+}
+.qc-val { font-size: var(--fs-16); font-weight: 600; color: #fff; line-height: 1.5; margin: 0; }
+.qc-sub { font-size: var(--fs-13); color: rgba(255,255,255,0.62); margin: 3px 0 0; }
+
+/* ── Contact body: form + aside ── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: start;
+}
+@media (min-width: 960px) {
+  .contact-grid { grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: 48px; }
+}
+
+.contact-card {
+  background: var(--bg-page);
+  border: 1px solid var(--border-1);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-2);
+  padding: 36px;
+}
+@media (max-width: 560px) { .contact-card { padding: 24px; } }
+.contact-card__kicker {
+  font-size: var(--fs-12); font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--gf-blue); margin: 0 0 10px;
+}
+.contact-card__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-28); font-weight: 600;
+  letter-spacing: -0.01em; color: var(--fg-1);
+  margin: 0 0 8px;
+}
+.contact-card__sub { font-size: var(--fs-15); color: var(--fg-3); line-height: 1.6; margin: 0 0 28px; }
+
+.form-status {
+  display: none;
+  align-items: center; gap: 10px;
+  background: #EFFAF3;
+  border: 1px solid rgba(34,197,94,0.25);
+  color: #15803D;
+  border-radius: var(--r-md);
+  padding: 14px 16px;
+  font-size: var(--fs-15); font-weight: 600;
+  margin-bottom: 22px;
+}
+.form-status.show { display: flex; }
+.form-status svg { width: 20px; height: 20px; flex-shrink: 0; }
+
+/* Aside: HQ details + map */
+.hq { position: sticky; top: 24px; display: flex; flex-direction: column; gap: 24px; }
+@media (max-width: 960px) { .hq { position: static; } }
+
+.hq-panel {
+  background: var(--bg-dark);
+  color: #fff;
+  border-radius: var(--r-lg);
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.hq-panel::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 26px 26px; opacity: 0.5; pointer-events: none;
+}
+.hq-panel > * { position: relative; z-index: 1; }
+.hq-panel__flag {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: var(--fs-12); font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--gf-blue); margin: 0 0 6px;
+}
+.hq-panel__flag .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--gf-blue); }
+.hq-panel__city {
+  font-family: var(--font-display);
+  font-size: var(--fs-24); font-weight: 600; color: #fff; margin: 0 0 20px;
+}
+.hq-line { display: flex; align-items: flex-start; gap: 13px; padding: 11px 0; }
+.hq-line + .hq-line { border-top: 1px solid rgba(255,255,255,0.1); }
+.hq-line svg { width: 18px; height: 18px; color: var(--gf-blue); flex-shrink: 0; margin-top: 2px; }
+.hq-line a, .hq-line span { color: rgba(255,255,255,0.86); font-size: var(--fs-15); line-height: 1.55; }
+.hq-line a:hover { color: #fff; }
+
+.map-frame {
+  border: 1px solid var(--border-1);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-1);
+  line-height: 0;
+}
+.map-frame iframe { width: 100%; height: 260px; border: 0; display: block; filter: grayscale(0.15); }
+
+/* ── Global offices grid ── */
+.offices {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+@media (min-width: 620px) { .offices { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 980px) { .offices { grid-template-columns: repeat(3, 1fr); } }
+.office {
+  background: var(--bg-page);
+  border: 1px solid var(--border-1);
+  border-radius: var(--r-md);
+  padding: 26px 24px;
+  position: relative;
+  transition: transform var(--dur-med) var(--ease-out), box-shadow var(--dur-med) var(--ease-out), border-color var(--dur-med) var(--ease-out);
+}
+.office:hover { transform: translateY(-3px); box-shadow: var(--shadow-2); border-color: var(--border-strong); }
+.office::after {
+  content: ''; position: absolute; left: 0; top: 24px; bottom: 24px;
+  width: 3px; border-radius: 0 3px 3px 0;
+  background: var(--gf-blue);
+  transform: scaleY(0); transform-origin: top;
+  transition: transform var(--dur-med) var(--ease-out);
+}
+.office:hover::after { transform: scaleY(1); }
+.office__city {
+  font-family: var(--font-display);
+  font-size: var(--fs-20); font-weight: 600; color: var(--fg-1);
+  margin: 0 0 14px; letter-spacing: -0.01em;
+}
+.office__row { display: flex; align-items: flex-start; gap: 11px; margin-top: 10px; }
+.office__row svg { width: 16px; height: 16px; color: var(--gf-blue); flex-shrink: 0; margin-top: 3px; }
+.office__row span, .office__row a { font-size: var(--fs-14); color: var(--fg-2); line-height: 1.55; }
+.office__row a:hover { color: var(--gf-blue); }
+
+/* Social row */
+.social-row { display: flex; align-items: center; gap: 12px; margin-top: 30px; flex-wrap: wrap; }
+.social-row__label { font-size: var(--fs-13); font-weight: 600; color: var(--fg-3); }
+.social-ic {
+  width: 40px; height: 40px; display: grid; place-items: center;
+  border: 1px solid var(--border-1); border-radius: 50%;
+  color: var(--fg-2); transition: all var(--dur-fast) var(--ease-out);
+}
+.social-ic:hover { color: #fff; background: var(--gf-blue); border-color: var(--gf-blue); transform: translateY(-2px); }
+.social-ic svg { width: 18px; height: 18px; }
+
+/* Newsletter band inside final CTA */
+.newsletter { max-width: 560px; margin: 34px auto 0; }
+.newsletter__form {
+  display: flex; gap: 10px; flex-wrap: wrap;
+}
+.newsletter__form input {
+  flex: 1 1 240px;
+  padding: 15px 18px;
+  border-radius: var(--r-pill);
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.06);
+  color: #fff; font-size: var(--fs-15);
+}
+.newsletter__form input::placeholder { color: rgba(255,255,255,0.5); }
+.newsletter__form input:focus { outline: none; border-color: var(--gf-blue); box-shadow: 0 0 0 3px rgba(245,130,31,0.2); }
+.newsletter__note { font-size: var(--fs-13); color: rgba(255,255,255,0.55); margin: 14px 0 0; }
+
+/* ── Hero layout: form relocated into hero ── */
+.contact-hero.form-in-hero .hero__visual { display: block !important; aspect-ratio: auto; background: none; border: 0; box-shadow: none; overflow: visible; }
+.contact-hero.form-in-hero .contact-card { box-shadow: 0 30px 70px rgba(0,0,0,0.4); }
+/* When form lives in hero, the get-in-touch section holds only HQ + map, side by side */
+#get-in-touch.hq-only .contact-grid { grid-template-columns: 1fr; }
+#get-in-touch.hq-only .hq { position: static; }
+@media (min-width: 760px) {
+  #get-in-touch.hq-only .hq { flex-direction: row; align-items: stretch; }
+  #get-in-touch.hq-only .hq-panel { flex: 1 1 0; }
+  #get-in-touch.hq-only .map-frame { flex: 1.3 1 0; }
+  #get-in-touch.hq-only .map-frame iframe { height: 100%; min-height: 260px; }
+}
+</style>
+<style id="contact-tweak-style">#newsletter{display:none !important;}@media(min-width:980px){.offices{grid-template-columns:repeat(2,1fr) !important;}}</style>
+<style>
+.twk-launch{position:fixed;right:16px;bottom:16px;z-index:2147483000;display:flex;align-items:center;gap:8px;
+  font:700 11px/1 Inter,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#fff;
+  background:#15253D;border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:11px 16px;cursor:pointer;
+  box-shadow:0 10px 28px rgba(15,42,68,.28)}
+.twk-launch:hover{background:#1D3557}
+.twk-launch i{width:7px;height:7px;border-radius:50%;background:#F5821F;display:block}
+.twk-panel{position:fixed;right:16px;bottom:16px;z-index:2147483001;width:288px;max-height:78vh;overflow:auto;
+  background:#fff;border:1px solid #E5E7EB;border-radius:14px;box-shadow:0 22px 58px rgba(15,42,68,.22);
+  font-family:Inter,system-ui,sans-serif;color:#15253D}
+.twk-head{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:14px 16px;
+  border-bottom:1px solid #E5E7EB;position:sticky;top:0;background:#fff;border-radius:14px 14px 0 0}
+.twk-head b{font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#F5821F}
+.twk-x{width:26px;height:26px;border-radius:50%;border:0;background:#F3F4F6;color:#6B7280;cursor:pointer;font-size:15px;line-height:1}
+.twk-x:hover{background:#E5E7EB}
+.twk-body{padding:6px 16px 16px}
+.twk-sec{font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#9AA3B2;margin:16px 0 8px}
+.twk-row{margin:10px 0}
+.twk-lab{display:flex;align-items:center;justify-content:space-between;font-size:12px;font-weight:600;color:#4B5563;margin-bottom:6px}
+.twk-lab span{font-weight:700;color:#15253D}
+.twk-seg{display:flex;gap:6px;flex-wrap:wrap}
+.twk-seg button{flex:1 1 auto;min-width:64px;padding:7px 10px;border-radius:999px;border:1px solid #E5E7EB;background:#fff;
+  font:700 11px/1.2 Inter,system-ui,sans-serif;color:#4B5563;cursor:pointer}
+.twk-seg button:hover{border-color:#F1B07A}
+.twk-seg button.on{background:#FEF0E3;border-color:#F5821F;color:#D96E10}
+.twk-sw{width:40px;height:22px;border-radius:999px;border:0;background:#D8DDE5;position:relative;cursor:pointer;flex:0 0 auto}
+.twk-sw::after{content:"";position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:#fff;transition:left .16s}
+.twk-sw.on{background:#F5821F}
+.twk-sw.on::after{left:21px}
+.twk-range{width:100%;accent-color:#F5821F}
+.twk-sel{width:100%;padding:8px 10px;border:1px solid #E5E7EB;border-radius:10px;font:600 12px Inter,system-ui,sans-serif;color:#15253D;background:#fff}
+.twk-reset{margin-top:16px;width:100%;padding:9px;border-radius:999px;border:1px solid #E5E7EB;background:#fff;
+  font:700 10px/1 Inter,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#6B7280;cursor:pointer}
+.twk-reset:hover{border-color:#15253D;color:#15253D}
+@media print{.twk-launch,.twk-panel{display:none !important}}</style></head>
+<body>
+
+<!-- ─────────────────────────────────────────────────────────
+     HERO
+     ───────────────────────────────────────────────────────── -->
+<section class="hero contact-hero form-in-hero" id="hero">
+  <div class="hero__bg"></div>
+  <div class="hero__inner">
+    <div>
+      <div class="hero__eyebrow ha1">Contact Us</div>
+      <h1 class="hero__title ha2">What can we<br>help with <span class="accent">today?</span></h1>
+      <p class="hero__lede ha3">
+        Ask our engineers about your project or request a rapid quotation. Share your requirements and <strong>we respond within one business day</strong>, with answers, feasibility, and a recommended process path. We've been doing this for over 40 years. Try us out.
+      </p>
+      <div class="hero__cta-row ha4">
+        <a href="Services - CNC Micromachining.html#quote" class="btn btn--cta btn--lg">Request a quote →</a>
+        <a href="tel:+14435435737" class="btn btn--ghost-light btn--lg">Call 443-543-5737</a>
+      </div>
+    </div>
+
+    <div class="hero__visual" style="display:block;background:none;border:0;box-shadow:none;overflow:visible;aspect-ratio:auto;">
+      <div class="qc-card" style="display: none;">
+        <a class="qc-row" href="https://maps.google.com/?q=1450+South+Rolling+Road+Baltimore+MD+21227" target="_blank" rel="noopener">
+          <span class="qc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>
+          <span>
+            <span class="qc-label">Visit us</span>
+            <p class="qc-val">1450 South Rolling Road<br>Baltimore, MD 21227, USA</p>
+          </span>
+        </a>
+        <a class="qc-row" href="tel:+14435435737">
+          <span class="qc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"></path></svg></span>
+          <span>
+            <span class="qc-label">Call us</span>
+            <p class="qc-val">443-543-5737</p>
+            <p class="qc-sub">Mon–Fri · Engineering team standing by</p>
+          </span>
+        </a>
+        <a class="qc-row" href="mailto:info@potomac-laser.com">
+          <span class="qc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m2 7 10 6 10-6"></path></svg></span>
+          <span>
+            <span class="qc-label">Write to us</span>
+            <p class="qc-val">info@potomac-laser.com</p>
+            <p class="qc-sub">Upload STEP, STL, or PDF, we review it for you</p>
+          </span>
+        </a>
+      </div>
+    <div class="contact-card reveal visible" id="formCard">
+        <p class="contact-card__kicker">Send a message</p>
+        <h2 class="contact-card__title">Tell us about your project</h2>
+        <p class="contact-card__sub">Fields marked <em style="color:var(--gf-magenta);font-style:normal">*</em> are required. Our engineers review every enquiry for manufacturability, no redesign required to start.</p>
+
+        <div class="form-status" id="formStatus">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+          Thanks, your message is on its way. Our team will respond within one business day.
+        </div>
+
+        <form class="quote-form" id="contactForm" novalidate="">
+          <div class="quote-form__grid">
+            <div class="field">
+              <label class="field__label" for="fname">First name <em>*</em></label>
+              <input type="text" id="fname" name="fname" placeholder="Jane" required="">
+            </div>
+            <div class="field">
+              <label class="field__label" for="lname">Last name <em>*</em></label>
+              <input type="text" id="lname" name="lname" placeholder="Doe" required="">
+            </div>
+          </div>
+          <div class="quote-form__grid">
+            <div class="field">
+              <label class="field__label" for="email">Email <em>*</em></label>
+              <input type="email" id="email" name="email" placeholder="jane@company.com" required="">
+            </div>
+            <div class="field">
+              <label class="field__label" for="phone">Phone <em>*</em></label>
+              <input type="text" id="phone" name="phone" placeholder="+1 555 000 0000" required="">
+            </div>
+          </div>
+          <div class="quote-form__grid">
+            <div class="field">
+              <label class="field__label" for="company">Company <em>*</em></label>
+              <input type="text" id="company" name="company" placeholder="Acme Devices" required="">
+            </div>
+            <div class="field">
+              <label class="field__label" for="website">Website</label>
+              <input type="text" id="website" name="website" placeholder="acme.com">
+            </div>
+          </div>
+          <div class="field">
+            <label class="field__label" for="message">Message <em>*</em></label>
+            <textarea id="message" name="message" placeholder="Tell us about your part, material, tolerances, feature sizes, quantities, and timeline." required=""></textarea>
+          </div>
+          <div class="quote-form__actions">
+            <button type="submit" class="btn btn--cta btn--lg">Send message →</button>
+            <span class="micro">No commitment · 24-hour response</span>
+          </div>
+        </form>
+      </div></div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────────
+     MESSAGE FORM + BALTIMORE HQ
+     ───────────────────────────────────────────────────────── -->
+<section class="section hq-only" id="get-in-touch">
+  <div class="container">
+    <div class="contact-grid" id="contactGrid">
+
+      <!-- Form -->
+      
+
+      <!-- Baltimore HQ + map -->
+      <aside class="hq reveal d1 visible" id="hqAside">
+        <div class="hq-panel">
+          <p class="hq-panel__flag"><span class="dot"></span>Headquarters</p>
+          <h3 class="hq-panel__city">Baltimore, MD</h3>
+          <div class="hq-line">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>1450 South Rolling Road<br>Baltimore, MD 21227, USA</span>
+          </div>
+          <div class="hq-line">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"></path></svg>
+            <a href="tel:+14435435737">443-543-5737</a>
+          </div>
+          <div class="hq-line">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m2 7 10 6 10-6"></path></svg>
+            <a href="mailto:info@potomac-laser.com">info@potomac-laser.com</a>
+          </div>
+        </div>
+
+        <div class="map-frame" id="mapFrame">
+          <iframe title="Goodfellow Microfabrication, Baltimore, MD" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2897.9445719291243!2d-76.71027930415296!3d39.23382146518388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c1d6f04a78df%3A0xd81fb800436acb43!2sPotomac%20Photonics%20Inc.!5e0!3m2!1sen!2sid!4v1689661906881!5m2!1sen!2sid" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen=""></iframe>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────────
+     GLOBAL OFFICES
+     ───────────────────────────────────────────────────────── -->
+<section class="section section--subtle" id="offices">
+  <div class="container">
+    <div class="section__head section__head--left">
+      <div class="eyebrow">Worldwide</div>
+      <h2 class="section__title">Our global offices</h2>
+      <p class="section__lede">Part of the Goodfellow Group, with materials, microfabrication and analytics support across the US, Europe and Asia.</p>
+    </div>
+
+    <div class="offices" id="officeGrid">
+      <div class="office reveal visible">
+        <h3 class="office__city">Cambridge</h3>
+        <div class="office__row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>Ermine Business Park, Huntingdon, Cambs, PE29 6WR, England</span></div>
+        <div class="office__row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"></path></svg><a href="tel:+441480424800">+44 (0) 1480 424800</a></div>
+      </div>
+
+      <div class="office reveal d1 visible">
+        <h3 class="office__city">Pittsburgh</h3>
+        <div class="office__row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>301 Grant Street, Suite 270, Pittsburgh, PA 15219, USA</span></div>
+        <div class="office__row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"></path></svg><a href="tel:+18008212870">+1-800-821-2870</a></div>
+      </div>
+
+      <div class="office reveal d2 visible">
+        <h3 class="office__city">Hamburg</h3>
+        <div class="office__row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>Alstertwiete 3, D-20099, Hamburg, Germany</span></div>
+        <div class="office__row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"></path></svg><a href="tel:+498001000579">+49 (0) 800 1000 579</a></div>
+      </div>
+
+      <div class="office reveal visible">
+        <h3 class="office__city">Lille</h3>
+        <div class="office__row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>229 rue Solférino, 59000, Lille, France</span></div>
+        <div class="office__row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"></path></svg><a href="tel:+33800917241">+33 (0) 800 91 72 41</a></div>
+      </div>
+
+      <div class="office reveal d1 visible">
+        <h3 class="office__city">Shanghai</h3>
+        <div class="office__row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>Room 803, No. 568 Hengfeng Road, Jing'an District, Shanghai, 200070, China</span></div>
+        <div class="office__row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"></path></svg><a href="tel:+862152997072">+86 (0) 21-5299 7072</a></div>
+      </div>
+
+      <div class="office reveal d2 visible" style="display:flex;flex-direction:column;justify-content:center;background:var(--bg-brand-soft);border-color:var(--gf-blue-300);">
+        <h3 class="office__city" style="margin-bottom:8px;">Can't find your region?</h3>
+        <p style="font-size:var(--fs-14);color:var(--fg-2);line-height:1.6;margin:0 0 16px;">The Goodfellow Group serves 111+ countries. Reach the Baltimore team and we'll route you.</p>
+        <a href="mailto:info@potomac-laser.com" class="btn btn--secondary" style="align-self:flex-start;">Email the team →</a>
+      </div>
+    </div>
+
+    <div class="social-row">
+      <span class="social-row__label">Follow us</span>
+      <a class="social-ic" href="https://www.instagram.com/potomacphotonic/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg></a>
+      <a class="social-ic" href="https://www.facebook.com/potomacphotonics" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z"></path></svg></a>
+      <a class="social-ic" href="https://www.linkedin.com/company/potomac-photonics/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+      <a class="social-ic" href="https://twitter.com/PotomacPhotonic" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4L4 20"></path></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────────
+     FINAL CTA + NEWSLETTER
+     ───────────────────────────────────────────────────────── -->
+
+
+<script>
+/* ── REVEAL ── */
+const revealEls = document.querySelectorAll('.reveal');
+const revealAll = () => revealEls.forEach(el => el.classList.add('visible'));
+if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  revealAll();
+} else {
+  const revealObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
+  }, {threshold:0.08, rootMargin:'0px 0px -20px 0px'});
+  revealEls.forEach(el => revealObs.observe(el));
+  window.addEventListener('load', () => setTimeout(() => {
+    if (![...revealEls].some(el => el.classList.contains('visible'))) revealAll();
+  }, 400));
+}
+
+/* ── CONTACT FORM (front-end only) ── */
+document.getElementById('contactForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  if (!this.checkValidity()) { this.reportValidity(); return; }
+  document.getElementById('formStatus').classList.add('show');
+  this.reset();
+  document.getElementById('formStatus').scrollIntoView ? null : null;
+});
+
+/* ── NEWSLETTER ── */
+document.getElementById('newsletterForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const note = document.getElementById('nlNote');
+  if (!this.checkValidity()) { this.reportValidity(); return; }
+  note.textContent = 'You\u2019re subscribed, welcome aboard.';
+  note.style.color = 'var(--gf-blue)';
+  this.reset();
+});
+</script>
+
+
+
+<button class="twk-launch"><i></i>Tweaks</button><div class="twk-panel" hidden=""><div class="twk-head"><b>Tweaks</b><button class="twk-x">×</button></div><div class="twk-body"><div class="twk-sec">Hero</div><div class="twk-row"><div class="twk-lab"><em style="font-style:normal">Hero layout</em></div><select class="twk-sel"><option value="Contact details">Contact details</option><option value="Contact form">Contact form</option></select></div><div class="twk-row"><div class="twk-lab" style="margin-bottom: 0px;"><em style="font-style:normal">Quick-contact card</em><button class="twk-sw"></button></div></div><div class="twk-sec">Contact</div><div class="twk-row"><div class="twk-lab" style="margin-bottom: 0px;"><em style="font-style:normal">Show map</em><button class="twk-sw on"></button></div></div><div class="twk-sec">Offices</div><div class="twk-row"><div class="twk-lab"><em style="font-style:normal">Columns</em></div><select class="twk-sel"><option value="Auto">Auto</option><option value="2">2</option><option value="3">3</option></select></div><div class="twk-sec">Footer band</div><div class="twk-row"><div class="twk-lab" style="margin-bottom: 0px;"><em style="font-style:normal">Newsletter</em><button class="twk-sw"></button></div></div><button class="twk-reset">Reset to defaults</button></div></div>
+
+
+
+</body></html>

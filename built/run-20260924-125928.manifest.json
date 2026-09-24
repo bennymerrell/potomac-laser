@@ -1,0 +1,1269 @@
+{
+ "run_id": "20260924-125928",
+ "started_utc": "2026-09-24T12:59:28Z",
+ "mode": "autonomous coordinator run (AUTOMATION.md), RUN A re-entry of partial zip (8 failed pages)",
+ "target": "potomac-laser.com (LIVE) via novamira-potomac-laser-co, PRODUCTION MODE",
+ "zip": {
+  "filename": "Potomac Laser.zip",
+  "sha256": "fab7225ce0879014418672228148420215c3a39fa6463bea2012d2ce7b798db9",
+  "source": "origin/project-zip e1320ef",
+  "manifest": "manifests/potomac-laser.txt",
+  "manifest_hash_matched": true,
+  "pattern_cap": 20
+ },
+ "recovery_floor": {
+  "gate": "SKILL.md \u00a70 \u2014 verified, not taken",
+  "updraft_set_timestamp": 1790244496,
+  "updraft_set_utc": "2026-09-24T10:08:16Z",
+  "age_at_gate_hours": 2.85,
+  "backup_nonce": "ec283efbb074",
+  "updraft_last_backup_success": 1,
+  "updraft_last_backup_errors": []
+ },
+ "posts_created": [
+  {
+   "post_id": 12295,
+   "post_type": "page",
+   "post_status": "draft",
+   "slug": "pl-auto-case-studies",
+   "title": "Case Studies",
+   "design_page": "About - Case Studies.html",
+   "preview_url": "https://www.potomac-laser.com/?page_id=12295&preview=true",
+   "provenance_meta": {
+    "_pl_auto_page": "About - Case Studies.html",
+    "_pl_auto_zip": "fab7225ce0879014418672228148420215c3a39fa6463bea2012d2ce7b798db9",
+    "_pl_auto_run": "20260924-125928"
+   },
+   "page_template": "default (Code Snippet #10 full-bleed via _pl_auto_page)"
+  },
+  {
+   "post_id": 12296,
+   "post_type": "page",
+   "post_status": "draft",
+   "slug": "pl-auto-news",
+   "title": "News",
+   "design_page": "About - News.html",
+   "preview_url": "https://www.potomac-laser.com/?page_id=12296&preview=true",
+   "provenance_meta": {
+    "_pl_auto_page": "About - News.html",
+    "_pl_auto_zip": "fab7225ce0879014418672228148420215c3a39fa6463bea2012d2ce7b798db9",
+    "_pl_auto_run": "20260924-125928"
+   },
+   "page_template": "default (Code Snippet #10 full-bleed via _pl_auto_page)"
+  },
+  {
+   "post_id": 12298,
+   "post_type": "page",
+   "post_status": "draft",
+   "slug": "pl-auto-employment",
+   "title": "Employment",
+   "design_page": "About - Employment.html",
+   "preview_url": "https://www.potomac-laser.com/?page_id=12298&preview=true",
+   "provenance_meta": {
+    "_pl_auto_page": "About - Employment.html",
+    "_pl_auto_zip": "fab7225ce0879014418672228148420215c3a39fa6463bea2012d2ce7b798db9",
+    "_pl_auto_run": "20260924-125928"
+   },
+   "page_template": "default"
+  },
+  {
+   "post_id": 12300,
+   "post_type": "page",
+   "post_status": "draft",
+   "slug": "pl-auto-faqs",
+   "title": "FAQs",
+   "design_page": "About - FAQs.html",
+   "preview_url": "https://www.potomac-laser.com/?page_id=12300&preview=true",
+   "provenance_meta": {
+    "_pl_auto_page": "About - FAQs.html",
+    "_pl_auto_zip": "fab7225ce0879014418672228148420215c3a39fa6463bea2012d2ce7b798db9",
+    "_pl_auto_run": "20260924-125928"
+   },
+   "page_template": "default"
+  },
+  {
+   "post_id": 12301,
+   "post_type": "page",
+   "post_status": "draft",
+   "slug": "pl-auto-quality-policy",
+   "title": "Quality Policy",
+   "design_page": "About - Quality Policy.html",
+   "preview_url": "https://www.potomac-laser.com/?page_id=12301&preview=true",
+   "provenance_meta": {
+    "_pl_auto_page": "About - Quality Policy.html",
+    "_pl_auto_zip": "fab7225ce0879014418672228148420215c3a39fa6463bea2012d2ce7b798db9",
+    "_pl_auto_run": "20260924-125928"
+   },
+   "page_template": "default"
+  },
+  {
+   "post_id": 12302,
+   "post_type": "page",
+   "post_status": "draft",
+   "slug": "pl-auto-contact",
+   "title": "Contact",
+   "design_page": "Contact - Contact.html",
+   "preview_url": "https://www.potomac-laser.com/?page_id=12302&preview=true",
+   "provenance_meta": {
+    "_pl_auto_page": "Contact - Contact.html",
+    "_pl_auto_zip": "fab7225ce0879014418672228148420215c3a39fa6463bea2012d2ce7b798db9",
+    "_pl_auto_run": "20260924-125928"
+   },
+   "page_template": "default"
+  },
+  {
+   "post_id": 12357,
+   "post_type": "page",
+   "post_status": "draft",
+   "slug": "pl-auto-project-gallery",
+   "title": "Project Gallery",
+   "design_page": "Gallery - Project Gallery.html",
+   "preview_url": "https://www.potomac-laser.com/?page_id=12357&preview=true",
+   "provenance_meta": {
+    "_pl_auto_page": "Gallery - Project Gallery.html",
+    "_pl_auto_zip": "fab7225ce0879014418672228148420215c3a39fa6463bea2012d2ce7b798db9",
+    "_pl_auto_run": "20260924-125928"
+   },
+   "page_template": "default"
+  },
+  {
+   "post_id": 12371,
+   "post_type": "page",
+   "post_status": "draft",
+   "slug": "pl-auto-services-and-applications",
+   "title": "Services & Applications",
+   "design_page": "Services - Services & Applications.html",
+   "preview_url": "https://www.potomac-laser.com/?page_id=12371&preview=true",
+   "provenance_meta": {
+    "_pl_auto_page": "Services - Services & Applications.html",
+    "_pl_auto_zip": "fab7225ce0879014418672228148420215c3a39fa6463bea2012d2ce7b798db9",
+    "_pl_auto_run": "20260924-125928"
+   },
+   "page_template": "default"
+  }
+ ],
+ "attachments_created": [
+  {
+   "attachment_id": 12278,
+   "file": "2026/09/pl-auto-cs-card-1.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-cs-card-1.webp",
+   "sha256": "e48aa5123d4e8a10223eb89159ccc1257b7bed62690d65e264ea914eb01da75d",
+   "source": "uploads/2021/07/Figure2.webp",
+   "role": "link card image",
+   "page": "About - Case Studies.html"
+  },
+  {
+   "attachment_id": 12279,
+   "file": "2026/09/pl-auto-cs-card-2.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-cs-card-2.webp",
+   "sha256": "dc8ad2cecc3d585519cdabefc44f7e69e0e5984e7cb0fe134bda93d3fef08c10",
+   "source": "uploads/2013/04/case_1.webp",
+   "role": "link card image",
+   "page": "About - Case Studies.html"
+  },
+  {
+   "attachment_id": 12280,
+   "file": "2026/09/pl-auto-cs-card-3.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-cs-card-3.webp",
+   "sha256": "74962bbe3a41503c3bae8e496fb25f87de80bf80afa08bbee65570495a42710a",
+   "source": "uploads/2011/01/strain-gauge.webp",
+   "role": "link card image",
+   "page": "About - Case Studies.html"
+  },
+  {
+   "attachment_id": 12281,
+   "file": "2026/09/pl-auto-cs-card-4.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-cs-card-4.webp",
+   "sha256": "05663b77b789f88d488a84d3c0014473da5884a7adfb5b8a55d47ba7c2264d87",
+   "source": "uploads/2011/01/complex_design.webp",
+   "role": "link card image",
+   "page": "About - Case Studies.html"
+  },
+  {
+   "attachment_id": 12282,
+   "file": "2026/09/pl-auto-cs-card-5.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-cs-card-5.webp",
+   "sha256": "baeb1bd833161d1179abf07169abce04541f4e151850aace1fecaab1211a13ac",
+   "source": "uploads/2011/11/Micro-Holes-10X.webp",
+   "role": "link card image",
+   "page": "About - Case Studies.html"
+  },
+  {
+   "attachment_id": 12283,
+   "file": "2026/09/pl-auto-news-card-1.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-news-card-1.webp",
+   "sha256": "ada1248b4423b4ae76326e8250e99bd253482b7278e5eab94a209443165577a8",
+   "source": "uploads/2015/02/MicroFL1-e14241124932731.webp",
+   "role": "link card image",
+   "page": "About - News.html"
+  },
+  {
+   "attachment_id": 12284,
+   "file": "2026/09/pl-auto-news-card-2.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-news-card-2.webp",
+   "sha256": "4d42418705c7871a919ef707913d30c78676086e3a6b31142c4763ab6097fdd3",
+   "source": "uploads/2015/05/Laptop-Containing-Patient-Data-Stolen-from-Texas-Cancer-Center-Physician-s-Home-2.webp",
+   "role": "link card image",
+   "page": "About - News.html"
+  },
+  {
+   "attachment_id": 12285,
+   "file": "2026/09/pl-auto-news-card-3.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-news-card-3.webp",
+   "sha256": "43e816d6f473dc6d7b31a5e0bf77b9c9a96181a5a50bd2b6285e6a463ab75b75",
+   "source": "uploads/2015/05/cmm-mag-logo.webp",
+   "role": "link card image",
+   "page": "About - News.html"
+  },
+  {
+   "attachment_id": 12286,
+   "file": "2026/09/pl-auto-news-card-4.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-news-card-4.webp",
+   "sha256": "3f3d0690878d111f0f2d5cbb43c63de1b7b261dcec9cee51d883e1d9ebe32bf7",
+   "source": "uploads/2015/02/NASA_logo_300dpi.webp",
+   "role": "link card image",
+   "page": "About - News.html"
+  },
+  {
+   "attachment_id": 12287,
+   "file": "2026/09/pl-auto-news-card-5.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-news-card-5.webp",
+   "sha256": "8274263cb2acd6ced5fd39bab1608cdfd66181c4f65439387c813af383ec3c09",
+   "source": "uploads/2015/02/MicroFL_2.webp",
+   "role": "link card image",
+   "page": "About - News.html"
+  },
+  {
+   "attachment_id": 12288,
+   "file": "2026/09/pl-auto-news-card-6.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-news-card-6.webp",
+   "sha256": "97288d49135f20fcad1136c154e61811b71ab1582db8f810b1711267ef61607e",
+   "source": "uploads/2011/01/Stent-011206-C.webp",
+   "role": "link card image",
+   "page": "About - News.html"
+  },
+  {
+   "attachment_id": 12289,
+   "file": "2026/09/pl-auto-news-card-7.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-news-card-7.webp",
+   "sha256": "e7ab43dfce1c705c4cc0a1752041d9ae5aa880d5ff5ee058a378ac027e0d3db3",
+   "source": "uploads/2014/10/DigiFabLogo-Large.webp",
+   "role": "link card image",
+   "page": "About - News.html"
+  },
+  {
+   "attachment_id": 12290,
+   "file": "2026/09/pl-auto-news-card-8.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-news-card-8.webp",
+   "sha256": "0abf6227a5ea7be7ce40c9db02934ac7b5f02fb094b69105133d07cc2ab75e0b",
+   "source": "uploads/2014/08/MFLU_Dpth-1.webp",
+   "role": "link card image",
+   "page": "About - News.html"
+  },
+  {
+   "attachment_id": 12291,
+   "file": "2026/09/pl-auto-news-card-9.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-news-card-9.webp",
+   "sha256": "8ed984fd48ebdc0ac4aeceb5cfdbd46d5155da2658603a15ea6805f500357406",
+   "source": "uploads/2014/06/Swan_Lake2RES-scaled-1224x808.webp",
+   "role": "link card image",
+   "page": "About - News.html"
+  },
+  {
+   "attachment_id": 12292,
+   "file": "2026/09/pl-auto-news-card-10.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-news-card-10.webp",
+   "sha256": "89b52652c768e30518dc19d1780e23661349f0278e6e88816ae36de74b4b37e4",
+   "source": "uploads/2014/07/UMBC.webp",
+   "role": "link card image",
+   "page": "About - News.html"
+  },
+  {
+   "attachment_id": 12293,
+   "file": "2026/09/pl-auto-news-card-11.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-news-card-11.webp",
+   "sha256": "23e0ad66755f5a962ef4807533d7c3a940e6bbdd7aa42cdc770834667c6f72c2",
+   "source": "uploads/2014/06/Screen-Shot-2014-06-17-at-12.47.51-PM.webp",
+   "role": "link card image",
+   "page": "About - News.html"
+  },
+  {
+   "attachment_id": 12294,
+   "file": "2026/09/pl-auto-news-card-12.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-news-card-12.webp",
+   "sha256": "9dd80fa45b903e62d93748a6965d67b6c1c0803265a886e1abfa1c23f848db7c",
+   "source": "uploads/2014/03/Potomac_Henry-copy.webp",
+   "role": "link card image",
+   "page": "About - News.html"
+  },
+  {
+   "attachment_id": 12297,
+   "file": "2026/09/pl-auto-emp-benefits.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-emp-benefits.webp",
+   "sha256": "5767c8e48e6e6956fb4841c16e1bac167fbf6489f260c79c67222305256c7ed1",
+   "source": "uploads/2024/05/TS_KAP-1024x683.webp",
+   "role": "split media",
+   "page": "About - Employment.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12299,
+   "file": "2026/09/pl-auto-qp-iso-certificate.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-qp-iso-certificate.webp",
+   "sha256": "3f6034bc9f1d1d4d0d680726897d23a3e707d9fe53d8d88f8c91b5a904b029b7",
+   "source": "uploads/2025/03/ISO-Certificate-thru-June-11th-2026-2-1.webp",
+   "role": "certificate figure",
+   "page": "About - Quality Policy.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12303,
+   "file": "2026/09/pl-auto-gal-01.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-01.webp",
+   "sha256_prefix": "8f1211bb9112bd6b",
+   "source": "uploads/2024/11/Metal-foil.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12304,
+   "file": "2026/09/pl-auto-gal-02.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-02.webp",
+   "sha256_prefix": "1bc1ac5e917feb7e",
+   "source": "uploads/2024/11/AdhesiveLayer_TSorterberg_030124-768x507.png.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12305,
+   "file": "2026/09/pl-auto-gal-03.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-03.webp",
+   "sha256_prefix": "5e84971c4f708cef",
+   "source": "uploads/2024/05/ss_.008_20umholes_70umspace_EricM_1-1224x838.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12306,
+   "file": "2026/09/pl-auto-gal-04.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-04.webp",
+   "sha256_prefix": "a668dc4af18d9072",
+   "source": "uploads/2022/06/copperEXII_PShende022522-1224x871.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12307,
+   "file": "2026/09/pl-auto-gal-05.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-05.webp",
+   "sha256_prefix": "ec7a99b4c71efb55",
+   "source": "uploads/2022/06/LsrEtchEX_MGreco_060122-1224x838.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12308,
+   "file": "2026/09/pl-auto-gal-06.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-06.webp",
+   "sha256_prefix": "fd26bb5c6ab1be8d",
+   "source": "uploads/2022/02/rings.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12309,
+   "file": "2026/09/pl-auto-gal-07.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-07.webp",
+   "sha256_prefix": "beae1db131e7d38a",
+   "source": "uploads/2022/01/IMG_2880.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12310,
+   "file": "2026/09/pl-auto-gal-08.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-08.webp",
+   "sha256_prefix": "0a4d1b843ec2c5e6",
+   "source": "uploads/2021/02/2B7382D0-FC1B-4D95-BF31-B3848787D219-2.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12311,
+   "file": "2026/09/pl-auto-gal-09.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-09.webp",
+   "sha256_prefix": "fecfd42c9c2b2639",
+   "source": "uploads/2021/10/lsrdrillEXP_25um_100umsst_PShende_101221-1-1224x851.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12312,
+   "file": "2026/09/pl-auto-gal-10.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-10.webp",
+   "sha256_prefix": "7c7e76839c1a5a67",
+   "source": "uploads/2021/10/lsrcut0.010sstEX_PShende_101121-1224x805.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12313,
+   "file": "2026/09/pl-auto-gal-11.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-11.webp",
+   "sha256_prefix": "70ed0557a7e800f3",
+   "source": "uploads/2021/09/Photo.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12314,
+   "file": "2026/09/pl-auto-gal-12.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-12.webp",
+   "sha256_prefix": "0bb42cefce5acae1",
+   "source": "uploads/2021/09/m011.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12315,
+   "file": "2026/09/pl-auto-gal-13.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-13.webp",
+   "sha256_prefix": "89432509f5a5ab61",
+   "source": "uploads/2021/09/JMiller_090221-1224x855.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12316,
+   "file": "2026/09/pl-auto-gal-14.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-14.webp",
+   "sha256_prefix": "1b31e2b09a526ae3",
+   "source": "uploads/2021/08/Kapton_083121.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12317,
+   "file": "2026/09/pl-auto-gal-15.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-15.webp",
+   "sha256_prefix": "f35dda154f55597a",
+   "source": "uploads/2021/06/MFluidicsEx_AAndar_051721_1-1224x838.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12318,
+   "file": "2026/09/pl-auto-gal-16.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-16.webp",
+   "sha256_prefix": "1fc3042e2e363540",
+   "source": "uploads/2021/05/KaptononSlideexp_051221-1224x819.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12319,
+   "file": "2026/09/pl-auto-gal-17.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-17.webp",
+   "sha256_prefix": "4a0905d6b48da967",
+   "source": "uploads/2021/04/SSTtubingEX_041521-1224x819.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12320,
+   "file": "2026/09/pl-auto-gal-18.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-18.webp",
+   "sha256_prefix": "d456017723a1555c",
+   "source": "uploads/2020/10/glass-coverslips.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12321,
+   "file": "2026/09/pl-auto-gal-19.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-19.webp",
+   "sha256_prefix": "1a57417c02137290",
+   "source": "uploads/2020/10/silicon-mold.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12322,
+   "file": "2026/09/pl-auto-gal-20.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-20.webp",
+   "sha256_prefix": "d5ca430d7e2b3bd5",
+   "source": "uploads/2020/08/Mask-1224x853.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12323,
+   "file": "2026/09/pl-auto-gal-21.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-21.webp",
+   "sha256_prefix": "1edbd02db5e3b4bb",
+   "source": "uploads/2020/04/JMiller2_043020_1-1224x831.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12324,
+   "file": "2026/09/pl-auto-gal-22.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-22.webp",
+   "sha256_prefix": "f552f2acebe985b3",
+   "source": "uploads/2020/03/Holesin-metal-1.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12325,
+   "file": "2026/09/pl-auto-gal-23.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-23.webp",
+   "sha256_prefix": "97ad63841b5c8c1c",
+   "source": "uploads/2018/05/Ceramic.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12326,
+   "file": "2026/09/pl-auto-gal-24.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-24.webp",
+   "sha256_prefix": "765f3a624828e638",
+   "source": "uploads/2018/04/Backlighting.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12327,
+   "file": "2026/09/pl-auto-gal-25.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-25.webp",
+   "sha256_prefix": "409ef2b405ce00cb",
+   "source": "uploads/2018/02/SiliconWafer.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12328,
+   "file": "2026/09/pl-auto-gal-26.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-26.webp",
+   "sha256_prefix": "e827cb8c69c8b3af",
+   "source": "uploads/2018/02/Welded-Chip.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12329,
+   "file": "2026/09/pl-auto-gal-27.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-27.webp",
+   "sha256_prefix": "64afe8a9e560c271",
+   "source": "uploads/2018/01/PP_SIL_WAFER_2.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12330,
+   "file": "2026/09/pl-auto-gal-28.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-28.webp",
+   "sha256_prefix": "1a810f80d4815160",
+   "source": "uploads/2017/09/Microfluidic9.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12331,
+   "file": "2026/09/pl-auto-gal-29.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-29.webp",
+   "sha256_prefix": "50a36db395d97d98",
+   "source": "uploads/2017/08/PolymerTube.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12332,
+   "file": "2026/09/pl-auto-gal-30.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-30.webp",
+   "sha256_prefix": "3304aec4e453ec26",
+   "source": "uploads/2017/05/ZacII.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12333,
+   "file": "2026/09/pl-auto-gal-31.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-31.webp",
+   "sha256_prefix": "ef888c04fc72e382",
+   "source": "uploads/2013/03/Diamond-Gear.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12334,
+   "file": "2026/09/pl-auto-gal-32.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-32.webp",
+   "sha256_prefix": "e6b563fa45a8ed2d",
+   "source": "uploads/2013/03/scan0001-719x1024.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12335,
+   "file": "2026/09/pl-auto-gal-33.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-33.webp",
+   "sha256_prefix": "ad4c699b0d0149d1",
+   "source": "uploads/2013/03/Probe-Card-in-10mil-thick-Silicon-Nitride-with-90um-microholes-sm.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12336,
+   "file": "2026/09/pl-auto-gal-34.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-34.webp",
+   "sha256_prefix": "0d98cf3fcc30e103",
+   "source": "uploads/2013/03/PnP31.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12337,
+   "file": "2026/09/pl-auto-gal-35.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-35.webp",
+   "sha256_prefix": "2bfe3223c24392a1",
+   "source": "uploads/2013/03/Assembly-min.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12338,
+   "file": "2026/09/pl-auto-gal-36.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-36.webp",
+   "sha256_prefix": "748c46faee9afa4e",
+   "source": "uploads/2013/03/Amkor-via.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12339,
+   "file": "2026/09/pl-auto-gal-37.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-37.webp",
+   "sha256_prefix": "f3152d867dcb6e06",
+   "source": "uploads/2013/03/QRD-1024x819.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12340,
+   "file": "2026/09/pl-auto-gal-38.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-38.webp",
+   "sha256_prefix": "7c41ab6e0c154a65",
+   "source": "uploads/2013/04/Stainless-Steel-gears-on-back-of-penny-sm.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12341,
+   "file": "2026/09/pl-auto-gal-39.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-39.webp",
+   "sha256_prefix": "56ad5fbea33acba4",
+   "source": "uploads/2014/01/20-Micron-Hole-in-Tantalum.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12342,
+   "file": "2026/09/pl-auto-gal-40.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-40.webp",
+   "sha256_prefix": "7ad50c913ec421b9",
+   "source": "uploads/2013/04/Stout-Stent-5X-post-Electropolish-a.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12343,
+   "file": "2026/09/pl-auto-gal-41.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-41.webp",
+   "sha256_prefix": "850331157939c5cf",
+   "source": "uploads/2018/03/Teflon2.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12344,
+   "file": "2026/09/pl-auto-gal-42.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-42.webp",
+   "sha256_prefix": "38e8c09d6733a066",
+   "source": "uploads/2013/09/Micro-Channels-in-Polystyrene.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12345,
+   "file": "2026/09/pl-auto-gal-43.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-43.webp",
+   "sha256_prefix": "da08272a910edb57",
+   "source": "uploads/2018/02/PDMS-Mold.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12346,
+   "file": "2026/09/pl-auto-gal-44.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-44.webp",
+   "sha256_prefix": "4dc4c0802e5a2cb6",
+   "source": "uploads/2013/03/Nitinol-Washers-on-US-penny-35x-1024x819.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12347,
+   "file": "2026/09/pl-auto-gal-45.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-45.webp",
+   "sha256_prefix": "7b8a877d19747e79",
+   "source": "uploads/2013/03/2d-barcode-at-20x-on-glass1.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12348,
+   "file": "2026/09/pl-auto-gal-46.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-46.webp",
+   "sha256_prefix": "2ed42e2edd1cc98e",
+   "source": "uploads/2014/01/Catheter-1224x957.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12349,
+   "file": "2026/09/pl-auto-gal-47.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-47.webp",
+   "sha256_prefix": "1dc8fe5ad4602161",
+   "source": "uploads/2013/03/Patterning.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12350,
+   "file": "2026/09/pl-auto-gal-48.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-48.webp",
+   "sha256_prefix": "cf76096cb70762f4",
+   "source": "uploads/2014/04/TantalumMask-PL-cropped-1224x905.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12351,
+   "file": "2026/09/pl-auto-gal-49.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-49.webp",
+   "sha256_prefix": "a3787b54dc4272e8",
+   "source": "uploads/2013/03/GlassHoles1.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12352,
+   "file": "2026/09/pl-auto-gal-50.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-50.webp",
+   "sha256_prefix": "ae11369d0793f9f0",
+   "source": "uploads/2015/02/Ophthalmic-Device.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12353,
+   "file": "2026/09/pl-auto-gal-51.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-51.webp",
+   "sha256_prefix": "c95e8a5a88eec1a5",
+   "source": "uploads/2014/09/Ear_pc.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12354,
+   "file": "2026/09/pl-auto-gal-52.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-52.webp",
+   "sha256_prefix": "90286fc198911be5",
+   "source": "uploads/2013/04/KaptonHoles.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12355,
+   "file": "2026/09/pl-auto-gal-53.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-53.webp",
+   "sha256_prefix": "9cf1ba6643ad5cb9",
+   "source": "uploads/2013/03/Conductive-Lines-1024x819.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12356,
+   "file": "2026/09/pl-auto-gal-54.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-54.webp",
+   "sha256_prefix": "6260db551bfb6b97",
+   "source": "uploads/2013/03/Selective-removal-of-metal-material.webp",
+   "role": "gallery card",
+   "page": "Gallery - Project Gallery.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12358,
+   "file": "2026/09/pl-auto-sa-service-1.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-sa-service-1.webp",
+   "sha256": "e9ec624aacf6d24b87f8d61cd3f9a418e8d5d86c3c33ab495bfbf2a989e570a2",
+   "source": "uploads/2013/04/3D-Parts-1024x819-400x320.webp",
+   "role": "sa_svc_1",
+   "page": "Services - Services & Applications.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12359,
+   "file": "2026/09/pl-auto-sa-service-2.jpeg",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-sa-service-2.jpeg",
+   "sha256": "c1039036154d465d6897abb3904fa0431d760b22fb3349bc3d01fb534bec04e2",
+   "source": "uploads/2026/02/cnc_aerospace_comp-400x218.jpeg",
+   "role": "sa_svc_2",
+   "page": "Services - Services & Applications.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12360,
+   "file": "2026/09/pl-auto-sa-service-3.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-sa-service-3.webp",
+   "sha256": "b24d0d8d8b8aff39d854d67e95a71ae26fd4cefe19f4654a590ecb075af29f6e",
+   "source": "uploads/2015/07/FILTER_01-350x230.jpg.webp",
+   "role": "sa_svc_3",
+   "page": "Services - Services & Applications.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12361,
+   "file": "2026/09/pl-auto-sa-service-4.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-sa-service-4.webp",
+   "sha256": "25e729bb1c142ec63f86d208b28868de2f8cdd9e2edf84ee94177199ede0a380",
+   "source": "uploads/2014/12/shift-400x264.webp",
+   "role": "sa_svc_4",
+   "page": "Services - Services & Applications.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12362,
+   "file": "2026/09/pl-auto-sa-service-5.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-sa-service-5.webp",
+   "sha256": "edade0d0cbe53391dbd17104529be440c8cd062ddc3e03c1ee36a235acdcfac1",
+   "source": "uploads/2014/07/PMidLit-400x261.webp",
+   "role": "sa_svc_5",
+   "page": "Services - Services & Applications.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12363,
+   "file": "2026/09/pl-auto-sa-app-1.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-sa-app-1.webp",
+   "sha256": "a426d6f172a9037177335b366437b7e88721b9b3d991ec17f7f1cd59dc76accd",
+   "source": "uploads/2016/04/MFluidic_sphere_cs-400x268.webp",
+   "role": "sa_app_1",
+   "page": "Services - Services & Applications.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12364,
+   "file": "2026/09/pl-auto-sa-app-2.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-sa-app-2.webp",
+   "sha256": "0941a871a0aa17cabeecb4d9684762e181c44e6ce32ae5387f7887302c12762d",
+   "source": "uploads/2013/03/Leak-Test-Vials-400x266.webp",
+   "role": "sa_app_2",
+   "page": "Services - Services & Applications.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12365,
+   "file": "2026/09/pl-auto-sa-app-3.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-sa-app-3.webp",
+   "sha256": "95d4f686e8986da7b0598657b6c31e98548609c2ee7400965c26e3a7ad4cbf73",
+   "source": "uploads/2015/02/MH_Lit2-400x275.webp",
+   "role": "sa_app_3",
+   "page": "Services - Services & Applications.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12366,
+   "file": "2026/09/pl-auto-sa-app-4.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-sa-app-4.webp",
+   "sha256": "05de58c59cca82f0582f4e7b1744d8d374e6cec59a48a0974ffd4f0deb1f907f",
+   "source": "uploads/2011/02/pl-metal1.webp",
+   "role": "sa_app_4",
+   "page": "Services - Services & Applications.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12367,
+   "file": "2026/09/pl-auto-sa-app-5.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-sa-app-5.webp",
+   "sha256": "b16bc31512b9996b304f17517d694b7e5c54f886ee6f1a894f3ac6a9e6668679",
+   "source": "uploads/2011/02/PL-Probe-Card.webp",
+   "role": "sa_app_5",
+   "page": "Services - Services & Applications.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12368,
+   "file": "2026/09/pl-auto-sa-app-6.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-sa-app-6.webp",
+   "sha256": "0c51d259bbafcbcc899961b32a8e897ad23fd25407aa6ad6c669a39f3a6a0c25",
+   "source": "uploads/2010/12/scan0003-400x589.webp",
+   "role": "sa_app_6",
+   "page": "Services - Services & Applications.html",
+   "alt_set": true
+  },
+  {
+   "attachment_id": 12369,
+   "file": "2026/09/pl-auto-sa-feature-1.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-sa-feature-1.webp",
+   "sha256": "799f5c0443d7283f52883699dfa9b93642ccc709d15157939b835087db7e52da",
+   "source": "uploads/2022/08/las.webp",
+   "role": "sa_feat_1",
+   "page": "Services - Services & Applications.html",
+   "alt_set": false
+  },
+  {
+   "attachment_id": 12370,
+   "file": "2026/09/pl-auto-sa-feature-2.webp",
+   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-sa-feature-2.webp",
+   "sha256": "f3dbff6da2e9157e050ae5860d6ef8cdb8cd27864b6ef778119058f768c56139",
+   "source": "uploads/2022/08/mur.webp",
+   "role": "sa_feat_2",
+   "page": "Services - Services & Applications.html",
+   "alt_set": false
+  }
+ ],
+ "files_uploaded": [
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/pl-auto-case-studies.v1.elementor.json",
+   "bytes": 31630,
+   "sha256": "31810b46e084820d66852479111b7fd12145af1d3cb1121d411932f659ff2c25",
+   "role": "staged _elementor_data"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/pl-auto-news.v1.elementor.json",
+   "bytes": 64728,
+   "sha256": "24c8e8323c63c479944e531d6192e97a3b9e04e6b582319ae80c2b21dc6cccaf",
+   "role": "staged _elementor_data"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/bundle-cs-news-v2.json",
+   "bytes": 108611,
+   "sha256": "dcadcd94027f748be3ac6ac99e07e7a4c74275191c5e15f844283ac843d82501",
+   "role": "bundle: case-studies v2 (029f84eb\u2026), news v2 (9b49edce\u2026)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/hero-dark-centered.json",
+   "bytes": 6921,
+   "sha256": "81c4820580163177a3c6342f825f1b4b3b4f8465427a10444def107cde2b509b",
+   "role": "\u00a77.4 tokenised fragment from post 12295 \u00a70 (positional; 0 css var rewrites)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/image-link-cards-5.json",
+   "bytes": 74151,
+   "sha256": "16625aa084fb57f89267479d4bb0db6ac4d55aa1ae6114e5d026b39d4b42c275",
+   "role": "\u00a77.4 tokenised fragment from post 12295 \u00a71 (positional; 10 css var rewrites)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/image-link-cards-12-button.json",
+   "bytes": 177876,
+   "sha256": "ef113e973a2fbe818b4f71225ad7cecb0d829eb623b99942ba2f96099fef74a7",
+   "role": "\u00a77.4 tokenised fragment from post 12296 \u00a71 (positional; 24 css var rewrites)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/tok-cs-news.json",
+   "bytes": 82145,
+   "sha256": "16e02f57c3b9dd86465bf594b048ec8f4ecc831883d32b8e8f9242e2217fb656",
+   "role": "\u00a77.4 positional tokenise job"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/bundle-emp-v1.json",
+   "bytes": 45239,
+   "sha256": "c4f8f292b0e566da710158e0e06c614286651807e6a17738b835a184d31a5947",
+   "role": "bundle: employment v1 (6cc3a9d5\u2026)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/bundle-emp-v2.json",
+   "bytes": 45279,
+   "sha256": "98a2b78c30bfef1280c82153cd0db503dc23fc5e8ed8efcbc0326b41304b0a8a",
+   "role": "bundle: employment v2 (d61d03a0\u2026)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/hero-dark-centered-cta.json",
+   "bytes": 10898,
+   "sha256": "d73dfabf7f84a94d7a058b0b8d9897fed42c6c0d15133a879087bd21d38e9af7",
+   "role": "\u00a77.4 tokenised fragment from post 12298 \u00a70 (positional; 0 css var rewrites)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/split-prose-list-media.json",
+   "bytes": 16554,
+   "sha256": "a89d370cbf05b7e635589b7dd955761ae66530d79778661bd59f9614f56254ba",
+   "role": "\u00a77.4 tokenised fragment from post 12298 \u00a71 (positional; 1 css var rewrites)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/text-link-cards-6-filter.json",
+   "bytes": 74277,
+   "sha256": "5c804ba76b6c81c3fccaf704b86c7de8aec14ac30876abc4080eb4ad7cc00a10",
+   "role": "\u00a77.4 tokenised fragment from post 12298 \u00a72 (positional; 6 css var rewrites)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/tok-emp.json",
+   "bytes": 35755,
+   "sha256": "592593d0385682f01da6c253501d71e2103116dd495fdb27f7cd3465ca307b0f",
+   "role": "\u00a77.4 positional tokenise job"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/bundle-faq-qp-v1.json",
+   "bytes": 59492,
+   "sha256": "045509c6297693cfee82bc58769dbba4dff0d75adc4bc7d27a73d52fabaa6679",
+   "role": "bundle: faqs v1 (735b1a0d\u2026), quality-policy v1 (75c9bbad\u2026)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/bundle-faq-v2.json",
+   "bytes": 39618,
+   "sha256": "398ceeef6228a2ca0d59b47ddedd5211421174344bad1fed6ffa14de4b01a910",
+   "role": "bundle: faqs v2 (11b27eb6\u2026)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/faq-accordion-filter-10.json",
+   "bytes": 69140,
+   "sha256": "50181c190d9893b2f16b02cafe456728af81a8d320415238d16e652e74f9c987",
+   "role": "\u00a77.4 tokenised fragment from post 12300 \u00a71 (positional; 0 css var rewrites)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/split-list-figure.json",
+   "bytes": 18111,
+   "sha256": "1ec8a044de0141b9650eb9570ee05cc46c9478fd645242f362889f1812a61961",
+   "role": "\u00a77.4 tokenised fragment from post 12301 \u00a71 (positional; 1 css var rewrites)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/check-list-centered.json",
+   "bytes": 10151,
+   "sha256": "5004c2f12fef10e05de1f947ae297c2bcd760f0372fc513bfafff78e462ae7ef",
+   "role": "\u00a77.4 tokenised fragment from post 12301 \u00a72 (positional; 1 css var rewrites)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/tok-faq-qp.json",
+   "bytes": 37305,
+   "sha256": "2c102791e4e9fb0a94980224a0185f28a92c4b9de761dd6df3636c3787bb54af",
+   "role": "\u00a77.4 positional tokenise job"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/bundle-contact-v1.json",
+   "bytes": 48605,
+   "sha256": "ff0086f2f263e14e6bcda88ee4ba1aa04e22525280e1198349bf45c95ba50a2f",
+   "role": "bundle: contact v1 (7be97688\u2026)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/bundle-contact-v2.json",
+   "bytes": 48606,
+   "sha256": "33f165064d98053ba84658f802b58bdaae2d9b3af90cf88d2793edb545230360",
+   "role": "bundle: contact v2 (898ec738\u2026)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/hq-panel-map.json",
+   "bytes": 20853,
+   "sha256": "afafaa6820321dad6db53c12eca9260fbfa863ec1e0cecf4372f8fde0a903f00",
+   "role": "\u00a77.4 tokenised fragment from post 12302 \u00a71 (positional; 2 css var rewrites)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/offices-grid-6-social.json",
+   "bytes": 68870,
+   "sha256": "9f95df084897712acc82d197dec06dde2faf80bf8a16b3acbbf9fde23aed39eb",
+   "role": "\u00a77.4 tokenised fragment from post 12302 \u00a72 (positional; 18 css var rewrites)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/tok-contact.json",
+   "bytes": 44117,
+   "sha256": "ddbcdc5d2430070e58564f1e51e8a3f75f2730256fc3f6eafebbed5dd98fc97c",
+   "role": "\u00a77.4 positional tokenise job"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/hero-split-contact-form.json",
+   "bytes": 26490,
+   "sha256": "884a2a7c28687cf0d4c280e2c507c612fa4b16892ee4d08e084fb71f4d510cef",
+   "role": "\u00a77.4 tokenised fragment from post 12302 \u00a70 (positional; 0 css var rewrites)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/tok-contact-hero.json",
+   "bytes": 14173,
+   "sha256": "531689fe847933430c49fb464b59b5efca219d6d71ed1ba52a1bd0c6ed33a595",
+   "role": "\u00a77.4 positional re-tokenise job"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/gallery.jobs.json",
+   "bytes": 5972,
+   "sha256": "9ae5683339513813093f371deb25d116421c253312c4bade66fbb68a113d1f85",
+   "role": "gallery sideload job"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/gallery.result.json",
+   "role": "gallery sideload result (id, file, sha256 prefix per card)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/bundle-gallery-v1.json",
+   "bytes": 203170,
+   "sha256": "7c3b0c9a4085ccc0adfbfa51ce3ab610b143401ec3c8a8b0eb239d87df2f8ba0",
+   "role": "bundle: project-gallery v1 (d7c0fa68\u2026)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/bundle-gallery-v2.json",
+   "bytes": 203247,
+   "sha256": "027020a33d3a0c4af8ba85e9534b85c7ec6ef763c7cd6d1886fed7b7d24a3815",
+   "role": "bundle: project-gallery v2 (250ccaf0\u2026)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/hero-dark-centered-meta-4.json",
+   "bytes": 28520,
+   "sha256": "6e98d3a351bd3e564ae06ffff9bbcd538f3f1ecdc313fa283c0d0b02f2ee9389",
+   "role": "\u00a77.4 tokenised fragment from post 12357 \u00a70 (positional; 0 css var rewrites)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/gallery-grid-filter-lightbox.json",
+   "bytes": 529946,
+   "sha256": "6ccaefc99d617c4de76ed9c8453556e7334cbff63bb35fbfb7838e5cd692dda6",
+   "role": "\u00a77.4 tokenised fragment from post 12357 \u00a71 (positional; 0 css var rewrites)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/tok-gallery.json",
+   "bytes": 179977,
+   "sha256": "80ef6a0941346b18743d0ae0082397ec5f712cb4aec31669e750991757665f5f",
+   "role": "\u00a77.4 positional tokenise job"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/bundle-sa-v1.json",
+   "bytes": 92382,
+   "sha256": "346c9d91b338b17f9e0107dbb81b2087edec75492b08517162e0c3ac50c7f826",
+   "role": "bundle: services-and-applications v1 (be64bd16\u2026)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/bundle-sa-v2.json",
+   "bytes": 92383,
+   "sha256": "17c895050f5379cb2267ac2a9ae243f606bd8465c03093ef859c6d1a3abf9df6",
+   "role": "bundle: services-and-applications v2 (44afb540\u2026)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/hero-dark-centered-meta-4-bold.json",
+   "bytes": 28475,
+   "sha256": "24bde7df536c504b96656cce9ebc9379d8e01578852ab3447b5ff23799f10784",
+   "role": "\u00a77.4 tokenised fragment from post 12371 \u00a70 (positional; 0 css var rewrites)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/service-cards-5-caps.json",
+   "bytes": 81098,
+   "sha256": "9e9a614f3636db41e7eea6f657c66738a9502244256e8ed2d086a813d1ea2abd",
+   "role": "\u00a77.4 tokenised fragment from post 12371 \u00a71 (positional; 8 css var rewrites)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/service-cards-6-button.json",
+   "bytes": 91431,
+   "sha256": "75f3dd4ce38cfce1aca1076e1ec01da29ddc55ec688d0e19b2f9aeda50d72df5",
+   "role": "\u00a77.4 tokenised fragment from post 12371 \u00a72 (positional; 6 css var rewrites)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/estimate-band-split.json",
+   "bytes": 14672,
+   "sha256": "4cafea85368c4c164d9d5518dfef4eb03450ce2acae2da5a5a36ceb08d61e07f",
+   "role": "\u00a77.4 tokenised fragment from post 12371 \u00a73 (positional; 0 css var rewrites)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/patterns/feature-cards-2-image.json",
+   "bytes": 38249,
+   "sha256": "2906b281cb9f20b57fa5c11302d30b9cbb29aa43968d5b285b2e4719ec198031",
+   "role": "\u00a77.4 tokenised fragment from post 12371 \u00a74 (positional; 0 css var rewrites)"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/tok-sa.json",
+   "bytes": 77280,
+   "sha256": "92b17b0981a900213c786812f46928839110ced53e1210434158f264aac9c299",
+   "role": "\u00a77.4 positional tokenise job"
+  },
+  {
+   "path": "wp-content/uploads/novamira-drafts/run-20260924-125928/bundle-linkpass.json",
+   "bytes": 559070,
+   "sha256": "c79754ff5a16720991e0cb0a8cf0c7bfa1ee6158e902aa698fc113b2c6e81b04",
+   "role": "bundle: \u00a73.d link pass, 8 pages"
+  }
+ ],
+ "notes": [
+  "hero-split-contact-form first tokenisation (sha 12ff5a83\u2026) removed by this run before commit: its status text was tokenised as body_* (validator requires block markup for body_*); re-tokenised with heading_* from the same, unchanged post 12302."
+ ],
+ "finished_utc": "2026-09-24",
+ "result": {
+  "zip_status": "built",
+  "built": [
+   12295,
+   12296,
+   12298,
+   12300,
+   12301,
+   12302,
+   12357,
+   12371
+  ],
+  "failed": [],
+  "patterns_minted": 19,
+  "pattern_cap": 20
+ },
+ "global_operations": [],
+ "not_touched": [
+  "posts 12239-12243, 12268, 12277 (earlier runs)",
+  "Kit 11259",
+  "Code Snippets (Snippet #10 was changed BEFORE this run, as a separate supervised step)",
+  "*-interactive.html files"
+ ]
+}

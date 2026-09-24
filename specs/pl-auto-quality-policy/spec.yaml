@@ -1,0 +1,53 @@
+# spec.yaml — Quality Policy  (run 20260924-125928, autonomous, RUN A re-entry)
+# Source design : Potomac Laser.zip (fab7225c…) :: About - Quality Policy.html  (no tweak defaults)
+# MATCH (3.c.ii):
+#   [0] #hero  centred, no meta, no buttons [0/0] -> hero-dark-centered (library)
+#   [1] top-aligned split: eyebrow + H2 + 4-item check-list | framed certificate + caption [1/1]
+#              -> UNMATCHED: split-prose-list-media has a paragraph and a full-bleed photo, no caption,
+#                 centred alignment -> §7 candidate split-list-figure
+#   [2] subtle, centred head + one 4-item check-list in a 900px column [0/0]
+#              -> UNMATCHED -> §7 candidate check-list-centered
+#   [3] .final-cta -> cta-band-dark [0/0]
+# Brand: no present-tense "Potomac" in the copy. KEPT: certificate alt "Potomac Photonics ISO 13485:2016
+#   certificate" — it describes a document issued in that name.
+# Links: §3.d link pass applied — design page hrefs -> this run's drafts (12302/12357/12371) and
+#   earlier drafts 12239 (CNC, #quote), 12268, 12277.
+
+spec_version: 1
+page:
+  title: Quality Policy
+  slug: pl-auto-quality-policy
+  post_type: page
+  post_status: draft
+assets:
+  qp_certificate:
+    attachment_id: 12299
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-qp-iso-certificate.webp
+sections:
+- pattern: hero-dark-centered
+  tokens:
+    heading_1: Quality policy
+    heading_2: Committed to being a world leader in micro-manufacturing
+    body_1: <p>Our quality management system is certified to <strong>ISO 13485:2016</strong>. These commitments and objectives guide how we work with every customer and supplier.</p>
+- pattern: split-list-figure
+  tokens:
+    heading_1: Our commitments
+    heading_2: To achieve these goals, we will
+    body_1: <ul><li>Meet all requirements of ISO 13485:2016, along with all applicable statutory and implied national and international standards</li><li>Achieve all of our quality objectives as set out by Management</li><li>Maintain the awareness and competency of our employees</li><li>Continually improve our processes and products while maintaining the safety and efficacy of our devices</li></ul>
+    image_1:
+      asset: qp_certificate
+    heading_3: ISO 13485:2016 certificate
+- pattern: check-list-centered
+  tokens:
+    heading_1: Objectives
+    heading_2: Our objectives
+    body_1: <ul><li>Use our resources effectively to improve customer satisfaction, delivering products that meet specification, within the stated lead time and at the promised price</li><li>Make continual improvement of products, processes and systems an objective for every individual in the organisation</li><li>Implement new technologies and cost-effective processes that deliver consistent, predictable results, speeding up the development cycle of our customers' products</li><li>Partner with our suppliers to improve speed and flexibility in responding to our customers' needs</li></ul>
+- pattern: cta-band-dark
+  tokens:
+    heading_1: Rapid response
+    heading_2: Talk to the team.
+    body_1: <p>Send a drawing or a short description of your project. Our engineers review every design and respond within one business day.</p>
+    button_1: Email us
+    url_1: https://www.potomac-laser.com/?page_id=12302&preview=true
+    button_2: Send a drawing
+    url_2: https://www.potomac-laser.com/project-quote/#projectForm

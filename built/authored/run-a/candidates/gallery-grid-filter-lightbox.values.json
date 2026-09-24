@@ -1,0 +1,278 @@
+{
+ "heading_1": "Request a quote for this part",
+ "heading_2": "Upload CAD",
+ "url_1": "Services - CNC Micromachining.html#quote",
+ "heading_3": "Filter",
+ "embed_1": "<button type=\"button\" class=\"pl-gc on\" data-filter=\"all\" aria-pressed=\"true\">All<span>54</span></button><button type=\"button\" class=\"pl-gc\" data-filter=\"assembly\" aria-pressed=\"false\">Assembly<span>3</span></button><button type=\"button\" class=\"pl-gc\" data-filter=\"ceramics\" aria-pressed=\"false\">Ceramics<span>2</span></button><button type=\"button\" class=\"pl-gc\" data-filter=\"diamond\" aria-pressed=\"false\">Diamond<span>2</span></button><button type=\"button\" class=\"pl-gc\" data-filter=\"electronics\" aria-pressed=\"false\">Electronics<span>3</span></button><button type=\"button\" class=\"pl-gc\" data-filter=\"featured\" aria-pressed=\"false\">Featured<span>4</span></button><button type=\"button\" class=\"pl-gc\" data-filter=\"glass micromachining\" aria-pressed=\"false\">Glass Micromachining<span>2</span></button><button type=\"button\" class=\"pl-gc\" data-filter=\"kapton\" aria-pressed=\"false\">Kapton<span>3</span></button><button type=\"button\" class=\"pl-gc\" data-filter=\"laser cutting\" aria-pressed=\"false\">Laser Cutting<span>3</span></button><button type=\"button\" class=\"pl-gc\" data-filter=\"laser marking\" aria-pressed=\"false\">Laser Marking<span>4</span></button><button type=\"button\" class=\"pl-gc\" data-filter=\"metal micromachining\" aria-pressed=\"false\">Metal Micromachining<span>8</span></button><button type=\"button\" class=\"pl-gc\" data-filter=\"microfluidics\" aria-pressed=\"false\">Microfluidics<span>5</span></button><button type=\"button\" class=\"pl-gc\" data-filter=\"microhole drilling\" aria-pressed=\"false\">Microhole Drilling<span>8</span></button><button type=\"button\" class=\"pl-gc\" data-filter=\"polymer\" aria-pressed=\"false\">Polymer<span>4</span></button><button type=\"button\" class=\"pl-gc\" data-filter=\"silicon wafer\" aria-pressed=\"false\">Silicon Wafer<span>3</span></button>",
+ "body_1": "<p class=\"pl-gal-count\">Showing <strong>54</strong> projects</p>",
+ "image_1": {
+  "asset": "gal_img_1"
+ },
+ "heading_4": "Metal Micromachining",
+ "heading_5": "Thin Metal Foils",
+ "image_2": {
+  "asset": "gal_img_2"
+ },
+ "heading_6": "Polymer",
+ "heading_7": "Pressure-Sensitive Adhesives",
+ "image_3": {
+  "asset": "gal_img_3"
+ },
+ "heading_8": "Laser Cutting",
+ "heading_9": "Laser Cutting for Precision Backlighting",
+ "image_4": {
+  "asset": "gal_img_4"
+ },
+ "heading_10": "Microhole Drilling",
+ "heading_11": "Laser Small Holes in Copper",
+ "image_5": {
+  "asset": "gal_img_5"
+ },
+ "heading_12": "Laser Marking",
+ "heading_13": "Laser-Marked Glass Slide",
+ "image_6": {
+  "asset": "gal_img_6"
+ },
+ "heading_14": "Kapton",
+ "heading_15": "Laser Cutting Polyimide Rings",
+ "image_7": {
+  "asset": "gal_img_7"
+ },
+ "heading_16": "Laser Cutting",
+ "heading_17": "High-Speed Laser Cutting of Metal Parts",
+ "image_8": {
+  "asset": "gal_img_8"
+ },
+ "heading_18": "Microhole Drilling",
+ "heading_19": "Calibrated Micro Holes for CCIT / Leak Testing",
+ "image_9": {
+  "asset": "gal_img_9"
+ },
+ "heading_20": "Microhole Drilling",
+ "heading_21": "Small Hole Drilling Experts",
+ "image_10": {
+  "asset": "gal_img_10"
+ },
+ "heading_22": "Laser Cutting",
+ "heading_23": "Precision Laser Cutting of Metal",
+ "image_11": {
+  "asset": "gal_img_11"
+ },
+ "heading_24": "Microfluidics",
+ "heading_25": "Fabrication of Microfluidic Devices",
+ "image_12": {
+  "asset": "gal_img_12"
+ },
+ "heading_26": "Microfluidics",
+ "heading_27": "Pillars for Microfluidic Applications",
+ "image_13": {
+  "asset": "gal_img_13"
+ },
+ "heading_28": "Featured",
+ "heading_29": "Laser Micromachining Services",
+ "image_14": {
+  "asset": "gal_img_14"
+ },
+ "heading_30": "Featured",
+ "heading_31": "Rapid Prototyping to Production",
+ "image_15": {
+  "asset": "gal_img_15"
+ },
+ "heading_32": "Microfluidics",
+ "heading_33": "Rapid-Turn Microfluidics: Herringbone Mixer",
+ "image_16": {
+  "asset": "gal_img_16"
+ },
+ "heading_34": "Kapton",
+ "heading_35": "Experts at DuPont Kapton® Laser Cutting",
+ "image_17": {
+  "asset": "gal_img_17"
+ },
+ "heading_36": "Metal Micromachining",
+ "heading_37": "Laser Cutting of Metal Tubing",
+ "image_18": {
+  "asset": "gal_img_18"
+ },
+ "heading_38": "Glass Micromachining",
+ "heading_39": "Glass Coverslips",
+ "image_19": {
+  "asset": "gal_img_19"
+ },
+ "heading_40": "Silicon Wafer",
+ "heading_41": "SU-8 Silicon Mold for Microfluidics",
+ "image_20": {
+  "asset": "gal_img_20"
+ },
+ "heading_42": "Metal Micromachining",
+ "heading_43": "Precision Micro Masks",
+ "image_21": {
+  "asset": "gal_img_21"
+ },
+ "heading_44": "Metal Micromachining",
+ "heading_45": "Laser Micromachining Stainless Steel",
+ "image_22": {
+  "asset": "gal_img_22"
+ },
+ "heading_46": "Microhole Drilling",
+ "heading_47": "Small Holes in Metal Nozzle",
+ "image_23": {
+  "asset": "gal_img_23"
+ },
+ "heading_48": "Ceramics",
+ "heading_49": "Laser Cutting Ceramic",
+ "image_24": {
+  "asset": "gal_img_24"
+ },
+ "heading_50": "Microhole Drilling",
+ "heading_51": "Micro Holes for Invisible Backlighting",
+ "image_25": {
+  "asset": "gal_img_25"
+ },
+ "heading_52": "Silicon Wafer",
+ "heading_53": "Silicon Wafer Dicing and Resizing",
+ "image_26": {
+  "asset": "gal_img_26"
+ },
+ "heading_54": "Assembly",
+ "heading_55": "Laser Welding of Plastics",
+ "image_27": {
+  "asset": "gal_img_27"
+ },
+ "heading_56": "Silicon Wafer",
+ "heading_57": "Custom Silicon Wafer Cutting",
+ "image_28": {
+  "asset": "gal_img_28"
+ },
+ "heading_58": "Microfluidics",
+ "heading_59": "Rapid Microfluidic Chip Fabrication",
+ "image_29": {
+  "asset": "gal_img_29"
+ },
+ "heading_60": "Polymer",
+ "heading_61": "PEEK Tubing",
+ "image_30": {
+  "asset": "gal_img_30"
+ },
+ "heading_62": "Microhole Drilling",
+ "heading_63": "Micro Holes in Tungsten",
+ "image_31": {
+  "asset": "gal_img_31"
+ },
+ "heading_64": "Diamond",
+ "heading_65": "Diamond: Precision Machined Gear",
+ "image_32": {
+  "asset": "gal_img_32"
+ },
+ "heading_66": "Diamond",
+ "heading_67": "Diamond: Precision Machining",
+ "image_33": {
+  "asset": "gal_img_33"
+ },
+ "heading_68": "Ceramics",
+ "heading_69": "Probe Card: 90 µm Holes in Silicon Nitride",
+ "image_34": {
+  "asset": "gal_img_34"
+ },
+ "heading_70": "Assembly",
+ "heading_71": "Pick-and-Place Assembly System",
+ "image_35": {
+  "asset": "gal_img_35"
+ },
+ "heading_72": "Assembly",
+ "heading_73": "Miniature Systems Assembly",
+ "image_36": {
+  "asset": "gal_img_36"
+ },
+ "heading_74": "Electronics",
+ "heading_75": "Via Hole Drilling: 30 µm Holes",
+ "image_37": {
+  "asset": "gal_img_37"
+ },
+ "heading_76": "Laser Marking",
+ "heading_77": "Laser-Marked QR Device",
+ "image_38": {
+  "asset": "gal_img_38"
+ },
+ "heading_78": "Metal Micromachining",
+ "heading_79": "Stainless-Steel Gears on a Penny",
+ "image_39": {
+  "asset": "gal_img_39"
+ },
+ "heading_80": "Microhole Drilling",
+ "heading_81": "20-Micron Pinholes in Tantalum",
+ "image_40": {
+  "asset": "gal_img_40"
+ },
+ "heading_82": "Metal Micromachining",
+ "heading_83": "Laser Cutting Stents",
+ "image_41": {
+  "asset": "gal_img_41"
+ },
+ "heading_84": "Polymer",
+ "heading_85": "Hot Embossing: Teflon",
+ "image_42": {
+  "asset": "gal_img_42"
+ },
+ "heading_86": "Polymer",
+ "heading_87": "Micro Channels in Polystyrene",
+ "image_43": {
+  "asset": "gal_img_43"
+ },
+ "heading_88": "Microfluidics",
+ "heading_89": "3D-Printed Mold for PDMS Microfluidics",
+ "image_44": {
+  "asset": "gal_img_44"
+ },
+ "heading_90": "Metal Micromachining",
+ "heading_91": "Custom Nitinol Washers",
+ "image_45": {
+  "asset": "gal_img_45"
+ },
+ "heading_92": "Laser Marking",
+ "heading_93": "2D Data-Matrix Barcode on Glass: 110 µm Dots",
+ "image_46": {
+  "asset": "gal_img_46"
+ },
+ "heading_94": "Microhole Drilling",
+ "heading_95": "Catheter Hole Drilling",
+ "image_47": {
+  "asset": "gal_img_47"
+ },
+ "heading_96": "Electronics",
+ "heading_97": "Patterned Metal on Polymer Substrate",
+ "image_48": {
+  "asset": "gal_img_48"
+ },
+ "heading_98": "Metal Micromachining",
+ "heading_99": "Laser-Cut Tantalum Shadow Mask",
+ "image_49": {
+  "asset": "gal_img_49"
+ },
+ "heading_100": "Glass Micromachining",
+ "heading_101": "Small Holes in Glass",
+ "image_50": {
+  "asset": "gal_img_50"
+ },
+ "heading_102": "Featured",
+ "heading_103": "Precision Ophthalmic Medical Part",
+ "image_51": {
+  "asset": "gal_img_51"
+ },
+ "heading_104": "Featured",
+ "heading_105": "Micro 3D Printing: Ear Model",
+ "image_52": {
+  "asset": "gal_img_52"
+ },
+ "heading_106": "Kapton",
+ "heading_107": "Holes in Kapton® (Polyimide)",
+ "image_53": {
+  "asset": "gal_img_53"
+ },
+ "heading_108": "Electronics",
+ "heading_109": "Conductive Lines on a Medical Device",
+ "image_54": {
+  "asset": "gal_img_54"
+ },
+ "heading_110": "Laser Marking",
+ "heading_111": "Selective Removal of Metal Coatings"
+}

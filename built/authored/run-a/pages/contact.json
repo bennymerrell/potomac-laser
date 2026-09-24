@@ -1,0 +1,21 @@
+{
+ "slug": "pl-auto-contact",
+ "title": "Contact",
+ "design_page": "Contact - Contact.html",
+ "header": "# spec.yaml — Contact  (run 20260924-125928, autonomous, RUN A re-entry)\n# Source design : Potomac Laser.zip (fab7225c…) :: Contact - Contact.html, RENDERED WITH ITS TWEAK DEFAULTS\n#   (heroLayout \"Contact form\" moves the form card into the hero; showHeroCard false; showMap true;\n#   officeCols 2; showNewsletter false -> #newsletter not built). mock.html is that rendered DOM.\n# MATCH (3.c.ii):\n#   [0] #hero  dark split: eyebrow + H1 + lede + 2 CTAs | contact form card [0/0]\n#              -> UNMATCHED (quote-form-hubspot is the service quote form: timeline + upload, different\n#                 fields and HubSpot form) -> §7 candidate hero-split-contact-form\n#   [1] #get-in-touch  HQ panel (flag, city, 3 lines) | Google map [0/0] -> UNMATCHED -> §7 hq-panel-map\n#   [2] #offices  left head + 2-col grid (5 offices + 1 region card) + social row [0/0]\n#              -> UNMATCHED -> §7 candidate offices-grid-6-social\n# FORM: wired to HubSpot `[Potomac] Contact Form` 54d0ec75… (portal 143181153) — its fields are the\n#   design's exactly. The design's own handler only faked success. NOT live-tested: a test submission\n#   creates a real contact (HUBSPOT-FORMS.md: needs a human go-ahead).\n# Icons: design inline SVGs -> Font Awesome equivalents in native icon-list / social-icons widgets.\n# Brand: no present-tense \"Potomac\" in the copy (email address and social handles are identifiers).\n# Style-rule breaches kept verbatim: \"Request a quote →\", \"Send message →\", \"Email the team →\".\n",
+ "assets": [],
+ "sections": [
+  {
+   "pattern": "hero-split-contact-form",
+   "values": "hero-split-contact-form.values.json"
+  },
+  {
+   "pattern": "hq-panel-map",
+   "values": "hq-panel-map.values.json"
+  },
+  {
+   "pattern": "offices-grid-6-social",
+   "values": "offices-grid-6-social.values.json"
+  }
+ ]
+}

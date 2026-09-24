@@ -1,0 +1,194 @@
+# spec.yaml — Services & Applications  (run 20260924-125928, autonomous, RUN A re-entry)
+# Source design : Potomac Laser.zip (fab7225c…) :: Services - Services & Applications.html  (no tweak defaults)
+# MATCH (3.c.ii) — design images / fragment image slots:
+#   [0] .sa-hero  centred, 4 meta, no buttons [0/0] -> UNMATCHED on styling: hero-dark-centered-meta-4 has a
+#                 600-weight 54px H1 (18ch), white eyebrow, 28px gaps; this is 700/56px (20ch), orange eyebrow,
+#                 32px gaps, 900px column -> §7 candidate hero-dark-centered-meta-4-bold
+#   [1] head + 5 service cards + 7 capability pills + "View all services" [5/5 on services-image-cards]
+#                 -> UNMATCHED: services-image-cards has no pill row, no closing button, and a different head
+#                 (orange link) -> §7 candidate service-cards-5-caps
+#   [2] subtle, head + 6 application cards (16:10) + "View all applications" [6/0] -> §7 service-cards-6-button
+#   [3] .sa-estimate  dark band, copy | 2 buttons, MID-PAGE [0/0] -> UNMATCHED: cta-band-dark is centred and
+#                 always last -> §7 candidate estimate-band-split
+#   [4] two feature cards with faded photos (light | dark) [2/0] -> §7 candidate feature-cards-2-image
+#   [5] .final-cta -> cta-band-dark [0/0]
+# Brand: no present-tense "Potomac" in the copy.
+# Style-rule breaches kept verbatim: 11 "→" in the card labels ("Learn more →", "View details →").
+# Links: §3.d link pass applied — design page hrefs -> this run's drafts (12302/12357/12371) and
+#   earlier drafts 12239 (CNC, #quote), 12268, 12277.
+
+spec_version: 1
+page:
+  title: Services & Applications
+  slug: pl-auto-services-and-applications
+  post_type: page
+  post_status: draft
+assets:
+  sa_svc_1:
+    attachment_id: 12358
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-sa-service-1.webp
+  sa_svc_2:
+    attachment_id: 12359
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-sa-service-2.jpeg
+  sa_svc_3:
+    attachment_id: 12360
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-sa-service-3.webp
+  sa_svc_4:
+    attachment_id: 12361
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-sa-service-4.webp
+  sa_svc_5:
+    attachment_id: 12362
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-sa-service-5.webp
+  sa_app_1:
+    attachment_id: 12363
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-sa-app-1.webp
+  sa_app_2:
+    attachment_id: 12364
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-sa-app-2.webp
+  sa_app_3:
+    attachment_id: 12365
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-sa-app-3.webp
+  sa_app_4:
+    attachment_id: 12366
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-sa-app-4.webp
+  sa_app_5:
+    attachment_id: 12367
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-sa-app-5.webp
+  sa_app_6:
+    attachment_id: 12368
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-sa-app-6.webp
+  sa_feat_1:
+    attachment_id: 12369
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-sa-feature-1.webp
+  sa_feat_2:
+    attachment_id: 12370
+    url: https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-sa-feature-2.webp
+sections:
+- pattern: hero-dark-centered-meta-4-bold
+  tokens:
+    heading_1: Services &amp; Applications
+    heading_2: Precision micromanufacturing for demanding applications
+    body_1: <p>A comprehensive range of micromanufacturing services tailored to your exact needs, from precision small-hole drilling to features as small as <strong>1 micron</strong>. Our technologies support everything from <strong>aerospace components</strong> to fully fabricated <strong>microfluidic devices</strong> advancing biotech and medical diagnostics.</p>
+    heading_3: '12'
+    heading_4: Capabilities
+    heading_5: 1 µm
+    heading_6: Smallest feature
+    heading_7: ±10 µm
+    heading_8: Typical tolerance
+    heading_9: Est. 1982
+    heading_10: Micromanufacturing
+- pattern: service-cards-5-caps
+  tokens:
+    heading_1: Our Services
+    heading_2: Check out our growing list of capabilities
+    body_1: <p>We are innovators at our core, constantly evolving to meet market demands and pioneering new micro-manufacturing technologies.</p>
+    image_1:
+      asset: sa_svc_1
+    heading_3: Rapid Prototyping
+    body_2: <p>Fast-turn prototype paths with DFM feedback so design teams get real parts on compressed timelines.</p>
+    heading_4: Learn more →
+    url_1: /services/rapid-prototyping-services/
+    image_2:
+      asset: sa_svc_2
+    heading_5: CNC Micro Machining
+    body_3: <p>4-axis CNC milling and drilling for fine-feature metals and engineering plastics at ±10 µm tolerances.</p>
+    heading_6: Learn more →
+    url_2: https://www.potomac-laser.com/?post_type=post_services&p=12239&preview=true
+    image_3:
+      asset: sa_svc_3
+    heading_7: Laser Micro-Hole Drilling
+    body_4: '<p>Micro-holes down to a single micron in almost any substrate: vias, nozzles, filters and dense arrays.</p>'
+    heading_8: Learn more →
+    url_3: /services/micro-hole-drilling/
+    image_4:
+      asset: sa_svc_4
+    heading_9: Laser Micromachining
+    body_5: <p>UV and IR laser processing for ultra-fine features in metals, polymers, glass, ceramics and thin films.</p>
+    heading_10: Learn more →
+    url_4: /services/laser-micromachining/
+    image_5:
+      asset: sa_svc_5
+    heading_11: 3D Printing Contract Services
+    body_6: <p>Micro-scale additive manufacturing for intricate geometries conventional processes can't reach.</p>
+    heading_12: Learn more →
+    url_5: /services/3d-printing-contract-services/
+    body_7: <p><a href="/services/laser-cutting/">Laser Cutting</a><a href="/services/laser-micromachining-welding/">Laser Micro Welding</a><a href="/services/laser-marking-applications/">Laser Marking</a><a href="/services/laser-patterning/">Laser Patterning</a><a href="/services/3d-printing/">Micro 3D Printing</a><a href="/services/hot-embossing/">Hot Embossing</a><a href="/services/bonding-assembly/">Bonding &amp; Assembly</a></p>
+    button_1: View all services
+    url_6: /services/
+- pattern: service-cards-6-button
+  tokens:
+    heading_1: Our Applications
+    heading_2: Changing the world one micron at a time
+    body_1: '<p>Our customers span many industries: medical device, biotech, semiconductor, automotive, aerospace and more.</p>'
+    image_1:
+      asset: sa_app_1
+    heading_3: Microfluidic Device Fabrication
+    body_2: <p>Micro-drilling for microfluidic devices, precise vias, channels and ports in glass, polymers and foils, from rapid prototyping to scalable production.</p>
+    heading_4: View details →
+    url_1: /application/microfluidics/
+    image_2:
+      asset: sa_app_2
+    heading_5: CCIT Leak-Test Calibration
+    body_3: <p>Laser-drilled micro-holes in glass and polymer vials and ampoules for container closure integrity and leak-test system validation.</p>
+    heading_6: View details →
+    url_2: /application/leak-test-hole-drilling/
+    image_3:
+      asset: sa_app_3
+    heading_7: Invisible Backlighting
+    body_4: <p>High-resolution micro-hole drilling for concealed displays, precise, uniform holes for invisible backlit indicators and controls.</p>
+    heading_8: View details →
+    url_3: /application/potomac-rd-notebook-invisible-hole-backlighting-applications/
+    image_4:
+      asset: sa_app_4
+    heading_9: Small-Hole Drilling
+    body_5: <p>Quick, cost-effective small-hole drilling in most materials, microholes as small as 1 micron in almost any substrate.</p>
+    heading_10: View details →
+    url_4: /application/laser-hole-drilling/
+    image_5:
+      asset: sa_app_5
+    heading_11: Probe Card Micro-Hole Drilling
+    body_6: <p>Micro-hole drilling for probe cards in silicon nitride, polyimide, Ultem and other engineered substrates.</p>
+    heading_12: View details →
+    url_5: /application/probe-cards/
+    image_6:
+      asset: sa_app_6
+    heading_13: Catheter Micro-Hole Drilling
+    body_7: <p>Precision laser micro-hole drilling for medical catheters, hole sizes down to microns, biocompatible materials, ISO 13485 and fast turnaround.</p>
+    heading_14: View details →
+    url_6: /application/catheter-hole-drilling/
+    button_1: View all applications
+    url_7: /applications/
+- pattern: estimate-band-split
+  tokens:
+    heading_1: Get an estimate
+    heading_2: Submit your drawing, get a quick estimate
+    body_1: <p>Send us your CAD or drawing and see if we're the right fit. Our engineers review every design for manufacturability and respond within one business day.</p>
+    button_1: Request a quote
+    url_1: https://www.potomac-laser.com/?post_type=post_services&p=12239&preview=true#quote
+    button_2: Contact us
+    url_2: /contact/
+- pattern: feature-cards-2-image
+  tokens:
+    button_1: Learn more
+    url_1: /materials/
+    image_1:
+      asset: sa_feat_1
+    heading_1: Materials
+    heading_2: Everything you need for your business
+    body_1: <p>The best parts start with the best materials. As part of the Goodfellow family, a global leader in high-quality material supply, we draw on an extensive range of superior materials, enhancing our precision microfabrication with 170,000+ grades.</p>
+    button_2: Learn more
+    url_2: https://www.potomac-laser.com/?page_id=12268&preview=true
+    image_2:
+      asset: sa_feat_2
+    heading_3: Industries
+    heading_4: Trusted since 1982
+    body_2: <p>Recognised by commercial and government agencies alike for innovative contributions to medical device manufacturing, biotech and electronics fabrication, from our high-tech facility at bwtech@UMBC Research and Technology Park in Baltimore, MD.</p>
+- pattern: cta-band-dark
+  tokens:
+    heading_1: Get Started Today
+    heading_2: Have a part in mind?
+    body_1: <p>Share your CAD files and tolerance requirements. Our engineers review every design for manufacturability and respond within one business day.</p>
+    button_1: Request a quote
+    url_1: https://www.potomac-laser.com/?post_type=post_services&p=12239&preview=true#quote
+    button_2: Contact us
+    url_2: /contact/

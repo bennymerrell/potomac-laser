@@ -1,0 +1,55 @@
+{
+ "slug": "pl-auto-services-and-applications",
+ "title": "Services & Applications",
+ "design_page": "Services - Services & Applications.html",
+ "header": "# spec.yaml — Services & Applications  (run 20260924-125928, autonomous, RUN A re-entry)\n# Source design : Potomac Laser.zip (fab7225c…) :: Services - Services & Applications.html  (no tweak defaults)\n# MATCH (3.c.ii) — design images / fragment image slots:\n#   [0] .sa-hero  centred, 4 meta, no buttons [0/0] -> UNMATCHED on styling: hero-dark-centered-meta-4 has a\n#                 600-weight 54px H1 (18ch), white eyebrow, 28px gaps; this is 700/56px (20ch), orange eyebrow,\n#                 32px gaps, 900px column -> §7 candidate hero-dark-centered-meta-4-bold\n#   [1] head + 5 service cards + 7 capability pills + \"View all services\" [5/5 on services-image-cards]\n#                 -> UNMATCHED: services-image-cards has no pill row, no closing button, and a different head\n#                 (orange link) -> §7 candidate service-cards-5-caps\n#   [2] subtle, head + 6 application cards (16:10) + \"View all applications\" [6/0] -> §7 service-cards-6-button\n#   [3] .sa-estimate  dark band, copy | 2 buttons, MID-PAGE [0/0] -> UNMATCHED: cta-band-dark is centred and\n#                 always last -> §7 candidate estimate-band-split\n#   [4] two feature cards with faded photos (light | dark) [2/0] -> §7 candidate feature-cards-2-image\n#   [5] .final-cta -> cta-band-dark [0/0]\n# Brand: no present-tense \"Potomac\" in the copy.\n# Style-rule breaches kept verbatim: 11 \"→\" in the card labels (\"Learn more →\", \"View details →\").\n",
+ "assets": [
+  "sa_svc_1",
+  "sa_svc_2",
+  "sa_svc_3",
+  "sa_svc_4",
+  "sa_svc_5",
+  "sa_app_1",
+  "sa_app_2",
+  "sa_app_3",
+  "sa_app_4",
+  "sa_app_5",
+  "sa_app_6",
+  "sa_feat_1",
+  "sa_feat_2"
+ ],
+ "sections": [
+  {
+   "pattern": "hero-dark-centered-meta-4-bold",
+   "values": "hero-dark-centered-meta-4-bold.values.json"
+  },
+  {
+   "pattern": "service-cards-5-caps",
+   "values": "service-cards-5-caps.values.json"
+  },
+  {
+   "pattern": "service-cards-6-button",
+   "values": "service-cards-6-button.values.json"
+  },
+  {
+   "pattern": "estimate-band-split",
+   "values": "estimate-band-split.values.json"
+  },
+  {
+   "pattern": "feature-cards-2-image",
+   "values": "feature-cards-2-image.values.json"
+  },
+  {
+   "pattern": "cta-band-dark",
+   "values": {
+    "heading_1": "Get Started Today",
+    "heading_2": "Have a part in mind?",
+    "body_1": "<p>Share your CAD files and tolerance requirements. Our engineers review every design for manufacturability and respond within one business day.</p>",
+    "button_1": "Request a quote",
+    "url_1": "Services - CNC Micromachining.html#quote",
+    "button_2": "Contact us",
+    "url_2": "/contact/"
+   }
+  }
+ ]
+}
