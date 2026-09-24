@@ -39,7 +39,7 @@ a. UNPACK into a temp dir. Enumerate page-level HTML files — entry documents o
 
 **Parse rule — design filenames contain spaces, so do not split on the first whitespace.** Trim the line, then:
 
-1. Pull out any `key=value` tokens. `interactive=<filename>` is the only key defined (3.c.iv).
+1. Pull out `was=<old path>` first: it must be the LAST field, and because paths contain spaces its value is everything after `was=` to the end of the line, trimmed. Then pull out the remaining `key=value` tokens; `interactive=<filename>` (3.c.iv) is the only other key defined.
 2. Of what remains, if the LAST whitespace-separated token is exactly `page`, `post_services` or `post_application`, that token is the post type and everything before it, trimmed, is the path.
 3. Otherwise the whole remainder is the path and the type is `page`.
 
@@ -76,6 +76,8 @@ c. FOR EACH page in the zip:
 i. IDENTITY: the question here is **"has this pipeline already created this page?"** — never "does anything with this slug exist?". Live pages and pre-process duplicates are irrelevant to it: they were made before this process existed, and a fresh draft is meant to be built alongside them, not skipped because of them.
 
 **Check by provenance, via Novamira:** query for a post with postmeta `_pl_auto_page` = this design page's path inside the zip, at `post_status=any` and `post_type=any`.
+
+**If the manifest entry carries `was=<old path>`, query that path too.** A re-export can rename a page (the 2026-09-24 export prefixed every filename with its section), and the stamp holds the path the page had when it was built. A hit on either path is this page. Never re-stamp a post during this check: `_pl_auto_page` is rewritten only by the supervised job that refreshes that post.
 
 - **Hit** → this pipeline built it. Record `"skipped-already-built"` with the existing post_id and continue. The one exception: if this zip's status is `partial` and this page's recorded status is `"failed"` or missing, re-enter and rebuild it.
 - **Miss** → build it, regardless of what else lives at that slug. `build-state.json` is the ledger of record, but it lives on a build branch that may never merge — so if WP meta says this pipeline built a page and the ledger disagrees, trust WP and reconcile the ledger.
