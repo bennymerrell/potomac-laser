@@ -1,0 +1,56 @@
+{
+  "run_id": "20260925-draft-slugs",
+  "mode": "SUPERVISED, requested in chat: the service drafts' URL keys (slugs) must match the live service links in the navigation.",
+  "renames": [
+    {
+      "post_id": 12239,
+      "from": "pl-auto-cnc-micromachining",
+      "to": "cnc-micro-machining-services",
+      "live_post_holding_slug": 11893
+    },
+    {
+      "post_id": 12240,
+      "from": "pl-auto-laser-micromachining",
+      "to": "laser-micromachining",
+      "live_post_holding_slug": 1421
+    },
+    {
+      "post_id": 12241,
+      "from": "pl-auto-micro-hole-drilling",
+      "to": "micro-hole-drilling",
+      "live_post_holding_slug": 2692
+    },
+    {
+      "post_id": 12242,
+      "from": "pl-auto-rapid-prototyping",
+      "to": "rapid-prototyping-services",
+      "live_post_holding_slug": 11536
+    },
+    {
+      "post_id": 12243,
+      "from": "pl-auto-3d-printing",
+      "to": "3d-printing-contract-services",
+      "live_post_holding_slug": 5821
+    },
+    {
+      "post_id": 12371,
+      "from": "pl-auto-services-and-applications",
+      "to": "services-applications",
+      "live_post_holding_slug": 9970
+    }
+  ],
+  "why_allowed": "WordPress does not enforce slug uniqueness for drafts (wp_unique_post_slug returns draft slugs unchanged), so a draft can hold the same key as the live post; the live posts are untouched.",
+  "go_live_note": "At go-live the old live post must still be renamed/drafted BEFORE the draft is published, otherwise WordPress suffixes the new post to <slug>-2. Publishing one of these drafts from wp-admin directly, while the live page is still published, would produce the -2 URL.",
+  "not_ours": "12127, 12133, 12223-12226 are older manual \"(DRAFT)\" posts (unstamped, now drafts) with *-draft / *-draft-blocks slugs; they are not going live and were not changed.",
+  "result": {
+    "12239": "draft:cnc-micro-machining-services",
+    "12240": "draft:laser-micromachining",
+    "12241": "draft:micro-hole-drilling",
+    "12242": "draft:rapid-prototyping-services",
+    "12243": "draft:3d-printing-contract-services",
+    "12371": "draft:services-applications"
+  },
+  "incident": "The first batch errored on get_sample_permalink() (an admin-only function) AFTER renaming 12239; state was read back, and the remaining five were renamed in two further calls, each guarded on the expected current slug.",
+  "verified": "Logged out: the six live URLs still serve the live posts (none serves a draft). Logged in (Chrome, own tab group, closed): /services/cnc-micro-machining-services/ -> post 11893, /services-applications/ -> page 9970 (live, not the drafts); previews ?p=12239 and ?page_id=12371 open the drafts.",
+  "specs": "spec.yaml slugs stay pl-auto-* (build-time slug; validate_spec --automation requires the namespace at build). The go-live slug is recorded in build-state.json as planned_live_url."
+}
