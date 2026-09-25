@@ -28,7 +28,9 @@
               "id": "quote",
               "status": "deferred-form (B11)"
             }
-          ]
+          ],
+          "planned_live_url": "https://www.potomac-laser.com/services/cnc-micro-machining-services/",
+          "replaces_live_post": 11893
         },
         {
           "slug": "pl-auto-laser-micromachining",
@@ -41,7 +43,13 @@
           "run": "20260806-124030",
           "sections_built": 12,
           "sections_deferred": [],
-          "note": "First page needing NO §7 authoring — 12/12 matched. All 10 images deduped to the CNC run's attachments; zero new uploads. DEFECT FOUND 20260806-173742: its services-image-cards tokens are grouped (body_3-7 descriptions, body_8-12 links) but the fragment interleaves per card (body_3/4 = card 1), so each card's link slot renders the NEXT card's description and cards 4-5 lose their descriptions. CORRECTED 2026-08-06 (commit e7d6efa, merged 65e0989): token order now follows the fragment's document order in both sibling specs; built trees re-tokened in place by tools/retoken_section.py, and posts 12240/12241 patched by element id — 8 editor values each, all 292 ids and 4409 leaf paths untouched, prior _elementor_data kept in meta _elementor_data_bak_cards_20260806. All 3671 string leaves now match the repo builds on both posts."
+          "note": "First page needing NO §7 authoring — 12/12 matched. All 10 images deduped to the CNC run's attachments; zero new uploads. DEFECT FOUND 20260806-173742: its services-image-cards tokens are grouped (body_3-7 descriptions, body_8-12 links) but the fragment interleaves per card (body_3/4 = card 1), so each card's link slot renders the NEXT card's description and cards 4-5 lose their descriptions. CORRECTED 2026-08-06 (commit e7d6efa, merged 65e0989): token order now follows the fragment's document order in both sibling specs; built trees re-tokened in place by tools/retoken_section.py, and posts 12240/12241 patched by element id — 8 editor values each, all 292 ids and 4409 leaf paths untouched, prior _elementor_data kept in meta _elementor_data_bak_cards_20260806. All 3671 string leaves now match the repo builds on both posts.",
+          "planned_live_url": "https://www.potomac-laser.com/services/laser-micromachining/",
+          "replaces_live_post": 1421,
+          "live_children_to_reparent": [
+            2200,
+            2239
+          ]
         },
         {
           "slug": "pl-auto-micro-hole-drilling",
@@ -54,7 +62,9 @@
           "run": "20260806-124030",
           "sections_built": 12,
           "sections_deferred": [],
-          "note": "Recorded as ZERO interventions. Carries the same services-image-cards token-grouping defect as 12240 (see that entry); the 3.c.vi pass that cleared it did not catch the misordering."
+          "note": "Recorded as ZERO interventions. Carries the same services-image-cards token-grouping defect as 12240 (see that entry); the 3.c.vi pass that cleared it did not catch the misordering.",
+          "planned_live_url": "https://www.potomac-laser.com/services/micro-hole-drilling/",
+          "replaces_live_post": 2692
         },
         {
           "slug": "pl-auto-rapid-prototyping",
@@ -68,7 +78,9 @@
           "sections_built": 12,
           "sections_deferred": [],
           "verify": "3.c.vi iteration 2 of 3. Text compared line-by-line against specs/pl-auto-rapid-prototyping/mock.html: 5 of 11 comparable sections hash-identical, the rest differing only by the sibling-wide \"Request a Quote\" button label, the hero line the fragment has no slot for, the HubSpot form's own field labels, and the collapsed FAQ answers. Card grids 5/3/4 across at equal widths, 9 of 9 images loaded, iframe 1792x3122, no literal tokens.",
-          "note": "Iteration 1 shipped the inherited services-image-cards token grouping; iteration 2 corrected it from the fragment's own document order."
+          "note": "Iteration 1 shipped the inherited services-image-cards token grouping; iteration 2 corrected it from the fragment's own document order.",
+          "planned_live_url": "https://www.potomac-laser.com/services/rapid-prototyping-services/",
+          "replaces_live_post": 11536
         },
         {
           "slug": "pl-auto-3d-printing",
@@ -82,7 +94,13 @@
           "sections_built": 12,
           "sections_deferred": [],
           "verify": "3.c.vi iteration 2 of 3. Same comparison profile as 12242 — 5 of 11 comparable sections hash-identical, remaining deltas all accounted for. Card grids 5/3/4 at equal widths, 9 of 9 images loaded, iframe 3dp-interactive-frame 1792x3148, 8 FAQ items, no literal tokens.",
-          "note": "spec-table-dark carries 8 rows, as on its siblings; the pattern's Notes mark spec rows adjustable."
+          "note": "spec-table-dark carries 8 rows, as on its siblings; the pattern's Notes mark spec rows adjustable.",
+          "planned_live_url": "https://www.potomac-laser.com/services/3d-printing-contract-services/",
+          "replaces_live_post": 5821,
+          "live_children_to_reparent": [
+            5616,
+            5800
+          ]
         }
       ],
       "new_patterns": [
@@ -136,7 +154,9 @@
           "status": "skipped-already-built",
           "run": "20260924-135039",
           "matched_via": "was=CNC Micromachining.html",
-          "note": "not written; refresh is the separate supervised job"
+          "note": "not written; refresh is the separate supervised job",
+          "planned_live_url": "https://www.potomac-laser.com/services/cnc-micro-machining-services/",
+          "replaces_live_post": 11893
         },
         {
           "slug": "pl-auto-laser-micromachining",
@@ -148,7 +168,13 @@
           "status": "skipped-already-built",
           "run": "20260924-135039",
           "matched_via": "was=Laser Micromachining.html",
-          "note": "not written; refresh is the separate supervised job"
+          "note": "not written; refresh is the separate supervised job",
+          "planned_live_url": "https://www.potomac-laser.com/services/laser-micromachining/",
+          "replaces_live_post": 1421,
+          "live_children_to_reparent": [
+            2200,
+            2239
+          ]
         },
         {
           "slug": "pl-auto-micro-hole-drilling",
@@ -160,7 +186,9 @@
           "status": "skipped-already-built",
           "run": "20260924-135039",
           "matched_via": "was=Micro-Hole Drilling.html",
-          "note": "not written; refresh is the separate supervised job"
+          "note": "not written; refresh is the separate supervised job",
+          "planned_live_url": "https://www.potomac-laser.com/services/micro-hole-drilling/",
+          "replaces_live_post": 2692
         },
         {
           "slug": "pl-auto-rapid-prototyping",
@@ -172,7 +200,9 @@
           "status": "skipped-already-built",
           "run": "20260924-135039",
           "matched_via": "was=Rapid Prototyping.html",
-          "note": "not written; refresh is the separate supervised job"
+          "note": "not written; refresh is the separate supervised job",
+          "planned_live_url": "https://www.potomac-laser.com/services/rapid-prototyping-services/",
+          "replaces_live_post": 11536
         },
         {
           "slug": "pl-auto-3d-printing",
@@ -184,7 +214,13 @@
           "status": "skipped-already-built",
           "run": "20260924-135039",
           "matched_via": "was=3D Printing.html",
-          "note": "not written; refresh is the separate supervised job"
+          "note": "not written; refresh is the separate supervised job",
+          "planned_live_url": "https://www.potomac-laser.com/services/3d-printing-contract-services/",
+          "replaces_live_post": 5821,
+          "live_children_to_reparent": [
+            5616,
+            5800
+          ]
         },
         {
           "slug": "pl-auto-about-our-group",
@@ -324,7 +360,9 @@
           "verify_iterations": 2,
           "previous_status": "failed: pattern-budget-exhausted (run 20260924-100754)",
           "built_by_run": "20260924-125928",
-          "note": "RUN A page; stamped draft found by path, not written"
+          "note": "RUN A page; stamped draft found by path, not written",
+          "planned_live_url": "https://www.potomac-laser.com/services-applications/",
+          "replaces_live_post": 9970
         },
         {
           "slug": "pl-auto-materials",
@@ -613,7 +651,9 @@
           "status": "skipped-already-built",
           "run": "20260924-100754",
           "matched_via": "was=CNC Micromachining.html",
-          "note": "not written; refresh is the separate supervised job"
+          "note": "not written; refresh is the separate supervised job",
+          "planned_live_url": "https://www.potomac-laser.com/services/cnc-micro-machining-services/",
+          "replaces_live_post": 11893
         },
         {
           "slug": "pl-auto-laser-micromachining",
@@ -625,7 +665,13 @@
           "status": "skipped-already-built",
           "run": "20260924-100754",
           "matched_via": "was=Laser Micromachining.html",
-          "note": "not written; refresh is the separate supervised job"
+          "note": "not written; refresh is the separate supervised job",
+          "planned_live_url": "https://www.potomac-laser.com/services/laser-micromachining/",
+          "replaces_live_post": 1421,
+          "live_children_to_reparent": [
+            2200,
+            2239
+          ]
         },
         {
           "slug": "pl-auto-micro-hole-drilling",
@@ -637,7 +683,9 @@
           "status": "skipped-already-built",
           "run": "20260924-100754",
           "matched_via": "was=Micro-Hole Drilling.html",
-          "note": "not written; refresh is the separate supervised job"
+          "note": "not written; refresh is the separate supervised job",
+          "planned_live_url": "https://www.potomac-laser.com/services/micro-hole-drilling/",
+          "replaces_live_post": 2692
         },
         {
           "slug": "pl-auto-rapid-prototyping",
@@ -649,7 +697,9 @@
           "status": "skipped-already-built",
           "run": "20260924-100754",
           "matched_via": "was=Rapid Prototyping.html",
-          "note": "not written; refresh is the separate supervised job"
+          "note": "not written; refresh is the separate supervised job",
+          "planned_live_url": "https://www.potomac-laser.com/services/rapid-prototyping-services/",
+          "replaces_live_post": 11536
         },
         {
           "slug": "pl-auto-3d-printing",
@@ -661,7 +711,13 @@
           "status": "skipped-already-built",
           "run": "20260924-100754",
           "matched_via": "was=3D Printing.html",
-          "note": "not written; refresh is the separate supervised job"
+          "note": "not written; refresh is the separate supervised job",
+          "planned_live_url": "https://www.potomac-laser.com/services/3d-printing-contract-services/",
+          "replaces_live_post": 5821,
+          "live_children_to_reparent": [
+            5616,
+            5800
+          ]
         },
         {
           "slug": "pl-auto-about-our-group",
@@ -814,7 +870,9 @@
           "status": "built",
           "run": "20260924-125928",
           "verify_iterations": 2,
-          "previous_status": "failed: pattern-budget-exhausted (run 20260924-100754)"
+          "previous_status": "failed: pattern-budget-exhausted (run 20260924-100754)",
+          "planned_live_url": "https://www.potomac-laser.com/services-applications/",
+          "replaces_live_post": 9970
         }
       ],
       "new_patterns": [

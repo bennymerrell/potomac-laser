@@ -1,0 +1,76 @@
+{
+  "run_id": "20260925-service-urls",
+  "mode": "SUPERVISED, requested in chat: make sure the service pages ready for go-live match the URLs in the header Services & Applications dropdown.",
+  "dropdown_source": "the live header markup (not a WP nav menu: Main Menu New has no children under Services & Applications)",
+  "go_live_url_map": [
+    {
+      "draft": 12371,
+      "dropdown_label": "Services & Applications",
+      "url": "/services-applications/",
+      "replaces_live_post": 9970,
+      "live_children_to_reparent": []
+    },
+    {
+      "draft": 12242,
+      "dropdown_label": "Rapid Prototyping Services",
+      "url": "/services/rapid-prototyping-services/",
+      "replaces_live_post": 11536,
+      "live_children_to_reparent": []
+    },
+    {
+      "draft": 12239,
+      "dropdown_label": "CNC Micro Machining Services",
+      "url": "/services/cnc-micro-machining-services/",
+      "replaces_live_post": 11893,
+      "live_children_to_reparent": []
+    },
+    {
+      "draft": 12241,
+      "dropdown_label": "Laser Micro-Hole Drilling Services",
+      "url": "/services/micro-hole-drilling/",
+      "replaces_live_post": 2692,
+      "live_children_to_reparent": []
+    },
+    {
+      "draft": 12240,
+      "dropdown_label": "Laser Micromachining Services",
+      "url": "/services/laser-micromachining/",
+      "replaces_live_post": 1421,
+      "live_children_to_reparent": [
+        2200,
+        2239
+      ]
+    },
+    {
+      "draft": 12243,
+      "dropdown_label": "3D Printing Contract Services",
+      "url": "/services/3d-printing-contract-services/",
+      "replaces_live_post": 5821,
+      "live_children_to_reparent": [
+        5616,
+        5800
+      ]
+    }
+  ],
+  "structure_check": "each draft has the same post type as its live post and post_parent 0, like the live posts, so the go-live swap (take the live slug) lands exactly on the dropdown URL",
+  "links_fixed": {
+    "12239-12243": [
+      "/services/rapid-prototyping/ (404) -> /services/rapid-prototyping-services/",
+      "/services/hybrid-fabrication/ (404, \"Hybrid CNC + Laser\" card) -> /services-applications/ (no hybrid page exists; default, user may choose another target)"
+    ],
+    "12240, 12242, 12243": [
+      "\"See 3D printing\" /services/3d-printing/ -> /services/3d-printing-contract-services/"
+    ],
+    "12371": [
+      "CNC draft preview -> /services/cnc-micro-machining-services/",
+      "CNC draft preview #quote -> /project-quote/#projectForm (the new CNC page has no #quote section)",
+      "About Our Group draft preview -> /about-our-group/ (now live)"
+    ],
+    "*-interactive-v2.html": [
+      "same two 404 links fixed inside the explorer iframes (server-side; before-copies in novamira-drafts/run-20260925-service-urls/)"
+    ]
+  },
+  "kept": "12371 \"Micro 3D Printing\" pill -> /services/3d-printing/ (post 4958 \"Micro 3D Printing Services\", a separate live page, not a dropdown item)",
+  "verified": "Chrome (own tab group, closed): every services/applications/about/quote/contact link on all six drafts, inside the explorer iframes too, returns 200 logged-out (HEAD); no preview links remain.",
+  "rollback": "drafts: built/run-20260925-service-urls.rollback-links.json; v2 files: novamira-drafts/run-20260925-service-urls/<p>-interactive-v2.before.html"
+}
