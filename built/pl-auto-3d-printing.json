@@ -6579,7 +6579,7 @@
             "elType": "widget",
             "widgetType": "button",
             "settings": {
-             "text": "Visit Reference Materials",
+             "text": "Visit Reference Materials →",
              "link": {
               "url": "https://reference-materials.goodfellow.com/",
               "is_external": "",

@@ -512,8 +512,8 @@ def workflow(t, sec):
 
 
 def group_btn_text(a):
-    # user, 2026-09-25: the reference-materials card reads "Visit Reference Materials" (was the design's "View Reference Materials")
-    return 'Visit Reference Materials' if 'reference-materials.goodfellow.com' in link(a.get('href')) else txt_(a)
+    # user, 2026-09-25: the reference-materials card reads "Visit Reference Materials" (was the design's "View Reference Materials"); arrow matches About Our Group
+    return 'Visit Reference Materials →' if 'reference-materials.goodfellow.com' in link(a.get('href')) else txt_(a)
 
 
 def group(t, sec, assets):
