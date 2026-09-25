@@ -76,5 +76,63 @@
     "why-us row top-aligned (DS rule)",
     "each page uses its own section CSS (captures pinned to Example + Compact)"
   ],
-  "verification": "1629px: every section within ±3 px of the new design on all five; explorer 5 tabs switch, material names are plain labels, no basket buttons; FAQ toggles and left column sticky; quote submit intercepted on 12470 -> HubSpot 143181153/9dba7d36, nothing sent; 0 broken images"
+  "verification": "1629px: every section within ±3 px of the new design on all five; explorer 5 tabs switch, material names are plain labels, no basket buttons; FAQ toggles and left column sticky; quote submit intercepted on 12470 -> HubSpot 143181153/9dba7d36, nothing sent; 0 broken images",
+  "golive": {
+    "requested": "user in chat: \"Put the drafts live\"",
+    "utc": "2026-09-25T14:12Z",
+    "recovery_floor": {
+      "gate": "SKILL.md §0 - TAKEN (previous set 22.7 h old predated today's go-live)",
+      "updraft_set_timestamp": 1790345493,
+      "when": "2026-09-25T14:11:33Z",
+      "backup_nonce": "7e779933e632",
+      "updraft_last_backup_success": 1,
+      "updraft_last_backup_errors": []
+    },
+    "method": "copy: each review draft's _elementor_data into its live post (IDs, URLs, menus, children, SEO unchanged); _pl_auto_zip/_pl_auto_run re-stamped; per-post cache clear",
+    "copied": [
+      {
+        "live": 12239,
+        "from": 12470,
+        "url": "/services/cnc-micro-machining-services/",
+        "sha256_12": "f35928916c1d",
+        "rollback": "novamira-drafts/run-20260925-svc-reexport/rollback-live-12239.json",
+        "rollback_sha256": "e316cbb9614ce8bfcc82df2f188760c2878ca2f36b32078944353bc35ba27b12"
+      },
+      {
+        "live": 12240,
+        "from": 12471,
+        "url": "/services/laser-micromachining/",
+        "sha256_12": "536131fbf2a0",
+        "rollback": "novamira-drafts/run-20260925-svc-reexport/rollback-live-12240.json",
+        "rollback_sha256": "686c7185ab66bf312b533351d6abb5a74e1b2d1ac625edfb193d8cd5ced01eaa"
+      },
+      {
+        "live": 12241,
+        "from": 12472,
+        "url": "/services/micro-hole-drilling/",
+        "sha256_12": "30ec06cc5f2e",
+        "rollback": "novamira-drafts/run-20260925-svc-reexport/rollback-live-12241.json",
+        "rollback_sha256": "441129c560c0d9fccb9e7503c7c4372ccfb04a9bb52ee8c777befcf26eed6902"
+      },
+      {
+        "live": 12242,
+        "from": 12473,
+        "url": "/services/rapid-prototyping-services/",
+        "sha256_12": "36c765da71d3",
+        "rollback": "novamira-drafts/run-20260925-svc-reexport/rollback-live-12242.json",
+        "rollback_sha256": "8d68f5e15c0a6bca59f50aaba63ecc6322193bbfe050779c347326bddfceb47e"
+      },
+      {
+        "live": 12243,
+        "from": 12474,
+        "url": "/services/3d-printing-contract-services/",
+        "sha256_12": "50d2c34899db",
+        "rollback": "novamira-drafts/run-20260925-svc-reexport/rollback-live-12243.json",
+        "rollback_sha256": "d46fcb17bad0d88018670dbca6384bccaf3f263cb0a3262af6fd3cf6da4e64c3"
+      }
+    ],
+    "verification": "logged-out curl: 5 URLs 200 with the new copy, homepage testimonial company lines, no stars, no placeholder names, header top bar present; homepage 200. Chrome: CNC and 3DP every section within ±3 px of the design, explorer informational, form present, FAQ sticky.",
+    "review_drafts": "12470-12474 left as drafts (identical to live); trash when no longer needed",
+    "rollback_procedure": "per post: write the rollback file's _elementor_data back to _elementor_data (and the _pl_auto_* values), then the per-post cache clear"
+  }
 }
