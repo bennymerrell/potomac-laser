@@ -15,7 +15,8 @@
     "3DP design defaults its quote to 'Detailed' (two-step, tolerance/quantity/material fields); built as 'Compact' so all five use the tested HubSpot mapping",
     "group section split into two patterns: group-cards-4-logos-dark (CNC) and group-cards-4-logos-dark-labels (LM/MHD/RP/3DP: labels bottom-aligned in 34px)",
     "generator now fails if any page's section differs structurally from its pattern template",
-    "2026-09-25 (user): 'View Reference Materials' -> https://reference-materials.goodfellow.com/ (was basrid.co.uk); written as CNC v14, others v4 (bundle-svc-5-v-refmat.json)"
+    "2026-09-25 (user): 'View Reference Materials' -> https://reference-materials.goodfellow.com/ (was basrid.co.uk); written as CNC v14, others v4 (bundle-svc-5-v-refmat.json)",
+    "2026-09-25 (user): group reference-materials button relabelled 'View Reference Materials' -> 'Visit Reference Materials' (no arrow: sibling buttons in this section have none); written as CNC v15, others v5 (bundle-svc-5-label.json)"
   ],
   "posts_modified": [
     {
@@ -65,7 +66,8 @@
     "novamira-drafts/run-20260925-svc-refresh/bundle-svc-4-v1.json",
     "novamira-drafts/run-20260925-svc-refresh/bundle-svc-4-v2.json",
     "novamira-drafts/run-20260925-svc-refresh/bundle-svc-4-v3.json",
-    "novamira-drafts/run-20260925-svc-refresh/bundle-svc-5-v-refmat.json"
+    "novamira-drafts/run-20260925-svc-refresh/bundle-svc-5-v-refmat.json",
+    "novamira-drafts/run-20260925-svc-refresh/bundle-svc-5-label.json"
   ],
   "patterns": "13 candidates in built/authored/run-a/candidates/ — not yet minted into reference/snippets",
   "verification": "Section heights within ±3px of each design at 1629px viewport, except specs +4 (clamp() h2 at wider viewport). Explorer tabs switch; FAQ toggles; FAQ left column sticky; 0 broken images; links unwrapped (no mimecast/basref). Quote submit intercepted on 12239 and 12243: HubSpot 143181153 / 9dba7d36 (same form as /project-quote/), nothing sent."

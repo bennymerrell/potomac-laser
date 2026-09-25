@@ -511,6 +511,11 @@ def workflow(t, sec):
     return outer([boxed(kids)], bg='#FFFFFF', pad=(62, 24, 52, 24), eid='process')
 
 
+def group_btn_text(a):
+    # user, 2026-09-25: the reference-materials card reads "Visit Reference Materials" (was the design's "View Reference Materials")
+    return 'Visit Reference Materials' if 'reference-materials.goodfellow.com' in link(a.get('href')) else txt_(a)
+
+
 def group(t, sec, assets):
     hd = sec.select_one('.mb-8.text-center')
     cols = sec.select('.grid.gap-5 > div')
@@ -539,7 +544,7 @@ def group(t, sec, assets):
             if primary:
                 kids.append(button(t('button', txt_(a)), t('url', link(a.get('href'))), size=12, weight='700', pad=(10, 20), css=css))
             else:
-                kids.append(button(t('button', txt_(a)), t('url', link(a.get('href'))), bg='rgba(0,0,0,0)', fg=NAVYMID, size=12, weight='700', pad=(9, 20),
+                kids.append(button(t('button', group_btn_text(a)), t('url', link(a.get('href'))), bg='rgba(0,0,0,0)', fg=NAVYMID, size=12, weight='700', pad=(9, 20),
                                    border=NAVYMID, css=css + 'selector .elementor-button{border-width:1.8px!important}'))
         cards.append(container([
             heading(t('heading', lab), 12, '400', color=GRAY400, lh=16, ls=0.6, upper=True, _margin=box(0, 0, 8, 0),
