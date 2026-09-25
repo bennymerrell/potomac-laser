@@ -1,0 +1,31 @@
+{
+  "run_id": "20260925-button-fix",
+  "mode": "SUPERVISED, requested in chat (\"fix the button markup on the service drafts\").",
+  "defect": "Quote button source <button type=\"button\" type=\"submit\" id=\"r-submit\"> (duplicate type) rendered as type=\"button\" \"submit\"id=\"r-submit\": the id attribute was lost. Inherited from the library fragment reference/snippets/quote-form-hubspot.json.",
+  "fix": "<button type=\"submit\" id=\"r-submit\"> on all five drafts; the script comment describing the button updated to match. type=submit chosen because the script already cancels the native submit on click (no double submit) and a submit button enables Enter-to-submit.",
+  "posts_modified": [
+    {
+      "post_id": 12239,
+      "new_sha": "a5b44714bf935489aa4b4aa784b8113753a21edaffd8cc200c74508fcbba91ef"
+    },
+    {
+      "post_id": 12240,
+      "new_sha": "204076ad69769792ed61e9db72f2b32fac24328f1d54fd66fe51d619bb63c3e6"
+    },
+    {
+      "post_id": 12241,
+      "new_sha": "0ce679c85527dac3c83c45b36358c681576385a2d616872b49a0b02232b2538c"
+    },
+    {
+      "post_id": 12242,
+      "new_sha": "c58018c70811f4a2122b6ac90cb56ee98b42fbfef6440aab5681a0fcfa373900"
+    },
+    {
+      "post_id": 12243,
+      "new_sha": "aa07e4876adc9a1b53b4cf490c9aaeebbbd01263b8e9484cc946c7755be2f067"
+    }
+  ],
+  "verified": "Chrome (own tab group, closed), HubSpot calls intercepted in-page (nothing sent): all five render <button type=\"submit\" id=\"r-submit\">, getElementById works; on 12239 a real mouse click produced exactly 1 HubSpot call and the thank-you state. NOT verified: Enter-to-submit — the automation session delivered no keyboard events at all (even typing into the field had no effect), so it could not be tested.",
+  "not_changed": "reference/snippets/quote-form-hubspot.json still carries the duplicate type (SKILL §8: existing fragments are never edited). Any new page assembled from it reproduces the defect until the fragment is fixed or superseded (the service refresh will need a new two-step quote pattern anyway).",
+  "rollback": "restore _elementor_data from built/run-20260925-button-fix.rollback-button.json"
+}
