@@ -1,0 +1,52 @@
+{
+  "run_id": "20260925-unpublish-draft-services",
+  "mode": "SUPERVISED, requested in chat (\"Set the published DRAFT service posts to draft\").",
+  "posts": [
+    {
+      "post_id": 12127,
+      "title": "CNC Micromachining Services (DRAFT)",
+      "url": "/services/cnc-micromachining-services-draft/",
+      "status_before": "publish",
+      "status_after": "draft"
+    },
+    {
+      "post_id": 12133,
+      "title": "CNC Micromachining Services (DRAFT – Elementor)",
+      "url": "/services/cnc-micromachining-services-draft-blocks/",
+      "status_before": "publish",
+      "status_after": "draft"
+    },
+    {
+      "post_id": 12223,
+      "title": "3D Printing Contract Services (DRAFT – Elementor)",
+      "url": "/services/3d-printing-contract-services-draft-blocks/",
+      "status_before": "publish",
+      "status_after": "draft"
+    },
+    {
+      "post_id": 12224,
+      "title": "Rapid Prototyping Services (DRAFT – Elementor)",
+      "url": "/services/rapid-prototyping-services-draft-blocks/",
+      "status_before": "publish",
+      "status_after": "draft"
+    },
+    {
+      "post_id": 12225,
+      "title": "Laser Micro-Hole Drilling Services (DRAFT – Elementor)",
+      "url": "/services/laser-micro-hole-drilling-services-draft-blocks/",
+      "status_before": "publish",
+      "status_after": "draft"
+    },
+    {
+      "post_id": 12226,
+      "title": "Laser Micromachining Services (DRAFT – Elementor)",
+      "url": "/services/laser-micromachining-services-draft-blocks/",
+      "status_before": "publish",
+      "status_after": "draft"
+    }
+  ],
+  "preflight": "no menu items, no children, not linked from any published post/page content or Elementor data, all already AIOSEO noindex",
+  "rollback": "set post_status back to publish (slugs, dates and content untouched)",
+  "verified": "Logged out: all six /services/…-draft(-blocks)/ URLs return 404; the real service pages (/services/cnc-micro-machining-services/, /services/laser-micromachining/, /services/micro-hole-drilling/, /services/rapid-prototyping-services/, /services/3d-printing-contract-services/) and /services-applications/ return 200. Per-post cache cleared.",
+  "note": "The five *-interactive.html files embedded by 12133 and 12223-12226 are untouched; they now serve no public page."
+}
