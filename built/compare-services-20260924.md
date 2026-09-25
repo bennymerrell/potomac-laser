@@ -81,12 +81,22 @@ Only a few real copy changes remain, and they repeat across the pages:
 - **Everything else is word-for-word the same** once dashes are normalised: why-us, services, capabilities, comparison,
   process, group, testimonials, and the other FAQ answers.
 
+## Decision (2026-09-25): explorer pills are informational, no basket
+
+The user decided that the **Explore Applications material pills are informational labels only**. They must not open the
+materials drawer, and the **"Material + Machining Basket" is not built**; no `data-basket` hooks are wired. The refresh
+builds the inline explorer with plain pill labels and leaves the basket panel and materials drawer out. The design still
+ships both, so they go back to the designer as a change request.
+
+The current service drafts were already switched to match: run 20260925-explorer-pills points them at
+`*-interactive-v2.html` copies, where the pills are plain labels.
+
 ## What a refresh would involve (for the supervised job)
 
 - **Needs new §7 patterns:**
   - the inline explorer (12 panels, the largest section)
   - the two-step quote form (with new HubSpot fields and a file upload)
-  - the basket panel and materials drawer, plus the backend decision above
+  - ~~the basket panel and materials drawer~~ **not built**: see the decision above
   - the service-page closing band variant
 - **Rebuild the rest from the current design:** hero, why-us, capabilities, comparison, group, testimonials and FAQ keep
   their structure, but the restyle means the existing fragments do not match the design's geometry. They need either

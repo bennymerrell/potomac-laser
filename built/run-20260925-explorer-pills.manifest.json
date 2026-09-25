@@ -1,0 +1,72 @@
+{
+  "run_id": "20260925-explorer-pills",
+  "mode": "SUPERVISED, requested in chat (\"both\"): make the Explore Applications material pills informational (no click, no popup/basket) on the service drafts now, and record the same decision for the service-page refresh from the new design.",
+  "files_uploaded": [
+    {
+      "path": "wp-content/uploads/novamira-drafts/cnc-interactive-v2.html",
+      "sha256": "f024b1d40ab1dcbe405a2a78dad4fd3bb396cc78052503be126226b72ecc5211",
+      "bytes": 106843,
+      "derived_from": "cnc-interactive.html on disk (sha256 3dc6072071152422e903dce470e29f42f64cce30ff8a703154beba3a50ac320f, untouched)",
+      "change": "material pills <button onclick=requestForMaterial> -> <span>; cursor default; hover removed. Built server-side from the on-disk original."
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/lm-interactive-v2.html",
+      "sha256": "cb3e110e15cba8b679ebd67042b0f33098d51fcc1e032a2cf05c5736be8069a4",
+      "bytes": 107680,
+      "derived_from": "lm-interactive.html on disk (sha256 cf1214fd164de4d59d18733f0883756f2a39b51df05f288f99ed1006165160d1, untouched)",
+      "change": "material pills <button onclick=requestForMaterial> -> <span>; cursor default; hover removed. Built server-side from the on-disk original."
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/mhd-interactive-v2.html",
+      "sha256": "9150c95805f8cd0c2a45959e05438e69435e748bbae83e700ec038987f6c3b14",
+      "bytes": 107710,
+      "derived_from": "mhd-interactive.html on disk (sha256 38207e87457dc809453b7301472df13b3cc291a6aecf891e120da9e60a2c5e17, untouched)",
+      "change": "material pills <button onclick=requestForMaterial> -> <span>; cursor default; hover removed. Built server-side from the on-disk original."
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/rp-interactive-v2.html",
+      "sha256": "0fc7e75d5419a71a92e45414335387df8810dc53c645c52cad634e6a5cccbd7f",
+      "bytes": 107744,
+      "derived_from": "rp-interactive.html on disk (sha256 a1a5de27f0e2f2adc32774a51a99392edc6bab3d84d5acab67e82ab1b91027ef, untouched)",
+      "change": "material pills <button onclick=requestForMaterial> -> <span>; cursor default; hover removed. Built server-side from the on-disk original."
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/3dp-interactive-v2.html",
+      "sha256": "db642fea6166f88556d90646bef4cf3314d99a5e67e0d545094edd6583b6a579",
+      "bytes": 107427,
+      "derived_from": "3dp-interactive.html on disk (sha256 414d2035f1c63872de0853874c4f8ebc4461315c9efc39c44448b26caf5f9b8f, untouched)",
+      "change": "material pills <button onclick=requestForMaterial> -> <span>; cursor default; hover removed. Built server-side from the on-disk original."
+    },
+    {
+      "path": "wp-content/uploads/novamira-drafts/run-20260925-explorer-pills/rollback-iframes.json",
+      "role": "the five drafts' _elementor_data before the iframe re-point; local copy built/run-20260925-explorer-pills.rollback-iframes.json"
+    }
+  ],
+  "originals_untouched": "the five *-interactive.html files are never modified (SKILL §5); they remain embedded by published posts 12133, 12223-12226",
+  "posts_modified": [
+    {
+      "post_id": 12239,
+      "change": "iframe #cnc-interactive-frame -> #cnc-interactive-v2-frame, src cnc-interactive.html -> cnc-interactive-v2.html"
+    },
+    {
+      "post_id": 12240,
+      "change": "iframe #lm-interactive-frame -> #lm-interactive-v2-frame, src lm-interactive.html -> lm-interactive-v2.html"
+    },
+    {
+      "post_id": 12241,
+      "change": "iframe #mhd-interactive-frame -> #mhd-interactive-v2-frame, src mhd-interactive.html -> mhd-interactive-v2.html"
+    },
+    {
+      "post_id": 12242,
+      "change": "iframe #rp-interactive-frame -> #rp-interactive-v2-frame, src rp-interactive.html -> rp-interactive-v2.html"
+    },
+    {
+      "post_id": 12243,
+      "change": "iframe #3dp-interactive-frame -> #3dp-interactive-v2-frame, src 3dp-interactive.html -> 3dp-interactive-v2.html"
+    }
+  ],
+  "incident": "The first v2 copies were built locally from files fetched through Cloudflare, which appends a challenge-platform <script> (with a per-request token) to every HTML response; that script was baked into the uploaded copies. Caught by a served-hash check before anything referenced them; the v2 files were rebuilt server-side from the on-disk originals (0 Cloudflare scripts, 0 external dependencies) and overwritten (own files, created minutes earlier). Lesson: never derive a file to re-upload from its Cloudflare-served copy.",
+  "verified": "Chrome (own tab group, closed): on all five drafts the iframe loads the v2 file; material pills are <span> (5 per panel), no onclick, cursor default; clicking one does nothing (no scroll, no prefill); no basket/drawer elements; CNC application selector still switches panels (Aerospace).",
+  "refresh_decision": "For the service-page refresh from the new design: the Explore Applications material pills are informational labels only; do not build the materials drawer or the \"Material + Machining Basket\", and do not wire data-basket hooks. Recorded in built/compare-services-20260924.md; the design still ships them, so report upstream.",
+  "rollback": "restore each draft's _elementor_data from built/run-20260925-explorer-pills.rollback-iframes.json (points back at the original files); the v2 files can stay (unreferenced)"
+}
