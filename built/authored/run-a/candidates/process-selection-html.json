@@ -1,0 +1,37 @@
+[
+ {
+  "id": "0000067",
+  "elType": "container",
+  "isInner": false,
+  "settings": {
+   "content_width": "full",
+   "flex_direction": "column",
+   "flex_gap": {
+    "unit": "px",
+    "column": "0",
+    "row": "0",
+    "isLinked": true
+   },
+   "padding": {
+    "unit": "px",
+    "top": "0",
+    "right": "0",
+    "bottom": "0",
+    "left": "0",
+    "isLinked": true
+   },
+   "custom_css": "selector{position:relative;overflow:hidden}selector > .e-con-inner, selector{max-width:none}"
+  },
+  "elements": [
+   {
+    "id": "0000000",
+    "elType": "widget",
+    "widgetType": "html",
+    "settings": {
+     "html": "{embed_1}"
+    },
+    "elements": []
+   }
+  ]
+ }
+]

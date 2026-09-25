@@ -28,7 +28,7 @@ a = ap.parse_args()
 pg = json.load(open(a.page))
 amap = json.load(open(os.path.join(HERE, 'candidates', 'assets.json')))
 spec = {'spec_version': 1,
-        'page': {'title': pg['title'], 'slug': pg['slug'], 'post_type': 'page', 'post_status': 'draft'}}
+        'page': {'title': pg['title'], 'slug': pg['slug'], 'post_type': pg.get('post_type', 'page'), 'post_status': 'draft'}}
 if pg.get('assets'):
     spec['assets'] = {k: amap[k] for k in pg['assets']}
 secs = []

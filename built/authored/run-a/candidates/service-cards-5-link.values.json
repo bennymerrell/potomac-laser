@@ -1,0 +1,42 @@
+{
+ "image_1": {
+  "asset": "svc_cnc"
+ },
+ "heading_1": "CNC Micromachining",
+ "body_1": "<p>4-axis CNC milling and drilling for fine-feature and engineering plastics where repeatable tolerance control matters.</p>",
+ "heading_2": "Learn more →",
+ "url_1": "https://www.potomac-laser.com/services/cnc-micro-machining-services/",
+ "image_2": {
+  "asset": "svc_lm"
+ },
+ "heading_3": "Laser Micromachining",
+ "body_2": "<p>UV, IR and structured polymer film for nozzles incredibly ultra-fine, perfectly uniform backlit micro-holes.</p>",
+ "heading_4": "Learn more →",
+ "url_2": "https://www.potomac-laser.com/services/laser-micromachining/",
+ "image_3": {
+  "asset": "svc_rp"
+ },
+ "heading_5": "Rapid Prototyping",
+ "body_3": "<p>Fast-turn prototype paths for teams that need DFM feedback, material parts on compressed timelines.</p>",
+ "heading_6": "Learn more →",
+ "url_3": "https://www.potomac-laser.com/services/rapid-prototyping-services/",
+ "image_4": {
+  "asset": "svc_hybrid"
+ },
+ "heading_7": "Hybrid CNC + Laser",
+ "body_4": "<p>A medical-grade stainless steel stent part, CNC macro structural feature machined and laser-cut.</p>",
+ "heading_8": "Learn more →",
+ "url_4": "https://www.potomac-laser.com/services-applications/",
+ "image_5": {
+  "asset": "svc_bonding"
+ },
+ "heading_9": "Bonding & Assembly",
+ "body_5": "<p>Precision alignment, bonding, micro-assembled components flawlessly bonded and aligned data.</p>",
+ "heading_10": "Learn more →",
+ "url_5": "https://www.potomac-laser.com/services/bonding-assembly/",
+ "heading_11": "Our Services",
+ "heading_12": "Explore our precision capabilities",
+ "body_6": "<p>Choose the manufacturing route that fits your geometry, material, and production need.</p>",
+ "button_1": "Explore Applications →",
+ "url_6": "#applications"
+}

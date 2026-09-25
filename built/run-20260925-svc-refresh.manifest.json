@@ -1,0 +1,70 @@
+{
+  "run_id": "20260925-svc-refresh",
+  "mode": "SUPERVISED refresh requested in chat (\"refresh the service drafts to the current designs\"); build style \"Mixed\" (user decision).",
+  "design": "Potomac Laser.zip fab7225c… Services - *.html (tweak defaults applied: explorer Example, quote Compact, progress + upload shown)",
+  "decisions": [
+    "explorer pills informational; drawer/basket and \"Browse materials\" not built",
+    "basket CTAs (\"Upload Drawing / CAD\", \"Request Material + Machining Quote\", \"Upload CAD\") -> #quote",
+    "quote form -> HubSpot [Potomac] Start a Project (9dba7d36…), lifecyclestage lead (default, matches /project-quote/)",
+    "design normalizeStandaloneLinks() (Mimecast redirect) not carried; Mimecast-wrapped hrefs in the design unwrapped (goodfellow.com, suisse-tp.ch; basref.com does not resolve -> basrid.co.uk as on About Our Group)",
+    "dead design paths: /services/rapid-prototyping/ -> /services/rapid-prototyping-services/, /services/hybrid-fabrication/ -> /services-applications/",
+    "present-tense Potomac -> Goodfellow Microfabrication (30 strings)",
+    "FAQ left column sticky on all five (the design has it sticky on CNC only)",
+    "Snippet #10's 1224px .e-con-inner cap overridden per container on these drafts (selector.e-con > .e-con-inner{max-width:1260px!important}); designs are 1260 wide, the cap wrapped CTAs. Snippet #10 itself unchanged",
+    "MHD design defaults its explorer to 'Current' (priced materials grid with 'Add +' basket buttons); built as 'Example' to honour the informational-pills decision",
+    "3DP design defaults its quote to 'Detailed' (two-step, tolerance/quantity/material fields); built as 'Compact' so all five use the tested HubSpot mapping",
+    "group section split into two patterns: group-cards-4-logos-dark (CNC) and group-cards-4-logos-dark-labels (LM/MHD/RP/3DP: labels bottom-aligned in 34px)",
+    "generator now fails if any page's section differs structurally from its pattern template"
+  ],
+  "posts_modified": [
+    {
+      "post_id": 12239,
+      "design": "Services - CNC Micromachining.html",
+      "final": "v12",
+      "sha256": "8d8f8fe4118234482ae043a772fa47aee5ddc4ad2a3890961354d06ebbc445d1",
+      "rollback": "novamira-drafts/run-20260925-svc-refresh/rollback-12239.json"
+    },
+    {
+      "post_id": 12240,
+      "design": "Services - Laser Micromachining.html",
+      "final": "v3",
+      "sha256_12": "6bc2c71a8a54",
+      "rollback": "novamira-drafts/run-20260925-svc-refresh/rollback-12240.json",
+      "rollback_sha256": "dff817b77e164d90af062bc5d25ddb5b049078e0d8865ec50666b60f0a4ad624"
+    },
+    {
+      "post_id": 12241,
+      "design": "Services - Micro-Hole Drilling.html",
+      "final": "v3",
+      "sha256_12": "8d955845d727",
+      "rollback": "novamira-drafts/run-20260925-svc-refresh/rollback-12241.json",
+      "rollback_sha256": "3ebd77853eeb254df078b5ce8d1947ae422e1e54a9909d7906ce4d2b32b39456"
+    },
+    {
+      "post_id": 12242,
+      "design": "Services - Rapid Prototyping.html",
+      "final": "v3",
+      "sha256_12": "cb62186cfa2c",
+      "rollback": "novamira-drafts/run-20260925-svc-refresh/rollback-12242.json",
+      "rollback_sha256": "0319f6975ff7db4a243d5bd0a57523e2474530e3a31ab462ce67c1658c1010fd"
+    },
+    {
+      "post_id": 12243,
+      "design": "Services - 3D Printing.html",
+      "final": "v3",
+      "sha256_12": "2cf03b82fb62",
+      "rollback": "novamira-drafts/run-20260925-svc-refresh/rollback-12243.json",
+      "rollback_sha256": "69c653f3f2bacf8cd1fbb758d174fb79d34c062518d7b3b5fb009e0f459c7573"
+    }
+  ],
+  "files_uploaded": [
+    "novamira-drafts/run-20260925-svc-refresh/bundle-svc-cnc-v10.json",
+    "novamira-drafts/run-20260925-svc-refresh/bundle-svc-cnc-v11.json",
+    "novamira-drafts/run-20260925-svc-refresh/bundle-svc-cnc-v12.json",
+    "novamira-drafts/run-20260925-svc-refresh/bundle-svc-4-v1.json",
+    "novamira-drafts/run-20260925-svc-refresh/bundle-svc-4-v2.json",
+    "novamira-drafts/run-20260925-svc-refresh/bundle-svc-4-v3.json"
+  ],
+  "patterns": "13 candidates in built/authored/run-a/candidates/ — not yet minted into reference/snippets",
+  "verification": "Section heights within ±3px of each design at 1629px viewport, except specs +4 (clamp() h2 at wider viewport). Explorer tabs switch; FAQ toggles; FAQ left column sticky; 0 broken images; links unwrapped (no mimecast/basref). Quote submit intercepted on 12239 and 12243: HubSpot 143181153 / 9dba7d36 (same form as /project-quote/), nothing sent."
+}

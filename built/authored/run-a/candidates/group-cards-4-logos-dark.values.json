@@ -1,0 +1,43 @@
+{
+ "image_1": {
+  "asset": "svc_logo_1"
+ },
+ "body_1": "<p>Global supply of advanced metals, alloys, ceramics, polymers, and compounds with research-quality flexibility and production-scale support across 170,000+ specialist materials.</p>",
+ "body_2": "<p>170,000+ material grades</p>",
+ "body_3": "<p>No minimum order</p>",
+ "button_1": "Explore Materials",
+ "url_1": "https://www.goodfellow.com/",
+ "heading_1": "Material Supply",
+ "heading_2": "You are here",
+ "image_2": {
+  "asset": "svc_logo_2"
+ },
+ "body_4": "<p>CNC micromachining</p>",
+ "body_5": "<p>Laser micromachining</p>",
+ "body_6": "<p>Hybrid manufacturing</p>",
+ "body_7": "<p>Micro-assembly</p>",
+ "button_2": "Request Material + Machining Quote",
+ "url_2": "#quote",
+ "heading_3": "Precision Fabrication",
+ "image_3": {
+  "asset": "svc_logo_3"
+ },
+ "body_8": "<p>Certified reference materials and analytical standards supporting calibration, laboratory QA, and regulatory compliance.</p>",
+ "body_9": "<p>Calibration and QA support</p>",
+ "body_10": "<p>Traceable standards</p>",
+ "button_3": "View Reference Materials",
+ "url_3": "https://www.basrid.co.uk/",
+ "heading_4": "Reference & Calibration",
+ "image_4": {
+  "asset": "svc_logo_4"
+ },
+ "body_11": "<p>Dimensional inspection</p>",
+ "body_12": "<p>Material certification</p>",
+ "body_13": "<p>Functional testing</p>",
+ "button_4": "Explore Testing Capabilities",
+ "url_4": "https://suisse-tp.ch/",
+ "heading_5": "Testing & Validation",
+ "heading_6": "The Goodfellow Group",
+ "heading_7": "The Goodfellow Group",
+ "body_14": "<p>The Goodfellow Group brings together material supply, precision fabrication, and testing capabilities, giving you access to a complete engineering ecosystem.</p>"
+}

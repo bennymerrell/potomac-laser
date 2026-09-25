@@ -426,5 +426,55 @@
  "mat_thinmetalfoi_1": {
   "attachment_id": 12303,
   "url": "https://www.potomac-laser.com/wp-content/uploads/2026/09/pl-auto-gal-01.webp"
+ },
+ "svc_whyus": {
+  "url": "https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-whyus-team.jpg",
+  "attachment_id": 12234,
+  "source": "reused (hash-identical to the design asset img-p14k52.jpg)"
+ },
+ "svc_cnc": {
+  "url": "https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-cnc-micromachining.jpg",
+  "attachment_id": 12230,
+  "source": "reused (hash-identical to the design asset img-1v67tvr.jpg)"
+ },
+ "svc_lm": {
+  "url": "https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-laser-micromachining.jpg",
+  "attachment_id": 12232,
+  "source": "reused (hash-identical to the design asset img-1pn4v5i.jpg)"
+ },
+ "svc_rp": {
+  "url": "https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-rapid-prototyping.jpg",
+  "attachment_id": 12233,
+  "source": "reused (hash-identical to the design asset img-1n48553.jpg)"
+ },
+ "svc_hybrid": {
+  "url": "https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-hybrid-cnc-laser.jpg",
+  "attachment_id": 12231,
+  "source": "reused (hash-identical to the design asset img-mi7p38.jpg)"
+ },
+ "svc_bonding": {
+  "url": "https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-service-bonding-assembly.jpg",
+  "attachment_id": 12229,
+  "source": "reused (hash-identical to the design asset img-40hu7r.jpg)"
+ },
+ "svc_logo_1": {
+  "url": "https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-eco-logo-1.png",
+  "attachment_id": 12235,
+  "source": "reused (hash-identical to the design asset img-1rqj09.png)"
+ },
+ "svc_logo_2": {
+  "url": "https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-eco-logo-2.png",
+  "attachment_id": 12236,
+  "source": "reused (hash-identical to the design asset img-1noxp18.png)"
+ },
+ "svc_logo_3": {
+  "url": "https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-eco-logo-3.png",
+  "attachment_id": 12237,
+  "source": "reused (hash-identical to the design asset img-xr81kv.png)"
+ },
+ "svc_logo_4": {
+  "url": "https://www.potomac-laser.com/wp-content/uploads/2026/08/pl-auto-eco-logo-4.png",
+  "attachment_id": 12238,
+  "source": "reused (hash-identical to the design asset img-xerlob.png)"
  }
 }
