@@ -74,8 +74,8 @@ def link(href):
         if dom.endswith('goodfellow.com') and mm.group(2):
             href = path          # rendered DOM: a root-relative site link rewritten by normalizeStandaloneLinks()
         else:                    # wrapped in the design source itself: an external site
-            known = {'goodfellow.com': 'https://www.goodfellow.com', 'basref.com': 'https://www.basrid.co.uk',  # basref.com does not resolve
-                     'basrid.co.uk': 'https://www.basrid.co.uk', 'suisse-tp.ch': 'https://suisse-tp.ch'}
+            known = {'goodfellow.com': 'https://www.goodfellow.com', 'basref.com': 'https://reference-materials.goodfellow.com',  # basref.com does not resolve
+                     'basrid.co.uk': 'https://reference-materials.goodfellow.com', 'suisse-tp.ch': 'https://suisse-tp.ch'}
             return known.get(dom.replace('www.', ''), 'https://' + dom) + path
     base = href.split('#')[0]
     frag = ('#' + href.split('#', 1)[1]) if '#' in href else ''
