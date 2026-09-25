@@ -1,6 +1,6 @@
 [
  {
-  "id": "00000f6",
+  "id": "00000f3",
   "elType": "container",
   "isInner": false,
   "settings": {
@@ -26,7 +26,7 @@
   },
   "elements": [
    {
-    "id": "00000f5",
+    "id": "00000f2",
     "elType": "container",
     "isInner": false,
     "settings": {
@@ -54,7 +54,7 @@
     },
     "elements": [
      {
-      "id": "00000f4",
+      "id": "00000f1",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -86,11 +86,11 @@
       },
       "elements": [
        {
-        "id": "00000f2",
+        "id": "00000ef",
         "elType": "widget",
         "widgetType": "heading",
         "settings": {
-         "title": "{heading_13}",
+         "title": "{heading_10}",
          "header_size": "div",
          "typography_typography": "custom",
          "typography_font_family": "Inter",
@@ -125,11 +125,11 @@
         "elements": []
        },
        {
-        "id": "00000f3",
+        "id": "00000f0",
         "elType": "widget",
         "widgetType": "heading",
         "settings": {
-         "title": "{heading_14}",
+         "title": "{heading_11}",
          "header_size": "h2",
          "typography_typography": "custom",
          "typography_font_family": "Inter",
@@ -157,7 +157,7 @@
       ]
      },
      {
-      "id": "00000f1",
+      "id": "00000ee",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -182,7 +182,7 @@
       },
       "elements": [
        {
-        "id": "00000e0",
+        "id": "00000df",
         "elType": "container",
         "isInner": false,
         "settings": {
@@ -230,35 +230,6 @@
          {
           "id": "00000d9",
           "elType": "widget",
-          "widgetType": "heading",
-          "settings": {
-           "title": "{heading_1}",
-           "header_size": "div",
-           "typography_typography": "custom",
-           "typography_font_family": "Inter",
-           "typography_font_size": {
-            "unit": "px",
-            "size": 14
-           },
-           "typography_font_weight": "400",
-           "title_color": "",
-           "__globals__": {
-            "title_color": "globals/colors?id=gforange"
-           },
-           "typography_line_height": {
-            "unit": "px",
-            "size": 20
-           },
-           "typography_letter_spacing": {
-            "unit": "px",
-            "size": 1.4
-           }
-          },
-          "elements": []
-         },
-         {
-          "id": "00000da",
-          "elType": "widget",
           "widgetType": "text-editor",
           "settings": {
            "editor": "{body_1}",
@@ -282,7 +253,7 @@
           "elements": []
          },
          {
-          "id": "00000df",
+          "id": "00000de",
           "elType": "container",
           "isInner": false,
           "settings": {
@@ -307,11 +278,11 @@
           },
           "elements": [
            {
-            "id": "00000db",
+            "id": "00000da",
             "elType": "widget",
             "widgetType": "heading",
             "settings": {
-             "title": "{heading_2}",
+             "title": "{heading_1}",
              "header_size": "div",
              "typography_typography": "custom",
              "typography_font_family": "Inter",
@@ -334,7 +305,7 @@
             "elements": []
            },
            {
-            "id": "00000de",
+            "id": "00000dd",
             "elType": "container",
             "isInner": false,
             "settings": {
@@ -357,11 +328,11 @@
             },
             "elements": [
              {
-              "id": "00000dc",
+              "id": "00000db",
               "elType": "widget",
               "widgetType": "heading",
               "settings": {
-               "title": "{heading_3}",
+               "title": "{heading_2}",
                "header_size": "div",
                "typography_typography": "custom",
                "typography_font_family": "Inter",
@@ -382,11 +353,11 @@
               "elements": []
              },
              {
-              "id": "00000dd",
+              "id": "00000dc",
               "elType": "widget",
               "widgetType": "heading",
               "settings": {
-               "title": "{heading_4}",
+               "title": "{heading_3}",
                "header_size": "div",
                "typography_typography": "custom",
                "typography_font_family": "Inter",
@@ -410,7 +381,7 @@
         ]
        },
        {
-        "id": "00000e8",
+        "id": "00000e6",
         "elType": "container",
         "isInner": false,
         "settings": {
@@ -456,36 +427,7 @@
         },
         "elements": [
          {
-          "id": "00000e1",
-          "elType": "widget",
-          "widgetType": "heading",
-          "settings": {
-           "title": "{heading_5}",
-           "header_size": "div",
-           "typography_typography": "custom",
-           "typography_font_family": "Inter",
-           "typography_font_size": {
-            "unit": "px",
-            "size": 14
-           },
-           "typography_font_weight": "400",
-           "title_color": "",
-           "__globals__": {
-            "title_color": "globals/colors?id=gforange"
-           },
-           "typography_line_height": {
-            "unit": "px",
-            "size": 20
-           },
-           "typography_letter_spacing": {
-            "unit": "px",
-            "size": 1.4
-           }
-          },
-          "elements": []
-         },
-         {
-          "id": "00000e2",
+          "id": "00000e0",
           "elType": "widget",
           "widgetType": "text-editor",
           "settings": {
@@ -510,7 +452,7 @@
           "elements": []
          },
          {
-          "id": "00000e7",
+          "id": "00000e5",
           "elType": "container",
           "isInner": false,
           "settings": {
@@ -535,11 +477,11 @@
           },
           "elements": [
            {
-            "id": "00000e3",
+            "id": "00000e1",
             "elType": "widget",
             "widgetType": "heading",
             "settings": {
-             "title": "{heading_6}",
+             "title": "{heading_4}",
              "header_size": "div",
              "typography_typography": "custom",
              "typography_font_family": "Inter",
@@ -562,7 +504,7 @@
             "elements": []
            },
            {
-            "id": "00000e6",
+            "id": "00000e4",
             "elType": "container",
             "isInner": false,
             "settings": {
@@ -585,11 +527,11 @@
             },
             "elements": [
              {
-              "id": "00000e4",
+              "id": "00000e2",
               "elType": "widget",
               "widgetType": "heading",
               "settings": {
-               "title": "{heading_7}",
+               "title": "{heading_5}",
                "header_size": "div",
                "typography_typography": "custom",
                "typography_font_family": "Inter",
@@ -610,11 +552,11 @@
               "elements": []
              },
              {
-              "id": "00000e5",
+              "id": "00000e3",
               "elType": "widget",
               "widgetType": "heading",
               "settings": {
-               "title": "{heading_8}",
+               "title": "{heading_6}",
                "header_size": "div",
                "typography_typography": "custom",
                "typography_font_family": "Inter",
@@ -638,7 +580,7 @@
         ]
        },
        {
-        "id": "00000f0",
+        "id": "00000ed",
         "elType": "container",
         "isInner": false,
         "settings": {
@@ -684,36 +626,7 @@
         },
         "elements": [
          {
-          "id": "00000e9",
-          "elType": "widget",
-          "widgetType": "heading",
-          "settings": {
-           "title": "{heading_9}",
-           "header_size": "div",
-           "typography_typography": "custom",
-           "typography_font_family": "Inter",
-           "typography_font_size": {
-            "unit": "px",
-            "size": 14
-           },
-           "typography_font_weight": "400",
-           "title_color": "",
-           "__globals__": {
-            "title_color": "globals/colors?id=gforange"
-           },
-           "typography_line_height": {
-            "unit": "px",
-            "size": 20
-           },
-           "typography_letter_spacing": {
-            "unit": "px",
-            "size": 1.4
-           }
-          },
-          "elements": []
-         },
-         {
-          "id": "00000ea",
+          "id": "00000e7",
           "elType": "widget",
           "widgetType": "text-editor",
           "settings": {
@@ -738,7 +651,7 @@
           "elements": []
          },
          {
-          "id": "00000ef",
+          "id": "00000ec",
           "elType": "container",
           "isInner": false,
           "settings": {
@@ -763,11 +676,11 @@
           },
           "elements": [
            {
-            "id": "00000eb",
+            "id": "00000e8",
             "elType": "widget",
             "widgetType": "heading",
             "settings": {
-             "title": "{heading_10}",
+             "title": "{heading_7}",
              "header_size": "div",
              "typography_typography": "custom",
              "typography_font_family": "Inter",
@@ -790,7 +703,7 @@
             "elements": []
            },
            {
-            "id": "00000ee",
+            "id": "00000eb",
             "elType": "container",
             "isInner": false,
             "settings": {
@@ -813,11 +726,11 @@
             },
             "elements": [
              {
-              "id": "00000ec",
+              "id": "00000e9",
               "elType": "widget",
               "widgetType": "heading",
               "settings": {
-               "title": "{heading_11}",
+               "title": "{heading_8}",
                "header_size": "div",
                "typography_typography": "custom",
                "typography_font_family": "Inter",
@@ -838,11 +751,11 @@
               "elements": []
              },
              {
-              "id": "00000ed",
+              "id": "00000ea",
               "elType": "widget",
               "widgetType": "heading",
               "settings": {
-               "title": "{heading_12}",
+               "title": "{heading_9}",
                "header_size": "div",
                "typography_typography": "custom",
                "typography_font_family": "Inter",

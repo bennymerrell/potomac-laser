@@ -1,0 +1,78 @@
+{
+  "run_id": "20260925-svc-reexport",
+  "mode": "SUPERVISED rebuild requested in chat after the user uploaded a new export (548d67f) and chose: explorer Example (as live), quote Compact, FAQ as live (sticky left column).",
+  "design": "Potomac Laser.zip 4fb5447bd33995fe5805026e663d37f751c94bb968606b85fcfa9f04577a7b3a (project-zip 548d67f, exported 2026-09-25 14:36) :: Services - *.html; TWEAK_DEFAULTS pinned locally to Example + Compact for capture",
+  "decisions": [
+    "explorer Example (design default is now Current: priced cards + basket) - user",
+    "quote Compact on all five incl. 3DP (design default Detailed) - user",
+    "FAQ left column sticky as live (design dropped it) - user",
+    "customer testimonial quotes kept verbatim (no Potomac -> Goodfellow Microfabrication swap inside quotes)",
+    "'Visit Reference Materials →' / reference-materials.goodfellow.com kept from the 2026-09-25 user edits",
+    "built as NEW review drafts; live posts 12239-12243 untouched until the user approves"
+  ],
+  "posts_created": [
+    {
+      "post_id": 12470,
+      "post_type": "post_services",
+      "status": "draft",
+      "slug": "pl-auto-review-cnc",
+      "design": "Services - CNC Micromachining.html",
+      "live_target": 12239,
+      "preview": "https://www.potomac-laser.com/?post_type=post_services&p=12470&preview=true"
+    },
+    {
+      "post_id": 12471,
+      "post_type": "post_services",
+      "status": "draft",
+      "slug": "pl-auto-review-lm",
+      "design": "Services - Laser Micromachining.html",
+      "live_target": 12240,
+      "preview": "https://www.potomac-laser.com/?post_type=post_services&p=12471&preview=true"
+    },
+    {
+      "post_id": 12472,
+      "post_type": "post_services",
+      "status": "draft",
+      "slug": "pl-auto-review-mhd",
+      "design": "Services - Micro-Hole Drilling.html",
+      "live_target": 12241,
+      "preview": "https://www.potomac-laser.com/?post_type=post_services&p=12472&preview=true"
+    },
+    {
+      "post_id": 12473,
+      "post_type": "post_services",
+      "status": "draft",
+      "slug": "pl-auto-review-rp",
+      "design": "Services - Rapid Prototyping.html",
+      "live_target": 12242,
+      "preview": "https://www.potomac-laser.com/?post_type=post_services&p=12473&preview=true"
+    },
+    {
+      "post_id": 12474,
+      "post_type": "post_services",
+      "status": "draft",
+      "slug": "pl-auto-review-3dp",
+      "design": "Services - 3D Printing.html",
+      "live_target": 12243,
+      "preview": "https://www.potomac-laser.com/?post_type=post_services&p=12474&preview=true"
+    }
+  ],
+  "files_uploaded": [
+    "novamira-drafts/run-20260925-svc-reexport/bundle-svc-reexport-v1.json",
+    "novamira-drafts/run-20260925-svc-reexport/bundle-svc-reexport-v2.json",
+    "novamira-drafts/run-20260925-svc-reexport/bundle-svc-reexport-v3.json"
+  ],
+  "final": {
+    "12470": "CNC v19",
+    "12471-12474": "v9",
+    "bundle": "novamira-drafts/run-20260925-svc-reexport/bundle-svc-reexport-v3.json d763827f…"
+  },
+  "generator_fixes": [
+    "testimonials: no star row; quotes verbatim",
+    "testimonial footer: name/company selector (also wrong on the live pages: name line showed initials, company line showed name + company)",
+    "closing headline: clamp(2.3rem,4vw,3.9rem) like the design (fixed 59px matched only a 1481px viewport)",
+    "why-us row top-aligned (DS rule)",
+    "each page uses its own section CSS (captures pinned to Example + Compact)"
+  ],
+  "verification": "1629px: every section within ±3 px of the new design on all five; explorer 5 tabs switch, material names are plain labels, no basket buttons; FAQ toggles and left column sticky; quote submit intercepted on 12470 -> HubSpot 143181153/9dba7d36, nothing sent; 0 broken images"
+}

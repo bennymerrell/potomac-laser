@@ -1017,7 +1017,7 @@
       "settings": {
        "flex_direction": "row",
        "flex_wrap": "wrap",
-       "flex_align_items": "center",
+       "flex_align_items": "flex-start",
        "flex_gap": {
         "unit": "px",
         "column": "32",
@@ -1524,7 +1524,7 @@
               "elType": "widget",
               "widgetType": "text-editor",
               "settings": {
-               "editor": "<p><strong>Broad materials</strong>, engineering plastics, acrylics, metals, ceramics, and FDA-compliant biocompatible options.</p>",
+               "editor": "<p><strong>Broad materials</strong>, engineering plastics, acrylics, and FDA-compliant biocompatible options.</p>",
                "typography_typography": "custom",
                "typography_font_family": "Inter",
                "typography_font_size": {
@@ -1722,7 +1722,7 @@
               "elType": "widget",
               "widgetType": "text-editor",
               "settings": {
-               "editor": "<p><strong>One-stop integration</strong>, seamless combination with laser machining, CNC, bonding, and inspection.</p>",
+               "editor": "<p><strong>Integrated processes</strong>, combined with laser machining, CNC, bonding, and inspection.</p>",
                "typography_typography": "custom",
                "typography_font_family": "Inter",
                "typography_font_size": {
@@ -3250,7 +3250,7 @@
     "elType": "widget",
     "widgetType": "html",
     "settings": {
-     "html": "<style>.pl-svc-appx li{padding:0}.pl-svc-appx{scroll-behavior: smooth; scroll-padding-top: 120px;}\n.pl-svc-appx{font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden;}\n.pl-svc-appx .eyebrow{display: flex; align-items: center; gap: 12px; margin-bottom: 12px;}\n.pl-svc-appx .eyebrow-text{font-size: 11px; font-weight: 700; letter-spacing: 0.18em; color: rgb(245, 130, 31); text-transform: uppercase;}\n@keyframes fuUp { \n  0% { opacity: 0; transform: translateY(18px); }\n  100% { opacity: 1; transform: none; }\n}\n.pl-svc-appx .app-tab{border-bottom: 3px solid transparent; transition: 0.2s; cursor: pointer;}\n.pl-svc-appx .app-tab:hover, .pl-svc-appx .app-tab.active{background: rgb(254, 240, 227); border-bottom-color: rgb(245, 130, 31);}\n.pl-svc-appx .app-tab.active .app-tab-label{color: rgb(245, 130, 31); font-weight: 800;}\n.pl-svc-appx .app-screenshot-layout{display: grid; gap: 16px;}\n@media (min-width: 1024px){.pl-svc-appx .app-screenshot-layout{grid-template-columns: minmax(0px, 1fr) 282px; align-items: start;}}\n.pl-svc-appx .app-screenshot-main{display: flex; flex-direction: column; gap: 16px;}\n.pl-svc-appx .app-summary-card{background: rgb(255, 255, 255); border: 1px solid rgb(229, 231, 235); border-radius: 8px; padding: 22px;}\n.pl-svc-appx .app-proof-chip-row{display: flex; flex-wrap: wrap; gap: 8px;}\n.pl-svc-appx .app-proof-chip{display: inline-flex; align-items: center; border-radius: 9999px; padding: 5px 12px; font-size: 11px; font-weight: 700; letter-spacing: 0.01em; border: 1px solid rgb(244, 195, 203); background: rgb(255, 245, 247); color: rgb(216, 59, 87);}\n.pl-svc-appx .app-proof-chip.accent{background: rgb(231, 72, 97); border-color: rgb(231, 72, 97); color: rgb(255, 255, 255);}\n.pl-svc-appx .app-material-kicker{font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(156, 163, 175); margin-bottom: 12px;}\n.pl-svc-appx .app-material-grid{display: grid; gap: 12px; grid-template-columns: 1fr;}\n@media (min-width: 640px){.pl-svc-appx .app-material-grid{grid-template-columns: repeat(2, minmax(0px, 1fr));}}\n@media (min-width: 1280px){.pl-svc-appx .app-material-grid{grid-template-columns: repeat(3, minmax(0px, 1fr));}}\n.pl-svc-appx .app-shot-card{padding: 16px; display: flex; flex-direction: column; min-height: 142px; background: rgb(255, 255, 255); border-color: rgb(229, 231, 235); box-shadow: rgba(15, 23, 42, 0.04) 0px 1px 2px;}\n.pl-svc-appx .app-shot-card:hover{border-color: rgb(241, 176, 122); box-shadow: rgba(15, 42, 68, 0.08) 0px 10px 24px; transform: translateY(-1px);}\n.pl-svc-appx .app-mini-tag{display: inline-flex; align-items: center; border-radius: 9999px; padding: 3px 8px; font-size: 10px; font-weight: 700; background: rgb(255, 242, 232); color: rgb(245, 130, 31);}\n.pl-svc-appx .app-add-btn{display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; border: 1px solid rgb(245, 130, 31); background: rgb(255, 255, 255); color: rgb(245, 130, 31); padding: 4px 12px; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; transition: 0.15s;}\n.pl-svc-appx .app-add-btn:hover{background: rgb(245, 130, 31); color: rgb(255, 255, 255);}\n.pl-svc-appx .app-quick-card{background: rgb(249, 250, 251); border: 1px solid rgb(229, 231, 235); border-radius: 8px; padding: 18px; display: flex; flex-direction: column; gap: 16px;}\n.pl-svc-appx .app-quick-list{list-style: none; margin: 0px 0px 4px; padding: 0px; display: flex; flex-direction: column; gap: 10px;}\n.pl-svc-appx .app-quick-list li{position: relative; padding-left: 14px; font-size: 13px; line-height: 1.5; color: rgb(107, 114, 128);}\n.pl-svc-appx .app-quick-list li::before{content: \"\"; position: absolute; left: 0px; top: 8px; width: 5px; height: 5px; border-radius: 9999px; background: rgb(245, 130, 31);}\n.pl-svc-appx .mat-card{border: 1.5px solid rgb(229, 231, 235); border-radius: 8px; transition: 0.2s; cursor: pointer; position: relative;}\n.pl-svc-appx .mat-card:hover{border-color: rgb(245, 130, 31); box-shadow: rgba(245, 130, 31, 0.15) 0px 4px 18px; transform: translateY(-2px);}\n@keyframes pulse { \n  0%, 100% { opacity: 1; transform: scale(1); }\n  50% { opacity: 0.6; transform: scale(1.3); }\n}\n.pl-svc-appx button, .pl-svc-appx .mat-card{-webkit-tap-highlight-color: rgba(245, 130, 31, 0.18);}\n.pl-svc-appx{font-family: Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif !important; color: rgb(34, 57, 93);}\n.pl-svc-appx h2, .pl-svc-appx h3, .pl-svc-appx h4{letter-spacing: -0.03em; color: rgb(34, 57, 93); font-family: Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif !important; font-weight: 800 !important;}\n.pl-svc-appx p, .pl-svc-appx li, .pl-svc-appx span, .pl-svc-appx button{font-family: Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif !important;}\n.pl-svc-appx#applications .appx-alt, .pl-svc-appx #applications .appx-alt{display: none;}\n.pl-svc-appx#applications.appx-on .appx-orig, .pl-svc-appx #applications.appx-on .appx-orig{display: none;}\n.pl-svc-appx#applications.appx-on .appx-alt, .pl-svc-appx #applications.appx-on .appx-alt{display: block;}\n.pl-svc-appx#applications.appx-on [role=\"tablist\"], .pl-svc-appx #applications.appx-on [role=\"tablist\"]{background: transparent; border: 0px; display: flex; flex-wrap: wrap; gap: 10px; overflow: visible; border-radius: 0px;}\n.pl-svc-appx#applications.appx-on .app-tab, .pl-svc-appx #applications.appx-on .app-tab{flex: 0 0 auto; min-width: 0px; flex-direction: row; align-items: center; gap: 8px; padding: 10px 18px; border: 1px solid rgb(225, 230, 238); border-radius: 999px; background: rgb(255, 255, 255); cursor: pointer; transition: border-color 0.18s, background 0.18s;}\n.pl-svc-appx#applications.appx-on .app-tab:hover, .pl-svc-appx #applications.appx-on .app-tab:hover{border-color: rgb(245, 130, 31);}\n.pl-svc-appx#applications.appx-on .app-tab.active, .pl-svc-appx #applications.appx-on .app-tab.active{background: rgb(255, 242, 232); border-color: rgb(245, 130, 31);}\n.pl-svc-appx#applications.appx-on .app-tab svg, .pl-svc-appx #applications.appx-on .app-tab svg{width: 16px; height: 16px;}\n.pl-svc-appx#applications.appx-on .app-tab.active .app-tab-label, .pl-svc-appx #applications.appx-on .app-tab.active .app-tab-label, .pl-svc-appx#applications.appx-on .app-tab.active svg, .pl-svc-appx #applications.appx-on .app-tab.active svg{color: rgb(245, 130, 31);}\n.pl-svc-appx .appx-panel{display: grid; grid-template-columns: minmax(0px, 1.4fr) minmax(300px, 0.6fr); gap: 24px; align-items: start; font-family: Inter, system-ui, sans-serif;}\n@media (max-width: 1000px){.pl-svc-appx .appx-panel{grid-template-columns: 1fr;}}\n.pl-svc-appx .appx-summary{background: rgb(255, 255, 255); border: 1px solid rgb(225, 230, 238); border-radius: 18px; box-shadow: rgba(15, 42, 68, 0.06) 0px 2px 10px; padding: 30px;}\n.pl-svc-appx .appx-route{color: rgb(245, 130, 31); font-size: 10px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 10px;}\n.pl-svc-appx .appx-summary h3{margin: 0px 0px 10px; color: rgb(29, 53, 87); font-size: clamp(1.35rem, 2vw, 1.8rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.15;}\n.pl-svc-appx .appx-summary > p{margin: 0px 0px 22px; color: rgb(95, 104, 120); font-size: 15px; line-height: 1.72;}\n.pl-svc-appx .appx-spec{border-top: 1px solid rgb(237, 240, 245); margin-bottom: 24px;}\n.pl-svc-appx .appx-spec-row{display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 13px 0px; border-bottom: 1px solid rgb(237, 240, 245);}\n.pl-svc-appx .appx-spec-key{color: rgb(107, 114, 128); text-transform: uppercase; letter-spacing: 0.12em; font-size: 10px; font-weight: 800;}\n.pl-svc-appx .appx-spec-val{color: rgb(29, 53, 87); font-size: 13px; font-weight: 700; text-align: right;}\n.pl-svc-appx .appx-spec-val.accent{color: rgb(245, 130, 31);}\n.pl-svc-appx .appx-mats-label{color: rgb(107, 114, 128); text-transform: uppercase; letter-spacing: 0.14em; font-size: 10px; font-weight: 800; margin-bottom: 12px;}\n.pl-svc-appx .appx-chips{display: flex; flex-wrap: wrap; gap: 8px;}\n.pl-svc-appx .appx-chip{border: 1px solid rgb(225, 230, 238); background: rgb(255, 255, 255); border-radius: 999px; padding: 9px 15px; font-size: 12px; font-weight: 700; color: rgb(29, 53, 87); cursor: pointer; font-family: inherit; transition: border-color 0.18s, color 0.18s;}\n.pl-svc-appx .appx-chip:hover{border-color: rgb(245, 130, 31); color: rgb(245, 130, 31);}\n.pl-svc-appx .appx-side{background: linear-gradient(135deg, rgb(22, 37, 61) 0%, rgb(27, 46, 74) 55%, rgb(33, 55, 84) 100%); border-radius: 18px; padding: 28px; color: rgb(255, 255, 255); display: flex; flex-direction: column; gap: 22px; box-shadow: rgba(15, 42, 68, 0.18) 0px 22px 58px;}\n.pl-svc-appx .appx-side h4{margin: 0px 0px 8px; font-size: 15px; font-weight: 800; line-height: 1.3;}\n.pl-svc-appx .appx-side > div > p{margin: 0px; font-size: 13px; line-height: 1.6; color: rgba(255, 255, 255, 0.68);}\n.pl-svc-appx .appx-list{list-style: none; margin: 16px 0px 0px; padding: 0px; display: grid; gap: 9px;}\n.pl-svc-appx .appx-list li{position: relative; padding-left: 20px; font-size: 13px; color: rgba(255, 255, 255, 0.82);}\n.pl-svc-appx .appx-list li::before{content: \"\"; position: absolute; left: 0px; top: 6px; width: 8px; height: 8px; border-radius: 999px; background: rgb(245, 130, 31);}\n.pl-svc-appx .appx-actions{display: grid; gap: 10px;}\n.pl-svc-appx .appx-actions button{border: 0px; border-radius: 999px; padding: 13px 20px; font-size: 12px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer; font-family: inherit;}\n.pl-svc-appx .appx-btn-primary{background: rgb(245, 130, 31); color: rgb(255, 255, 255); box-shadow: rgba(245, 130, 31, 0.3) 0px 8px 24px;}\n.pl-svc-appx .appx-btn-primary:hover{background: rgb(217, 110, 16);}\n.pl-svc-appx .appx-btn-secondary{background: transparent; color: rgb(255, 255, 255); border: 1px solid rgba(255, 255, 255, 0.28) !important;}\n.pl-svc-appx .appx-btn-secondary:hover{background: rgba(255, 255, 255, 0.08);}\n.pl-svc-appx, .pl-svc-appx *, .pl-svc-appx::before, .pl-svc-appx ::before, .pl-svc-appx::after, .pl-svc-appx ::after{--tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;}\n.pl-svc-appx::backdrop, .pl-svc-appx ::backdrop{--tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;}\n.pl-svc-appx, .pl-svc-appx *, .pl-svc-appx::after, .pl-svc-appx ::after, .pl-svc-appx::before, .pl-svc-appx ::before{box-sizing: border-box; border-width: 0px; border-style: solid; border-color: rgb(229, 231, 235);}\n.pl-svc-appx::after, .pl-svc-appx ::after, .pl-svc-appx::before, .pl-svc-appx ::before{--tw-content: '';}\n.pl-svc-appx{line-height: 1.5; text-size-adjust: 100%; tab-size: 4; font-family: Inter, system-ui, sans-serif; font-feature-settings: normal; font-variation-settings: normal; -webkit-tap-highlight-color: transparent;}\n.pl-svc-appx{margin: 0px;}\n.pl-svc-appx h2, .pl-svc-appx h3, .pl-svc-appx h4{font-size: inherit; font-weight: inherit;}\n.pl-svc-appx button{font-family: inherit; font-feature-settings: inherit; font-variation-settings: inherit; font-size: 100%; font-weight: inherit; line-height: inherit; letter-spacing: inherit; color: inherit; margin: 0px; padding: 0px;}\n.pl-svc-appx button{text-transform: none;}\n.pl-svc-appx button{appearance: button; background-color: transparent; background-image: none;}\n.pl-svc-appx::-webkit-inner-spin-button, .pl-svc-appx ::-webkit-inner-spin-button, .pl-svc-appx::-webkit-outer-spin-button, .pl-svc-appx ::-webkit-outer-spin-button{height: auto;}\n.pl-svc-appx::-webkit-search-decoration, .pl-svc-appx ::-webkit-search-decoration{appearance: none;}\n.pl-svc-appx::-webkit-file-upload-button, .pl-svc-appx ::-webkit-file-upload-button{appearance: button; font: inherit;}\n.pl-svc-appx h2, .pl-svc-appx h3, .pl-svc-appx h4, .pl-svc-appx p{margin: 0px;}\n.pl-svc-appx ul{list-style: none; margin: 0px; padding: 0px;}\n.pl-svc-appx button{cursor: pointer;}\n.pl-svc-appx svg{display: block; vertical-align: middle;}\n.pl-svc-appx .visible{visibility: visible;}\n.pl-svc-appx .mx-auto{margin-left: auto; margin-right: auto;}\n.pl-svc-appx .mb-1{margin-bottom: 0.25rem;}\n.pl-svc-appx .mb-2{margin-bottom: 0.5rem;}\n.pl-svc-appx .mb-3{margin-bottom: 0.75rem;}\n.pl-svc-appx .mb-5{margin-bottom: 1.25rem;}\n.pl-svc-appx .mb-6{margin-bottom: 1.5rem;}\n.pl-svc-appx .mb-8{margin-bottom: 2rem;}\n.pl-svc-appx .mt-1\\.5{margin-top: 0.375rem;}\n.pl-svc-appx .mt-auto{margin-top: auto;}\n.pl-svc-appx .flex{display: flex;}\n.pl-svc-appx .h-5{height: 1.25rem;}\n.pl-svc-appx .w-5{width: 1.25rem;}\n.pl-svc-appx .w-full{width: 100%;}\n.pl-svc-appx .min-w-\\[118px\\]{min-width: 118px;}\n.pl-svc-appx .max-w-\\[560px\\]{max-width: 560px;}\n.pl-svc-appx .max-w-page{max-width: 1260px;}\n.pl-svc-appx .flex-1{flex: 1 1 0%;}\n.pl-svc-appx .cursor-pointer{cursor: pointer;}\n.pl-svc-appx .flex-col{flex-direction: column;}\n.pl-svc-appx .flex-wrap{flex-wrap: wrap;}\n.pl-svc-appx .items-end{align-items: flex-end;}\n.pl-svc-appx .items-center{align-items: center;}\n.pl-svc-appx .justify-between{justify-content: space-between;}\n.pl-svc-appx .gap-0{gap: 0px;}\n.pl-svc-appx .gap-1{gap: 0.25rem;}\n.pl-svc-appx .gap-1\\.5{gap: 0.375rem;}\n.pl-svc-appx .gap-3{gap: 0.75rem;}\n.pl-svc-appx .gap-4{gap: 1rem;}\n.pl-svc-appx .overflow-x-auto{overflow-x: auto;}\n.pl-svc-appx .rounded-card{border-radius: 8px;}\n.pl-svc-appx .rounded-pill{border-radius: 50px;}\n.pl-svc-appx .border{border-width: 1px;}\n.pl-svc-appx .border-0{border-width: 0px;}\n.pl-svc-appx .border-none{border-style: none;}\n.pl-svc-appx .border-gray-200{--tw-border-opacity: 1; border-color: rgb(229 231 235 / var(--tw-border-opacity, 1));}\n.pl-svc-appx.bg-white{--tw-bg-opacity: 1; background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));}\n.pl-svc-appx .bg-gray-50{--tw-bg-opacity: 1; background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));}\n.pl-svc-appx .bg-orange{--tw-bg-opacity: 1; background-color: rgb(245 130 31 / var(--tw-bg-opacity, 1));}\n.pl-svc-appx .bg-transparent{background-color: transparent;}\n.pl-svc-appx .fill-none{fill: none;}\n.pl-svc-appx .stroke-current{stroke: currentcolor;}\n.pl-svc-appx .px-2{padding-left: 0.5rem; padding-right: 0.5rem;}\n.pl-svc-appx.px-6{padding-left: 1.5rem; padding-right: 1.5rem;}\n.pl-svc-appx.py-16{padding-top: 4rem; padding-bottom: 4rem;}\n.pl-svc-appx .py-3{padding-top: 0.75rem; padding-bottom: 0.75rem;}\n.pl-svc-appx .py-4{padding-top: 1rem; padding-bottom: 1rem;}\n.pl-svc-appx .text-center{text-align: center;}\n.pl-svc-appx .font-display{font-family: Inter, system-ui, sans-serif;}\n.pl-svc-appx .text-\\[10px\\]{font-size: 10px;}\n.pl-svc-appx .text-\\[11px\\]{font-size: 11px;}\n.pl-svc-appx .text-\\[12px\\]{font-size: 12px;}\n.pl-svc-appx .text-\\[14px\\]{font-size: 14px;}\n.pl-svc-appx .text-\\[15px\\]{font-size: 15px;}\n.pl-svc-appx .text-\\[clamp\\(1\\.35rem\\,2vw\\,1\\.8rem\\)\\]{font-size: clamp(1.35rem, 2vw, 1.8rem);}\n.pl-svc-appx .text-sm{font-size: 0.875rem; line-height: 1.25rem;}\n.pl-svc-appx .text-xs{font-size: 0.75rem; line-height: 1rem;}\n.pl-svc-appx .font-bold{font-weight: 700;}\n.pl-svc-appx .font-extrabold{font-weight: 800;}\n.pl-svc-appx .uppercase{text-transform: uppercase;}\n.pl-svc-appx .leading-\\[1\\.72\\]{line-height: 1.72;}\n.pl-svc-appx .leading-relaxed{line-height: 1.625;}\n.pl-svc-appx .leading-tight{line-height: 1.25;}\n.pl-svc-appx .tracking-tight{letter-spacing: -0.025em;}\n.pl-svc-appx .tracking-wide{letter-spacing: 0.025em;}\n.pl-svc-appx .tracking-wider{letter-spacing: 0.05em;}\n.pl-svc-appx .tracking-widest{letter-spacing: 0.1em;}\n.pl-svc-appx .text-gray-400{--tw-text-opacity: 1; color: rgb(156 163 175 / var(--tw-text-opacity, 1));}\n.pl-svc-appx .text-gray-500{--tw-text-opacity: 1; color: rgb(107 114 128 / var(--tw-text-opacity, 1));}\n.pl-svc-appx .text-gray-600{--tw-text-opacity: 1; color: rgb(75 85 99 / var(--tw-text-opacity, 1));}\n.pl-svc-appx .text-navy-mid{--tw-text-opacity: 1; color: rgb(29 53 87 / var(--tw-text-opacity, 1));}\n.pl-svc-appx .text-orange{--tw-text-opacity: 1; color: rgb(245 130 31 / var(--tw-text-opacity, 1));}\n.pl-svc-appx .text-white{--tw-text-opacity: 1; color: rgb(255 255 255 / var(--tw-text-opacity, 1));}\n.pl-svc-appx .transition-all{transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms;}\n.pl-svc-appx .hover\\:bg-orange-dark:hover{--tw-bg-opacity: 1; background-color: rgb(217 110 16 / var(--tw-bg-opacity, 1));}\n@media (min-width: 1024px){.pl-svc-appx .lg\\:sticky{position: sticky;}.pl-svc-appx .lg\\:top-\\[130px\\]{top: 130px;}}</style><section class=\"pl-svc-appx py-16 px-6 bg-white appx-on\" id=\"applications\">\n<div class=\"max-w-page mx-auto\">\n<div class=\"flex items-end justify-between flex-wrap gap-4 mb-8\">\n<div>\n<div class=\"appx-alt\">\n<div class=\"eyebrow visible\" style=\"transition: none; opacity: 1; transform: none;\"><span class=\"eyebrow-text\">Industries &amp; Applications</span></div>\n<h2 class=\"font-display font-extrabold text-navy-mid leading-tight tracking-tight visible\" style=\"font-size: clamp(1.8rem, 3vw, 2.5rem); transition: none; opacity: 1; transform: none;\">Explore Applications</h2>\n<p class=\"text-[15px] text-gray-500 mt-1.5 max-w-[560px] leading-relaxed visible\" style=\"transition: none; opacity: 1; transform: none;\">Choose your sector to get started, or upload your CAD file if your design is ready.</p>\n</div>\n</div>\n<!-- Removed: Explore applications box only -->\n</div>\n<div aria-label=\"Application selection\" class=\"flex gap-0 bg-gray-50 border border-gray-200 rounded-card overflow-x-auto mb-6 visible\" role=\"tablist\" style=\"transition: none; opacity: 1; transform: none;\">\n<button aria-selected=\"true\" class=\"app-tab min-w-[118px] flex-1 flex flex-col items-center gap-1 py-4 px-2 border-none bg-transparent active\" data-app-id=\"microfluidics\" role=\"tab\">\n<svg class=\"w-5 h-5 stroke-current fill-none\" stroke-width=\"1.8\" viewbox=\"0 0 24 24\"><path d=\"M12 2a7 7 0 017 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 017-7z\"></path></svg>\n<span class=\"app-tab-label text-[11px] font-bold text-gray-600 text-center leading-tight\">Microfluidics</span>\n</button>\n<button aria-selected=\"false\" class=\"app-tab min-w-[118px] flex-1 flex flex-col items-center gap-1 py-4 px-2 border-none bg-transparent\" data-app-id=\"aerospace\" role=\"tab\">\n<svg class=\"w-5 h-5 stroke-current fill-none\" stroke-width=\"1.8\" viewbox=\"0 0 24 24\"><path d=\"M21 16v-2l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z\"></path></svg>\n<span class=\"app-tab-label text-[11px] font-bold text-gray-600 text-center leading-tight\">Aerospace</span>\n</button>\n<button aria-selected=\"false\" class=\"app-tab min-w-[118px] flex-1 flex flex-col items-center gap-1 py-4 px-2 border-none bg-transparent\" data-app-id=\"semiconductor\" role=\"tab\">\n<svg class=\"w-5 h-5 stroke-current fill-none\" stroke-width=\"1.8\" viewbox=\"0 0 24 24\"><rect height=\"16\" rx=\"2\" width=\"16\" x=\"4\" y=\"4\"></rect><rect height=\"6\" width=\"6\" x=\"9\" y=\"9\"></rect><line x1=\"9\" x2=\"9\" y1=\"2\" y2=\"4\"></line><line x1=\"15\" x2=\"15\" y1=\"2\" y2=\"4\"></line><line x1=\"9\" x2=\"9\" y1=\"20\" y2=\"22\"></line><line x1=\"15\" x2=\"15\" y1=\"20\" y2=\"22\"></line><line x1=\"20\" x2=\"22\" y1=\"9\" y2=\"9\"></line><line x1=\"20\" x2=\"22\" y1=\"14\" y2=\"14\"></line><line x1=\"2\" x2=\"4\" y1=\"9\" y2=\"9\"></line><line x1=\"2\" x2=\"4\" y1=\"14\" y2=\"14\"></line></svg>\n<span class=\"app-tab-label text-[11px] font-bold text-gray-600 text-center leading-tight\">Semiconductor</span>\n</button>\n<button aria-selected=\"false\" class=\"app-tab min-w-[118px] flex-1 flex flex-col items-center gap-1 py-4 px-2 border-none bg-transparent\" data-app-id=\"photonics\" role=\"tab\">\n<svg class=\"w-5 h-5 stroke-current fill-none\" stroke-width=\"1.8\" viewbox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"4\"></circle><path d=\"M1.05 12H3M21 12h1.95M12 1.05V3M12 21v1.95M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42\"></path></svg>\n<span class=\"app-tab-label text-[11px] font-bold text-gray-600 text-center leading-tight\">Photonics</span>\n</button>\n<button aria-selected=\"false\" class=\"app-tab min-w-[118px] flex-1 flex flex-col items-center gap-1 py-4 px-2 border-none bg-transparent\" data-app-id=\"electronics\" role=\"tab\">\n<svg class=\"w-5 h-5 stroke-current fill-none\" stroke-width=\"1.8\" viewbox=\"0 0 24 24\"><polyline points=\"22 12 18 12 15 21 9 3 6 12 2 12\"></polyline></svg>\n<span class=\"app-tab-label text-[11px] font-bold text-gray-600 text-center leading-tight\">Electronics / MEMS</span>\n</button>\n</div>\n<div aria-live=\"polite\" class=\"visible\" id=\"app-panels\" style=\"transition: none; opacity: 1; transform: none;\">\n<div class=\"app-panel-static\" data-app-layout=\"example\" data-app-panel=\"microfluidics\">\n<div class=\"appx-panel\">\n<div class=\"appx-summary\">\n<div class=\"appx-route\">Selected route</div>\n<h3>Microfluidics</h3>\n<p>3D-printed microfluidic structures and complex internal channels that are difficult or impossible to machine, consolidated into fewer parts.</p>\n<div class=\"appx-spec\">\n<div class=\"appx-spec-row\"><span class=\"appx-spec-key\">Precision route</span><span class=\"appx-spec-val accent\">Complex geometry</span></div>\n<div class=\"appx-spec-row\"><span class=\"appx-spec-key\">Quality / process fit</span><span class=\"appx-spec-val\">Fewer parts</span></div>\n</div>\n<div class=\"appx-mats-label\">Typical materials</div>\n<div class=\"appx-chips\">\n<span class=\"appx-chip\">PMMA</span><span class=\"appx-chip\">COC</span><span class=\"appx-chip\">Borosilicate Glass</span><span class=\"appx-chip\">PTFE</span><span class=\"appx-chip\">PEEK</span>\n</div>\n</div>\n<div class=\"appx-side\">\n<div>\n<h4>Next step for Microfluidics</h4>\n<p>Continue into the materials library or upload your CAD file if your design is already fixed.</p>\n<ul class=\"appx-list\"><li>DFM review included</li><li>No minimum order</li><li>24–48 hr prototype turnaround</li></ul>\n</div>\n<div class=\"appx-actions\">\n<a class=\"appx-btn-primary\" href=\"#quote\">Upload CAD</a>\n</div>\n</div>\n</div>\n</div>\n<div class=\"app-panel-static\" data-app-layout=\"example\" data-app-panel=\"aerospace\" hidden=\"\">\n<div class=\"appx-panel\">\n<div class=\"appx-summary\">\n<div class=\"appx-route\">Selected route</div>\n<h3>Aerospace</h3>\n<p>Lightweight, consolidated components and functional prototypes optimised for additive, with integration to CNC and laser finishing.</p>\n<div class=\"appx-spec\">\n<div class=\"appx-spec-row\"><span class=\"appx-spec-key\">Precision route</span><span class=\"appx-spec-val accent\">Part consolidation</span></div>\n<div class=\"appx-spec-row\"><span class=\"appx-spec-key\">Quality / process fit</span><span class=\"appx-spec-val\">Design for additive</span></div>\n</div>\n<div class=\"appx-mats-label\">Typical materials</div>\n<div class=\"appx-chips\">\n<span class=\"appx-chip\">Titanium Grade 5</span><span class=\"appx-chip\">Aluminium 6061</span><span class=\"appx-chip\">Invar 36</span><span class=\"appx-chip\">Stainless 316L</span><span class=\"appx-chip\">Titanium Grade 23</span>\n</div>\n</div>\n<div class=\"appx-side\">\n<div>\n<h4>Next step for Aerospace</h4>\n<p>Continue into the materials library or upload your CAD file if your design is already fixed.</p>\n<ul class=\"appx-list\"><li>DFM review included</li><li>No minimum order</li><li>24–48 hr prototype turnaround</li></ul>\n</div>\n<div class=\"appx-actions\">\n<a class=\"appx-btn-primary\" href=\"#quote\">Upload CAD</a>\n</div>\n</div>\n</div>\n</div>\n<div class=\"app-panel-static\" data-app-layout=\"example\" data-app-panel=\"semiconductor\" hidden=\"\">\n<div class=\"appx-panel\">\n<div class=\"appx-summary\">\n<div class=\"appx-route\">Selected route</div>\n<h3>Semiconductor</h3>\n<p>Fixtures, housings, and functional test parts produced by micro 3D printing and finished with laser or CNC as needed.</p>\n<div class=\"appx-spec\">\n<div class=\"appx-spec-row\"><span class=\"appx-spec-key\">Precision route</span><span class=\"appx-spec-val accent\">Micro-scale features</span></div>\n<div class=\"appx-spec-row\"><span class=\"appx-spec-key\">Quality / process fit</span><span class=\"appx-spec-val\">One-stop build</span></div>\n</div>\n<div class=\"appx-mats-label\">Typical materials</div>\n<div class=\"appx-chips\">\n<span class=\"appx-chip\">Silicon Wafer</span><span class=\"appx-chip\">Copper</span><span class=\"appx-chip\">Aluminium 6061</span><span class=\"appx-chip\">Stainless 316L</span><span class=\"appx-chip\">Borosilicate Glass</span>\n</div>\n</div>\n<div class=\"appx-side\">\n<div>\n<h4>Next step for Semiconductor</h4>\n<p>Continue into the materials library or upload your CAD file if your design is already fixed.</p>\n<ul class=\"appx-list\"><li>DFM review included</li><li>No minimum order</li><li>24–48 hr prototype turnaround</li></ul>\n</div>\n<div class=\"appx-actions\">\n<a class=\"appx-btn-primary\" href=\"#quote\">Upload CAD</a>\n</div>\n</div>\n</div>\n</div>\n<div class=\"app-panel-static\" data-app-layout=\"example\" data-app-panel=\"photonics\" hidden=\"\">\n<div class=\"appx-panel\">\n<div class=\"appx-summary\">\n<div class=\"appx-route\">Selected route</div>\n<h3>Photonics &amp; Optics</h3>\n<p>Mounts, housings, and alignment structures where additive geometry freedom helps, combined with laser and CNC post-processing.</p>\n<div class=\"appx-spec\">\n<div class=\"appx-spec-row\"><span class=\"appx-spec-key\">Precision route</span><span class=\"appx-spec-val accent\">Geometry freedom</span></div>\n<div class=\"appx-spec-row\"><span class=\"appx-spec-key\">Quality / process fit</span><span class=\"appx-spec-val\">Prototype → production</span></div>\n</div>\n<div class=\"appx-mats-label\">Typical materials</div>\n<div class=\"appx-chips\">\n<span class=\"appx-chip\">Invar 36</span><span class=\"appx-chip\">Aluminium 6061</span><span class=\"appx-chip\">Borosilicate Glass</span><span class=\"appx-chip\">Silicon Wafer</span><span class=\"appx-chip\">Copper</span>\n</div>\n</div>\n<div class=\"appx-side\">\n<div>\n<h4>Next step for Photonics &amp; Optics</h4>\n<p>Continue into the materials library or upload your CAD file if your design is already fixed.</p>\n<ul class=\"appx-list\"><li>DFM review included</li><li>No minimum order</li><li>24–48 hr prototype turnaround</li></ul>\n</div>\n<div class=\"appx-actions\">\n<a class=\"appx-btn-primary\" href=\"#quote\">Upload CAD</a>\n</div>\n</div>\n</div>\n</div>\n<div class=\"app-panel-static\" data-app-layout=\"example\" data-app-panel=\"electronics\" hidden=\"\">\n<div class=\"appx-panel\">\n<div class=\"appx-summary\">\n<div class=\"appx-route\">Selected route</div>\n<h3>Electronics / MEMS</h3>\n<p>Housings, supports, and MEMS-adjacent parts with complex geometry, printed in engineering and specialty polymers.</p>\n<div class=\"appx-spec\">\n<div class=\"appx-spec-row\"><span class=\"appx-spec-key\">Precision route</span><span class=\"appx-spec-val accent\">Complex geometry</span></div>\n<div class=\"appx-spec-row\"><span class=\"appx-spec-key\">Quality / process fit</span><span class=\"appx-spec-val\">Small-batch</span></div>\n</div>\n<div class=\"appx-mats-label\">Typical materials</div>\n<div class=\"appx-chips\">\n<span class=\"appx-chip\">Kapton®</span><span class=\"appx-chip\">Copper</span><span class=\"appx-chip\">Aluminium 6061</span><span class=\"appx-chip\">Stainless 316L</span><span class=\"appx-chip\">PEEK</span>\n</div>\n</div>\n<div class=\"appx-side\">\n<div>\n<h4>Next step for Electronics / MEMS</h4>\n<p>Continue into the materials library or upload your CAD file if your design is already fixed.</p>\n<ul class=\"appx-list\"><li>DFM review included</li><li>No minimum order</li><li>24–48 hr prototype turnaround</li></ul>\n</div>\n<div class=\"appx-actions\">\n<a class=\"appx-btn-primary\" href=\"#quote\">Upload CAD</a>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</section><script>(function(){var s=document.currentScript.previousElementSibling;if(!s||s.dataset.plWired)return;s.dataset.plWired=\"1\";function go(id){s.querySelectorAll(\".app-tab\").forEach(function(t){var on=t.dataset.appId===id;t.classList.toggle(\"active\",on);t.setAttribute(\"aria-selected\",on?\"true\":\"false\")});s.querySelectorAll(\"[data-app-panel]\").forEach(function(p){p.hidden=p.dataset.appPanel!==id})}s.querySelectorAll(\".app-tab\").forEach(function(t){t.addEventListener(\"click\",function(){go(t.dataset.appId)})});})();</script>"
+     "html": "<style>.pl-svc-appx li{padding:0}.pl-svc-appx{scroll-behavior: smooth; scroll-padding-top: 120px;}\n.pl-svc-appx{font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden;}\n.pl-svc-appx .eyebrow{display: flex; align-items: center; gap: 12px; margin-bottom: 12px;}\n.pl-svc-appx .eyebrow-text{font-size: 11px; font-weight: 700; letter-spacing: 0.18em; color: rgb(245, 130, 31); text-transform: uppercase;}\n@keyframes fuUp { \n  0% { opacity: 0; transform: translateY(18px); }\n  100% { opacity: 1; transform: none; }\n}\n.pl-svc-appx .app-tab{border-bottom: 3px solid transparent; transition: 0.2s; cursor: pointer;}\n.pl-svc-appx .app-tab:hover, .pl-svc-appx .app-tab.active{background: rgb(254, 240, 227); border-bottom-color: rgb(245, 130, 31);}\n.pl-svc-appx .app-tab.active .app-tab-label{color: rgb(245, 130, 31); font-weight: 800;}\n.pl-svc-appx .app-screenshot-layout{display: grid; gap: 16px;}\n@media (min-width: 1024px){.pl-svc-appx .app-screenshot-layout{grid-template-columns: minmax(0px, 1fr) 282px; align-items: start;}}\n.pl-svc-appx .app-screenshot-main{display: flex; flex-direction: column; gap: 16px;}\n.pl-svc-appx .app-summary-card{background: rgb(255, 255, 255); border: 1px solid rgb(229, 231, 235); border-radius: 8px; padding: 22px;}\n.pl-svc-appx .app-proof-chip-row{display: flex; flex-wrap: wrap; gap: 8px;}\n.pl-svc-appx .app-proof-chip{display: inline-flex; align-items: center; border-radius: 9999px; padding: 5px 12px; font-size: 11px; font-weight: 700; letter-spacing: 0.01em; border: 1px solid rgb(244, 195, 203); background: rgb(255, 245, 247); color: rgb(216, 59, 87);}\n.pl-svc-appx .app-proof-chip.accent{background: rgb(231, 72, 97); border-color: rgb(231, 72, 97); color: rgb(255, 255, 255);}\n.pl-svc-appx .app-material-kicker{font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(156, 163, 175); margin-bottom: 12px;}\n.pl-svc-appx .app-material-grid{display: grid; gap: 12px; grid-template-columns: 1fr;}\n@media (min-width: 640px){.pl-svc-appx .app-material-grid{grid-template-columns: repeat(2, minmax(0px, 1fr));}}\n@media (min-width: 1280px){.pl-svc-appx .app-material-grid{grid-template-columns: repeat(3, minmax(0px, 1fr));}}\n.pl-svc-appx .app-shot-card{padding: 16px; display: flex; flex-direction: column; min-height: 142px; background: rgb(255, 255, 255); border-color: rgb(229, 231, 235); box-shadow: rgba(15, 23, 42, 0.04) 0px 1px 2px;}\n.pl-svc-appx .app-shot-card:hover{border-color: rgb(241, 176, 122); box-shadow: rgba(15, 42, 68, 0.08) 0px 10px 24px; transform: translateY(-1px);}\n.pl-svc-appx .app-mini-tag{display: inline-flex; align-items: center; border-radius: 9999px; padding: 3px 8px; font-size: 10px; font-weight: 700; background: rgb(255, 242, 232); color: rgb(245, 130, 31);}\n.pl-svc-appx .app-add-btn{display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; border: 1px solid rgb(245, 130, 31); background: rgb(255, 255, 255); color: rgb(245, 130, 31); padding: 4px 12px; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; transition: 0.15s;}\n.pl-svc-appx .app-add-btn:hover{background: rgb(245, 130, 31); color: rgb(255, 255, 255);}\n.pl-svc-appx .app-quick-card{background: rgb(249, 250, 251); border: 1px solid rgb(229, 231, 235); border-radius: 8px; padding: 18px; display: flex; flex-direction: column; gap: 16px;}\n.pl-svc-appx .app-quick-list{list-style: none; margin: 0px 0px 4px; padding: 0px; display: flex; flex-direction: column; gap: 10px;}\n.pl-svc-appx .app-quick-list li{position: relative; padding-left: 14px; font-size: 13px; line-height: 1.5; color: rgb(107, 114, 128);}\n.pl-svc-appx .app-quick-list li::before{content: \"\"; position: absolute; left: 0px; top: 8px; width: 5px; height: 5px; border-radius: 9999px; background: rgb(245, 130, 31);}\n.pl-svc-appx .mat-card{border: 1.5px solid rgb(229, 231, 235); border-radius: 8px; transition: 0.2s; cursor: pointer; position: relative;}\n.pl-svc-appx .mat-card:hover{border-color: rgb(245, 130, 31); box-shadow: rgba(245, 130, 31, 0.15) 0px 4px 18px; transform: translateY(-2px);}\n@keyframes pulse { \n  0%, 100% { opacity: 1; transform: scale(1); }\n  50% { opacity: 0.6; transform: scale(1.3); }\n}\n.pl-svc-appx button, .pl-svc-appx .mat-card{-webkit-tap-highlight-color: rgba(245, 130, 31, 0.18);}\n.pl-svc-appx{font-family: Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif !important; color: rgb(34, 57, 93);}\n.pl-svc-appx h2, .pl-svc-appx h3, .pl-svc-appx h4{letter-spacing: -0.03em; color: rgb(34, 57, 93); font-family: Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif !important; font-weight: 800 !important;}\n.pl-svc-appx p, .pl-svc-appx li, .pl-svc-appx span, .pl-svc-appx button{font-family: Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif !important;}\n.pl-svc-appx#applications .appx-alt, .pl-svc-appx #applications .appx-alt{display: none;}\n.pl-svc-appx#applications.appx-on .appx-orig, .pl-svc-appx #applications.appx-on .appx-orig{display: none;}\n.pl-svc-appx#applications.appx-on .appx-alt, .pl-svc-appx #applications.appx-on .appx-alt{display: block;}\n.pl-svc-appx#applications.appx-on [role=\"tablist\"], .pl-svc-appx #applications.appx-on [role=\"tablist\"]{background: transparent; border: 0px; display: flex; flex-wrap: wrap; gap: 10px; overflow: visible; border-radius: 0px;}\n.pl-svc-appx#applications.appx-on .app-tab, .pl-svc-appx #applications.appx-on .app-tab{flex: 0 0 auto; min-width: 0px; flex-direction: row; align-items: center; gap: 8px; padding: 10px 18px; border: 1px solid rgb(225, 230, 238); border-radius: 999px; background: rgb(255, 255, 255); cursor: pointer; transition: border-color 0.18s, background 0.18s;}\n.pl-svc-appx#applications.appx-on .app-tab:hover, .pl-svc-appx #applications.appx-on .app-tab:hover{border-color: rgb(245, 130, 31);}\n.pl-svc-appx#applications.appx-on .app-tab.active, .pl-svc-appx #applications.appx-on .app-tab.active{background: rgb(255, 242, 232); border-color: rgb(245, 130, 31);}\n.pl-svc-appx#applications.appx-on .app-tab svg, .pl-svc-appx #applications.appx-on .app-tab svg{width: 16px; height: 16px;}\n.pl-svc-appx#applications.appx-on .app-tab.active .app-tab-label, .pl-svc-appx #applications.appx-on .app-tab.active .app-tab-label, .pl-svc-appx#applications.appx-on .app-tab.active svg, .pl-svc-appx #applications.appx-on .app-tab.active svg{color: rgb(245, 130, 31);}\n.pl-svc-appx .appx-panel{display: grid; grid-template-columns: minmax(0px, 1.4fr) minmax(300px, 0.6fr); gap: 24px; align-items: start; font-family: Inter, system-ui, sans-serif;}\n@media (max-width: 1000px){.pl-svc-appx .appx-panel{grid-template-columns: 1fr;}}\n.pl-svc-appx .appx-summary{background: rgb(255, 255, 255); border: 1px solid rgb(225, 230, 238); border-radius: 18px; box-shadow: rgba(15, 42, 68, 0.06) 0px 2px 10px; padding: 30px;}\n.pl-svc-appx .appx-route{color: rgb(245, 130, 31); font-size: 10px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 10px;}\n.pl-svc-appx .appx-summary h3{margin: 0px 0px 10px; color: rgb(29, 53, 87); font-size: clamp(1.35rem, 2vw, 1.8rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.15;}\n.pl-svc-appx .appx-summary > p{margin: 0px 0px 22px; color: rgb(95, 104, 120); font-size: 15px; line-height: 1.72;}\n.pl-svc-appx .appx-spec{border-top: 1px solid rgb(237, 240, 245); margin-bottom: 24px;}\n.pl-svc-appx .appx-spec-row{display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 13px 0px; border-bottom: 1px solid rgb(237, 240, 245);}\n.pl-svc-appx .appx-spec-key{color: rgb(107, 114, 128); text-transform: uppercase; letter-spacing: 0.12em; font-size: 10px; font-weight: 800;}\n.pl-svc-appx .appx-spec-val{color: rgb(29, 53, 87); font-size: 13px; font-weight: 700; text-align: right;}\n.pl-svc-appx .appx-spec-val.accent{color: rgb(245, 130, 31);}\n.pl-svc-appx .appx-mats-label{color: rgb(107, 114, 128); text-transform: uppercase; letter-spacing: 0.14em; font-size: 10px; font-weight: 800; margin-bottom: 12px;}\n.pl-svc-appx .appx-chips{display: flex; flex-wrap: wrap; gap: 8px;}\n.pl-svc-appx .appx-chip{border: 1px solid rgb(225, 230, 238); background: rgb(255, 255, 255); border-radius: 999px; padding: 9px 15px; font-size: 12px; font-weight: 700; color: rgb(29, 53, 87); cursor: pointer; font-family: inherit; transition: border-color 0.18s, color 0.18s;}\n.pl-svc-appx .appx-chip:hover{border-color: rgb(245, 130, 31); color: rgb(245, 130, 31);}\n.pl-svc-appx .appx-chip{cursor: default; display: inline-flex;}\n.pl-svc-appx .appx-chip:hover{border-color: rgb(225, 230, 238); color: rgb(29, 53, 87);}\n.pl-svc-appx .appx-side{background: linear-gradient(135deg, rgb(22, 37, 61) 0%, rgb(27, 46, 74) 55%, rgb(33, 55, 84) 100%); border-radius: 18px; padding: 28px; color: rgb(255, 255, 255); display: flex; flex-direction: column; gap: 22px; box-shadow: rgba(15, 42, 68, 0.18) 0px 22px 58px;}\n.pl-svc-appx .appx-side h4{margin: 0px 0px 8px; font-size: 15px; font-weight: 800; line-height: 1.3;}\n.pl-svc-appx .appx-side > div > p{margin: 0px; font-size: 13px; line-height: 1.6; color: rgba(255, 255, 255, 0.68);}\n.pl-svc-appx .appx-list{list-style: none; margin: 16px 0px 0px; padding: 0px; display: grid; gap: 9px;}\n.pl-svc-appx .appx-list li{position: relative; padding-left: 20px; font-size: 13px; color: rgba(255, 255, 255, 0.82);}\n.pl-svc-appx .appx-list li::before{content: \"\"; position: absolute; left: 0px; top: 6px; width: 8px; height: 8px; border-radius: 999px; background: rgb(245, 130, 31);}\n.pl-svc-appx .appx-actions{display: grid; gap: 10px;}\n.pl-svc-appx .appx-actions button{border: 0px; border-radius: 999px; padding: 13px 20px; font-size: 12px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer; font-family: inherit;}\n.pl-svc-appx .appx-btn-primary{background: rgb(245, 130, 31); color: rgb(255, 255, 255); box-shadow: rgba(245, 130, 31, 0.3) 0px 8px 24px;}\n.pl-svc-appx .appx-btn-primary:hover{background: rgb(217, 110, 16);}\n.pl-svc-appx .appx-btn-secondary{background: transparent; color: rgb(255, 255, 255); border: 1px solid rgba(255, 255, 255, 0.28) !important;}\n.pl-svc-appx .appx-btn-secondary:hover{background: rgba(255, 255, 255, 0.08);}\n.pl-svc-appx, .pl-svc-appx *, .pl-svc-appx::before, .pl-svc-appx ::before, .pl-svc-appx::after, .pl-svc-appx ::after{--tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;}\n.pl-svc-appx::backdrop, .pl-svc-appx ::backdrop{--tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;}\n.pl-svc-appx, .pl-svc-appx *, .pl-svc-appx::after, .pl-svc-appx ::after, .pl-svc-appx::before, .pl-svc-appx ::before{box-sizing: border-box; border-width: 0px; border-style: solid; border-color: rgb(229, 231, 235);}\n.pl-svc-appx::after, .pl-svc-appx ::after, .pl-svc-appx::before, .pl-svc-appx ::before{--tw-content: '';}\n.pl-svc-appx{line-height: 1.5; text-size-adjust: 100%; tab-size: 4; font-family: Inter, system-ui, sans-serif; font-feature-settings: normal; font-variation-settings: normal; -webkit-tap-highlight-color: transparent;}\n.pl-svc-appx{margin: 0px;}\n.pl-svc-appx h2, .pl-svc-appx h3, .pl-svc-appx h4{font-size: inherit; font-weight: inherit;}\n.pl-svc-appx button{font-family: inherit; font-feature-settings: inherit; font-variation-settings: inherit; font-size: 100%; font-weight: inherit; line-height: inherit; letter-spacing: inherit; color: inherit; margin: 0px; padding: 0px;}\n.pl-svc-appx button{text-transform: none;}\n.pl-svc-appx button{appearance: button; background-color: transparent; background-image: none;}\n.pl-svc-appx::-webkit-inner-spin-button, .pl-svc-appx ::-webkit-inner-spin-button, .pl-svc-appx::-webkit-outer-spin-button, .pl-svc-appx ::-webkit-outer-spin-button{height: auto;}\n.pl-svc-appx::-webkit-search-decoration, .pl-svc-appx ::-webkit-search-decoration{appearance: none;}\n.pl-svc-appx::-webkit-file-upload-button, .pl-svc-appx ::-webkit-file-upload-button{appearance: button; font: inherit;}\n.pl-svc-appx h2, .pl-svc-appx h3, .pl-svc-appx h4, .pl-svc-appx p{margin: 0px;}\n.pl-svc-appx ul{list-style: none; margin: 0px; padding: 0px;}\n.pl-svc-appx button{cursor: pointer;}\n.pl-svc-appx svg{display: block; vertical-align: middle;}\n.pl-svc-appx .visible{visibility: visible;}\n.pl-svc-appx .mx-auto{margin-left: auto; margin-right: auto;}\n.pl-svc-appx .mb-1{margin-bottom: 0.25rem;}\n.pl-svc-appx .mb-2{margin-bottom: 0.5rem;}\n.pl-svc-appx .mb-3{margin-bottom: 0.75rem;}\n.pl-svc-appx .mb-5{margin-bottom: 1.25rem;}\n.pl-svc-appx .mb-6{margin-bottom: 1.5rem;}\n.pl-svc-appx .mb-8{margin-bottom: 2rem;}\n.pl-svc-appx .mt-1\\.5{margin-top: 0.375rem;}\n.pl-svc-appx .mt-auto{margin-top: auto;}\n.pl-svc-appx .flex{display: flex;}\n.pl-svc-appx .h-5{height: 1.25rem;}\n.pl-svc-appx .w-5{width: 1.25rem;}\n.pl-svc-appx .w-full{width: 100%;}\n.pl-svc-appx .min-w-\\[118px\\]{min-width: 118px;}\n.pl-svc-appx .max-w-\\[560px\\]{max-width: 560px;}\n.pl-svc-appx .max-w-page{max-width: 1260px;}\n.pl-svc-appx .flex-1{flex: 1 1 0%;}\n.pl-svc-appx .cursor-pointer{cursor: pointer;}\n.pl-svc-appx .flex-col{flex-direction: column;}\n.pl-svc-appx .flex-wrap{flex-wrap: wrap;}\n.pl-svc-appx .items-end{align-items: flex-end;}\n.pl-svc-appx .items-center{align-items: center;}\n.pl-svc-appx .justify-between{justify-content: space-between;}\n.pl-svc-appx .gap-0{gap: 0px;}\n.pl-svc-appx .gap-1{gap: 0.25rem;}\n.pl-svc-appx .gap-1\\.5{gap: 0.375rem;}\n.pl-svc-appx .gap-3{gap: 0.75rem;}\n.pl-svc-appx .gap-4{gap: 1rem;}\n.pl-svc-appx .overflow-x-auto{overflow-x: auto;}\n.pl-svc-appx .rounded-card{border-radius: 8px;}\n.pl-svc-appx .rounded-pill{border-radius: 50px;}\n.pl-svc-appx .border{border-width: 1px;}\n.pl-svc-appx .border-0{border-width: 0px;}\n.pl-svc-appx .border-none{border-style: none;}\n.pl-svc-appx .border-gray-200{--tw-border-opacity: 1; border-color: rgb(229 231 235 / var(--tw-border-opacity, 1));}\n.pl-svc-appx.bg-white{--tw-bg-opacity: 1; background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));}\n.pl-svc-appx .bg-gray-50{--tw-bg-opacity: 1; background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));}\n.pl-svc-appx .bg-orange{--tw-bg-opacity: 1; background-color: rgb(245 130 31 / var(--tw-bg-opacity, 1));}\n.pl-svc-appx .bg-transparent{background-color: transparent;}\n.pl-svc-appx .fill-none{fill: none;}\n.pl-svc-appx .stroke-current{stroke: currentcolor;}\n.pl-svc-appx .px-2{padding-left: 0.5rem; padding-right: 0.5rem;}\n.pl-svc-appx.px-6{padding-left: 1.5rem; padding-right: 1.5rem;}\n.pl-svc-appx.py-16{padding-top: 4rem; padding-bottom: 4rem;}\n.pl-svc-appx .py-3{padding-top: 0.75rem; padding-bottom: 0.75rem;}\n.pl-svc-appx .py-4{padding-top: 1rem; padding-bottom: 1rem;}\n.pl-svc-appx .text-center{text-align: center;}\n.pl-svc-appx .font-display{font-family: Inter, system-ui, sans-serif;}\n.pl-svc-appx .text-\\[10px\\]{font-size: 10px;}\n.pl-svc-appx .text-\\[11px\\]{font-size: 11px;}\n.pl-svc-appx .text-\\[12px\\]{font-size: 12px;}\n.pl-svc-appx .text-\\[14px\\]{font-size: 14px;}\n.pl-svc-appx .text-\\[15px\\]{font-size: 15px;}\n.pl-svc-appx .text-\\[clamp\\(1\\.35rem\\,2vw\\,1\\.8rem\\)\\]{font-size: clamp(1.35rem, 2vw, 1.8rem);}\n.pl-svc-appx .text-sm{font-size: 0.875rem; line-height: 1.25rem;}\n.pl-svc-appx .text-xs{font-size: 0.75rem; line-height: 1rem;}\n.pl-svc-appx .font-bold{font-weight: 700;}\n.pl-svc-appx .font-extrabold{font-weight: 800;}\n.pl-svc-appx .uppercase{text-transform: uppercase;}\n.pl-svc-appx .leading-\\[1\\.72\\]{line-height: 1.72;}\n.pl-svc-appx .leading-relaxed{line-height: 1.625;}\n.pl-svc-appx .leading-tight{line-height: 1.25;}\n.pl-svc-appx .tracking-tight{letter-spacing: -0.025em;}\n.pl-svc-appx .tracking-wide{letter-spacing: 0.025em;}\n.pl-svc-appx .tracking-wider{letter-spacing: 0.05em;}\n.pl-svc-appx .tracking-widest{letter-spacing: 0.1em;}\n.pl-svc-appx .text-gray-400{--tw-text-opacity: 1; color: rgb(156 163 175 / var(--tw-text-opacity, 1));}\n.pl-svc-appx .text-gray-500{--tw-text-opacity: 1; color: rgb(107 114 128 / var(--tw-text-opacity, 1));}\n.pl-svc-appx .text-gray-600{--tw-text-opacity: 1; color: rgb(75 85 99 / var(--tw-text-opacity, 1));}\n.pl-svc-appx .text-navy-mid{--tw-text-opacity: 1; color: rgb(29 53 87 / var(--tw-text-opacity, 1));}\n.pl-svc-appx .text-orange{--tw-text-opacity: 1; color: rgb(245 130 31 / var(--tw-text-opacity, 1));}\n.pl-svc-appx .text-white{--tw-text-opacity: 1; color: rgb(255 255 255 / var(--tw-text-opacity, 1));}\n.pl-svc-appx .transition-all{transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms;}\n.pl-svc-appx .hover\\:bg-orange-dark:hover{--tw-bg-opacity: 1; background-color: rgb(217 110 16 / var(--tw-bg-opacity, 1));}\n@media (min-width: 1024px){.pl-svc-appx .lg\\:sticky{position: sticky;}.pl-svc-appx .lg\\:top-\\[130px\\]{top: 130px;}}</style><section class=\"pl-svc-appx py-16 px-6 bg-white appx-on\" id=\"applications\">\n<div class=\"max-w-page mx-auto\">\n<div class=\"flex items-end justify-between flex-wrap gap-4 mb-8\">\n<div>\n<div class=\"appx-alt\">\n<div class=\"eyebrow visible\" style=\"transition: none; opacity: 1; transform: none;\"><span class=\"eyebrow-text\">Industries &amp; Applications</span></div>\n<h2 class=\"font-display font-extrabold text-navy-mid leading-tight tracking-tight visible\" style=\"font-size: clamp(1.8rem, 3vw, 2.5rem); transition: none; opacity: 1; transform: none;\">Explore Applications</h2>\n<p class=\"text-[15px] text-gray-500 mt-1.5 max-w-[560px] leading-relaxed visible\" style=\"transition: none; opacity: 1; transform: none;\">Choose your sector to get started, or upload your CAD file if your design is ready.</p>\n</div>\n</div>\n<!-- Removed: Explore applications box only -->\n</div>\n<div aria-label=\"Application selection\" class=\"flex gap-0 bg-gray-50 border border-gray-200 rounded-card overflow-x-auto mb-6 visible\" role=\"tablist\" style=\"transition: none; opacity: 1; transform: none;\">\n<button aria-selected=\"true\" class=\"app-tab min-w-[118px] flex-1 flex flex-col items-center gap-1 py-4 px-2 border-none bg-transparent active\" data-app-id=\"microfluidics\" role=\"tab\">\n<svg class=\"w-5 h-5 stroke-current fill-none\" stroke-width=\"1.8\" viewbox=\"0 0 24 24\"><path d=\"M12 2a7 7 0 017 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 017-7z\"></path></svg>\n<span class=\"app-tab-label text-[11px] font-bold text-gray-600 text-center leading-tight\">Microfluidics</span>\n</button>\n<button aria-selected=\"false\" class=\"app-tab min-w-[118px] flex-1 flex flex-col items-center gap-1 py-4 px-2 border-none bg-transparent\" data-app-id=\"aerospace\" role=\"tab\">\n<svg class=\"w-5 h-5 stroke-current fill-none\" stroke-width=\"1.8\" viewbox=\"0 0 24 24\"><path d=\"M21 16v-2l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z\"></path></svg>\n<span class=\"app-tab-label text-[11px] font-bold text-gray-600 text-center leading-tight\">Aerospace</span>\n</button>\n<button aria-selected=\"false\" class=\"app-tab min-w-[118px] flex-1 flex flex-col items-center gap-1 py-4 px-2 border-none bg-transparent\" data-app-id=\"semiconductor\" role=\"tab\">\n<svg class=\"w-5 h-5 stroke-current fill-none\" stroke-width=\"1.8\" viewbox=\"0 0 24 24\"><rect height=\"16\" rx=\"2\" width=\"16\" x=\"4\" y=\"4\"></rect><rect height=\"6\" width=\"6\" x=\"9\" y=\"9\"></rect><line x1=\"9\" x2=\"9\" y1=\"2\" y2=\"4\"></line><line x1=\"15\" x2=\"15\" y1=\"2\" y2=\"4\"></line><line x1=\"9\" x2=\"9\" y1=\"20\" y2=\"22\"></line><line x1=\"15\" x2=\"15\" y1=\"20\" y2=\"22\"></line><line x1=\"20\" x2=\"22\" y1=\"9\" y2=\"9\"></line><line x1=\"20\" x2=\"22\" y1=\"14\" y2=\"14\"></line><line x1=\"2\" x2=\"4\" y1=\"9\" y2=\"9\"></line><line x1=\"2\" x2=\"4\" y1=\"14\" y2=\"14\"></line></svg>\n<span class=\"app-tab-label text-[11px] font-bold text-gray-600 text-center leading-tight\">Semiconductor</span>\n</button>\n<button aria-selected=\"false\" class=\"app-tab min-w-[118px] flex-1 flex flex-col items-center gap-1 py-4 px-2 border-none bg-transparent\" data-app-id=\"photonics\" role=\"tab\">\n<svg class=\"w-5 h-5 stroke-current fill-none\" stroke-width=\"1.8\" viewbox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"4\"></circle><path d=\"M1.05 12H3M21 12h1.95M12 1.05V3M12 21v1.95M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42\"></path></svg>\n<span class=\"app-tab-label text-[11px] font-bold text-gray-600 text-center leading-tight\">Photonics</span>\n</button>\n<button aria-selected=\"false\" class=\"app-tab min-w-[118px] flex-1 flex flex-col items-center gap-1 py-4 px-2 border-none bg-transparent\" data-app-id=\"electronics\" role=\"tab\">\n<svg class=\"w-5 h-5 stroke-current fill-none\" stroke-width=\"1.8\" viewbox=\"0 0 24 24\"><polyline points=\"22 12 18 12 15 21 9 3 6 12 2 12\"></polyline></svg>\n<span class=\"app-tab-label text-[11px] font-bold text-gray-600 text-center leading-tight\">Electronics / MEMS</span>\n</button>\n</div>\n<div aria-live=\"polite\" class=\"visible\" id=\"app-panels\" style=\"transition: none; opacity: 1; transform: none;\">\n<div class=\"app-panel-static\" data-app-layout=\"example\" data-app-panel=\"microfluidics\">\n<div class=\"appx-panel\">\n<div class=\"appx-summary\">\n<div class=\"appx-route\">Selected route</div>\n<h3>Microfluidics</h3>\n<p>3D-printed microfluidic structures and complex internal channels that are difficult or impossible to machine, consolidated into fewer parts.</p>\n<div class=\"appx-spec\">\n<div class=\"appx-spec-row\"><span class=\"appx-spec-key\">Precision route</span><span class=\"appx-spec-val accent\">Complex geometry</span></div>\n<div class=\"appx-spec-row\"><span class=\"appx-spec-key\">Quality / process fit</span><span class=\"appx-spec-val\">Fewer parts</span></div>\n</div>\n<div class=\"appx-mats-label\">Typical materials</div>\n<div class=\"appx-chips\">\n<span class=\"appx-chip\">PMMA</span><span class=\"appx-chip\">COC</span><span class=\"appx-chip\">PTFE</span><span class=\"appx-chip\">PEEK</span>\n</div>\n</div>\n<div class=\"appx-side\" data-surface=\"dark\">\n<div>\n<h4 style=\"color: var(--white)\">Next step for Microfluidics</h4>\n<p>Continue into the materials library or upload your CAD file if your design is already fixed.</p>\n<ul class=\"appx-list\"><li>DFM review included</li><li>No minimum order</li><li>24 to 48 hr prototype turnaround</li></ul>\n</div>\n<div class=\"appx-actions\">\n<a class=\"appx-btn-primary\" href=\"#quote\">Upload CAD</a>\n</div>\n</div>\n</div>\n</div>\n<div class=\"app-panel-static\" data-app-layout=\"example\" data-app-panel=\"aerospace\" hidden=\"\">\n<div class=\"appx-panel\">\n<div class=\"appx-summary\">\n<div class=\"appx-route\">Selected route</div>\n<h3>Aerospace</h3>\n<p>Lightweight, consolidated components and functional prototypes optimised for additive, with integration to CNC and laser finishing.</p>\n<div class=\"appx-spec\">\n<div class=\"appx-spec-row\"><span class=\"appx-spec-key\">Precision route</span><span class=\"appx-spec-val accent\">Part consolidation</span></div>\n<div class=\"appx-spec-row\"><span class=\"appx-spec-key\">Quality / process fit</span><span class=\"appx-spec-val\">Design for additive</span></div>\n</div>\n<div class=\"appx-mats-label\">Typical materials</div>\n<div class=\"appx-chips\">\n<span class=\"appx-chip\">PEEK</span><span class=\"appx-chip\">Kapton®</span><span class=\"appx-chip\">PTFE</span>\n</div>\n</div>\n<div class=\"appx-side\" data-surface=\"dark\">\n<div>\n<h4>Next step for Aerospace</h4>\n<p>Continue into the materials library or upload your CAD file if your design is already fixed.</p>\n<ul class=\"appx-list\"><li>DFM review included</li><li>No minimum order</li><li>24 to 48 hr prototype turnaround</li></ul>\n</div>\n<div class=\"appx-actions\">\n<a class=\"appx-btn-primary\" href=\"#quote\">Upload CAD</a>\n</div>\n</div>\n</div>\n</div>\n<div class=\"app-panel-static\" data-app-layout=\"example\" data-app-panel=\"semiconductor\" hidden=\"\">\n<div class=\"appx-panel\">\n<div class=\"appx-summary\">\n<div class=\"appx-route\">Selected route</div>\n<h3>Semiconductor</h3>\n<p>Fixtures, housings, and functional test parts produced by micro 3D printing and finished with laser or CNC as needed.</p>\n<div class=\"appx-spec\">\n<div class=\"appx-spec-row\"><span class=\"appx-spec-key\">Precision route</span><span class=\"appx-spec-val accent\">Micro-scale features</span></div>\n<div class=\"appx-spec-row\"><span class=\"appx-spec-key\">Quality / process fit</span><span class=\"appx-spec-val\">Multi-process build</span></div>\n</div>\n<div class=\"appx-mats-label\">Typical materials</div>\n<div class=\"appx-chips\">\n<span class=\"appx-chip\">Kapton®</span><span class=\"appx-chip\">PEEK</span><span class=\"appx-chip\">PTFE</span>\n</div>\n</div>\n<div class=\"appx-side\" data-surface=\"dark\">\n<div>\n<h4>Next step for Semiconductor</h4>\n<p>Continue into the materials library or upload your CAD file if your design is already fixed.</p>\n<ul class=\"appx-list\"><li>DFM review included</li><li>No minimum order</li><li>24 to 48 hr prototype turnaround</li></ul>\n</div>\n<div class=\"appx-actions\">\n<a class=\"appx-btn-primary\" href=\"#quote\">Upload CAD</a>\n</div>\n</div>\n</div>\n</div>\n<div class=\"app-panel-static\" data-app-layout=\"example\" data-app-panel=\"photonics\" hidden=\"\">\n<div class=\"appx-panel\">\n<div class=\"appx-summary\">\n<div class=\"appx-route\">Selected route</div>\n<h3>Photonics &amp; Optics</h3>\n<p>Mounts, housings, and alignment structures where additive geometry freedom helps, combined with laser and CNC post-processing.</p>\n<div class=\"appx-spec\">\n<div class=\"appx-spec-row\"><span class=\"appx-spec-key\">Precision route</span><span class=\"appx-spec-val accent\">Geometry freedom</span></div>\n<div class=\"appx-spec-row\"><span class=\"appx-spec-key\">Quality / process fit</span><span class=\"appx-spec-val\">Prototype → production</span></div>\n</div>\n<div class=\"appx-mats-label\">Typical materials</div>\n<div class=\"appx-chips\">\n<span class=\"appx-chip\">PMMA</span><span class=\"appx-chip\">COC</span><span class=\"appx-chip\">PEEK</span>\n</div>\n</div>\n<div class=\"appx-side\" data-surface=\"dark\">\n<div>\n<h4>Next step for Photonics &amp; Optics</h4>\n<p>Continue into the materials library or upload your CAD file if your design is already fixed.</p>\n<ul class=\"appx-list\"><li>DFM review included</li><li>No minimum order</li><li>24 to 48 hr prototype turnaround</li></ul>\n</div>\n<div class=\"appx-actions\">\n<a class=\"appx-btn-primary\" href=\"#quote\">Upload CAD</a>\n</div>\n</div>\n</div>\n</div>\n<div class=\"app-panel-static\" data-app-layout=\"example\" data-app-panel=\"electronics\" hidden=\"\">\n<div class=\"appx-panel\">\n<div class=\"appx-summary\">\n<div class=\"appx-route\">Selected route</div>\n<h3>Electronics / MEMS</h3>\n<p>Housings, supports, and MEMS-adjacent parts with complex geometry, printed in engineering and specialty polymers.</p>\n<div class=\"appx-spec\">\n<div class=\"appx-spec-row\"><span class=\"appx-spec-key\">Precision route</span><span class=\"appx-spec-val accent\">Complex geometry</span></div>\n<div class=\"appx-spec-row\"><span class=\"appx-spec-key\">Quality / process fit</span><span class=\"appx-spec-val\">Small-batch</span></div>\n</div>\n<div class=\"appx-mats-label\">Typical materials</div>\n<div class=\"appx-chips\">\n<span class=\"appx-chip\">Kapton®</span><span class=\"appx-chip\">PEEK</span><span class=\"appx-chip\">PTFE</span>\n</div>\n</div>\n<div class=\"appx-side\" data-surface=\"dark\">\n<div>\n<h4>Next step for Electronics / MEMS</h4>\n<p>Continue into the materials library or upload your CAD file if your design is already fixed.</p>\n<ul class=\"appx-list\"><li>DFM review included</li><li>No minimum order</li><li>24 to 48 hr prototype turnaround</li></ul>\n</div>\n<div class=\"appx-actions\">\n<a class=\"appx-btn-primary\" href=\"#quote\">Upload CAD</a>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</section><script>(function(){var s=document.currentScript.previousElementSibling;if(!s||s.dataset.plWired)return;s.dataset.plWired=\"1\";function go(id){s.querySelectorAll(\".app-tab\").forEach(function(t){var on=t.dataset.appId===id;t.classList.toggle(\"active\",on);t.setAttribute(\"aria-selected\",on?\"true\":\"false\")});s.querySelectorAll(\"[data-app-panel]\").forEach(function(p){p.hidden=p.dataset.appPanel!==id})}s.querySelectorAll(\".app-tab\").forEach(function(t){t.addEventListener(\"click\",function(){go(t.dataset.appId)})});})();</script>"
     },
     "elements": []
    }
@@ -3285,7 +3285,7 @@
     "elType": "widget",
     "widgetType": "html",
     "settings": {
-     "html": "<style>.pl-svc-caps li{padding:0}.pl-svc-caps{scroll-behavior: smooth; scroll-padding-top: 120px;}\n.pl-svc-caps{font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden;}\n.pl-svc-caps .eyebrow{display: flex; align-items: center; gap: 12px; margin-bottom: 12px;}\n.pl-svc-caps .eyebrow-text{font-size: 11px; font-weight: 700; letter-spacing: 0.18em; color: rgb(245, 130, 31); text-transform: uppercase;}\n.pl-svc-caps .dark-grid{background-image: linear-gradient(rgba(245, 130, 31, 0.024) 1px, transparent 1px), linear-gradient(90deg, rgba(245, 130, 31, 0.024) 1px, transparent 1px), linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px); background-size: 64px 64px, 64px 64px, 16px 16px, 16px 16px;}\n@keyframes fuUp { \n  0% { opacity: 0; transform: translateY(18px); }\n  100% { opacity: 1; transform: none; }\n}\n@keyframes pulse { \n  0%, 100% { opacity: 1; transform: scale(1); }\n  50% { opacity: 0.6; transform: scale(1.3); }\n}\n.pl-svc-caps{font-family: Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif !important; color: rgb(34, 57, 93);}\n.pl-svc-caps h2, .pl-svc-caps h3{letter-spacing: -0.03em; color: rgb(34, 57, 93); font-family: Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif !important; font-weight: 800 !important;}\n.pl-svc-caps p, .pl-svc-caps span{font-family: Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif !important;}\n.pl-svc-caps, .pl-svc-caps *, .pl-svc-caps::before, .pl-svc-caps ::before, .pl-svc-caps::after, .pl-svc-caps ::after{--tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;}\n.pl-svc-caps::backdrop, .pl-svc-caps ::backdrop{--tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;}\n.pl-svc-caps, .pl-svc-caps *, .pl-svc-caps::after, .pl-svc-caps ::after, .pl-svc-caps::before, .pl-svc-caps ::before{box-sizing: border-box; border-width: 0px; border-style: solid; border-color: rgb(229, 231, 235);}\n.pl-svc-caps::after, .pl-svc-caps ::after, .pl-svc-caps::before, .pl-svc-caps ::before{--tw-content: '';}\n.pl-svc-caps{line-height: 1.5; text-size-adjust: 100%; tab-size: 4; font-family: Inter, system-ui, sans-serif; font-feature-settings: normal; font-variation-settings: normal; -webkit-tap-highlight-color: transparent;}\n.pl-svc-caps{margin: 0px;}\n.pl-svc-caps h2, .pl-svc-caps h3{font-size: inherit; font-weight: inherit;}\n.pl-svc-caps strong{font-weight: bolder;}\n.pl-svc-caps::-webkit-inner-spin-button, .pl-svc-caps ::-webkit-inner-spin-button, .pl-svc-caps::-webkit-outer-spin-button, .pl-svc-caps ::-webkit-outer-spin-button{height: auto;}\n.pl-svc-caps::-webkit-search-decoration, .pl-svc-caps ::-webkit-search-decoration{appearance: none;}\n.pl-svc-caps::-webkit-file-upload-button, .pl-svc-caps ::-webkit-file-upload-button{appearance: button; font: inherit;}\n.pl-svc-caps h2, .pl-svc-caps h3, .pl-svc-caps p{margin: 0px;}\n.pl-svc-caps .pointer-events-none{pointer-events: none;}\n.pl-svc-caps .absolute{position: absolute;}\n.pl-svc-caps.relative, .pl-svc-caps .relative{position: relative;}\n.pl-svc-caps .inset-0{inset: 0px;}\n.pl-svc-caps .z-10{z-index: 10;}\n.pl-svc-caps .mx-auto{margin-left: auto; margin-right: auto;}\n.pl-svc-caps .mb-2{margin-bottom: 0.5rem;}\n.pl-svc-caps .mb-3{margin-bottom: 0.75rem;}\n.pl-svc-caps .mb-5{margin-bottom: 1.25rem;}\n.pl-svc-caps .mt-4{margin-top: 1rem;}\n.pl-svc-caps .mt-5{margin-top: 1.25rem;}\n.pl-svc-caps .grid{display: grid;}\n.pl-svc-caps .max-w-page{max-width: 1260px;}\n.pl-svc-caps .items-start{align-items: flex-start;}\n.pl-svc-caps .gap-3{gap: 0.75rem;}\n.pl-svc-caps .gap-8{gap: 2rem;}\n.pl-svc-caps .space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse: 0; margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse))); margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));}\n.pl-svc-caps.overflow-hidden{overflow: hidden;}\n.pl-svc-caps .rounded-card{border-radius: 8px;}\n.pl-svc-caps .border{border-width: 1px;}\n.pl-svc-caps .border-white\\/\\[0\\.05\\]{border-color: rgba(255, 255, 255, 0.05);}\n.pl-svc-caps .border-white\\/\\[0\\.08\\]{border-color: rgba(255, 255, 255, 0.08);}\n.pl-svc-caps .bg-white\\/\\[0\\.04\\]{background-color: rgba(255, 255, 255, 0.04);}\n.pl-svc-caps .bg-white\\/\\[0\\.02\\]{background-color: rgba(255, 255, 255, 0.02);}\n.pl-svc-caps .p-5{padding: 1.25rem;}\n.pl-svc-caps .px-4{padding-left: 1rem; padding-right: 1rem;}\n.pl-svc-caps.px-6{padding-left: 1.5rem; padding-right: 1.5rem;}\n.pl-svc-caps .py-3\\.5{padding-top: 0.875rem; padding-bottom: 0.875rem;}\n.pl-svc-caps.py-10{padding-top: 2.5rem; padding-bottom: 2.5rem;}\n.pl-svc-caps .font-display{font-family: Inter, system-ui, sans-serif;}\n.pl-svc-caps .text-\\[11px\\]{font-size: 11px;}\n.pl-svc-caps .text-\\[15px\\]{font-size: 15px;}\n.pl-svc-caps .text-sm{font-size: 0.875rem; line-height: 1.25rem;}\n.pl-svc-caps .text-\\[1\\.1rem\\]{font-size: 1.1rem;}\n.pl-svc-caps .text-\\[1\\.35rem\\]{font-size: 1.35rem;}\n.pl-svc-caps .font-bold{font-weight: 700;}\n.pl-svc-caps .font-extrabold{font-weight: 800;}\n.pl-svc-caps .font-semibold{font-weight: 600;}\n.pl-svc-caps .uppercase{text-transform: uppercase;}\n.pl-svc-caps .leading-relaxed{line-height: 1.625;}\n.pl-svc-caps .leading-tight{line-height: 1.25;}\n.pl-svc-caps .tracking-\\[\\.18em\\]{letter-spacing: 0.18em;}\n.pl-svc-caps .tracking-tight{letter-spacing: -0.025em;}\n.pl-svc-caps .text-orange{--tw-text-opacity: 1; color: rgb(245 130 31 / var(--tw-text-opacity, 1));}\n.pl-svc-caps .text-white{--tw-text-opacity: 1; color: rgb(255 255 255 / var(--tw-text-opacity, 1));}\n.pl-svc-caps .text-white\\/80{color: rgba(255, 255, 255, 0.8);}\n.pl-svc-caps .text-white\\/90{color: rgba(255, 255, 255, 0.9);}\n.pl-svc-caps .text-white\\/95{color: rgba(255, 255, 255, 0.95);}\n@media (min-width: 768px){.pl-svc-caps .md\\:grid-cols-\\[220px_1fr\\]{grid-template-columns: 220px 1fr;}}\n@media (min-width: 1280px){.pl-svc-caps .xl\\:mt-6{margin-top: 1.5rem;}.pl-svc-caps .xl\\:grid-cols-\\[1\\.25fr_\\.46fr\\]{grid-template-columns: 1.25fr 0.46fr;}.pl-svc-caps .xl\\:gap-10{gap: 2.5rem;}}</style><section class=\"pl-svc-caps relative overflow-hidden py-10 px-6\" id=\"capabilities\" style=\"background:linear-gradient(135deg,#182336 0%,#22334B 52%,#1D2C42 100%)\">\n<div aria-hidden=\"true\" class=\"dark-grid absolute inset-0 pointer-events-none\"></div>\n<div aria-hidden=\"true\" class=\"absolute inset-0 pointer-events-none\" style=\"background:radial-gradient(circle at 72% 18%,rgba(96,125,167,.16) 0%,transparent 28%),radial-gradient(ellipse at 50% 0%,rgba(245,130,31,.05) 0%,transparent 58%)\"></div>\n<div class=\"max-w-page mx-auto relative z-10 grid gap-8 xl:grid-cols-[1.25fr_.46fr] xl:gap-10 items-start\">\n<div>\n<div class=\"eyebrow mb-3\"><span class=\"eyebrow-text\">Technical Specifications</span></div>\n<h2 class=\"font-display font-extrabold text-white leading-tight tracking-tight mb-2\" style=\"font-size:clamp(1.9rem,3vw,2.9rem)\">3D Printing Capabilities</h2>\n<p class=\"text-[15px] text-white/90 leading-relaxed mb-5\">Engineering guidance, not fixed spec promises.</p>\n<div class=\"space-y-3\">\n<div class=\"grid items-start gap-3 rounded-card border border-white/[0.05] bg-white/[0.02] px-4 py-3.5 md:grid-cols-[220px_1fr]\">\n<div class=\"text-sm font-semibold text-white/80\">Scale</div>\n<div class=\"text-[15px] leading-relaxed text-white/95\"><strong class=\"font-display font-extrabold text-orange text-[1.1rem]\">Micro</strong> &amp; precision-scale additive parts <span class=\"text-white/80\">(part-dependent)</span></div>\n</div>\n<div class=\"grid items-start gap-3 rounded-card border border-white/[0.05] bg-white/[0.02] px-4 py-3.5 md:grid-cols-[220px_1fr]\">\n<div class=\"text-sm font-semibold text-white/80\">Geometry</div>\n<div class=\"text-[15px] leading-relaxed text-white/95\"><strong class=\"font-display font-extrabold text-orange text-[1.1rem]\">Complex</strong> shapes · part consolidation · internal features</div>\n</div>\n<div class=\"grid items-start gap-3 rounded-card border border-white/[0.05] bg-white/[0.02] px-4 py-3.5 md:grid-cols-[220px_1fr]\">\n<div class=\"text-sm font-semibold text-white/80\">Volumes</div>\n<div class=\"text-[15px] leading-relaxed text-white/95\"><strong class=\"font-display font-extrabold text-orange text-[1.1rem]\">Prototype</strong> to small-batch production runs</div>\n</div>\n<div class=\"grid items-start gap-3 rounded-card border border-white/[0.05] bg-white/[0.02] px-4 py-3.5 md:grid-cols-[220px_1fr]\">\n<div class=\"text-sm font-semibold text-white/80\">Metals</div>\n<div class=\"text-[15px] leading-relaxed text-white/95\">Metals via precision rod, wire, and powder feedstocks</div>\n</div>\n<div class=\"grid items-start gap-3 rounded-card border border-white/[0.05] bg-white/[0.02] px-4 py-3.5 md:grid-cols-[220px_1fr]\">\n<div class=\"text-sm font-semibold text-white/80\">Polymers</div>\n<div class=\"text-[15px] leading-relaxed text-white/95\">ABS, PLA, nylon, acrylics, specialty &amp; FDA-compliant biocompatible polymers</div>\n</div>\n<div class=\"grid items-start gap-3 rounded-card border border-white/[0.05] bg-white/[0.02] px-4 py-3.5 md:grid-cols-[220px_1fr]\">\n<div class=\"text-sm font-semibold text-white/80\">Min order quantity</div>\n<div class=\"text-[15px] leading-relaxed text-white/95\"><strong class=\"font-display font-extrabold text-orange text-[1.1rem]\">No MOQ</strong>, from early prototype through production transfer</div>\n</div>\n<div class=\"grid items-start gap-3 rounded-card border border-white/[0.05] bg-white/[0.02] px-4 py-3.5 md:grid-cols-[220px_1fr]\">\n<div class=\"text-sm font-semibold text-white/80\">Team response</div>\n<div class=\"text-[15px] leading-relaxed text-white/95\"><strong class=\"font-display font-extrabold text-orange text-[1.1rem]\">Fast</strong> engineering response to new project enquiries</div>\n</div>\n<div class=\"grid items-start gap-3 rounded-card border border-white/[0.05] bg-white/[0.02] px-4 py-3.5 md:grid-cols-[220px_1fr]\">\n<div class=\"text-sm font-semibold text-white/80\">Inspection</div>\n<div class=\"text-[15px] leading-relaxed text-white/95\">Dimensional, microstructure &amp; surface characterisation via Goodfellow accredited testing</div>\n</div>\n</div>\n<p class=\"mt-5 text-sm leading-relaxed text-white/90\">Material selection supported, customers often work with engineering to optimise for manufacturability.</p>\n</div>\n<div class=\"rounded-card border border-white/[0.08] bg-white/[0.04] p-5 xl:mt-6\">\n<div class=\"text-[11px] font-bold tracking-[.18em] text-orange uppercase mb-3\">Material Support</div>\n<h3 class=\"font-display font-extrabold text-white text-[1.35rem] leading-tight mb-3\">Material support available</h3>\n<p class=\"text-[15px] leading-relaxed text-white/95\">Work with your own material or select from <strong class=\"font-extrabold text-orange\">170,000+</strong> options.</p>\n<p class=\"mt-4 text-sm leading-relaxed text-white/80\">Broader material matching and traceability support are available through the wider Goodfellow library.</p>\n</div>\n</div>\n</section>"
+     "html": "<style>.pl-svc-caps li{padding:0}.pl-svc-caps{scroll-behavior: smooth; scroll-padding-top: 120px;}\n.pl-svc-caps{font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden;}\n.pl-svc-caps .eyebrow{display: flex; align-items: center; gap: 12px; margin-bottom: 12px;}\n.pl-svc-caps .eyebrow-text{font-size: 11px; font-weight: 700; letter-spacing: 0.18em; color: rgb(245, 130, 31); text-transform: uppercase;}\n.pl-svc-caps .dark-grid{background-image: linear-gradient(rgba(245, 130, 31, 0.024) 1px, transparent 1px), linear-gradient(90deg, rgba(245, 130, 31, 0.024) 1px, transparent 1px), linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px); background-size: 64px 64px, 64px 64px, 16px 16px, 16px 16px;}\n@keyframes fuUp { \n  0% { opacity: 0; transform: translateY(18px); }\n  100% { opacity: 1; transform: none; }\n}\n@keyframes pulse { \n  0%, 100% { opacity: 1; transform: scale(1); }\n  50% { opacity: 0.6; transform: scale(1.3); }\n}\n.pl-svc-caps{font-family: Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif !important; color: rgb(34, 57, 93);}\n.pl-svc-caps h2, .pl-svc-caps h3{letter-spacing: -0.03em; color: rgb(34, 57, 93); font-family: Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif !important; font-weight: 800 !important;}\n.pl-svc-caps p, .pl-svc-caps span{font-family: Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif !important;}\n.pl-svc-caps, .pl-svc-caps *, .pl-svc-caps::before, .pl-svc-caps ::before, .pl-svc-caps::after, .pl-svc-caps ::after{--tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;}\n.pl-svc-caps::backdrop, .pl-svc-caps ::backdrop{--tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;}\n.pl-svc-caps, .pl-svc-caps *, .pl-svc-caps::after, .pl-svc-caps ::after, .pl-svc-caps::before, .pl-svc-caps ::before{box-sizing: border-box; border-width: 0px; border-style: solid; border-color: rgb(229, 231, 235);}\n.pl-svc-caps::after, .pl-svc-caps ::after, .pl-svc-caps::before, .pl-svc-caps ::before{--tw-content: '';}\n.pl-svc-caps{line-height: 1.5; text-size-adjust: 100%; tab-size: 4; font-family: Inter, system-ui, sans-serif; font-feature-settings: normal; font-variation-settings: normal; -webkit-tap-highlight-color: transparent;}\n.pl-svc-caps{margin: 0px;}\n.pl-svc-caps h2, .pl-svc-caps h3{font-size: inherit; font-weight: inherit;}\n.pl-svc-caps strong{font-weight: bolder;}\n.pl-svc-caps::-webkit-inner-spin-button, .pl-svc-caps ::-webkit-inner-spin-button, .pl-svc-caps::-webkit-outer-spin-button, .pl-svc-caps ::-webkit-outer-spin-button{height: auto;}\n.pl-svc-caps::-webkit-search-decoration, .pl-svc-caps ::-webkit-search-decoration{appearance: none;}\n.pl-svc-caps::-webkit-file-upload-button, .pl-svc-caps ::-webkit-file-upload-button{appearance: button; font: inherit;}\n.pl-svc-caps h2, .pl-svc-caps h3, .pl-svc-caps p{margin: 0px;}\n.pl-svc-caps .pointer-events-none{pointer-events: none;}\n.pl-svc-caps .absolute{position: absolute;}\n.pl-svc-caps.relative, .pl-svc-caps .relative{position: relative;}\n.pl-svc-caps .inset-0{inset: 0px;}\n.pl-svc-caps .z-10{z-index: 10;}\n.pl-svc-caps .mx-auto{margin-left: auto; margin-right: auto;}\n.pl-svc-caps .mb-2{margin-bottom: 0.5rem;}\n.pl-svc-caps .mb-3{margin-bottom: 0.75rem;}\n.pl-svc-caps .mb-5{margin-bottom: 1.25rem;}\n.pl-svc-caps .mt-4{margin-top: 1rem;}\n.pl-svc-caps .mt-5{margin-top: 1.25rem;}\n.pl-svc-caps .grid{display: grid;}\n.pl-svc-caps .max-w-page{max-width: 1260px;}\n.pl-svc-caps .items-start{align-items: flex-start;}\n.pl-svc-caps .gap-3{gap: 0.75rem;}\n.pl-svc-caps .gap-8{gap: 2rem;}\n.pl-svc-caps .space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse: 0; margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse))); margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));}\n.pl-svc-caps.overflow-hidden{overflow: hidden;}\n.pl-svc-caps .rounded-card{border-radius: 8px;}\n.pl-svc-caps .border{border-width: 1px;}\n.pl-svc-caps .border-white\\/\\[0\\.05\\]{border-color: rgba(255, 255, 255, 0.05);}\n.pl-svc-caps .border-white\\/\\[0\\.08\\]{border-color: rgba(255, 255, 255, 0.08);}\n.pl-svc-caps .bg-white\\/\\[0\\.04\\]{background-color: rgba(255, 255, 255, 0.04);}\n.pl-svc-caps .bg-white\\/\\[0\\.02\\]{background-color: rgba(255, 255, 255, 0.02);}\n.pl-svc-caps .p-5{padding: 1.25rem;}\n.pl-svc-caps .px-4{padding-left: 1rem; padding-right: 1rem;}\n.pl-svc-caps.px-6{padding-left: 1.5rem; padding-right: 1.5rem;}\n.pl-svc-caps .py-3\\.5{padding-top: 0.875rem; padding-bottom: 0.875rem;}\n.pl-svc-caps.py-10{padding-top: 2.5rem; padding-bottom: 2.5rem;}\n.pl-svc-caps .font-display{font-family: Inter, system-ui, sans-serif;}\n.pl-svc-caps .text-\\[11px\\]{font-size: 11px;}\n.pl-svc-caps .text-\\[15px\\]{font-size: 15px;}\n.pl-svc-caps .text-sm{font-size: 0.875rem; line-height: 1.25rem;}\n.pl-svc-caps .text-\\[1\\.1rem\\]{font-size: 1.1rem;}\n.pl-svc-caps .text-\\[1\\.35rem\\]{font-size: 1.35rem;}\n.pl-svc-caps .font-bold{font-weight: 700;}\n.pl-svc-caps .font-extrabold{font-weight: 800;}\n.pl-svc-caps .font-semibold{font-weight: 600;}\n.pl-svc-caps .uppercase{text-transform: uppercase;}\n.pl-svc-caps .leading-relaxed{line-height: 1.625;}\n.pl-svc-caps .leading-tight{line-height: 1.25;}\n.pl-svc-caps .tracking-\\[\\.18em\\]{letter-spacing: 0.18em;}\n.pl-svc-caps .tracking-tight{letter-spacing: -0.025em;}\n.pl-svc-caps .text-orange{--tw-text-opacity: 1; color: rgb(245 130 31 / var(--tw-text-opacity, 1));}\n.pl-svc-caps .text-white{--tw-text-opacity: 1; color: rgb(255 255 255 / var(--tw-text-opacity, 1));}\n.pl-svc-caps .text-white\\/80{color: rgba(255, 255, 255, 0.8);}\n.pl-svc-caps .text-white\\/90{color: rgba(255, 255, 255, 0.9);}\n.pl-svc-caps .text-white\\/95{color: rgba(255, 255, 255, 0.95);}\n@media (min-width: 768px){.pl-svc-caps .md\\:grid-cols-\\[220px_1fr\\]{grid-template-columns: 220px 1fr;}}\n@media (min-width: 1280px){.pl-svc-caps .xl\\:mt-6{margin-top: 1.5rem;}.pl-svc-caps .xl\\:grid-cols-\\[1\\.25fr_\\.46fr\\]{grid-template-columns: 1.25fr 0.46fr;}.pl-svc-caps .xl\\:gap-10{gap: 2.5rem;}}</style><section class=\"pl-svc-caps relative overflow-hidden py-10 px-6\" data-surface=\"dark\" id=\"capabilities\" style=\"background:linear-gradient(135deg,#182336 0%,#22334B 52%,#1D2C42 100%)\">\n<div aria-hidden=\"true\" class=\"dark-grid absolute inset-0 pointer-events-none\"></div>\n<div aria-hidden=\"true\" class=\"absolute inset-0 pointer-events-none\" style=\"background:radial-gradient(circle at 72% 18%,rgba(96,125,167,.16) 0%,transparent 28%),radial-gradient(ellipse at 50% 0%,rgba(245,130,31,.05) 0%,transparent 58%)\"></div>\n<div class=\"max-w-page mx-auto relative z-10 grid gap-8 xl:grid-cols-[1.25fr_.46fr] xl:gap-10 items-start\">\n<div>\n<div class=\"eyebrow mb-3\"><span class=\"eyebrow-text\">Technical Specifications</span></div>\n<h2 class=\"font-display font-extrabold text-white leading-tight tracking-tight mb-2\" style=\"font-size:clamp(1.9rem,3vw,2.9rem)\">3D Printing Capabilities</h2>\n<p class=\"text-[15px] text-white/90 leading-relaxed mb-5\">Engineering guidance, not fixed spec promises.</p>\n<div class=\"space-y-3\">\n<div class=\"grid items-start gap-3 rounded-card border border-white/[0.05] bg-white/[0.02] px-4 py-3.5 md:grid-cols-[220px_1fr]\">\n<div class=\"text-sm font-semibold text-white/80\">Scale</div>\n<div class=\"text-[15px] leading-relaxed text-white/95\"><strong class=\"font-display font-extrabold text-orange text-[1.1rem]\">Micro</strong> &amp; precision-scale additive parts <span class=\"text-white/80\">(part-dependent)</span></div>\n</div>\n<div class=\"grid items-start gap-3 rounded-card border border-white/[0.05] bg-white/[0.02] px-4 py-3.5 md:grid-cols-[220px_1fr]\">\n<div class=\"text-sm font-semibold text-white/80\">Geometry</div>\n<div class=\"text-[15px] leading-relaxed text-white/95\"><strong class=\"font-display font-extrabold text-orange text-[1.1rem]\">Complex</strong> shapes · part consolidation · internal features</div>\n</div>\n<div class=\"grid items-start gap-3 rounded-card border border-white/[0.05] bg-white/[0.02] px-4 py-3.5 md:grid-cols-[220px_1fr]\">\n<div class=\"text-sm font-semibold text-white/80\">Volumes</div>\n<div class=\"text-[15px] leading-relaxed text-white/95\"><strong class=\"font-display font-extrabold text-orange text-[1.1rem]\">Prototype</strong> to small-batch production runs</div>\n</div>\n<div class=\"grid items-start gap-3 rounded-card border border-white/[0.05] bg-white/[0.02] px-4 py-3.5 md:grid-cols-[220px_1fr]\">\n<div class=\"text-sm font-semibold text-white/80\">Polymers</div>\n<div class=\"text-[15px] leading-relaxed text-white/95\">ABS, PLA, nylon, acrylics, specialty &amp; FDA-compliant biocompatible polymers</div>\n</div>\n<div class=\"grid items-start gap-3 rounded-card border border-white/[0.05] bg-white/[0.02] px-4 py-3.5 md:grid-cols-[220px_1fr]\">\n<div class=\"text-sm font-semibold text-white/80\">Min order quantity</div>\n<div class=\"text-[15px] leading-relaxed text-white/95\"><strong class=\"font-display font-extrabold text-orange text-[1.1rem]\">No MOQ</strong>, from early prototype through production transfer</div>\n</div>\n<div class=\"grid items-start gap-3 rounded-card border border-white/[0.05] bg-white/[0.02] px-4 py-3.5 md:grid-cols-[220px_1fr]\">\n<div class=\"text-sm font-semibold text-white/80\">Team response</div>\n<div class=\"text-[15px] leading-relaxed text-white/95\"><strong class=\"font-display font-extrabold text-orange text-[1.1rem]\">Fast</strong> engineering response to new project enquiries</div>\n</div>\n<div class=\"grid items-start gap-3 rounded-card border border-white/[0.05] bg-white/[0.02] px-4 py-3.5 md:grid-cols-[220px_1fr]\">\n<div class=\"text-sm font-semibold text-white/80\">Inspection</div>\n<div class=\"text-[15px] leading-relaxed text-white/95\">Dimensional, microstructure &amp; surface characterisation via Goodfellow accredited testing</div>\n</div>\n</div>\n<p class=\"mt-5 text-sm leading-relaxed text-white/90\">Material selection supported, customers often work with engineering to optimise for manufacturability.</p>\n</div>\n<div class=\"rounded-card border border-white/[0.08] bg-white/[0.04] p-5 xl:mt-6\">\n<div class=\"text-[11px] font-bold tracking-[.18em] text-orange uppercase mb-3\">Material Support</div>\n<h3 class=\"font-display font-extrabold text-white text-[1.35rem] leading-tight mb-3\">Material support available</h3>\n<p class=\"text-[15px] leading-relaxed text-white/95\">Work with your own material or select from <strong class=\"font-extrabold text-orange\">170,000+</strong> options.</p>\n<p class=\"mt-4 text-sm leading-relaxed text-white/80\">Broader material matching and traceability support are available through the wider Goodfellow library.</p>\n</div>\n</div>\n</section>"
     },
     "elements": []
    }
@@ -3981,7 +3981,7 @@
             "elType": "widget",
             "widgetType": "text-editor",
             "settings": {
-             "editor": "<p>Choose from engineering plastics, acrylics, metals, ceramics, and FDA-compliant biocompatible materials.</p>",
+             "editor": "<p>Choose from engineering plastics, acrylics, and FDA-compliant biocompatible materials.</p>",
              "typography_typography": "custom",
              "typography_font_family": "Inter",
              "typography_font_size": {
@@ -4713,7 +4713,7 @@
   ]
  },
  {
-  "id": "e3bc2c4",
+  "id": "4e16428",
   "elType": "container",
   "isInner": false,
   "settings": {
@@ -4739,7 +4739,7 @@
   },
   "elements": [
    {
-    "id": "acbe7ee",
+    "id": "4052729",
     "elType": "container",
     "isInner": false,
     "settings": {
@@ -4767,7 +4767,7 @@
     },
     "elements": [
      {
-      "id": "1ff7d3f",
+      "id": "37bd128",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -4799,7 +4799,7 @@
       },
       "elements": [
        {
-        "id": "37bd128",
+        "id": "dd60808",
         "elType": "widget",
         "widgetType": "heading",
         "settings": {
@@ -4838,7 +4838,7 @@
         "elements": []
        },
        {
-        "id": "4052729",
+        "id": "7952034",
         "elType": "widget",
         "widgetType": "heading",
         "settings": {
@@ -4873,7 +4873,7 @@
         "elements": []
        },
        {
-        "id": "4e16428",
+        "id": "9bc8752",
         "elType": "widget",
         "widgetType": "text-editor",
         "settings": {
@@ -4914,7 +4914,7 @@
       ]
      },
      {
-      "id": "9bc8752",
+      "id": "1a9d223",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -4939,7 +4939,7 @@
       },
       "elements": [
        {
-        "id": "aa20e0e",
+        "id": "4c2b5f8",
         "elType": "container",
         "isInner": false,
         "settings": {
@@ -4962,7 +4962,7 @@
         },
         "elements": [
          {
-          "id": "ddb0335",
+          "id": "2002b99",
           "elType": "widget",
           "widgetType": "heading",
           "settings": {
@@ -4998,7 +4998,7 @@
           "elements": []
          },
          {
-          "id": "501ad6b",
+          "id": "98742a2",
           "elType": "container",
           "isInner": false,
           "settings": {
@@ -5045,7 +5045,7 @@
           },
           "elements": [
            {
-            "id": "8e0bac2",
+            "id": "ee6b568",
             "elType": "container",
             "isInner": false,
             "settings": {
@@ -5067,7 +5067,7 @@
             },
             "elements": [
              {
-              "id": "42fc559",
+              "id": "47a76f7",
               "elType": "widget",
               "widgetType": "image",
               "settings": {
@@ -5083,7 +5083,7 @@
             ]
            },
            {
-            "id": "98742a2",
+            "id": "a0a1189",
             "elType": "container",
             "isInner": false,
             "settings": {
@@ -5106,6 +5106,105 @@
              }
             },
             "elements": [
+             {
+              "id": "8e0bac2",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+               "flex_direction": "row",
+               "flex_align_items": "flex-start",
+               "flex_gap": {
+                "unit": "px",
+                "column": "8",
+                "row": "8",
+                "isLinked": true
+               },
+               "flex_wrap": "nowrap",
+               "content_width": "full",
+               "padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": true
+               }
+              },
+              "elements": [
+               {
+                "id": "95239cd",
+                "elType": "container",
+                "isInner": false,
+                "settings": {
+                 "width": {
+                  "unit": "px",
+                  "size": 6
+                 },
+                 "min_height": {
+                  "unit": "px",
+                  "size": 6
+                 },
+                 "background_background": "classic",
+                 "border_radius": {
+                  "unit": "%",
+                  "top": "50",
+                  "right": "50",
+                  "bottom": "50",
+                  "left": "50",
+                  "isLinked": true
+                 },
+                 "custom_css": "selector{flex-shrink:0}",
+                 "content_width": "full",
+                 "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                 },
+                 "margin": {
+                  "unit": "px",
+                  "top": "7",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": false
+                 },
+                 "background_color": "",
+                 "__globals__": {
+                  "background_color": "globals/colors?id=gforange"
+                 }
+                },
+                "elements": []
+               },
+               {
+                "id": "42fc559",
+                "elType": "widget",
+                "widgetType": "text-editor",
+                "settings": {
+                 "editor": "<p>Global supply of advanced metals, alloys, ceramics, polymers, and compounds with research-quality flexibility and production-scale support across 170,000+ specialist materials.</p>",
+                 "typography_typography": "custom",
+                 "typography_font_family": "Inter",
+                 "typography_font_size": {
+                  "unit": "px",
+                  "size": 14
+                 },
+                 "typography_font_weight": "400",
+                 "text_color": "",
+                 "__globals__": {
+                  "text_color": "globals/colors?id=gfbody"
+                 },
+                 "typography_line_height": {
+                  "unit": "px",
+                  "size": 20
+                 },
+                 "custom_css": "selector p{font-size:14px;line-height:20px;font-weight:400;margin:0}selector a{font-size:inherit;line-height:inherit}"
+                },
+                "elements": []
+               }
+              ]
+             },
              {
               "id": "28cc2a8",
               "elType": "container",
@@ -5183,7 +5282,7 @@
                 "elType": "widget",
                 "widgetType": "text-editor",
                 "settings": {
-                 "editor": "<p>Global supply of advanced metals, alloys, ceramics, polymers, and compounds with research-quality flexibility and production-scale support across 170,000+ specialist materials.</p>",
+                 "editor": "<p>170,000+ material grades</p>",
                  "typography_typography": "custom",
                  "typography_font_family": "Inter",
                  "typography_font_size": {
@@ -5282,105 +5381,6 @@
                 "elType": "widget",
                 "widgetType": "text-editor",
                 "settings": {
-                 "editor": "<p>170,000+ material grades</p>",
-                 "typography_typography": "custom",
-                 "typography_font_family": "Inter",
-                 "typography_font_size": {
-                  "unit": "px",
-                  "size": 14
-                 },
-                 "typography_font_weight": "400",
-                 "text_color": "",
-                 "__globals__": {
-                  "text_color": "globals/colors?id=gfbody"
-                 },
-                 "typography_line_height": {
-                  "unit": "px",
-                  "size": 20
-                 },
-                 "custom_css": "selector p{font-size:14px;line-height:20px;font-weight:400;margin:0}selector a{font-size:inherit;line-height:inherit}"
-                },
-                "elements": []
-               }
-              ]
-             },
-             {
-              "id": "2002b99",
-              "elType": "container",
-              "isInner": false,
-              "settings": {
-               "flex_direction": "row",
-               "flex_align_items": "flex-start",
-               "flex_gap": {
-                "unit": "px",
-                "column": "8",
-                "row": "8",
-                "isLinked": true
-               },
-               "flex_wrap": "nowrap",
-               "content_width": "full",
-               "padding": {
-                "unit": "px",
-                "top": "0",
-                "right": "0",
-                "bottom": "0",
-                "left": "0",
-                "isLinked": true
-               }
-              },
-              "elements": [
-               {
-                "id": "a0a1189",
-                "elType": "container",
-                "isInner": false,
-                "settings": {
-                 "width": {
-                  "unit": "px",
-                  "size": 6
-                 },
-                 "min_height": {
-                  "unit": "px",
-                  "size": 6
-                 },
-                 "background_background": "classic",
-                 "border_radius": {
-                  "unit": "%",
-                  "top": "50",
-                  "right": "50",
-                  "bottom": "50",
-                  "left": "50",
-                  "isLinked": true
-                 },
-                 "custom_css": "selector{flex-shrink:0}",
-                 "content_width": "full",
-                 "padding": {
-                  "unit": "px",
-                  "top": "0",
-                  "right": "0",
-                  "bottom": "0",
-                  "left": "0",
-                  "isLinked": true
-                 },
-                 "margin": {
-                  "unit": "px",
-                  "top": "7",
-                  "right": "0",
-                  "bottom": "0",
-                  "left": "0",
-                  "isLinked": false
-                 },
-                 "background_color": "",
-                 "__globals__": {
-                  "background_color": "globals/colors?id=gforange"
-                 }
-                },
-                "elements": []
-               },
-               {
-                "id": "19f6f80",
-                "elType": "widget",
-                "widgetType": "text-editor",
-                "settings": {
                  "editor": "<p>No minimum order</p>",
                  "typography_typography": "custom",
                  "typography_font_family": "Inter",
@@ -5406,7 +5406,7 @@
             ]
            },
            {
-            "id": "4c2b5f8",
+            "id": "19f6f80",
             "elType": "widget",
             "widgetType": "button",
             "settings": {
@@ -5463,7 +5463,7 @@
         ]
        },
        {
-        "id": "5319c37",
+        "id": "8afdd14",
         "elType": "container",
         "isInner": false,
         "settings": {
@@ -5486,7 +5486,7 @@
         },
         "elements": [
          {
-          "id": "acf0e7e",
+          "id": "e800f01",
           "elType": "widget",
           "widgetType": "heading",
           "settings": {
@@ -5522,7 +5522,7 @@
           "elements": []
          },
          {
-          "id": "e4a7609",
+          "id": "904c3a8",
           "elType": "container",
           "isInner": false,
           "settings": {
@@ -5569,7 +5569,7 @@
           },
           "elements": [
            {
-            "id": "8582a3a",
+            "id": "ddb0335",
             "elType": "widget",
             "widgetType": "heading",
             "settings": {
@@ -5600,7 +5600,7 @@
             "elements": []
            },
            {
-            "id": "4272ebf",
+            "id": "aa20e0e",
             "elType": "container",
             "isInner": false,
             "settings": {
@@ -5622,7 +5622,7 @@
             },
             "elements": [
              {
-              "id": "adc070e",
+              "id": "501ad6b",
               "elType": "widget",
               "widgetType": "image",
               "settings": {
@@ -5638,7 +5638,7 @@
             ]
            },
            {
-            "id": "904c3a8",
+            "id": "fd48903",
             "elType": "container",
             "isInner": false,
             "settings": {
@@ -5661,6 +5661,105 @@
              }
             },
             "elements": [
+             {
+              "id": "4272ebf",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+               "flex_direction": "row",
+               "flex_align_items": "flex-start",
+               "flex_gap": {
+                "unit": "px",
+                "column": "8",
+                "row": "8",
+                "isLinked": true
+               },
+               "flex_wrap": "nowrap",
+               "content_width": "full",
+               "padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": true
+               }
+              },
+              "elements": [
+               {
+                "id": "8582a3a",
+                "elType": "container",
+                "isInner": false,
+                "settings": {
+                 "width": {
+                  "unit": "px",
+                  "size": 6
+                 },
+                 "min_height": {
+                  "unit": "px",
+                  "size": 6
+                 },
+                 "background_background": "classic",
+                 "border_radius": {
+                  "unit": "%",
+                  "top": "50",
+                  "right": "50",
+                  "bottom": "50",
+                  "left": "50",
+                  "isLinked": true
+                 },
+                 "custom_css": "selector{flex-shrink:0}",
+                 "content_width": "full",
+                 "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                 },
+                 "margin": {
+                  "unit": "px",
+                  "top": "7",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": false
+                 },
+                 "background_color": "",
+                 "__globals__": {
+                  "background_color": "globals/colors?id=gforange"
+                 }
+                },
+                "elements": []
+               },
+               {
+                "id": "adc070e",
+                "elType": "widget",
+                "widgetType": "text-editor",
+                "settings": {
+                 "editor": "<p>CNC micromachining</p>",
+                 "typography_typography": "custom",
+                 "typography_font_family": "Inter",
+                 "typography_font_size": {
+                  "unit": "px",
+                  "size": 14
+                 },
+                 "typography_font_weight": "400",
+                 "text_color": "",
+                 "__globals__": {
+                  "text_color": "globals/colors?id=gfbody"
+                 },
+                 "typography_line_height": {
+                  "unit": "px",
+                  "size": 20
+                 },
+                 "custom_css": "selector p{font-size:14px;line-height:20px;font-weight:400;margin:0}selector a{font-size:inherit;line-height:inherit}"
+                },
+                "elements": []
+               }
+              ]
+             },
              {
               "id": "57e388b",
               "elType": "container",
@@ -5738,7 +5837,7 @@
                 "elType": "widget",
                 "widgetType": "text-editor",
                 "settings": {
-                 "editor": "<p>CNC micromachining</p>",
+                 "editor": "<p>Laser micromachining</p>",
                  "typography_typography": "custom",
                  "typography_font_family": "Inter",
                  "typography_font_size": {
@@ -5837,7 +5936,7 @@
                 "elType": "widget",
                 "widgetType": "text-editor",
                 "settings": {
-                 "editor": "<p>Laser micromachining</p>",
+                 "editor": "<p>Hybrid manufacturing</p>",
                  "typography_typography": "custom",
                  "typography_font_family": "Inter",
                  "typography_font_size": {
@@ -5936,105 +6035,6 @@
                 "elType": "widget",
                 "widgetType": "text-editor",
                 "settings": {
-                 "editor": "<p>Hybrid manufacturing</p>",
-                 "typography_typography": "custom",
-                 "typography_font_family": "Inter",
-                 "typography_font_size": {
-                  "unit": "px",
-                  "size": 14
-                 },
-                 "typography_font_weight": "400",
-                 "text_color": "",
-                 "__globals__": {
-                  "text_color": "globals/colors?id=gfbody"
-                 },
-                 "typography_line_height": {
-                  "unit": "px",
-                  "size": 20
-                 },
-                 "custom_css": "selector p{font-size:14px;line-height:20px;font-weight:400;margin:0}selector a{font-size:inherit;line-height:inherit}"
-                },
-                "elements": []
-               }
-              ]
-             },
-             {
-              "id": "e800f01",
-              "elType": "container",
-              "isInner": false,
-              "settings": {
-               "flex_direction": "row",
-               "flex_align_items": "flex-start",
-               "flex_gap": {
-                "unit": "px",
-                "column": "8",
-                "row": "8",
-                "isLinked": true
-               },
-               "flex_wrap": "nowrap",
-               "content_width": "full",
-               "padding": {
-                "unit": "px",
-                "top": "0",
-                "right": "0",
-                "bottom": "0",
-                "left": "0",
-                "isLinked": true
-               }
-              },
-              "elements": [
-               {
-                "id": "fd48903",
-                "elType": "container",
-                "isInner": false,
-                "settings": {
-                 "width": {
-                  "unit": "px",
-                  "size": 6
-                 },
-                 "min_height": {
-                  "unit": "px",
-                  "size": 6
-                 },
-                 "background_background": "classic",
-                 "border_radius": {
-                  "unit": "%",
-                  "top": "50",
-                  "right": "50",
-                  "bottom": "50",
-                  "left": "50",
-                  "isLinked": true
-                 },
-                 "custom_css": "selector{flex-shrink:0}",
-                 "content_width": "full",
-                 "padding": {
-                  "unit": "px",
-                  "top": "0",
-                  "right": "0",
-                  "bottom": "0",
-                  "left": "0",
-                  "isLinked": true
-                 },
-                 "margin": {
-                  "unit": "px",
-                  "top": "7",
-                  "right": "0",
-                  "bottom": "0",
-                  "left": "0",
-                  "isLinked": false
-                 },
-                 "background_color": "",
-                 "__globals__": {
-                  "background_color": "globals/colors?id=gforange"
-                 }
-                },
-                "elements": []
-               },
-               {
-                "id": "4adda79",
-                "elType": "widget",
-                "widgetType": "text-editor",
-                "settings": {
                  "editor": "<p>Micro-assembly</p>",
                  "typography_typography": "custom",
                  "typography_font_family": "Inter",
@@ -6060,7 +6060,7 @@
             ]
            },
            {
-            "id": "8afdd14",
+            "id": "4adda79",
             "elType": "widget",
             "widgetType": "button",
             "settings": {
@@ -6108,7 +6108,7 @@
         ]
        },
        {
-        "id": "268c1ce",
+        "id": "f2ac598",
         "elType": "container",
         "isInner": false,
         "settings": {
@@ -6131,7 +6131,7 @@
         },
         "elements": [
          {
-          "id": "d60a77a",
+          "id": "fc70f54",
           "elType": "widget",
           "widgetType": "heading",
           "settings": {
@@ -6167,7 +6167,7 @@
           "elements": []
          },
          {
-          "id": "07624cb",
+          "id": "9b7ab95",
           "elType": "container",
           "isInner": false,
           "settings": {
@@ -6214,7 +6214,7 @@
           },
           "elements": [
            {
-            "id": "607fec9",
+            "id": "e4a7609",
             "elType": "container",
             "isInner": false,
             "settings": {
@@ -6236,7 +6236,7 @@
             },
             "elements": [
              {
-              "id": "8ab6257",
+              "id": "acf0e7e",
               "elType": "widget",
               "widgetType": "image",
               "settings": {
@@ -6252,7 +6252,7 @@
             ]
            },
            {
-            "id": "9b7ab95",
+            "id": "001dc56",
             "elType": "container",
             "isInner": false,
             "settings": {
@@ -6275,6 +6275,105 @@
              }
             },
             "elements": [
+             {
+              "id": "607fec9",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+               "flex_direction": "row",
+               "flex_align_items": "flex-start",
+               "flex_gap": {
+                "unit": "px",
+                "column": "8",
+                "row": "8",
+                "isLinked": true
+               },
+               "flex_wrap": "nowrap",
+               "content_width": "full",
+               "padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": true
+               }
+              },
+              "elements": [
+               {
+                "id": "5319c37",
+                "elType": "container",
+                "isInner": false,
+                "settings": {
+                 "width": {
+                  "unit": "px",
+                  "size": 6
+                 },
+                 "min_height": {
+                  "unit": "px",
+                  "size": 6
+                 },
+                 "background_background": "classic",
+                 "border_radius": {
+                  "unit": "%",
+                  "top": "50",
+                  "right": "50",
+                  "bottom": "50",
+                  "left": "50",
+                  "isLinked": true
+                 },
+                 "custom_css": "selector{flex-shrink:0}",
+                 "content_width": "full",
+                 "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                 },
+                 "margin": {
+                  "unit": "px",
+                  "top": "7",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": false
+                 },
+                 "background_color": "",
+                 "__globals__": {
+                  "background_color": "globals/colors?id=gforange"
+                 }
+                },
+                "elements": []
+               },
+               {
+                "id": "8ab6257",
+                "elType": "widget",
+                "widgetType": "text-editor",
+                "settings": {
+                 "editor": "<p>Certified reference materials and analytical standards supporting calibration, laboratory QA, and regulatory compliance.</p>",
+                 "typography_typography": "custom",
+                 "typography_font_family": "Inter",
+                 "typography_font_size": {
+                  "unit": "px",
+                  "size": 14
+                 },
+                 "typography_font_weight": "400",
+                 "text_color": "",
+                 "__globals__": {
+                  "text_color": "globals/colors?id=gfbody"
+                 },
+                 "typography_line_height": {
+                  "unit": "px",
+                  "size": 20
+                 },
+                 "custom_css": "selector p{font-size:14px;line-height:20px;font-weight:400;margin:0}selector a{font-size:inherit;line-height:inherit}"
+                },
+                "elements": []
+               }
+              ]
+             },
              {
               "id": "47954f8",
               "elType": "container",
@@ -6352,7 +6451,7 @@
                 "elType": "widget",
                 "widgetType": "text-editor",
                 "settings": {
-                 "editor": "<p>Certified reference materials and analytical standards supporting calibration, laboratory QA, and regulatory compliance.</p>",
+                 "editor": "<p>Calibration and QA support</p>",
                  "typography_typography": "custom",
                  "typography_font_family": "Inter",
                  "typography_font_size": {
@@ -6451,105 +6550,6 @@
                 "elType": "widget",
                 "widgetType": "text-editor",
                 "settings": {
-                 "editor": "<p>Calibration and QA support</p>",
-                 "typography_typography": "custom",
-                 "typography_font_family": "Inter",
-                 "typography_font_size": {
-                  "unit": "px",
-                  "size": 14
-                 },
-                 "typography_font_weight": "400",
-                 "text_color": "",
-                 "__globals__": {
-                  "text_color": "globals/colors?id=gfbody"
-                 },
-                 "typography_line_height": {
-                  "unit": "px",
-                  "size": 20
-                 },
-                 "custom_css": "selector p{font-size:14px;line-height:20px;font-weight:400;margin:0}selector a{font-size:inherit;line-height:inherit}"
-                },
-                "elements": []
-               }
-              ]
-             },
-             {
-              "id": "fc70f54",
-              "elType": "container",
-              "isInner": false,
-              "settings": {
-               "flex_direction": "row",
-               "flex_align_items": "flex-start",
-               "flex_gap": {
-                "unit": "px",
-                "column": "8",
-                "row": "8",
-                "isLinked": true
-               },
-               "flex_wrap": "nowrap",
-               "content_width": "full",
-               "padding": {
-                "unit": "px",
-                "top": "0",
-                "right": "0",
-                "bottom": "0",
-                "left": "0",
-                "isLinked": true
-               }
-              },
-              "elements": [
-               {
-                "id": "001dc56",
-                "elType": "container",
-                "isInner": false,
-                "settings": {
-                 "width": {
-                  "unit": "px",
-                  "size": 6
-                 },
-                 "min_height": {
-                  "unit": "px",
-                  "size": 6
-                 },
-                 "background_background": "classic",
-                 "border_radius": {
-                  "unit": "%",
-                  "top": "50",
-                  "right": "50",
-                  "bottom": "50",
-                  "left": "50",
-                  "isLinked": true
-                 },
-                 "custom_css": "selector{flex-shrink:0}",
-                 "content_width": "full",
-                 "padding": {
-                  "unit": "px",
-                  "top": "0",
-                  "right": "0",
-                  "bottom": "0",
-                  "left": "0",
-                  "isLinked": true
-                 },
-                 "margin": {
-                  "unit": "px",
-                  "top": "7",
-                  "right": "0",
-                  "bottom": "0",
-                  "left": "0",
-                  "isLinked": false
-                 },
-                 "background_color": "",
-                 "__globals__": {
-                  "background_color": "globals/colors?id=gforange"
-                 }
-                },
-                "elements": []
-               },
-               {
-                "id": "0ae821d",
-                "elType": "widget",
-                "widgetType": "text-editor",
-                "settings": {
                  "editor": "<p>Traceable standards</p>",
                  "typography_typography": "custom",
                  "typography_font_family": "Inter",
@@ -6575,7 +6575,7 @@
             ]
            },
            {
-            "id": "f2ac598",
+            "id": "0ae821d",
             "elType": "widget",
             "widgetType": "button",
             "settings": {
@@ -6632,7 +6632,7 @@
         ]
        },
        {
-        "id": "7952034",
+        "id": "487fb69",
         "elType": "container",
         "isInner": false,
         "settings": {
@@ -6655,7 +6655,7 @@
         },
         "elements": [
          {
-          "id": "1a9d223",
+          "id": "db8cda9",
           "elType": "widget",
           "widgetType": "heading",
           "settings": {
@@ -6691,7 +6691,7 @@
           "elements": []
          },
          {
-          "id": "dd60808",
+          "id": "b8c4c12",
           "elType": "container",
           "isInner": false,
           "settings": {
@@ -6738,7 +6738,7 @@
           },
           "elements": [
            {
-            "id": "2e5ef69",
+            "id": "07624cb",
             "elType": "container",
             "isInner": false,
             "settings": {
@@ -6760,7 +6760,7 @@
             },
             "elements": [
              {
-              "id": "5a09641",
+              "id": "d60a77a",
               "elType": "widget",
               "widgetType": "image",
               "settings": {
@@ -6776,7 +6776,7 @@
             ]
            },
            {
-            "id": "b8c4c12",
+            "id": "bbe5be5",
             "elType": "container",
             "isInner": false,
             "settings": {
@@ -6799,6 +6799,105 @@
              }
             },
             "elements": [
+             {
+              "id": "2e5ef69",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+               "flex_direction": "row",
+               "flex_align_items": "flex-start",
+               "flex_gap": {
+                "unit": "px",
+                "column": "8",
+                "row": "8",
+                "isLinked": true
+               },
+               "flex_wrap": "nowrap",
+               "content_width": "full",
+               "padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": true
+               }
+              },
+              "elements": [
+               {
+                "id": "268c1ce",
+                "elType": "container",
+                "isInner": false,
+                "settings": {
+                 "width": {
+                  "unit": "px",
+                  "size": 6
+                 },
+                 "min_height": {
+                  "unit": "px",
+                  "size": 6
+                 },
+                 "background_background": "classic",
+                 "border_radius": {
+                  "unit": "%",
+                  "top": "50",
+                  "right": "50",
+                  "bottom": "50",
+                  "left": "50",
+                  "isLinked": true
+                 },
+                 "custom_css": "selector{flex-shrink:0}",
+                 "content_width": "full",
+                 "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                 },
+                 "margin": {
+                  "unit": "px",
+                  "top": "7",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": false
+                 },
+                 "background_color": "",
+                 "__globals__": {
+                  "background_color": "globals/colors?id=gforange"
+                 }
+                },
+                "elements": []
+               },
+               {
+                "id": "5a09641",
+                "elType": "widget",
+                "widgetType": "text-editor",
+                "settings": {
+                 "editor": "<p>Dimensional inspection</p>",
+                 "typography_typography": "custom",
+                 "typography_font_family": "Inter",
+                 "typography_font_size": {
+                  "unit": "px",
+                  "size": 14
+                 },
+                 "typography_font_weight": "400",
+                 "text_color": "",
+                 "__globals__": {
+                  "text_color": "globals/colors?id=gfbody"
+                 },
+                 "typography_line_height": {
+                  "unit": "px",
+                  "size": 20
+                 },
+                 "custom_css": "selector p{font-size:14px;line-height:20px;font-weight:400;margin:0}selector a{font-size:inherit;line-height:inherit}"
+                },
+                "elements": []
+               }
+              ]
+             },
              {
               "id": "613ab58",
               "elType": "container",
@@ -6876,7 +6975,7 @@
                 "elType": "widget",
                 "widgetType": "text-editor",
                 "settings": {
-                 "editor": "<p>Dimensional inspection</p>",
+                 "editor": "<p>Material certification</p>",
                  "typography_typography": "custom",
                  "typography_font_family": "Inter",
                  "typography_font_size": {
@@ -6975,105 +7074,6 @@
                 "elType": "widget",
                 "widgetType": "text-editor",
                 "settings": {
-                 "editor": "<p>Material certification</p>",
-                 "typography_typography": "custom",
-                 "typography_font_family": "Inter",
-                 "typography_font_size": {
-                  "unit": "px",
-                  "size": 14
-                 },
-                 "typography_font_weight": "400",
-                 "text_color": "",
-                 "__globals__": {
-                  "text_color": "globals/colors?id=gfbody"
-                 },
-                 "typography_line_height": {
-                  "unit": "px",
-                  "size": 20
-                 },
-                 "custom_css": "selector p{font-size:14px;line-height:20px;font-weight:400;margin:0}selector a{font-size:inherit;line-height:inherit}"
-                },
-                "elements": []
-               }
-              ]
-             },
-             {
-              "id": "db8cda9",
-              "elType": "container",
-              "isInner": false,
-              "settings": {
-               "flex_direction": "row",
-               "flex_align_items": "flex-start",
-               "flex_gap": {
-                "unit": "px",
-                "column": "8",
-                "row": "8",
-                "isLinked": true
-               },
-               "flex_wrap": "nowrap",
-               "content_width": "full",
-               "padding": {
-                "unit": "px",
-                "top": "0",
-                "right": "0",
-                "bottom": "0",
-                "left": "0",
-                "isLinked": true
-               }
-              },
-              "elements": [
-               {
-                "id": "bbe5be5",
-                "elType": "container",
-                "isInner": false,
-                "settings": {
-                 "width": {
-                  "unit": "px",
-                  "size": 6
-                 },
-                 "min_height": {
-                  "unit": "px",
-                  "size": 6
-                 },
-                 "background_background": "classic",
-                 "border_radius": {
-                  "unit": "%",
-                  "top": "50",
-                  "right": "50",
-                  "bottom": "50",
-                  "left": "50",
-                  "isLinked": true
-                 },
-                 "custom_css": "selector{flex-shrink:0}",
-                 "content_width": "full",
-                 "padding": {
-                  "unit": "px",
-                  "top": "0",
-                  "right": "0",
-                  "bottom": "0",
-                  "left": "0",
-                  "isLinked": true
-                 },
-                 "margin": {
-                  "unit": "px",
-                  "top": "7",
-                  "right": "0",
-                  "bottom": "0",
-                  "left": "0",
-                  "isLinked": false
-                 },
-                 "background_color": "",
-                 "__globals__": {
-                  "background_color": "globals/colors?id=gforange"
-                 }
-                },
-                "elements": []
-               },
-               {
-                "id": "31c4f14",
-                "elType": "widget",
-                "widgetType": "text-editor",
-                "settings": {
                  "editor": "<p>Functional testing</p>",
                  "typography_typography": "custom",
                  "typography_font_family": "Inter",
@@ -7099,7 +7099,7 @@
             ]
            },
            {
-            "id": "487fb69",
+            "id": "31c4f14",
             "elType": "widget",
             "widgetType": "button",
             "settings": {
@@ -7162,7 +7162,7 @@
   ]
  },
  {
-  "id": "c2861d4",
+  "id": "6d3ff9b",
   "elType": "container",
   "isInner": false,
   "settings": {
@@ -7188,7 +7188,7 @@
   },
   "elements": [
    {
-    "id": "16f687c",
+    "id": "4b0e598",
     "elType": "container",
     "isInner": false,
     "settings": {
@@ -7216,7 +7216,7 @@
     },
     "elements": [
      {
-      "id": "d7cf011",
+      "id": "99dcb19",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -7248,7 +7248,7 @@
       },
       "elements": [
        {
-        "id": "4b0e598",
+        "id": "7462d5e",
         "elType": "widget",
         "widgetType": "heading",
         "settings": {
@@ -7287,7 +7287,7 @@
         "elements": []
        },
        {
-        "id": "6d3ff9b",
+        "id": "29dc314",
         "elType": "widget",
         "widgetType": "heading",
         "settings": {
@@ -7319,7 +7319,7 @@
       ]
      },
      {
-      "id": "99dcb19",
+      "id": "14137d2",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -7344,7 +7344,7 @@
       },
       "elements": [
        {
-        "id": "de02a85",
+        "id": "ef7581f",
         "elType": "container",
         "isInner": false,
         "settings": {
@@ -7392,38 +7392,9 @@
          {
           "id": "75fe5bf",
           "elType": "widget",
-          "widgetType": "heading",
-          "settings": {
-           "title": "★★★★★",
-           "header_size": "div",
-           "typography_typography": "custom",
-           "typography_font_family": "Inter",
-           "typography_font_size": {
-            "unit": "px",
-            "size": 14
-           },
-           "typography_font_weight": "400",
-           "title_color": "",
-           "__globals__": {
-            "title_color": "globals/colors?id=gforange"
-           },
-           "typography_line_height": {
-            "unit": "px",
-            "size": 20
-           },
-           "typography_letter_spacing": {
-            "unit": "px",
-            "size": 1.4
-           }
-          },
-          "elements": []
-         },
-         {
-          "id": "5d39c3d",
-          "elType": "widget",
           "widgetType": "text-editor",
           "settings": {
-           "editor": "<p>\"They redesigned our part for additive, fewer components, better performance, faster iterations.\"</p>",
+           "editor": "<p>“The resolution of this 3D printer was much higher than what we had in our onsite lab. Working with tolerances in the 1 to 2 thousandths range gave us the parameters we needed to fulfill the design requirement.”</p>",
            "typography_typography": "custom",
            "typography_font_family": "Inter",
            "typography_font_size": {
@@ -7444,7 +7415,7 @@
           "elements": []
          },
          {
-          "id": "ef7581f",
+          "id": "5693e43",
           "elType": "container",
           "isInner": false,
           "settings": {
@@ -7469,11 +7440,11 @@
           },
           "elements": [
            {
-            "id": "76048f9",
+            "id": "5d39c3d",
             "elType": "widget",
             "widgetType": "heading",
             "settings": {
-             "title": "JM",
+             "title": "MV",
              "header_size": "div",
              "typography_typography": "custom",
              "typography_font_family": "Inter",
@@ -7496,7 +7467,7 @@
             "elements": []
            },
            {
-            "id": "5693e43",
+            "id": "15abb38",
             "elType": "container",
             "isInner": false,
             "settings": {
@@ -7518,37 +7489,37 @@
              }
             },
             "elements": [
+             {
+              "id": "76048f9",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+               "title": "Marton Varady",
+               "header_size": "div",
+               "typography_typography": "custom",
+               "typography_font_family": "Inter",
+               "typography_font_size": {
+                "unit": "px",
+                "size": 14
+               },
+               "typography_font_weight": "700",
+               "title_color": "",
+               "__globals__": {
+                "title_color": "globals/colors?id=gfnavymid"
+               },
+               "typography_line_height": {
+                "unit": "px",
+                "size": 20
+               }
+              },
+              "elements": []
+             },
              {
               "id": "13610a6",
               "elType": "widget",
               "widgetType": "heading",
               "settings": {
-               "title": "JM",
-               "header_size": "div",
-               "typography_typography": "custom",
-               "typography_font_family": "Inter",
-               "typography_font_size": {
-                "unit": "px",
-                "size": 14
-               },
-               "typography_font_weight": "700",
-               "title_color": "",
-               "__globals__": {
-                "title_color": "globals/colors?id=gfnavymid"
-               },
-               "typography_line_height": {
-                "unit": "px",
-                "size": 20
-               }
-              },
-              "elements": []
-             },
-             {
-              "id": "15abb38",
-              "elType": "widget",
-              "widgetType": "heading",
-              "settings": {
-               "title": "James Mitchell MedTech Innovations",
+               "title": "Project Manager, CryoPop",
                "header_size": "div",
                "typography_typography": "custom",
                "typography_font_family": "Inter",
@@ -7572,7 +7543,7 @@
         ]
        },
        {
-        "id": "0c324dc",
+        "id": "7f6455d",
         "elType": "container",
         "isInner": false,
         "settings": {
@@ -7618,40 +7589,11 @@
         },
         "elements": [
          {
-          "id": "d831bc8",
-          "elType": "widget",
-          "widgetType": "heading",
-          "settings": {
-           "title": "★★★★★",
-           "header_size": "div",
-           "typography_typography": "custom",
-           "typography_font_family": "Inter",
-           "typography_font_size": {
-            "unit": "px",
-            "size": 14
-           },
-           "typography_font_weight": "400",
-           "title_color": "",
-           "__globals__": {
-            "title_color": "globals/colors?id=gforange"
-           },
-           "typography_line_height": {
-            "unit": "px",
-            "size": 20
-           },
-           "typography_letter_spacing": {
-            "unit": "px",
-            "size": 1.4
-           }
-          },
-          "elements": []
-         },
-         {
-          "id": "064722d",
+          "id": "de02a85",
           "elType": "widget",
           "widgetType": "text-editor",
           "settings": {
-           "editor": "<p>\"Micro 3D-printed biomedical parts in a biocompatible material, exactly to spec.\"</p>",
+           "editor": "<p>“Potomac Photonics expertise and expediency enabled us to both deliver our flight unit calorimeter spectrometer insert on schedule and the opportunity to test in advance our proposed alignment method in Japan.”</p>",
            "typography_typography": "custom",
            "typography_font_family": "Inter",
            "typography_font_size": {
@@ -7671,215 +7613,186 @@
           },
           "elements": []
          },
+         {
+          "id": "96e9105",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+           "flex_direction": "row",
+           "flex_align_items": "center",
+           "flex_gap": {
+            "unit": "px",
+            "column": "12",
+            "row": "12",
+            "isLinked": true
+           },
+           "padding": {
+            "unit": "px",
+            "top": "12",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": false
+           },
+           "custom_css": "selector{border-top:1px solid #F3F4F6}",
+           "content_width": "full"
+          },
+          "elements": [
+           {
+            "id": "d831bc8",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+             "title": "MC",
+             "header_size": "div",
+             "typography_typography": "custom",
+             "typography_font_family": "Inter",
+             "typography_font_size": {
+              "unit": "px",
+              "size": 12
+             },
+             "typography_font_weight": "700",
+             "title_color": "",
+             "__globals__": {
+              "title_color": "globals/colors?id=gfwhite"
+             },
+             "align": "center",
+             "typography_line_height": {
+              "unit": "px",
+              "size": 16
+             },
+             "custom_css": "selector .elementor-heading-title{width:36px;height:36px;border-radius:9999px;background:#15253D;display:flex;align-items:center;justify-content:center}"
+            },
+            "elements": []
+           },
+           {
+            "id": "d4d13a1",
+            "elType": "container",
+            "isInner": false,
+            "settings": {
+             "flex_direction": "column",
+             "flex_gap": {
+              "unit": "px",
+              "column": "0",
+              "row": "0",
+              "isLinked": true
+             },
+             "content_width": "full",
+             "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+             }
+            },
+            "elements": [
+             {
+              "id": "064722d",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+               "title": "Meng Chiao",
+               "header_size": "div",
+               "typography_typography": "custom",
+               "typography_font_family": "Inter",
+               "typography_font_size": {
+                "unit": "px",
+                "size": 14
+               },
+               "typography_font_weight": "700",
+               "title_color": "",
+               "__globals__": {
+                "title_color": "globals/colors?id=gfnavymid"
+               },
+               "typography_line_height": {
+                "unit": "px",
+                "size": 20
+               }
+              },
+              "elements": []
+             },
+             {
+              "id": "573f783",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+               "title": "NASA",
+               "header_size": "div",
+               "typography_typography": "custom",
+               "typography_font_family": "Inter",
+               "typography_font_size": {
+                "unit": "px",
+                "size": 12
+               },
+               "typography_font_weight": "400",
+               "title_color": "#9CA3AF",
+               "typography_line_height": {
+                "unit": "px",
+                "size": 16
+               }
+              },
+              "elements": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "id": "1072aee",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "flex_direction": "column",
+         "flex_gap": {
+          "unit": "px",
+          "column": "12",
+          "row": "12",
+          "isLinked": true
+         },
+         "padding": {
+          "unit": "px",
+          "top": "24",
+          "right": "24",
+          "bottom": "24",
+          "left": "24",
+          "isLinked": true
+         },
+         "background_background": "classic",
+         "border_border": "solid",
+         "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+         },
+         "border_color": "#E5E7EB",
+         "border_radius": {
+          "unit": "px",
+          "top": "8",
+          "right": "8",
+          "bottom": "8",
+          "left": "8",
+          "isLinked": true
+         },
+         "content_width": "full",
+         "background_color": "",
+         "__globals__": {
+          "background_color": "globals/colors?id=gfwhite"
+         }
+        },
+        "elements": [
          {
           "id": "cd7e647",
-          "elType": "container",
-          "isInner": false,
-          "settings": {
-           "flex_direction": "row",
-           "flex_align_items": "center",
-           "flex_gap": {
-            "unit": "px",
-            "column": "12",
-            "row": "12",
-            "isLinked": true
-           },
-           "padding": {
-            "unit": "px",
-            "top": "12",
-            "right": "0",
-            "bottom": "0",
-            "left": "0",
-            "isLinked": false
-           },
-           "custom_css": "selector{border-top:1px solid #F3F4F6}",
-           "content_width": "full"
-          },
-          "elements": [
-           {
-            "id": "573f783",
-            "elType": "widget",
-            "widgetType": "heading",
-            "settings": {
-             "title": "SR",
-             "header_size": "div",
-             "typography_typography": "custom",
-             "typography_font_family": "Inter",
-             "typography_font_size": {
-              "unit": "px",
-              "size": 12
-             },
-             "typography_font_weight": "700",
-             "title_color": "",
-             "__globals__": {
-              "title_color": "globals/colors?id=gfwhite"
-             },
-             "align": "center",
-             "typography_line_height": {
-              "unit": "px",
-              "size": 16
-             },
-             "custom_css": "selector .elementor-heading-title{width:36px;height:36px;border-radius:9999px;background:#15253D;display:flex;align-items:center;justify-content:center}"
-            },
-            "elements": []
-           },
-           {
-            "id": "7f6455d",
-            "elType": "container",
-            "isInner": false,
-            "settings": {
-             "flex_direction": "column",
-             "flex_gap": {
-              "unit": "px",
-              "column": "0",
-              "row": "0",
-              "isLinked": true
-             },
-             "content_width": "full",
-             "padding": {
-              "unit": "px",
-              "top": "0",
-              "right": "0",
-              "bottom": "0",
-              "left": "0",
-              "isLinked": true
-             }
-            },
-            "elements": [
-             {
-              "id": "d4d13a1",
-              "elType": "widget",
-              "widgetType": "heading",
-              "settings": {
-               "title": "SR",
-               "header_size": "div",
-               "typography_typography": "custom",
-               "typography_font_family": "Inter",
-               "typography_font_size": {
-                "unit": "px",
-                "size": 14
-               },
-               "typography_font_weight": "700",
-               "title_color": "",
-               "__globals__": {
-                "title_color": "globals/colors?id=gfnavymid"
-               },
-               "typography_line_height": {
-                "unit": "px",
-                "size": 20
-               }
-              },
-              "elements": []
-             },
-             {
-              "id": "96e9105",
-              "elType": "widget",
-              "widgetType": "heading",
-              "settings": {
-               "title": "Dr. Sarah Rowe University of Sheffield",
-               "header_size": "div",
-               "typography_typography": "custom",
-               "typography_font_family": "Inter",
-               "typography_font_size": {
-                "unit": "px",
-                "size": 12
-               },
-               "typography_font_weight": "400",
-               "title_color": "#9CA3AF",
-               "typography_line_height": {
-                "unit": "px",
-                "size": 16
-               }
-              },
-              "elements": []
-             }
-            ]
-           }
-          ]
-         }
-        ]
-       },
-       {
-        "id": "29dc314",
-        "elType": "container",
-        "isInner": false,
-        "settings": {
-         "flex_direction": "column",
-         "flex_gap": {
-          "unit": "px",
-          "column": "12",
-          "row": "12",
-          "isLinked": true
-         },
-         "padding": {
-          "unit": "px",
-          "top": "24",
-          "right": "24",
-          "bottom": "24",
-          "left": "24",
-          "isLinked": true
-         },
-         "background_background": "classic",
-         "border_border": "solid",
-         "border_width": {
-          "unit": "px",
-          "top": "1",
-          "right": "1",
-          "bottom": "1",
-          "left": "1",
-          "isLinked": true
-         },
-         "border_color": "#E5E7EB",
-         "border_radius": {
-          "unit": "px",
-          "top": "8",
-          "right": "8",
-          "bottom": "8",
-          "left": "8",
-          "isLinked": true
-         },
-         "content_width": "full",
-         "background_color": "",
-         "__globals__": {
-          "background_color": "globals/colors?id=gfwhite"
-         }
-        },
-        "elements": [
-         {
-          "id": "ae69d3d",
-          "elType": "widget",
-          "widgetType": "heading",
-          "settings": {
-           "title": "★★★★★",
-           "header_size": "div",
-           "typography_typography": "custom",
-           "typography_font_family": "Inter",
-           "typography_font_size": {
-            "unit": "px",
-            "size": 14
-           },
-           "typography_font_weight": "400",
-           "title_color": "",
-           "__globals__": {
-            "title_color": "globals/colors?id=gforange"
-           },
-           "typography_line_height": {
-            "unit": "px",
-            "size": 20
-           },
-           "typography_letter_spacing": {
-            "unit": "px",
-            "size": 1.4
-           }
-          },
-          "elements": []
-         },
-         {
-          "id": "90322df",
           "elType": "widget",
           "widgetType": "text-editor",
           "settings": {
-           "editor": "<p>\"One partner for printing, CNC, and laser finishing meant a genuinely one-stop build.\"</p>",
+           "editor": "<p>“The edges are consistently clean, even under magnification. They have turned orders around much more quickly than I am used to, and most importantly, communication is good.”</p>",
            "typography_typography": "custom",
            "typography_font_family": "Inter",
            "typography_font_size": {
@@ -7900,7 +7813,7 @@
           "elements": []
          },
          {
-          "id": "7462d5e",
+          "id": "ba0346d",
           "elType": "container",
           "isInner": false,
           "settings": {
@@ -7925,11 +7838,11 @@
           },
           "elements": [
            {
-            "id": "dc2f1d0",
+            "id": "0c324dc",
             "elType": "widget",
             "widgetType": "heading",
             "settings": {
-             "title": "TK",
+             "title": "BC",
              "header_size": "div",
              "typography_typography": "custom",
              "typography_font_family": "Inter",
@@ -7952,7 +7865,7 @@
             "elements": []
            },
            {
-            "id": "14137d2",
+            "id": "dc2f1d0",
             "elType": "container",
             "isInner": false,
             "settings": {
@@ -7975,11 +7888,11 @@
             },
             "elements": [
              {
-              "id": "ba0346d",
+              "id": "ae69d3d",
               "elType": "widget",
               "widgetType": "heading",
               "settings": {
-               "title": "TK",
+               "title": "Ben Cramer",
                "header_size": "div",
                "typography_typography": "custom",
                "typography_font_family": "Inter",
@@ -8000,11 +7913,11 @@
               "elements": []
              },
              {
-              "id": "1072aee",
+              "id": "90322df",
               "elType": "widget",
               "widgetType": "heading",
               "settings": {
-               "title": "Thomas Klein Photon Dynamics GmbH",
+               "title": "Joint Center for Earth Systems Technology, University of Maryland Baltimore County",
                "header_size": "div",
                "typography_typography": "custom",
                "typography_font_family": "Inter",
@@ -8034,7 +7947,7 @@
   ]
  },
  {
-  "id": "a8dc4ed",
+  "id": "7f15192",
   "elType": "container",
   "isInner": false,
   "settings": {
@@ -8062,14 +7975,14 @@
     "elType": "widget",
     "widgetType": "html",
     "settings": {
-     "html": "<style>.pl-svc-quote li{padding:0}.pl-svc-quote{scroll-behavior: smooth; scroll-padding-top: 120px;}\n.pl-svc-quote{font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden;}\n@keyframes fuUp { \n  0% { opacity: 0; transform: translateY(18px); }\n  100% { opacity: 1; transform: none; }\n}\n@keyframes pulse { \n  0%, 100% { opacity: 1; transform: scale(1); }\n  50% { opacity: 0.6; transform: scale(1.3); }\n}\n.pl-svc-quote button{-webkit-tap-highlight-color: rgba(245, 130, 31, 0.18);}\n.pl-svc-quote.gf-rapid-quote{background: rgb(248, 250, 252); padding: 64px 24px 72px; font-family: Inter, system-ui, sans-serif;}\n.pl-svc-quote .gf-rapid-wrap{max-width: 1260px; margin: 0px auto; display: grid; grid-template-columns: minmax(0px, 1.1fr) minmax(360px, 0.72fr); gap: 42px; align-items: start;}\n.pl-svc-quote .gf-rapid-kicker{display: flex; align-items: center; gap: 14px; color: rgb(245, 130, 31); font-size: 11px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 14px;}\n.pl-svc-quote .gf-rapid-left h2{margin: 0px 0px 18px; color: rgb(29, 53, 87); font-family: Inter, system-ui, sans-serif; font-size: clamp(1.9rem, 3vw, 2.55rem); line-height: 1.12; letter-spacing: -0.03em; font-weight: 800;}\n.pl-svc-quote .gf-rapid-copy{max-width: 680px; color: rgb(95, 104, 120); font-size: 15px; line-height: 1.7; margin-bottom: 36px;}\n.pl-svc-quote .gf-rapid-copy p{margin: 0px 0px 10px;}\n.pl-svc-quote .gf-rapid-secure{font-size: 13px; color: rgb(115, 124, 141);}\n.pl-svc-quote .gf-rapid-secure strong{color: rgb(245, 130, 31); font-weight: 800;}\n.pl-svc-quote .gf-rapid-steps{display: grid; gap: 14px; max-width: 680px;}\n.pl-svc-quote .gf-rapid-step{position: relative; background: rgb(255, 255, 255); border: 1px solid rgb(225, 230, 238); border-radius: 12px; box-shadow: rgba(15, 42, 68, 0.03) 0px 1px 2px; padding: 30px 22px 22px; min-height: 104px;}\n.pl-svc-quote .gf-rapid-num{position: absolute; top: -16px; left: 22px; width: 38px; height: 38px; border-radius: 999px; background: rgb(245, 130, 31); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px; box-shadow: rgba(245, 130, 31, 0.2) 0px 10px 20px;}\n.pl-svc-quote .gf-rapid-label{color: rgb(245, 130, 31); font-size: 10px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 6px;}\n.pl-svc-quote .gf-rapid-step h3{margin: 0px 0px 6px; color: rgb(29, 53, 87); font-size: 15px; line-height: 1.3; font-weight: 800;}\n.pl-svc-quote .gf-rapid-step p{margin: 0px; color: rgb(95, 104, 120); font-size: 13px; line-height: 1.55;}\n.pl-svc-quote .gf-rapid-card{background: rgb(255, 255, 255); border: 1px solid rgb(225, 230, 238); border-radius: 18px; box-shadow: rgba(15, 42, 68, 0.08) 0px 18px 46px; padding: 28px;}\n.pl-svc-quote .gf-rapid-progress{display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 12px; margin-bottom: 28px;}\n.pl-svc-quote .gf-rapid-progress-item{display: flex; align-items: center; gap: 10px; white-space: nowrap; color: rgb(107, 114, 128);}\n.pl-svc-quote .gf-rapid-progress-item span{width: 30px; height: 30px; border-radius: 999px; display: flex; align-items: center; justify-content: center; background: rgb(241, 244, 248); border: 2px solid rgb(229, 233, 239); color: rgb(107, 114, 128); font-weight: 800; font-size: 13px;}\n.pl-svc-quote .gf-rapid-progress-item.active span{background: rgb(245, 130, 31); border-color: rgb(255, 225, 202); color: rgb(255, 255, 255); box-shadow: rgb(255, 242, 232) 0px 0px 0px 5px;}\n.pl-svc-quote .gf-rapid-progress-item strong{color: rgb(29, 53, 87); font-size: 13px; font-weight: 800;}\n.pl-svc-quote .gf-rapid-progress-item:not(.active) strong{color: rgb(107, 114, 128);}\n.pl-svc-quote .gf-rapid-progress-line{height: 3px; background: rgb(230, 233, 239); border-radius: 999px; position: relative;}\n.pl-svc-quote .gf-rapid-progress-line::before{content: \"\"; position: absolute; left: 0px; top: 0px; bottom: 0px; width: 50%; background: rgb(245, 130, 31); border-radius: 999px;}\n.pl-svc-quote .gf-rapid-form-title{color: rgb(29, 53, 87); font-size: 17px; line-height: 1.35; margin: 0px 0px 22px; font-weight: 800;}\n.pl-svc-quote .gf-rapid-card form{display: grid; gap: 18px;}\n.pl-svc-quote .gf-rapid-grid{display: grid; grid-template-columns: 1fr 1fr; gap: 16px;}\n.pl-svc-quote .gf-rapid-card label{display: grid; gap: 8px;}\n.pl-svc-quote .gf-rapid-card label span{color: rgb(111, 119, 135); text-transform: uppercase; letter-spacing: 0.16em; font-size: 10px; font-weight: 800;}\n.pl-svc-quote .gf-rapid-card label span em{color: rgb(245, 130, 31); font-style: normal;}\n.pl-svc-quote .gf-rapid-card input, .pl-svc-quote .gf-rapid-card textarea{width: 100%; box-sizing: border-box; border: 1px solid rgb(221, 228, 236); border-radius: 12px; background: rgb(255, 255, 255); padding: 13px 16px; color: rgb(29, 53, 87); font-size: 14px; font-family: Inter, system-ui, sans-serif; line-height: 1.45; outline: none; transition: border-color 0.18s, box-shadow 0.18s;}\n.pl-svc-quote .gf-rapid-card input::placeholder, .pl-svc-quote .gf-rapid-card textarea::placeholder{color: rgb(161, 169, 183);}\n.pl-svc-quote .gf-rapid-card input:focus, .pl-svc-quote .gf-rapid-card textarea:focus{border-color: rgb(245, 130, 31); box-shadow: rgba(245, 130, 31, 0.12) 0px 0px 0px 3px;}\n.pl-svc-quote .gf-rapid-card textarea{min-height: 96px; resize: vertical;}\n.pl-svc-quote .gf-rapid-upload{border: 1px solid rgb(221, 228, 236); border-radius: 12px; background: rgb(251, 252, 254); padding: 12px 14px;}\n.pl-svc-quote .gf-rapid-upload input{border: 0px; padding: 0px; border-radius: 0px; background: transparent; font-size: 12px; color: rgb(105, 115, 134);}\n.pl-svc-quote .gf-rapid-upload input::file-selector-button{border: 0px; background: rgb(255, 242, 232); color: rgb(245, 130, 31); border-radius: 999px; padding: 8px 14px; margin-right: 10px; font-size: 12px; font-weight: 800; cursor: pointer;}\n.pl-svc-quote .gf-rapid-card small{color: rgb(115, 124, 141); font-size: 12px; line-height: 1.5;}\n.pl-svc-quote .gf-rapid-actions{display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 4px;}\n.pl-svc-quote .gf-rapid-actions p{margin: 0px; color: rgb(138, 147, 163); font-size: 12px;}\n.pl-svc-quote .gf-rapid-actions button{border: 0px; background: rgb(245, 130, 31); color: rgb(255, 255, 255); border-radius: 999px; padding: 14px 26px; min-width: 170px; font-size: 12px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer; box-shadow: rgba(245, 130, 31, 0.22) 0px 10px 28px;}\n.pl-svc-quote .gf-rapid-actions button:hover{background: rgb(217, 110, 16);}\n@media (max-width: 1100px){.pl-svc-quote .gf-rapid-wrap{grid-template-columns: 1fr;}.pl-svc-quote .gf-rapid-card{max-width: 680px;}}\n@media (max-width: 640px){.pl-svc-quote.gf-rapid-quote{padding: 52px 18px;}.pl-svc-quote .gf-rapid-grid{grid-template-columns: 1fr;}.pl-svc-quote .gf-rapid-card{padding: 22px;}.pl-svc-quote .gf-rapid-progress{grid-template-columns: 1fr; gap: 10px;}.pl-svc-quote .gf-rapid-progress-line{display: none;}.pl-svc-quote .gf-rapid-actions{flex-direction: column; align-items: stretch;}.pl-svc-quote .gf-rapid-actions button{width: 100%; min-width: 0px;}.pl-svc-quote .gf-rapid-left h2{font-size: 2rem;}}\n.pl-svc-quote{font-family: Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif !important; color: rgb(34, 57, 93);}\n.pl-svc-quote h2, .pl-svc-quote h3, .pl-svc-quote .gf-rapid-left h2{letter-spacing: -0.03em; color: rgb(34, 57, 93); font-family: Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif !important; font-weight: 800 !important;}\n.pl-svc-quote p, .pl-svc-quote span, .pl-svc-quote button, .pl-svc-quote input, .pl-svc-quote textarea{font-family: Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif !important;}\n.pl-svc-quote .gf-rapid-card select{width: 100%; box-sizing: border-box; border: 1px solid rgb(221, 228, 236); border-radius: 12px; background: linear-gradient(45deg, transparent 50%, rgb(138, 147, 163) 50%) calc(100% - 20px) calc(50% + 1px) / 6px 6px no-repeat, linear-gradient(135deg, rgb(138, 147, 163) 50%, transparent 50%) calc(100% - 14px) calc(50% + 1px) / 6px 6px rgb(255, 255, 255); padding: 13px 16px; color: rgb(29, 53, 87); font-size: 14px; font-family: Inter, system-ui, sans-serif; line-height: 1.45; outline: none; appearance: none; transition: border-color 0.18s, box-shadow 0.18s;}\n.pl-svc-quote .gf-rapid-card select:focus{border-color: rgb(245, 130, 31); box-shadow: rgba(245, 130, 31, 0.12) 0px 0px 0px 3px;}\n.pl-svc-quote .gf-rapid-note{padding: 12px 14px; background: rgb(255, 247, 240); border: 1px solid rgb(251, 224, 199); border-radius: 12px; font-size: 12px; line-height: 1.55; color: rgb(95, 104, 120);}\n.pl-svc-quote .gf-rapid-note strong{color: rgb(217, 110, 16); font-weight: 800;}\n.pl-svc-quote .gf-rapid-card form[hidden]{display: none !important;}\n.pl-svc-quote, .pl-svc-quote *, .pl-svc-quote::before, .pl-svc-quote ::before, .pl-svc-quote::after, .pl-svc-quote ::after{--tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;}\n.pl-svc-quote::backdrop, .pl-svc-quote ::backdrop{--tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;}\n.pl-svc-quote, .pl-svc-quote *, .pl-svc-quote::after, .pl-svc-quote ::after, .pl-svc-quote::before, .pl-svc-quote ::before{box-sizing: border-box; border-width: 0px; border-style: solid; border-color: rgb(229, 231, 235);}\n.pl-svc-quote::after, .pl-svc-quote ::after, .pl-svc-quote::before, .pl-svc-quote ::before{--tw-content: '';}\n.pl-svc-quote{line-height: 1.5; text-size-adjust: 100%; tab-size: 4; font-family: Inter, system-ui, sans-serif; font-feature-settings: normal; font-variation-settings: normal; -webkit-tap-highlight-color: transparent;}\n.pl-svc-quote{margin: 0px;}\n.pl-svc-quote h2, .pl-svc-quote h3{font-size: inherit; font-weight: inherit;}\n.pl-svc-quote strong{font-weight: bolder;}\n.pl-svc-quote small{font-size: 80%;}\n.pl-svc-quote button, .pl-svc-quote input, .pl-svc-quote select, .pl-svc-quote textarea{font-family: inherit; font-feature-settings: inherit; font-variation-settings: inherit; font-size: 100%; font-weight: inherit; line-height: inherit; letter-spacing: inherit; color: inherit; margin: 0px; padding: 0px;}\n.pl-svc-quote button, .pl-svc-quote select{text-transform: none;}\n.pl-svc-quote button{appearance: button; background-color: transparent; background-image: none;}\n.pl-svc-quote::-webkit-inner-spin-button, .pl-svc-quote ::-webkit-inner-spin-button, .pl-svc-quote::-webkit-outer-spin-button, .pl-svc-quote ::-webkit-outer-spin-button{height: auto;}\n.pl-svc-quote::-webkit-search-decoration, .pl-svc-quote ::-webkit-search-decoration{appearance: none;}\n.pl-svc-quote::-webkit-file-upload-button, .pl-svc-quote ::-webkit-file-upload-button{appearance: button; font: inherit;}\n.pl-svc-quote h2, .pl-svc-quote h3, .pl-svc-quote p{margin: 0px;}\n.pl-svc-quote textarea{resize: vertical;}\n.pl-svc-quote input::placeholder, .pl-svc-quote textarea::placeholder{opacity: 1; color: rgb(156, 163, 175);}\n.pl-svc-quote button{cursor: pointer;}</style><section class=\"pl-svc-quote gf-rapid-quote\" id=\"quote\">\n<div class=\"gf-rapid-wrap\">\n<div class=\"gf-rapid-left\">\n<div class=\"gf-rapid-kicker\">Rapid Response Quote</div>\n<h2>Ready to move forward?</h2>\n<div class=\"gf-rapid-copy\">\n<p>Upload your drawing or request a quote, our engineering team will review your design and respond within 24 hours.</p>\n<p>No redesign required to start, we'll help optimise your part.</p>\n<p class=\"gf-rapid-secure\"><strong>♢</strong> Uploads stay confidential. We can sign your NDA on request before you share files.</p>\n</div>\n<div class=\"gf-rapid-steps\">\n<div class=\"gf-rapid-step\">\n<div class=\"gf-rapid-num\">1</div>\n<div><div class=\"gf-rapid-label\">Now</div><h3>You submit your request</h3><p>Name, email, description, drawing. No commitment.</p></div>\n</div>\n<div class=\"gf-rapid-step\">\n<div class=\"gf-rapid-num\">2</div>\n<div><div class=\"gf-rapid-label\">Within hours</div><h3>Engineer reviews your part</h3><p>DFM check on geometry, tolerances, material fit.</p></div>\n</div>\n<div class=\"gf-rapid-step\">\n<div class=\"gf-rapid-num\">3</div>\n<div><div class=\"gf-rapid-label\">Within 24 hours</div><h3>Quote &amp; process path confirmed</h3><p>Feasibility, recommended process, next steps.</p></div>\n</div>\n</div>\n</div>\n<div class=\"gf-rapid-card\" id=\"pl-rq-card\">\n<div class=\"gf-rapid-progress\">\n<div class=\"gf-rapid-progress-item active\"><span>1</span><strong>Your part</strong></div>\n<div class=\"gf-rapid-progress-line\"></div>\n<div class=\"gf-rapid-progress-item\"><span>2</span><strong>Complete</strong></div>\n</div>\n<h3 class=\"gf-rapid-form-title\">Step 1, Tell us about your part</h3>\n<form id=\"pl-rq-form\" novalidate=\"\">\n<div class=\"gf-rapid-grid\">\n<label><span>First name <em>*</em></span><input autocomplete=\"given-name\" id=\"pl-rq-first_name\" name=\"first_name\" placeholder=\"Jane\" required=\"\" type=\"text\"/></label>\n<label><span>Last name <em>*</em></span><input autocomplete=\"family-name\" id=\"pl-rq-last_name\" name=\"last_name\" placeholder=\"Smith\" required=\"\" type=\"text\"/></label>\n</div>\n<label><span>Company <em>*</em></span><input autocomplete=\"organization\" id=\"pl-rq-company\" name=\"company\" placeholder=\"Company or university\" required=\"\" type=\"text\"/></label>\n<label><span>Email <em>*</em></span><input id=\"pl-rq-email\" name=\"email\" placeholder=\"j.smith@example.com\" required=\"\" type=\"email\"/></label>\n<label><span>Part description and requirements <em>*</em></span><textarea id=\"pl-rq-desc\" name=\"description\" placeholder=\"e.g. Micro 3D-printed housing, complex internal channels, biocompatible material, 10 parts\" required=\"\"></textarea></label>\n<label>\n<span>Upload drawing / CAD</span>\n<div class=\"gf-rapid-upload\"><input accept=\".step,.stp,.stl,.iges,.igs,.pdf,.dxf,.dwg,.zip\" id=\"pl-rq-file\" name=\"file\" type=\"file\"/></div>\n<small>STEP, STL, IGES, PDF, DXF, DWG, or ZIP up to 25 MB</small>\n</label>\n<div class=\"gf-rapid-actions\"><p>No commitment · 24h response</p><button id=\"pl-rq-submit\" type=\"submit\">Continue →</button></div>\n</form>\n</div>\n</div>\n</section><script>(function(){\nvar f=document.getElementById('pl-rq-form');if(!f||f.dataset.plWired)return;f.dataset.plWired='1';\nvar PORTAL='143181153',FORM='9dba7d36-e36b-4a10-9411-9dc073dab7a0',UPLOAD='/wp-json/cnc-quote/v1/upload';\nvar card=document.getElementById('pl-rq-card');\nfunction utm(){var o={},q=new URLSearchParams(location.search);['utm_source','utm_medium','utm_campaign','utm_term','utm_content'].forEach(function(k){var v=q.get(k);if(v)o[k]=v});return o}\nfunction hutk(){var m=document.cookie.match(/(?:^|;\\s*)hubspotutk=([^;]+)/);return m?m[1]:''}\nfunction track(ev,p){try{(window.dataLayer=window.dataLayer||[]).push(Object.assign({event:ev,form_id:'rapid_response_quote'},p||{}))}catch(e){}}\nfunction err(msg){var o=card.querySelector('.pl-rq-err');if(!o){o=document.createElement('p');o.className='pl-rq-err';o.setAttribute('role','alert');o.style.cssText='margin:0 0 14px;padding:10px 14px;border-radius:8px;background:#FEF2F2;border:1px solid #FECACA;color:#B91C1C;font-size:13px;line-height:1.5';f.parentNode.insertBefore(o,f)}o.textContent=msg}\nfunction v(id){var e=document.getElementById(id);return e?(e.value||'').trim():''}\nasync function upload(){var i=document.getElementById('pl-rq-file');if(!i||!i.files||!i.files[0])return '';var fd=new FormData();fd.append('file',i.files[0]);\n try{var r=await fetch(UPLOAD,{method:'POST',body:fd});var j=await r.json();if(r.ok&&j&&j.url)return j.url;err('That file could not be uploaded ('+((j&&j.error)||'unknown')+'). Send the request without it, or try a smaller file.');return null}\n catch(e){err('That file could not be uploaded. Send the request without it, or try again.');return null}}\nf.addEventListener('submit',async function(ev){ev.preventDefault();var o=card.querySelector('.pl-rq-err');if(o)o.remove();\n var d={firstname:v('pl-rq-first_name'),lastname:v('pl-rq-last_name'),company:v('pl-rq-company'),email:v('pl-rq-email'),potomac_project_description:v('pl-rq-desc')};\n if(!d.firstname||!d.lastname||!d.company||!d.email||!d.potomac_project_description){err('Please fill in every field marked *.');track('lead_form_submit_error',{error:'validation'});return}\n if(!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]{2,}$/.test(d.email)){err('That email address does not look right. Please check it.');track('lead_form_submit_error',{error:'email'});return}\n var btn=document.getElementById('pl-rq-submit');btn.disabled=true;var url=await upload();if(url===null){btn.disabled=false;return}\n d.potomac_project_name='Rapid Response Quote — '+document.title;if(url)d.potomac_file_submission=url;d.hs_lead_status='NEW';d.lifecyclestage='lead';var u=utm(),k;for(k in u)d[k]=u[k];\n var props=Object.keys(d).filter(function(k){return d[k]!=null&&d[k]!==''}).map(function(k){return{objectTypeId:'0-1',name:k,value:String(d[k])}});\n track('lead_form_submit',{fields_completed:props.length});\n try{var r=await fetch('https://api.hsforms.com/submissions/v3/integration/submit/'+PORTAL+'/'+FORM,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({fields:props,context:{pageName:document.title,pageUri:location.href,hutk:hutk()||undefined}})});\n  var j=await r.json().catch(function(){return{}});\n  if(r.ok){track('lead_form_submit_success');var items=card.querySelectorAll('.gf-rapid-progress-item');if(items[1])items[1].classList.add('active');var t=card.querySelector('.gf-rapid-form-title');if(t)t.textContent='Request received';\n   var p=document.createElement('p');p.className='gf-rapid-note';p.innerHTML='<strong>Received.</strong> An engineer will review your part and reply within 24 hours.';f.replaceWith(p);return}\n  console.error('HubSpot submit failed',r.status,j);err('We could not send that just now. Please check your connection, or email inq@goodfellow.com.');track('lead_form_submit_error',{error:'http_'+r.status})}\n catch(e){console.error(e);err('We could not send that just now. Please check your connection, or email inq@goodfellow.com.');track('lead_form_submit_error',{error:'network'})}\n btn.disabled=false});\n})();</script>"
+     "html": "<style>.pl-svc-quote li{padding:0}.pl-svc-quote{scroll-behavior: smooth; scroll-padding-top: 120px;}\n.pl-svc-quote{font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden;}\n@keyframes fuUp { \n  0% { opacity: 0; transform: translateY(18px); }\n  100% { opacity: 1; transform: none; }\n}\n@keyframes pulse { \n  0%, 100% { opacity: 1; transform: scale(1); }\n  50% { opacity: 0.6; transform: scale(1.3); }\n}\n.pl-svc-quote button{-webkit-tap-highlight-color: rgba(245, 130, 31, 0.18);}\n.pl-svc-quote.gf-rapid-quote{background: rgb(248, 250, 252); padding: 64px 24px 72px; font-family: Inter, system-ui, sans-serif;}\n.pl-svc-quote .gf-rapid-wrap{max-width: 1260px; margin: 0px auto; display: grid; grid-template-columns: minmax(0px, 1.1fr) minmax(360px, 0.72fr); gap: 42px; align-items: start;}\n.pl-svc-quote .gf-rapid-kicker{display: flex; align-items: center; gap: 14px; color: rgb(245, 130, 31); font-size: 11px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 14px;}\n.pl-svc-quote .gf-rapid-left h2{margin: 0px 0px 18px; color: rgb(29, 53, 87); font-family: Inter, system-ui, sans-serif; font-size: clamp(1.9rem, 3vw, 2.55rem); line-height: 1.12; letter-spacing: -0.03em; font-weight: 800;}\n.pl-svc-quote .gf-rapid-copy{max-width: 680px; color: rgb(95, 104, 120); font-size: 15px; line-height: 1.7; margin-bottom: 36px;}\n.pl-svc-quote .gf-rapid-copy p{margin: 0px 0px 10px;}\n.pl-svc-quote .gf-rapid-secure{font-size: 13px; color: rgb(115, 124, 141);}\n.pl-svc-quote .gf-rapid-secure strong{color: rgb(245, 130, 31); font-weight: 800;}\n.pl-svc-quote .gf-rapid-steps{display: grid; gap: 14px; max-width: 680px;}\n.pl-svc-quote .gf-rapid-step{position: relative; background: rgb(255, 255, 255); border: 1px solid rgb(225, 230, 238); border-radius: 12px; box-shadow: rgba(15, 42, 68, 0.03) 0px 1px 2px; padding: 30px 22px 22px; min-height: 104px;}\n.pl-svc-quote .gf-rapid-num{position: absolute; top: -16px; left: 22px; width: 38px; height: 38px; border-radius: 999px; background: rgb(245, 130, 31); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px; box-shadow: rgba(245, 130, 31, 0.2) 0px 10px 20px;}\n.pl-svc-quote .gf-rapid-label{color: rgb(245, 130, 31); font-size: 10px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 6px;}\n.pl-svc-quote .gf-rapid-step h3{margin: 0px 0px 6px; color: rgb(29, 53, 87); font-size: 15px; line-height: 1.3; font-weight: 800;}\n.pl-svc-quote .gf-rapid-step p{margin: 0px; color: rgb(95, 104, 120); font-size: 13px; line-height: 1.55;}\n.pl-svc-quote .gf-rapid-card{background: rgb(255, 255, 255); border: 1px solid rgb(225, 230, 238); border-radius: 18px; box-shadow: rgba(15, 42, 68, 0.08) 0px 18px 46px; padding: 28px;}\n.pl-svc-quote .gf-rapid-progress{display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 12px; margin-bottom: 28px;}\n.pl-svc-quote .gf-rapid-progress-item{display: flex; align-items: center; gap: 10px; white-space: nowrap; color: rgb(107, 114, 128);}\n.pl-svc-quote .gf-rapid-progress-item span{width: 30px; height: 30px; border-radius: 999px; display: flex; align-items: center; justify-content: center; background: rgb(241, 244, 248); border: 2px solid rgb(229, 233, 239); color: rgb(107, 114, 128); font-weight: 800; font-size: 13px;}\n.pl-svc-quote .gf-rapid-progress-item.active span{background: rgb(245, 130, 31); border-color: rgb(255, 225, 202); color: rgb(255, 255, 255); box-shadow: rgb(255, 242, 232) 0px 0px 0px 5px;}\n.pl-svc-quote .gf-rapid-progress-item strong{color: rgb(29, 53, 87); font-size: 13px; font-weight: 800;}\n.pl-svc-quote .gf-rapid-progress-item:not(.active) strong{color: rgb(107, 114, 128);}\n.pl-svc-quote .gf-rapid-progress-line{height: 3px; background: rgb(230, 233, 239); border-radius: 999px; position: relative;}\n.pl-svc-quote .gf-rapid-progress-line::before{content: \"\"; position: absolute; left: 0px; top: 0px; bottom: 0px; width: 50%; background: rgb(245, 130, 31); border-radius: 999px;}\n.pl-svc-quote .gf-rapid-form-title{color: rgb(29, 53, 87); font-size: 17px; line-height: 1.35; margin: 0px 0px 22px; font-weight: 800;}\n.pl-svc-quote .gf-rapid-card form{display: grid; gap: 18px;}\n.pl-svc-quote .gf-rapid-grid{display: grid; grid-template-columns: 1fr 1fr; gap: 16px;}\n.pl-svc-quote .gf-rapid-card label{display: grid; gap: 8px;}\n.pl-svc-quote .gf-rapid-card label span{color: rgb(111, 119, 135); text-transform: uppercase; letter-spacing: 0.16em; font-size: 10px; font-weight: 800;}\n.pl-svc-quote .gf-rapid-card label span em{color: rgb(245, 130, 31); font-style: normal;}\n.pl-svc-quote .gf-rapid-card input, .pl-svc-quote .gf-rapid-card textarea{width: 100%; box-sizing: border-box; border: 1px solid rgb(221, 228, 236); border-radius: 12px; background: rgb(255, 255, 255); padding: 13px 16px; color: rgb(29, 53, 87); font-size: 14px; font-family: Inter, system-ui, sans-serif; line-height: 1.45; outline: none; transition: border-color 0.18s, box-shadow 0.18s;}\n.pl-svc-quote .gf-rapid-card input::placeholder, .pl-svc-quote .gf-rapid-card textarea::placeholder{color: rgb(161, 169, 183);}\n.pl-svc-quote .gf-rapid-card input:focus, .pl-svc-quote .gf-rapid-card textarea:focus{border-color: rgb(245, 130, 31); box-shadow: rgba(245, 130, 31, 0.12) 0px 0px 0px 3px;}\n.pl-svc-quote .gf-rapid-card textarea{min-height: 96px; resize: vertical;}\n.pl-svc-quote .gf-rapid-upload{border: 1px solid rgb(221, 228, 236); border-radius: 12px; background: rgb(251, 252, 254); padding: 12px 14px;}\n.pl-svc-quote .gf-rapid-upload input{border: 0px; padding: 0px; border-radius: 0px; background: transparent; font-size: 12px; color: rgb(105, 115, 134);}\n.pl-svc-quote .gf-rapid-upload input::file-selector-button{border: 0px; background: rgb(255, 242, 232); color: rgb(245, 130, 31); border-radius: 999px; padding: 8px 14px; margin-right: 10px; font-size: 12px; font-weight: 800; cursor: pointer;}\n.pl-svc-quote .gf-rapid-card small{color: rgb(115, 124, 141); font-size: 12px; line-height: 1.5;}\n.pl-svc-quote .gf-rapid-actions{display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 4px;}\n.pl-svc-quote .gf-rapid-actions p{margin: 0px; color: rgb(138, 147, 163); font-size: 12px;}\n.pl-svc-quote .gf-rapid-actions button{border: 0px; background: rgb(245, 130, 31); color: rgb(255, 255, 255); border-radius: 999px; padding: 14px 26px; min-width: 170px; font-size: 12px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer; box-shadow: rgba(245, 130, 31, 0.22) 0px 10px 28px;}\n.pl-svc-quote .gf-rapid-actions button:hover{background: rgb(217, 110, 16);}\n@media (max-width: 1100px){.pl-svc-quote .gf-rapid-wrap{grid-template-columns: 1fr;}.pl-svc-quote .gf-rapid-card{max-width: 680px;}}\n@media (max-width: 640px){.pl-svc-quote.gf-rapid-quote{padding: 52px 18px;}.pl-svc-quote .gf-rapid-grid{grid-template-columns: 1fr;}.pl-svc-quote .gf-rapid-card{padding: 22px;}.pl-svc-quote .gf-rapid-progress{grid-template-columns: 1fr; gap: 10px;}.pl-svc-quote .gf-rapid-progress-line{display: none;}.pl-svc-quote .gf-rapid-actions{flex-direction: column; align-items: stretch;}.pl-svc-quote .gf-rapid-actions button{width: 100%; min-width: 0px;}.pl-svc-quote .gf-rapid-left h2{font-size: 2rem;}}\n.pl-svc-quote{font-family: Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif !important; color: rgb(34, 57, 93);}\n.pl-svc-quote h2, .pl-svc-quote h3, .pl-svc-quote .gf-rapid-left h2{letter-spacing: -0.03em; color: rgb(34, 57, 93); font-family: Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif !important; font-weight: 800 !important;}\n.pl-svc-quote p, .pl-svc-quote span, .pl-svc-quote button, .pl-svc-quote input, .pl-svc-quote textarea{font-family: Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif !important;}\n.pl-svc-quote .gf-rapid-card select{width: 100%; box-sizing: border-box; border: 1px solid rgb(221, 228, 236); border-radius: 12px; background: linear-gradient(45deg, transparent 50%, rgb(138, 147, 163) 50%) calc(100% - 20px) calc(50% + 1px) / 6px 6px no-repeat, linear-gradient(135deg, rgb(138, 147, 163) 50%, transparent 50%) calc(100% - 14px) calc(50% + 1px) / 6px 6px rgb(255, 255, 255); padding: 13px 16px; color: rgb(29, 53, 87); font-size: 14px; font-family: Inter, system-ui, sans-serif; line-height: 1.45; outline: none; appearance: none; transition: border-color 0.18s, box-shadow 0.18s;}\n.pl-svc-quote .gf-rapid-card select:focus{border-color: rgb(245, 130, 31); box-shadow: rgba(245, 130, 31, 0.12) 0px 0px 0px 3px;}\n.pl-svc-quote .gf-rapid-note{padding: 12px 14px; background: rgb(255, 247, 240); border: 1px solid rgb(251, 224, 199); border-radius: 12px; font-size: 12px; line-height: 1.55; color: rgb(95, 104, 120);}\n.pl-svc-quote .gf-rapid-note strong{color: rgb(217, 110, 16); font-weight: 800;}\n.pl-svc-quote .gf-rapid-card form[hidden]{display: none !important;}\n.pl-svc-quote, .pl-svc-quote *, .pl-svc-quote::before, .pl-svc-quote ::before, .pl-svc-quote::after, .pl-svc-quote ::after{--tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;}\n.pl-svc-quote::backdrop, .pl-svc-quote ::backdrop{--tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;}\n.pl-svc-quote, .pl-svc-quote *, .pl-svc-quote::after, .pl-svc-quote ::after, .pl-svc-quote::before, .pl-svc-quote ::before{box-sizing: border-box; border-width: 0px; border-style: solid; border-color: rgb(229, 231, 235);}\n.pl-svc-quote::after, .pl-svc-quote ::after, .pl-svc-quote::before, .pl-svc-quote ::before{--tw-content: '';}\n.pl-svc-quote{line-height: 1.5; text-size-adjust: 100%; tab-size: 4; font-family: Inter, system-ui, sans-serif; font-feature-settings: normal; font-variation-settings: normal; -webkit-tap-highlight-color: transparent;}\n.pl-svc-quote{margin: 0px;}\n.pl-svc-quote h2, .pl-svc-quote h3{font-size: inherit; font-weight: inherit;}\n.pl-svc-quote strong{font-weight: bolder;}\n.pl-svc-quote small{font-size: 80%;}\n.pl-svc-quote button, .pl-svc-quote input, .pl-svc-quote select, .pl-svc-quote textarea{font-family: inherit; font-feature-settings: inherit; font-variation-settings: inherit; font-size: 100%; font-weight: inherit; line-height: inherit; letter-spacing: inherit; color: inherit; margin: 0px; padding: 0px;}\n.pl-svc-quote button, .pl-svc-quote select{text-transform: none;}\n.pl-svc-quote button{appearance: button; background-color: transparent; background-image: none;}\n.pl-svc-quote::-webkit-inner-spin-button, .pl-svc-quote ::-webkit-inner-spin-button, .pl-svc-quote::-webkit-outer-spin-button, .pl-svc-quote ::-webkit-outer-spin-button{height: auto;}\n.pl-svc-quote::-webkit-search-decoration, .pl-svc-quote ::-webkit-search-decoration{appearance: none;}\n.pl-svc-quote::-webkit-file-upload-button, .pl-svc-quote ::-webkit-file-upload-button{appearance: button; font: inherit;}\n.pl-svc-quote h2, .pl-svc-quote h3, .pl-svc-quote p{margin: 0px;}\n.pl-svc-quote textarea{resize: vertical;}\n.pl-svc-quote input::placeholder, .pl-svc-quote textarea::placeholder{opacity: 1; color: rgb(156, 163, 175);}\n.pl-svc-quote button{cursor: pointer;}\n.pl-svc-quote svg{display: block; vertical-align: middle;}</style><section class=\"pl-svc-quote gf-rapid-quote\" id=\"quote\">\n<div class=\"gf-rapid-wrap\">\n<div class=\"gf-rapid-left\">\n<div class=\"gf-rapid-kicker\">Rapid Response Quote</div>\n<h2>Ready to move forward?</h2>\n<div class=\"gf-rapid-copy\">\n<p>Upload your drawing or request a quote, our engineering team will review your design and respond within 24 hours.</p>\n<p>No redesign required to start, we'll help optimise your part.</p>\n<p class=\"gf-rapid-secure\"><strong><svg aria-hidden=\"true\" fill=\"none\" height=\"13\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2.5\" style=\"display:inline-block;vertical-align:-2px\" viewbox=\"0 0 24 24\" width=\"13\"><rect height=\"11\" rx=\"2\" width=\"18\" x=\"3\" y=\"11\"></rect><path d=\"M7 11V7a5 5 0 0 1 10 0v4\"></path></svg></strong> Uploads stay confidential. We can sign your NDA on request before you share files.</p>\n</div>\n<div class=\"gf-rapid-steps\">\n<div class=\"gf-rapid-step\">\n<div class=\"gf-rapid-num\">1</div>\n<div><div class=\"gf-rapid-label\">Now</div><h3>You submit your request</h3><p>Name, email, description, drawing. No commitment.</p></div>\n</div>\n<div class=\"gf-rapid-step\">\n<div class=\"gf-rapid-num\">2</div>\n<div><div class=\"gf-rapid-label\">Within hours</div><h3>Engineer reviews your part</h3><p>DFM check on geometry, tolerances, material fit.</p></div>\n</div>\n<div class=\"gf-rapid-step\">\n<div class=\"gf-rapid-num\">3</div>\n<div><div class=\"gf-rapid-label\">Within 24 hours</div><h3>Quote &amp; process path confirmed</h3><p>Feasibility, recommended process, next steps.</p></div>\n</div>\n</div>\n</div>\n<div class=\"gf-rapid-card\" id=\"pl-rq-card\">\n<div class=\"gf-rapid-progress\">\n<div class=\"gf-rapid-progress-item active\"><span>1</span><strong>Your part</strong></div>\n<div class=\"gf-rapid-progress-line\"></div>\n<div class=\"gf-rapid-progress-item\"><span>2</span><strong>Complete</strong></div>\n</div>\n<h3 class=\"gf-rapid-form-title\">Step 1, Tell us about your part</h3>\n<form id=\"pl-rq-form\" novalidate=\"\">\n<div class=\"gf-rapid-grid\">\n<label><span>First name <em>*</em></span><input autocomplete=\"given-name\" id=\"pl-rq-first_name\" name=\"first_name\" placeholder=\"Jane\" required=\"\" type=\"text\"/></label>\n<label><span>Last name <em>*</em></span><input autocomplete=\"family-name\" id=\"pl-rq-last_name\" name=\"last_name\" placeholder=\"Smith\" required=\"\" type=\"text\"/></label>\n</div>\n<label><span>Company <em>*</em></span><input autocomplete=\"organization\" id=\"pl-rq-company\" name=\"company\" placeholder=\"Company or university\" required=\"\" type=\"text\"/></label>\n<label><span>Email <em>*</em></span><input id=\"pl-rq-email\" name=\"email\" placeholder=\"j.smith@example.com\" required=\"\" type=\"email\"/></label>\n<label><span>Part description and requirements <em>*</em></span><textarea id=\"pl-rq-desc\" name=\"description\" placeholder=\"e.g. Micro 3D-printed housing, complex internal channels, biocompatible material, 10 parts\" required=\"\"></textarea></label>\n<label>\n<span>Upload drawing / CAD</span>\n<div class=\"gf-rapid-upload\"><input accept=\".step,.stp,.stl,.iges,.igs,.pdf,.dxf,.dwg,.zip\" id=\"pl-rq-file\" name=\"file\" type=\"file\"/></div>\n<small>STEP, STL, IGES, PDF, DXF, DWG, or ZIP up to 25 MB</small>\n</label>\n<div class=\"gf-rapid-actions\"><p>No commitment · 24h response</p><button id=\"pl-rq-submit\" type=\"submit\">Continue →</button></div>\n</form>\n</div>\n</div>\n</section><script>(function(){\nvar f=document.getElementById('pl-rq-form');if(!f||f.dataset.plWired)return;f.dataset.plWired='1';\nvar PORTAL='143181153',FORM='9dba7d36-e36b-4a10-9411-9dc073dab7a0',UPLOAD='/wp-json/cnc-quote/v1/upload';\nvar card=document.getElementById('pl-rq-card');\nfunction utm(){var o={},q=new URLSearchParams(location.search);['utm_source','utm_medium','utm_campaign','utm_term','utm_content'].forEach(function(k){var v=q.get(k);if(v)o[k]=v});return o}\nfunction hutk(){var m=document.cookie.match(/(?:^|;\\s*)hubspotutk=([^;]+)/);return m?m[1]:''}\nfunction track(ev,p){try{(window.dataLayer=window.dataLayer||[]).push(Object.assign({event:ev,form_id:'rapid_response_quote'},p||{}))}catch(e){}}\nfunction err(msg){var o=card.querySelector('.pl-rq-err');if(!o){o=document.createElement('p');o.className='pl-rq-err';o.setAttribute('role','alert');o.style.cssText='margin:0 0 14px;padding:10px 14px;border-radius:8px;background:#FEF2F2;border:1px solid #FECACA;color:#B91C1C;font-size:13px;line-height:1.5';f.parentNode.insertBefore(o,f)}o.textContent=msg}\nfunction v(id){var e=document.getElementById(id);return e?(e.value||'').trim():''}\nasync function upload(){var i=document.getElementById('pl-rq-file');if(!i||!i.files||!i.files[0])return '';var fd=new FormData();fd.append('file',i.files[0]);\n try{var r=await fetch(UPLOAD,{method:'POST',body:fd});var j=await r.json();if(r.ok&&j&&j.url)return j.url;err('That file could not be uploaded ('+((j&&j.error)||'unknown')+'). Send the request without it, or try a smaller file.');return null}\n catch(e){err('That file could not be uploaded. Send the request without it, or try again.');return null}}\nf.addEventListener('submit',async function(ev){ev.preventDefault();var o=card.querySelector('.pl-rq-err');if(o)o.remove();\n var d={firstname:v('pl-rq-first_name'),lastname:v('pl-rq-last_name'),company:v('pl-rq-company'),email:v('pl-rq-email'),potomac_project_description:v('pl-rq-desc')};\n if(!d.firstname||!d.lastname||!d.company||!d.email||!d.potomac_project_description){err('Please fill in every field marked *.');track('lead_form_submit_error',{error:'validation'});return}\n if(!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]{2,}$/.test(d.email)){err('That email address does not look right. Please check it.');track('lead_form_submit_error',{error:'email'});return}\n var btn=document.getElementById('pl-rq-submit');btn.disabled=true;var url=await upload();if(url===null){btn.disabled=false;return}\n d.potomac_project_name='Rapid Response Quote — '+document.title;if(url)d.potomac_file_submission=url;d.hs_lead_status='NEW';d.lifecyclestage='lead';var u=utm(),k;for(k in u)d[k]=u[k];\n var props=Object.keys(d).filter(function(k){return d[k]!=null&&d[k]!==''}).map(function(k){return{objectTypeId:'0-1',name:k,value:String(d[k])}});\n track('lead_form_submit',{fields_completed:props.length});\n try{var r=await fetch('https://api.hsforms.com/submissions/v3/integration/submit/'+PORTAL+'/'+FORM,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({fields:props,context:{pageName:document.title,pageUri:location.href,hutk:hutk()||undefined}})});\n  var j=await r.json().catch(function(){return{}});\n  if(r.ok){track('lead_form_submit_success');var items=card.querySelectorAll('.gf-rapid-progress-item');if(items[1])items[1].classList.add('active');var t=card.querySelector('.gf-rapid-form-title');if(t)t.textContent='Request received';\n   var p=document.createElement('p');p.className='gf-rapid-note';p.innerHTML='<strong>Received.</strong> An engineer will review your part and reply within 24 hours.';f.replaceWith(p);return}\n  console.error('HubSpot submit failed',r.status,j);err('We could not send that just now. Please check your connection, or email inq@goodfellow.com.');track('lead_form_submit_error',{error:'http_'+r.status})}\n catch(e){console.error(e);err('We could not send that just now. Please check your connection, or email inq@goodfellow.com.');track('lead_form_submit_error',{error:'network'})}\n btn.disabled=false});\n})();</script>"
     },
     "elements": []
    }
   ]
  },
  {
-  "id": "a0da6b5",
+  "id": "4fa7c96",
   "elType": "container",
   "isInner": false,
   "settings": {
@@ -8099,7 +8012,7 @@
   },
   "elements": [
    {
-    "id": "9fb5347",
+    "id": "82624e6",
     "elType": "container",
     "isInner": false,
     "settings": {
@@ -8127,7 +8040,7 @@
     },
     "elements": [
      {
-      "id": "e92c33d",
+      "id": "3ff1408",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -8152,7 +8065,7 @@
       },
       "elements": [
        {
-        "id": "82624e6",
+        "id": "71e5838",
         "elType": "container",
         "isInner": false,
         "settings": {
@@ -8184,7 +8097,7 @@
         },
         "elements": [
          {
-          "id": "133dc2d",
+          "id": "1e985aa",
           "elType": "widget",
           "widgetType": "heading",
           "settings": {
@@ -8222,7 +8135,7 @@
           "elements": []
          },
          {
-          "id": "71e5838",
+          "id": "1001915",
           "elType": "widget",
           "widgetType": "heading",
           "settings": {
@@ -8259,7 +8172,7 @@
           "elements": []
          },
          {
-          "id": "2c903ab",
+          "id": "b4a7ff6",
           "elType": "widget",
           "widgetType": "text-editor",
           "settings": {
@@ -8292,7 +8205,7 @@
           "elements": []
          },
          {
-          "id": "3ff1408",
+          "id": "133dc2d",
           "elType": "widget",
           "widgetType": "button",
           "settings": {
@@ -8347,7 +8260,7 @@
         ]
        },
        {
-        "id": "4fa7c96",
+        "id": "2c903ab",
         "elType": "container",
         "isInner": false,
         "settings": {
@@ -8388,7 +8301,7 @@
             },
             {
              "tab_title": "What materials can Goodfellow Microfabrication 3D print?",
-             "tab_content": "<p>Materials include engineering plastics (ABS, PLA, nylon), acrylics and specialty polymers, metals, ceramics, and FDA-compliant biocompatible materials. Selection is guided by mechanical performance, thermal stability, chemical resistance, and regulatory requirements.</p>",
+             "tab_content": "<p>Materials include engineering plastics (ABS, PLA, nylon), acrylics, specialty polymers and FDA-compliant biocompatible polymers. Selection is guided by mechanical performance, thermal stability, chemical resistance, and regulatory requirements.</p>",
              "_id": "0000003"
             },
             {
@@ -8408,7 +8321,7 @@
             },
             {
              "tab_title": "Can 3D printing be combined with other processes?",
-             "tab_content": "<p>Yes. As a one-stop advanced-manufacturing partner, Goodfellow Microfabrication combines 3D printing with laser micromachining, micro-CNC, bonding, and inspection, which reduces lead times and simplifies supplier management.</p>",
+             "tab_content": "<p>Yes. Goodfellow Microfabrication combines 3D printing with laser micromachining, micro-CNC, bonding, and inspection, which reduces lead times and simplifies supplier management.</p>",
              "_id": "0000007"
             },
             {
@@ -8438,7 +8351,7 @@
   ]
  },
  {
-  "id": "94ac8c9",
+  "id": "72aa53f",
   "elType": "container",
   "isInner": false,
   "settings": {
@@ -8462,7 +8375,7 @@
   },
   "elements": [
    {
-    "id": "c7f4757",
+    "id": "49c8b5f",
     "elType": "container",
     "isInner": false,
     "settings": {
@@ -8491,7 +8404,7 @@
     },
     "elements": [
      {
-      "id": "aa27334",
+      "id": "ae44487",
       "elType": "widget",
       "widgetType": "heading",
       "settings": {
@@ -8530,7 +8443,7 @@
       "elements": []
      },
      {
-      "id": "14183d1",
+      "id": "b5c2c0d",
       "elType": "widget",
       "widgetType": "heading",
       "settings": {
@@ -8556,7 +8469,7 @@
         "unit": "px",
         "size": -2.07
        },
-       "custom_css": "@media(max-width:767px){selector .elementor-heading-title{font-size:38px;line-height:40px}}",
+       "custom_css": "selector .elementor-heading-title{font-size:clamp(2.3rem,4vw,3.9rem)!important;line-height:1.02!important}@media(max-width:767px){selector .elementor-heading-title{font-size:38px!important;line-height:40px!important}}",
        "_margin": {
         "unit": "px",
         "top": "0",
@@ -8569,7 +8482,7 @@
       "elements": []
      },
      {
-      "id": "95f6fe8",
+      "id": "777ad89",
       "elType": "widget",
       "widgetType": "text-editor",
       "settings": {
@@ -8608,7 +8521,7 @@
       "elements": []
      },
      {
-      "id": "adaff3e",
+      "id": "95f6fe8",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -8634,7 +8547,7 @@
       },
       "elements": [
        {
-        "id": "49c8b5f",
+        "id": "aa27334",
         "elType": "widget",
         "widgetType": "button",
         "settings": {
@@ -8678,7 +8591,7 @@
         "elements": []
        },
        {
-        "id": "72aa53f",
+        "id": "14183d1",
         "elType": "widget",
         "widgetType": "button",
         "settings": {

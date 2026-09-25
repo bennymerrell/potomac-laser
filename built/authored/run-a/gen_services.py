@@ -146,9 +146,8 @@ def pill_btn(t, lbl, url, primary=True, size=14, pad=(14, 32), ls=0.7, border_he
 # ============================================================ HTML-widget sections
 def scoped(key, name):
     """design markup + scoped CSS for one section, as extracted from the rendered design."""
-    # mhd's explorer and 3dp's quote were captured in their own tweak defaults (explorer Current / quote Detailed);
-    # we build Example + Compact everywhere, so take those two sections' CSS from cnc's capture
-    src = 'cnc' if (key, name) in (('mhd', 'appx'), ('3dp', 'quote')) else key
+    # captured with TWEAK_DEFAULTS pinned to Example + Compact on every page (2026-09-25 re-export), so each page uses its own CSS
+    src = key
     css = open(SCR + f'meas/{src}-{name}.css', encoding='utf-8').read()
     css = re.sub(r'^/\* errs \d+ \*/\n', '', css)
     css = re.sub(r'@import[^;]+;', '', css)
@@ -408,7 +407,7 @@ def whyus(t, sec, asset):
         container(bullets, flex_direction='column', flex_gap=gap(16, 16), _margin=box(0, 0, 32, 0)),
         ins,
     ], flex_direction='column', flex_gap=gap(0), custom_css='selector{flex:1 1 0}@media(max-width:1023px){selector{flex:1 1 100%}}')
-    return outer([boxed([container([photo, copy], flex_direction='row', flex_wrap='wrap', flex_align_items='center', flex_gap=gap(32, 32))])],
+    return outer([boxed([container([photo, copy], flex_direction='row', flex_wrap='wrap', flex_align_items='flex-start', flex_gap=gap(32, 32))])],
                  bg='#FFFFFF', pad=(64, 24, 64, 24))
 
 
@@ -569,13 +568,15 @@ def testimonials(t, sec):
     hd = sec.select_one('.text-center.mb-8')
     cards = []
     for c in sec.select('.grid.gap-4 > div'):
-        stars = txt_(c.find('div'))
-        q = txt_(c.find('p'))
+        # 2026-09-25 re-export: star ratings removed (DS rule), real customer quotes, kept verbatim (no brand normalisation)
+        q = H.escape(H.unescape(re.sub(r'\s+', ' ', c.find('p').get_text(' ', strip=True))), quote=False)
         foot = c.select('div.flex.items-center')[0]
-        ini = txt_(foot.select('div')[0])
-        name = txt_(foot.select('div div')[0]); co = txt_(foot.select('div div')[1])
+        # foot > [initials div, div > (name div, company div)]; 'div div' also matched the initials (bug on the first live build)
+        kids = foot.find_all('div', recursive=False)
+        ini = txt_(kids[0])
+        who = kids[1].find_all('div', recursive=False)
+        name = txt_(who[0]); co = txt_(who[1])
         cards.append(container([
-            heading(t('heading', stars), 14, '400', color=ORANGE, lh=20, ls=1.4),
             text(t('body', f'<p>{q}</p>'), 15, color=NAVY, lh=24.75, extra_css='selector p{font-style:italic}selector{flex:1 1 auto}'),
             container([
                 heading(t('heading', ini), 12, '700', color='#FFFFFF', lh=16, align='center',
@@ -647,7 +648,9 @@ def closing(t, sec):
     return outer([boxed([
         label(t, eb, ls=2.42, align='center', _margin=box(0, 0, 20, 0)),
         heading(t('heading', h2_html), 59.24, '800', tag='h2', color='#FFFFFF', lh=60.42, ls=-2.07, align='center', _margin=box(0, 0, 20, 0),
-                css='@media(max-width:767px){selector .elementor-heading-title{font-size:38px;line-height:40px}}'),
+                # the design sizes this with clamp(2.3rem,4vw,3.9rem) at leading 1.02, a fixed px only matches one viewport width
+                css='selector .elementor-heading-title{font-size:clamp(2.3rem,4vw,3.9rem)!important;line-height:1.02!important}'
+                    '@media(max-width:767px){selector .elementor-heading-title{font-size:38px!important;line-height:40px!important}}'),
         text(t('body', f'<p>{p}</p>'), 16, color='#FFFFFF', lh=27.2, align='center', _element_width='initial', _element_custom_width=px(640),
              _margin=box(0, 0, 32, 0)),
         container([

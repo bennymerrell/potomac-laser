@@ -63,7 +63,7 @@
       "settings": {
        "flex_direction": "row",
        "flex_wrap": "wrap",
-       "flex_align_items": "center",
+       "flex_align_items": "flex-start",
        "flex_gap": {
         "unit": "px",
         "column": "32",

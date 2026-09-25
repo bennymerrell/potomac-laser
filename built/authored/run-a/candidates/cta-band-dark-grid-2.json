@@ -1,6 +1,6 @@
 [
  {
-  "id": "0000108",
+  "id": "0000105",
   "elType": "container",
   "isInner": false,
   "settings": {
@@ -24,7 +24,7 @@
   },
   "elements": [
    {
-    "id": "0000107",
+    "id": "0000104",
     "elType": "container",
     "isInner": false,
     "settings": {
@@ -53,7 +53,7 @@
     },
     "elements": [
      {
-      "id": "0000101",
+      "id": "00000fe",
       "elType": "widget",
       "widgetType": "heading",
       "settings": {
@@ -92,7 +92,7 @@
       "elements": []
      },
      {
-      "id": "0000102",
+      "id": "00000ff",
       "elType": "widget",
       "widgetType": "heading",
       "settings": {
@@ -118,7 +118,7 @@
         "unit": "px",
         "size": -2.07
        },
-       "custom_css": "@media(max-width:767px){selector .elementor-heading-title{font-size:38px;line-height:40px}}",
+       "custom_css": "selector .elementor-heading-title{font-size:clamp(2.3rem,4vw,3.9rem)!important;line-height:1.02!important}@media(max-width:767px){selector .elementor-heading-title{font-size:38px!important;line-height:40px!important}}",
        "_margin": {
         "unit": "px",
         "top": "0",
@@ -131,7 +131,7 @@
       "elements": []
      },
      {
-      "id": "0000103",
+      "id": "0000100",
       "elType": "widget",
       "widgetType": "text-editor",
       "settings": {
@@ -170,7 +170,7 @@
       "elements": []
      },
      {
-      "id": "0000106",
+      "id": "0000103",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -196,7 +196,7 @@
       },
       "elements": [
        {
-        "id": "0000104",
+        "id": "0000101",
         "elType": "widget",
         "widgetType": "button",
         "settings": {
@@ -240,7 +240,7 @@
         "elements": []
        },
        {
-        "id": "0000105",
+        "id": "0000102",
         "elType": "widget",
         "widgetType": "button",
         "settings": {
