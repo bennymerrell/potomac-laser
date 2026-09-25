@@ -1,0 +1,17 @@
+{
+  "run_id": "20260925-refmat-12268",
+  "mode": "SUPERVISED edit requested in chat (\"yes change 12268 too\")",
+  "posts_modified": [
+    {
+      "post_id": 12268,
+      "title": "About Our Group (live, /about-our-group/)",
+      "change": "button 'Visit BAS →' (b179dd3) link https://www.basrid.co.uk/ -> https://reference-materials.goodfellow.com/; nothing else",
+      "sha256_before": "6734fbcf075d0950ab40257b048b462ebe013a640d624dadc58fd9b3986f58fd",
+      "sha256_after": "73edfd4586fb2b7e3b1712edcf6c4ed51a7a0a19222546d6bdb8455466e4225d",
+      "rollback": "novamira-drafts/run-20260925-refmat-12268/rollback-12268.json",
+      "rollback_sha256": "264fde1164d0f2c71a95c3762091103924be2e7cc5a72429b50025a2d1a0a7c7"
+    }
+  ],
+  "invalidation": "per-post: _elementor_element_cache + _elementor_css deleted, CSS regenerated, rocket_clean_post",
+  "verified": "live /about-our-group/ renders 'Visit BAS →' -> https://reference-materials.goodfellow.com/"
+}
