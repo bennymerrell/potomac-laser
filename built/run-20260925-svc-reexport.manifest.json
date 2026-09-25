@@ -8,7 +8,8 @@
     "FAQ left column sticky as live (design dropped it) - user",
     "customer testimonial quotes kept verbatim (no Potomac -> Goodfellow Microfabrication swap inside quotes)",
     "'Visit Reference Materials →' / reference-materials.goodfellow.com kept from the 2026-09-25 user edits",
-    "built as NEW review drafts; live posts 12239-12243 untouched until the user approves"
+    "built as NEW review drafts; live posts 12239-12243 untouched until the user approves",
+    "2026-09-25 (user, option 1): testimonials sourced from the homepage carousel - design excerpts kept, every cut marked with an ellipsis, otherwise verbatim incl. Varady's '1 – 2' (customer quotes exempt from the no-dash rule); company lines copied from the homepage"
   ],
   "posts_created": [
     {
@@ -60,12 +61,13 @@
   "files_uploaded": [
     "novamira-drafts/run-20260925-svc-reexport/bundle-svc-reexport-v1.json",
     "novamira-drafts/run-20260925-svc-reexport/bundle-svc-reexport-v2.json",
-    "novamira-drafts/run-20260925-svc-reexport/bundle-svc-reexport-v3.json"
+    "novamira-drafts/run-20260925-svc-reexport/bundle-svc-reexport-v3.json",
+    "novamira-drafts/run-20260925-svc-reexport/bundle-svc-reexport-v4.json"
   ],
   "final": {
-    "12470": "CNC v19",
-    "12471-12474": "v9",
-    "bundle": "novamira-drafts/run-20260925-svc-reexport/bundle-svc-reexport-v3.json d763827f…"
+    "12470": "CNC v20",
+    "12471-12474": "v10",
+    "bundle": "novamira-drafts/run-20260925-svc-reexport/bundle-svc-reexport-v4.json 6d73fef8…"
   },
   "generator_fixes": [
     "testimonials: no star row; quotes verbatim",

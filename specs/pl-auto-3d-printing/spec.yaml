@@ -226,18 +226,18 @@ sections:
     body_14: <p>The Goodfellow Group brings together material supply, precision fabrication, and testing capabilities, giving you access to a complete engineering ecosystem.</p>
 - pattern: testimonial-cards-3
   tokens:
-    body_1: <p>“The resolution of this 3D printer was much higher than what we had in our onsite lab. Working with tolerances in the 1 to 2 thousandths range gave us the parameters we needed to fulfill the design requirement.”</p>
+    body_1: <p>“The resolution of this 3D printer was much higher than what we had in our onsite lab. Working with tolerances in the 1 – 2 thousandths range gave us the parameters we needed to fulfill the design requirement. . .”</p>
     heading_1: MV
     heading_2: Marton Varady
-    heading_3: Project Manager, CryoPop
+    heading_3: CryoPop’s Project Manager
     body_2: <p>“Potomac Photonics expertise and expediency enabled us to both deliver our flight unit calorimeter spectrometer insert on schedule and the opportunity to test in advance our proposed alignment method in Japan.”</p>
     heading_4: MC
     heading_5: Meng Chiao
     heading_6: NASA
-    body_3: <p>“The edges are consistently clean, even under magnification. They have turned orders around much more quickly than I am used to, and most importantly, communication is good.”</p>
+    body_3: <p>“… The edges are consistently clean, even under magnification. They have turned orders around much more quickly than I am used to, and most importantly, communication is good. …”</p>
     heading_7: BC
     heading_8: Ben Cramer
-    heading_9: Joint Center for Earth Systems Technology, University of Maryland Baltimore County
+    heading_9: Joint Center for Earth Systems Technology. University of Maryland Baltimore County
     heading_10: Client Testimonials
     heading_11: Trusted by engineers worldwide
 - pattern: quote-rapid-hubspot-html

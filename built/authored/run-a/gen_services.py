@@ -564,6 +564,31 @@ def group(t, sec, assets):
                      'background-size:160px 160px,160px 160px,20px 20px,20px 20px;border-top:1px solid #F3F4F6;border-bottom:1px solid #F3F4F6}')
 
 
+# Testimonials: the homepage carousel (potomac-laser.com/, .js-carouselQuote) is the source. Quotes use the design's
+# excerpts with every cut marked "…" and are otherwise verbatim, dashes included (customer quotes are exempt from the
+# no-dash rule); company lines are the homepage's, word for word (user, 2026-09-25).
+HOME_TESTIMONIALS = {
+    'Ben Cramer': ('… The edges are consistently clean, even under magnification. They have turned orders around much more quickly '
+                   'than I am used to, and most importantly, communication is good. …',
+                   'Joint Center for Earth Systems Technology. University of Maryland Baltimore County'),
+    'Lee Rogers': ('… I can’t tell you how much people appreciate the precision of the Tarsus Gauge you all made for us. I just sent '
+                   'some gauges down to Costa Rica and Argentina for researchers there and they are thrilled …',
+                   'Hummingbird Monitoring Network'),
+    'Marton Varady': ('The resolution of this 3D printer was much higher than what we had in our onsite lab. Working with tolerances in '
+                      'the 1 – 2 thousandths range gave us the parameters we needed to fulfill the design requirement. . .',
+                      'CryoPop’s Project Manager'),
+    'Levin Sliker': ('We are developing a robotic capsule endoscope which is capable of mobility within the gastrointestinal tract. . . '
+                     'Potomac Photonics produces micro-drilled polyimide sheets that we use as molds to fabricate the micro-patterned polymers. . .',
+                     'Graduate Research Fellow at the University of Colorado Boulder'),
+    'Jean Anne Currivan': ('I could have made these (shadow masks with 10-micron diameter holes) myself in the lab, but the learning curve was '
+                           'high for the size of micro hole drilling we needed. That’s why I sought out Potomac Photonics. …',
+                           'MIT Research Assistant'),
+    'Meng Chiao': ('Potomac Photonics expertise and expediency enabled us to both deliver our flight unit calorimeter spectrometer insert '
+                   'on schedule and the opportunity to test in advance our proposed alignment method in Japan.',
+                   'NASA'),
+}
+
+
 def testimonials(t, sec):
     hd = sec.select_one('.text-center.mb-8')
     cards = []
@@ -576,6 +601,10 @@ def testimonials(t, sec):
         ini = txt_(kids[0])
         who = kids[1].find_all('div', recursive=False)
         name = txt_(who[0]); co = txt_(who[1])
+        if name not in HOME_TESTIMONIALS:
+            raise SystemExit(f'testimonial by {name!r} is not on the homepage carousel')
+        hq, co = HOME_TESTIMONIALS[name]
+        q = H.escape('“' + hq + '”', quote=False)
         cards.append(container([
             text(t('body', f'<p>{q}</p>'), 15, color=NAVY, lh=24.75, extra_css='selector p{font-style:italic}selector{flex:1 1 auto}'),
             container([

@@ -7390,7 +7390,7 @@
           "elType": "widget",
           "widgetType": "text-editor",
           "settings": {
-           "editor": "<p>“The edges are consistently clean, even under magnification. They have turned orders around much more quickly than I am used to, and most importantly, communication is good.”</p>",
+           "editor": "<p>“… The edges are consistently clean, even under magnification. They have turned orders around much more quickly than I am used to, and most importantly, communication is good. …”</p>",
            "typography_typography": "custom",
            "typography_font_family": "Inter",
            "typography_font_size": {
@@ -7515,7 +7515,7 @@
               "elType": "widget",
               "widgetType": "heading",
               "settings": {
-               "title": "Joint Center for Earth Systems Technology, University of Maryland Baltimore County",
+               "title": "Joint Center for Earth Systems Technology. University of Maryland Baltimore County",
                "header_size": "div",
                "typography_typography": "custom",
                "typography_font_family": "Inter",
@@ -7788,7 +7788,7 @@
           "elType": "widget",
           "widgetType": "text-editor",
           "settings": {
-           "editor": "<p>“I can’t tell you how much people appreciate the precision of the Tarsus Gauge you all made for us. I just sent some gauges down to Costa Rica and Argentina for researchers there and they are thrilled.”</p>",
+           "editor": "<p>“… I can’t tell you how much people appreciate the precision of the Tarsus Gauge you all made for us. I just sent some gauges down to Costa Rica and Argentina for researchers there and they are thrilled …”</p>",
            "typography_typography": "custom",
            "typography_font_family": "Inter",
            "typography_font_size": {

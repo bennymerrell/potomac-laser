@@ -7394,7 +7394,7 @@
           "elType": "widget",
           "widgetType": "text-editor",
           "settings": {
-           "editor": "<p>“The resolution of this 3D printer was much higher than what we had in our onsite lab. Working with tolerances in the 1 to 2 thousandths range gave us the parameters we needed to fulfill the design requirement.”</p>",
+           "editor": "<p>“The resolution of this 3D printer was much higher than what we had in our onsite lab. Working with tolerances in the 1 – 2 thousandths range gave us the parameters we needed to fulfill the design requirement. . .”</p>",
            "typography_typography": "custom",
            "typography_font_family": "Inter",
            "typography_font_size": {
@@ -7519,7 +7519,7 @@
               "elType": "widget",
               "widgetType": "heading",
               "settings": {
-               "title": "Project Manager, CryoPop",
+               "title": "CryoPop’s Project Manager",
                "header_size": "div",
                "typography_typography": "custom",
                "typography_font_family": "Inter",
@@ -7792,7 +7792,7 @@
           "elType": "widget",
           "widgetType": "text-editor",
           "settings": {
-           "editor": "<p>“The edges are consistently clean, even under magnification. They have turned orders around much more quickly than I am used to, and most importantly, communication is good.”</p>",
+           "editor": "<p>“… The edges are consistently clean, even under magnification. They have turned orders around much more quickly than I am used to, and most importantly, communication is good. …”</p>",
            "typography_typography": "custom",
            "typography_font_family": "Inter",
            "typography_font_size": {
@@ -7917,7 +7917,7 @@
               "elType": "widget",
               "widgetType": "heading",
               "settings": {
-               "title": "Joint Center for Earth Systems Technology, University of Maryland Baltimore County",
+               "title": "Joint Center for Earth Systems Technology. University of Maryland Baltimore County",
                "header_size": "div",
                "typography_typography": "custom",
                "typography_font_family": "Inter",
