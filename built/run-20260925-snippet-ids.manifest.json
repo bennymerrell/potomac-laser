@@ -1,0 +1,20 @@
+{
+  "run_id": "20260925-snippet-ids",
+  "mode": "SUPERVISED, requested in chat (\"remove those post IDs from Snippet #10\").",
+  "site_code_changed": {
+    "what": "Code Snippet #10",
+    "before_sha256": "0efeb3bc47e59d2847c301ed17b88f9d2c6c6ea20754d46372ebd1aef5fa27a8",
+    "after_sha256": "2e002b0dc04f7dc9d7cefdc19749218905b93a1ce0f168d991b0c23e621b53c8",
+    "removed": [
+      "12127: $is_iframe detection and its CSS branch (#cnc-draft-frame full-bleed)",
+      "pl_is_elementor_service_draft() (12133, 12223-12226) and everything gated by it: Elementor Google-fonts suppression, the #cnc-inter-font style, the #cnc-anchor-jump footer script"
+    ],
+    "kept": "pl_is_fullbleed_target(), the body class and the full-bleed CSS for Elementor post_services/post_application and stamped page/post_material posts (unchanged byte-for-byte)",
+    "renamed": {
+      "from": "CNC/Elementor full-bleed treatment (Services + Applications) + iframe draft + anchor jump",
+      "to": "Elementor full-bleed treatment (Services + Applications + pipeline pages)"
+    },
+    "rollback": "restore reference/code-snippets/snippet-10.before-20260925-snippet-ids.php as the code (and the old name)"
+  },
+  "verified": "Logged out: /about/, /about/faqs/, /contact/, /materials/, /material/glass/, /material/metal/stainless-steel/ keep the fullbleed class and the footer rule; live service pages, /services-applications/, /project-gallery/ and / unchanged; no cnc-inter-font / cnc-anchor-jump output anywhere; all 200, no PHP errors. No cache purge needed: the CSS emitted for pipeline pages is unchanged."
+}
