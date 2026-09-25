@@ -10,8 +10,16 @@
       "sha256_after": "73edfd4586fb2b7e3b1712edcf6c4ed51a7a0a19222546d6bdb8455466e4225d",
       "rollback": "novamira-drafts/run-20260925-refmat-12268/rollback-12268.json",
       "rollback_sha256": "264fde1164d0f2c71a95c3762091103924be2e7cc5a72429b50025a2d1a0a7c7"
+    },
+    {
+      "post_id": 12268,
+      "change": "button b179dd3 label 'Visit BAS →' -> 'Visit Reference Materials →' (user request; arrow kept to match sibling buttons)",
+      "sha256_before": "73edfd4586fb2b7e3b1712edcf6c4ed51a7a0a19222546d6bdb8455466e4225d",
+      "sha256_after": "c6e361535d1943ce219358878d03ec201168b4fe3fbd7ddeb4c3e0f493ac9f14",
+      "rollback": "novamira-drafts/run-20260925-refmat-12268/rollback-12268-label.json",
+      "rollback_sha256": "8acbac902dd69234bcf678ce1daf9caab1c79c24fcbf582b35479dc144e85163"
     }
   ],
   "invalidation": "per-post: _elementor_element_cache + _elementor_css deleted, CSS regenerated, rocket_clean_post",
-  "verified": "live /about-our-group/ renders 'Visit BAS →' -> https://reference-materials.goodfellow.com/"
+  "verified": "live /about-our-group/ renders 'Visit Reference Materials →' -> https://reference-materials.goodfellow.com/"
 }
