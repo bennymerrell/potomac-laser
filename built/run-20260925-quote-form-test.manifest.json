@@ -1,0 +1,42 @@
+{
+  "run_id": "20260925-quote-form-test",
+  "mode": "SUPERVISED, requested in chat: test that the service pages' quote form submits to the same HubSpot form as https://www.potomac-laser.com/project-quote/. No site content changed.",
+  "comparison": {
+    "project_quote_page": "Gravity Forms #2 -> GF HubSpot feed #19 -> portal 143181153, form \"[Potomac] Start a Project\" 9dba7d36-e36b-4a10-9411-9dc073dab7a0 (lifecycle lead, lead status NEW; maps email, firstname, lastname, phone, company, potomac_project_name, potomac_project_description, potomac_file_submission, potomac_second/third_file_submission)",
+    "service_drafts": "12239-12243 all post direct to https://api.hsforms.com/submissions/v3/integration/submit/143181153/9dba7d36-e36b-4a10-9411-9dc073dab7a0 — the same form; form script byte-identical on all five",
+    "fields": "email, firstname, lastname (split from one Name field), company, potomac_project_name (\"Rapid Response Quote — <page title>\"), potomac_project_description, potomac_file_submission (via /wp-json/cnc-quote/v1/upload), hs_lead_status NEW, utm_*",
+    "differences_vs_project_quote": [
+      "no lifecyclestage (feed #19 sets lead)",
+      "no phone field (the design has none)",
+      "single file upload (feed allows three)",
+      "no CAPTCHA"
+    ]
+  },
+  "test_submission": {
+    "page": "draft 12239 (CNC), preview, with utm_source=pipeline-test",
+    "http_status": 200,
+    "response_body": "{\"inlineMessage\":\"\"}",
+    "endpoint": "143181153/9dba7d36-e36b-4a10-9411-9dc073dab7a0",
+    "fields_sent": [
+      "email=ben.merrell@goodfellow.com",
+      "firstname=Ben",
+      "lastname=Merrell (TEST)",
+      "company=Goodfellow (pipeline test)",
+      "potomac_project_name=Rapid Response Quote — CNC Micromachining Services",
+      "potomac_project_description=PIPELINE TEST - please ignore…",
+      "hs_lead_status=NEW",
+      "utm_source/medium/campaign"
+    ],
+    "file": "none attached (the upload endpoint would store a public file)",
+    "page_result": "\"Request received — thank you\""
+  },
+  "click_path": "First real click landed while the page was smooth-scrolling and missed; the submission was then fired via the button (programmatic click through the bound handler). A second real, trusted mouse click was confirmed to land on the button (caught by a capture-phase guard, not submitted).",
+  "defects_found": [
+    "Button markup is mangled on all five: source <button type=\"button\" type=\"submit\" id=\"r-submit\"> renders as type=\"button\" \"submit\"id=\"r-submit\" — the id is lost; the script still binds the button by selector (data-pl-bound=1), so it works, but the HTML is invalid and fragile",
+    "Steps panel copy shifted one slot on 12240-12243 (label/h3/p out of order: label \"Name, email, description, drawing…\", h3 \"2\", p \"Within hours\")",
+    "All five service drafts are still out of date against the current designs (see built/compare-services-20260924.md); the current design's quote section is a two-step form (tolerance, quantity) that the refresh must fold into potomac_project_description per reference/HUBSPOT-FORMS.md"
+  ],
+  "open": [
+    "User to find and archive the test contact/submission in HubSpot (same email as the Contact test, so it lands on the same contact record)"
+  ]
+}
