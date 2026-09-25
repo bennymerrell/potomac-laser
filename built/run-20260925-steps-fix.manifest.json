@@ -1,0 +1,30 @@
+{
+  "run_id": "20260925-steps-fix",
+  "mode": "SUPERVISED, requested in chat (\"Fix the scrambled step panel on the service drafts\").",
+  "cause": "On drafts 12240-12243 the quote section's content was shifted: step numbers \"1/2/3\" were filled into text slots, pushing every following value along (step 3 lost; the form's progress labels read \"Within 24 hours / Quote & process path confirmed\" and its title \"Feasibility, recommended process, next steps.\"), and the confidentiality line carried a doubled \"♢\". The specs hold the correct values (same as CNC) — the defect is in the built posts only, so the specs are unchanged.",
+  "reference": "CNC draft 12239 (correct) and the step copy in all five designs (identical: Now / You submit your request / Name, email, description, drawing. No commitment.; Within hours / Engineer reviews your part / DFM check…; Within 24 hours / Quote & process path confirmed / Feasibility, recommended process, next steps.)",
+  "posts_modified": [
+    {
+      "post_id": 12240,
+      "change": "quote widget: 3 step blocks, progress labels (Your part / Project details), form title (Step 1 — Tell us about your part) set to the CNC/design values; doubled ♢ removed. Widget now differs from CNC only in its page-specific description placeholder.",
+      "new_sha": "99581454fcb2d279fe9b33bcacce5d2081b7b35d4ac08ce42e10a748a10f0dff"
+    },
+    {
+      "post_id": 12241,
+      "change": "quote widget: 3 step blocks, progress labels (Your part / Project details), form title (Step 1 — Tell us about your part) set to the CNC/design values; doubled ♢ removed. Widget now differs from CNC only in its page-specific description placeholder.",
+      "new_sha": "4f008c50eeb2a44ede034f2aba84f41f9c4bbbcadfed1475d8988789d0e79b3d"
+    },
+    {
+      "post_id": 12242,
+      "change": "quote widget: 3 step blocks, progress labels (Your part / Project details), form title (Step 1 — Tell us about your part) set to the CNC/design values; doubled ♢ removed. Widget now differs from CNC only in its page-specific description placeholder.",
+      "new_sha": "458c29f20512108190cd47b941fa4b007192bf695b9935d11f0ec0e2034c9c40"
+    },
+    {
+      "post_id": 12243,
+      "change": "quote widget: 3 step blocks, progress labels (Your part / Project details), form title (Step 1 — Tell us about your part) set to the CNC/design values; doubled ♢ removed. Widget now differs from CNC only in its page-specific description placeholder.",
+      "new_sha": "3ebc638fb1471c644e9ad4d2f6902e1846bb2e0c036870b5b44582208c7328cc"
+    }
+  ],
+  "verified": "Chrome (own tab group, closed): 12240 and 12243 render Now / Within hours / Within 24 hours with the right titles and text, progress 'Your part, Project details', title 'Step 1 — Tell us about your part', single ♢; screenshot of the panel on 12243.",
+  "rollback": "restore _elementor_data from built/run-20260925-steps-fix.rollback-steps.json"
+}
