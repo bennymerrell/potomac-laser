@@ -1,0 +1,16 @@
+{
+  "run_id": "20260925-refmat-drafts",
+  "mode": "SUPERVISED edit requested in chat (\"Change the basrid link on 12178 and 11029 too\")",
+  "posts_modified": [
+    {"post_id": 12178, "title": "About Our Group (draft, about-our-group-pre-golive-20260924 — go-live revert copy)",
+     "change": "button a000060 'Visit BAS →' link https://www.basrid.co.uk/ -> https://reference-materials.goodfellow.com/ in _elementor_data and post_content; label unchanged",
+     "sha256_before": "1e1cac1a26fc2afd7658f36ad7b915820c99dae09c06ac4693012a067d18c3f3", "sha256_after": "dd55e6f28155b364aec474af0391c5462da299918e8f380638a88669d5812ac0",
+     "rollback": "novamira-drafts/run-20260925-refmat-drafts/rollback-12178.json", "rollback_sha256": "42abfa31afb65a3d7d972cd32d5e77857aa09835b10896a9671ea38e4d9d6a91"},
+    {"post_id": 11029, "title": "About Our Group (draft, about-our-group-old)",
+     "change": "button 2fb466eb 'Visit BAS' link https://www.basrid.co.uk/ -> https://reference-materials.goodfellow.com/ in _elementor_data and post_content; label unchanged",
+     "sha256_before": "00e3553eed3f7fce18d1ca4eb424d87c2286b8be48a51879682d9d001e80aee2", "sha256_after": "83ca701dbd552dd5723aafd61f26d22ae90391a7090d88f68f59ddad057b0523",
+     "rollback": "novamira-drafts/run-20260925-refmat-drafts/rollback-11029.json", "rollback_sha256": "d04d013b7e0336a024082d9744d8c32ccfac2cb42abf36bbbccd88197ed3f7ca"}
+  ],
+  "unchanged": "status draft and slug on both; elementor_library 11267 still links basrid.co.uk",
+  "verified": "both previews render the button -> reference-materials.goodfellow.com"
+}
