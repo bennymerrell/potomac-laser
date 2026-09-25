@@ -132,7 +132,7 @@
       }
     ],
     "verification": "logged-out curl: 5 URLs 200 with the new copy, homepage testimonial company lines, no stars, no placeholder names, header top bar present; homepage 200. Chrome: CNC and 3DP every section within ±3 px of the design, explorer informational, form present, FAQ sticky.",
-    "review_drafts": "12470-12474 left as drafts (identical to live); trash when no longer needed",
+    "review_drafts": "12470-12474 trashed 2026-09-25 at the user's request (checked identical to live first); restorable from Trash",
     "rollback_procedure": "per post: write the rollback file's _elementor_data back to _elementor_data (and the _pl_auto_* values), then the per-post cache clear"
   }
 }
