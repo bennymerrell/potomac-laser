@@ -1,0 +1,35 @@
+{
+  "run_id": "20260925-appx-button",
+  "mode": "SUPERVISED fix requested in chat (\"Next step for Microfluidics button is not the CTA design its just a square orange block please repair\")",
+  "cause": "the explorer's 'Upload CAD' is a <button> in the design, styled by the element selector `.appx-actions button` (pill, 13px 20px, 12px/800 uppercase, .14em); the build turns it into <a href=\"#quote\">, so only the class rule (.appx-btn-primary: background) still applied",
+  "fix": "generator: converted links carry data-pl-btn; every captured `button` rule is extended to a:where([data-pl-btn]) (same specificity as `button`), plus a zero-specificity inline-block/centred/no-underline base; applies to every design button turned into a link",
+  "posts_modified": [
+    {
+      "post_id": 12239,
+      "rollback": "novamira-drafts/run-20260925-appx-button/rollback-12239.json",
+      "rollback_sha256_12": "50f34fb79a03"
+    },
+    {
+      "post_id": 12240,
+      "rollback": "novamira-drafts/run-20260925-appx-button/rollback-12240.json",
+      "rollback_sha256_12": "bc910b087363"
+    },
+    {
+      "post_id": 12241,
+      "rollback": "novamira-drafts/run-20260925-appx-button/rollback-12241.json",
+      "rollback_sha256_12": "6adabf8edda5"
+    },
+    {
+      "post_id": 12242,
+      "rollback": "novamira-drafts/run-20260925-appx-button/rollback-12242.json",
+      "rollback_sha256_12": "d622b9c4474f"
+    },
+    {
+      "post_id": 12243,
+      "rollback": "novamira-drafts/run-20260925-appx-button/rollback-12243.json",
+      "rollback_sha256_12": "479c4c6235ac"
+    }
+  ],
+  "bundle": "novamira-drafts/run-20260925-appx-button/bundle-svc-btnfix.json 1ae7f429…",
+  "verification": "live, all five pages, every explorer tab: Upload CAD 44 px pill, radius 999px, 12px uppercase 800, orange with shadow; section heights unchanged (explorer 742, 3DP all sections within ±3 px)"
+}

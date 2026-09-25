@@ -165,6 +165,17 @@ def fix_markup(soup):
         el['class'] = [c for c in el['class'] if c not in ('reveal', 'd1', 'd2', 'd3', 'd4', 'd5')]
 
 
+def button_rules_for_links(css):
+    """extend each selector that targets the `button` element to the converted links (a[data-pl-btn]) as well."""
+    def sel(m):
+        parts = m.group(1).split(',')
+        # a:where([data-pl-btn]) has the same specificity as `button`, so the design's class rules still win as they did
+        extra = [re.sub(r'(?<![\w-])button(?![\w-])', 'a:where([data-pl-btn])', p) for p in parts
+                 if re.search(r'(?<![\w\-.#\[])button(?![\w-])', p)]
+        return ','.join(parts + extra) + '{'
+    return re.sub(r'([^{}@]+)\{', sel, css)
+
+
 def html_section(t, key, name, transform=None, script='', eid=None):
     markup, css = scoped(key, name)
     soup = BeautifulSoup(markup, 'html.parser')
@@ -180,6 +191,12 @@ def html_section(t, key, name, transform=None, script='', eid=None):
     body = re.sub(r'\n\s*\n+', '\n', body)
     # the theme sets `ul li{padding:5px 20px 5px 0}`; reset it under the scope, before the design rules so they win ties
     reset = f'.pl-svc-{name} li{{padding:0}}'
+    if 'data-pl-btn' in body:
+        # design buttons we turned into #quote links: carry every `button` rule over to them (e.g. `.appx-actions button`,
+        # the pill shape of "Upload CAD" in the explorer's Next step panel), with the box a <button> gets for free
+        reset += (f':where(.pl-svc-{name} a[data-pl-btn]){{display:inline-block;text-align:center;text-decoration:none;'
+                  f'line-height:normal;box-sizing:border-box}}')
+        css = button_rules_for_links(css)
     out = f'<style>{reset}{css}</style>{body}{script}'
     w = html_widget(t, out)
     return outer([w], pad=(0, 0, 0, 0), eid=eid, css='selector > .e-con-inner, selector{max-width:none}')
@@ -211,7 +228,7 @@ def t_appx(soup, sec):
     for b in sec.select('[onclick]'):
         oc = b['onclick']
         if 'goToQuoteUpload' in oc or 'openBasket' in oc:
-            a = soup.new_tag('a', href='#quote', **{'class': ' '.join(b.get('class', []))})
+            a = soup.new_tag('a', href='#quote', **{'class': ' '.join(b.get('class', [])), 'data-pl-btn': ''})
             a.string = b.get_text(strip=True)
             b.replace_with(a)
         elif 'openMatDetail' in oc or 'addToBasket' in oc:
@@ -288,7 +305,7 @@ def t_static(soup, sec):
     for b in sec.select('[onclick]'):
         oc = b['onclick']
         if 'goToQuoteUpload' in oc or 'openBasket' in oc:
-            a = soup.new_tag('a', href='#quote', **{'class': ' '.join(b.get('class', []))})
+            a = soup.new_tag('a', href='#quote', **{'class': ' '.join(b.get('class', [])), 'data-pl-btn': ''})
             a.string = b.get_text(strip=True)
             b.replace_with(a)
         else:
