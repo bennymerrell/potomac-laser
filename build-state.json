@@ -32,7 +32,10 @@
           "planned_live_url": "https://www.potomac-laser.com/services/cnc-micro-machining-services/",
           "replaces_live_post": 11893,
           "build_slug": "pl-auto-cnc-micromachining",
-          "slug_renamed_by_run": "20260925-draft-slugs"
+          "slug_renamed_by_run": "20260925-draft-slugs",
+          "post_status": "publish",
+          "live_url": "https://www.potomac-laser.com/services/cnc-micro-machining-services/",
+          "went_live": "2026-09-25, run 20260925-golive (swap; old post kept as draft <slug>-pre-golive-20260925)"
         },
         {
           "slug": "laser-micromachining",
@@ -53,7 +56,10 @@
             2239
           ],
           "build_slug": "pl-auto-laser-micromachining",
-          "slug_renamed_by_run": "20260925-draft-slugs"
+          "slug_renamed_by_run": "20260925-draft-slugs",
+          "post_status": "publish",
+          "live_url": "https://www.potomac-laser.com/services/laser-micromachining/",
+          "went_live": "2026-09-25, run 20260925-golive (swap; old post kept as draft <slug>-pre-golive-20260925)"
         },
         {
           "slug": "micro-hole-drilling",
@@ -70,7 +76,10 @@
           "planned_live_url": "https://www.potomac-laser.com/services/micro-hole-drilling/",
           "replaces_live_post": 2692,
           "build_slug": "pl-auto-micro-hole-drilling",
-          "slug_renamed_by_run": "20260925-draft-slugs"
+          "slug_renamed_by_run": "20260925-draft-slugs",
+          "post_status": "publish",
+          "live_url": "https://www.potomac-laser.com/services/micro-hole-drilling/",
+          "went_live": "2026-09-25, run 20260925-golive (swap; old post kept as draft <slug>-pre-golive-20260925)"
         },
         {
           "slug": "rapid-prototyping-services",
@@ -88,7 +97,10 @@
           "planned_live_url": "https://www.potomac-laser.com/services/rapid-prototyping-services/",
           "replaces_live_post": 11536,
           "build_slug": "pl-auto-rapid-prototyping",
-          "slug_renamed_by_run": "20260925-draft-slugs"
+          "slug_renamed_by_run": "20260925-draft-slugs",
+          "post_status": "publish",
+          "live_url": "https://www.potomac-laser.com/services/rapid-prototyping-services/",
+          "went_live": "2026-09-25, run 20260925-golive (swap; old post kept as draft <slug>-pre-golive-20260925)"
         },
         {
           "slug": "3d-printing-contract-services",
@@ -110,7 +122,10 @@
             5800
           ],
           "build_slug": "pl-auto-3d-printing",
-          "slug_renamed_by_run": "20260925-draft-slugs"
+          "slug_renamed_by_run": "20260925-draft-slugs",
+          "post_status": "publish",
+          "live_url": "https://www.potomac-laser.com/services/3d-printing-contract-services/",
+          "went_live": "2026-09-25, run 20260925-golive (swap; old post kept as draft <slug>-pre-golive-20260925)"
         }
       ],
       "new_patterns": [
@@ -168,7 +183,10 @@
           "planned_live_url": "https://www.potomac-laser.com/services/cnc-micro-machining-services/",
           "replaces_live_post": 11893,
           "build_slug": "pl-auto-cnc-micromachining",
-          "slug_renamed_by_run": "20260925-draft-slugs"
+          "slug_renamed_by_run": "20260925-draft-slugs",
+          "post_status": "publish",
+          "live_url": "https://www.potomac-laser.com/services/cnc-micro-machining-services/",
+          "went_live": "2026-09-25, run 20260925-golive (swap; old post kept as draft <slug>-pre-golive-20260925)"
         },
         {
           "slug": "laser-micromachining",
@@ -188,7 +206,10 @@
             2239
           ],
           "build_slug": "pl-auto-laser-micromachining",
-          "slug_renamed_by_run": "20260925-draft-slugs"
+          "slug_renamed_by_run": "20260925-draft-slugs",
+          "post_status": "publish",
+          "live_url": "https://www.potomac-laser.com/services/laser-micromachining/",
+          "went_live": "2026-09-25, run 20260925-golive (swap; old post kept as draft <slug>-pre-golive-20260925)"
         },
         {
           "slug": "micro-hole-drilling",
@@ -204,7 +225,10 @@
           "planned_live_url": "https://www.potomac-laser.com/services/micro-hole-drilling/",
           "replaces_live_post": 2692,
           "build_slug": "pl-auto-micro-hole-drilling",
-          "slug_renamed_by_run": "20260925-draft-slugs"
+          "slug_renamed_by_run": "20260925-draft-slugs",
+          "post_status": "publish",
+          "live_url": "https://www.potomac-laser.com/services/micro-hole-drilling/",
+          "went_live": "2026-09-25, run 20260925-golive (swap; old post kept as draft <slug>-pre-golive-20260925)"
         },
         {
           "slug": "rapid-prototyping-services",
@@ -220,7 +244,10 @@
           "planned_live_url": "https://www.potomac-laser.com/services/rapid-prototyping-services/",
           "replaces_live_post": 11536,
           "build_slug": "pl-auto-rapid-prototyping",
-          "slug_renamed_by_run": "20260925-draft-slugs"
+          "slug_renamed_by_run": "20260925-draft-slugs",
+          "post_status": "publish",
+          "live_url": "https://www.potomac-laser.com/services/rapid-prototyping-services/",
+          "went_live": "2026-09-25, run 20260925-golive (swap; old post kept as draft <slug>-pre-golive-20260925)"
         },
         {
           "slug": "3d-printing-contract-services",
@@ -240,7 +267,10 @@
             5800
           ],
           "build_slug": "pl-auto-3d-printing",
-          "slug_renamed_by_run": "20260925-draft-slugs"
+          "slug_renamed_by_run": "20260925-draft-slugs",
+          "post_status": "publish",
+          "live_url": "https://www.potomac-laser.com/services/3d-printing-contract-services/",
+          "went_live": "2026-09-25, run 20260925-golive (swap; old post kept as draft <slug>-pre-golive-20260925)"
         },
         {
           "slug": "pl-auto-about-our-group",
@@ -366,7 +396,10 @@
           "verify_iterations": 2,
           "previous_status": "failed: pattern-budget-exhausted (run 20260924-100754)",
           "built_by_run": "20260924-125928",
-          "note": "RUN A page; stamped draft found by path, not written"
+          "note": "RUN A page; stamped draft found by path, not written",
+          "post_status": "publish",
+          "live_url": "https://www.potomac-laser.com/project-gallery/",
+          "went_live": "2026-09-25, run 20260925-golive (swap; old post kept as draft <slug>-pre-golive-20260925)"
         },
         {
           "slug": "services-applications",
@@ -384,7 +417,10 @@
           "planned_live_url": "https://www.potomac-laser.com/services-applications/",
           "replaces_live_post": 9970,
           "build_slug": "pl-auto-services-and-applications",
-          "slug_renamed_by_run": "20260925-draft-slugs"
+          "slug_renamed_by_run": "20260925-draft-slugs",
+          "post_status": "publish",
+          "live_url": "https://www.potomac-laser.com/services-applications/",
+          "went_live": "2026-09-25, run 20260925-golive (swap; old post kept as draft <slug>-pre-golive-20260925)"
         },
         {
           "slug": "pl-auto-materials",
@@ -677,7 +713,10 @@
           "planned_live_url": "https://www.potomac-laser.com/services/cnc-micro-machining-services/",
           "replaces_live_post": 11893,
           "build_slug": "pl-auto-cnc-micromachining",
-          "slug_renamed_by_run": "20260925-draft-slugs"
+          "slug_renamed_by_run": "20260925-draft-slugs",
+          "post_status": "publish",
+          "live_url": "https://www.potomac-laser.com/services/cnc-micro-machining-services/",
+          "went_live": "2026-09-25, run 20260925-golive (swap; old post kept as draft <slug>-pre-golive-20260925)"
         },
         {
           "slug": "laser-micromachining",
@@ -697,7 +736,10 @@
             2239
           ],
           "build_slug": "pl-auto-laser-micromachining",
-          "slug_renamed_by_run": "20260925-draft-slugs"
+          "slug_renamed_by_run": "20260925-draft-slugs",
+          "post_status": "publish",
+          "live_url": "https://www.potomac-laser.com/services/laser-micromachining/",
+          "went_live": "2026-09-25, run 20260925-golive (swap; old post kept as draft <slug>-pre-golive-20260925)"
         },
         {
           "slug": "micro-hole-drilling",
@@ -713,7 +755,10 @@
           "planned_live_url": "https://www.potomac-laser.com/services/micro-hole-drilling/",
           "replaces_live_post": 2692,
           "build_slug": "pl-auto-micro-hole-drilling",
-          "slug_renamed_by_run": "20260925-draft-slugs"
+          "slug_renamed_by_run": "20260925-draft-slugs",
+          "post_status": "publish",
+          "live_url": "https://www.potomac-laser.com/services/micro-hole-drilling/",
+          "went_live": "2026-09-25, run 20260925-golive (swap; old post kept as draft <slug>-pre-golive-20260925)"
         },
         {
           "slug": "rapid-prototyping-services",
@@ -729,7 +774,10 @@
           "planned_live_url": "https://www.potomac-laser.com/services/rapid-prototyping-services/",
           "replaces_live_post": 11536,
           "build_slug": "pl-auto-rapid-prototyping",
-          "slug_renamed_by_run": "20260925-draft-slugs"
+          "slug_renamed_by_run": "20260925-draft-slugs",
+          "post_status": "publish",
+          "live_url": "https://www.potomac-laser.com/services/rapid-prototyping-services/",
+          "went_live": "2026-09-25, run 20260925-golive (swap; old post kept as draft <slug>-pre-golive-20260925)"
         },
         {
           "slug": "3d-printing-contract-services",
@@ -749,7 +797,10 @@
             5800
           ],
           "build_slug": "pl-auto-3d-printing",
-          "slug_renamed_by_run": "20260925-draft-slugs"
+          "slug_renamed_by_run": "20260925-draft-slugs",
+          "post_status": "publish",
+          "live_url": "https://www.potomac-laser.com/services/3d-printing-contract-services/",
+          "went_live": "2026-09-25, run 20260925-golive (swap; old post kept as draft <slug>-pre-golive-20260925)"
         },
         {
           "slug": "pl-auto-about-our-group",
@@ -890,7 +941,10 @@
           "status": "built",
           "run": "20260924-125928",
           "verify_iterations": 2,
-          "previous_status": "failed: pattern-budget-exhausted (run 20260924-100754)"
+          "previous_status": "failed: pattern-budget-exhausted (run 20260924-100754)",
+          "post_status": "publish",
+          "live_url": "https://www.potomac-laser.com/project-gallery/",
+          "went_live": "2026-09-25, run 20260925-golive (swap; old post kept as draft <slug>-pre-golive-20260925)"
         },
         {
           "slug": "services-applications",
@@ -906,7 +960,10 @@
           "planned_live_url": "https://www.potomac-laser.com/services-applications/",
           "replaces_live_post": 9970,
           "build_slug": "pl-auto-services-and-applications",
-          "slug_renamed_by_run": "20260925-draft-slugs"
+          "slug_renamed_by_run": "20260925-draft-slugs",
+          "post_status": "publish",
+          "live_url": "https://www.potomac-laser.com/services-applications/",
+          "went_live": "2026-09-25, run 20260925-golive (swap; old post kept as draft <slug>-pre-golive-20260925)"
         }
       ],
       "new_patterns": [

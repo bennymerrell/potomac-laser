@@ -1,0 +1,121 @@
+{
+  "run_id": "20260925-golive",
+  "started_utc": "2026-09-25T08:0xZ",
+  "mode": "GO-LIVE, requested by the user in chat (\"roll out all changes to live\"); scope 'All seven' and 'Re-point the menu items' by the user's answers. Method: swap, as run 20260924-152914 - old live post -> draft with slug <slug>-pre-golive-20260925; the new draft takes its slug, parent, menu order, featured image, excerpt and AIOSEO title/description and is published; children and menu items re-pointed. Two pairs per call (novamira-request-size).",
+  "target": "potomac-laser.com (LIVE)",
+  "recovery_floor": {
+    "gate": "SKILL.md §0 - newest set < 24 h, success",
+    "updraft_set_timestamp": 1790263759,
+    "when": "2026-09-24T15:29:19Z",
+    "backup_nonce": "a02d96573826",
+    "updraft_last_backup_success": 1,
+    "updraft_last_backup_errors": []
+  },
+  "swaps": [
+    {
+      "published": 12239,
+      "url": "https://www.potomac-laser.com/services/cnc-micro-machining-services/",
+      "old_post": 11893,
+      "old_now": "draft",
+      "old_backup_slug": "cnc-micro-machining-services-pre-golive-20260925"
+    },
+    {
+      "published": 12240,
+      "url": "https://www.potomac-laser.com/services/laser-micromachining/",
+      "old_post": 1421,
+      "old_now": "draft",
+      "old_backup_slug": "laser-micromachining-pre-golive-20260925"
+    },
+    {
+      "published": 12241,
+      "url": "https://www.potomac-laser.com/services/micro-hole-drilling/",
+      "old_post": 2692,
+      "old_now": "draft",
+      "old_backup_slug": "micro-hole-drilling-pre-golive-20260925"
+    },
+    {
+      "published": 12242,
+      "url": "https://www.potomac-laser.com/services/rapid-prototyping-services/",
+      "old_post": 11536,
+      "old_now": "draft",
+      "old_backup_slug": "rapid-prototyping-services-pre-golive-20260925"
+    },
+    {
+      "published": 12243,
+      "url": "https://www.potomac-laser.com/services/3d-printing-contract-services/",
+      "old_post": 5821,
+      "old_now": "draft",
+      "old_backup_slug": "3d-printing-contract-services-pre-golive-20260925"
+    },
+    {
+      "published": 12371,
+      "url": "https://www.potomac-laser.com/services-applications/",
+      "old_post": 9970,
+      "old_now": "draft",
+      "old_backup_slug": "services-applications-pre-golive-20260925"
+    },
+    {
+      "published": 12357,
+      "url": "https://www.potomac-laser.com/project-gallery/",
+      "old_post": 12183,
+      "old_now": "draft",
+      "old_backup_slug": "project-gallery-pre-golive-20260925"
+    }
+  ],
+  "children_reparented": {
+    "to 12240 (/services/laser-micromachining/)": [
+      2200,
+      2239
+    ],
+    "to 12243 (/services/3d-printing-contract-services/)": [
+      5616,
+      5800
+    ]
+  },
+  "menu_items_repointed": {
+    "12240": [
+      5233,
+      9956
+    ],
+    "12241": [
+      5332,
+      9961
+    ],
+    "12371": [
+      10062,
+      10234,
+      10387,
+      10638,
+      10639
+    ],
+    "12357": [
+      3162,
+      7961,
+      10389
+    ]
+  },
+  "aioseo_copied": [
+    12239,
+    12240,
+    12241,
+    12242,
+    12243,
+    12357
+  ],
+  "links_rewritten": {
+    "12357": "4 preview links to 12239 (-> /project-quote/#projectForm and /services/cnc-micro-machining-services/)"
+  },
+  "files_uploaded": [
+    {
+      "path": "wp-content/uploads/novamira-drafts/run-20260925-golive/rollback-golive.json",
+      "sha256": "6d1170c0cc11afb694c139f33f10c7ba18ba008f8744a3f7c4dc32b865317b69",
+      "role": "pre-change snapshot: 14 posts (status/slug/parent/order/thumb/excerpt/dates/data sha), children, 12 menu items' object ids, new posts' AIOSEO rows and _elementor_data"
+    }
+  ],
+  "verification": "logged-out curl: all 7 URLs 200 serving the new elementor ids, 4 child URLs 200, homepage 200, old backup slugs 404 (drafts), no preview links; header 'Services & Applications' and 'Gallery' and footer LM/MHD/Applications links resolve; Chrome: header full height (phone + Request a quote) and hero flush on the live CNC page; hub and gallery render.",
+  "not_changed": [
+    "Snippet #10",
+    "the template's 'Potomac RPM / Rapid Response' block after service content (pre-existing on all service pages)"
+  ],
+  "rollback_procedure": "per pair: new -> draft (restore its slug from the snapshot), old -> publish with its original slug; children post_parent and menu _menu_item_object_id back from the snapshot; per-post cache clear"
+}
