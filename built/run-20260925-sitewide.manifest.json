@@ -1,0 +1,88 @@
+{
+  "run_id": "20260925-sitewide",
+  "mode": "SUPERVISED edit requested in chat (\"make sure that the sitewide stuff is applied\"): sync live pages to the 2026-09-25 re-export's design-system changes (zip 4fb5447b)",
+  "recovery_floor": {
+    "updraft_set_timestamp": 1790345493,
+    "backup_nonce": "7e779933e632",
+    "when": "2026-09-25T14:11:33Z"
+  },
+  "changes": {
+    "top-align image+text rows (flex_align_items center -> flex-start)": {
+      "12268": [
+        "2094d6a",
+        "780df9d",
+        "d40da15",
+        "cc30e68"
+      ],
+      "12277": [
+        "f2d9981"
+      ],
+      "12298": [
+        "6eb9878"
+      ],
+      "12388": [
+        "bec010b"
+      ],
+      "12397": [
+        "e79d337"
+      ],
+      "12398": [
+        "aec2338",
+        "85e15a7"
+      ],
+      "12399": [
+        "cf0466e"
+      ],
+      "12400": [
+        "c43118c"
+      ],
+      "12401": [
+        "f898a6b"
+      ],
+      "12403": [
+        "254e284"
+      ],
+      "12404": [
+        "f8e20f2"
+      ]
+    },
+    "copy (design's de-AI edits)": {
+      "12268": [
+        "we drive innovation ... becoming your one-stop shop for ... needs. -> we support projects ... covering ... needs within one group.",
+        "making us a trusted partner for -> serving",
+        "ensuring safe and innovative products -> supporting product safety",
+        "making BAS a trusted partner for -> used for"
+      ],
+      "12298": [
+        "a comprehensive benefits package -> a benefits package"
+      ]
+    }
+  },
+  "already_compliant": [
+    "12301 Quality Policy row already flex-start",
+    "12399 'Features in Kapton' row already flex-start",
+    "About Case Studies/FAQs/News and Materials Polymers have no split rows"
+  ],
+  "not_applicable_on_live": [
+    "About Our Group hero lede ('... with a single trusted partner.') - the live hero was built from an earlier export and has a different paragraph",
+    "Contact 'Mon–Fri' line - that card is not on the live Contact page"
+  ],
+  "not_changed_needs_user": [
+    "Site Footer design: address 8920 Old Annapolis Road, Suite D, Columbia, MD 21045 -> 1450 South Rolling Road, Baltimore, MD 21227; live footer reads ACF option options_address (global setting). Live Contact already shows the Rolling Road address.",
+    "theme template block after service/material content: 'Reach out to our Rapid Response team today!' (exclamation mark) on all post_services/post_material pages"
+  ],
+  "rollbacks": {
+    "12268": "novamira-drafts/run-20260925-sitewide/rollback-12268.json (051b529fc956…)",
+    "12277": "novamira-drafts/run-20260925-sitewide/rollback-12277.json (e9b4b4986741…)",
+    "12298": "novamira-drafts/run-20260925-sitewide/rollback-12298.json (c775a6a3620e…)",
+    "12388": "novamira-drafts/run-20260925-sitewide/rollback-12388.json (b0438aaf38a2…)",
+    "12397": "novamira-drafts/run-20260925-sitewide/rollback-12397.json (62be9affd297…)",
+    "12398": "novamira-drafts/run-20260925-sitewide/rollback-12398.json (271ee927805d…)",
+    "12399": "novamira-drafts/run-20260925-sitewide/rollback-12399.json (188ffc96fd21…)",
+    "12400": "novamira-drafts/run-20260925-sitewide/rollback-12400.json (5f9e7cbf13ec…)",
+    "12401": "novamira-drafts/run-20260925-sitewide/rollback-12401.json (bcb48f686c2a…)",
+    "12403": "novamira-drafts/run-20260925-sitewide/rollback-12403.json (453fd4066982…)",
+    "12404": "novamira-drafts/run-20260925-sitewide/rollback-12404.json (4f6be6179efe…)"
+  },
+  "verification": "logged-out audit of 24 pipeline pages: all 200; no en/em dashes except the approved Varady customer quote; no emoji or stars; exclamation only in the theme's Rapid Response block. Chrome: /about/ split row top-aligned."
+}
