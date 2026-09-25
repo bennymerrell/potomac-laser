@@ -84,5 +84,9 @@
     "12403": "novamira-drafts/run-20260925-sitewide/rollback-12403.json (453fd4066982…)",
     "12404": "novamira-drafts/run-20260925-sitewide/rollback-12404.json (4f6be6179efe…)"
   },
-  "verification": "logged-out audit of 24 pipeline pages: all 200; no en/em dashes except the approved Varady customer quote; no emoji or stars; exclamation only in the theme's Rapid Response block. Chrome: /about/ split row top-aligned."
+  "verification": "logged-out audit of 24 pipeline pages: all 200; no en/em dashes except the approved Varady customer quote; no emoji or stars; exclamation only in the theme's Rapid Response block. Chrome: /about/ split row top-aligned.",
+  "user_decisions": [
+    "2026-09-25: footer address (options_address) NOT changed - user said no",
+    "2026-09-25: theme 'Rapid Response team today!' block NOT hidden - user said no"
+  ]
 }
