@@ -1,0 +1,52 @@
+{
+  "run_id": "20260925-trash-draft-services",
+  "mode": "SUPERVISED, requested in chat (\"trash the old DRAFT service posts\").",
+  "posts": [
+    {
+      "post_id": 12127,
+      "title": "CNC Micromachining Services (DRAFT)",
+      "slug": "cnc-micromachining-services-draft",
+      "status_before": "draft",
+      "status_after": "trash"
+    },
+    {
+      "post_id": 12133,
+      "title": "CNC Micromachining Services (DRAFT – Elementor)",
+      "slug": "cnc-micromachining-services-draft-blocks",
+      "status_before": "draft",
+      "status_after": "trash"
+    },
+    {
+      "post_id": 12223,
+      "title": "3D Printing Contract Services (DRAFT – Elementor)",
+      "slug": "3d-printing-contract-services-draft-blocks",
+      "status_before": "draft",
+      "status_after": "trash"
+    },
+    {
+      "post_id": 12224,
+      "title": "Rapid Prototyping Services (DRAFT – Elementor)",
+      "slug": "rapid-prototyping-services-draft-blocks",
+      "status_before": "draft",
+      "status_after": "trash"
+    },
+    {
+      "post_id": 12225,
+      "title": "Laser Micro-Hole Drilling Services (DRAFT – Elementor)",
+      "slug": "laser-micro-hole-drilling-services-draft-blocks",
+      "status_before": "draft",
+      "status_after": "trash"
+    },
+    {
+      "post_id": 12226,
+      "title": "Laser Micromachining Services (DRAFT – Elementor)",
+      "slug": "laser-micromachining-services-draft-blocks",
+      "status_before": "draft",
+      "status_after": "trash"
+    }
+  ],
+  "guards": "post_services, status draft, no _pl_auto_page stamp, title contains \"DRAFT\"",
+  "related": "Snippet #10 still names these ids (12127 iframe CSS; 12133/12223-12226 Inter font) — inert once trashed. The original *-interactive.html files they embedded stay on disk untouched.",
+  "rollback": "restore from Services > Trash (WordPress restores them as drafts)",
+  "result": "all six trashed (previous status draft recorded by WordPress); service drafts 12239-12243 unaffected (still draft)."
+}
