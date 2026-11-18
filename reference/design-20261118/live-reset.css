@@ -1,0 +1,21 @@
+.pl-svc-quote{font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important; color: rgb(34, 57, 93);}
+.pl-svc-quote h2, .pl-svc-quote h3, .pl-svc-quote .gf-rapid-left h2{letter-spacing: -0.03em; color: rgb(34, 57, 93); font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important; font-weight: 800 !important;}
+.pl-svc-quote p, .pl-svc-quote span, .pl-svc-quote button, .pl-svc-quote input, .pl-svc-quote textarea, .pl-svc-quote select{font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;}
+.pl-svc-quote, .pl-svc-quote *, .pl-svc-quote::after, .pl-svc-quote ::after, .pl-svc-quote::before, .pl-svc-quote ::before{box-sizing: border-box; border-width: 0px; border-style: solid; border-color: rgb(229, 231, 235);}
+.pl-svc-quote{line-height: 1.5; text-size-adjust: 100%; tab-size: 4; font-feature-settings: normal; font-variation-settings: normal; -webkit-tap-highlight-color: transparent; margin: 0px;}
+.pl-svc-quote h2, .pl-svc-quote h3{font-size: inherit; font-weight: inherit;}
+.pl-svc-quote strong{font-weight: bolder;}
+.pl-svc-quote small{font-size: 80%;}
+.pl-svc-quote button, .pl-svc-quote input, .pl-svc-quote select, .pl-svc-quote textarea{font-family: inherit; font-feature-settings: inherit; font-variation-settings: inherit; font-size: 100%; font-weight: inherit; line-height: inherit; letter-spacing: inherit; color: inherit; margin: 0px; padding: 0px;}
+.pl-svc-quote button, .pl-svc-quote select{text-transform: none;}
+.pl-svc-quote button{appearance: button; background-color: transparent; background-image: none; cursor: pointer;}
+.pl-svc-quote ::-webkit-inner-spin-button, .pl-svc-quote ::-webkit-outer-spin-button{height: auto;}
+.pl-svc-quote ::-webkit-file-upload-button{appearance: button; font: inherit;}
+.pl-svc-quote h2, .pl-svc-quote h3, .pl-svc-quote p{margin: 0px;}
+.pl-svc-quote textarea{resize: vertical;}
+.pl-svc-quote input::placeholder, .pl-svc-quote textarea::placeholder{opacity: 1; color: rgb(156, 163, 175);}
+.pl-svc-quote svg{display: block; vertical-align: middle;}
+.pl-svc-quote fieldset{margin: 0; min-width: 0;}
+.pl-svc-quote li{padding: 0;}
+.pl-svc-quote [hidden]{display: none !important;}
+.pl-svc-quote button:disabled{opacity: .6; cursor: progress;}
