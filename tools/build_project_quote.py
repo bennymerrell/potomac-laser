@@ -14,8 +14,9 @@ The form posts straight to HubSpot `[Potomac] Start a Project`
 (9dba7d36-e36b-4a10-9411-9dc073dab7a0, portal 143181153), the form GF #2 feeds on the
 old /project-quote/ page. Contract: reference/HUBSPOT-FORMS.md.
 
-The file upload is REQUIRED, as the design's form marks it (user decision 2026-11-18),
-even though the design's step-3 guide text says "Optional" - reported upstream.
+Deviation from the design (user decision 2026-11-18): the file upload is OPTIONAL and
+carries no asterisk, matching the design's step-3 guide ("Optional, but it speeds up the
+quote"); the design's form marked it required.
 """
 import json
 import pathlib
@@ -192,8 +193,8 @@ def quote_markup(placeholder, selected, with_intro, anchor_project_form):
 <fieldset class="qs-block" data-block="3" data-state="locked" inert>
 {head(3, "Upload your file")}<div class="qs-body">
 <label>
-<span>Upload drawing / CAD <em>*</em></span>
-<div class="gf-rapid-upload"><input type="file" name="files" required accept=".step,.stp,.stl,.iges,.igs,.pdf,.dxf,.dwg,.zip"></div>
+<span>Upload drawing / CAD</span>
+<div class="gf-rapid-upload"><input type="file" name="files" accept=".step,.stp,.stl,.iges,.igs,.pdf,.dxf,.dwg,.zip"></div>
 <small>STEP, STL, IGES, PDF, DXF, DWG or ZIP, up to 25 MB</small>
 </label>
 <div class="gf-rapid-actions"><p>No commitment · 24h response</p><button type="submit"><span data-btn-state="idle">Send request →</span><span data-btn-state="sent" hidden>Sent ✓</span></button></div>
@@ -249,8 +250,8 @@ o.textContent=msg;form.parentNode.insertBefore(o,form)}
 async function upload(){var i=form.querySelector('[name="files"]');if(!i||!i.files||!i.files[0])return '';
 var fd=new FormData();fd.append('file',i.files[0]);
 try{var r=await fetch(UPLOAD,{method:'POST',body:fd});var j=await r.json();if(r.ok&&j&&j.url)return j.url;
-err('That file could not be uploaded ('+((j&&j.error)||'unknown error')+'). Please try a smaller file, or email it to inq@goodfellow.com.');return null}
-catch(e){err('That file could not be uploaded. Please try again, or email it to inq@goodfellow.com.');return null}}
+err('That file could not be uploaded ('+((j&&j.error)||'unknown error')+'). Remove it and send the request without it, or try a smaller file.');return null}
+catch(e){err('That file could not be uploaded. Remove it and send the request without it, or try again.');return null}}
 function thanks(){
 sent=true;[1,2,3].forEach(function(n){setState(n,'sealed')});
 form.querySelectorAll('[data-btn-state]').forEach(function(el){el.hidden=el.dataset.btnState!=='sent'});
