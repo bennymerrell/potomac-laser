@@ -1,0 +1,180 @@
+{
+  "run": "20261118-project-quote",
+  "purpose": "New /project-quote/ page (design 'Contact - Project Quote.html') + guided 3-step quote form on the five service pages; header 'Request a quote' straight to /project-quote/",
+  "design": {
+    "project": "c2a2fa49-6c18-41c3-a39b-ae9ec2acf6dd",
+    "name": "Potomac Laser - 2027",
+    "files": [
+      "Contact - Project Quote.html",
+      "Services - Rapid Prototyping.html",
+      "Services - 3D Printing.html",
+      "Services - CNC Micromachining.html",
+      "Services - Laser Micromachining.html",
+      "Services - Micro-Hole Drilling.html"
+    ]
+  },
+  "hubspot": {
+    "portal": "143181153",
+    "form": "[Potomac] Start a Project",
+    "guid": "9dba7d36-e36b-4a10-9411-9dc073dab7a0",
+    "source": "GF form #2 feed #19 on old /project-quote/ (page 3237)"
+  },
+  "authorized_by": "user, in session 2026-11-18 (implement design; new page at /project-quote/)",
+  "backup": {
+    "timestamp": 1794988457,
+    "when": "2026-11-18 02:54 UTC",
+    "nonce": "79d7d915a94e",
+    "file": "backup_2026-11-18-0254_Potomac_Laser_79d7d915a94e-db.gz.crypt",
+    "service": "dropbox"
+  },
+  "server_rollback_dir": "wp-content/uploads/novamira-drafts/rollback-20261118/",
+  "pre_change": {
+    "12239": {
+      "_elementor_data_md5": "f89d3872afe97798f7d133b73465d4eb"
+    },
+    "12240": {
+      "_elementor_data_md5": "a3394d5bde414baafc964e018033e83f"
+    },
+    "12241": {
+      "_elementor_data_md5": "01a437d4931f9fb55b1d66633af31f08"
+    },
+    "12242": {
+      "_elementor_data_md5": "35852e7595750b2194dd2c98b7506b08"
+    },
+    "12243": {
+      "_elementor_data_md5": "8b35423a76e87bfe704518853acf6760"
+    },
+    "3237": {
+      "post_content_md5": "e408116d9662a39bbc64c018428d0ac0",
+      "post_name": "project-quote",
+      "post_status": "publish"
+    },
+    "options": {
+      "options_header_btn_url": "https://www.potomac-laser.com/request-quote-landing/",
+      "options_cta_banner_button_1_button_url": "https://www.potomac-laser.com/request-quote-landing/"
+    }
+  },
+  "created": [
+    {
+      "file": "wp-content/uploads/novamira-drafts/project-quote-20261118/bundle.json",
+      "md5": "a8e1b80325ec56245c95b53d66026748"
+    },
+    {
+      "dir": "wp-content/uploads/novamira-drafts/rollback-20261118/"
+    },
+    {
+      "post_id": 12525,
+      "post_type": "page",
+      "status": "draft",
+      "slug": "project-quote-2027",
+      "title": "Request a Project Quote"
+    },
+    {
+      "file": "wp-content/uploads/novamira-drafts/project-quote-20261118/bundle-v2.json",
+      "note": "superseded (optional-upload build, never live)"
+    },
+    {
+      "file": "wp-content/uploads/novamira-drafts/project-quote-20261118/bundle-v3.json",
+      "md5": "07cf469b123574677802817287e3af28",
+      "note": "live build: base64 JS + onsubmit fallback, upload required"
+    },
+    {
+      "file": "wp-content/uploads/novamira-drafts/project-quote-20261118/bundle-v4.json",
+      "md5": "f8516a970af46baaebc206f59932c8d9",
+      "note": "live build: file upload optional, no asterisk (user decision, later the same day)"
+    },
+    {
+      "file": "wp-content/uploads/novamira-drafts/project-quote-20261118/bundle-v5.json",
+      "md5": "04bd9c249da10cb52bb4d54412c37e26",
+      "note": "hero + quote widgets for /project-quote/ capped at 1224px to align with the theme header"
+    }
+  ],
+  "modified": [
+    {
+      "post_id": 12242,
+      "what": "quote html widget in section 9 replaced with guided 3-step form",
+      "new_elementor_data_md5": "ad0838acddb7f236092500cf574ba4a1",
+      "rollback": "wp-content/uploads/novamira-drafts/rollback-20261118/12242._elementor_data.json"
+    },
+    {
+      "post_id": 12239,
+      "what": "quote html widget in section 9 replaced with guided 3-step form",
+      "new_elementor_data_md5": "93976d82790514869b47036af74c2a55",
+      "rollback": "wp-content/uploads/novamira-drafts/rollback-20261118/12239._elementor_data.json"
+    },
+    {
+      "post_id": 12240,
+      "what": "quote html widget in section 9 replaced with guided 3-step form",
+      "new_elementor_data_md5": "4065786380e004b07f17f55f40ea9891",
+      "rollback": "wp-content/uploads/novamira-drafts/rollback-20261118/12240._elementor_data.json"
+    },
+    {
+      "post_id": 12241,
+      "what": "quote html widget in section 9 replaced with guided 3-step form",
+      "new_elementor_data_md5": "768e23677e79fdad9e2d42eb7be64d90",
+      "rollback": "wp-content/uploads/novamira-drafts/rollback-20261118/12241._elementor_data.json"
+    },
+    {
+      "post_id": 12243,
+      "what": "quote html widget in section 9 replaced with guided 3-step form",
+      "new_elementor_data_md5": "0dd3ad0d541e521183e4a42219b1395f",
+      "rollback": "wp-content/uploads/novamira-drafts/rollback-20261118/12243._elementor_data.json"
+    },
+    {
+      "post_id": 3237,
+      "what": "old /project-quote/ (GF #2) set to draft, slug project-quote-pre-golive-20261118",
+      "rollback": "rename slug back to project-quote and publish, after moving 12525 off the slug"
+    },
+    {
+      "post_id": 12525,
+      "what": "published as /project-quote/ (was draft project-quote-2027); AIOSEO description set from design meta description"
+    },
+    {
+      "option": "options_header_btn_url",
+      "old": "https://www.potomac-laser.com/request-quote-landing/",
+      "new": "https://www.potomac-laser.com/project-quote/"
+    },
+    {
+      "option": "options_cta_banner_button_1_button_url",
+      "old": "https://www.potomac-laser.com/request-quote-landing/",
+      "new": "https://www.potomac-laser.com/project-quote/"
+    },
+    {
+      "table": "wp_aioseo_redirects",
+      "row_id": 6,
+      "what": "301 /request-quote-landing/ -> /project-quote/ (group manual)",
+      "rollback": "delete row 6 (or disable in AIOSEO > Redirects)"
+    },
+    {
+      "table": "wp_aioseo_cache",
+      "what": "deleted stale per-URL '[]' redirect lookups rows 26901, 50911 for /request-quote-landing(/); flushed object-cache group 'aioseo'"
+    },
+    {
+      "cache": "wp-rocket",
+      "what": "per-post/per-URL cleans only: 12239-12243, 12525, 3237, 8331 URL; no global clear"
+    },
+    {
+      "what": "quote widget re-written from bundle-v4 (upload optional) on 12525, 12239-12243; element ids kept",
+      "new_elementor_data_md5": {
+        "12525": "893e25ec407b93e4cac530417bb6ecb3",
+        "12242": "3407f9bd96abb61c528b094124b48dee",
+        "12239": "24c929f600c7ca15476725b1906f389a",
+        "12240": "e8a608cb97cfff7c13fae23de2a3c84d",
+        "12241": "38b45da304c01c8cfe16d57cbb9b1298",
+        "12243": "d5deb1bc1af28d28a13075d4f303e986"
+      }
+    },
+    {
+      "post_id": 12525,
+      "what": "hero + quote widgets re-written from bundle-v5 (1224px width, aligned with header logo/nav); element ids kept",
+      "new_elementor_data_md5": "5b2be831c4d86b52023ce9ea2a1968b8"
+    }
+  ],
+  "notes": [
+    "Widget JS ships base64 (new Function(atob(...))): the_content filters rewrite && to &#038;&#038; inside html-widget scripts on this site; form also carries onsubmit=return false so a dead script can never GET-submit values into a URL",
+    "During testing a plain GET submit happened once on draft 12525 (script unwired); dummy values Test/User/QA/qa@goodfellow.com landed in a homepage URL, likely recorded by site analytics. Nothing reached HubSpot.",
+    "Other cached pages (WP Rocket) keep the old header link until their cache rebuilds; it 301s to /project-quote/.",
+    "Design copy breach reported, not fixed: 'Send request ->' arrow glyph; design form marks the file required while its step-3 guide says 'Optional'; built OPTIONAL with no asterisk (user decision).",
+    "Service pages' quote section still uses the design's 1440px wrap while their other sections are 1260px; left as is (only /project-quote/ was asked for)."
+  ]
+}

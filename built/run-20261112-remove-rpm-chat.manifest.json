@@ -1,0 +1,39 @@
+{
+  "run": "20261112-remove-rpm-chat",
+  "purpose": "Remove the Chat item (is_chat=1) from the acf/rpm-pre-footer 'Rapid Response' block; leave Email Us + Send a Drawing",
+  "authorized_by": "user, in session 2026-11-12 (explicit go-ahead for live edits outside the potomac-elementor draft-only scope)",
+  "backup": {
+    "timestamp": 1794493167,
+    "when": "2026-11-12 09:19 UTC",
+    "nonce": "addc9b52cae8",
+    "file": "backup_2026-11-12-0919_Potomac_Laser_addc9b52cae8-db.gz.crypt",
+    "service": "dropbox"
+  },
+  "modified": [
+    {
+      "post_id": 10684,
+      "post_type": "wp_template",
+      "slug": "single",
+      "old_md5": "193d321eaed8d811a82c38c2bfe83f64",
+      "old_content": "built/rollback-20261112/10684.post_content.html"
+    },
+    {
+      "post_id": 3614,
+      "post_type": "page",
+      "slug": "microhole-drilling-services",
+      "old_md5": "bacd5ee9a845629f2ea6e9eae7db805c",
+      "old_content": "built/rollback-20261112/3614.post_content.html"
+    }
+  ],
+  "created": [
+    {
+      "post_id": 12523,
+      "post_type": "wp_template",
+      "slug": "single-post_application",
+      "title": "Single Application",
+      "theme": "potomac2023",
+      "note": "DB override of theme templates/single-post_application.html with Chat item removed; trash to revert"
+    }
+  ],
+  "rollback": "Restore old_content into post_content for each modified post; trash each created wp_template (theme file single-post_application.html then applies again)"
+}
