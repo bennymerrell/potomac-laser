@@ -291,10 +291,11 @@ sync();
 </script>"""
 
 
-def quote_widget(key, placeholder, selected, with_intro, anchor_project_form, form_id, gtag_params):
+def quote_widget(key, placeholder, selected, with_intro, anchor_project_form, form_id, gtag_params,
+                 extra_css=""):
     design = (SRC / "quote.design.css").read_text()
     reset = (SRC / "live-reset.css").read_text()
-    css = scope_css(design, SCOPE, root_class=".gf-rapid-quote") + "\n" + reset
+    css = scope_css(design, SCOPE, root_class=".gf-rapid-quote") + "\n" + reset + extra_css
     js = JS.replace("__FORM_ID__", form_id).replace("__GTAG_PARAMS__", gtag_params)
     return "<style>" + css + "</style>" + quote_markup(placeholder, selected, with_intro, anchor_project_form) + encode_js(js)
 
@@ -325,7 +326,7 @@ HERO_CSS = """
 .pl-pq-hero .hero__bg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);background-size:80px 80px;pointer-events:none}
 .pl-pq-hero .hero__bg::before{content:'';position:absolute;left:-10%;top:10%;width:60%;height:80%;background:radial-gradient(ellipse at center,rgba(20,48,73,0.7) 0%,transparent 65%)}
 .pl-pq-hero .hero__bg::after{content:'';position:absolute;right:-5%;top:-10%;width:60%;height:80%;background:radial-gradient(ellipse at center,rgba(148,18,82,0.10) 0%,transparent 60%)}
-.pl-pq-hero .hero__inner{position:relative;max-width:1440px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:56px;align-items:center;padding-bottom:0}
+.pl-pq-hero .hero__inner{position:relative;max-width:1224px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:56px;align-items:center;padding-bottom:0}
 .pl-pq-hero .hero__eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:0.75rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#fff;margin:0 0 20px;white-space:nowrap;font-family:inherit !important}
 .pl-pq-hero .hero__title{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif !important;font-size:clamp(2.5rem,5vw,4rem);line-height:1.05;letter-spacing:-0.025em;font-weight:600 !important;color:#fff;margin:0 0 24px;text-transform:none}
 .pl-pq-hero .hero__title .accent{color:#F5821F}
@@ -393,7 +394,10 @@ def main():
             gtag_params="{form_id:'service_quote',service:val('service')}")
     widgets["quote.project-quote"] = quote_widget(
         "project-quote", CONTACT_PLACEHOLDER, None, with_intro=False, anchor_project_form=True,
-        form_id="project_quote", gtag_params="{form_id:'project_quote'}")
+        form_id="project_quote", gtag_params="{form_id:'project_quote'}",
+        # /project-quote/ only: align hero + form edges with the theme header's 1224px
+        # container (logo left / nav right) instead of the design's 1440px (user, 2026-11-18).
+        extra_css="\n.pl-svc-quote .gf-rapid-wrap{max-width:1224px}")
     widgets["hero.project-quote"] = hero_widget()
 
     problems = []
